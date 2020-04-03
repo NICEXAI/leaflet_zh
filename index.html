@@ -1,0 +1,222 @@
+---
+layout: v2
+---
+
+<div class="announcement">2019年11月17日 — <a href="/2019/11/17/leaflet-1.6.0.html">Leaflet 1.6.0</a> 正式发布!</div>
+
+<p>Leaflet 是一个开源并且对移动端友好的交互式地图JavaScript库.
+它大小仅仅只有<abbr title="38 KB gzipped &mdash; that's 133 KB minified and 378 KB in the source form, with 10 KB of CSS (2 KB gzipped) and 11 KB of images.">38 KB</abbr>,
+并且拥有绝大部分开发者所需要的所有映射<a href="#features">特性</a> .</p>
+
+<p>Leaflet 简单、高效并且易用.
+它可以高效的运行在桌面和移动平台,
+拥有着大量的 <a href="plugins.html">扩展插件</a>、
+优秀的文档、<a title="Leaflet API reference" href="reference.html">简单易用的API</a>
+和完善的案例, 以及可读性较好的&nbsp;<a title="Leaflet source code repository on GitHub" href="https://github.com/Leaflet/Leaflet">源码</a> .
+
+<div id="map" class="map map-home" style="height: 300px; margin-top: 50px"></div>
+
+<p>在这里,我们在 <code>'map'</code> div中创建一个地图, 选择<abbr title="Here we use OpenStreetMap tiles, but Leaflet doesn't force you to &mdash; use whatever works for you, it's open source!">瓦片地图数据源</abbr>, 添加一个标记点并且在弹出层上显示一些文本:</p>
+
+<pre class="basic-code javascript"><code>var map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
+}).addTo(map);
+
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.&lt;br&gt; Easily customizable.')
+    .openPopup();</code></pre>
+
+<p>通过 <a href="examples/quick-start/">快速入门指南</a>, 查看 <a href="examples.html">其它教程</a>,
+或者访问 <a href="reference.html">API 文档</a>了解更多信息.
+如有任何疑问, 请先查看 <a href="https://github.com/Leaflet/Leaflet/blob/master/FAQ.md">FAQ</a>.</p>
+
+
+</div>
+
+<h2 class="usedby-title">谁在使用Leaflet</h2>
+<div class="usedby">
+  <div class="container">
+    <a class="logo logo-github" href="https://github.com">GitHub</a>
+    <a class="logo logo-foursquare" href="http://foursquare.com">foursquare</a>
+    <a class="logo logo-pinterest" href="https://www.pinterest.com">Pinterest</a>
+    <a class="logo logo-facebook" href="https://www.facebook.com/">Facebook</a>
+    <a class="logo logo-evernote" href="https://evernote.com">Evernote</a>
+    <a class="logo logo-etsy" href="https://www.etsy.com/">Etsy</a>
+    <a class="logo logo-flickr" href="https://www.flickr.com/">Flickr</a>
+    <a class="logo logo-500px" href="https://500px.com">500px</a>
+    <a class="logo logo-datagov" href="http://www.data.gov/">Data.gov</a>
+    <a class="logo logo-european-commission" href="http://ec.europa.eu/">European Commission</a>
+    <a class="logo logo-wpost" href="https://www.washingtonpost.com">The Washington Post</a>
+    <a class="logo logo-ftimes" href="http://www.ft.com">Financial Times</a>
+    <a class="logo logo-npr" href="http://www.npr.org">NPR</a>
+    <a class="logo logo-usatoday" href="http://www.usatoday.com">USA Today</a>
+    <a class="logo logo-nps" href="http://www.nps.gov/">National Park Service</a>
+    <a class="logo logo-ign" href="http://ign.com">IGN.com</a>
+    <a class="logo logo-openstreetmap" href="https://www.openstreetmap.org/">OpenStreetMap</a>
+  </div>
+</div>
+
+<div class="container">
+
+<h2 id="features">特性</h2>
+
+<p>Leaflet 并不会尝试去为所有人做完一切事情. 相反,它更专注于把基本的事情做的完美.</p>
+
+<div class="features clearfix">
+    <div class="no-break">
+        <h3>开箱即用的图层</h3>
+
+        <ul>
+            <li>瓦片图层, WMS</li>
+            <li>标记点, 弹出层</li>
+            <li>矢量图层<span class="quiet">: 折线, 多边形, 圆形, 矩形</span></li>
+            <li>图像叠加</li>
+            <li>GeoJSON</li>
+        </ul>
+    </div>
+
+
+    <div class="no-break">
+        <h3>交互功能</h3>
+
+        <ul>
+            <li>拖动平移</li>
+            <li>滚轮缩放</li>
+            <li>在手机上缩放</li>
+            <li>Double click zoom</li>
+            <li>缩放区域 <span class="quiet">(shift-drag)</span></li>
+            <li>按键 导航</li>
+            <li>事件<span class="quiet">: 点击, 鼠标悬停, 等.</span></li>
+            <li>标记 拖动</li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h3>视觉特性</h3>
+
+        <ul>
+            <li>缩放和平移动画</li>
+            <li>平铺和弹出淡出动画</li>
+            <li>设计非常棒的 <span class="quiet">标记, 弹出层和地图控件</span></li>
+            <li>支持视网膜分辨率</li>
+        </ul>
+    </div>
+
+
+    <div class="no-break">
+        <h3>自定义特性</h3>
+
+        <ul>
+            <li>纯CSS3弹出窗口和控件, <span class="quiet">可以轻松重置样式</span></li>
+            <li>基于图像和HTML的标记</li>
+            <li><span class="quiet">接口简单的</span> 自定义地图图层和控件</li>
+            <li>自定义地图投影 <span class="quiet">(with <code>EPSG:3857/4326/3395</code> 开箱即用)</span></li>
+            <li>强大的 OOP 设计 <span class="quiet">可扩展现有的类</span></li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h3>性能特性</h3>
+
+        <ul>
+            <li>移动设备上硬件加速 <span class="quiet"> 像原生APP一样流畅</span></li>
+            <li>使用 CSS3 特性 <span class="quiet">实现真正平滑的平移和缩放</span></li>
+            <li>快速的动态剪切和简化功能的智能折线/多边形渲染</li>
+            <li>模块化构建<span class="quiet"> 避免不必要的功能</span></li>
+            <li>消除手机点击延迟</li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h3>地图控件</h3>
+
+        <ul>
+            <li>缩放按钮</li>
+            <li>版权</li>
+            <li>图层切换</li>
+            <li>比例尺</li>
+        </ul>
+    </div>
+
+
+    <div class="no-break">
+        <h3>浏览器支持</h3>
+
+        <h4>桌面</h4>
+
+        <ul>
+            <li>Chrome</li>
+            <li>Firefox</li>
+            <li>Safari 5+</li>
+            <li>Opera 12+</li>
+            <li>IE 7&ndash;11</li>
+            <li>Edge</li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h4>移动端</h4>
+
+        <ul>
+            <li>Safari for iOS 7+</li>
+            <li>Android browser 2.2+,&nbsp;3.1+,&nbsp;4+</li>
+            <li>Chrome for mobile</li>
+            <li>Firefox for mobile</li>
+            <li>IE10+ for Win8 devices</li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h3>其它</h3>
+
+        <ul>
+            <li>轻巧</li>
+            <li>没有外部依赖</li>
+        </ul>
+    </div>
+</div>
+
+<p>如果您发现Leaflet中确实缺少某些功能, 请首先检查是否有相关功能的 <a href="plugins.html">插件</a>
+或者它是否已经在 <a href="https://github.com/Leaflet/Leaflet/issues">GitHub issues</a>讨论过.
+如果都没有, 请提交一个新的 GitHub issue.</p>
+
+<h2>参与进来</h2>
+
+<p>让我们创建一个世界上最好的地图库!
+Leaflet虽然最早由 <a href="https://agafonkin.com">Vladimir Agafonkin</a>创建,
+但现在由一个大型<a href="https://github.com/Leaflet/Leaflet/graphs/contributors">贡献者</a>社区共同开发.
+始终欢迎大家踊跃提交<a href="https://github.com/Leaflet/Leaflet">requests</a>.
+除此之外, 还有更多方法可以参与Leaflet的开发.</p>
+
+<p>你可以帮忙发现并提交 <a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md#reporting-bugs">bugs</a>, <a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md#improving-documentation">完善文档</a>,
+在 <a href="https://stackoverflow.com/questions/tagged/leaflet">Stack Overflow</a>, <a href="https://gis.stackexchange.com/questions/tagged/leaflet">GIS Stack Exchange</a>
+和<a href="https://github.com/Leaflet/Leaflet/issues">GitHub issues</a>上帮助他人,
+发推特 <a href="https://twitter.com/LeafletJS">@LeafletJS</a>
+或者以及在同事和朋友中推广Leaflet来帮助该项目.</p>
+
+<p>查看<a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md">贡献者</a> 以获取有关参与Leaflet开发的更多信息.</p>
+
+<div class="social-buttons">
+    <iframe src="https://ghbtns.com/github-btn.html?user=Leaflet&amp;repo=Leaflet&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="104px" height="20px"></iframe>
+
+    <a href="https://twitter.com/LeafletJS" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @LeafletJS</a>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fleafletjs.com&amp;layout=button_count&amp;show_faces=false&amp;width=93&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:93px; height:20px;" allowTransparency="true"></iframe>
+</div>
+
+<script>
+	var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+
+	var map = L.map('map').setView([51.505, -0.159], 15).addLayer(osm);
+
+	L.marker([51.504, -0.159])
+		.addTo(map)
+		.bindPopup('A pretty CSS3 popup.<br />Easily customizable.')
+		.openPopup();
+</script>
