@@ -5,16 +5,21 @@
 
 
 > Leaflet 中文站点：http://leafletjs.cn/
+> 
 > Leaflet 官方站点：http://leafletjs.com/
 
-#### 加入我们
+### 加入我们
 
-#### 相关学习资源
+由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
 
-#### 参与贡献人员名单
+##### 
+
+### 相关学习资源
+
+### 参与贡献人员名单
 
 > 定期更新，谢谢各位辛勤贡献
 
-- [CuoBaby](https://github.com/cuo)
+- [待定](https://blog.h5base.cn/)
 
-**本文档翻译流程符合 [ETC 翻译规范](https://github.com/react-guide/ETC)，欢迎你来一起完善**
+**只要文档符合 [翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)，欢迎你来一起完善**
