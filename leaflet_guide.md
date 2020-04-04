@@ -70,50 +70,6 @@ UI | 用户界面
 monkey patch | -
 currying | 柯里化
 
-## 加入翻译
-
-欢迎加入我们一起为 React 在中文推广出一份力，对于有能力且积极的同学会被邀请加入我们 Group。
-
-开始翻译前，你可以通过以下方式认领，确保没有重复工作。
-
-## 认领制度
-
-对于未被翻译的章节，你应该在翻译之前进行翻译认领来保证没有人和你重复工作。
-很简单，请从 repo 的 issue 列表中认领，如果没有对应章节的 issue，自己创建一个即可。
-认领成功后就代表你已经成功占到一个坑，你可以开始慢慢翻译自己的文章了。
-如果占坑太久你的占位可能被取消，尽量在两周内完成。
-
-对于已经翻译的章节，欢迎做校验工作，校验不需要认领，fork 后修改并发 Pull Request 即可。
-
-## 翻译流程
-
-一、fork 要翻译的 repo
-
-二、如果是新翻译章节，应参照对应的原文进行翻译；如果是校对则直接修改
-
-建议使用 Sublime Text、Mou 等支持 Markdown 类编辑器编辑，同时开启横向双列模式。
-
-三、翻译时启动 watch 来实时看结果
-```
-npm run watch
-```
-打开：[localhost:4000](http://localhost:4000)
-
-四、翻译结束，提交 Pull Request
-
-五、fork 后的 repo 如何同步本 repo？
-
-```
-// 添加 upstream 源，只需执行一次
-git remote add upstream git@github.com:react-group/***.git
-// 拉取远程代码
-git pull upstream master
-// 更新 fork 仓库
-git push origin master
-```
-
-更多参考：https://help.github.com/articles/syncing-a-fork/
-
 ## 与原文同步机制
 
 To Be Determined
