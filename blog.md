@@ -4,9 +4,9 @@ title: Blog
 bodyclass: blog-page
 ---
 
-## Leaflet Developer Blog
+## Leaflet 开发者的博客
 
-The main place for all important Leaflet-related news, tutorials, tips and development notes. [Subscribe to Atom feed](atom.xml)
+所有与Leaflet相关的重要新闻，教程，技巧和开发说明。 [Subscribe to Atom feed](atom.xml)
 
 ---
 

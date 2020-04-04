@@ -4,9 +4,9 @@ title: Plugins
 bodyclass: plugins-page
 ---
 
-## Leaflet Plugins
+## Leaflet 插件
 
-While Leaflet is meant to be as lightweight as possible, and focuses on a core set of features, an easy way to extend its functionality is to use third-party plugins. Thanks to the awesome community behind Leaflet, there are literally hundreds of nice plugins to choose from.
+Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展其功能的一种简单方法是使用第三方插件。 感谢Leaflet背后的强大社区，提供了数百个不错的插件供大家选择。
 
 ---
 

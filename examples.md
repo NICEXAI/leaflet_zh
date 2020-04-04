@@ -13,7 +13,7 @@ bodyclass: examples
 page="quick-start/"
 thumbnail="quick-start/thumbnail.png"
 title="Leaflet 快速入门指南"
-description="A simple step-by-step guide that will quickly get you started with Leaflet basics, including setting up a Leaflet map (with Mapbox tiles) on your page, working with markers, polylines and popups, and dealing with events."
+description="一个简单的快速入门指南，可帮助您快速入门Leaflet基础知识，包括在页面上设置Leaflet地图（带有Mapbox磁贴），使用标记，折线和弹出窗口以及处理事件。"
 %}
 
 
@@ -21,7 +21,7 @@ description="A simple step-by-step guide that will quickly get you started with 
 page="mobile/"
 thumbnail="mobile/thumbnail.png"
 title="Leaflet 在手机上使用"
-description="In this tutorial, you'll learn how to create a fullscreen map tuned for mobile devices like iPhone, iPad or Android phones, and how to easily detect and use the current user location."
+description="在本教程中，您将学习如何创建针对iPhone，iPad或Android手机等移动设备调整的全屏地图，以及如何轻松检测和使用当前用户位置。"
 %}
 
 
@@ -29,7 +29,7 @@ description="In this tutorial, you'll learn how to create a fullscreen map tuned
 page="custom-icons/"
 thumbnail="custom-icons/thumbnail.png"
 title="Markers 自定义图标"
-description="In this pretty tutorial, you'll learn how to easily define your own icons for use by the markers you put on the map."
+description="在这个完美的教程中，您将学习如何轻松定义自己的图标，以供您在地图上进行标记使用。"
 %}
 
 
@@ -37,38 +37,38 @@ description="In this pretty tutorial, you'll learn how to easily define your own
 page="geojson/"
 thumbnail="geojson/thumbnail.png"
 title="在 Leaflet 中使用 GeoJSON"
-description="In this tutorial, you'll learn how to create and interact with map vectors created from [GeoJSON](http://geojson.org/) objects."
+description="在本教程中，您将学习如何创建和与从[GeoJSON](http://geojson.org/)对象创建的地图矢量进行交互。"
 %}
 
 
 {% include tutorial_link.html
 page="choropleth/"
 thumbnail="choropleth/thumbnail.png"
-title="Interactive Choropleth Map"
-description="A case study of creating a colorful interactive [choropleth map](http://en.wikipedia.org/wiki/Choropleth_map) of US States Population Density with GeoJSON and some custom controls. News websites will love this."
+title="互动式choropleth地图"
+description="以GeoJSON和一些自定义控件创建彩色的美国人口密度交互式[choropleth地图](http://en.wikipedia.org/wiki/Choropleth_map)的案例研究。 新闻网站会喜欢这一点。"
 %}
 
 
 {% include tutorial_link.html
 page="layers-control/"
 thumbnail="layers-control/thumbnail.png"
-title="Layer Groups and Layers Control"
-description="A tutorial on how to manage groups of layers and use the layer switching control."
+title="图层组和图层控制"
+description="有关如何管理图层组和使用图层切换控件的教程。"
 %}
 
 
 {% include tutorial_link.html
 page="zoom-levels/"
 thumbnail="zoom-levels/thumbnail.png"
-title="Zoom levels"
-description="A deeper look into what zoom levels are."
+title="Zoom 缩放等级"
+description="更深入地了解缩放级别。"
 %}
 
 {% include tutorial_link.html
 page="crs-simple/crs-simple.html"
 thumbnail="crs-simple/thumbnail.png"
 title="Non-geographical maps"
-description="A primer on `L.CRS.Simple`, how to make maps with no concept of \"latitude\" or \"longitude\"."
+description="L.CRS.简单入门，介绍如何制作没有“纬度”或“经度”概念的地图"
 %}
 
 
@@ -76,7 +76,7 @@ description="A primer on `L.CRS.Simple`, how to make maps with no concept of \"l
 page="wms/wms.html"
 thumbnail="wms/thumbnail.png"
 title="WMS and TMS"
-description="How to integrate with WMS and TMS services from professional GIS software."
+description="如何与专业GIS软件的WMS和TMS服务集成。"
 %}
 
 
@@ -84,27 +84,27 @@ description="How to integrate with WMS and TMS services from professional GIS so
 page="map-panes/"
 thumbnail="map-panes/thumbnail.png"
 title="Working with map panes"
-description="How the default map panes work to display overlays on top of tiles, and how to override that."
+description="默认地图窗格如何在图块顶部显示叠加层，以及如何覆盖它。"
 %}
 
 
 {% include tutorial_link.html
 page="video-overlay/"
 thumbnail="video-overlay/thumbnail.gif"
-title="Showing video files"
-description="Leaflet can help you display videos somewhere on the map."
+title="显示视频文件"
+description="Leaflet 可以帮助您在地图上的某处显示视频。"
 %}
 
 ***
 
-The following tutorials cover how to create plugins for Leaflet, and are intended only for developers experienced in JavaScript:
+以下教程介绍了如何为Leaflet创建插件，仅适用于具有JavaScript经验的开发人员：
 
 
 {% include tutorial_link.html
 page="extending/extending-1-classes.html"
 thumbnail="extending/thumbnail-1.png"
 title="Extending Leaflet: Class Theory"
-description="An overview of Leaflet's classes, class inheritance, and conventions."
+description="Leaflet的类，类继承和约定的概述。"
 %}
 
 
@@ -112,7 +112,7 @@ description="An overview of Leaflet's classes, class inheritance, and convention
 page="extending/extending-2-layers.html"
 thumbnail="extending/thumbnail-2.png"
 title="Extending Leaflet: Layers"
-description="How to extend layers or create new ones, using specific entry points for doing so."
+description="如何使用特定的入口点来扩展图层或创建新的图层。"
 %}
 
 
@@ -120,6 +120,6 @@ description="How to extend layers or create new ones, using specific entry point
 page="extending/extending-3-controls.html"
 thumbnail="extending/thumbnail-3.png"
 title="Extending Leaflet: Handlers and Controls"
-description="How to extend or create non-layers."
+description="如何扩展或创建non-layers。"
 %}
 

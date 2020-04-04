@@ -4,45 +4,41 @@ title: Download
 bodyclass: download-page
 ---
 
-## Download Leaflet
+## 下载 Leaflet
 
 <table>
 	<tr>
-		<th>Version</th>
-		<th>Description</th>
+		<th>版本</th>
+		<th>说明</th>
 	</tr>
 	<tr>
 		<td><a href="http://cdn.leafletjs.com/leaflet/v1.6.0/leaflet.zip">Leaflet 1.6.0</a></td>
-		<td>Stable version, released on November 17, 2019.</td>
+		<td>稳定版，于2019年11月17日发布。</td>
 	</tr>
 	<tr>
 		<td><a href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.zip">Leaflet 1.7-dev</a></td>
-		<td>In-progress version, developed on the <code>master</code> branch.</td>
+		<td>开发版，在master分支上开发。</td>
 	</tr>
 	<tr>
 		<td class="width100"><a href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.zip">Leaflet 0.7.7</a></td>
-		<td>Legacy version, released on November 18, 2013 and last updated on October 26, 2015.</td>
+		<td>旧版，于2013年11月18日发布，最新更新于2015年10月26日。</td>
 	</tr>
 </table>
 
-[View Changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md)
+[查看更新日志](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md)
 
-Note that the master version can contain incompatible changes,
-so please read the changelog carefully when upgrading to it.
+请注意，主版本可能包含不兼容的更改，因此在升级到主版本时，请仔细阅读更改日志。
 
-[Get notified of new Leaflet releases](https://github.com/Leaflet/Leaflet/issues/6295)
+[获取有关新版Leaflet的通知](https://github.com/Leaflet/Leaflet/issues/6295)
 
-### Using a Hosted Version of Leaflet
+### 使用Leaflet的托管版本
 
-The latest stable Leaflet release is available on several CDN's &mdash; to start using
-it straight away, place this in the `head` of your HTML code:
+最新的Leaflet稳定版已在多个CDN上提供。使用时，直接将其放在HTML代码的开头即可：
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@{{ site.latest_leaflet_version}}/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@{{ site.latest_leaflet_version}}/dist/leaflet.js"></script>
 
-To avoid potential security problems, we recommend and encourage enabling
-[subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
-when using Leaflet from a CDN:
+为避免潜在的安全问题，我们建议并鼓励在使用CDN中的Leaflet时启用[subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity):
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@{{ site.latest_leaflet_version}}/dist/leaflet.css"
       integrity="{{site.integrity_hash_css}}"
@@ -51,50 +47,44 @@ when using Leaflet from a CDN:
       integrity="{{site.integrity_hash_uglified}}"
       crossorigin=""></script>
 
-Leaflet is available on the following free CDN's:  [unpkg](https://unpkg.com/leaflet/dist/), [cdnjs](https://cdnjs.com/libraries/leaflet), [jsDelivr](https://www.jsdelivr.com/package/npm/leaflet?path=dist)
+Leaflet 当前可以使用的免费CDN:  [unpkg](https://unpkg.com/leaflet/dist/), [cdnjs](https://cdnjs.com/libraries/leaflet), [jsDelivr](https://www.jsdelivr.com/package/npm/leaflet?path=dist)
 
-_Disclaimer: these services are external to Leaflet; for questions or support, please contact them directly._
+免责声明：这些服务是Leaflet的外部服务； 如有疑问或需要支持，请直接与他们联系。
 
-### Using a Downloaded Version of Leaflet
+### 使用下载版的 Leaflet
 
-Inside the archives downloaded from the above links, you will see four things:
+在从上述链接下载到本地的文件中，您将看到以下文件：
 
-- `leaflet.js` - This is the minified Leaflet JavaScript code.
-- `leaflet-src.js` - This is the readable, unminified Leaflet JavaScript, which is sometimes helpful for debugging. <small>(The integrity hash for this file is <nobr><tt>{{site.integrity_hash_source}}</tt></nobr>)</small>
-- `leaflet.css` - This is the stylesheet for Leaflet.
-- `images` - This is a folder that contains images referenced by `leaflet.css`. It must be in the same directory as `leaflet.css`.
+- `leaflet.js` - 这是压缩后的Leaflet JavaScript代码。
+- `leaflet-src.js` - 这是可读的，最小的Leaflet JavaScript，有时对调试很有帮助。<small>(该文件完整的哈希值为 <nobr><tt>{{site.integrity_hash_source}}</tt></nobr>)</small>
+- `leaflet.css` - 这是 Leaflet 的样式文件。
+- `images` - 这是一个文件夹，其中包含leaflet.css引用的图像。 它必须与leaflet.css位于同一目录中。
 
-Unzip the downloaded archive to your website's directory and add this to the `head` of your HTML code:
+将下载的文件解压到您网站的目录中，并将其添加到HTML代码的开头:
 
     <link rel="stylesheet" href="/path/to/leaflet.css" />
     <script src="/path/to/leaflet.js"></script>
 
-### Using a JavaScript package manager
+### 使用JavaScript包管理器
 
-If you use the [`npm` package manager](https://www.npmjs.com/), you can fetch a local copy of Leaflet by running:
+如果使用[`npm`软件包管理器](https://www.npmjs.com/)，则可以通过运行以下命令安装Leaflet：
 
     npm install leaflet
 
-You will find a copy of the Leaflet release files in `node_modules/leaflet/dist`.
+您可以在`node_modules/leaflet/dist`中找到Leaflet发行文件。
 
-### Leaflet Source Code
+### Leaflet 源码
 
-These download packages above only contain the library itself.
-If you want to download the full source code, including unit tests, files for debugging, build scripts, etc.,
-you can <a href="https://github.com/Leaflet/Leaflet/releases">download it</a>
-from the <a href="https://github.com/Leaflet/Leaflet">GitHub repository</a>.
+上面的这些下载软件包仅包含库本身。 如果要下载完整的源代码，包括单元测试，调试文件，构建脚本等，则可以从<a href="https://github.com/Leaflet/Leaflet">GitHub repository</a><a href="https://github.com/Leaflet/Leaflet/releases">下载</a>。
 
-### Building Leaflet from the Source
+### 从源代码中构建 Leaflet
 
-Leaflet build system is powered by the [Node.js](http://nodejs.org) platform,
-which installs easily and works well across all major platforms.
-Here are the steps to set it up:
+Leaflet构建系统由[Node.js](http://nodejs.org)平台提供支持，该平台易于安装并且在所有主要平台上均能正常运行。 设置步骤如下：
 
- 1. [Download and install Node](http://nodejs.org)
- 2. Run the following command in the command line:
+ 1. [下载并安装 Node](http://nodejs.org)
+ 2. 在命令行中运行以下命令:
 
  <pre><code>npm install</code></pre>
 
-Now that you have everything installed, run `npm run build` inside the Leaflet directory.
-This will combine and compress the Leaflet source files, saving the build to the `dist` folder.
+现在已经安装了所有内容，然后在Leaflet目录中运行`npm run build`。 这将合并并压缩Leaflet源文件，将构建保存到dist文件夹。
 
