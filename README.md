@@ -1,7 +1,7 @@
 # Leaflet - 中文文档  <img src='http://leafletjs.cn/docs/images/logo.png' height='30'>
 
 
-> Leaflet一个开源并且对移动端友好的交互式地图JavaScript库。本项目目的在于为国内使用`Leaflet`的小伙伴们提供一份内容完善、准确度相对较高并且更新及时的中文文档，希望可以帮助大家在学习或开发过程中带来一定的便利。
+> Leaflet一个开源并且对移动端友好的交互式地图JavaScript库。本项目目的在于为国内使用`Leaflet`的小伙伴们提供一份内容完善、准确度相对较高并且更新及时的中文文档，希望能够给大家在学习或开发过程中带来一定的便利。
 > 
 > Leaflet 中文站点：http://leafletjs.cn/
 > Leaflet 官方站点：http://leafletjs.com/
