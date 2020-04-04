@@ -10,7 +10,7 @@
 
 由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
 
-<img src='http://leafletjs.cn/docs/images/QQ%E4%BA%A4%E6%B5%81%E7%BE%A4.png' height='300'>
+<img src='http://leafletjs.cn/docs/images/QQ.png' height='300'>
 
 开始翻译前，你可以先加入我们的交流群，然后在群里通过以下方式认领，确保没有重复工作。
 
