@@ -938,7 +938,8 @@ var map = L.map(&#39;map&#39;, {
 					<td><code><b>getRenderer</b>(<nobr>&lt;<a href='#path'>Path</a>&gt;</nobr> <i>layer</i>)</code></td>
 					<td><code><a href='#renderer'>Renderer</a></code></td>
 					<td>
-						<p>返回应用于呈现给定 <a href="#path"><code>Path</code></a> 的 <a href="#renderer"><code>Renderer</code></a> 实例。 这将确保地图和路径的渲染器选项，并且Renderer实例确实存在。</p>
+						<p>返回应用于呈现给定 <a href="#path"><code>Path</code></a> 的 <a href="#renderer"><code>Renderer</code></a> 实例。
+							这将确保地图和路径的渲染器选项，并且Renderer实例确实存在。</p>
 					</td>
 				</tr>
 			</tbody>
@@ -1178,7 +1179,8 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>this</code></td>
 					<td>
-						<p>使用诸如 <a href="#map-flyto"><code>flyTo</code></a> 之类的平滑动画设置地图的视图，但采用诸如 <a href="#map-fitbounds"><code>fitBounds</code></a> 之类的bounds参数。</p>
+						<p>使用诸如 <a href="#map-flyto"><code>flyTo</code></a> 之类的平滑动画设置地图的视图，但采用诸如 <a
+								href="#map-fitbounds"><code>fitBounds</code></a> 之类的bounds参数。</p>
 					</td>
 				</tr>
 				<tr id='map-setmaxbounds'>
@@ -1218,7 +1220,9 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>this</code></td>
 					<td>
-						<p>平移地图的最小数量以使 <a href="#latlng"><code>latlng</code></a> 可见。 使用padding，paddingTopLeft和paddingTopRight选项可以使显示适合更严格的边界，例如<a href="#map-fitbounds"><code>fitBounds</code></a>。 如果latlng已经位于显示边界内（可选填充），则不会平移地图。 </p>
+						<p>平移地图的最小数量以使 <a href="#latlng"><code>latlng</code></a> 可见。
+							使用padding，paddingTopLeft和paddingTopRight选项可以使显示适合更严格的边界，例如<a
+								href="#map-fitbounds"><code>fitBounds</code></a>。 如果latlng已经位于显示边界内（可选填充），则不会平移地图。 </p>
 					</td>
 				</tr>
 				<tr id='map-invalidatesize'>
@@ -1227,7 +1231,8 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>this</code></td>
 					<td>
-						<p>检查地图容器大小是否已更改，并更新地图，如果是这样 - 在动态更改地图大小后调用它，也可以默认动画化。如果options.pan是false，则不会进行平移。 如果options.debounceMoveend是true，它将延迟moveend事件，以便即使该方法被连续调用多次也不会发生。</p>
+						<p>检查地图容器大小是否已更改，并更新地图，如果是这样 - 在动态更改地图大小后调用它，也可以默认动画化。如果options.pan是false，则不会进行平移。
+							如果options.debounceMoveend是true，它将延迟moveend事件，以便即使该方法被连续调用多次也不会发生。</p>
 					</td>
 				</tr>
 				<tr id='map-invalidatesize'>
@@ -1250,7 +1255,7 @@ var map = L.map(&#39;map&#39;, {
 	</section>
 	<section class='collapsable'>
 
-		<h4 id='map-geolocation-methods'>Geolocation methods</h4>
+		<h4 id='map-geolocation-methods'>地理定位</h4>
 
 
 		<table>
@@ -1268,26 +1273,18 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>this</code></td>
 					<td>
-						<p>Tries to locate the user using the Geolocation API, firing a <a
-								href="#map-locationfound"><code>locationfound</code></a>
-							event with location data on success or a <a href="#map-locationerror"><code>locationerror</code></a> event
-							on failure,
-							and optionally sets the map view to the user&#39;s location with respect to
-							detection accuracy (or to the world view if geolocation failed).
-							Note that, if your page doesn&#39;t use HTTPS, this method will fail in
-							modern browsers (<a
+						<p>尝试使用Geolocation API定位用户，触发具有 <a href="#map-locationfound"><code>locationfound</code></a> 成功的位置数据的 <a
+								href="#map-locationerror"><code>locationerror</code></a> 事件或失败的事件，并且可以根据检测精度（或者如果地理位置失败）将地图视图设置为用户的位置。
+							请注意，如果您的页面不使用HTTPS，则此方法将在最新流行浏览器（ <a
 								href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins">Chrome
-								50 and newer</a>)
-							See <a href="#locate-options"><code>Locate options</code></a> for more details.</p>
+								50 and newer</a> 50及更高版本）中失败。有关<a href="#locate-options"><code>Locate options</code></a>详细信息，请参阅。</p>
 					</td>
 				</tr>
 				<tr id='map-stoplocate'>
 					<td><code><b>stopLocate</b>()</code></td>
 					<td><code>this</code></td>
 					<td>
-						<p>Stops watching location previously initiated by <code>map.locate({watch: true})</code>
-							and aborts resetting the map view if map.locate was called with
-							<code>{setView: true}</code>.</p>
+						<p>停止监视先前由map.locate（{watch：true}）初始化的位置，如果通过{setView：true}调用map.locate，则放弃重置地图视图。</p>
 					</td>
 				</tr>
 			</tbody>
@@ -1296,7 +1293,7 @@ var map = L.map(&#39;map&#39;, {
 	</section>
 	<section class='collapsable'>
 
-		<h4 id='map-other-methods'>Other Methods</h4>
+		<h4 id='map-other-methods'>其它</h4>
 
 
 		<table>
@@ -1314,15 +1311,14 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>this</code></td>
 					<td>
-						<p>Adds a new <a href="#handler"><code>Handler</code></a> to the map, given its name and constructor
-							function.</p>
+						<p>给定其名称和构造函数，将新的 <a href="#handler"><code>Handler</code></a> 添加到地图。</p>
 					</td>
 				</tr>
 				<tr id='map-remove'>
 					<td><code><b>remove</b>()</code></td>
 					<td><code>this</code></td>
 					<td>
-						<p>Destroys the map and clears all related event listeners.</p>
+						<p>销毁地图并清除所有相关的事件侦听器。</p>
 					</td>
 				</tr>
 				<tr id='map-createpane'>
@@ -1331,31 +1327,28 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>HTMLElement</code></td>
 					<td>
-						<p>Creates a new <a href="#map-pane">map pane</a> with the given name if it doesn&#39;t exist already,
-							then returns it. The pane is created as a child of <code>container</code>, or
-							as a child of the main map pane if not set.</p>
+						<p>如果给定名称不存在，则创建一个新的<a href="#map-pane">地图窗格</a>，然后将其返回。 该窗格被创建为容器的子级，或者被创建为主地图窗格的子级（如果未设置）。</p>
 					</td>
 				</tr>
 				<tr id='map-getpane'>
 					<td><code><b>getPane</b>(<nobr>&lt;String|HTMLElement&gt;</nobr> <i>pane</i>)</code></td>
 					<td><code>HTMLElement</code></td>
 					<td>
-						<p>Returns a <a href="#map-pane">map pane</a>, given its name or its HTML element (its identity).</p>
+						<p>返回一个地图窗口 <a href="#map-pane">map pane</a>,给它一个名称或者HTML的节点。</p>
 					</td>
 				</tr>
 				<tr id='map-getpanes'>
 					<td><code><b>getPanes</b>()</code></td>
 					<td><code>Object</code></td>
 					<td>
-						<p>Returns a plain object containing the names of all <a href="#map-pane">panes</a> as keys and
-							the panes as values.</p>
+						<p>返回一个普通对象，其中包含所有窗格的名称为键，并将窗格 <a href="#map-pane">panes</a> 作为值。</p>
 					</td>
 				</tr>
 				<tr id='map-getcontainer'>
 					<td><code><b>getContainer</b>()</code></td>
 					<td><code>HTMLElement</code></td>
 					<td>
-						<p>Returns the HTML element that contains the map.</p>
+						<p>返回一个包含地图的html节点。</p>
 					</td>
 				</tr>
 				<tr id='map-whenready'>
@@ -1364,9 +1357,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>this</code></td>
 					<td>
-						<p>Runs the given function <code>fn</code> when the map gets initialized with
-							a view (center and zoom) and at least one layer, or immediately
-							if it&#39;s already initialized, optionally passing a function context.</p>
+						<p>当地图使用视图（中心和缩放）和至少一层初始化时，或者如果已经初始化，则立即运行给定的函数fn（如果已初始化）（可选地传递函数上下文）。</p>
 					</td>
 				</tr>
 			</tbody>
@@ -1375,7 +1366,7 @@ var map = L.map(&#39;map&#39;, {
 	</section>
 	<section class='collapsable'>
 
-		<h4 id='map-methods-for-getting-map-state'>Methods for Getting Map State</h4>
+		<h4 id='map-methods-for-getting-map-state'>获取地图状态</h4>
 
 
 		<table>
@@ -1391,37 +1382,35 @@ var map = L.map(&#39;map&#39;, {
 					<td><code><b>getCenter</b>()</code></td>
 					<td><code><a href='#latlng'>LatLng</a></code></td>
 					<td>
-						<p>Returns the geographical center of the map view</p>
+						<p>返回地图视图的中心点经纬度</p>
 					</td>
 				</tr>
 				<tr id='map-getzoom'>
 					<td><code><b>getZoom</b>()</code></td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the current zoom level of the map view</p>
+						<p>返回地图此时的缩放级别</p>
 					</td>
 				</tr>
 				<tr id='map-getbounds'>
 					<td><code><b>getBounds</b>()</code></td>
 					<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 					<td>
-						<p>Returns the geographical bounds visible in the current map view</p>
+						<p>返回当前地图视图的矩形边界</p>
 					</td>
 				</tr>
 				<tr id='map-getminzoom'>
 					<td><code><b>getMinZoom</b>()</code></td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the minimum zoom level of the map (if set in the <code>minZoom</code> option of the map or of any
-							layers), or <code>0</code> by default.</p>
+						<p>返回地图最小缩放级别（如果设置了地图或图层的minZoom参数），默认为0</p>
 					</td>
 				</tr>
 				<tr id='map-getmaxzoom'>
 					<td><code><b>getMaxZoom</b>()</code></td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the maximum zoom level of the map (if set in the <code>maxZoom</code> option of the map or of any
-							layers).</p>
+						<p>返回地图最大缩放级别（如果设置了地图或图层的maxZoom参数）</p>
 					</td>
 				</tr>
 				<tr id='map-getboundszoom'>
@@ -1430,41 +1419,35 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the maximum zoom level on which the given bounds fit to the map
-							view in its entirety. If <code>inside</code> (optional) is set to <code>true</code>, the method
-							instead returns the minimum zoom level on which the map view fits into
-							the given bounds in its entirety.</p>
+						<p>返回给定范围完全适合地图视图的最大缩放级别。如果inside（可选）设置为true，则该方法将返回地图视图适合整个给定边界的最小缩放级别。</p>
 					</td>
 				</tr>
 				<tr id='map-getsize'>
 					<td><code><b>getSize</b>()</code></td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Returns the current size of the map container (in pixels).</p>
+						<p>返回地图容器的当前大小（以像素为单位）。</p>
 					</td>
 				</tr>
 				<tr id='map-getpixelbounds'>
 					<td><code><b>getPixelBounds</b>()</code></td>
 					<td><code><a href='#bounds'>Bounds</a></code></td>
 					<td>
-						<p>Returns the bounds of the current map view in projected pixel
-							coordinates (sometimes useful in layer and overlay implementations).</p>
+						<p>返回当前地图视图的像素坐标的边界（在自定义层和覆盖实现中有用）。</p>
 					</td>
 				</tr>
 				<tr id='map-getpixelorigin'>
 					<td><code><b>getPixelOrigin</b>()</code></td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Returns the projected pixel coordinates of the top left point of
-							the map layer (useful in custom layer and overlay implementations).</p>
+						<p>返回当前地图视图左上角的像素坐标（在自定义层和覆盖实现中有用）。</p>
 					</td>
 				</tr>
 				<tr id='map-getpixelworldbounds'>
 					<td><code><b>getPixelWorldBounds</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom?</i>)</code></td>
 					<td><code><a href='#bounds'>Bounds</a></code></td>
 					<td>
-						<p>Returns the world&#39;s bounds in pixel coordinates for zoom level <code>zoom</code>.
-							If <code>zoom</code> is omitted, the map&#39;s current zoom level is used.</p>
+						<p>返回zoom缩放级别的世界边界的像素坐标。如果zoom省略，则使用地图的当前缩放级别。</p>
 					</td>
 				</tr>
 			</tbody>
@@ -1473,7 +1456,7 @@ var map = L.map(&#39;map&#39;, {
 	</section>
 	<section class='collapsable'>
 
-		<h4 id='map-conversion-methods'>Conversion Methods</h4>
+		<h4 id='map-conversion-methods'>转换</h4>
 
 
 		<table>
@@ -1491,8 +1474,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the scale factor to be applied to a map transition from zoom level
-							<code>fromZoom</code> to <code>toZoom</code>. Used internally to help with zoom animations.</p>
+						<p>返回要应用于从缩放级别从缩放到缩放的地图过渡的比例因子。 在内部使用以帮助缩放动画。</p>
 					</td>
 				</tr>
 				<tr id='map-getscalezoom'>
@@ -1501,9 +1483,8 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the zoom level that the map would end up at, if it is at <code>fromZoom</code>
-							level and everything is scaled by a factor of <code>scale</code>. Inverse of
-							<a href="#map-getZoomScale"><code>getZoomScale</code></a>.</p>
+						<p>返回地图最终到达的缩放级别，如果它处于fromZoom 级别，并且所有内容都按比例缩放scale。 <a
+								href="#map-getZoomScale"><code>getZoomScale</code></a> 的逆向方法。</p>
 					</td>
 				</tr>
 				<tr id='map-project'>
@@ -1512,10 +1493,8 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Projects a geographical coordinate <a href="#latlng"><code>LatLng</code></a> according to the projection
-							of the map&#39;s CRS, then scales it according to <code>zoom</code> and the CRS&#39;s
-							<a href="#transformation"><code>Transformation</code></a>. The result is pixel coordinate relative to
-							the CRS origin.</p>
+						<p><a href="#latlng"><code>LatLng</code></a> 根据地图CRS的投影来 投影地理坐标，然后zoom根据CRS的 尺寸对其进行分级 <a
+								href="#transformation"><code>Transformation</code></a> 。结果是相对于CRS原点的像素坐标。</p>
 					</td>
 				</tr>
 				<tr id='map-unproject'>
@@ -1524,15 +1503,14 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#latlng'>LatLng</a></code></td>
 					<td>
-						<p>Inverse of <a href="#map-project"><code>project</code></a>.</p>
+						<p>逆向 <a href="#map-project"><code>project</code></a></p>
 					</td>
 				</tr>
 				<tr id='map-layerpointtolatlng'>
 					<td><code><b>layerPointToLatLng</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 					<td><code><a href='#latlng'>LatLng</a></code></td>
 					<td>
-						<p>Given a pixel coordinate relative to the <a href="#map-getpixelorigin">origin pixel</a>,
-							returns the corresponding geographical coordinate (for the current zoom level).</p>
+						<p>给定相对于<a href="#map-getpixelorigin">origin pixel</a>的相应像素坐标，转换为相应的地理坐标（对于当前缩放级别）。</p>
 					</td>
 				</tr>
 				<tr id='map-latlngtolayerpoint'>
@@ -1540,20 +1518,15 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Given a geographical coordinate, returns the corresponding pixel coordinate
-							relative to the <a href="#map-getpixelorigin">origin pixel</a>.</p>
+						<p>给定地理坐标，转换为相对于<a href="#map-getpixelorigin">origin pixel</a>的相应像素坐标。（在地图上进行位置叠加时比较有用）</p>
 					</td>
 				</tr>
 				<tr id='map-wraplatlng'>
 					<td><code><b>wrapLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 					<td><code><a href='#latlng'>LatLng</a></code></td>
 					<td>
-						<p>Returns a <a href="#latlng"><code>LatLng</code></a> where <code>lat</code> and <code>lng</code> has been
-							wrapped according to the
-							map&#39;s CRS&#39;s <code>wrapLat</code> and <code>wrapLng</code> properties, if they are outside the
-							CRS&#39;s bounds.
-							By default this means longitude is wrapped around the dateline so its
-							value is between -180 and +180 degrees.</p>
+						<p>如果它们在CRS的边界之外，则返回一个<a href="#latlng"><code>LatLng</code></a>，lat并lng根据地图的CRS
+							wrapLat和wrapLng属性进行包装。默认情况下，这意味着经度包裹在数据线周围，所以它的值在-180和+180度之间。</p>
 					</td>
 				</tr>
 				<tr id='map-wraplatlngbounds'>
@@ -1562,12 +1535,8 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 					<td>
-						<p>Returns a <a href="#latlngbounds"><code>LatLngBounds</code></a> with the same size as the given one,
-							ensuring that
-							its center is within the CRS&#39;s bounds.
-							By default this means the center longitude is wrapped around the dateline so its
-							value is between -180 and +180 degrees, and the majority of the bounds
-							overlaps the CRS&#39;s bounds.</p>
+						<p>返回 <a href="#latlngbounds"><code>LatLngBounds</code></a>
+							与给定的大小相同的大小，确保其中心在CRS的边界内。默认情况下，这意味着中心经度被包裹在数据线周围，因此它的值在-180和+180度之间，并且大多数边界与CRS的界限重叠。</p>
 					</td>
 				</tr>
 				<tr id='map-distance'>
@@ -1576,8 +1545,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code>Number</code></td>
 					<td>
-						<p>Returns the distance between two geographical coordinates according to
-							the map&#39;s CRS. By default this measures distance in meters.</p>
+						<p>根据地图的参考系来返回两个地理位置之间的距离，默认为米。</p>
 					</td>
 				</tr>
 				<tr id='map-containerpointtolayerpoint'>
@@ -1586,8 +1554,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Given a pixel coordinate relative to the map container, returns the corresponding
-							pixel coordinate relative to the <a href="#map-getpixelorigin">origin pixel</a>.</p>
+						<p>给定相对于地图container容器的像素坐标，返回相对于<a href="#map-getpixelorigin">origin pixel</a>的相应像素坐标。</p>
 					</td>
 				</tr>
 				<tr id='map-layerpointtocontainerpoint'>
@@ -1596,8 +1563,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Given a pixel coordinate relative to the <a href="#map-getpixelorigin">origin pixel</a>,
-							returns the corresponding pixel coordinate relative to the map container.</p>
+						<p>给定相对于<a href="#map-getpixelorigin">origin pixel</a>的像素坐标，返回相对于地图container容器的相应像素坐标。</p>
 					</td>
 				</tr>
 				<tr id='map-containerpointtolatlng'>
@@ -1605,8 +1571,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#latlng'>LatLng</a></code></td>
 					<td>
-						<p>Given a pixel coordinate relative to the map container, returns
-							the corresponding geographical coordinate (for the current zoom level).</p>
+						<p>给定相对于地图container容器的像素坐标，返回对应的地理坐标（对于当前缩放级别）。</p>
 					</td>
 				</tr>
 				<tr id='map-latlngtocontainerpoint'>
@@ -1615,8 +1580,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Given a geographical coordinate, returns the corresponding pixel coordinate
-							relative to the map container.</p>
+						<p>给定地理坐标，返回相对于地图container容器的相应像素坐标。</p>
 					</td>
 				</tr>
 				<tr id='map-mouseeventtocontainerpoint'>
@@ -1625,8 +1589,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Given a MouseEvent object, returns the pixel coordinate relative to the
-							map container where the event took place.</p>
+						<p>给定一个MouseEvent对象，返回相对于发生事件的地图容器的像素坐标（与地图左上角相关）。</p>
 					</td>
 				</tr>
 				<tr id='map-mouseeventtolayerpoint'>
@@ -1635,8 +1598,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#point'>Point</a></code></td>
 					<td>
-						<p>Given a MouseEvent object, returns the pixel coordinate relative to
-							the <a href="#map-getpixelorigin">origin pixel</a> where the event took place.</p>
+						<p>给定一个MouseEvent对象，返回相对于事件发生的<a href="#map-getpixelorigin">origin pixel</a>的像素坐标。</p>
 					</td>
 				</tr>
 				<tr id='map-mouseeventtolatlng'>
@@ -1645,8 +1607,7 @@ var map = L.map(&#39;map&#39;, {
 					</td>
 					<td><code><a href='#latlng'>LatLng</a></code></td>
 					<td>
-						<p>Given a MouseEvent object, returns geographical coordinate where the
-							event took place.</p>
+						<p>给定一个MouseEvent对象，返回发生事件的地理坐标。</p>
 					</td>
 				</tr>
 			</tbody>
@@ -1656,7 +1617,7 @@ var map = L.map(&#39;map&#39;, {
 
 
 	<div class='accordion'>
-		<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+		<label><span class='expander'>▶</span>从<a href='#evented'>Evented上继承的方法</a></label>
 		<div class='accordion-overflow'>
 			<div class='accordion-content'>
 				<section>
@@ -1679,16 +1640,14 @@ var map = L.map(&#39;map&#39;, {
 								</td>
 								<td><code>this</code></td>
 								<td>
-									<p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can
-										optionally specify the context of the listener (object the this keyword will point to). You can also
-										pass several space-separated types (e.g. <code>&#39;click dblclick&#39;</code>).</p>
+									<p>将侦听器函数（fn）添加到对象的特定事件类型。 您可以选择指定侦听器的上下文（此关键字将指向的对象）。 您还可以传递几种以空格分隔的类型（例如'click dblclick'）。</p>
 								</td>
 							</tr>
 							<tr id='map-on'>
 								<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+									<p>添加一组类型/侦听器对，例如 {click：onClick，mousemove：onMouseMove}</code></p>
 								</td>
 							</tr>
 							<tr id='map-off'>
@@ -1697,9 +1656,7 @@ var map = L.map(&#39;map&#39;, {
 								</td>
 								<td><code>this</code></td>
 								<td>
-									<p>Removes a previously added listener function. If no function is specified, it will remove all the
-										listeners of that particular event from the object. Note that if you passed a custom context to
-										<code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.
+									<p>删除以前添加的侦听器功能。 如果未指定功能，它将从对象中删除该特定事件的所有侦听器。 请注意，如果将自定义上下文传递给on，则必须将相同的上下文传递给off才能删除侦听器。
 									</p>
 								</td>
 							</tr>
@@ -1707,14 +1664,14 @@ var map = L.map(&#39;map&#39;, {
 								<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Removes a set of type/listener pairs.</p>
+									<p>删除一组类型/侦听器对。</p>
 								</td>
 							</tr>
 							<tr id='map-off'>
 								<td><code><b>off</b>()</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+									<p>删除对象上所有事件的所有侦听器。 这包括隐式附加的事件。</p>
 								</td>
 							</tr>
 							<tr id='map-fire'>
@@ -1723,24 +1680,21 @@ var map = L.map(&#39;map&#39;, {
 								</td>
 								<td><code>this</code></td>
 								<td>
-									<p>Fires an event of the specified type. You can optionally provide an data
-										object — the first argument of the listener function will contain its
-										properties. The event can optionally be propagated to event parents.</p>
+									<p>触发指定类型的事件。 您可以选择提供一个数据对象-侦听器函数的第一个参数将包含其属性。 可以选择将事件传播给事件父级。</p>
 								</td>
 							</tr>
 							<tr id='map-listens'>
 								<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 								<td><code>Boolean</code></td>
 								<td>
-									<p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+									<p>如果特定事件类型具有任何侦听器，则返回true。</p>
 								</td>
 							</tr>
 							<tr id='map-once'>
 								<td><code><b>once</b>(<i>…</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired
-										once and then removed.</p>
+									<p>行为与<a href="#evented-on"><code>on(…)</code></a>相同，除了侦听器只会被触发一次然后被删除。</p>
 								</td>
 							</tr>
 							<tr id='map-addeventparent'>
@@ -1748,8 +1702,7 @@ var map = L.map(&#39;map&#39;, {
 								</td>
 								<td><code>this</code></td>
 								<td>
-									<p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated
-										events</p>
+									<p>再父级添加一个事件-将接收传播事件的<a href="#evented"><code>Evented</code></a>。</p>
 								</td>
 							</tr>
 							<tr id='map-removeeventparent'>
@@ -1758,49 +1711,49 @@ var map = L.map(&#39;map&#39;, {
 								</td>
 								<td><code>this</code></td>
 								<td>
-									<p>Removes an event parent, so it will stop receiving propagated events</p>
+									<p>删除父级事件，因此它将停止接收传播的事件</p>
 								</td>
 							</tr>
 							<tr id='map-addeventlistener'>
 								<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+									<p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 								</td>
 							</tr>
 							<tr id='map-removeeventlistener'>
 								<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+									<p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 								</td>
 							</tr>
 							<tr id='map-clearalleventlisteners'>
 								<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+									<p>同 <a href="#evented-off"><code>off()</code></a></p>
 								</td>
 							</tr>
 							<tr id='map-addonetimeeventlistener'>
 								<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+									<p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 								</td>
 							</tr>
 							<tr id='map-fireevent'>
 								<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 								<td><code>this</code></td>
 								<td>
-									<p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+									<p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 								</td>
 							</tr>
 							<tr id='map-haseventlisteners'>
 								<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 								<td><code>Boolean</code></td>
 								<td>
-									<p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+									<p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 								</td>
 							</tr>
 						</tbody>
@@ -1813,27 +1766,26 @@ var map = L.map(&#39;map&#39;, {
 
 </section>
 <section>
-	<h3 id='map-property'>Properties</h3>
+	<h3 id='map-property'>属性</h3>
 
 	<section class='collapsable'>
 
-		<h4 id='map-controls'>Controls</h4>
+		<h4 id='map-controls'>控制</h4>
 
 
 		<table>
 			<thead>
 				<tr>
-					<th>Property</th>
-					<th>Type</th>
-					<th>Description</th>
+					<th>属性</th>
+					<th>类型</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr id='map-zoomcontrol'>
 					<td><code><b>zoomControl</b></code></td>
 					<td><code><a href='#control-zoom'>Control.Zoom</a></code></td>
-					<td>The default zoom control (only available if the
-						<a href="#map-zoomcontrol"><code>zoomControl</code> option</a> was <code>true</code> when creating the map).
+					<td>默认缩放控件（仅当创建地图时<a href="#map-zoomcontrol"><code>zoomControl</code></a>选项为true时可用）。
 					</td>
 				</tr>
 			</tbody>
@@ -1842,52 +1794,52 @@ var map = L.map(&#39;map&#39;, {
 	</section>
 	<section class='collapsable'>
 
-		<h4 id='map-handlers'>Handlers</h4>
+		<h4 id='map-handlers'>Handlers处理程序</h4>
 
 
 		<table>
 			<thead>
 				<tr>
-					<th>Property</th>
-					<th>Type</th>
-					<th>Description</th>
+					<th>属性</th>
+					<th>类型</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr id='map-boxzoom'>
 					<td><code><b>boxZoom</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Box (shift-drag with mouse) zoom handler.</td>
+					<td>框（使用鼠标按住Shift键并拖动）缩handler。</td>
 				</tr>
 				<tr id='map-doubleclickzoom'>
 					<td><code><b>doubleClickZoom</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Double click zoom handler.</td>
+					<td>双击缩放handler。</td>
 				</tr>
 				<tr id='map-dragging'>
 					<td><code><b>dragging</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Map dragging handler (by both mouse and touch).</td>
+					<td>地图拖动handler（通过鼠标和触摸）。</td>
 				</tr>
 				<tr id='map-keyboard'>
 					<td><code><b>keyboard</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Keyboard navigation handler.</td>
+					<td>键盘导航handler。</td>
 				</tr>
 				<tr id='map-scrollwheelzoom'>
 					<td><code><b>scrollWheelZoom</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Scroll wheel zoom handler.</td>
+					<td>滚动轮缩放handler。</td>
 				</tr>
 				<tr id='map-tap'>
 					<td><code><b>tap</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Mobile touch hacks (quick tap and touch hold) handler.</td>
+					<td>移动触摸hacks（快速点击和触摸保持）handler。</td>
 				</tr>
 				<tr id='map-touchzoom'>
 					<td><code><b>touchZoom</b></code></td>
 					<td><code><a href='#handler'>Handler</a></code></td>
-					<td>Touch zoom handler.</td>
+					<td>触摸缩放handler。</td>
 				</tr>
 			</tbody>
 		</table>
@@ -1897,25 +1849,23 @@ var map = L.map(&#39;map&#39;, {
 
 </section>
 <section>
-	<h3 id='map-pane'>Map panes</h3>
+	<h3 id='map-pane'>Map panes 地图面板</h3>
 
 	<section>
 
 
 
-		<div class='section-comments'>Panes are DOM elements used to control the ordering of layers on the map. You
-			can access panes with <a href="#map-getpane"><code>map.getPane</code></a> or
-			<a href="#map-getpanes"><code>map.getPanes</code></a> methods. New panes can be created with the
-			<a href="#map-createpane"><code>map.createPane</code></a> method.
-			Every map has the following default panes that differ only in zIndex.</div>
+		<div class='section-comments'>窗格是用于控制地图上图层顺序的DOM元素。 您可以使用<a href="#map-getpane"><code>map.getPane</code></a>或<a
+				href="#map-getpanes"><code>map.getPanes</code></a>方法访问窗格。 可以使用<a
+				href="#map-createpane"><code>map.createPane</code></a>方法创建新窗格。 每个地图都有以下默认窗格，它们的唯一区别仅在于zIndex。</div>
 
 		<table>
 			<thead>
 				<tr>
 					<th>Pane</th>
-					<th>Type</th>
+					<th>类型</th>
 					<th>Z-index</th>
-					<th>Description</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -1923,47 +1873,45 @@ var map = L.map(&#39;map&#39;, {
 					<td><code><b>mapPane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>&#x27;auto&#x27;</code></td>
-					<td>Pane that contains all other map panes</td>
+					<td>包含所有map pane的pane</td>
 				</tr>
 				<tr id='map-tilepane'>
 					<td><code><b>tilePane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>200</code></td>
-					<td>Pane for <a href="#gridlayer"><code>GridLayer</code></a>s and <a
-							href="#tilelayer"><code>TileLayer</code></a>s</td>
+					<td><a href="#gridlayer"><code>GridLayer</code></a>和<a href="#tilelayer"><code>TileLayer</code></a>的窗格。</td>
 				</tr>
 				<tr id='map-overlaypane'>
 					<td><code><b>overlayPane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>400</code></td>
-					<td>Pane for vectors (<a href="#path"><code>Path</code></a>s, like <a
-							href="#polyline"><code>Polyline</code></a>s and <a href="#polygon"><code>Polygon</code></a>s), <a
-							href="#imageoverlay"><code>ImageOverlay</code></a>s and <a
-							href="#videooverlay"><code>VideoOverlay</code></a>s</td>
+					<td>矢量（<a href="#path"><code>路径</code></a>，如<a href="#polyline"><code>折线</code></a>和<a
+							href="#polygon"><code>多边形</code></a>），<a
+							href="#imageoverlay"><code>ImageOverlay</code></a>和<a href="#videooverlay"><code>VideoOverlay</code></a>的窗格。</td>
 				</tr>
 				<tr id='map-shadowpane'>
 					<td><code><b>shadowPane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>500</code></td>
-					<td>Pane for overlay shadows (e.g. <a href="#marker"><code>Marker</code></a> shadows)</td>
+					<td>叠加阴影的panes窗格（例如<a href="#marker"><code>Marker</code></a>阴影）</td>
 				</tr>
 				<tr id='map-markerpane'>
 					<td><code><b>markerPane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>600</code></td>
-					<td>Pane for <a href="#icon"><code>Icon</code></a>s of <a href="#marker"><code>Marker</code></a>s</td>
+					<td><a href="#marker"><code>Marker</code></a><a href="#icon"><code>Icon</code></a>图标窗格</td>
 				</tr>
 				<tr id='map-tooltippane'>
 					<td><code><b>tooltipPane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>650</code></td>
-					<td>Pane for <a href="#tooltip"><code>Tooltip</code></a>s.</td>
+					<td><a href="#tooltip"><code>Tooltip</code></a>提示框的Pane</td>
 				</tr>
 				<tr id='map-popuppane'>
 					<td><code><b>popupPane</b></code></td>
 					<td><code>HTMLElement</code></td>
 					<td><code>700</code></td>
-					<td>Pane for <a href="#popup"><code>Popup</code></a>s.</td>
+					<td><a href="#popup"><code>Popup</code></a>弹出层的Pane</td>
 				</tr>
 			</tbody>
 		</table>
@@ -1974,23 +1922,21 @@ var map = L.map(&#39;map&#39;, {
 </section><span id='locate-options'></span>
 
 <section>
-	<h3 id='locate-options-option'>Locate options</h3>
+	<h3 id='locate-options-option'>定位相关参数</h3>
 
 	<section>
 
 
 
-		<div class='section-comments'>Some of the geolocation methods for <a href="#map"><code>Map</code></a> take in an
-			<code>options</code> parameter. This
-			is a plain javascript object with the following optional components:</div>
+		<div class='section-comments'><a href="#map"><code>Map</code></a>的某些地理位置方法采用了options参数。 这是一个普通的javascript对象，具有以下可选组件：</div>
 
 		<table>
 			<thead>
 				<tr>
-					<th>Option</th>
-					<th>Type</th>
-					<th>Default</th>
-					<th>Description</th>
+					<th>Option参数</th>
+					<th>类型</th>
+					<th>默认值</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -2059,10 +2005,10 @@ var map = L.map(&#39;map&#39;, {
 		<table>
 			<thead>
 				<tr>
-					<th>Option</th>
-					<th>Type</th>
-					<th>Default</th>
-					<th>Description</th>
+					<th>Option参数</th>
+					<th>类型</th>
+					<th>默认值</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -2098,10 +2044,10 @@ var map = L.map(&#39;map&#39;, {
 		<table>
 			<thead>
 				<tr>
-					<th>Option</th>
-					<th>Type</th>
-					<th>Default</th>
-					<th>Description</th>
+					<th>Option参数</th>
+					<th>类型</th>
+					<th>默认值</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -2161,10 +2107,10 @@ var map = L.map(&#39;map&#39;, {
 					<table>
 						<thead>
 							<tr>
-								<th>Option</th>
-								<th>Type</th>
-								<th>Default</th>
-								<th>Description</th>
+								<th>Option参数</th>
+								<th>类型</th>
+								<th>默认值</th>
+								<th>说明</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -2197,10 +2143,10 @@ var map = L.map(&#39;map&#39;, {
 					<table>
 						<thead>
 							<tr>
-								<th>Option</th>
-								<th>Type</th>
-								<th>Default</th>
-								<th>Description</th>
+								<th>Option参数</th>
+								<th>类型</th>
+								<th>默认值</th>
+								<th>说明</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -2247,10 +2193,10 @@ var map = L.map(&#39;map&#39;, {
 		<table>
 			<thead>
 				<tr>
-					<th>Option</th>
-					<th>Type</th>
-					<th>Default</th>
-					<th>Description</th>
+					<th>Option参数</th>
+					<th>类型</th>
+					<th>默认值</th>
+					<th>说明</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -2299,10 +2245,10 @@ var map = L.map(&#39;map&#39;, {
 					<table>
 						<thead>
 							<tr>
-								<th>Option</th>
-								<th>Type</th>
-								<th>Default</th>
-								<th>Description</th>
+								<th>Option参数</th>
+								<th>类型</th>
+								<th>默认值</th>
+								<th>说明</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -2335,10 +2281,10 @@ var map = L.map(&#39;map&#39;, {
 					<table>
 						<thead>
 							<tr>
-								<th>Option</th>
-								<th>Type</th>
-								<th>Default</th>
-								<th>Description</th>
+								<th>Option参数</th>
+								<th>类型</th>
+								<th>默认值</th>
+								<th>说明</th>
 							</tr>
 						</thead>
 						<tbody>
