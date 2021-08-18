@@ -12,11 +12,11 @@ bodyclass: download-page
 		<th>说明</th>
 	</tr>
 	<tr>
-		<td><a href="http://cdn.leafletjs.com/leaflet/v1.6.0/leaflet.zip">Leaflet 1.6.0</a></td>
-		<td>稳定版，于2019年11月17日发布。</td>
+		<td><a href="http://cdn.leafletjs.com/leaflet/v1.7.1/leaflet.zip">Leaflet 1.7.1</a></td>
+		<td>稳定版，于2020年9月3日发布。</td>
 	</tr>
 	<tr>
-		<td><a href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.zip">Leaflet 1.7-dev</a></td>
+		<td><a href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.zip">Leaflet 1.8-dev</a></td>
 		<td>开发版，在master分支上开发。</td>
 	</tr>
 	<tr>

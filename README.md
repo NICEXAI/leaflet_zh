@@ -6,6 +6,42 @@
 > Leaflet 中文站点：https://leafletjs.cn/
 > Leaflet 官方站点：https://leafletjs.com/
 
+### 翻译进度（v1.7.1）
+- [x] 概况
+- [ ] 教程
+  - [x] 列表页
+  - [ ] Leaflet 快速入门指南
+  - [ ] Leaflet 在手机上使用
+  - [ ] Markers 自定义图标
+  - [ ] 在 Leaflet 中使用 GeoJSON
+  - [ ] 互动式choropleth地图
+  - [ ] 图层组和图层控制
+  - [ ] Zoom 缩放等级
+  - [ ] Non-geographical maps
+  - [ ] WMS and TMS
+  - [ ] Working with map panes
+  - [ ] 显示视频文件
+  - [ ] Extending Leaflet: Class Theory
+  - [ ] Extending Leaflet: Layers
+  - [ ] Extending Leaflet: Handlers and Controls
+- [ ] 文档
+  - [x] 地图
+  - [x] 地图方法
+  - [ ] UI 图层
+  - [ ] 栅格图层
+  - [ ] 地图杂项
+  - [ ] 矢量图层
+  - [ ] 其它图层
+  - [ ] 基本类型
+  - [ ] 控件
+  - [ ] Util常用方法类
+  - [ ] Dom常用方法类
+  - [ ] 基础类
+  - [ ] 其它
+- [x] 下载
+- [ ] 插件
+- [ ] 博客
+
 ### 加入翻译
 
 由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
@@ -80,6 +116,6 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 
 > 定期更新，谢谢各位辛勤贡献
 
-- [待定](https://blog.h5base.cn/)
+- 待定
 
 **只要文档符合 [翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)，欢迎你来一起完善**
