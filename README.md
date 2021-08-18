@@ -1,16 +1,16 @@
-# Leaflet - 中文文档  <img src='http://leafletjs.cn/docs/images/logo.png' height='30'>
+# Leaflet - 中文文档  <img src='https://leafletjs.cn/docs/images/logo.png' height='30'>
 
 
 > Leaflet一个开源并且对移动端友好的交互式地图JavaScript库。本项目目的在于为国内使用`Leaflet`的小伙伴们提供一份内容完善、准确度相对较高并且更新及时的中文文档，希望能够给大家在学习或开发过程中带来一定的便利。
 > 
-> Leaflet 中文站点：http://leafletjs.cn/
-> Leaflet 官方站点：http://leafletjs.com/
+> Leaflet 中文站点：https://leafletjs.cn/
+> Leaflet 官方站点：https://leafletjs.com/
 
 ### 加入翻译
 
 由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
 
-<img src='http://leafletjs.cn/docs/images/QQ.png' height='300'>
+<img src='https://leafletjs.cn/docs/images/QQ.png' height='300'>
 
 开始翻译前，你可以先加入我们的交流群，然后在群里通过以下方式认领，确保没有重复工作。
 
