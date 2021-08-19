@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet 0.5 Released
-description: Leaflet 0.5 released &mdash; with IE10 touch support, retina-enabled markers, better panning inertia, new zoom control and about a hundred of other improvements and bugfixes!
+title: Leaflet 0.5 发布
+description: Leaflet 0.5 正式发布 — 支持 IE10 触摸、启用视网膜标记、更好的平移惯性、新的缩放控制以及大约一百个其他改进和错误修复
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

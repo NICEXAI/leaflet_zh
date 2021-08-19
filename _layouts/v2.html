@@ -104,6 +104,13 @@
 			<a href="{{ root }}blog.html"{% if page.post == true %} class="active"{% endif %}>博客</a>
 		{% endif %}
 	</li>
+	<li>
+		{% if page.title == 'Honor' %}
+		<span>荣誉</span>
+		{% else %}
+		<a href="{{ root }}honor.html"{% if page.post == true %} class="active"{% endif %}>荣誉</a>
+		{% endif %}
+	</li>
 </ul>
 
 <div class="container">

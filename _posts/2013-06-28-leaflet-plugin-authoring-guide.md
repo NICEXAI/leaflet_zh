@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet Plugin Authoring Guide
-description: A number of best practices and tips for publishing your own perfect Leaflet plugin
+title: Leaflet 插件开发指南
+description: 一些可以帮助您发布一款优秀的 Leaflet 插件的最佳实践和技巧
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

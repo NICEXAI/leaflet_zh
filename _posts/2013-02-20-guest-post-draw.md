@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet.draw 0.2 Released
-description: Leaflet.draw 0.2 released &mdash; brings vector drawing and editing tools to your Leaflet map.
+title: Leaflet.draw 0.2 发布
+description: Leaflet.draw 0.2 正式发布 —— 为您的 Leaflet 地图带来矢量绘图和编辑工具
 author: Jacob Toye
 authorsite: https://github.com/jacobtoye/
 ---

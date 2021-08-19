@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet is Alive and Kicking, Stay Tuned for 1.0!
-description: We're on the finishing line of releasing Leaflet 1.0 &mdash; the biggest and greatest Leaflet release ever. Meanwhile, I'm happy to present you the new redesigned Leaflet website!
+title: Leaflet 持续活跃，敬请关注 1.0!
+description: 我们即将发布 Leaflet 1.0 — 有史以来最伟大的 Leaflet 版本。同时，我很高兴向您展示重新设计过的一个全新的 Leaflet 网站！…
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

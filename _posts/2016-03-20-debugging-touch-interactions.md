@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Debugging touch interactions
-description: To debug Leaflet, sometimes you need to create a new tool.
+title: 调试触控的交互
+description: 有时候你需要创建一个新的工具来调试 Leaflet
 author: Iván Sánchez
 authorsite: http://ivan.sanchezortega.es
 ---

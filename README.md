@@ -40,13 +40,21 @@
   - [ ] 其它
 - [x] 下载
 - [ ] 插件
+  - [ ] Tile & Image 图层
+  - [ ] 叠加数据
+  - [ ] 叠加显示
+  - [ ] 叠加交互
+  - [ ] 地图交互
+  - [ ] 各种各样的
+  - [ ] 综合的
+  - [ ] 开发属于自己的插件
 - [ ] 博客
 
 ### 加入翻译
 
 由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
 
-<img src='https://leafletjs.cn/docs/images/QQ.png' height='300'>
+<img src='https://leafletjs.cn/docs/images/QQ.png' width='300'>
 
 开始翻译前，你可以先加入我们的交流群，然后在群里通过以下方式认领，确保没有重复工作。
 

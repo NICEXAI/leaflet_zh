@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet 0.6 Released, Code Sprint in DC with MapBox
-description: Leaflet 0.6 released &mdash; with nicer controls, better usability and tons of API improvements and various bugfixes &mdash; more than 120 changes! The first ever Leaflet Code Sprint happening in Washington, DC with the MapBox team
+title: Leaflet 0.6 发布, 在 DC 中使用 MapBox
+description: Leaflet 0.6 正式发布 —— 具有更好的操作和可用性、进行了大量的，共超过120项的API改进和BUG修复！这是有史以来第一次在华盛顿特区和 MapBox 团队一起发版 Leaflet
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

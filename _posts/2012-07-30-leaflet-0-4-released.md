@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet 0.4 Released
-description: After 5.5 months of development with 33 contributors involved, I'm proud to announce the release of Leaflet 0.4! It comes with a simpler API and <em>lots</em> of great improvements, along with a major update to documentation, a plugins page and the launch of the developer blog.
+title: Leaflet 0.4 发布
+description: 经过 5.5 个月的开发，涉及 33 个贡献者，我很自豪地宣布 Leaflet 0.4 的发布！它带有更简单的 API 和许多重大改进，以及对文档的重大更新、插件页面和开发者博客的发布
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

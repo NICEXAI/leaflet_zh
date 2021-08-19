@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet 0.4.3 and a New Tutorial
-description: Leaflet 0.4.3 released with several bugfixes and improvements, and comes with a new tutorial on creating a colorful interactive choropleth map.
+title: Leaflet 0.4.3 和 新的教程
+description: Leaflet 0.4.3 发布了几个错误修正和改进，并附带了一个关于创建彩色交互式等值线地图的新教程
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

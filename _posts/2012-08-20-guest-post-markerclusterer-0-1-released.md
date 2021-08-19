@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet.MarkerCluster 0.1 Released
-description: Introducing Leaflet.MarkerCluster, a beautiful, fast, customizable plugin to reduce the visual clutter on crowded maps.
+title: Leaflet.MarkerCluster 0.1 发布
+description: Leaflet.MarkerCluster，一个美观、快速、可定制的插件，用于减少拥挤地图上的视觉混乱
 author: Dave Leaver
 authorsite: https://github.com/danzel/
 ---

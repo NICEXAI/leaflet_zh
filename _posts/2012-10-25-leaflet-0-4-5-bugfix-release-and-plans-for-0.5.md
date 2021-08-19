@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet 0.4.5 Bugfix Release and Plans for 0.5
-description: Leaflet 0.4.5 released, containing a small but important zoom animation bugfix for upcoming Chrome 23+ (currently beta) and IE10. Work on future 0.5 release goes on!
+title: Leaflet 0.4.5 Bugfix 版发布 以及 0.5 的计划
+description: Leaflet 0.4.5 正式发布, 包含针对即将推出的 Chrome 23+（目前为测试版）和 IE10 的小而重要的缩放动画错误修复。未来 0.5 版本的开发工作仍在继续
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---

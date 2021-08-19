@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaflet 0.7 Release, MapBox and Plans for Future
-description: Leaflet 0.7 Released &mdash; with IE11 touch support, upscaling tiles and tons of other improvements and bugfixes! Meanwhile, I've joined the MapBox team full-time.
+title: Leaflet 0.7 发布, MapBox and 未来的计划
+description: Leaflet 0.7 正式发布——支持IE11触摸（touch）事件、升级了瓦片以及进行了大量的改进和修复BUG！同时，我全职加入了 MapBox 团队
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---
