@@ -3,19 +3,19 @@ layout: tutorial_v2
 title: Interactive Choropleth Map
 ---
 
-## Interactive Choropleth Map
+## 交互式 Choropleth 地图
 
-This is a case study of creating a colorful interactive [choropleth map](http://en.wikipedia.org/wiki/Choropleth_map) of US States Population Density with the help of [GeoJSON](../geojson/) and some [custom controls](/reference.html#control) (that will hopefully convince all the remaining major news and government websites that do not use Leaflet yet to start doing so).
+这是一个借助[GeoJSON](.../geojson/)和一些[自定义控件](/reference.html#control)创建美国各州人口密度的彩色交互式[choropleth地图](http://en.wikipedia.org/wiki/Choropleth_map)的案例研究（希望能说服其余所有尚未使用 Leaflet 的主要新闻和政府网站开始这样做）。
 
-The tutorial was inspired by the [Texas Tribune US Senate Runoff Results map](http://www.texastribune.org/library/data/us-senate-runoff-results-map/) (also powered by Leaflet), created by [Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/).
+该教程的灵感来自于[德克萨斯论坛报美国参议院决选结果地图](http://www.texastribune.org/library/data/us-senate-runoff-results-map/)（也由Leaflet提供），由[Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/)创建。
 
 {% include frame.html url="example.html" width=816 height=516 %}
 
-### Data Source
+### 数据来源
 
-We'll be creating a visualization of population density per US state. As the amount of data (state shapes and the density value for each state) is not very big, the most convenient and simple way to store and then display it is [GeoJSON](../geojson/).
+我们将创建一个美国各州人口密度的可视化图。由于数据量（州的形状和每个州的密度值）不是很大，最方便和简单的方法是使用 [GeoJSON](../geojson/) 来存储，然后显示。
 
-Each feature of our GeoJSON data ([us-states.js](us-states.js)) will look like this:
+我们的 GeoJSON 数据（[us-states.js](us-states.js)）的每个 feature 将看起来像这样：
 
 	{
 		"type": "Feature",
@@ -27,11 +27,11 @@ Each feature of our GeoJSON data ([us-states.js](us-states.js)) will look like t
 		...
 	}
 
-The GeoJSON with state shapes was kindly shared by [Mike Bostock](http://bost.ocks.org/mike) of [D3](http://d3js.org/) fame, extended with density values from [this Wikipedia article](http://en.wikipedia.org/wiki/List_of_U.S._states_by_population_density) based on July 1st 2011 data from [US Census Bureau](http://www.census.gov/) and assigned to `statesData` JS variable.
+该州的 GeoJSON 数据是由 [D3](http://d3js.org/) 的 [Mike Bostock](http://bost.ocks.org/mike) 根据[美国人口普查局](http://www.census.gov/)2011年7月1日的数据制作然后友情分享的，用[本维基百科文章](http://en.wikipedia.org/wiki/List_of_U.S._states_by_population_density)的密度值进行了扩展，并赋值给 `statesData` JS 变量。
 
-### Basic States Map
+### 基本州地图
 
-Let's display our states data on a map with a custom Mapbox style for nice grayscale tiles that look perfect as a background for visualizations:
+让我们使用自定义的 Mapbox 风格在地图上显示我们的州的数据，以获得漂亮的灰度瓦片（Tile），这些图块看起来非常适合作为可视化的背景：
 
 	var mapboxAccessToken = {your access token here};
 	var map = L.map('map').setView([37.8, -96], 4);
@@ -48,9 +48,9 @@ Let's display our states data on a map with a custom Mapbox style for nice grays
 {% include frame.html url="example-basic.html" %}
 
 
-### Adding Some Color
+### 添加一些颜色
 
-Now we need to color the states according to their population density. Choosing nice colors for a map can be tricky, but there's a great tool that can help with it --- [ColorBrewer](http://colorbrewer2.org/). Using the values we got from it, we create a function that returns a color based on population density:
+现在我们需要根据各州的人口密度为其着色。为地图选择漂亮的颜色可能很麻烦，但有一个很好的工具可以帮助我们------[ColorBrewer]（http://colorbrewer2.org/）。使用我们从它那里得到的值，我们创建一个函数，根据人口密度返回一个颜色：
 
 	function getColor(d) {
 		return d > 1000 ? '#800026' :
@@ -63,7 +63,7 @@ Now we need to color the states according to their population density. Choosing 
 		                  '#FFEDA0';
 	}
 
-Next we define a styling function for our GeoJSON layer so that its `fillColor` depends on `feature.properties.density` property, also adjusting the appearance a bit and adding a nice touch with dashed stroke.
+接下来，我们为 GeoJSON 层定义一个样式函数，使其 `fillColor` 依赖于 `feature.properties.density` 属性，同时也对外观进行一些调整，用虚线添加一个漂亮的点缀。
 
 	function style(feature) {
 		return {
@@ -78,14 +78,14 @@ Next we define a styling function for our GeoJSON layer so that its `fillColor` 
 
 	L.geoJson(statesData, {style: style}).addTo(map);
 
-Looks much better now!
+现在看起来好多了！
 
 {% include frame.html url="example-color.html" %}
 
 
-### Adding Interaction
+### 添加交互
 
-Now let's make the states highlighted visually in some way when they are hovered with a mouse. First we'll define an event listener for layer `mouseover` event:
+现在让我们在鼠标悬停时以某种方式在视觉上突出显示状态。首先，我们将为 "鼠标悬停 "事件定义一个事件监听器：
 
 	function highlightFeature(e) {
 		var layer = e.target;
@@ -102,27 +102,27 @@ Now let's make the states highlighted visually in some way when they are hovered
 		}
 	}
 
-Here we get access to the layer that was hovered through `e.target`, set a thick grey border on the layer as our highlight effect, also bringing it to the front so that the border doesn't clash with nearby states (but not for IE, Opera or Edge, since they have problems doing `bringToFront` on `mouseover`).
+在这里，我们通过`e.target`访问被悬停的图层，在图层上设置一个厚厚的灰色边框作为我们的高亮效果，同时把它带到前面，这样边框就不会与附近的状态发生冲突（但对IE、Opera或Edge来说不是这样，因为它们在`mouseover`上做`bringToFront`有问题）。
 
-Next we'll define what happens on `mouseout`:
+接下来我们将定义在 "鼠标移出 "时发生的事情：
 
 	function resetHighlight(e) {
 		geojson.resetStyle(e.target);
 	}
 
-The handy `geojson.resetStyle` method will reset the layer style to its default state (defined by our `style` function). For this to work, make sure our GeoJSON layer is accessible through the `geojson` variable by defining it before our listeners and assigning the layer to it later:
+方便的`geojson.resetStyle`方法将重置图层样式到默认状态（由我们的`style`函数定义）。为此，请确保我们的 GeoJSON 图层可通过 `geojson` 变量访问，方法是在我们的侦听器之前定义它并稍后将层分配给它：
 
 	var geojson;
 	// ... our listeners
 	geojson = L.geoJson(...);
 
-As an additional touch, let's define a `click` listener that zooms to the state:
+添加一个额外的操作， 让我们定义一个 `click` 来监听缩放状态的变更:
 
 	function zoomToFeature(e) {
 		map.fitBounds(e.target.getBounds());
 	}
 
-Now we'll use the `onEachFeature` option to add the listeners on our state layers:
+现在我们将使用`onEachFeature`选项在我们的状态层上添加监听器（listeners）：
 
 	function onEachFeature(feature, layer) {
 		layer.on({
@@ -137,13 +137,13 @@ Now we'll use the `onEachFeature` option to add the listeners on our state layer
 		onEachFeature: onEachFeature
 	}).addTo(map);
 
-This makes the states highlight nicely on hover and gives us the ability to add other interactions inside our listeners.
+这使得状态在悬停时被很好地突出，并使我们有能力在监听器中添加其他的交互。
 
-### Custom Info Control
+### 自定义信息控件
 
-We could use the usual popups on click to show information about different states, but we'll choose a different route --- showing it on state hover inside a [custom control](/reference.html#control).
+我们可以使用通用的点击弹出窗口来显示不同状态的信息，但我们将选择一条不同的路线---在[自定义控件](/reference.html#control)内的状态悬停上显示它。
 
-Here's the code for our control:
+这是我们控件的代码:
 
 	var info = L.control();
 
@@ -162,7 +162,7 @@ Here's the code for our control:
 
 	info.addTo(map);
 
-We need to update the control when the user hovers over a state, so we'll also modify our listeners as follows:
+我们需要在用户将鼠标悬停在某个状态上时更新控件，因此我们还将修改我们的侦听器（listeners），如下所示：
 
 	function highlightFeature(e) {
 		...
@@ -174,7 +174,7 @@ We need to update the control when the user hovers over a state, so we'll also m
 		info.update();
 	}
 
-The control also needs some CSS styles to look nice:
+该控件还需要一些 CSS 样式才能看起来不错：
 
 {: .css}
 	.info {
@@ -190,9 +190,9 @@ The control also needs some CSS styles to look nice:
 		color: #777;
 	}
 
-### Custom Legend Control
+### 自定义图例控件
 
-Creating a control with a legend is easier, since it is static and doesn't change on state hover. JavaScript code:
+创建带有图例的控件更容易，因为它是静态的并且不会在状态悬停时改变。JavaScript 代码：
 
 	var legend = L.control({position: 'bottomright'});
 
@@ -214,7 +214,7 @@ Creating a control with a legend is easier, since it is static and doesn't chang
 
 	legend.addTo(map);
 
-CSS styles for the control (we also reuse the `info` class defined earlier):
+控件的CSS样式（我们也重复使用前面定义的`info`类）:
 
 {: .css}
 	.legend {
@@ -229,4 +229,4 @@ CSS styles for the control (we also reuse the `info` class defined earlier):
 		opacity: 0.7;
 	}
 
-Enjoy the result on the top of this page, or on a [separate page](example.html).
+欣赏本页面顶部或在一个[单独的页面](example.html)上的结果。

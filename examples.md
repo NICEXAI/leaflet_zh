@@ -52,7 +52,7 @@ description="以GeoJSON和一些自定义控件创建彩色的美国人口密度
 {% include tutorial_link.html
 page="layers-control/"
 thumbnail="layers-control/thumbnail.png"
-title="图层组和图层控制"
+title="Layer Groups 和 Layers Control"
 description="有关如何管理图层组和使用图层切换控件的教程。"
 %}
 
