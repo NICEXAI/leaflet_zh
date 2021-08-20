@@ -14,36 +14,36 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 	<div class="toc-col">
 		<h4>Tile &amp; Image 图层</h4>
 		<ul>
-			<li> <a href='#basemap-providers'>底图提供者</a></li>
+			<li> <a href='#basemap-providers'>底图提供程序</a></li>
 			<li> <a href='#basemap-formats'>底图格式</a></li>
 			<li> <a href='#non-map-base-layers'>Non-map 基础图层</a></li>
 			<li> <a href='#tileimage-display'>Tile/Image 显示</a></li>
 			<li> <a href='#tile-load'>Tile 加载</a></li>
 			<li> <a href='#vector-tiles'>矢量 Tiles</a></li>
 		</ul>
-		<h4>叠加数据</h4>
+		<h4>覆盖数据</h4>
 		<ul>
-			<li> <a href='#overlay-data-formats'>叠加数据格式</a></li>
+			<li> <a href='#overlay-data-formats'>覆盖数据格式</a></li>
 			<li> <a href='#dynamiccustom-data-loading'>动态加载数据</a></li>
-			<li> <a href='#synthetic-overlays'>合成叠加</a></li>
-			<li> <a href='#data-providers'>数据提供者</a></li>
+			<li> <a href='#synthetic-overlays'>合成覆盖</a></li>
+			<li> <a href='#data-providers'>数据提供程序</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
-		<h4>叠加显示</h4>
+		<h4>覆盖显示</h4>
 		<ul>
 			<li><a href="#markers--renderers">Markers 标记 &amp; 渲染</a></li>
-			<li><a href="#overlay-animations">叠加动画</a></li>
+			<li><a href="#overlay-animations">覆盖动画</a></li>
 			<li><a href="#clusteringdecluttering">Clustering/decluttering</a></li>
 			<li><a href="#heatmaps">热力图</a></li>
 			<li><a href="#dataviz">数据可视化</a></li>
 		</ul>
-		<h4>叠加交互</h4>
+		<h4>覆盖交互</h4>
 		<ul>
 			<li><a href="#edit-geometries">编辑几何图形</a></li>
 			<li><a href="#time--elevation">时间 &amp; 海拔</a></li>
 			<li><a href="#search--popups">搜索 &amp; 弹出框</a></li>
-			<li><a href="#areaoverlay-selection">区域/叠加选择</a></li>
+			<li><a href="#areaoverlay-selection">区域/覆盖选择</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
@@ -81,28 +81,28 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 </div>
 
 
-## Tile & image layers
+## Tile &amp; Image 图层
 
-The following plugins allow loading different maps and provide functionality to tile and image layers.
+下面的插件支持加载不同的地图并提供 Tile 和 Image 图层的功能。
 
-* [Basemap providers](#basemap-providers)
-* [Basemap formats](#basemap-formats)
-* [Non-map base layers](#non-map-base-layers)
-* [Tile/image display](#tileimage-display)
-* [Tile load](#tile-load)
-* [Vector tiles](#vector-tiles)
+* [底图提供程序](#basemap-providers)
+* [底图格式](#basemap-formats)
+* [Non-map 基础图层](#non-map-base-layers)
+* [Tile/image 显示](#tileimage-display)
+* [Tile 加载](#tile-load)
+* [矢量 tiles](#vector-tiles)
 
 
-### Basemap providers
+### 底图提供程序
 
-Ready-to-go basemaps, with little or no configuration at all.
+几乎不需要配置，开箱即用的底图。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/leaflet-extras/leaflet-providers">leaflet-providers</a>
 		</td><td>
-			Contains configurations for various free tile providers &mdash; OSM, OpenCycleMap, Stamen, Esri, etc.
+			包含各种免费 tile 提供程序的配置——OSM、OpenCycleMap、Stamen、Esri 等。
 		</td><td>
 			<a href="https://github.com/leaflet-extras">leaflet-extras members</a>
 		</td>
@@ -111,7 +111,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/tontita/Leaflet.KoreanTmsProviders">Leaflet.KoreanTmsProviders</a>
 		</td><td>
-			Contains configurations for various (South) Korean tile providers — Daum, Naver, VWorld, etc.
+			包含各种（南）韩国瓦片（tile）供应商的配置——Daum、Naver、VWorld 等。
 		</td><td>
 			<a href="https://github.com/tontita/">Seong Choi</a>
 		</td>
@@ -120,7 +120,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/htoooth/Leaflet.ChineseTmsProviders">Leaflet.ChineseTmsProviders</a>
 		</td><td>
-			Contains configurations for various Chinese tile providers — TianDiTu, MapABC, GaoDe, etc.
+			包含各种中国瓦片（tile）供应商的配置——天地图、MapABC、高德等。
 		</td><td>
 			<a href="https://github.com/htoooth/">Tao Huang</a>
 		</td>
@@ -129,7 +129,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="http://esri.github.io/esri-leaflet">Esri Leaflet</a>
 		</td><td>
-			A set of tools for using ArcGIS services with Leaflet. Support for map services, feature layers, ArcGIS Online tiles and more.
+			一组通过 Leaflet 使用 ArcGIS 服务的工具。支持地图服务、feature 图层、ArcGIS Online 切片等。
 		</td><td>
 			<a href="https://github.com/patrickarlt/">Patrick Arlt</a>
 		</td>
@@ -138,7 +138,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/aparshin/leaflet-GIBS">Leaflet.GIBS</a>
 		</td><td>
-			 <a href="https://earthdata.nasa.gov/gibs">NASA EOSDIS GIBS</a> imagery integration. The plugin provides <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">96 daily updated layers</a> with satellite imagery and science parameters. <a href="http://aparshin.github.io/leaflet-GIBS/examples/">Demo</a>.
+            <a href="https://earthdata.nasa.gov/gibs">NASA EOSDIS GIBS</a> 图像集成。该插件提供<a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">96 个每日更新的图层</a>，其中包含卫星图像和科学参数。<a href="http://aparshin.github.io/leaflet-GIBS/examples/">Demo</a>。
 		</td><td>
 			<a href="https://github.com/aparshin">Alexander Parshin</a>
 		</td>
@@ -147,7 +147,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/knreise/L.TileLayer.Kartverket">L.TileLayer.Kartverket</a>
 		</td><td>
-			Provides easy setup of the tile layers from <a href="http://kartverket.no/Kart/Gratis-kartdata/Cache-tjenester/">Kartverket</a> (The Norwegian Mapping Authority)
+            提供 <a href="http://kartverket.no/Kart/Gratis-kartdata/Cache-tjenester/">Kartverket</a>（挪威测绘局） 的瓦片（tile）图层的简单设置
 		</td><td>
 			<a href="https://github.com/knreise">Kultur og naturreise</a> / <a href="https://github.com/atlefren">Atle Frenvik Sveen</a>
 		</td>
@@ -156,7 +156,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/sigdeletras/Leaflet.Spain.WMS">Leaflet.Spain.WMS</a>
 		</td><td>
-			Provides easy setup for several Web Map Services (WMS) layers for Spain (PNOA, IGN base, Catastro, etc), from Spanish mapping agencies.
+            为西班牙制图机构提供的多个网络地图服务 (WMS) 图层（PNOA、IGN base、Catastro 等）提供简单的设置。
 		</td><td>
 			<a href="https://github.com/sigdeletras">Patricio Soriano</a>
 		</td>
@@ -165,7 +165,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/GeoSensorWebLab/polarmap.js">PolarMap.js</a>
 		</td><td>
-			JavaScript library for displaying tiles from <a href="http://webmap.arcticconnect.org">ArcticWebMap</a>, a free tile provider with OSM data in multiple Arctic polar projections. Includes lower-level API for deeper integration with other Leaflet plugins.
+            用于显示来自 <a href="http://webmap.arcticconnect.org">ArcticWebMap</a> 的图块的 JavaScript 库，这是一个免费的图块提供程序，在多个北极极地投影中提供 OSM 数据。包括用于与其他 Leaflet 插件进行更深入集成的低级 API。
 		</td><td>
 			<a href="https://github.com/geosensorweblab">GeoSensorWeb Lab</a>
 		</td>
@@ -174,7 +174,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/gmaclennan/leaflet-bing-layer">Bing Maps Layer</a>
 		</td><td>
-			Add <a href="https://msdn.microsoft.com/en-us/library/ff701721.aspx">Bing Maps tiles</a> to your Leaflet Map. Requires Leaflet v1.0.0.beta.2 or later.
+            添加 <a href="https://msdn.microsoft.com/en-us/library/ff701721.aspx">Bing 地图的 tiles</a> 到你的 Leaflet 地图中， 需要 Leaflet v1.0.0.beta.2 或更高版本。
 		</td><td>
 			<a href="https://github.com/gmaclennan">Gregor MacLennan</a>
 		</td>
@@ -183,7 +183,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.TileLayer.HERE">L.TileLayer.HERE</a>
 		</td><td>
-			Displays map tiles from HERE maps (<a href="https://ivansanchez.gitlab.io/Leaflet.TileLayer.HERE/demo.html">demo</a>).
+            显示来自 HERE 地图的地图 tiles(<a href="https://ivansanchez.gitlab.io/Leaflet.TileLayer.HERE/demo.html">demo</a>)。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>
@@ -192,7 +192,8 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.GridLayer.GoogleMutant">L.GridLayer.GoogleMutant</a>
 		</td><td>
-			Displays Google maps (with minimal artifacts thanks to a <a href='https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver'>DOM mutation observer</a> technique) (<a href="http://ivansanchez.gitlab.io/Leaflet.GridLayer.GoogleMutant/demo.html">demo</a>).
+            显示谷歌地图(感谢 <a href='https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver'>DOM mutation observer</a> 方法，极大的减少了我的工作)(<a href="http://ivansanchez.gitlab.io/Leaflet.GridLayer.GoogleMutant/demo.html">demo</a>)。
+			Displays Google maps (with minimal artifacts thanks to a <a href='https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver'>DOM mutation observer</a> technique) .
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>
@@ -201,7 +202,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.MapkitMutant">L.MapkitMutant</a>
 		</td><td>
-			Displays Apple's MapkitJS basemaps.
+				显示 Apple 的 MapkitJS 底图。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>	</tr>
@@ -209,8 +210,7 @@ Ready-to-go basemaps, with little or no configuration at all.
         <td>
         	<a href="https://supermap.github.io/supermap-leaflet">SuperMap Leaflet</a>
         </td><td>
-         SuperMap Leaflet is a Leaflet plugins for working with SuperMap service types.
-         Support for SuperMap services, tiles and more.
+         SuperMap Leaflet 是一个用于处理 SuperMap 服务类型的 Leaflet 插件。支持 SuperMap 服务、瓦片（tile）等。
         </td><td>
         	<a href="https://github.com/SuperMap">SuperMap</a>
         </td>
@@ -219,7 +219,7 @@ Ready-to-go basemaps, with little or no configuration at all.
         <td>
         	<a href="https://github.com/MIERUNE/Leaflet.TileLayer.MIERUNE">Leaflet.TileLayer.Mierune</a>
         </td><td>
-			Displays tiles from <a href="https://mierune.co.jp/tile.html">Mierune map</a>. (<a href="https://tile.mierune.co.jp">Demo</a>)
+            显示 <a href="https://mierune.co.jp/tile.html">Mierune 地图</a> 中的瓦片（tile）。(<a href="https://tile.mierune.co.jp">Demo</a>)
         </td><td>
         	<a href="https://github.com/MIERUNE">Mierune</a>
         </td>
@@ -228,8 +228,7 @@ Ready-to-go basemaps, with little or no configuration at all.
 		<td>
 			<a href="https://github.com/rkaravia/Leaflet.TileLayer.Swiss">Leaflet.TileLayer.Swiss</a>
 		</td><td>
-			Displays national maps of Switzerland using map tiles from Swisstopo.
-			<a href="https://leaflet-tilelayer-swiss.karavia.ch/">Demo</a>.
+            使用来自 Swisstopo 地图中瑞士的国家地图的瓦片（tile）。 <a href="https://leaflet-tilelayer-swiss.karavia.ch/">Demo</a>。
 		</td><td>
 			<a href="https://github.com/rkaravia">Roman Karavia</a>
 		</td>
@@ -238,15 +237,15 @@ Ready-to-go basemaps, with little or no configuration at all.
 
 
 
-### Basemap formats
+### 底图格式
 
-Plugins for loading basemaps or GIS raster layers in common (albeit non-default) formats.
+以下插件用于加载常见格式（非默认）的底图或者栅格图层。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/mylen/leaflet.TileLayer.WMTS">leaflet.TileLayer.WMTS</a>
-		</td><td>Add WMTS (IGN) layering for leaflet.
+		</td><td>为 Leaflet 添加 WMTS (IGN) 图层。
 		</td><td>
 			<a href="https://github.com/mylen">Alexandre Melard</a>
 		</td>
@@ -255,7 +254,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/azgs/azgs-leaflet">azgs-leaflet</a>
 		</td><td>
-			A set of small plugins for Leaflet, including WFS-GeoJSON layer with filtering, a hover control for GeoJSON, and an Esri tile layer.
+			Leaflet 的一组小插件，包括带过滤的 WFS-GeoJSON 层、GeoJSON 的悬停控件和 Esri 平铺层。
 		</td><td>
 			<a href="https://github.com/azgs">AZGS</a>
 		</td>
@@ -264,7 +263,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/heigeo/leaflet.wms">leaflet.wms</a>
 		</td><td>
-			Enhanced WMS support for Leaflet, including single-tile/untiled layers, shared WMS sources, and layer identify via GetFeatureInfo.
+			增强了对 Leaflet 的 WMS 支持，包括 single-tile/untiled 图层、共享 WMS 源以及通过 GetFeatureInfo 进行的图层识别。
 		</td><td>
 			<a href="https://github.com/sheppard/">S. Andrew Sheppard</a><br>(<a href="https://github.com/heigeo/">HEI Geo</a>)
 		</td>
@@ -273,7 +272,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/alcalin/L.TileLayer.WMTS">L.TileLayer.WMTS</a>
 		</td><td>
-			A simple WMTS Tile Layer plugin for Leaflet.
+			一个简单的用于Leaflet 的 WMTS 瓦片（tile）图层插件。
 		</td><td>
 			<a href="https://github.com/alcalin">Alexandru Calin</a>
 		</td>
@@ -282,7 +281,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/stuartmatthews/Leaflet.NonTiledLayer.WCS">Leaflet.NonTiledLayer.WCS</a>
 		</td><td>
-			Display raster data from Web Coverage Services.  Rasters can be styled and queried in the client.  See the <a href="https://stuartmatthews.github.io/Leaflet.NonTiledLayer.WCS/">demo</a>.
+            显示来自 Web Coverage Services 的栅格数据。可以在客户端对栅格进行样式设置和查询。查看<a href="https://stuartmatthews.github.io/Leaflet.NonTiledLayer.WCS/">demo</a>。
 		</td><td>
 			<a href="https://github.com/stuartmatthews">Stuart Matthews</a>
 		</td>
@@ -291,7 +290,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/balrog-kun/Leaflet.bpg">Leaflet.bpg</a>
 		</td><td>
-			TileLayer with <a href="http://bellard.org/bpg/">.bpg</a> image format decoding.
+            TileLayer 和 <a href="http://bellard.org/bpg/">.bpg</a> 图像格式的解码。
 		</td><td>
 			<a href="https://github.com/balrog-kun/">Andrzej Zaborowski</a>
 		</td>
@@ -300,7 +299,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/glenrobertson/leaflet-tilelayer-geojson/">TileLayer.GeoJSON</a>
 		</td><td>
-			A TileLayer for GeoJSON tiles.
+			用于 GeoJSON 切片的 TileLayer。
 		</td><td>
 			<a href="https://github.com/glenrobertson">Glen Robertson</a>
 		</td>
@@ -309,6 +308,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/kartena/leaflet-tilejson">leaflet-tilejson</a>
 		</td><td>
+            添加了 TileJSON 规范说明文档。
 			Adds support for the <a href="https://github.com/mapbox/TileJSON">TileJSON</a> specification to Leaflet.
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a>, <a href="http://www.kartena.se/">Kartena</a>
@@ -318,7 +318,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="http://vizzuality.github.com/cartodb-leaflet/">cartodb-leaflet</a>
 		</td><td>
-			Official <a href="http://cartodb.com/">CartoDB</a> plugin for Leaflet.
+            Leaflet 的官方 CartoDB 插件。
 		</td><td>
 			<a href="http://vizzuality.com/">Vizzuality</a>
 		</td>
@@ -327,7 +327,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/emikhalev/leaflet-2gis">Leaflet-2gis</a>
 		</td><td>
-			Adds support for 2GIS tile layer
+			添加对 2GIS 切片图层的支持
 		</td><td>
 			<a href="https://github.com/emikhalev/">Eugene Mikhalev</a>
 		</td>
@@ -336,7 +336,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/geobricks/Leaflet.GeoJSON.Encoded">Leaflet GeoJSON Encoded</a>
 		</td><td>
-			Extends the L.GeoJSON layer using Google polyline encoding algorithm, allowing an optimized data transfer.
+            使用 Google 折线编码算法扩展 L.GeoJSON 层，允许优化数据传输。
 		</td><td>
 			<a href="https://github.com/geobricks/">Geobricks</a>
 		</td>
@@ -345,7 +345,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.TileLayer.MBTiles">Leaflet.TileLayer.MBTiles</a>
 		</td><td>
-			Loads <a href="https://github.com/mapbox/mbtiles-spec"><code>.mbtiles</code></a> tilesets.
+			加载 <a href="https://github.com/mapbox/mbtiles-spec"><code>.mbtiles</code></a> .
 		</td><td>
 			<a href="https://github.com/IvanSanchez/">Iván Sánchez</a>
 		</td>
@@ -354,9 +354,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/IHCantabria/Leaflet.CanvasLayer.Field">Leaflet.CanvasLayer.Field</a>
 		</td><td>
-			Loads and styles raster files (geotiff & asciigrid formats).
-            It includes a <code>ScalarField</code> layer (for DTM, temperature...) and
-			<code>VectorFieldAnim</code> (an animated layer for wind, currents...). See the <a href="https://ihcantabria.github.io/Leaflet.CanvasLayer.Field/">examples</a>
+            加载和样式光栅文件（geotiff 和 asciigrid 格式）。它包括一个 ScalarField 层（用于 DTM、温度...）和 VectorFieldAnim（用于风、流...的动画层）。查看<a href="https://ihcantabria.github.io/Leaflet.CanvasLayer.Field/">示例</a>
 		</td><td>
 			<a href="https://github.com/VictorVelarde">Víctor Velarde</a>
 		</td>
@@ -365,7 +363,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/stuartmatthews/leaflet-geotiff">leaflet-geotiff</a>
 		</td><td>
-			Display raster data from geoTIFF files as images or direction arrows.  Rasters can be styled and queried in the client.  An optional clipping mask can be applied, e.g. to restrict DEMs to land areas.  See the <a href="https://stuartmatthews.github.io/leaflet-geotiff/">demo</a>.
+            将 geoTIFF 文件中的栅格数据显示为图像或方向箭头。可以在客户端对栅格进行样式设置和查询。可以应用可选的剪切蒙版，例如将 DEM 限制为陆地区域。请参阅<a href="https://stuartmatthews.github.io/leaflet-geotiff/">demo</a>。
 		</td><td>
 			<a href="https://github.com/stuartmatthews">Stuart Matthews</a>
 		</td>
@@ -374,7 +372,7 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 		<td>
 			<a href="https://github.com/GeoportalPL/leaflet.projwmts">Leaflet.projwmts</a>
 		</td><td>
-			Adding WMTS services (GUGiK Poland).
+			添加 WMTS 服务 (GUGiK Poland)。
 		 (<a href="https://geoportalpl.github.io/leaflet.projwmts/examples/wmts_services.html">demo</a>).
 		</td><td>
 			<a href="https://github.com/GeoportalPL">Geoportal Poland</a>
@@ -383,16 +381,16 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 </table>
 
 
-### Non-map base layers
+### Non-map 基础图层
 
-Sometimes you don't want to load a map, just big custom images. **Really** big ones.
+有时候你不想加载地图，只想加载大的自定义图像，**非常大**的那种。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/cmulders/Leaflet.Zoomify">TileLayer.Zoomify</a>
 		</td><td>
-			A TileLayer for Zoomify images.
+			用于缩放图像的 TileLayer。
 		</td><td>
 			<a href="https://github.com/turban">Bjørn Sandvik</a>
 		</td>
@@ -401,7 +399,7 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 		<td>
 			<a href="https://github.com/alfarisi/leaflet-deepzoom">TileLayer.DeepZoom</a>
 		</td><td>
-			A TileLayer for DeepZoom images.
+			用于DeepZoom图像的TileLayer。
 		</td><td>
 			<a href="https://github.com/alfarisi">Al Farisi</a>,
 			<a href="http://indokreatif.net">Indokreatif Teknologi</a>
@@ -411,7 +409,7 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 		<td>
 			<a href="https://github.com/namrehs/Leaflet.Gigapan">TileLayer.Gigapan</a>
 		</td><td>
-			A TileLayer for Gigapan images.
+			用于 Gigapan 图像的 TileLayer。
 		</td><td>
 			<a href="https://github.com/namrehs">Dan Sherman</a>
 		</td>
@@ -419,7 +417,7 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 	<tr>
 		<td>
 			<a href="https://github.com/astromatic/Leaflet.TileLayer.IIP">Leaflet.TileLayer.IIP</a>
-		</td><td>Add support for <a href="http://iipimage.sourceforge.net/">IIPImage</a> layers in Leaflet.
+		</td><td>在 Leaflet 中添加对 <a href="http://iipimage.sourceforge.net/">IIPImage</a>  层的支持。
 		</td><td>
 			<a href="https://github.com/ebertin">Emmanuel Bertin</a>
 		</td>
@@ -428,7 +426,7 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 		<td>
 			<a href="https://github.com/mejackreed/Leaflet-IIIF">Leaflet-IIIF</a>
 		</td><td>
-			A <a href="http://iiif.io/">IIIF</a> (International Image Interoperability Framework) viewer for Leaflet. See the <a href="http://mejackreed.github.io/Leaflet-IIIF/examples/example.html">demo</a>.
+            一个 Leaflet的 IIIF（国际形象互操作性框架）查看器。查看  <a href="http://mejackreed.github.io/Leaflet-IIIF/examples/example.html">demo</a>。
 		</td><td>
 			<a href="https://github.com/mejackreed">Jack Reed</a>
 		</td>
@@ -437,7 +435,7 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 		<td>
 			<a href="https://github.com/aparshin/leaflet-fractal">leaflet-fractal</a>
 		</td><td>
-			Renders some fractals (Mandelbrot set, Julia set and some others) using 2D canvas (<a href="http://aparshin.github.io/leaflet-fractal/">demo</a>).
+            使用2D画布渲染一些分形（Mandelbrot集、Julia集和其他的）(<a href="http://aparshin.github.io/leaflet-fractal/">demo</a>)。
 		</td><td>
 			<a href="https://github.com/aparshin">Alexander Parshin</a>
 		</td>
@@ -446,10 +444,7 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 	  <td>
 	    <a href="https://github.com/commenthol/leaflet-rastercoords">leaflet-rastercoords</a>
 	  </td><td>
-	    Renders large tiled images generated with
-	    <a href="http://github.com/commenthol/gdal2tiles-leaflet">gdal2tiles-leaflet</a>.
-	    Image raster coordinates can be used to set markers, etc.
-	    (<a href="http://commenthol.github.io/leaflet-rastercoords">demo</a>).
+        渲染使用 <a href="http://github.com/commenthol/gdal2tiles-leaflet">gdal2tiles-leaflet</a> 生成的大型平铺图像 。图像光栅坐标可用于设置标记等(<a href="http://commenthol.github.io/leaflet-rastercoords">demo</a>)。
 	  </td><td>
 	    <a href="https://github.com/commenthol">Commenthol</a>
 	  </td>
@@ -458,16 +453,16 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 
 
 
-### Tile/image display
+### Tile/image 显示
 
-The following plugins change the way that tile or image layers are displayed in the map.
+以下插件更改了地图中显示瓦片（tile）或图像(image)图层的方式。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/aparshin/leaflet-boundary-canvas">TileLayer.BoundaryCanvas</a>
 		</td><td>
-			Allows you to draw tile layers with arbitrary polygonal boundary. HTML5 Canvas is used for rendering.
+			允许您绘制具有任意多边形边界的切片图层并使用HTML5 Canvas 来渲染。
 		</td><td>
 			<a href="https://github.com/aparshin">Alexander Parshin</a>
 		</td>
@@ -476,7 +471,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/Zverik/leaflet-grayscale/">TileLayer.Grayscale</a>
 		</td><td>
-			A regular TileLayer with grayscale makeover.
+			具有灰度改造（grayscale makeover）的常规 TileLayer。
 		</td><td>
 			<a href="https://github.com/Zverik">Ilya Zverev</a>
 		</td>
@@ -484,7 +479,7 @@ The following plugins change the way that tile or image layers are displayed in 
 	<tr>
 		<td>
 			<a href="https://github.com/ScanEx/Leaflet.imageTransform">Leaflet.ImageTransform</a>
-		</td><td>Add support of image overlays with arbitrary perspective transformation.
+		</td><td>支持对具有任意透视变换的图像进行叠加。
 		</td><td>
 			<a href="https://github.com/aparshin">Alexander Parshin</a>,
 			<a href="https://github.com/OriginalSin">Sergey Alekseev</a>
@@ -494,7 +489,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/lizardtechblog/Leaflet.OpacityControls">Leaflet.OpacityControls</a>
 		</td><td>
-			Simple Leaflet controls to adjust the opacity of a map layer.
+			简单的、可调整地图图层的不透明度的 Leaflet 控件。
 		</td><td>
 			<a href="https://github.com/lizardtechblog/">Jared Dominguez</a>
 		</td>
@@ -503,7 +498,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/publiclab/Leaflet.DistortableImage">Leaflet.DistortableImage</a>
 		</td><td>
-			Enable users to <a href="https://publiclab.github.io/Leaflet.DistortableImage/examples/">scale, rotate, and distort images</a> on Leaflet maps.
+            使用户能够在 Leaflet 地图上<a href="https://publiclab.github.io/Leaflet.DistortableImage/examples/">缩放、旋转和扭曲(distort)图像</a>。
 		</td><td>
 			<a href="https://github.com/publiclab">Public Lab</a>
 		</td>
@@ -512,7 +507,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/ronikar/Leaflet.DistortableVideo">Leaflet.DistortableVideo</a>
 		</td><td>
-			Enable users to scale, rotate, and distort videos on Leaflet maps.  (<a href='https://ronikar.github.io/Leaflet.DistortableVideo/examples/'>demo</a>).
+			使用户能够在 Leaflet 地图上缩放、旋转和扭曲(distort)视频(<a href='https://ronikar.github.io/Leaflet.DistortableVideo/examples/'>demo</a>)。
 		</td><td>
 			<a href="https://github.com/ronikar">Roni Karilkar</a>
 		</td>
@@ -521,7 +516,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/IvanSanchez/Leaflet.ImageOverlay.Rotated">Leaflet.ImageOverlay.Rotate</a>
 		</td><td>
-			Displays rotated, scaled and skewed (but not rubbersheeted) ImageOverlays, given three control points. (<a href='http://ivansanchez.github.io/Leaflet.ImageOverlay.Rotated/demo.html'>demo</a>).
+            在给定三个控制点的情况下，显示旋转、缩放和倾斜（但不是 rubbersheeted）的 ImageOverlays(<a href='http://ivansanchez.github.io/Leaflet.ImageOverlay.Rotated/demo.html'>demo</a>)。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>
 		</td>
@@ -530,7 +525,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.ImageOverlay.Arrugator">Leaflet.ImageOverlay.Arrugator</a>
 		</td><td>
-			Displays reprojected ImageOverlays, given four control points and a proj4js projection function. (<a href='https://ivansanchez.gitlab.io/Leaflet.ImageOverlay.Arrugator/demo.html'>demo</a>).
+            给定四个控制点和一个 proj4js 投影函数，显示重新投影的 ImageOverlays(<a href='https://ivansanchez.gitlab.io/Leaflet.ImageOverlay.Arrugator/demo.html'>demo</a>)。
 		</td><td>
 			<a href="https://ivan.sanchezortega.es">Iván Sánchez Ortega</a>
 		</td>
@@ -539,7 +534,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/xtk93x/Leaflet.TileLayer.ColorFilter">Leaflet.TileLayer.ColorFilter</a>
 		</td><td>
-			A simple and lightweight Leaflet plugin to apply CSS filters on map tiles (<a href="https://xtk93x.github.io/Leaflet.TileLayer.ColorFilter/">demo</a>).
+            一个简单而轻量级的 Leaflet 插件，用于在地图瓦片（tile）上应用 CSS 过滤器(<a href="https://xtk93x.github.io/Leaflet.TileLayer.ColorFilter/">demo</a>)。
 		</td><td>
 			<a href="https://github.com/xtk93x">Cláudio Kawakani</a>
 		</td>
@@ -548,7 +543,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/frogcat/leaflet-tilelayer-mask">Leaflet.TileLayer.Mask</a>
 		</td><td>
-			A TileLayer with mask effect (<a href="http://frogcat.github.io/leaflet-tilelayer-mask/default/">demo</a>)
+            带有遮罩效果的 TileLayer (<a href="http://frogcat.github.io/leaflet-tilelayer-mask/default/">demo</a>)。
 		</td><td>
 			<a href="https://github.com/frogcat">Yuzo Matsuzawa</a>
 		</td>
@@ -557,7 +552,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/GreenInfo-Network/L.TileLayer.PixelFilter/">Leaflet.TileLayer.PixelFilter</a>
 		</td><td>
-			A TileLayer which can filter and replace pixels by RGB code.
+            可以通过 RGB 代码过滤和替换像素的 TileLayer。
 			<br/>
 			<a href="http://greeninfo-network.github.io/L.TileLayer.PixelFilter/demo1.html">demo 1</a> &bull; <a href="http://greeninfo-network.github.io/L.TileLayer.PixelFilter/demo2.html">demo 2</a>
 		</td><td>
@@ -568,7 +563,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/digidem/leaflet-side-by-side">Leaflet.Control.SideBySide</a>
 		</td><td>
-			A Leaflet control to add a split screen to compare two map overlays (<a href="http://lab.digital-democracy.org/leaflet-side-by-side/">demo</a>).
+            一个用于添加分屏以比较两个地图叠加层的 Leaflet 控件，（<a href="http://lab.digital-democracy.org/leaflet-side-by-side/">demo</a>）。
 		</td><td>
 			<a href="http://www.digital-democracy.org">Digital Democracy</a>
 		</td>
@@ -577,7 +572,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.TileLayer.GL">Leaflet.TileLayer.GL</a>
 		</td><td>
-			Applies custom WebGL shaders to each tile in a tilelayer (<a href="https://ivansanchez.gitlab.io/Leaflet.TileLayer.GL/demo/repl.html">demo</a>).
+            将自定义 WebGL 着色器应用于 tilelayer 中的每个图块（<a href="https://ivansanchez.gitlab.io/Leaflet.TileLayer.GL/demo/repl.html">demo</a>）。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>
@@ -586,7 +581,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/frogcat/leaflet-tilelayer-colorpicker">Leaflet.TileLayer.ColorPicker</a>
 		</td><td>
-			A Leaflet TileLayer with getColor(latLng). Demos: <a href="https://frogcat.github.io/leaflet-tilelayer-colorpicker/">color picker</a>, <a href="https://frogcat.github.io/leaflet-tilelayer-colorpicker/mapbox-terrain-rgb.html">elevation picker with mapbox terrain-RGB</a>
+            带有 getColor(latLng) 的 Leaflet TileLayer。Demos: <a href="https://frogcat.github.io/leaflet-tilelayer-colorpicker/">颜色选择器</a>, <a href="https://frogcat.github.io/leaflet-tilelayer-colorpicker/mapbox-terrain-rgb.html">带有 mapbox terrain-RGB 的高程选择器</a>
 		</td><td>
 			<a href="https://github.com/frogcat">Yuzo Matsuzawa</a>
 		</td>
@@ -595,7 +590,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/hnrchrdl/leaflet-tilelayer-colorizr">Leaflet.TileLayer.Colorizr</a>
 		</td><td>
-			A Leaflet TileLayer which can modify colors by RGBA code. Demos: coming soon.
+			一个可以通过 RGBA 代码修改颜色的 Leaflet TileLayer。Demo：即将推出。
 		</td><td>
 			<a href="https://github.com/hnrchrdl">Hinrich Riedel</a>
 		</td>
@@ -604,7 +599,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/consbio/Leaflet.UTFGrid">Leaflet.UTFGrid</a>
 		</td><td>
-			Provides UTF-8 Grid support for Leaflet >= 1.0.  Includes basic mouseover support plus ability to highlight feature from UTFGrid on hover (<a href="https://consbio.github.io/Leaflet.UTFGrid/">demo</a>).
+			为 Leaflet >= 1.0 提供 UTF-8 网格支持。包括基本的鼠标悬停支持以及在悬停时突出显示 UTFGrid 功能的能力 (<a href="https://consbio.github.io/Leaflet.UTFGrid/">demo</a>).
 		</td><td>
 			<a href="https://github.com/brendan-ward">Brendan Ward</a>
 		</td>
@@ -613,7 +608,7 @@ The following plugins change the way that tile or image layers are displayed in 
         	<td>
         		<a href="https://github.com/dayjournal/Leaflet.Control.Opacity">Leaflet.Control.Opacity</a>
         	</td><td>
-			Make multiple tile layers transparent. (<a href="https://dayjournal.github.io/Leaflet.Control.Opacity">demo</a>)
+			使多个瓦片（tile）图层透明。(<a href="https://dayjournal.github.io/Leaflet.Control.Opacity">demo</a>)
         	</td><td>
         		<a href="https://day-journal.com">Yasunori Kirimoto</a>
         	</td>
@@ -622,7 +617,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/ihmeuw/leaflet.tilelayer.glcolorscale">Leaflet.TileLayer.GLColorScale</a>
 		</td><td>
-			TileLayer that uses WebGL to colorize floating-point pixels according to a specified color scale (<a href="https://ihmeuw.github.io/leaflet.tilelayer.glcolorscale/demo/">demo</a>).
+			TileLayer 使用 WebGL 根据指定的色标对浮点像素进行着色 (<a href="https://ihmeuw.github.io/leaflet.tilelayer.glcolorscale/demo/">demo</a>)。
 		</td><td>
 			<a href="https://github.com/davschne">David Schneider</a>
 		</td>
@@ -631,7 +626,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/valkenburg/Leaflet.Control.DetailLevel">Leaflet.Control.DetailLevel</a>
 		</td><td>
-			Display tiles at higher-than-retina (hdpi) resolutions, by real-time modification of the zoomOffset. Useful for mapping sources which drastically change map style between different zoom levels. Increasing the zoomOffset by too much does slow down the browser, as the number of displayed tiles grows exponentially with the zoomOffset.  (<a href='https://valkenburg.github.io/Leaflet.Control.DetailLevel/demo.html'>demo</a>).
+			通过实时修改 zoomOffset 以高于视网膜 (hdpi) 的分辨率显示图块。对于在不同缩放级别之间彻底改变地图样式的映射源很有用。将 zoomOffset 增加太多确实会减慢浏览器的速度，因为显示的图块数量随着 zoomOffset 呈指数增长。 (<a href='https://valkenburg.github.io/Leaflet.Control.DetailLevel/demo.html'>demo</a>)
 		</td><td>
 			<a href="https://github.com/valkenburg">Wessel Valkenburg</a>
 		</td>
@@ -640,7 +635,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/publiclab/leaflet-multispectral">Leaflet.Multispectral</a>
 		</td><td>
-			Provides multispectral channel manipulation and processing tools (such as NDVI or other remote sensing methods) for Leaflet image layers using pure client-side JavaScript. It uses `image-sequencer` via an ImageOverlay `filter()` function. (<a href='https://publiclab.github.io/leaflet-multispectral/'>demo</a>).
+			使用纯客户端 JavaScript 为 Leaflet 图像层提供多光谱通道操作和处理工具（例如 NDVI 或其他遥感方法）。它通过 ImageOverlay `filter()` 函数使用 `image-sequencer`。 (<a href='https://publiclab.github.io/leaflet-multispectral/'>demo</a>)
 		</td><td>
 			<a href="https://publiclab.org">Public Lab</a>
 		</td>
@@ -649,9 +644,7 @@ The following plugins change the way that tile or image layers are displayed in 
 		<td>
 			<a href="https://github.com/equinor/leaflet.tilelayer.gloperations">Leaflet.TileLayer.GLOperations</a>
 		</td><td>
-			WebGL TileLayer: Colorize floating-point pixels, mouse event handlers for pixel values, hillshading, contours,
-			transitions, filter and do calculations on multiple layers.
-			 (<a href="https://equinor.github.io/leaflet.tilelayer.gloperations/">Demo</a>).
+			WebGL TileLayer：着色浮点像素、像素值的鼠标事件处理程序、山体阴影、轮廓、过渡、过滤和在多个图层上进行计算。(<a href="https://equinor.github.io/leaflet.tilelayer.gloperations/">Demo</a>)
 		</td><td>
 			<a href="https://github.com/thor85">Thorbjørn Horgen</a>
 		</td>
@@ -660,16 +653,16 @@ The following plugins change the way that tile or image layers are displayed in 
 
 
 
-### Tile Load
+### Tile 加载
 
-The following plugins change the way that tile layers are loaded into the map.
+下面插件改变了将瓦片（Tile）图层加载到地图中的方式。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/mattiasb/Leaflet.MultiTileLayer">Leaflet.MultiTileLayer</a>
 		</td><td>
-			Allows to compose a TileLayer from several tile sources. Each source is active only on a defined set of zoomlevels.
+			允许将多个瓦片（tile）数据源组成一个 TileLayer。每个源仅在定义的一组缩放级别上处于活动状态。
 		</td><td>
 			<a href="https://github.com/mattiasb">Mattias Bengtsson</a>
 		</td>
@@ -678,7 +671,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/ismyrnow/Leaflet.functionaltilelayer">Leaflet.FunctionalTileLayer</a>
 		</td><td>
-			Allows you to define tile layer URLs using a function. Even works with asynchronous sources, using promises.
+			允许您使用函数定义瓦片（Tile）图层 URL。甚至可以使用 Promise 来处理异步源。
 		</td><td>
 			<a href="https://github.com/ismyrnow">Ishmael Smyrnow</a>
 		</td>
@@ -687,7 +680,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/gregallensworth/L.TileLayer.Cordova">TileLayer.Cordova</a>
 		</td><td>
-			For use with Cordova/Phonegap, adds tile caching onto local device storage, switching between offline and online mode.
+			与 Cordova/Phonegap 一起使用，将瓦片（Tile）缓存添加到本地设备存储，在离线和在线模式之间切换。
 		</td><td>
 			<a href="https://github.com/gregallensworth">Greg Allensworth</a>
 		</td>
@@ -696,7 +689,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/MazeMap/Leaflet.TileLayer.PouchDBCached">TileLayer.PouchDBCached</a>
 		</td><td>
-			Allows all Leaflet TileLayers to cache into PouchDB for offline use.
+			允许所有 Leaflet TileLayers 缓存到 PouchDB 以供离线使用。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -706,7 +699,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/ebrelsford/Leaflet.loading">Leaflet.loading</a>
 		</td><td>
-			A simple control that adds a loading indicator as tiles and other data are loaded.
+			一个简单的控件，在加载瓦片（Tile）和其他数据时添加加载指示器。
 		</td><td>
 			<a href="https://github.com/ebrelsford/">Eric Brelsford</a>
 		</td>
@@ -715,7 +708,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/TolonUK/Leaflet.EdgeBuffer">Leaflet.EdgeBuffer</a>
 		</td><td>
-			Buffer tiles beyond the edge of the viewport, for Leaflet 1.0. <a href="http://www.tolon.co.uk/Leaflet.EdgeBuffer/comparison.html">Demo</a>.
+			超出视口边缘的缓冲平铺，用于 Leaflet 1.0。 <a href="http://www.tolon.co.uk/Leaflet.EdgeBuffer/comparison.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/TolonUK">Alex Paterson</a>
 		</td>
@@ -724,7 +717,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/ghybs/Leaflet.TileLayer.Fallback">Leaflet.TileLayer.Fallback</a>
 		</td><td>
-			Replaces missing Tiles (HTTP 404 Not Found Error) by scaled up equivalent Tiles from lower zooms.
+			通过从较低的缩放比例放大等效的瓦片（Tile）来替换丢失的瓦片（Tile）（HTTP 404 未找到错误）。
 		</td><td>
 			<a href="https://github.com/ghybs">ghybs</a>
 		</td>
@@ -733,7 +726,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/Outdooractive/Leaflet.FeatureGroup.LoadEvents">Leaflet.FeatureGroup.LoadEvents</a>
 		</td><td>
-			`FeatureGroup` that supports the `"loading"` and `"load"` events (for v0.7.*).
+			`FeatureGroup` 支持 `"loading"` 和 `"load"` 事件（适用于 v0.7.*）。
 		</td><td>
 			<a href="http://glat.info">G. Lathoud</a>, <a href="http://www.outdooractive.com">Outdooractive</a>.
 		</td>
@@ -742,7 +735,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.GridLayer.FadeOut">Leaflet.GridLayer.FadeOut</a>
 		</td><td>
-			Fades out grid layers and tilelayers when they are removed, making basemap changes smoother (for 1.0.0). <a href="http://ivansanchez.gitlab.io/Leaflet.GridLayer.FadeOut/demo.html">Demo</a>.
+			删除网格层和 tilelayers 时淡出它们，使底图更改更平滑（对于 1.0.0） <a href="http://ivansanchez.gitlab.io/Leaflet.GridLayer.FadeOut/demo.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>
@@ -751,7 +744,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/robertomlsoares/leaflet-offline">leaflet-offline</a>
 		</td><td>
-			Allows the use of offline tiles in a customizable way while falling back to the normal TileLayer when necessary. <a href="https://robertomlsoares.github.io/leaflet-offline/">Demo</a>.
+			允许以可自定义的方式使用离线瓦片（tile）数据，同时在必要时回退到正常的 TileLayer。 <a href="https://robertomlsoares.github.io/leaflet-offline/">Demo</a>
 		</td><td>
 			<a href="https://github.com/robertomlsoares">Roberto Soares</a>
 		</td>
@@ -760,7 +753,7 @@ The following plugins change the way that tile layers are loaded into the map.
 		<td>
 			<a href="https://github.com/allartk/leaflet.offline">leaflet.offline</a>
 		</td><td>
-			Allow tiles to be stored in an database for offline access. Original plugin.<a href="http://allartk.github.io/leaflet.offline/">Demo</a>.
+			允许将瓦片（Tile）存储在数据库中以供离线访问。原创插件。<a href="http://allartk.github.io/leaflet.offline/">Demo</a>
 		</td><td>
 			<a href="https://github.com/allartk">Allart Kooiman</a>
 		</td>
@@ -769,16 +762,16 @@ The following plugins change the way that tile layers are loaded into the map.
 
 
 
-### Vector tiles
+### 矢量瓦片（Tile）
 
-Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
+用来显示[矢量瓦片（Tile）](https://github.com/mapbox/vector-tile-spec) 的插件。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/SpatialServer/Leaflet.MapboxVectorTile">Leaflet.MapboxVectorTile</a>
 		</td><td>
-			A Leaflet Plugin that renders Mapbox Vector Tiles on canvas. See <a href="http://spatialserver.github.io/Leaflet.MapboxVectorTile/examples/confetti.html">demo</a>. Compatible with Leaflet 0.7.x only.
+			在画布上渲染 Mapbox 矢量瓦片（Tile）的 Leaflet 插件。见 <a href="http://spatialserver.github.io/Leaflet.MapboxVectorTile/examples/confetti.html">demo</a>。仅与 Leaflet 0.7.x 兼容。
 		</td><td>
 			<a href="http://spatialdev.com/">SpatialDev</a>
 		</td>
@@ -787,7 +780,7 @@ Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
 		<td>
 			<a href="https://github.com/devTristan/hoverboard">Hoverboard</a>
 		</td><td>
-			Render vector tiles on canvas with leaflet (geojson, topojson, and protobuf). See <a href="http://tristan.io/hoverboard/">demo</a>. Compatible with Leaflet 0.7.x only.
+			使用 Leaflet（geojson、topojson 和 protobuf）在画布上渲染矢量瓦片（Tile）。见 <a href="http://tristan.io/hoverboard/">demo</a>。 仅与 Leaflet 0.7.x 兼容。
 		</td><td>
 			<a href="http://tristan.io/">Tristan Davies</a>
 		</td>
@@ -796,7 +789,7 @@ Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
 		<td>
 			<a href="https://github.com/mapbox/geojson-vt">geojson-vt</a>
 		</td><td>
-			Efficient library for slicing GeoJSON data into vector tiles on the fly.
+			用于将 GeoJSON 数据动态瓦片（Tile）转换为矢量瓦片（Tile）的高效库。
 		</td><td>
 			<a href="https://www.mapbox.com/">Mapbox</a>
 		</td>
@@ -805,7 +798,7 @@ Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
 		<td>
 			<a href="https://github.com/IvanSanchez/Leaflet.VectorGrid">Leaflet.VectorGrid</a>
 		</td><td>
-			Display gridded vector data (GeoJSON or TopoJSON sliced with geojson-vt, or protobuf vector tiles) in Leaflet 1.0.0. See <a href="https://github.com/IvanSanchez/Leaflet.VectorGrid#demos">demos</a>. Not compatible with 0.7.x.
+			在 Leaflet 1.0.0 中显示网格矢量数据（用 geojson-vt 或 protobuf 矢量瓦片（Tile）的 GeoJSON 或 TopoJSON）。见 <a href="https://github.com/IvanSanchez/Leaflet.VectorGrid#demos">demos</a>。  与 Leaflet 0.7.x 不兼容。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>
@@ -814,7 +807,7 @@ Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
 		<td>
 			<a href="https://gitlab.com/jkuebart/Leaflet.VectorTileLayer/">Leaflet.VectorTileLayer</a>
 		</td><td>
-			A Leaflet layer for displaying vector tiles. Very similar to <a href="https://github.com/IvanSanchez/Leaflet.VectorGrid">Leaflet.VectorGrid</a> except for styling: a single style can be specified for all layers while VectorGrid requires knowing layer names in advance. For Leaflet 1.0.0.
+            用于显示矢量切片的传单层。除了样式之外，与 <a href="https://github.com/IvanSanchez/Leaflet.VectorGrid">Leaflet.VectorGrid</a> 非常相似：可以为所有图层指定一个样式，而 VectorGrid 需要提前知道图层名称。支持 Leaflet 1.0.0。
 		</td><td>
 			<a href="https://gitlab.com/jkuebart/">Joachim Kuebart</a>
 		</td>
@@ -822,25 +815,25 @@ Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
 </table>
 
 
-## Overlay data
+## 覆盖数据
 
-The following plugins provide new ways of loading overlay data (GIS vector data): points, lines and polygons.
+以下插件提供了加载叠加数据（GIS 矢量数据）的新方法：点、线和多边形。
 
-* [Overlay data formats](#overlay-data-formats)
-* [Dynamic data loading](#dynamiccustom-data-loading)
-* [Synthetic overlays](#synthetic-overlays)
-* [Data providers](#data-providers)
+* [覆盖数据格式](#overlay-data-formats)
+* [动态加载数据](#dynamiccustom-data-loading)
+* [合成覆盖](#synthetic-overlays)
+* [数据提供程序](#data-providers)
 
-### Overlay data formats
+### 覆盖数据格式
 
-Load your own data from various GIS formats.
+使用各种 GIS 格式加载您自己的数据。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>描述</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/windycom/leaflet-kml">leaflet-kml</a>
 		</td><td>
-			Loads &amp; displays KML
+			加载和显示 KML
 		</td><td>
 			<a href="https://github.com/windycom">Windyx</a>
 		</td>
@@ -849,7 +842,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/mapbox/leaflet-omnivore">leaflet-omnivore</a>
 		</td><td>
-			Loads &amp; converts CSV, KML, GPX, TopoJSON, WKT formats for Leaflet.
+			为 Leaflet 加载和转换 CSV、KML、GPX、TopoJSON、WKT 格式。
 		</td><td>
 			<a href="https://github.com/mapbox">Mapbox</a>
 		</td>
@@ -858,7 +851,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.FileLayer">Leaflet.FileLayer</a>
 		</td><td>
-			Loads files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API (i.e. locally without server).
+			使用 HTML5 FileReader API（即本地无服务器）将文件（GeoJSON、GPX、KML）加载到地图中。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -867,7 +860,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/joker-x/Leaflet.geoCSV">Leaflet.geoCSV</a>
 		</td><td>
-			Leaflet plugin for loading a CSV file as geoJSON layer.
+			用于将 CSV 文件加载为 geoJSON 图层的 Leaflet 插件。
 		</td><td>
 			<a href="https://github.com/joker-x">Iván Eixarch</a>
 		</td>
@@ -876,7 +869,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/calvinmetcalf/leaflet.shapefile">Leaflet.Shapefile</a>
 		</td><td>
-			Put a shapefile onto your map as a layer.
+			将 shapefile 作为图层放在地图上。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf">Calvin Metcalf</a>
 		</td>
@@ -885,7 +878,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/calvinmetcalf/leaflet.filegdb">Leaflet.FileGDB</a>
 		</td><td>
-			Put an ESRI File GeoDatabase onto your map as a layer.
+			将 ESRI 文件地理数据库作为图层放在地图上。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf">Calvin Metcalf</a>
 		</td>
@@ -894,7 +887,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/jieter/Leaflet.encoded">Leaflet.encoded</a>
 		</td><td>
-			Use encoded polylines in Leaflet.
+			在 Leaflet 中使用编码的折线。
 		</td><td>
 			<a href="https://github.com/jieter">Jieter</a>
 		</td>
@@ -903,7 +896,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/mpetazzoni/leaflet-gpx">Leaflet GPX</a>
 		</td><td>
-			GPX layer, targeted at sporting activities by providing access to information such as distance, moving time, pace, elevation, heart rate, etc.
+			GPX 层，通过提供对距离、移动时间、配速、海拔、心率等信息的访问，针对体育活动。
 		</td><td>
 			<a href="https://github.com/mpetazzoni/">Maxime Petazzoni</a>
 		</td>
@@ -912,7 +905,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="http://arthur-e.github.com/Wicket/">Wicket</a>
 		</td><td>
-			A modest library for translating between Well-Known Text (WKT) and Leaflet geometry objects (e.g. between L.marker() instances and "POINT()" strings).
+            用于在众所周知的文本 (WKT) 和 Leaflet 几何对象（例如，在 L.marker() 实例和“POINT()”字符串之间）之间进行翻译的适度库。
 		</td><td>
 			<a href="https://github.com/arthur-e/">K. Arthur Endsley</a>
 		</td>
@@ -921,7 +914,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a>
 		</td><td>
-			A <a href="http://qgis.org/">QGIS</a> plugin to make webmaps without coding.
+            一个使用 webmaps 无需编码的 <a href="http://qgis.org/">QGIS</a> 插件。
 		</td><td>
 			<a href="https://github.com/tomchadwin">Tom Chadwin</a>
 		</td>
@@ -930,7 +923,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/Flexberry/Leaflet-WFST">Leaflet-WFST</a>
 		</td><td>
-			<a href="http://www.opengeospatial.org/standards/wfs">WFS</a> client layer with transaction support
+            支持事务的 <a href="http://www.opengeospatial.org/standards/wfs">WFS</a> 客户端层。
 		</td><td>
 			<a href="https://github.com/Flexberry/">Flexberry</a>
 		</td>
@@ -939,7 +932,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/daniellsu/leaflet-betterscale">Leaflet-BetterScale</a>
 		</td><td>
-			A new, more GIS-like scalebar with alternating black/white bars.
+			一个新的、带有交替的黑/白条、更像 GIS 的比例尺。
 		</td><td>
 			<a href="https://github.com/daniellsu/">Dan Brown</a>
 		</td>
@@ -948,7 +941,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/ngageoint/geopackage-js/tree/master/leaflet">Leaflet-GeoPackage</a>
 		</td><td>
-			Load <a href="http://www.geopackage.org/">GeoPackage</a> Tile and Feature Layers.
+			加载 <a href="http://www.geopackage.org/">GeoPackage</a> 瓦片（Tile） and 要素（Feature）图层。
 		</td><td>
 			<a href="https://github.com/danielbarela">Daniel Barela</a>,
 			<a href="https://github.com/ngageoint">NGA</a>
@@ -958,7 +951,7 @@ Load your own data from various GIS formats.
 		<td>
 			<a href="https://github.com/gherardovarando/leaflet-csvtiles">Leaflet-CsvTiles</a>
 		</td><td>
-		Load points from tiled csv files, using the amazing <a href="http://papaparse.com/">PapaParse</a> library. <a href="https://gherardovarando.github.io/leaflet-csvtiles/demo/index.html">Demo</a>.
+        使用令人惊叹的 <a href="http://papaparse.com/">PapaParse</a> 库从瓦片（Tile）的 csv 文件中加载数据。<a href="https://gherardovarando.github.io/leaflet-csvtiles/demo/index.html">Demo</a>。
 		</td><td>
 			<a href="https://github.com/gherardovarando">Gherardo Varando</a>
 		</td>
@@ -967,16 +960,16 @@ Load your own data from various GIS formats.
 
 
 
-### Dynamic/custom data loading
+### 加载动态的/自定义数据
 
-Load dynamic data which is updated in the map, or load GIS vector data in non-standard ways.
+加载地图中更新的动态数据，或以非标准方式加载GIS矢量数据。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/perliedman/leaflet-realtime">Leaflet Realtime</a>
 		</td><td>
-			Put realtime data on a Leaflet map: live tracking GPS units, sensor data or just about anything.
+			将实时数据放在 Leaflet 地图上：实时跟踪 GPS 单元、传感器数据或任何东西。
 		</td><td>
 			<a href="https://github.com/perliedman/">Per Liedman</a>
 		</td>
@@ -985,7 +978,7 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 		<td>
 			<a href="https://github.com/calvinmetcalf/leaflet-ajax">Leaflet Ajax</a>
 		</td><td>
-			Add GeoJSON data via ajax or jsonp.
+			通过 ajax 或 jsonp 添加 GeoJSON 数据。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf/">Calvin Metcalf</a>
 		</td>
@@ -995,7 +988,7 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 			<a href="https://github.com/tinuzz/leaflet-liveupdate">Leaflet.Liveupdate</a>
 		</td>
 		<td>
-			Periodically ('live') update something on a map (<a href="https://www.grendelman.net/leaflet/">Demo</a>)
+			定期（“实时”）更新地图上的某些内容 (<a href="https://www.grendelman.net/leaflet/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/tinuzz/">Martijn Grendelman</a>
@@ -1005,7 +998,7 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 		<td>
 			<a href="https://github.com/calvinmetcalf/leaflet.pouch">Leaflet.Pouch</a>
 		</td><td>
-			Use PouchDB to sync CouchDB data to local storage (indexedDB), to just add couchDB data or as just a less confusing implementation of indexedDB.
+			使用 PouchDB 将 CouchDB 数据同步到本地存储（indexedDB），只添加 couchDB 数据或作为 indexedDB 的一个不那么混乱的实现。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf/">Calvin Metcalf</a>
 		</td>
@@ -1014,7 +1007,7 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 		<td>
 			<a href="https://github.com/cbaines/leaflet-indoor">Leaflet.Indoor</a>
 		</td><td>
-			Create indoor maps.
+			创建室内地图。
 		</td><td>
 			<a href="https://github.com/cbaines">Christopher Baines</a>
 		</td>
@@ -1023,7 +1016,7 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 		<td>
 			<a href="https://github.com/BenjaminVadant/leaflet-ugeojson">Leaflet uGeoJSON</a>
 		</td><td>
-			Add an auto updating GeoJSON data Layer via ajax post requests.
+			通过 ajax post 请求添加自动更新 GeoJSON 数据层。
 		</td><td>
 			<a href="https://github.com/BenjaminVadant/">Benjamin VADANT</a>
 		</td>
@@ -1031,7 +1024,7 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 	<tr>
 		<td>
 			<a href="https://github.com/dj0001/Leaflet.mytrack">Leaflet.mytrack</a>
-		</td><td>Track my way on a map and download it. <a href="https://dj0001.github.io/Leaflet.mytrack">Demo</a>
+		</td><td>在地图上追踪我的路线并下载。<a href="https://dj0001.github.io/Leaflet.mytrack">Demo</a>
 		</td><td>
 			<a href="https://github.com/dj0001">DJ</a>
 		</td>
@@ -1040,16 +1033,16 @@ Load dynamic data which is updated in the map, or load GIS vector data in non-st
 
 
 
-### Synthetic overlays
+### 合成覆盖
 
-These plugins create useful overlays from scratch, no loading required.
+这些插件从头开始创建有用的叠加层，无需加载。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/turban/Leaflet.Graticule">Leaflet.Graticule</a>
 		</td><td>
-			Draws a grid of latitude and longitude lines.
+			绘制经纬度网格线。
 		</td><td>
 			<a href="https://github.com/turban">Bjørn Sandvik</a>
 		</td>
@@ -1058,7 +1051,7 @@ These plugins create useful overlays from scratch, no loading required.
 		<td>
 			<a href="https://github.com/ablakey/Leaflet.SimpleGraticule">Leaflet.SimpleGraticule</a>
 		</td><td>
-			Draws a grid lines for L.CRS.Simple coordinate system.
+			为 L.CRS.Simple 坐标系绘制网格线。
 		</td><td>
 			<a href="https://github.com/ablakey">Andrew Blakey</a>
 		</td>
@@ -1067,7 +1060,7 @@ These plugins create useful overlays from scratch, no loading required.
 		<td>
 			<a href="https://github.com/jonshutt/Leaflet.OS.Graticule">L.OS.Graticule</a>
 		</td><td>
-			Overlays UK Ordinance Survey (OS) 1km grid squares and labels.
+			覆盖 UK Ordinance Survey (OS) 1km 栅格和标签。
 		</td><td>
 			<a href="https://github.com/jonshutt">Jon Shutt</a>
 		</td>
@@ -1076,7 +1069,7 @@ These plugins create useful overlays from scratch, no loading required.
 		<td>
 			<a href="https://github.com/bill-chadwick/Leaflet.MetricGrid">Leaflet.MetricGrid</a>
 		</td><td>
-			A general purpose Metric Grid overlay for Leaflet with ready defined UTM, British and Irish Grids.
+			具有现成定义的 UTM、英国和爱尔兰网格的 Leaflet 的通用度量网格覆盖。
 		</td><td>
 			<a href="https://github.com/bill-chadwick">Bill Chadwick</a>
 		</td>
@@ -1084,7 +1077,7 @@ These plugins create useful overlays from scratch, no loading required.
 	<tr>
 		<td>
 			<a href="https://github.com/joergdietrich/Leaflet.Terminator">Leaflet.Terminator</a>
-		</td><td>Overlay day and night regions on a map.
+		</td><td>在地图上叠加昼夜区域。
 		</td><td>
 			<a href="https://github.com/joergdietrich">J&ouml;rg Dietrich</a>
 		</td>
@@ -1092,7 +1085,7 @@ These plugins create useful overlays from scratch, no loading required.
 	<tr>
 		<td>
 			<a href="https://github.com/dj0001/Leaflet.Sun">Leaflet.Sun</a>
-		</td><td>Get sunset or sunrise at map click. <a href="https://dj0001.github.io/Leaflet.Sun">Demo</a>
+		</td><td>点击地图获取日落或日出。 <a href="https://dj0001.github.io/Leaflet.Sun">Demo</a>
 		</td><td>
 			<a href="https://github.com/dj0001">DJ</a>
 		</td>
@@ -1100,7 +1093,7 @@ These plugins create useful overlays from scratch, no loading required.
 	<tr>
 		<td>
 			<a href="https://github.com/dj0001/Leaflet.timezones">Leaflet.timezones</a>
-		</td><td>Overlay timezones on a Leaflet Earth map. <a href="https://dj0001.github.io/Leaflet.timezones">Demo</a>
+		</td><td>在 Leaflet 地图上叠加时区。 <a href="https://dj0001.github.io/Leaflet.timezones">Demo</a>
 		</td><td>
 			<a href="https://github.com/dj0001">DJ</a>
 		</td>
@@ -1110,7 +1103,7 @@ These plugins create useful overlays from scratch, no loading required.
 			<a href="https://github.com/cloudybay/leaflet.latlng-graticule">leaflet.latlng-graticule</a>
 		</td>
 		<td>
-			Create a Canvas as ImageOverlay to draw the Lat/Lon Graticule, and show the grid tick label at the edges of the map.<a href="https://cloudybay.github.io/leaflet.latlng-graticule/example/">Demo</a>.
+        创建一个 Canvas 作为 ImageOverlay 来绘制 Lat/Lon Graticule，并在地图的边缘显示网格刻度标签。<a href="https://cloudybay.github.io/leaflet.latlng-graticule/example/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/cloudybay/">CloudyBay</a>
@@ -1121,7 +1114,7 @@ These plugins create useful overlays from scratch, no loading required.
 			<a href="http://github.com/GEOF-OSGL/Leaflet.EdgeScaleBar">Leaflet.EdgeScaleBar</a>
 		</td>
 		<td>
-			Creates scale bars along top and right edge of a map in the Web Mercator projection..<a href="http://geof-osgl.github.io/Leaflet.EdgeScaleBar/">Demo</a>.
+			在 Web Mercator 投影中沿地图的顶部和右侧边缘创建比例尺。<a href="http://geof-osgl.github.io/Leaflet.EdgeScaleBar/">Demo</a>
 		</td>
 		<td>
 			<a href="http://github.com/GEOF-OSGL">Dražen Tutić, Ana Kuveždić Divjak</a>
@@ -1131,7 +1124,7 @@ These plugins create useful overlays from scratch, no loading required.
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/leaflet.maidenhead">Leaflet.Maidenhead</a>
 		</td><td>
-			An implementation of the <a href="https://en.wikipedia.org/wiki/Maidenhead_Locator_System">Maidenhead Locator System grid</a> (<a href="https://ivansanchez.gitlab.io/leaflet.maidenhead/demo.html">(demo)</a>).
+			实现一个 <a href="https://en.wikipedia.org/wiki/Maidenhead_Locator_System">Maidenhead 定位系统网格服务</a> <a href="https://ivansanchez.gitlab.io/leaflet.maidenhead/demo.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>
 		</td>
@@ -1140,16 +1133,16 @@ These plugins create useful overlays from scratch, no loading required.
 
 
 
-### Data providers
+### 数据提供程序
 
-Load overlay data from third-party-services. See also [basemap providers](#basemap-providers) and [plugin collections](#collections).
+从三方服务加载覆盖数据。 另请参阅 [底图提供程序](#basemap-providers) 和 [插件合计](#collections).
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="http://jasonsanford.github.io/leaflet-vector-layers/">Leaflet Vector Layers</a>
 		</td><td>
-			Allows to easily create vector layers from a number of geo web services, such as ArcGIS Server, Arc2Earth, GeoIQ, CartoDB and GIS Cloud.
+			允许从许多地理网络服务轻松创建矢量图层，例如 ArcGIS Server、Arc2Earth、GeoIQ、CartoDB 和 GIS Cloud。
 		</td><td>
 			<a href="http://geojason.info">Jason Sanford</a>
 		</td>
@@ -1158,7 +1151,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 		<td>
 			<a href="https://github.com/GuillaumeAmat/leaflet-overpass-layer">Leaflet Overpass Layer</a>
 		</td><td>
-      Easily include data from the <a href="http://overpass-api.de">overpass api</a>.
+        轻松集成来自 <a href="http://overpass-api.de">overpass api</a> 的数据。 
 		</td><td>
 			<a href="https://github.com/GuillaumeAmat">Guillaume AMAT</a>
 		</td>
@@ -1167,7 +1160,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 		<td>
 			<a href="https://github.com/kr1/Leaflet.dbpediaLayer/">Leaflet.dbpediaLayer</a>
 		</td><td>
-			A layer with Points of interest from Wikipedia - loaded via ajax from DBpedia's SPARQL endpoint.
+			一个包含维基百科兴趣点的层--通过ajax从DBpedia的SPARQL端点加载。
 		</td><td>
 			<a href="https://github.com/kr1/">Kr1</a>
 		</td>
@@ -1177,7 +1170,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 			<a href="https://github.com/MatthewBarker/leaflet-wikipedia">Leaflet-Wikipedia</a>
 		</td>
 		<td>
-			A leaflet plugin to display Wikipedia API entries on a map layer.
+			一个用于在地图层上显示 Wikipedia API 条目的 Leaflet 插件。
 		</td>
 		<td>
 			<a href="https://github.com/MatthewBarker">Matthew Barker</a>
@@ -1188,7 +1181,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 			<a href="https://github.com/windycom/API">Windy-Leaflet-plugin</a>
 		</td>
 		<td>
-			Displays animated weather map on your page using Windy's free API.
+			使用 Windy 的免费 API 在您的页面上显示动画天气图。
 		</td>
 		<td>
 			<a href="https://www.windy.com">Windy.com</a>
@@ -1199,7 +1192,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 			<a href="https://github.com/barryhunter/Leaflet.GeographPhotos">Leaflet.GeographPhotos</a>
 		</td>
 		<td>
-			Display Geographical-Photos from Geograph Britain and Ireland in an interactive overlay, using their API.
+			使用他们的 API 在交互式叠加中显示来自 Geograph British and Ireland 的地理照片。
 		</td>
 		<td>
 			<a href="https://github.com/barryhunter/">Barry Hunter</a>
@@ -1210,7 +1203,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
   		<a href="https://github.com/rwev/leaflet-radar">leaflet-radar</a>
 		</td>
 		<td>
-			Animated satellite weather radar overlays for Leaflet. 
+            Leaflet 的动画卫星天气雷达覆盖图。
 		</td>
 		<td>
 			<a href="https://github.com/rwev/">rwev</a>
@@ -1222,7 +1215,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 			</a>
 		</td>
 		<td>
-			Collection of different environmental map layers in an easy to use Leaflet library <a href="https://publiclab.github.io/leaflet-environmental-layers/example/index.html#3/43.00/-46.26/BL2">Demo</a>.
+			在一个易于使用的 Leaflet 库中收集不同的环境地图图层 <a href="https://publiclab.github.io/leaflet-environmental-layers/example/index.html#3/43.00/-46.26/BL2">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/publiclab">Public Lab</a>
@@ -1234,7 +1227,7 @@ Load overlay data from third-party-services. See also [basemap providers](#basem
 			</a>
 		</td>
 		<td>
-			Plugin for RainViewer radar data API <a href="https://mwasil.github.io/Leaflet.Rainviewer/demo/">Demo</a>.
+			RainViewer雷达数据API插件 <a href="https://mwasil.github.io/Leaflet.Rainviewer/demo/">Demo</a>.
 		</td>
 		<td>
 			<a href="https://marcinwasilewski.eu/">Marcin Wasilewski</a>

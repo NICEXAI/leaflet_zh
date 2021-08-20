@@ -40,8 +40,8 @@
   - [ ] 其它
 - [x] 下载
 - [ ] 插件
-  - [ ] Tile & Image 图层
-  - [ ] 叠加数据
+  - [ ] Tile & Image 图层（已认领，by lazytuanzi）
+  - [ ] 叠加数据（已认领，by lazytuanzi）
   - [ ] 叠加显示
   - [ ] 叠加交互
   - [ ] 地图交互
