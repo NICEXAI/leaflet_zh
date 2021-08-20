@@ -40,15 +40,15 @@
   - [ ] 其它
 - [x] 下载
 - [ ] 插件
-  - [ ] Tile & Image 图层（已认领，by lazytuanzi）
-  - [ ] 叠加数据（已认领，by lazytuanzi）
+  - [x] Tile & Image 图层（已完成，by lazytuanzi）
+  - [x] 叠加数据（已完成，by lazytuanzi）
   - [ ] 叠加显示
   - [ ] 叠加交互
   - [ ] 地图交互
   - [ ] 各种各样的
   - [ ] 综合的
   - [ ] 开发属于自己的插件
-- [ ] 博客
+- [ ] 博客（已认领，by zhsdcode）
 
 ### 加入翻译
 
