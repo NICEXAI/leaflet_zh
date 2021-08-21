@@ -15,15 +15,15 @@
   - [x] Markers 自定义图标
   - [x] 在 Leaflet 中使用 GeoJSON
   - [x] 互动式choropleth地图
-  - [x] 图层组和图层控制
-  - [x] Zoom 缩放等级
+  - [x] Layer Groups 和 Layers Control
+  - [x] Zoom levels 缩放比例
   - [x] Non-geographical maps
   - [x] WMS and TMS
   - [x] Working with map panes
   - [x] 显示视频文件
-  - [x] Extending Leaflet: Class Theory
-  - [x] Extending Leaflet: Layers
-  - [x] Extending Leaflet: Handlers and Controls
+  - [x] 扩展 Leaflet: Class Theory
+  - [x] 扩展 Leaflet: Layers
+  - [x] 扩展 Leaflet: Handlers and Controls
 - [ ] 文档
   - [x] 地图
   - [x] 地图方法
@@ -41,9 +41,9 @@
 - [x] 下载
 - [ ] 插件
   - [x] Tile & Image 图层（已完成，by lazytuanzi）
-  - [x] 叠加数据（已完成，by lazytuanzi）
-  - [ ] 叠加显示
-  - [ ] 叠加交互
+  - [x] 覆盖数据（已完成，by lazytuanzi）
+  - [ ] 覆盖显示
+  - [ ] 覆盖交互
   - [ ] 地图交互
   - [ ] 各种各样的
   - [ ] 综合的
