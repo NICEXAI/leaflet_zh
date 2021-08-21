@@ -8,7 +8,7 @@
 
 ### 翻译进度（v1.7.1）
 - [x] 概况
-- [ ] 教程
+- [x] 教程
   - [x] 列表页
   - [x] Leaflet 快速入门指南
   - [x] Leaflet 在手机上使用
@@ -16,14 +16,14 @@
   - [x] 在 Leaflet 中使用 GeoJSON
   - [x] 互动式choropleth地图
   - [x] 图层组和图层控制
-  - [ ] Zoom 缩放等级
-  - [ ] Non-geographical maps
-  - [ ] WMS and TMS
-  - [ ] Working with map panes
-  - [ ] 显示视频文件
-  - [ ] Extending Leaflet: Class Theory
-  - [ ] Extending Leaflet: Layers
-  - [ ] Extending Leaflet: Handlers and Controls
+  - [x] Zoom 缩放等级
+  - [x] Non-geographical maps
+  - [x] WMS and TMS
+  - [x] Working with map panes
+  - [x] 显示视频文件
+  - [x] Extending Leaflet: Class Theory
+  - [x] Extending Leaflet: Layers
+  - [x] Extending Leaflet: Handlers and Controls
 - [ ] 文档
   - [x] 地图
   - [x] 地图方法

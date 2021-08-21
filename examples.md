@@ -60,8 +60,8 @@ description="有关如何管理图层组和使用图层切换控件的教程。"
 {% include tutorial_link.html
 page="zoom-levels/"
 thumbnail="zoom-levels/thumbnail.png"
-title="Zoom 缩放等级"
-description="更深入地了解缩放级别。"
+title="Zoom levels 缩放比例"
+description="更深入地了解地图的缩放比例。"
 %}
 
 {% include tutorial_link.html
@@ -103,15 +103,15 @@ description="Leaflet 可以帮助您在地图上的某处显示视频。"
 {% include tutorial_link.html
 page="extending/extending-1-classes.html"
 thumbnail="extending/thumbnail-1.png"
-title="Extending Leaflet: Class Theory"
-description="Leaflet的类，类继承和约定的概述。"
+title="扩展 Leaflet: Class Theory"
+description="Leaflet的类、类继承和约定的概述。"
 %}
 
 
 {% include tutorial_link.html
 page="extending/extending-2-layers.html"
 thumbnail="extending/thumbnail-2.png"
-title="Extending Leaflet: Layers"
+title="扩展 Leaflet: Layers"
 description="如何使用特定的入口点来扩展图层或创建新的图层。"
 %}
 
@@ -119,7 +119,7 @@ description="如何使用特定的入口点来扩展图层或创建新的图层�
 {% include tutorial_link.html
 page="extending/extending-3-controls.html"
 thumbnail="extending/thumbnail-3.png"
-title="Extending Leaflet: Handlers and Controls"
+title="扩展 Leaflet: Handlers and Controls"
 description="如何扩展或创建non-layers。"
 %}
 
