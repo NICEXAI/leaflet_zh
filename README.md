@@ -48,7 +48,7 @@
   - [ ] 各种各样的
   - [ ] 综合的
   - [ ] 开发属于自己的插件
-- [ ] 博客（已认领，by zhsdcode）
+- [x] 博客（已完成，by zhsdcode）
 
 ### 加入翻译
 
@@ -124,6 +124,7 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 
 > 定期更新，谢谢各位辛勤贡献
 
-- 待定
+* [zhsdcode](https://github.com/zhsdcode)
+* lazytuanzi
 
 **只要文档符合 [翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)，欢迎你来一起完善**
