@@ -4,19 +4,19 @@ layout: v2
 
 <div class="announcement">2020年09月04日 — <a href="/2020/09/04/leaflet-1.7.1.html">Leaflet 1.7.1</a> 正式发布!</div>
 
-<p>Leaflet 是一个开源并且对移动端友好的交互式地图JavaScript库。
-它大小仅仅只有<abbr title="38 KB gzipped &mdash; that's 133 KB minified and 378 KB in the source form, with 10 KB of CSS (2 KB gzipped) and 11 KB of images.">38 KB</abbr>,
-并且拥有绝大部分开发者所需要的所有映射<a href="#features">特性</a> 。</p>
+<p>Leaflet 是一个开源并且对移动端友好的交互式地图 JavaScript 库。
+它大小仅仅只有<abbr title="38 KB gzipped &mdash; that's 133 KB minified and 378 KB in the source form, with 10 KB of CSS (2 KB gzipped) and 11 KB of images.">39 KB</abbr>,
+并且拥有绝大部分开发者所需要的所有地图<a href="#features">特性</a> 。</p>
 
 <p>Leaflet 简单、高效并且易用。
 它可以高效的运行在桌面和移动平台,
 拥有着大量的 <a href="plugins.html">扩展插件</a>、
-优秀的文档、<a title="Leaflet API reference" href="reference.html">简单易用的API</a>
-和完善的案例, 以及可读性较好的&nbsp;<a title="Leaflet source code repository on GitHub" href="https://github.com/Leaflet/Leaflet">源码</a> 。
+优秀的文档、<a title="Leaflet API reference" href="reference.html">简单易用的 API</a>
+和完善的案例, 以及可读性较好的&nbsp;<a title="Leaflet source code repository on GitHub" href="https://github.com/Leaflet/Leaflet">源码</a> 。</p>
 
 <div id="map" class="map map-home" style="height: 300px; margin-top: 50px"></div>
 
-<p>在这里,我们在 <code>'map'</code> div中创建一个地图, 选择<abbr title="Here we use OpenStreetMap tiles, but Leaflet doesn't force you to &mdash; use whatever works for you, it's open source!">瓦片地图数据源</abbr>, 添加一个标记点并且在弹出层上显示一些文本:</p>
+<p>在这里,我们在 id 为 <code>map</code> 的 div 中创建一个地图, 选择<abbr title="在这里，我们使用 OpenStreetMap 的瓦片数据。当然你也可以使用其它的数据源，因为 Leaflet 是开源的，我们并不会强迫你必须使用指定的瓦片数据！">瓦片数据源</abbr>, 添加一个标记点并且在弹出层上显示一些文本:</p>
 
 <pre class="basic-code javascript"><code>var map = L.map('map').setView([51.505, -0.09], 13);
 
@@ -32,8 +32,6 @@ L.marker([51.5, -0.09]).addTo(map)
 或者访问 <a href="reference.html">API 文档</a>了解更多信息。
 如有任何疑问, 请先查看 <a href="https://github.com/Leaflet/Leaflet/blob/master/FAQ.md">FAQ</a>。</p>
 
-
-</div>
 
 <h2 class="usedby-title">谁在使用Leaflet</h2>
 <div class="usedby">
@@ -62,7 +60,7 @@ L.marker([51.5, -0.09]).addTo(map)
 
 <h2 id="features">特性</h2>
 
-<p>Leaflet 并不会尝试去为所有人做完一切事情. 相反,它更专注于把基本的事情做的完美。</p>
+<p>Leaflet 并不会尝试去为所有人做完一切事情. 相反,它更专注于把简单的事情做的完美。</p>
 
 <div class="features clearfix">
     <div class="no-break">
@@ -178,25 +176,25 @@ L.marker([51.5, -0.09]).addTo(map)
     </div>
 </div>
 
-<p>如果您发现Leaflet中确实缺少某些功能, 请首先检查是否有相关功能的 <a href="plugins.html">插件</a>
-或者它是否已经在 <a href="https://github.com/Leaflet/Leaflet/issues">GitHub issues</a>讨论过。
+<p>如果您发现 Leaflet 中确实缺少某些功能, 请首先检查是否有相关功能的 <a href="plugins.html">插件</a>
+或者它是否已经在 <a href="https://github.com/Leaflet/Leaflet/issues">GitHub issues</a> 讨论过。
 如果都没有, 请提交一个新的 GitHub issue。</p>
 
 <h2>参与进来</h2>
 
 <p>让我们创建一个世界上最好的地图库!
-Leaflet虽然最早由 <a href="https://agafonkin.com">Vladimir Agafonkin</a>创建,
+Leaflet 虽然最早由 <a href="https://agafonkin.com">Vladimir Agafonkin</a> 创建,
 但现在由一个大型<a href="https://github.com/Leaflet/Leaflet/graphs/contributors">贡献者</a>社区共同开发.
-始终欢迎大家踊跃提交<a href="https://github.com/Leaflet/Leaflet">requests</a>。
-除此之外, 还有更多方法可以参与Leaflet的开发。</p>
+始终欢迎大家踊跃提交 <a href="https://github.com/Leaflet/Leaflet">PR</a>。
+除此之外, 还有更多方法可以参与 Leaflet 的开发。</p>
 
-<p>你可以帮忙发现并提交 <a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md#reporting-bugs">bugs</a>, <a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md#improving-documentation">完善文档</a>,
+<p>你可以帮忙发现并提交 <a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md#reporting-bugs">BUG</a>、<a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md#improving-documentation">完善文档</a>、
 在 <a href="https://stackoverflow.com/questions/tagged/leaflet">Stack Overflow</a>, <a href="https://gis.stackexchange.com/questions/tagged/leaflet">GIS Stack Exchange</a>
-和<a href="https://github.com/Leaflet/Leaflet/issues">GitHub issues</a>上帮助他人,
+和 <a href="https://github.com/Leaflet/Leaflet/issues">GitHub issues</a> 上帮助他人、
 发推特 <a href="https://twitter.com/LeafletJS">@LeafletJS</a>
-或者以及在同事和朋友中推广Leaflet来帮助该项目。</p>
+或者以及在同事和朋友中推广 Leaflet 来帮助该项目。</p>
 
-<p>查看<a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md">贡献者</a> 以获取有关参与Leaflet开发的更多信息。</p>
+<p>查看<a href="https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md">贡献者</a> 以获取有关参与 Leaflet 开发的更多信息。</p>
 
 <div class="social-buttons">
     <iframe src="https://ghbtns.com/github-btn.html?user=Leaflet&amp;repo=Leaflet&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="104px" height="20px"></iframe>

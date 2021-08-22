@@ -11,7 +11,7 @@ bodyclass: honor-page
 <hr/>
 #### 参与翻译人员名单
 
-* 待定
+* lazytuanzi
 
 #### 官方交流群优秀成员
 

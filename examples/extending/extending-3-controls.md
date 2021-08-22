@@ -5,15 +5,15 @@ title: Extending Leaflet, New Handlers and Controls
 
 <br>
 
-This tutorial assumes you've read the [theory of Leaflet class inheritance](./extending-1-classes.html).
+本教程假定你已经阅读了[Leaflet类的继承原理](./extending-1-classes.html)。
 
-In Leaflet, a "layer" is anything that moves with the map. In contraposition to that, a "control" is a HTML element that remains static relative to the map container, and a "handler" is a piece of invisible code that changes the map's behaviour.
+在Leaflet中，"图层（layer）"是任何能随地图移动的东西。与此相反，"控件（control）"是一个相对于地图容器保持静态的HTML元素，而 "处理程序（handler）"是一段改变地图行为的不可见代码。
 
-## Handlers
+## 处理程序（handler）
 
-Map handlers are a new concept in Leaflet 1.0, and their function is to process DOM events from the browser (like `click`, `dblclick` or `mousewheel`) and change the state of the map.
+Map handlers 是 Leaflet 1.0 中的一个新概念，它们的功能是处理来自浏览器的 DOM 事件（例如 `click`、`dblclick`  或  `mousewheel`）并改变地图的状态。
 
-Handlers are relatively simple: they just need an `addHooks()` method (which runs when the handler is enabled in a map) and a `removeHooks()`, which runs when the handler is disabled. A skeleton for handlers is:
+处理程序相对简单：它们只需要一个 `addHooks()` 方法（在映射中启用处理程序时运行）和一个 `removeHooks()` 方法（在禁用处理程序时运行）。处理程序的骨架是：
 
 	L.CustomHandler = L.Handler.extend({
 		addHooks: function() {
@@ -27,7 +27,7 @@ Handlers are relatively simple: they just need an `addHooks()` method (which run
 		_doSomething: function(event) { … }
 	});
 
-This can be illustrated with a simple handler to pan the map when a mobile device is tilted, through [`deviceorientation` events](https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation):
+这可以用一个简单的处理程序来说明，当移动设备倾斜时，通过 [`deviceorientation`事件]（https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation）来平移地图：
 
 	L.TiltHandler = L.Handler.extend({
 		addHooks: function() {
@@ -44,29 +44,29 @@ This can be illustrated with a simple handler to pan the map when a mobile devic
 		}
 	});
 
-The handler can be attached to the map using `map.addHandler('tilt', L.TiltHandler)` - this will store an instance of `L.TiltHandler` as `map.tilt`. However, it's more usual to attach handlers to all maps with the `addInitHook` syntax:
+处理程序可以用 `map.addHandler('tilt', L.TiltHandler)` 附加到地图上 —— 这将把`L.TiltHandler`的一个实例存储为`map.tilt`。但是，使用以下 `addInitHook`  语法将处理程序附加到所有映射上更为常见：
 
 	L.Map.addInitHook('addHandler', 'tilt', L.TiltHandler);
 
-Our handler can now be enabled by running `map.tilt.enable()` and disabled by `map.tilt.disable()`
+我们的处理程序现在可以通过运行`map.tilt.enable()`来启用，并通过`map.tilt.disable()`来禁用
 
-Moreover, if the map has a property named the same as the handler, then that handler will be enabled by default if that options is `true`, so this will enable our handler by default:
+此外，如果地图具有与处理程序名称相同的属性，那么如果该选项为 `true`，则该处理程序将默认启用，因此这将默认启用我们的处理程序：
 
 	var map = L.map('mapDiv', { tilt: true });
 
-To see this example, you'll need a mobile browser which [supports the `deviceorientation` event](http://caniuse.com/#search=deviceorientation) - and even so, this event is particularly flaky and ill-specified, so beware.
+如果要看这个例子，你需要一个[支持 `deviceorientation` 事件]的移动浏览器(http://caniuse.com/#search=deviceorientation) - 即使如此，这个事件也是特别不稳定和不明确的，因此你需要注意这一点。
 
 {% include frame.html url="tilt.html" %}
 
-Depending on the type of event, a map handler can attach event listeners to the `document`, the `window`, or the container of the `L.Map` it's attached to.
+根据事件的类型，地图处理程序可以将事件监听器附加到 `document`、 `window` 或它所连接的 `L.Map` 的容器上。
 
-## Controls
+## 控件（Controls）
 
-You already know controls - the zoom control in the top left corner, the scale at the bottom left, the layer switcher at the top right. At their core, an `L.Control` is an HTML Element that is at a static position in the map container.
+您已经知道控件 - 左上角的缩放控件、左下角的缩放、右上角的图层切换器。本质上，`L.Control` 是一个 HTML 元素，位于地图容器中的静态位置。
 
-To make a control, simply inherit from `L.Control` and implement `onAdd()` and `onRemove()`. These methods work in a similar way to their `L.Layer` counterparts (they run whenever the control is added to or removed from the map), except that `onAdd()` must return an instance of `HTMLElement` representing the control. Adding the element to the map is done automatically, and so is removing it.
+要制作一个控件，只需继承 `L.Control` 并实现 `onAdd()` 和 `onRemove()`。这些方法的工作方式与 `L.Layer` 对应的方法类似（每当控件被添加到地图或从地图中移除时，它们都会运行），除了 `onAdd()` 必须返回一个代表控件的 `HTMLElement` 实例。将元素添加到地图上是自动完成的，删除也是如此。
 
-The simplest example of a custom control would be a watermark, which is just an image:
+自定义控件的最简单示例是水印，它只是一个图像：
 
 	L.Control.Watermark = L.Control.extend({
 		onAdd: function(map) {
@@ -91,10 +91,10 @@ The simplest example of a custom control would be a watermark, which is just an 
 
 {% include frame.html url="watermark.html" %}
 
-If your custom control has interactive elements such as clickable buttons, remember to use `L.DomEvent.on()` inside `onAdd()` and `L.DomEvent.off()` inside `onRemove()`.
+如果您的自定义控件具有可点击按钮等交互元素，请记得在 `onAdd()` 中使用 `L.DomEvent.on()`，在 `onRemove()`中使用 `L.DomEvent.off()`
 
-If your custom control consists of more than one HTML element (like `L.Control.Zoom`, which has two buttons), you'll have to create the whole hierarchy of elements and return the topmost container.
+如果您的自定义控件包含多个 HTML 元素（比如`L.Control.Zoom`，它有两个按钮），则您必须创建元素的整个层次结构并返回最顶层的容器。
 
-## Publishing your plugin
+## 发布属于自己的插件
 
-If you have understood everything so far, you're ready to make some Leaflet plugins! But make sure to read the [`PLUGIN-GUIDE.md` file](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md), as it contains some tips and good practices about naming and publishing your plugin.
+如果到目前为止您已经了解了所有内容，那么您就可以制作一些 Leaflet 插件了！但请务必阅读该 [`PLUGIN-GUIDE.md` 文件](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md)，因为它包含有关命名和发布插件的一些提示和最佳实践。

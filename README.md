@@ -8,28 +8,28 @@
 
 ### 翻译进度（v1.7.1）
 - [x] 概况
-- [ ] 教程
+- [x] 教程
   - [x] 列表页
-  - [ ] Leaflet 快速入门指南
-  - [ ] Leaflet 在手机上使用
-  - [ ] Markers 自定义图标
-  - [ ] 在 Leaflet 中使用 GeoJSON
-  - [ ] 互动式choropleth地图
-  - [ ] 图层组和图层控制
-  - [ ] Zoom 缩放等级
-  - [ ] Non-geographical maps
-  - [ ] WMS and TMS
-  - [ ] Working with map panes
-  - [ ] 显示视频文件
-  - [ ] Extending Leaflet: Class Theory
-  - [ ] Extending Leaflet: Layers
-  - [ ] Extending Leaflet: Handlers and Controls
+  - [x] Leaflet 快速入门指南
+  - [x] Leaflet 在手机上使用
+  - [x] Markers 自定义图标
+  - [x] 在 Leaflet 中使用 GeoJSON
+  - [x] 互动式choropleth地图
+  - [x] Layer Groups 和 Layers Control
+  - [x] Zoom levels 缩放比例
+  - [x] Non-geographical maps
+  - [x] WMS and TMS
+  - [x] Working with map panes
+  - [x] 显示视频文件
+  - [x] 扩展 Leaflet: Class Theory
+  - [x] 扩展 Leaflet: Layers
+  - [x] 扩展 Leaflet: Handlers and Controls
 - [ ] 文档
   - [x] 地图
   - [x] 地图方法
-  - [ ] UI 图层
+  - [x] UI 图层
   - [ ] 栅格图层
-  - [ ] 地图杂项
+  - [x] 地图杂项
   - [ ] 矢量图层
   - [ ] 其它图层
   - [ ] 基本类型
@@ -40,15 +40,15 @@
   - [ ] 其它
 - [x] 下载
 - [ ] 插件
-  - [ ] Tile & Image 图层（已认领，by lazytuanzi）
-  - [ ] 叠加数据（已认领，by lazytuanzi）
-  - [ ] 叠加显示
-  - [ ] 叠加交互
+  - [x] Tile & Image 图层（已完成，by lazytuanzi）
+  - [x] 覆盖数据（已完成，by lazytuanzi）
+  - [ ] 覆盖显示
+  - [ ] 覆盖交互
   - [ ] 地图交互
   - [ ] 各种各样的
   - [ ] 综合的
   - [ ] 开发属于自己的插件
-- [ ] 博客
+- [ ] 博客（已认领，by zhsdcode）
 
 ### 加入翻译
 
