@@ -26,7 +26,7 @@ bodyclass: api-page
 			</ul>
 			<h4>地图杂项</h4>
 			<ul>
-				<li><a href="#map-property">Properties 特性</a></li>
+				<li><a href="#map-property">Properties 属性</a></li>
 				<li><a href="#map-pane">Panes 窗格</a></li>
 			</ul>
 		</div>
@@ -1374,7 +1374,7 @@ handlers start running).</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented上继承的方法</a></label>
+	<label><span class='expander'>▶</span> 继承了来自 <a href='#evented'>Evented</a> 上的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -1489,76 +1489,75 @@ handlers start running).</td>
 </section></div>
 	</div>
 </div>
-<!-- TODO -->
+
 </section><section>
-<h3 id='map-property'>Properties</h3>
+<h3 id='map-property'>Properties 属性</h3>
 
 <section class='collapsable'>
 
-<h4 id='map-controls'>Controls</h4>
+<h4 id='map-controls'>Controls 控件</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>属性</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-zoomcontrol'>
 		<td><code><b>zoomControl</b></code></td>
 		<td><code><a href='#control-zoom'>Control.Zoom</a></code></td>
-		<td>The default zoom control (only available if the
-<a href="#map-zoomcontrol"><code>zoomControl</code> option</a> was <code>true</code> when creating the map).</td>
+		<td>默认缩放控件（仅当创建地图时该 <a href="#map-zoomcontrol"><code>zoomControl</code>  选项</a>是 <code>true</code>）。</td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-handlers'>Handlers</h4>
+<h4 id='map-handlers'>Handlers 处理程序</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>属性</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-boxzoom'>
 		<td><code><b>boxZoom</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Box (shift-drag with mouse) zoom handler.</td>
+		<td>矩形框（使用鼠标按住Shift键并拖动）缩放处理程序</td>
 	</tr>
 	<tr id='map-doubleclickzoom'>
 		<td><code><b>doubleClickZoom</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Double click zoom handler.</td>
+		<td>双击缩放处理程序</td>
 	</tr>
 	<tr id='map-dragging'>
 		<td><code><b>dragging</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Map dragging handler (by both mouse and touch).</td>
+		<td>地图拖动处理程序（通过鼠标和触摸）</td>
 	</tr>
 	<tr id='map-keyboard'>
 		<td><code><b>keyboard</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Keyboard navigation handler.</td>
+		<td>键盘导航处理程序</td>
 	</tr>
 	<tr id='map-scrollwheelzoom'>
 		<td><code><b>scrollWheelZoom</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Scroll wheel zoom handler.</td>
+		<td>滚轮缩放处理程序</td>
 	</tr>
 	<tr id='map-tap'>
 		<td><code><b>tap</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Mobile touch hacks (quick tap and touch hold) handler.</td>
+		<td>移动触摸设备（快速点击和触摸保持）处理程序</td>
 	</tr>
 	<tr id='map-touchzoom'>
 		<td><code><b>touchZoom</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Touch zoom handler.</td>
+		<td>触摸地图缩放处理程序</td>
 	</tr>
 </tbody></table>
 
@@ -1566,67 +1565,65 @@ handlers start running).</td>
 
 
 </section><section>
-<h3 id='map-pane'>Map panes</h3>
+<h3 id='map-pane'>Map panes 地图窗格</h3>
 
 <section >
 
 
 
-<div class='section-comments'>Panes are DOM elements used to control the ordering of layers on the map. You
-can access panes with <a href="#map-getpane"><code>map.getPane</code></a> or
-<a href="#map-getpanes"><code>map.getPanes</code></a> methods. New panes can be created with the
-<a href="#map-createpane"><code>map.createPane</code></a> method.
-<p>Every map has the following default panes that differ only in zIndex.</p></div>
+<div class='section-comments'>窗格是用于控制地图上图层顺序的DOM元素。 您可以使用 <a href="#map-getpane"><code>map.getPane</code></a> 或
+	<a href="#map-getpanes"><code>map.getPanes</code></a> 方法访问窗格。 可以使用
+	 <a href="#map-createpane"><code>map.createPane</code></a> 方法创建新窗格。 每个地图都有以下默认窗格，它们的唯一区别仅在于 zIndex。</div>
 
 <table><thead>
 	<tr>
 		<th>Pane</th>
-		<th>Type</th>
+		<th>类型</th>
 		<th>Z-index</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-mappane'>
 		<td><code><b>mapPane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>&#x27;auto&#x27;</code></td>
-		<td>Pane that contains all other map panes</td>
+		<td>包含所有其他地图窗格（pane）的窗格（pane）</td>
 	</tr>
 	<tr id='map-tilepane'>
 		<td><code><b>tilePane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>200</code></td>
-		<td>Pane for <a href="#gridlayer"><code>GridLayer</code></a>s and <a href="#tilelayer"><code>TileLayer</code></a>s</td>
+		<td><a href="#gridlayer"><code>GridLayer</code></a> 和 <a href="#tilelayer"><code>TileLayer</code></a> 所在的窗格（panes）。</td>
 	</tr>
 	<tr id='map-overlaypane'>
 		<td><code><b>overlayPane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>400</code></td>
-		<td>Pane for overlay shadows (e.g. <a href="#marker"><code>Marker</code></a> shadows)</td>
+		<td>用于覆盖阴影的窗格（例如，<a href="#marker"><code>Marker</code></a> 阴影）</td>
 	</tr>
 	<tr id='map-shadowpane'>
 		<td><code><b>shadowPane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>500</code></td>
-		<td>Pane for vectors (<a href="#path"><code>Path</code></a>s, like <a href="#polyline"><code>Polyline</code></a>s and <a href="#polygon"><code>Polygon</code></a>s), <a href="#imageoverlay"><code>ImageOverlay</code></a>s and <a href="#videooverlay"><code>VideoOverlay</code></a>s</td>
+		<td>向量窗格（<a href="#path"><code>Path</code></a>，如 <a href="#polyline"><code>Polyline</code></a> 和 <a href="#polygon"><code>Polygon</code></a>），<a href="#imageoverlay"><code>ImageOverlay</code></a> 和 <a href="#videooverlay"><code>VideoOverlay</code></a></td>
 	</tr>
 	<tr id='map-markerpane'>
 		<td><code><b>markerPane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>600</code></td>
-		<td>Pane for <a href="#icon"><code>Icon</code></a>s of <a href="#marker"><code>Marker</code></a>s</td>
+		<td><a href="#icon"><code>Icon</code></a> 和 <a href="#marker"><code>Marker</code></a> 标注所在的窗格</td>
 	</tr>
 	<tr id='map-tooltippane'>
 		<td><code><b>tooltipPane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>650</code></td>
-		<td>Pane for <a href="#tooltip"><code>Tooltip</code></a>s.</td>
+		<td><a href="#tooltip"><code>Tooltip</code></a> 所在的窗格</td>
 	</tr>
 	<tr id='map-popuppane'>
 		<td><code><b>popupPane</b></code></td>
 		<td><code>HTMLElement</code></td>
 		<td><code>700</code></td>
-		<td>Pane for <a href="#popup"><code>Popup</code></a>s.</td>
+		<td>Pane for <a href="#popup"><code>Popup</code></a> 所在的窗格</td>
 	</tr>
 </tbody></table>
 
@@ -1636,63 +1633,57 @@ can access panes with <a href="#map-getpane"><code>map.getPane</code></a> or
 </section><span id='locate-options'></span>
 
 <section>
-<h3 id='locate-options-option'>Locate options</h3>
+<h3 id='locate-options-option'>Locate options 定位选项</h3>
 
 <section >
 
 
 
-<div class='section-comments'>Some of the geolocation methods for <a href="#map"><code>Map</code></a> take in an <code>options</code> parameter. This
-is a plain javascript object with the following optional components:</div>
+<div class='section-comments'><a href="#map"><code>Map</code></a> 在一些地理位置方法中使用到的 <code>options</code> 参数。这是一个简单的 JavaScript 对象，其中包含以下可选参数：</div>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='locate-options-watch'>
 		<td><code><b>watch</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, starts continuous watching of location changes (instead of detecting it
-once) using W3C <code>watchPosition</code> method. You can later stop watching using
-<code>map.stopLocate()</code> method.</td>
+		<td>如果为 <code>true</code>，则开始使用 W3C <code>watchPosition</code> 方法连续观察位置变化（而不是检测一次）。之后你可以使用 <code>map.stopLocate()</code> 方法停止观察。</td>
 	</tr>
 	<tr id='locate-options-setview'>
 		<td><code><b>setView</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, automatically sets the map view to the user location with respect to
-detection accuracy, or to world view if geolocation failed.</td>
+		<td>如果为 <code>true</code>，则根据检测精度自动将地图视图设置为用户位置，如果地理定位失败，则自动设置为世界视图。</td>
 	</tr>
 	<tr id='locate-options-maxzoom'>
 		<td><code><b>maxZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>Infinity</code></td>
-		<td>The maximum zoom for automatic view setting when using <code>setView</code> option.</td>
+		<td>使用 <code>setView</code> 选项时，自动视图设置的最大缩放。</td>
 	</tr>
 	<tr id='locate-options-timeout'>
 		<td><code><b>timeout</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>10000</code></td>
-		<td>Number of milliseconds to wait for a response from geolocation before firing a
-<code>locationerror</code> event.</td>
+		<td>在触发 <code>locationerror</code> 事件之前等待来自地理位置响应的毫秒数 。</td>
 	</tr>
 	<tr id='locate-options-maximumage'>
 		<td><code><b>maximumAge</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>Maximum age of detected location. If less than this amount of milliseconds
-passed since last geolocation response, <code>locate</code> will return a cached location.</td>
+		<td>检测到的位置的最大年龄。如果自上次地理定位响应以来经过的毫秒数少于此毫秒数，<code>locate</code> 则将返回缓存的位置。</td>
 	</tr>
 	<tr id='locate-options-enablehighaccuracy'>
 		<td><code><b>enableHighAccuracy</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Enables high accuracy, see <a href="http://dev.w3.org/geo/api/spec-source.html#high-accuracy">description in the W3C spec</a>.</td>
+		<td>启用高精度, 请参阅 <a href="http://dev.w3.org/geo/api/spec-source.html#high-accuracy">W3C 规范中的说明</a>。</td>
 	</tr>
 </tbody></table>
 
@@ -1702,32 +1693,27 @@ passed since last geolocation response, <code>locate</code> will return a cached
 </section><span id='zoom-options'></span>
 
 <section>
-<h3 id='zoom-options-option'>Zoom options</h3>
+<h3 id='zoom-options-option'>Zoom options 缩放选项</h3>
 
 <section >
 
 
 
-<div class='section-comments'>Some of the <a href="#map"><code>Map</code></a> methods which modify the zoom level take in an <code>options</code>
-parameter. This is a plain javascript object with the following optional
-components:</div>
+<div class='section-comments'><a href="#map"><code>Map</code></a> 在一些修改地图缩放等级的方法中使用到的 <code>options</code> 参数。这是一个简单的 JavaScript 对象，其中包含以下可选参数：</div>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='zoom-options-animate'>
 		<td><code><b>animate</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code></code></td>
-		<td>If not specified, zoom animation will happen if the zoom origin is inside the
-current view. If <code>true</code>, the map will attempt animating zoom disregarding where
-zoom origin is. Setting <code>false</code> will make it always reset the view completely
-without animation.</td>
+		<td>如果未指定并且缩放原点在当前视图内，则会发生缩放动画。如果为 <code>true</code>，地图将尝试动画缩放而不管缩放原点在哪里。设置为 <code>false</code> 将使其始终在没有动画的情况下完全重置视图。</td>
 	</tr>
 </tbody></table>
 
@@ -1737,53 +1723,46 @@ without animation.</td>
 </section><span id='pan-options'></span>
 
 <section>
-<h3 id='pan-options-option'>Pan options</h3>
+<h3 id='pan-options-option'>Pan options 平移选项</h3>
 
 <section >
 
 
 
-<div class='section-comments'>Some of the <a href="#map"><code>Map</code></a> methods which modify the center of the map take in an <code>options</code>
-parameter. This is a plain javascript object with the following optional
-components:</div>
+<div class='section-comments'><a href="#map"><code>Map</code></a> 在一些修改地图中心的方法中使用到的 <code>options</code> 参数。这是一个简单的 JavaScript 对象，其中包含以下可选参数：</div>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='pan-options-animate'>
 		<td><code><b>animate</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code></code></td>
-		<td>If <code>true</code>, panning will always be animated if possible. If <code>false</code>, it will
-not animate panning, either resetting the map view if panning more than a
-screen away, or just setting a new offset for the map pane (except for <code>panBy</code>
-which always does the latter).</td>
+		<td>如果为 <code>true</code> 并且可能的话，平移将始终执行动画。如果为 <code>false</code>，它不会为平移设置动画，如果平移超过一个屏幕，则重置地图视图，或者只是为地图窗格设置新的偏移量（除了 <code>panBy</code> 之外）。</td>
 	</tr>
 	<tr id='pan-options-duration'>
 		<td><code><b>duration</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.25</code></td>
-		<td>Duration of animated panning, in seconds.</td>
+		<td>动画平移的持续时间，以秒为单位。</td>
 	</tr>
 	<tr id='pan-options-easelinearity'>
 		<td><code><b>easeLinearity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.25</code></td>
-		<td>The curvature factor of panning animation easing (third parameter of the
-<a href="http://cubic-bezier.com/">Cubic Bezier curve</a>). 1.0 means linear animation,
-and the smaller this number, the more bowed the curve.</td>
+		<td>平移动画缓动的曲率因子（<a href="http://cubic-bezier.com/">三次贝塞尔曲线</a> 的第三个参数 ）。1.0 表示线性动画，这个数字越小，曲线越弯曲。</td>
 	</tr>
 	<tr id='pan-options-nomovestart'>
 		<td><code><b>noMoveStart</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, panning won't fire <code>movestart</code> event on start (used internally for
-panning inertia).</td>
+		<td>如果为 <code>true</code>，平移将不会在开始时触发 <code>movestart</code> 事件（内部用于
+			平移的惯性）。</td>
 	</tr>
 </tbody></table>
 
@@ -1793,13 +1772,13 @@ panning inertia).</td>
 </section><span id='zoom/pan-options'></span>
 
 <section>
-<h3 id=''>Zoom/pan options</h3>
+<h3 id=''>Zoom/pan options 缩放/平移选项</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#zoom-options'>Zoom options</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#zoom-options'>缩放选项</a>的相关参数</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -1808,20 +1787,17 @@ panning inertia).</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='zoom/pan-options-animate'>
 		<td><code><b>animate</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code></code></td>
-		<td>If not specified, zoom animation will happen if the zoom origin is inside the
-current view. If <code>true</code>, the map will attempt animating zoom disregarding where
-zoom origin is. Setting <code>false</code> will make it always reset the view completely
-without animation.</td>
+		<td>如果未指定并且缩放原点在当前视图内，则会发生缩放动画。如果为 <code>true</code>，地图将尝试动画缩放而不管缩放原点在哪里。设置为 <code>false</code> 将使其始终在没有动画的情况下完全重置视图。</td>
 	</tr>
 </tbody></table>
 
@@ -1830,7 +1806,7 @@ without animation.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#pan-options'>Pan options</a></label>
+	<label><span class='expander'>▶</span> 集成自 <a href='#pan-options'>平移选项</a>的相关参数</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -1839,32 +1815,29 @@ without animation.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='zoom/pan-options-duration'>
 		<td><code><b>duration</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.25</code></td>
-		<td>Duration of animated panning, in seconds.</td>
+		<td>动画平移的持续时间，以秒为单位。</td>
 	</tr>
 	<tr id='zoom/pan-options-easelinearity'>
 		<td><code><b>easeLinearity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.25</code></td>
-		<td>The curvature factor of panning animation easing (third parameter of the
-<a href="http://cubic-bezier.com/">Cubic Bezier curve</a>). 1.0 means linear animation,
-and the smaller this number, the more bowed the curve.</td>
+		<td>平移动画缓动的曲率因子（<a href="http://cubic-bezier.com/">三次贝塞尔曲线</a> 的第三个参数 ）。1.0 表示线性动画，这个数字越小，曲线越弯曲。</td>
 	</tr>
 	<tr id='zoom/pan-options-nomovestart'>
 		<td><code><b>noMoveStart</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, panning won't fire <code>movestart</code> event on start (used internally for
-panning inertia).</td>
+		<td>如果为 <code>true</code>，平移将不会在开始时触发 <code>movestart</code> 事件（内部用于平移的惯性）。</td>
 	</tr>
 </tbody></table>
 
@@ -1875,7 +1848,7 @@ panning inertia).</td>
 </section><span id='fitbounds-options'></span>
 
 <section>
-<h3 id='fitbounds-options-option'>FitBounds options</h3>
+<h3 id='fitbounds-options-option'>FitBounds 选项</h3>
 
 <section >
 
@@ -1884,38 +1857,35 @@ panning inertia).</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='fitbounds-options-paddingtopleft'>
 		<td><code><b>paddingTopLeft</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>Sets the amount of padding in the top left corner of a map container that
-shouldn't be accounted for when setting the view to fit bounds. Useful if you
-have some control overlays on the map like a sidebar and you don't want them
-to obscure objects you're zooming to.</td>
+		<td>设置在将视图设置为适合边界时不应考虑的地图容器左上角的填充量。如果您在地图上有一些控件叠加层（如侧边栏）并且您不希望它们遮挡您要缩放到的对象，则此功能很有用。</td>
 	</tr>
 	<tr id='fitbounds-options-paddingbottomright'>
 		<td><code><b>paddingBottomRight</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The same for the bottom right corner of the map.</td>
+		<td>地图右下角也是如此。</td>
 	</tr>
 	<tr id='fitbounds-options-padding'>
 		<td><code><b>padding</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>Equivalent of setting both top left and bottom right padding to the same value.</td>
+		<td>相当于将左上角和右下角填充设置为相同的值。</td>
 	</tr>
 	<tr id='fitbounds-options-maxzoom'>
 		<td><code><b>maxZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>null</code></td>
-		<td>The maximum possible zoom to use.</td>
+		<td>可能要使用的最大缩放。</td>
 	</tr>
 </tbody></table>
 
@@ -1923,7 +1893,7 @@ to obscure objects you're zooming to.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#zoom-options'>Zoom options</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#zoom-options'>缩放选项</a>的相关参数</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -1932,29 +1902,27 @@ to obscure objects you're zooming to.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='fitbounds-options-animate'>
 		<td><code><b>animate</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code></code></td>
-		<td>If not specified, zoom animation will happen if the zoom origin is inside the
-current view. If <code>true</code>, the map will attempt animating zoom disregarding where
-zoom origin is. Setting <code>false</code> will make it always reset the view completely
-without animation.</td>
+		<td>如果未指定并且缩放原点在当前视图内，则会发生缩放动画。如果为 <code>true</code>，地图将尝试动画缩放而不管缩放原点在哪里。设置为 <code>false</code> 将使其始终在没有动画的情况下完全重置视图。</td>
 	</tr>
 </tbody></table>
+
 
 </section></div>
 	</div>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#pan-options'>Pan options</a></label>
+	<label><span class='expander'>▶</span> 集成自 <a href='#pan-options'>平移选项</a>的相关参数</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -1963,32 +1931,29 @@ without animation.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
-	<tr id='fitbounds-options-duration'>
+	<tr id='zoom/pan-options-duration'>
 		<td><code><b>duration</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.25</code></td>
-		<td>Duration of animated panning, in seconds.</td>
+		<td>动画平移的持续时间，以秒为单位。</td>
 	</tr>
-	<tr id='fitbounds-options-easelinearity'>
+	<tr id='zoom/pan-options-easelinearity'>
 		<td><code><b>easeLinearity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.25</code></td>
-		<td>The curvature factor of panning animation easing (third parameter of the
-<a href="http://cubic-bezier.com/">Cubic Bezier curve</a>). 1.0 means linear animation,
-and the smaller this number, the more bowed the curve.</td>
+		<td>平移动画缓动的曲率因子（<a href="http://cubic-bezier.com/">三次贝塞尔曲线</a> 的第三个参数 ）。1.0 表示线性动画，这个数字越小，曲线越弯曲。</td>
 	</tr>
-	<tr id='fitbounds-options-nomovestart'>
+	<tr id='zoom/pan-options-nomovestart'>
 		<td><code><b>noMoveStart</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, panning won't fire <code>movestart</code> event on start (used internally for
-panning inertia).</td>
+		<td>如果为 <code>true</code>，平移将不会在开始时触发 <code>movestart</code> 事件（内部用于平移的惯性）。</td>
 	</tr>
 </tbody></table>
 
@@ -1996,10 +1961,10 @@ panning inertia).</td>
 	</div>
 </div>
 
-</section><h2 id='marker'>Marker</h2><p>L.Marker is used to display clickable/draggable icons on the map. Extends <a href="#layer"><code>Layer</code></a>.</p>
+</section><h2 id='marker'>Marker 标记</h2><p>L.Marker 用于在地图上显示可点击/可拖动的图标。扩展了 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
-<h3 id='marker-example'>Usage example</h3>
+<h3 id='marker-example'>使用示例</h3>
 
 <section >
 
@@ -2026,12 +1991,12 @@ panning inertia).</td>
 <table><thead>
 	<tr>
 		<th>Factory</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-l-marker'>
 		<td><code><b>L.marker</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#marker-option'>Marker options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates a Marker object given a geographical point and optionally an options object.</td>
+		<td>给出一个地理位置和可选的参数，实例化一个Marker对象。</td>
 	</tr>
 </tbody></table>
 
@@ -2039,7 +2004,7 @@ panning inertia).</td>
 
 
 </section><section>
-<h3 id='marker-option'>Options</h3>
+<h3 id='marker-option'>Options 选项</h3>
 
 <section >
 
@@ -2048,120 +2013,116 @@ panning inertia).</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-icon'>
 		<td><code><b>icon</b></code></td>
 		<td><code><a href='#icon'>Icon</a></code></td>
 		<td><code>*</code></td>
-		<td>Icon instance to use for rendering the marker.
-See <a href="#icon">Icon documentation</a> for details on how to customize the marker icon.
-If not specified, a common instance of <a href="#icon-default"><code>L.Icon.Default</code></a> is used.</td>
+		<td>用于渲染标记（marker）的图标实例。有关如何自定义标记（marker）图标的详细信息，请参阅<a href="#icon"> Icon 文档</a>。如果未指定，<a href="#icon-default"><code>L.Icon.Default</code></a> 则使用公共实例。</td>
 	</tr>
 	<tr id='marker-keyboard'>
 		<td><code><b>keyboard</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether the marker can be tabbed to with a keyboard and clicked by pressing enter.</td>
+		<td>是否可以用键盘标记并按回车键进行点击。</td>
 	</tr>
 	<tr id='marker-title'>
 		<td><code><b>title</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the browser tooltip that appear on marker hover (no tooltip by default).</td>
+		<td>悬停在标记（marker）上时出现的浏览器 tooltip  提示文本内容（默认情况下没有 tooltip 提示）。</td>
 	</tr>
 	<tr id='marker-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the icon image (useful for accessibility).</td>
+		<td>图标图像的 alt 属性的文本(便于访问)。</td>
 	</tr>
 	<tr id='marker-zindexoffset'>
 		<td><code><b>zIndexOffset</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>By default, marker images zIndex is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like <code>1000</code> (or high negative value, respectively).</td>
+		<td>默认情况下，标记（marker）图像 zIndex 是根据其纬度自动设置的。如果您想将标记置于所有其他标记（marker）之上(或之下)，则使用此选项指定一个高值，如 <code>1000</code>(或高的负值)。</td>
 	</tr>
 	<tr id='marker-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the marker.</td>
+		<td>标记（marker）的不透明度。</td>
 	</tr>
 	<tr id='marker-riseonhover'>
 		<td><code><b>riseOnHover</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the marker will get on top of others when you hover the mouse over it.</td>
+		<td>如果为 <code>true</code>，当你把鼠标悬停在它上面时，该标记（marker）会在其他标记之上。</td>
 	</tr>
 	<tr id='marker-riseoffset'>
 		<td><code><b>riseOffset</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>250</code></td>
-		<td>The z-index offset used for the <code>riseOnHover</code> feature.</td>
+		<td>用于 <code>riseOnHover</code> 功能的 z-index 偏移。</td>
 	</tr>
 	<tr id='marker-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;markerPane&#x27;</code></td>
-		<td><code>Map pane</code> where the markers icon will be added.</td>
+		<td><code>Map pane</code> 将添加标记图标的位置。</td>
 	</tr>
 	<tr id='marker-shadowpane'>
 		<td><code><b>shadowPane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;shadowPane&#x27;</code></td>
-		<td><code>Map pane</code> where the markers shadow will be added.</td>
+		<td><code>Map pane</code> 将添加标记阴影的位置。</td>
 	</tr>
 	<tr id='marker-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>When <code>true</code>, a mouse event on this marker will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='marker-draggable-marker-options'>Draggable marker options</h4>
+<h4 id='marker-draggable-marker-options'>可拖动的 marker 选项</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-draggable'>
 		<td><code><b>draggable</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether the marker is draggable with mouse/touch or not.</td>
+		<td>标记（marker）是否可通过鼠标/触摸拖动。</td>
 	</tr>
 	<tr id='marker-autopan'>
 		<td><code><b>autoPan</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether to pan the map when dragging this marker near its edge or not.</td>
+		<td>将此标记（marker）拖动到其边缘附近时是否平移地图。</td>
 	</tr>
 	<tr id='marker-autopanpadding'>
 		<td><code><b>autoPanPadding</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>Point(50, 50)</code></td>
-		<td>Distance (in pixels to the left/right and to the top/bottom) of the
-map edge to start panning the map.</td>
+		<td>开始平移地图时距离边缘的距离（左/右和上/下，以像素为单位）。</td>
 	</tr>
 	<tr id='marker-autopanspeed'>
 		<td><code><b>autoPanSpeed</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>10</code></td>
-		<td>Number of pixels the map should pan by.</td>
+		<td>地图应该平移的像素数。</td>
 	</tr>
 </tbody></table>
 
@@ -2169,7 +2130,7 @@ map edge to start panning the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>交互层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2178,17 +2139,17 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果为 <code>false</code>，该图层将不会触发鼠标事件，并作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -2197,7 +2158,7 @@ map edge to start panning the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2206,17 +2167,17 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了一些图层信息，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -2225,7 +2186,7 @@ map edge to start panning the map.</td>
 </div>
 
 </section><section>
-<h3 id='marker-event'>Events</h3>
+<h3 id='marker-event'>Events 事件</h3>
 
 <section >
 
@@ -2234,54 +2195,54 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-move'>
 		<td><code><b>move</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker is moved via <a href="#marker-setlatlng"><code>setLatLng</code></a> or by <a href="#marker-dragging">dragging</a>. Old and new coordinates are included in event arguments as <code>oldLatLng</code>, <code>latlng</code>.</td>
+		<td>当标记通过 <a href="#marker-setlatlng"><code>setLatLng</code></a> 或通过 <a href="#marker-dragging">dragging</a> 移动时触发该事件，并且旧坐标和新坐标会作为 <code>oldLatLng</code>、<code>latlng</code> 包含在事件参数中。</td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='marker-dragging-events'>Dragging events</h4>
+<h4 id='marker-dragging-events'>Dragging events 拖拽事件</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-dragstart'>
 		<td><code><b>dragstart</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the user starts dragging the marker.</td>
+		<td>当用户开始拖动标记时触发。</td>
 	</tr>
 	<tr id='marker-movestart'>
 		<td><code><b>movestart</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker starts moving (because of dragging).</td>
+		<td>当标记开始拖动时触发。</td>
 	</tr>
 	<tr id='marker-drag'>
 		<td><code><b>drag</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired repeatedly while the user drags the marker.</td>
+		<td>当用户拖动标记时重复触发。</td>
 	</tr>
 	<tr id='marker-dragend'>
 		<td><code><b>dragend</b></code></td>
 		<td><code><a href='#dragendevent'>DragEndEvent</a></code></td>
-		<td>Fired when the user stops dragging the marker.</td>
+		<td>当用户停止拖动标记时触发。</td>
 	</tr>
 	<tr id='marker-moveend'>
 		<td><code><b>moveend</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker stops moving (because of dragging).</td>
+		<td>当标记停止拖动时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -2289,7 +2250,7 @@ map edge to start panning the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>交互层</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2298,48 +2259,45 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click（或 tap）图层时触发。</td>
 	</tr>
 	<tr id='marker-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click（或 double-tap）图层时触发。</td>
 	</tr>
 	<tr id='marker-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='marker-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户释放在图层上按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='marker-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>当鼠标进入图层时触发。</td>
 	</tr>
 	<tr id='marker-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开图层时触发。</td>
 	</tr>
 	<tr id='marker-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果此事件有监听者，则防止显示默认的浏览器上下文菜单。在移动设备上，当用户长按时，也会在手机上触发。</td>
 	</tr>
 </tbody></table>
 
@@ -2348,7 +2306,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2357,20 +2315,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='marker-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -2379,7 +2337,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer</a> 的弹出（Popup）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2388,20 +2346,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的  popup  打开时触发</td>
 	</tr>
 	<tr id='marker-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的 popup 关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -2410,7 +2368,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自<a href='#layer'>Layer 图层</a>的工具提示（Tooltip）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2419,20 +2377,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的 tooltip 打开时触发。</td>
 	</tr>
 	<tr id='marker-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的 tooltip 关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -2441,77 +2399,77 @@ for a second (also called long press).</td>
 </div>
 
 </section><section>
-<h3 id='marker-method'>Methods</h3>
+<h3 id='marker-method'>Methods 方法</h3>
 
 <section >
 
 
 
-<div class='section-comments'>In addition to <a href="#layer">shared layer methods</a> like <code>addTo()</code> and <code>remove()</code> and <a href="#popup">popup methods</a> like bindPopup() you can also use the following methods:</div>
+<div class='section-comments'>除了<a href="#layer">共享层方法</a>，如 <code>addTo()</code>、<code>remove()</code>、类似 bindPopup() 的 <a href="#popup">popup 方法</a>之外，你还可以使用以下方法：</div>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-getlatlng'>
 		<td><code><b>getLatLng</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the current geographical position of the marker.</p>
+		<td><p>返回标记的当前地理位置。</p>
 </td>
 	</tr>
 	<tr id='marker-setlatlng'>
 		<td><code><b>setLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the marker position to the given point.</p>
+		<td><p>将标记位置更改为指定点。</p>
 </td>
 	</tr>
 	<tr id='marker-setzindexoffset'>
 		<td><code><b>setZIndexOffset</b>(<nobr>&lt;Number&gt;</nobr> <i>offset</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#marker-zindexoffset">zIndex offset</a> of the marker.</p>
+		<td><p>更改标记的 <a href="#marker-zindexoffset">zIndex 偏移量</a> 。</p>
 </td>
 	</tr>
 	<tr id='marker-geticon'>
 		<td><code><b>getIcon</b>()</code></td>
 		<td><code><a href='#icon'>Icon</a></code></td>
-		<td><p>Returns the current icon used by the marker</p>
+		<td><p>返回标记使用的当前图标</p>
 </td>
 	</tr>
 	<tr id='marker-seticon'>
 		<td><code><b>setIcon</b>(<nobr>&lt;<a href='#icon'>Icon</a>&gt;</nobr> <i>icon</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the marker icon.</p>
+		<td><p>更改标记图标。</p>
 </td>
 	</tr>
 	<tr id='marker-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the opacity of the marker.</p>
+		<td><p>更改标记的透明度。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='marker-other-methods'>Other methods</h4>
+<h4 id='marker-other-methods'>Other methods 其它方法</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p><code>precision</code> is the number of decimal places for coordinates.
-The default value is 6 places.
-Returns a <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the marker (as a GeoJSON <a href="#point"><code>Point</code></a> Feature).</p>
+		<td><p><code>precision</code> 是坐标的小数位数。
+			默认值是6位。
+			返回用 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示的标记内容（作为一个GeoJSON <a href="#point"><code>Point</code></a>特征）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2520,7 +2478,7 @@ Returns a <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2529,45 +2487,45 @@ Returns a <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（layer group）。</p>
 </td>
 	</tr>
 	<tr id='marker-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='marker-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='marker-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除图层。</p>
 </td>
 	</tr>
 	<tr id='marker-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格（pane）的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='marker-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2577,7 +2535,7 @@ Returns a <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2586,59 +2544,57 @@ Returns a <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将弹出窗口绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个<code>Function</code>被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td><p>移除之前用<code>bindPopup</code>绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有指定 <code>latlng</code>，则在默认的锚点打开弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果弹出窗口（popup）已打开，则关闭绑定到该层的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该层的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='marker-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2648,7 +2604,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2657,59 +2613,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='marker-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='marker-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='marker-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='marker-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='marker-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2719,7 +2673,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2728,107 +2682,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='marker-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='marker-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组类型/侦听器</p>
 </td>
 	</tr>
 	<tr id='marker-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='marker-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='marker-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='marker-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='marker-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='marker-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -2838,39 +2790,37 @@ properties. The event can optionally be propagated to event parents.</p>
 </div>
 
 </section><section>
-<h3 id='marker-property'>Properties</h3>
+<h3 id='marker-property'>Properties 属性</h3>
 
 <section class='collapsable'>
 
-<h4 id='marker-interaction-handlers'>Interaction handlers</h4>
+<h4 id='marker-interaction-handlers'>Interaction handlers 交互处理程序</h4>
 
-<div class='section-comments'>Interaction handlers are properties of a marker instance that allow you to control interaction behavior in runtime, enabling or disabling certain features such as dragging (see <a href="#handler"><code>Handler</code></a> methods). Example:
+<div class='section-comments'>交互处理程序是一个标记（marker）实例的属性，允许你在运行时控制交互行为，启用或禁用某些功能，如拖动（见 <a href="#handler"><code>Handler</code></a> 方法）。示例：
 <pre><code class="language-js">marker.dragging.disable();
 </code></pre></div>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>属性</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-dragging'>
 		<td><code><b>dragging</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Marker dragging handler (by both mouse and touch). Only valid when the marker is on the map (Otherwise set <a href="#marker-draggable"><code>marker.options.draggable</code></a>).</td>
+		<td>标记（marker）拖动处理程序（通过鼠标和触摸），仅当标记 (marker) 在地图上时有效（否则设置 <a href="#marker-draggable"><code>marker.options.draggable</code></a>）。</td>
 	</tr>
 </tbody></table>
 
 </section>
 
 
-</section><h2 id='popup'>Popup</h2><p>Used to open popups in certain places of the map. Use <a href="#map-openpopup">Map.openPopup</a> to
-open popups while making sure that only one popup is open at one time
-(recommended for usability), or use <a href="#map-addlayer">Map.addLayer</a> to open as many as you want.</p>
+</section><h2 id='popup'>Popup 弹出窗口</h2><p>用于在地图的某些位置打开弹出窗口。使用 <a href="#map-openpopup">Map.openPopup</a> 打开弹出窗口，同时确保一次只打开一个弹出窗口（推荐使用），或者使用 <a href="#map-addlayer">Map.addLayer</a> 打开任意多个。</p>
 
 <section>
-<h3 id='popup-example'>Usage example</h3>
+<h3 id='popup-example'>使用示例</h3>
 
 <section >
 
@@ -2878,11 +2828,10 @@ open popups while making sure that only one popup is open at one time
 
 
 
-<p>If you want to just bind a popup to marker click and then open it, it's really easy:</p>
+<p>如果您只想将弹出窗口（popup）绑定到标记（marker）单击然后打开它，这其实很简单：</p>
 <pre><code class="language-js">marker.bindPopup(popupContent).openPopup();
 </code></pre>
-<p>Path overlays like polylines also have a <code>bindPopup</code> method.
-Here's a more complicated way to open a popup on a map:</p>
+<p>像折线（polylines）这样的路径叠加也有一个 <code>bindPopup</code> 方法。这是在地图上打开弹出窗口的更复杂的方法：</p>
 <pre><code class="language-js">var popup = L.popup()
 	.setLatLng(latlng)
 	.setContent('&lt;p&gt;Hello world!&lt;br /&gt;This is a nice popup.&lt;/p&gt;')
@@ -2905,12 +2854,12 @@ Here's a more complicated way to open a popup on a map:</p>
 <table><thead>
 	<tr>
 		<th>Factory</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-l-popup'>
 		<td><code><b>L.popup</b>(<nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>, <nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>source?</i>)</code></td>
-		<td>Instantiates a <a href="#popup"><code>Popup</code></a> object given an optional <code>options</code> object that describes its appearance and location and an optional <code>source</code> object that is used to tag the popup with a reference to the Layer to which it refers.</td>
+		<td>实例化一个 <a href="#popup"><code>Popup</code></a> 对象，给定一个可选的 <code>options</code> 对象，描述其外观和位置，以及一个可选的 <code>source</code> 对象，用它所指向的图层的引用来标记弹出窗口（popup）。</td>
 	</tr>
 </tbody></table>
 
@@ -2918,7 +2867,7 @@ Here's a more complicated way to open a popup on a map:</p>
 
 
 </section><section>
-<h3 id='popup-option'>Options</h3>
+<h3 id='popup-option'>Options 选项</h3>
 
 <section >
 
@@ -2927,97 +2876,89 @@ Here's a more complicated way to open a popup on a map:</p>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-maxwidth'>
 		<td><code><b>maxWidth</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>300</code></td>
-		<td>Max width of the popup, in pixels.</td>
+		<td>弹出窗口的最大宽度，以像素为单位。</td>
 	</tr>
 	<tr id='popup-minwidth'>
 		<td><code><b>minWidth</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>50</code></td>
-		<td>Min width of the popup, in pixels.</td>
+		<td>弹出窗口的最小宽度，以像素为单位。</td>
 	</tr>
 	<tr id='popup-maxheight'>
 		<td><code><b>maxHeight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>null</code></td>
-		<td>If set, creates a scrollable container of the given height
-inside a popup if its content exceeds it.</td>
+		<td>设置后，如果其内容超过它，则在弹出窗口内创建给定高度的可滚动容器。</td>
 	</tr>
 	<tr id='popup-autopan'>
 		<td><code><b>autoPan</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Set it to <code>false</code> if you don't want the map to do panning animation
-to fit the opened popup.</td>
+		<td>如果你不想让地图做平移动画，把它设置为 <code>false</code>，以适应打开的弹出窗口。</td>
 	</tr>
 	<tr id='popup-autopanpaddingtopleft'>
 		<td><code><b>autoPanPaddingTopLeft</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The margin between the popup and the top left corner of the map
-view after autopanning was performed.</td>
+		<td>自动平移后，弹出窗口与地图左上角之间的边距。</td>
 	</tr>
 	<tr id='popup-autopanpaddingbottomright'>
 		<td><code><b>autoPanPaddingBottomRight</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The margin between the popup and the bottom right corner of the map
-view after autopanning was performed.</td>
+		<td>自动平移后，弹出窗口与地图右下角之间的边距。</td>
 	</tr>
 	<tr id='popup-autopanpadding'>
 		<td><code><b>autoPanPadding</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>Point(5, 5)</code></td>
-		<td>Equivalent of setting both top left and bottom right autopan padding to the same value.</td>
+		<td>相当于将左上角和右下角自动平移填充设置为相同的值。</td>
 	</tr>
 	<tr id='popup-keepinview'>
 		<td><code><b>keepInView</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Set it to <code>true</code> if you want to prevent users from panning the popup
-off of the screen while it is open.</td>
+		<td>如果您想防止用户在弹出窗口（popup）打开时将其移出屏幕，请将其设置为<code>true</code>。</td>
 	</tr>
 	<tr id='popup-closebutton'>
 		<td><code><b>closeButton</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Controls the presence of a close button in the popup.</td>
+		<td>控制弹出窗口中是否有关闭按钮。</td>
 	</tr>
 	<tr id='popup-autoclose'>
 		<td><code><b>autoClose</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Set it to <code>false</code> if you want to override the default behavior of
-the popup closing when another popup is opened.</td>
+		<td>如果您想重写在打开另一个弹出框时关闭弹出框的默认行为,请将其设置为 <code>false</code>。</td>
 	</tr>
 	<tr id='popup-closeonescapekey'>
 		<td><code><b>closeOnEscapeKey</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Set it to <code>false</code> if you want to override the default behavior of
-the ESC key for closing of the popup.</td>
+		<td>如果你想覆盖 ESC 键关闭弹出窗口 (popup) 的默认行为，将其设置为 <code>false</code>。</td>
 	</tr>
 	<tr id='popup-closeonclick'>
 		<td><code><b>closeOnClick</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>*</code></td>
-		<td>Set it if you want to override the default behavior of the popup closing when user clicks
-on the map. Defaults to the map's <a href="#map-closepopuponclick"><code>closePopupOnClick</code></a> option.</td>
+		<td>如果您想覆盖用户点击地图时关闭弹出窗口的默认行为，请设置它。默认为地图 <a href="#map-closepopuponclick"><code>closePopupOnClick</code></a> 选项。</td>
 	</tr>
 	<tr id='popup-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom CSS class name to assign to the popup.</td>
+		<td>为弹出窗口（popup）设置自定义 CSS 类名称。</td>
 	</tr>
 </tbody></table>
 
@@ -3025,7 +2966,7 @@ on the map. Defaults to the map's <a href="#map-closepopuponclick"><code>closePo
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#divoverlay'>DivOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#divoverlay'>DivOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3034,24 +2975,23 @@ on the map. Defaults to the map's <a href="#map-closepopuponclick"><code>closePo
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-offset'>
 		<td><code><b>offset</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>Point(0, 7)</code></td>
-		<td>The offset of the popup position. Useful to control the anchor
-of the popup when opening it on some overlays.</td>
+		<td>弹出位置的偏移量。在某些叠加层上打开弹出窗口时，用于控制弹出窗口的位置。</td>
 	</tr>
 	<tr id='popup-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;popupPane&#x27;</code></td>
-		<td><code>Map pane</code> where the popup will be added.</td>
+		<td><code>地图窗格（pane）</code>，该弹出窗口（popup）将被添加到其中。</td>
 	</tr>
 </tbody></table>
 
@@ -3060,7 +3000,7 @@ of the popup when opening it on some overlays.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3069,17 +3009,17 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和切片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -3088,13 +3028,13 @@ of the popup when opening it on some overlays.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3103,20 +3043,20 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='popup-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -3125,7 +3065,7 @@ of the popup when opening it on some overlays.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3134,20 +3074,20 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的弹出窗口（popup）打开时触发</td>
 	</tr>
 	<tr id='popup-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的弹出窗口（popup）关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -3156,7 +3096,7 @@ of the popup when opening it on some overlays.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3165,20 +3105,20 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的工具提示（tooltip）打开时触发。</td>
 	</tr>
 	<tr id='popup-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的工具提示（tooltip）关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -3187,7 +3127,7 @@ of the popup when opening it on some overlays.</td>
 </div>
 
 </section><section>
-<h3 id='popup-method'>Methods</h3>
+<h3 id='popup-method'>Methods 方法</h3>
 
 <section >
 
@@ -3196,69 +3136,69 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-getlatlng'>
 		<td><code><b>getLatLng</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the geographical point of popup.</p>
+		<td><p>返回弹出窗口（popup）的地理位置。</p>
 </td>
 	</tr>
 	<tr id='popup-setlatlng'>
 		<td><code><b>setLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the geographical point where the popup will open.</p>
+		<td><p>设置弹出窗口将打开的地理位置。</p>
 </td>
 	</tr>
 	<tr id='popup-getcontent'>
 		<td><code><b>getContent</b>()</code></td>
 		<td><code>String|HTMLElement</code></td>
-		<td><p>Returns the content of the popup.</p>
+		<td><p>返回弹出窗口（popup）的内容。</p>
 </td>
 	</tr>
 	<tr id='popup-setcontent'>
 		<td><code><b>setContent</b>(<nobr>&lt;String|HTMLElement|Function&gt;</nobr> <i>htmlContent</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the HTML content of the popup. If a function is passed the source layer will be passed to the function. The function should return a <code>String</code> or <code>HTMLElement</code> to be used in the popup.</p>
+		<td><p>设置弹出窗口（popup）的HTML内容。如果传递了一个函数，源图层将被传递给该函数。该函数应该返回一个 <code>String</code> 或 <code>HTMLElement</code>，以便在弹出窗口（popup）中使用。</p>
 </td>
 	</tr>
 	<tr id='popup-getelement'>
 		<td><code><b>getElement</b>()</code></td>
 		<td><code>String|HTMLElement</code></td>
-		<td><p>Returns the HTML container of the popup.</p>
+		<td><p>返回弹出窗口（popup）的 HTML 容器。</p>
 </td>
 	</tr>
 	<tr id='popup-update'>
 		<td><code><b>update</b>()</code></td>
 		<td><code>null</code></td>
-		<td><p>Updates the popup content, layout and position. Useful for updating the popup after something inside changed, e.g. image loaded.</p>
+		<td>更新弹出窗口的内容、布局和位置。对于在内部发生变化后更新弹出窗口很有用，例如加载图片。</p>
 </td>
 	</tr>
 	<tr id='popup-isopen'>
 		<td><code><b>isOpen</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> when the popup is visible on the map.</p>
+		<td><p>当弹出窗口在地图上是可见的，返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings this popup in front of other popups (in the same map pane).</p>
+		<td><p>把这个弹出窗口（popup）放在其他弹出窗口（popup）的前面（在同一个地图窗格（pane）里）。</p>
 </td>
 	</tr>
 	<tr id='popup-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings this popup to the back of other popups (in the same map pane).</p>
+		<td>把这个弹出窗口（popup）带到其他弹出窗口（popup）的后面（在同一个地图窗格（pane）里）。</p>
 </td>
 	</tr>
 	<tr id='popup-openon'>
 		<td><code><b>openOn</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the popup to the map and closes the previous one. The same as <code>map.openPopup(popup)</code>.</p>
+		<td><p>将弹出窗口添加到地图上，并关闭之前的窗口。与 <code>map.openPopup(popup)</code> 相同。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -3267,7 +3207,7 @@ of the popup when opening it on some overlays.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3276,45 +3216,45 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='popup-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='popup-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='popup-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的<a href="#layergroup"><code>LayerGroup</code></a>中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='popup-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='popup-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution控件</code> 使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -3324,7 +3264,7 @@ of the popup when opening it on some overlays.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3333,59 +3273,57 @@ of the popup when opening it on some overlays.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='popup-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='popup-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='popup-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='popup-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='popup-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -3395,7 +3333,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3404,59 +3342,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='popup-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='popup-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='popup-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='popup-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='popup-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -3466,7 +3402,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3475,107 +3411,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popup-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='popup-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='popup-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组类型/侦听器</p>
 </td>
 	</tr>
 	<tr id='popup-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='popup-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='popup-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='popup-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='popup-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='popup-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='popup-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='popup-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='popup-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='popup-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='popup-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='popup-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -3584,10 +3518,10 @@ properties. The event can optionally be propagated to event parents.</p>
 	</div>
 </div>
 
-</section><h2 id='tooltip'>Tooltip</h2><p>Used to display small texts on top of map layers.</p>
+</section><h2 id='tooltip'>Tooltip 工具提示</h2><p>用于在地图图层顶部显示小文本。</p>
 
 <section>
-<h3 id='tooltip-example'>Usage example</h3>
+<h3 id='tooltip-example'>使用示例</h3>
 
 <section >
 
@@ -3597,14 +3531,10 @@ properties. The event can optionally be propagated to event parents.</p>
 
 <pre><code class="language-js">marker.bindTooltip(&quot;my tooltip text&quot;).openTooltip();
 </code></pre>
-<p>Note about tooltip offset. Leaflet takes two options in consideration
-for computing tooltip offsetting:</p>
+<p>关于工具提示（tootip）偏移，Leaflet 在计算工具提示偏移时考虑了两个选项：</p>
 <ul>
-<li>the <code>offset</code> Tooltip option: it defaults to [0, 0], and it's specific to one tooltip.
-Add a positive x offset to move the tooltip to the right, and a positive y offset to
-move it to the bottom. Negatives will move to the left and top.</li>
-<li>the <code>tooltipAnchor</code> Icon option: this will only be considered for Marker. You
-should adapt this value if you use a custom icon.</li>
+<li>工具提示（tooltip）的 <code>offset</code> 选项：它默认为 [0,0]，并且它只针对于一个工具提示。添加正 x 偏移以将工具提示向右移动，并添加正 y 偏移以将其移动到底部，负数将移动到左侧和顶部。</li>
+<li>Icon 的 <code>tooltipAnchor</code> 选项：只适用于 Marker。你如果你使用一个自定义的图标，应该调整这个值。</li>
 </ul>
 
 
@@ -3623,12 +3553,12 @@ should adapt this value if you use a custom icon.</li>
 <table><thead>
 	<tr>
 		<th>Factory</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-l-tooltip'>
 		<td><code><b>L.tooltip</b>(<nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>, <nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>source?</i>)</code></td>
-		<td>Instantiates a Tooltip object given an optional <code>options</code> object that describes its appearance and location and an optional <code>source</code> object that is used to tag the tooltip with a reference to the Layer to which it refers.</td>
+		<td>实例化一个 Tooltip 对象，给定一个可选的 <code>options</code> 对象，描述其外观和位置，以及一个可选的 <code>source</code> 对象，用它所指向的 Layer 的引用来标记 Tooltip。</td>
 	</tr>
 </tbody></table>
 
@@ -3636,7 +3566,7 @@ should adapt this value if you use a custom icon.</li>
 
 
 </section><section>
-<h3 id='tooltip-option'>Options</h3>
+<h3 id='tooltip-option'>Options 选项</h3>
 
 <section >
 
@@ -3645,56 +3575,53 @@ should adapt this value if you use a custom icon.</li>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;tooltipPane&#x27;</code></td>
-		<td><code>Map pane</code> where the tooltip will be added.</td>
+		<td><code>地图窗格</code>将添加工具提示的位置。</td>
 	</tr>
 	<tr id='tooltip-offset'>
 		<td><code><b>offset</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>Point(0, 0)</code></td>
-		<td>Optional offset of the tooltip position.</td>
+		<td>工具提示位置的可选偏移。</td>
 	</tr>
 	<tr id='tooltip-direction'>
 		<td><code><b>direction</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;auto&#x27;</code></td>
-		<td>Direction where to open the tooltip. Possible values are: <code>right</code>, <code>left</code>,
-<code>top</code>, <code>bottom</code>, <code>center</code>, <code>auto</code>.
-<code>auto</code> will dynamically switch between <code>right</code> and <code>left</code> according to the tooltip
-position on the map.</td>
+		<td>打开工具提示的方向。可能的值有：<code>right</code>、<code>left</code>、 <code>top</code>、<code>bottom</code>、<code>center</code>、<code>auto</code>。 <code>auto</code> 将之间进行动态切换 <code>right</code> 和 <code>left</code> 根据地图上的工具提示位置。</td>
 	</tr>
 	<tr id='tooltip-permanent'>
 		<td><code><b>permanent</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether to open the tooltip permanently or only on mouseover.</td>
+		<td>是永久打开工具提示还是只在鼠标移动时打开。</td>
 	</tr>
 	<tr id='tooltip-sticky'>
 		<td><code><b>sticky</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If true, the tooltip will follow the mouse instead of being fixed at the feature center.</td>
+		<td>如果为 true，工具提示将跟随鼠标移动，而不是固定在特征中心。</td>
 	</tr>
 	<tr id='tooltip-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If true, the tooltip will listen to the feature events.</td>
+		<td>如果为 true，则工具提示将允许触发监听的事件。</td>
 	</tr>
 	<tr id='tooltip-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.9</code></td>
-		<td>Tooltip container opacity.</td>
+		<td>工具提示容器透明度。</td>
 	</tr>
 </tbody></table>
 
@@ -3702,7 +3629,7 @@ position on the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#divoverlay'>DivOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#divoverlay'>DivOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3711,17 +3638,17 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom CSS class name to assign to the popup.</td>
+		<td>为弹出窗口（popup）设置自定义 CSS 类名称。</td>
 	</tr>
 </tbody></table>
 
@@ -3730,7 +3657,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的参数</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3739,17 +3666,17 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和切片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -3758,13 +3685,13 @@ position on the map.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3773,20 +3700,20 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='tooltip-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -3795,7 +3722,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3804,20 +3731,20 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的弹出窗口（popup）打开时触发</td>
 	</tr>
 	<tr id='tooltip-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的弹出窗口（popup）关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -3826,7 +3753,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3835,20 +3762,20 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的工具提示（tooltip）打开时触发。</td>
 	</tr>
 	<tr id='tooltip-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的工具提示（tooltip）关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -3857,13 +3784,13 @@ position on the map.</td>
 </div>
 
 </section><section>
-<h3 id=''>Methods</h3>
+<h3 id=''>Methods 方法</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3872,45 +3799,45 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='tooltip-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='tooltip-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的<a href="#layergroup"><code>LayerGroup</code></a>中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution控件</code> 使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -3920,7 +3847,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3929,59 +3856,57 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tooltip-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='tooltip-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tooltip-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -3991,7 +3916,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4000,59 +3925,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tooltip-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tooltip-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='tooltip-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4062,7 +3985,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4071,107 +3994,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组类型/侦听器</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tooltip-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='tooltip-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='tooltip-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='tooltip-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='tooltip-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
