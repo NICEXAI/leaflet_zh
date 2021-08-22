@@ -6,42 +6,42 @@ author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---
 
-Following the [Leaflet 0.4 release](leaflet-0-4-released.html), there were several minor bugfix releases over the past week, with Leaflet 0.4.3 released today. They contain fixes for some bugs that were discovered and also bring some improvements to the new GeoJSON API to make it even more flexible --- see the changelog below.
+继 [Leaflet 0.4 发布](leaflet-0-4-released.html) 之后，在过去的一周里有几个小的 bug 修复版本，Leaflet 0.4.3 今天发布。它们包含了对一些被发现的 bug 的修复，同时也为新的 GeoJSON API 带来了一些改进，使其更加灵活——————见下面的更新日志。
 
-I've also written [a new tutorial](../../../examples/choropleth.html), inspired by the [Texas Tribune US Senate Runoff Results map](http://www.texastribune.org/library/data/us-senate-runoff-results-map/) by [Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/) (also powered by Leaflet). It will show you step-by-step how to create a beautiful interactive [choropleth map](http://en.wikipedia.org/wiki/Choropleth_map) of US States Population Density with the help of GeoJSON and custom controls, and hopefully convince more major news and government websites to switch to Leaflet. :)
+我还写了 [一个新的教程](./././examples/choropleth.html) ，灵感来自 [Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/) 的[Texas Tribune US Senate Runoff Results map](http://www.texastribune.org/library/data/us-senate-runoff-results-map/)（也是由Leaflet驱动的）。它将逐步向你展示如何在 GeoJSON 和自定义控件的帮助下创建一个漂亮的美国各州人口密度互动 [choropleth 地图](http://en.wikipedia.org/wiki/Choropleth_map) ，并希望能说服更多的主要新闻和政府网站转向使用 Leaflet 。:)
 
-Grab the new Leaflet 0.4.3 at the [download page](../../../download.html). Enjoy!
+在 [下载页面](../../../download.html) 获取新的 Leaflet 0.4.3 。享受吧!
 
-**update**: IE9 regression was discovered in 0.4.3, so I had to release 0.4.4 with a fix. Sorry!
+**更新**。在 0.4.3 中发现了 IE9 的退步，所以我不得不发布 0.4.4 ，并进行了修复。对不起!
 
-### 0.4.3 (August 7, 2012)
+### 0.4.3 (2012年8月7日)
 
-#### Improvements
+#### 改进措施
 
- * Improved `GeoJSON` `setStyle` to also accept function (like the corresponding option).
- * Added `GeoJSON` `resetStyle(layer)`, useful for resetting hover state.
- * Added `feature` property to layers created with `GeoJSON` (containing the GeoJSON feature data).
- * Added `FeatureGroup` `bringToFront` and `bringToBack` methods (so that they would work for multipolys).
- * Added optional `animate` argument to `Map` `invalidateSize` (by [@ajbeaven](https://github.com/ajbeaven)). [#857](https://github.com/Leaflet/Leaflet/pull/857)
+ * 改进了 `GeoJSON` `setStyle` ，使其也能接受函数（如相应的选项）。
+ * 增加了 `GeoJSON` `resetStyle(layer)` ，对重设悬停状态很有用。
+ * 为用 `GeoJSON` 创建的图层（包含 GeoJSON 特征数据）增加了 `feature` 属性。
+ * 增加了 `FeatureGroup` `bringToFront` 和 `bringToBack` 方法（以便它们能适用于多聚体）。
+ * 为 `Map` `invalidateSize` 增加了可选的 `animate` 参数(由 [@ajbeaven](https://github.com/ajbeaven) )。 [#857](https://github.com/Leaflet/Leaflet/pull/857)
 
-#### Bugfixes
+#### 错误修复
 
- * Fixed a bug where tiles sometimes disappeared on initial map load on Android 2/3 (by [@danzel](https://github.com/danzel)). [#868](https://github.com/Leaflet/Leaflet/pull/868)
- * Fixed a bug where map would occasionally flicker near the border on zoom or pan on Chrome.
- * Fixed a bug where `Path` `bringToFront` and `bringToBack` didn't return `this`.
- * Removed zoom out on Win/Meta key binding (since it interferes with global keyboard shortcuts). [#869](https://github.com/Leaflet/Leaflet/issues/869)
+ * 修正了在安卓 2、3 系统上初始加载地图时瓷砖有时会消失的问题（由 [@danzel](https://github.com/danzel) 提供）。 [#868](https://github.com/Leaflet/Leaflet/pull/868)
+ * 修正了一个错误，即在 Chrome 浏览器上放大或平移时，地图在边界附近偶尔会闪烁。
+ * 修正了一个错误，即 `Path` `bringToFront` 和 `bringToBack` 没有返回 `this` 。
+ * 删除了 Win、Meta 键绑定的放大功能（因为它干扰了全局键盘快捷键）。 [#869](https://github.com/Leaflet/Leaflet/issues/869)
 
-### 0.4.2 (August 1, 2012)
+### 0.4.2 (2012年8月1日)
 
- * Fixed a bug where layers control radio buttons would not work correctly in IE7 (by [@danzel](https://github.com/danzel)). [#862](https://github.com/Leaflet/Leaflet/pull/862)
- * Fixed a bug where `FeatureGroup` `removeLayer` would unbind popups of removed layers even if the popups were not put by the group (affected [Leaflet.markercluster](https://github.com/danzel/Leaflet.markercluster) plugin) (by [@danzel](https://github.com/danzel)). [#861](https://github.com/Leaflet/Leaflet/pull/861)
+ * 修正了层控制单选按钮在IE7中不能正常工作的问题（由 [@danzel](https://github.com/danzel) ）。 [#862](https://github.com/Leaflet/Leaflet/pull/862)
+ * 修正了一个错误，即 `FeatureGroup` `removeLayer` 会解除对已删除图层的弹出窗口的绑定，即使这些弹出窗口不是由该组放置的(影响到 [Leaflet.markercluster](https://github.com/danzel/Leaflet.markercluster) 插件)(由 [@danzel](https://github.com/danzel) )。 [#861](https://github.com/Leaflet/Leaflet/pull/861)
 
-### 0.4.1 (July 31, 2012)
+### 0.4.1 (2012年7月31日)
 
- * Fixed a bug that caused marker shadows appear as opaque black in IE6-8. [#850](https://github.com/Leaflet/Leaflet/issues/850)
- * Fixed a bug with incorrect calculation of scale by the scale control. [#852](https://github.com/Leaflet/Leaflet/issues/852)
- * Fixed broken L.tileLayer.wms class factory (by [@mattcurrie](https://github.com/mattcurrie)). [#856](https://github.com/Leaflet/Leaflet/issues/856)
- * Improved retina detection for `TileLayer` `detectRetina` option (by [@sxua](https://github.com/sxua)). [#854](https://github.com/Leaflet/Leaflet/issues/854)
+ * 修正了一个在 IE6-8 中导致标记阴影显示为不透明黑色的错误。 [#850](https://github.com/Leaflet/Leaflet/issues/850)
+ * 修正了一个错误，即比例控制对比例的计算不正确。 [#852](https://github.com/Leaflet/Leaflet/issues/852)
+ * 修正了破损的 L.tileLayer.wms 类工厂（由 [@mattcurrie](https://github.com/mattcurrie) ）。 [#856](https://github.com/Leaflet/Leaflet/issues/856)
+ * 改进了 `TileLayer` `detectRetina` 选项的视网膜检测（由 [@sxua](https://github.com/sxua) ）。 [#854](https://github.com/Leaflet/Leaflet/issues/854)
 
 Sincerely, <br />
 Vladimir Agafonkin, Leaflet maintainer.
