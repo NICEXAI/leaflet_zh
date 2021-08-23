@@ -4126,8 +4126,8 @@ handlers start running).</td>
 <p>表现为以下方式:</p>
 <pre><code>'http://{s}.somedomain.com/blabla/{z}/{x}/{y}{r}.png'
 </code></pre>
-<p><code>{s}</code> 表示可用的子域之一（按顺序用于帮助处理每个域限制的浏览器并行请求；子域值在选项中指定；默认情况下可以省略 <code>a</code>, <code>b</code> or <code>c</code>, <code>{z}</code> — zoom level, <code>{x}</code> and <code>{y}</code> — tile coordinates. <code>{r}</code> can be used to add &quot;@2x&quot; to the URL to load retina tiles.</p>
-<p>You can use custom keys in the template, which will be <a href="#util-template">evaluated</a> from TileLayer options, like this:</p>
+<p><code>{s}</code> 表示可用的子域之一（按顺序用于帮助处理每个域限制的浏览器并行请求；子域值在选项中指定；默认情况下可以省略 <code>a</code>, <code>b</code> 或者 <code>c</code>）, <code>{z}</code> — zoom等级, <code>{x}</code> 和 <code>{y}</code> — tile坐标. <code>{r}</code> 可以被用于增加 &quot;@2x&quot; 到URL，且加载retina tiles.</p>
+<p>你可以使用通过TileLayer options<a href="#util-template">匹配</a>的模板在custom keys在模板里, 例子:</p>
 <pre><code>L.tileLayer('http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png', {foo: 'bar'});
 </code></pre>
 
