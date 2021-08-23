@@ -4101,10 +4101,10 @@ handlers start running).</td>
 	</div>
 </div>
 
-</section><h2 id='tilelayer'>TileLayer</h2><p>Used to load and display tile layers on the map. Note that most tile servers require attribution, which you can set under <a href="#layer"><code>Layer</code></a>. Extends <a href="#gridlayer"><code>GridLayer</code></a>.</p>
+</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示切片图层。 请注意，大多数tile服务器都需要属性，您可以在其下设置 <a href="#layer"><code>Layer</code></a>. 扩展 <a href="#gridlayer"><code>GridLayer</code></a>.</p>
 
 <section>
-<h3 id='tilelayer-example'>Usage example</h3>
+<h3 id='tilelayer-example'>使用案例</h3>
 
 <section >
 
@@ -4119,14 +4119,14 @@ handlers start running).</td>
 
 </section><section >
 
-<h4 id='tilelayer-url-template'>URL template</h4>
+<h4 id='tilelayer-url-template'>URL 模板</h4>
 
 
 
-<p>A string of the following form:</p>
+<p>表现为以下方式:</p>
 <pre><code>'http://{s}.somedomain.com/blabla/{z}/{x}/{y}{r}.png'
 </code></pre>
-<p><code>{s}</code> means one of the available subdomains (used sequentially to help with browser parallel requests per domain limitation; subdomain values are specified in options; <code>a</code>, <code>b</code> or <code>c</code> by default, can be omitted), <code>{z}</code> — zoom level, <code>{x}</code> and <code>{y}</code> — tile coordinates. <code>{r}</code> can be used to add &quot;@2x&quot; to the URL to load retina tiles.</p>
+<p><code>{s}</code> 表示可用的子域之一（按顺序用于帮助处理每个域限制的浏览器并行请求；子域值在选项中指定；默认情况下可以省略 <code>a</code>, <code>b</code> or <code>c</code>, <code>{z}</code> — zoom level, <code>{x}</code> and <code>{y}</code> — tile coordinates. <code>{r}</code> can be used to add &quot;@2x&quot; to the URL to load retina tiles.</p>
 <p>You can use custom keys in the template, which will be <a href="#util-template">evaluated</a> from TileLayer options, like this:</p>
 <pre><code>L.tileLayer('http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png', {foo: 'bar'});
 </code></pre>
