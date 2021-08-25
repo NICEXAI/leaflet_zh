@@ -32,7 +32,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 	<div class="toc-col">
 		<h4>覆盖显示</h4>
 		<ul>
-			<li><a href="#markers--renderers">Markers 标记 &amp; 渲染</a></li>
+			<li><a href="#markers--renderers">标记 &amp; 渲染</a></li>
 			<li><a href="#overlay-animations">覆盖动画</a></li>
 			<li><a href="#clusteringdecluttering">Clustering/decluttering</a></li>
 			<li><a href="#heatmaps">热力图</a></li>
@@ -1237,27 +1237,27 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-## Overlay display
+## 覆盖显示
 
-The following plugins provide new ways of displaying overlay data information.
+以下插件提供了显示覆盖数据信息的新方法。
 
-* [Markers & renderers](#markers--renderers)
-* [Overlay animations](#overlay-animations)
+* [标记 & 渲染](#markers--renderers)
+* [叠加动画](#overlay-animations)
 * [Clustering/decluttering](#clusteringdecluttering)
-* [Heatmaps](#heatmaps)
-* [DataViz](#dataviz)
+* [热力图](#heatmaps)
+* [数据可视化](#dataviz)
 
 
-### Markers & renderers
+### 标记 & 渲染
 
-These plugins provide new markers or news ways of converting abstract data into images in your screen. Leaflet users versed in GIS also know these as symbolizers.
+这些插件提供了将抽象数据转换为屏幕中图像的新的标记（marker）或路径（way），精通 GIS 的 Leaflet 用户也将这些称为符号。
 
-<table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/zhuang-hao-ming/Leaflet.RoughCanvas">Leaflet.RoughCanvas</a>
 		</td><td>
-			Leaflet.RoughCanvas renders hand-drawn, sketch style vector map (polyline, polygon, geojson).
+            Leaflet.RoughCanvas 渲染手绘、草图风格的矢量图（折线、多边形、geojson）。
 		</td><td>
 			<a href="https://github.com/zhuang-hao-ming/">haoming</a>
 		</td>
@@ -1266,8 +1266,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/jdfergason/Leaflet.Ellipse">Leaflet.ellipse</a>
 		</td><td>
-			Leaflet.ellipse place ellipses on map by specifying center point, semi-major axis,
-			semi-minor axis, and tilt degrees from west.
+            Leaflet.ellipse 通过指定中心点、长半轴、短半轴和向西倾斜度在地图上放置椭圆。
 		</td><td>
 			<a href="https://github.com/jdfergason">JD Fergason</a>
 		</td>
@@ -1276,7 +1275,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/Leaflet/Leaflet.label">Leaflet.label</a>
 		</td><td>
-			Adds text labels to map markers and vector layers.
+			将文本标签添加到地图标记和矢量图层。
 		</td><td>
 			<a href="https://github.com/jacobtoye">Jacob Toye</a>
 		</td>
@@ -1285,7 +1284,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/jieter/Leaflet-semicircle">Leaflet-semicircle</a>
 		</td><td>
-			Adds functionality to <code>L.Circle</code> to draw semicircles.
+			添加了用来绘制半圆的 <code>L.Circle</code> 功能。
 		</td><td>
 			<a href="https://github.com/jieter">Jieter</a>
 		</td>
@@ -1294,7 +1293,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/bbecquet/Leaflet.PolylineDecorator">Leaflet.PolylineDecorator</a>
 		</td><td>
-			Allows you to draw patterns (like dashes, arrows or evenly spaced Markers) along Polylines or coordinate paths.
+			允许您沿折线或坐标路径绘制图案（如破折号、箭头或等距标记）。
 		</td><td>
 			<a href="https://github.com/bbecquet">Benjamin Becquet</a>
 		</td>
@@ -1303,7 +1302,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/slutske22/leaflet-arrowheads">Leaflet-arrowheads</a>
 		</td><td>
-			Allows user to quickly draw arrowheads on polylines for vector visualization.
+			允许用户在折线上快速绘制箭头，实现矢量可视化。
 		</td><td>
 			<a href="https://github.com/slutske22">Slutske22</a>
 		</td>
@@ -1312,7 +1311,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/leaflet-extras/leaflet.sprite">Leaflet.Sprite</a>
 		</td><td>
-			Use sprite based icons in your markers.
+			在标记中使用基于精灵（sprite）的图标。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf">Calvin Metcalf</a>
 		</td>
@@ -1321,7 +1320,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.TextPath">Leaflet.TextPath</a>
 		</td><td>
-			Allows you to draw text along Polylines.
+			允许您沿折线绘制文本。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -1330,7 +1329,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/iatkin/leaflet-svgicon">Leaflet-SVGIcon</a>
 		</td><td>
-			A simple and customizable SVG icon with no external dependencies. Also included is a convenience Marker class and two example subclasses. <a href="http://iatkin.github.io/leaflet-svgicon/">Customizable demo with example subclasses</a>
+			一个简单和可定制的SVG图标，没有外部依赖性，还包括一个方便的Marker类和两个示例子类。<a href="http://iatkin.github.io/leaflet-svgicon/">可定制的演示示例</a>。
 		</td><td>
 			<a href="https://github.com/iatkin">Ilya Atkin</a>
 		</td>
@@ -1339,7 +1338,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/marslan390/BeautifyMarker">Leaflet.BeautifyMarkers</a>
 		</td><td>
-			Lightweight plugin that adds colorful iconic markers without image and gives full control of style to end user (i.e. Unlimited colors and CSS styling).
+			轻量级插件，添加无图像的彩色标志性标记，并为最终用户提供对样式的完全控制（即无限颜色和 CSS 样式）。
 		</td><td>
 			<a href="https://github.com/marslan390">Muhammad Arslan Sajid</a>
 		</td>
@@ -1348,7 +1347,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/lvoogdt/Leaflet.awesome-markers">Leaflet.Awesome-Markers</a>
 		</td><td>
-			Colorful, iconic &amp; retina-proof markers based on the Font Awesome icons/Twitter Bootstrap icons
+            基于 Font Awesome 图标或 Twitter Bootstrap 图标的彩色的、具有标志性和防视网膜的标记
 		</td><td>
 			<a href="http://www.lennardvoogdt.nl">Lennard Voogdt</a>
 		</td>
@@ -1357,7 +1356,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/coryasilva/Leaflet.ExtraMarkers">Leaflet.Extra-Markers</a>
 		</td><td>
-			Shameless copy of Awesome-Markers with more shapes, colors and semantic-ui support
+			无耻地抄袭 Awesome-Markers，提供更多形状、颜色和语义界面支持
 		</td><td>
 			<a href="http://www.corysilva.com">Cory Silva</a>
 		</td>
@@ -1365,7 +1364,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 	<tr>
 		<td>
 			<a href="https://github.com/jseppi/Leaflet.MakiMarkers">Leaflet.MakiMarkers</a>
-		</td><td>Create markers using <a href="https://www.mapbox.com/maki/">Maki Icons</a> from MapBox.
+		</td><td>使用 MapBox 的 <a href="https://www.mapbox.com/maki/">Maki Icons</a> 创建标记。
 		</td><td>
 			<a href="https://github.com/jseppi">James Seppi</a>
 		</td>
@@ -1374,8 +1373,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/IvanSanchez/Leaflet.Icon.Glyph">Leaflet.Icon.Glyph</a>
 		</td><td>
-			Use icon font glyphs in your markers (from Font Awesome, Material Design Icons, Glyphicons,
-			Metro UI icons, Elusive, and other icon fonts). (<a href='https://ivansanchez.github.io/Leaflet.Icon.Glyph/demo.html'>demo</a>)
+			在你的标记中使用图标字体字形（来自Font Awesome, Material Design Icons, Glyphicons, Metro UI 图标、Elusive和其他图标字体) (<a href='https://ivansanchez.github.io/Leaflet.Icon.Glyph/demo.html'>demo</a>)
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>
 		</td>
@@ -1384,7 +1382,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.LineExtremities">Leaflet.LineExtremities</a>
 		</td><td>
-			Show symbols at the extremities of polylines, using SVG markers.
+				使用 SVG 标记（marker）在折线的末端显示符号。
 		</td><td>
 			<a href="https://github.com/fredericbonifas">Frédéric Bonifas</a>
 		</td>
@@ -1393,7 +1391,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/hiasinho/Leaflet.vector-markers">Leaflet.VectorMarkers</a>
 		</td><td>
-			Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstrap icons.
+			Leaflet 的矢量 SVG 标记，可以选择 Font Awesome/Twitter Bootstrap 图标。
 		</td><td>
 			<a href="https://github.com/hiasinho">Mathias Schneider</a>
 		</td>
@@ -1402,7 +1400,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/rowanwins/Leaflet.SvgShapeMarkers">Leaflet.SvgShapeMarkers</a>
 		</td><td>
-			Adds support for additional SVG marker types such as triangles, diamonds and squares.
+添加对其他   添加对其他 SVG 标记类型的支持，例如三角形、菱形和正方形。
 		</td><td>
 			<a href="https://github.com/rowanwins/">Rowan Winsemius</a>
 		</td>
@@ -1411,7 +1409,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/teastman/Leaflet.pattern">Leaflet.pattern</a>
 		</td><td>
-			Add support for pattern fills on Paths.
+			在路径上添加对图案填充的支持。
 		</td><td>
 			<a href="https://github.com/teastman">Tyler Eastman</a>
 		</td>
@@ -1420,7 +1418,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/thomasbrueggemann/leaflet.boatmarker">Leaflet.BoatMarker</a>
 		</td><td>
-			A boat marker using HTML Canvas for displaying yachts and sailboats with heading and optional wind information. <a href="http://thomasbrueggemann.github.io/leaflet.boatmarker/">Demo</a>.
+			一个使用HTML Canvas的船只标记，用于显示游艇和帆船的航向和可选的风力信息。<a href="http://thomasbrueggemann.github.io/leaflet.boatmarker/">演示</a>。
 		</td><td>
 			<a href="https://github.com/thomasbrueggemann">Thomas Brüggemann</a>
 		</td>
@@ -1429,9 +1427,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/heyman/leaflet-usermarker">leaflet-usermarker</a>
 		</td><td>
-			Plugin for plotting a marker representing a user - or multiple users - on a map,
-			with support for drawing an accuraccy circle. Can be seen in action on
-			<a href="http://longitude.me">Longitude.me</a>.
+			用于在地图上绘制代表一个用户或多个用户的标记的插件，支持绘制精度圆。可以在 <a href="http://longitude.me">Longitude.me</a> 上查看具体内容。
 		</td><td>
 			<a href="http://heyman.info">Jonatan Heyman</a>
 		</td>
@@ -1440,7 +1436,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/albburtsev/Leaflet.geojsonCSS">Leaflet.geojsonCSS</a>
 		</td><td>
-			<a href="http://wiki.openstreetmap.org/wiki/Geojson_CSS">Geojson CSS</a> implementation for Leaflet.
+			Leaflet 的 <a href="http://wiki.openstreetmap.org/wiki/Geojson_CSS">Geojson CSS</a> 实现。
 		</td><td>
 			<a href="https://github.com/albburtsev/">Alexander Burtsev</a>
 		</td>
@@ -1449,7 +1445,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/rowanwins/leaflet-simplestyle">leaflet-simplestyle</a>
 		</td><td>
-			Extends L.geoJSON to support the <a href="https://github.com/mapbox/simplestyle-spec">simple style</a> spec.
+			扩展了 L.geoJSON，以支持 <a href="https://github.com/mapbox/simplestyle-spec">simple style</a> 规范。
 		</td><td>
 			<a href="https://github.com/rowanwins/">Rowan Winsemius</a>
 		</td>
@@ -1458,7 +1454,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="http://osmbuildings.org/">OSM Buildings</a>
 		</td><td>
-			Amazing JS library for visualizing 3D OSM building geometry on top of Leaflet.
+			惊人的JS库，用于在Leaflet之上实现3D OSM建筑几何的可视化。
 		</td><td>
 			<a href="https://github.com/kekscom/">Jan Marsch</a>
 		</td>
@@ -1467,7 +1463,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/ubergesundheit/Leaflet.EdgeMarker">Leaflet.EdgeMarker</a>
 		</td><td>
-			Plugin to indicate the existence of Features outside of the current view.
+			用于指示当前视图之外的功能存在的插件。
 		</td><td>
 			<a href="https://github.com/ubergesundheit">Gerald Pape</a>
 		</td>
@@ -1476,7 +1472,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/gismartwaredev/leaflet.orientedMarker">Leaflet.orientedMarker</a>
 		</td><td>
-			Allows to manage orientation of markers dynamically.
+			允许动态管理标记（marker）的方向。
 		</td><td>
 			<a href="https://github.com/gismartwaredev">Gismartwaredev</a>
 		</td>
@@ -1485,7 +1481,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/mapshakers/leaflet-icon-pulse">leaflet-icon-pulse</a>
 		</td><td>
-			Renders pulsing icon using CSS3. It can be used for location marker.
+			使用 CSS3 呈现脉冲图标，它可用于位置标记。
 		</td><td>
 			<a href="https://github.com/mapshakers">mapshakers</a>/
 			<a href="https://github.com/filipzava">Filip Zavadil</a>
@@ -1495,7 +1491,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/mapshakers/leaflet-mapkey-icon">leaflet-mapkey-icon</a>
 		</td><td>
-			Set of cartographic font icons based on <a href="http://www.mapkeyicons.com">mapkeyicons</a>.
+			一套基于<a href="http://www.mapkeyicons.com">mapkeyicons</a>的制图字体图标。
 		</td><td>
 			<a href="https://github.com/mapshakers">mapshakers</a>/
 			<a href="https://github.com/filipzava">Filip Zavadil</a>
@@ -1505,7 +1501,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/turban/Leaflet.Photo">Leaflet.Photo</a>
 		</td><td>
-			Plugin to show geotagged photos on a Leaflet map. <a href="http://turban.github.io/Leaflet.Photo/examples/picasa.html">Demo</a>.
+			在Leaflet地图上显示地理标记的照片的插件。<a href="http://turban.github.io/Leaflet.Photo/examples/picasa.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/turban">Bjørn Sandvik</a>
 		</td>
@@ -1514,7 +1510,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/elfalem/Leaflet.curve">Leaflet.curve</a>
 		</td><td>
-			A Leaflet plugin for drawing Bézier curves and other complex shapes. <a href="http://elfalem.github.io/Leaflet.curve/">Demo</a>.
+				用于绘制贝塞尔曲线和其他复杂形状的 Leaflet 插件。<a href="http://elfalem.github.io/Leaflet.curve/">Demo</a>
 		</td><td>
 			<a href="https://github.com/elfalem">elfalem</a>
 		</td>
@@ -1523,7 +1519,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/lifeeka/leaflet.bezier">Leaflet.bezier</a>
 		</td><td>
-			Draws a Bézier line between two points with an animated flight object.
+			在两个带有动画的飞行对象之间绘制一条贝塞尔线。
 		</td><td>
 			<a href="https://github.com/spmsupun">Supun Praneeth</a>
 		</td>
@@ -1532,7 +1528,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/MAD-GooZe/Leaflet.Arc">Leaflet.Arc</a>
 		</td><td>
-			This plugin adds L.Polyline.Arc function which wraps arc.js functionality for creation of Great Cirlce arcs.
+				这个插件添加了 L.Polyline.Arc 函数，它包装了 arc.js 功能，用于创建大圆弧。
 		</td><td>
 			<a href="https://github.com/MAD-GooZe">Alexey Gusev</a>
 		</td>
@@ -1541,7 +1537,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/timwis/leaflet-choropleth">leaflet-choropleth</a>
 		</td><td>
-			Extends L.geoJson to add a choropleth visualization (color scale based on value). <a href="http://timwis.com/leaflet-choropleth/examples/basic">Demo</a>.
+			扩展 L.geoJson， 添加 choropleth 来进行可视化（基于值的颜色比例）。 <a href="http://timwis.com/leaflet-choropleth/examples/basic">Demo</a>.
 		</td><td>
 			<a href="http://timwis.com">Tim Wisniewski</a>
 		</td>
@@ -1550,7 +1546,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/eJuke/Leaflet.Canvas-Markers">Leaflet.Canvas-Markers</a>
 		</td><td>
-			Displays markers on canvas instead of DOM.
+			在画布上而不是 DOM 上显示标记（marker）。
 		</td><td>
 			<a href="https://github.com/eJuke">Evgeniy Voynov</a>
 		</td>
@@ -1559,7 +1555,7 @@ These plugins provide new markers or news ways of converting abstract data into 
                 <td>
                         <a href="https://github.com/lethexa/leaflet-tracksymbol">leaflet-tracksymbol</a>
                 </td><td>
-                        This marker provides a tracksymbol with orientation, velocity-vector and configurable shape.
+                        这个标记提供了一个带有方向、速度矢量和可配置形状的轨迹符号。
                 </td><td>
                         <a href="https://github.com/lethexa">Tim Leerhoff</a>
                 </td>
@@ -1568,7 +1564,7 @@ These plugins provide new markers or news ways of converting abstract data into 
                 <td>
                         <a href="https://github.com/PowerPan/leaflet-ais-tracksymbol">leaflet-ais-tracksymbol</a>
                 </td><td>
-                        AIS Extension for leaflet-tracksymbol It displays AIS Contacts on the Map.
+                        Leaflet-tracksymbol 的 AIS 扩展 它在地图上显示 AIS 联系人。
                 </td><td>
                         <a href="https://github.com/powerpan">Johannes Rudolph</a>
                 </td>
@@ -1577,7 +1573,7 @@ These plugins provide new markers or news ways of converting abstract data into 
                 <td>
                         <a href="https://github.com/PowerPan/leaflet-ais-tracksymbol-search">leaflet-ais-tracksymbol-search</a>
                 </td><td>
-                        Adds a Search Box for your Leaflet Map and Your [leaflet-ais-trackymbol](https://github.com/PowerPan/leaflet-ais-tracksymbol)
+                       为你的 Leaflet 地图和你的 <a href="https://github.com/PowerPan/leaflet-ais-tracksymbol">leaflet-ais-trackymbol</a> 添加一个搜索框
                 </td><td>
                         <a href="https://github.com/powerpan">Johannes Rudolph</a>
                 </td>
@@ -1587,7 +1583,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/wwwouaiebe/leaflet.TravelNotes">leaflet.TravelNotes</a>
 		</td>
 		<td>
-			Editable markers and routing engine for leaflet. The routing engine have plugins for Mapbox, GraphHopper and OSRM and can be used for car, bike or pedestrian route. <a href="https://wwwouaiebe.github.io/leaflet.TravelNotes/?lng=en">Demo</a>.
+				传单的可编辑标记和路由引擎。路由引擎有 Mapbox、GraphHopper 和 OSRM 插件，可用于汽车、自行车或步行路线。<a href="https://wwwouaiebe.github.io/leaflet.TravelNotes/?lng=en">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/wwwouaiebe">Christian Guyette</a>
@@ -1598,7 +1594,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/IvanSanchez/Leaflet.Marker.Stack">Leaflet.Marker.Stack</a>
 		</td>
 		<td>
-			A pure Leaflet implementation of CartoDB's "<a href="http://blog.cartodb.com/stacking-chips-a-map-hack/">stacked chips</a>" symbolizer. <a href="http://ivansanchez.github.io/Leaflet.Marker.Stack/demos/color_ramps.html">Demo</a>.
+			CartoDB 的“<a href="http://blog.cartodb.com/stacking-chips-a-map-hack/">stacked chips</a>”符号的纯 Leaflet 实现。 <a href="http://ivansanchez.github.io/Leaflet.Marker.Stack/demos/color_ramps.html">Demo</a>.
 		</td>
 		<td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
@@ -1609,7 +1605,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/cloudybay/leaflet-polygon-fillPattern">leaflet-polygon.fillPattern</a>
 		</td>
 		<td>
-			Extend the Polygon Object to fill SVG Path element with an image pattern.<a href="http://lwsu.github.io/leaflet-polygon-fillPattern/example/">Demo</a>.
+            扩展多边形对象以使用图像图案填充 SVG 路径元素。<a href="http://lwsu.github.io/leaflet-polygon-fillPattern/example/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/cloudybay/">CloudyBay</a>
@@ -1620,7 +1616,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/bbecquet/Leaflet.PolylineOffset">Leaflet Polyline Offset</a>
 		</td>
 		<td>
-			Adds to <code>L.Polyline</code> the ability to be shifted with a relative pixel offset, without modifying its actual <code>LatLng</code>s. The offset value can be either negative or positive, for left- or right-side offset, and remains constant across zoom levels (<a href="http://bbecquet.github.io/Leaflet.PolylineOffset/examples/example.html">basic demo</a>).
+			为<code>L.Polyline</code>增加了以相对像素偏移的能力，而不修改其实际的<code>LatLng</code>s。该偏移值可以是负的或正的，用于左侧或右侧的偏移，并且在不同的缩放级别中保持不变（<a href="http://bbecquet.github.io/Leaflet.PolylineOffset/examples/example.html">基本演示</a>）。
 		</td>
 		<td>
 			<a href="https://github.com/bbecquet">Benjamin Becquet</a>
@@ -1631,7 +1627,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/w8r/leaflet-labeled-circle">leaflet-labeled-circle</a>
 		</td>
 		<td>
-			Special type of SVG marker with a label inside and draggable around the anchor point (<a href="https://w8r.github.io/leaflet-labeled-circle/demo/">demo</a>).
+			特殊类型的 SVG 标记，内部带有标签并可围绕锚点拖动 (<a href="https://w8r.github.io/leaflet-labeled-circle/demo/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/w8r/">Alexander Milevski</a>
@@ -1642,7 +1638,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/dagjomar/Leaflet.ParallaxMarker">Leaflet.ParallaxMarker</a>
 		</td>
 		<td>
-			Add markers that moves with a parallax-effect relative to the map when panning (<a href="https://dagjomar.github.io/Leaflet.ParallaxMarker/">demos / examples</a>).
+            添加在平移时相对于地图具有视差效果的标记(<a href="https://dagjomar.github.io/Leaflet.ParallaxMarker/">demos / examples</a>).
 		</td>
 		<td>
 			<a href="https://github.com/dagjomar/">Dag Jomar Mersland</a>
@@ -1653,7 +1649,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/adoroszlai/leaflet-distance-markers">leaflet-distance-markers</a>
 		</td>
 		<td>
-			Allows displaying markers along a route (L.Polyline) at equivalent distances (eg. one per mile) (<a href="http://adoroszlai.github.io/leaflet-distance-markers/">demo</a>).
+			允许沿路线（L.Polyline）以等效距离（例如每英里一个）显示标记 (<a href="http://adoroszlai.github.io/leaflet-distance-markers/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/adoroszlai">Doroszlai, Attila</a>
@@ -1664,7 +1660,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/mikhailshilkov/leaflet-corridor">leaflet-corridor</a>
 		</td>
 		<td>
-			Renders a polyline with width fixed in meters, not in pixels; adjusts width depending on zoom level (<a href="http://mikhail.io/demos/leaflet-corridor/">demo</a>).
+            以米为单位呈现宽度固定的折线，而不是以像素为单位；根据缩放级别调整宽度 (<a href="http://mikhail.io/demos/leaflet-corridor/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/mikhailshilkov">Mikhail Shilkov</a>
@@ -1675,7 +1671,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/yakitoritabetai/Leaflet.LabelTextCollision">Leaflet.LabelTextCollision</a>
 		</td>
 		<td>
-			Displays labels on paths (polylines, polygons, circles) avoiding label collision. (<a href="https://yakitoritabetai.github.io/Leaflet.LabelTextCollision/">demo</a>).
+			在路径（折线、多边形、圆）上显示标签以避免标签冲突 (<a href="https://yakitoritabetai.github.io/Leaflet.LabelTextCollision/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/yakitoritabetai">Kenta Hakoishi</a>
@@ -1686,7 +1682,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/triedeti/Leaflet.streetlabels">Leaflet.streetlabels</a>
 		</td>
 		<td>
-			A Leaflet plugin to show labels following the paths of polylines. An extension of yakitoritabetai Leaflet.LabelTextCollision (<a href="https://triedeti.github.io/Leaflet.streetlabels/">demo</a>).
+			一个 Leaflet 插件，用于显示跟随折线路径的标签，是yakitoritabetai Leaflet.LabelTextCollision的扩展 (<a href="https://triedeti.github.io/Leaflet.streetlabels/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/triedeti">Triede TI</a>
@@ -1697,8 +1693,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/ggolikov/Leaflet.Viewpoint">Leaflet.Viewpoint</a>
 		</td>
 		<td>
-			Displays circleMarker with multiple directions.
-			Useful to show photos taken from one point. (<a href="https://ggolikov.github.io/Leaflet.Viewpoint/example/">demo</a>).
+            显示具有多个方向的 circleMarker。用于显示从一个点拍摄的照片 (<a href="https://ggolikov.github.io/Leaflet.Viewpoint/example/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ggolikov">Grigory Golikov</a>
@@ -1709,7 +1704,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/react-map/leaflet.magicMarker">Leaflet.magicMarker</a>
 		</td>
 		<td>
-			Adding magical animation effect to a marker while loading.(<a href="https://react-map.github.io/leaflet.magicMarker/">Demo</a>).
+            在加载时为标记添加神奇的动画效果 (<a href="https://react-map.github.io/leaflet.magicMarker/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/react-map">Sylvenas</a>
@@ -1720,7 +1715,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/brandonxiang/leaflet.marker.highlight">Leaflet.Marker.Highlight</a>
 		</td>
 		<td>
-			Adding highlight performance for L.marker.(<a href="https://brandonxiang.github.io/leaflet.marker.highlight/examples/">Demo</a>).
+			为 L.Marker 增加亮点表现 (<a href="https://brandonxiang.github.io/leaflet.marker.highlight/examples/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/brandonxiang">Brandon Xiang</a>
@@ -1731,7 +1726,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/nypl-spacetime/Leaflet.GeotagPhoto">Leaflet.GeotagPhoto</a>
 		</td>
 		<td>
-			Plugin for photo geotagging, with two modes: camera and crosshair (<a href="http://spacetime.nypl.org/Leaflet.GeotagPhoto/examples/camera.html">Demo</a>).
+			用于照片地理标记的插件，具有两种模式：相机和十字准线 (<a href="http://spacetime.nypl.org/Leaflet.GeotagPhoto/examples/camera.html">Demo</a>).
 		</td>
 		<td>
 			<a href="https://github.com/bertspaan">Bert Spaan</a>
@@ -1741,7 +1736,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.GLMarkers">Leaflet.GLMarkers</a>
 		</td><td>
-			Display thousands of markers with custom WebGL shaders, optionally animated. (<a href='http://https://ivansanchez.gitlab.io/Leaflet.GLMarkers/demo/repl.html'>demo</a>)
+			使用自定义 WebGL 着色器显示数千个标记，可选动画 (<a href='http://https://ivansanchez.gitlab.io/Leaflet.GLMarkers/demo/repl.html'>demo</a>)
 		</td><td>
 			<a href="https://gitlab.com/IvanSanchez">Iván Sánchez Ortega</a>
 		</td>
@@ -1751,8 +1746,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/ggolikov/Leaflet.River">Leaflet.River</a>
 		</td>
 		<td>
-			Draw lines with different width (like rivers) on a map.
-			Useful when you want to show how rivers 'flow' on the map (<a href="https://ggolikov.github.io/Leaflet.River/">demo</a>).
+            在地图上绘制不同宽度的线（如河流），当您想在地图上显示河流如何“流动”时很有用 (<a href="https://ggolikov.github.io/Leaflet.River/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ggolikov">Grigory Golikov</a>
@@ -1763,8 +1757,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/sybri/Leaflet.SpeechBubble/">Leaflet.SpeechBubble</a>
 		</td>
 		<td>
-			Popup a speech bubble with the arrow that follow points, layer, markers ...
-			 (<a href="https://sybri.github.io/demo/Leaflet.SpeechBubble/demo.html">demo</a>).
+			弹出一个带有跟随点（point）、图层（layer）、标记（marker）的箭头的对话气泡 (<a href="https://sybri.github.io/demo/Leaflet.SpeechBubble/demo.html">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/sybri">Sylvain BRISSY</a>
@@ -1775,7 +1768,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://wbkd.github.io/leaflet-swoopy/">Leaflet Swoopy</a>
 		</td>
 		<td>
-			A plugin for creating customizable swoopy arrow annotations.
+            用于创建可定制的 swoopy 箭头注释的插件。
 		</td>
 		<td>
 			<a href="https://webkid.io">webkid</a>
@@ -1786,7 +1779,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/Oliv/leaflet-polycolor">leaflet-polycolor</a>
 		</td>
 		<td>
-			Color each polyline segment. (<a href='https://oliv.github.io/leaflet-polycolor/'>demo</a>)
+			为每个折线着色 (<a href='https://oliv.github.io/leaflet-polycolor/'>demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/Oliv">Olivier Gasc</a>
@@ -1797,7 +1790,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/JackZouShao/leaflet-marker-direction">leaflet-marker-direction</a>
 		</td>
 		<td>
-			display the path and the direction of the marker. (<a href='https://jackzoushao.github.io/leaflet-marker-direction/examples/marker-direction.html'>demo</a>)
+			显示标记的路径和方向 (<a href='https://jackzoushao.github.io/leaflet-marker-direction/examples/marker-direction.html'>demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/JackZouShao">Jack Zou</a>
@@ -1808,7 +1801,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/bbecquet/Leaflet.RotatedMarker">Leaflet Rotated Marker</a>
 		</td>
 		<td>
-			Enables rotation of marker icons in Leaflet. (<a href='http://bbecquet.github.io/Leaflet.RotatedMarker/example.html'>Demo</a>)
+            启用 Leaflet 中标记图标的旋转 (<a href='http://bbecquet.github.io/Leaflet.RotatedMarker/example.html'>Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/bbecquet">Benjamin Becquet</a>
@@ -1819,7 +1812,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://wbkd.github.io/leaflet-truesize/">Leaflet Truesize</a>
 		</td>
 		<td>
-			A plugin for creating projection aware draggable polygons and polylines.
+			用于创建投影感知可拖动多边形和折线的插件
 		</td>
 		<td>
 			<a href="https://webkid.io">webkid</a>
@@ -1830,7 +1823,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.RepeatedMarkers">Leaflet.RepeatedMarkers</a>
 		</td>
 		<td>
-			Displays markers when wrapping around the globe, once every 360 degrees of longitude (<a href="https://ivansanchez.gitlab.io/Leaflet.RepeatedMarkers/demo.html">demo</a>).
+			绕过地球时显示标记，每360度经度显示一次 (<a href="https://ivansanchez.gitlab.io/Leaflet.RepeatedMarkers/demo.html">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
@@ -1840,7 +1833,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 		<td>
 			<a href="https://github.com/henrythasler/Leaflet.Geodesic">Leaflet.Geodesic</a>
 		</td><td>
-			Draw geodesic lines and circles. A geodesic line is the shortest path between two given points on the earth surface. It uses Vincenty's formulae for highest precision and distance calculation. Written in Typescript and available via CDN. <a href="https://blog.cyclemap.link/Leaflet.Geodesic/complex-interactive.html">Demo</a>
+            绘制测地线和圆。测地线是地球表面上两个给定点之间的最短路径。它使用 Vincenty 的公式进行最高精度和距离计算。用 Typescript 编写，可通过 CDN 获得 <a href="https://blog.cyclemap.link/Leaflet.Geodesic/complex-interactive.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/henrythasler">Henry Thasler</a>
 		</td>
@@ -1850,7 +1843,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/nuclearsecrecy/Leaflet.greatCircle">Leaflet.greatCircle</a>
 		</td>
 		<td>
-			A wrapper class for the Leaflet.js Polygon object that draws true "great circles" (showing true geodesic, spherical paths) that wrap around the Earth (<a href="https://nuclearsecrecy.github.io/Leaflet.greatCircle/example/">demo</a>).
+			一个Leaflet.js Polygon对象的封装类，用于绘制环绕地球的真正的 "大圆"（显示真正的测地线、球面路径） (<a href="https://nuclearsecrecy.github.io/Leaflet.greatCircle/example/">demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/nuclearsecrecy/">Alex Wellerstein</a>
@@ -1861,7 +1854,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/iDerekLi/Leaflet.CustomLayer">Leaflet.CustomLayer</a>
 		</td>
 		<td>
-			A Leaflet plugin L.CustomLayer - fully custom Layer.
+			一个 Leaflet 插件 L.CustomLayer - 完全自定义的 Layer
 		</td>
 		<td>
 			<a href="https://github.com/iDerekLi/">Derek Li</a>
@@ -1872,7 +1865,7 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/coyotesqrl/Leaflet.ArrowCircle">Leaflet.ArrowCircle</a>
 		</td>
 		<td>
-		    A Marker extension to display circles with directional arrows.
+            用于显示带有方向箭头的圆圈的标记扩展
 		</td>
 		<td>
 			<a href="https://github.com/coyotesqrl/">R.A. Porter</a>
