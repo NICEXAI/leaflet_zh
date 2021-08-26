@@ -19,26 +19,26 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<li> <a href='#non-map-base-layers'>Non-map 基础图层</a></li>
 			<li> <a href='#tileimage-display'>Tile/Image 显示</a></li>
 			<li> <a href='#tile-load'>Tile 加载</a></li>
-			<li> <a href='#vector-tiles'>矢量 Tiles</a></li>
+			<li> <a href='#vector-tiles'>矢量 Tile</a></li>
 		</ul>
-		<h4>覆盖数据</h4>
+		<h4>叠加数据</h4>
 		<ul>
-			<li> <a href='#overlay-data-formats'>覆盖数据格式</a></li>
+			<li> <a href='#overlay-data-formats'>叠加数据格式</a></li>
 			<li> <a href='#dynamiccustom-data-loading'>动态加载数据</a></li>
-			<li> <a href='#synthetic-overlays'>合成覆盖</a></li>
+			<li> <a href='#synthetic-overlays'>合成叠加的数据</a></li>
 			<li> <a href='#data-providers'>数据提供程序</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
-		<h4>覆盖显示</h4>
+		<h4>叠加显示</h4>
 		<ul>
 			<li><a href="#markers--renderers">标记 &amp; 渲染</a></li>
-			<li><a href="#overlay-animations">覆盖动画</a></li>
+			<li><a href="#overlay-animations">叠加动画</a></li>
 			<li><a href="#clusteringdecluttering">Clustering/decluttering</a></li>
 			<li><a href="#heatmaps">热力图</a></li>
 			<li><a href="#dataviz">数据可视化</a></li>
 		</ul>
-		<h4>覆盖交互</h4>
+		<h4>叠加交互</h4>
 		<ul>
 			<li><a href="#edit-geometries">编辑几何图形</a></li>
 			<li><a href="#time--elevation">时间 &amp; 海拔</a></li>
@@ -85,15 +85,15 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 下面的插件支持加载不同的地图并提供 Tile 和 Image 图层的功能。
 
-* [底图提供程序](#basemap-providers)
-* [底图格式](#basemap-formats)
-* [Non-map 基础图层](#non-map-base-layers)
-* [Tile/image 显示](#tileimage-display)
-* [Tile 加载](#tile-load)
-* [矢量 tiles](#vector-tiles)
+* [Basemap providers](#basemap-providers)
+* [Basemap formats](#basemap-formats)
+* [Non-map base layers](#non-map-base-layers)
+* [Tile/image display](#tileimage-display)
+* [Tile load](#tile-load)
+* [Vector tiles](#vector-tiles)
 
 
-### 底图提供程序
+### Basemap providers
 
 几乎不需要配置，开箱即用的底图。
 
@@ -237,7 +237,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 底图格式
+### Basemap formats
 
 以下插件用于加载常见格式（非默认）的底图或者栅格图层。
 
@@ -381,7 +381,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 </table>
 
 
-### Non-map 基础图层
+### Non-map base layers
 
 有时候你不想加载地图，只想加载大的自定义图像，**非常大**的那种。
 
@@ -453,7 +453,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### Tile/image 显示
+### Tile/image display
 
 以下插件更改了地图中显示瓦片（tile）或图像(image)图层的方式。
 
@@ -653,7 +653,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### Tile 加载
+### Tile load
 
 下面插件改变了将瓦片（Tile）图层加载到地图中的方式。
 
@@ -762,7 +762,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 矢量瓦片（Tile）
+### Vector tiles
 
 用来显示[矢量瓦片（Tile）](https://github.com/mapbox/vector-tile-spec) 的插件。
 
@@ -815,16 +815,16 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 </table>
 
 
-## 覆盖数据
+## 叠加数据
 
 以下插件提供了加载叠加数据（GIS 矢量数据）的新方法：点、线和多边形。
 
-* [覆盖数据格式](#overlay-data-formats)
+* [叠加数据格式](#overlay-data-formats)
 * [动态加载数据](#dynamiccustom-data-loading)
-* [合成覆盖](#synthetic-overlays)
+* [合成叠加的数据](#synthetic-overlays)
 * [数据提供程序](#data-providers)
 
-### 覆盖数据格式
+### Overlay data formats
 
 使用各种 GIS 格式加载您自己的数据。
 
@@ -960,7 +960,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 加载动态的/自定义数据
+### Dynamic/custom data loading
 
 加载地图中更新的动态数据，或以非标准方式加载GIS矢量数据。
 
@@ -1033,7 +1033,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 合成覆盖
+### Synthetic overlays
 
 这些插件从头开始创建有用的叠加层，无需加载。
 
@@ -1133,9 +1133,9 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 数据提供程序
+### Data providers
 
-从三方服务加载覆盖数据。 另请参阅 [底图提供程序](#basemap-providers) 和 [插件合计](#collections).
+从三方服务加载叠加数据。 另请参阅 [Basemap providers](#basemap-providers) 和 [插件合计](#collections).
 
 <table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
@@ -1237,9 +1237,9 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-## 覆盖显示
+## 叠加显示
 
-以下插件提供了显示覆盖数据信息的新方法。
+以下插件提供了显示叠加数据信息的新方法。
 
 * [标记 & 渲染](#markers--renderers)
 * [叠加动画](#overlay-animations)
@@ -1875,16 +1875,16 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### Overlay animations
+### 叠加动画
 
-These plugins animate markers or some geometries. See also [geometries with time or elevation](#geometryinteraction-time).
+这些插件对标记物或一些几何图形进行动画处理。另请参阅[带时间或海拔的几何图形](#geometryinteraction-time)。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/openplans/Leaflet.AnimatedMarker">Leaflet.AnimatedMarker</a>
 		</td><td>
-			Animate a marker along a polyline.
+			沿着多段线为一个标记制作动画。
 		</td><td>
 			<a href="https://github.com/atogle">Aaron Ogle</a>
 		</td>
@@ -1893,7 +1893,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/maximeh/leaflet.bouncemarker">Leaflet.BounceMarker</a>
 		</td><td>
-			Make a marker bounce when you add it to a map.
+            将标记添加到地图时使标记弹跳。
 		</td><td>
 			<a href="https://github.com/maximeh">Maxime Hadjinlian</a>
 		</td>
@@ -1902,7 +1902,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/hosuaby/Leaflet.SmoothMarkerBouncing">Leaflet.SmoothMarkerBouncing</a>
 		</td><td>
-			Smooth animation of marker bouncing for Leaflet.
+			为 Leaflet 的标记添加平滑的弹跳动画。
 		</td><td>
 			<a href="https://github.com/hosuaby">Alexei KLENIN</a>
 		</td>
@@ -1911,7 +1911,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/ewoken/Leaflet.MovingMarker">Leaflet.MovingMarker</a>
 		</td><td>
-			Allow to move markers along a polyline with custom durations.
+			允许以自定义的持续时间沿多段线移动标记。
 		</td><td>
 			<a href="https://github.com/ewoken">Ewoken</a>
 		</td>
@@ -1920,8 +1920,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/naturalatlas/leaflet-transitionedicon">Leaflet.TransitionedIcon</a>
 		</td><td>
-			Transition in/out markers with CSS3 transitions. It supports jitter
-			for staggering markers into view to prevent visual overload. See the <a href="http://naturalatlas.github.io/leaflet-transitionedicon/">demo</a>.
+			使用 CSS3 动画过渡 进入/移除 的标记。它支持抖动，将标记交错进入视图以防止视觉过载。查看 <a href="http://naturalatlas.github.io/leaflet-transitionedicon/">demo</a>
 		</td><td>
 			<a href="https://github.com/brianreavis">Brian Reavis</a>
 		</td>
@@ -1930,7 +1929,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/IvanSanchez/Leaflet.Polyline.SnakeAnim">Leaflet.Polyline.SnakeAnim</a>
 		</td><td>
-			Animates (poly)lines into existence, as if they were being slowly drawn from start to end.
+			将（多角）线动画化，就像它们被慢慢地从头画到尾一样。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -1940,7 +1939,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.Path.DashFlow">Leaflet.Path.DashFlow</a>
 		</td><td>
-			Animates the dashArray of lines and circles, creating a basic flow effect. (<a href="https://ivansanchez.gitlab.io/Leaflet.Path.DashFlow/demo.html">Demo</a>.
+			对直线和圆圈的 dashArray 进行动画处理，创造一个基本的流动效果。(<a href="https://ivansanchez.gitlab.io/Leaflet.Path.DashFlow/demo.html">Demo</a>
 		</td><td>
 			<a href="https://gitlab.com/IvanSanchez">Iván Sánchez Ortega</a>
 		</td>
@@ -1949,7 +1948,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/rubenspgcavalcante/leaflet-ant-path">Leaflet.AntPath</a>
 		</td><td>
-			Leaflet.AntPath put a flux animation (like ants walking) into a Polyline.
+			Leaflet.AntPath将一个通量动画（如蚂蚁行走）放入Polyline。
 			(<a href='http://rubenspgcavalcante.github.io/leaflet-ant-path/'>demo</a>)
 		</td><td>
 			<a href="https://github.com/rubenspgcavalcante">Rubens Pinheiro</a>
@@ -1959,7 +1958,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.Marker.SlideTo">Leaflet.Marker.SlideTo</a>
 		</td><td>
-			Smoothly move (slide) markers to a new location. (<a href='http://ivansanchez.gitlab.io/Leaflet.Marker.SlideTo/demo.html'>demo</a>)
+			平稳地移动（滑动）标记到一个新的位置。 (<a href='http://ivansanchez.gitlab.io/Leaflet.Marker.SlideTo/demo.html'>demo</a>)
 		</td><td>
 			<a href="https://gitlab.com/u/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -1969,7 +1968,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/Igor-Vladyka/leaflet.motion">leaflet.motion</a>
 		</td><td>
-			Adds simple motion to your polyline with marker in a head on line (<a href='https://igor-vladyka.github.io/leaflet.motion/'>demo</a>)
+			将简单的运动添加到你的多段线上，并在线头处设置标记。 (<a href='https://igor-vladyka.github.io/leaflet.motion/'>demo</a>)
 		</td><td>
 			<a href="https://github.com/Igor-Vladyka/">Igor Vladyka</a>,
 		</td>
@@ -1979,7 +1978,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/ggolikov/Leaflet.Rain">Leaflet.Rain</a>
 		</td>
 		<td>
-			Customizable WebGL rain animation for Leaflet. Useful for weather maps. (<a href="https://ggolikov.github.io/Leaflet.Rain/">demo</a>)
+			用于 Leaflet 的可定制的 WebGL 下雨动画，对天气图很有用。 (<a href="https://ggolikov.github.io/Leaflet.Rain/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ggolikov">Grigory Golikov</a>
@@ -1990,7 +1989,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/ggolikov/Leaflet.Snow">Leaflet.Snow</a>
 		</td>
 		<td>
-			Customizable WebGL snow animation for Leaflet. Useful for weather maps. (<a href="https://ggolikov.github.io/Leaflet.Snow/">demo</a>)
+			用于 Leaflet 的可定制的 WebGL 雪景动画，适用于天气图。 (<a href="https://ggolikov.github.io/Leaflet.Snow/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ggolikov">Grigory Golikov</a>
@@ -2001,7 +2000,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/onaci/leaflet-point-animator">leaflet-point-animator</a>
 		</td>
 		<td>
-			Animate a large number of GeoJSON points. (<a href="https://onaci.github.io/leaflet-point-animator">demo</a>)
+			为大量的 GeoJSON 点制作动画。 (<a href="https://onaci.github.io/leaflet-point-animator">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/danwild">danwild</a>, <a href="https://github.com/onaci">onaci</a>
@@ -2012,7 +2011,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/onaci/leaflet-temporal-geojson">leaflet-temporal-geojson</a>
 		</td>
 		<td>
-			Flexible animation of GeoJSON features. (<a href="https://onaci.github.io/leaflet-temporal-geojson">demo</a>)
+			灵活的 GeoJSON feature 的动画。 (<a href="https://onaci.github.io/leaflet-temporal-geojson">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/danwild">danwild</a>, <a href="https://github.com/onaci">onaci</a>
@@ -2024,14 +2023,14 @@ These plugins animate markers or some geometries. See also [geometries with time
 
 ### Clustering/Decluttering
 
-When you are displaying a lot of data, these plugins will make your map look cleaner.
+当您显示大量数据时，这些插件将使您的地图看起来更干净。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a>
 		</td><td>
-			Beautiful, sophisticated, high performance marker clustering solution with smooth animations and lots of great features. <em>Recommended!</em>
+			美丽、精致、高性能的标记群集解决方案，具有流畅的动画和许多强大的功能。<em>强烈推荐！</em>。
 		</td><td>
 			<a href="https://github.com/danzel">Dave Leaver</a>
 		</td>
@@ -2040,7 +2039,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/MazeMap/Leaflet.LayerGroup.Collision">Leaflet.LayerGroup.Collision</a>
 		</td><td>
-			Provides collision detection for groups of markers. Unlike clustering, this takes into account the shape &amp; size of the markers.
+			为标记群提供碰撞检测。与聚类不同，它考虑到了标记的形状&amp; 大小。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -2050,7 +2049,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet">Overlapping Marker Spiderfier</a>
 		</td><td>
-			Deals with overlapping markers in a Google Earth-inspired way by gracefully springing them apart on click.
+			以谷歌地球启发的方式处理重叠的标记，在点击时优雅地将它们弹开。
 		</td><td>
 			<a href="http://mackerron.com">George MacKerron</a>
 		</td>
@@ -2059,7 +2058,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/SINTEF-9012/PruneCluster">PruneCluster</a>
 		</td><td>
-			Fast and realtime marker clustering library.
+            快速实时的标记聚类库。
 		</td><td>
 			<a href="https://github.com/yellowiscool">Antoine Pultier</a>
 		</td>
@@ -2068,7 +2067,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/oliverroick/Leaflet.Deflate">Leaflet.Deflate</a>
 		</td><td>
-			Deflates lines and polygons to a marker when their screen size becomes too small in lower zoom levels.
+			当线条和多边形在较低的缩放级别中屏幕尺寸变得太小时，将其放缩为一个标记。
 		</td><td>
 			<a href="https://github.com/oliverroick">Oliver Roick</a>
 		</td>
@@ -2077,7 +2076,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/andy-kay/Leaflet.GridCluster">Leaflet.GridCluster</a>
 		</td><td>
-			Create grid-based clusters in realtime.
+			实时创建基于网格的集群。
 		</td><td>
 			<a href="https://github.com/andy-kay">Andreas Kiefer</a>
 		</td>
@@ -2086,7 +2085,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/spatialdev/q-cluster">q-cluster</a>
 		</td><td>
-			Quick point clustering library with D3 categorization.
+			带有D3分类的快速点聚类库。
 		</td><td>
 			<a href="https://github.com/hallahan">Nicholas Hallahan</a>
 		</td>
@@ -2095,7 +2094,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/Eclipse1979/leaflet-conditionalLayer">Leaflet.ConditionalLayer</a>
 		</td><td>
-			A FeatureGroup that does not show any more than a certain amount of markers visible in the viewport. (<a href="http://eclipse1979.github.io/Leaflet.ConditionalLayer/example/leaflet-conditionalLayer2.html">Demo</a>)
+			在视口中不显示超过一定数量可见标记的要素组。(<a href="http://eclipse1979.github.io/Leaflet.ConditionalLayer/example/leaflet-conditionalLayer2.html">Demo</a>)
 		</td><td>
 			<a href="https://github.com/Eclipse1979">EPP</a>
 		</td>
@@ -2104,7 +2103,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/ghybs/Leaflet.FeatureGroup.SubGroup">Leaflet.FeatureGroup.SubGroup</a>
 		</td><td>
-			A simple plugin to create Feature Groups that add their child layers into a parent group. Typical usage is to switch them through L.Control.Layers to dynamically add/remove groups of markers from Leaflet.markercluster. <a href="http://ghybs.github.io/Leaflet.FeatureGroup.SubGroup/examples/subGroup-markercluster-controlLayers-realworld.388.html">Demo</a>.
+			一个简单的插件，用于创建特征组，将其子层添加到父组中。典型的用法是通过 L.Control.Layers 来切换它们，动态地添加/删除 Leaflet.markercluster 中的标记组。 <a href="http://ghybs.github.io/Leaflet.FeatureGroup.SubGroup/examples/subGroup-markercluster-controlLayers-realworld.388.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/ghybs">ghybs</a>
 		</td>
@@ -2113,23 +2112,23 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/ZijingPeng/leaflet-tooltip-layout">leaflet-tooltip-layout</a>
 		</td><td>
-			A plugin to avoid tooltips overlapping and make it easier to find out the relationship between each tooltip and marker. <a href="https://zijingpeng.github.io/overlapping-avoided-tooltip/">Demo</a>.
+			一个避免工具提示重叠的插件，使其更容易找出每个工具提示和标记之间的关系。 <a href="https://zijingpeng.github.io/overlapping-avoided-tooltip/">Demo</a>
 		</td><td>
 			<a href="https://github.com/ZijingPeng">Zijing Peng</a>
 		</td>
 	</tr>
 </table>
 
-### Heatmaps
+### 热力图
 
-These plugins create heatmaps and heatmap-like visualizations from vector data.
+这些插件使用矢量数据创建可视化的热力图或类似热力图的图像。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/domoritz/leaflet-maskcanvas">MaskCanvas</a>
 		</td><td>
-			Canvas layer that can be used to visualize coverage.
+			画布层，可用于可视化覆盖。
 		</td><td>
 			<a href="https://github.com/domoritz">Dominik Moritz</a>
 		</td>
@@ -2138,7 +2137,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/sunng87/heatcanvas">HeatCanvas</a>
 		</td><td>
-			Simple heatmap api based on HTML5 canvas.
+			基于 HTML5 canvas 的简单的热力图 api。
 		</td><td>
 			<a href="https://github.com/sunng87">Sun Ning</a>
 		</td>
@@ -2147,9 +2146,8 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="http://www.patrick-wied.at/static/heatmapjs/example-heatmap-leaflet.html">heatmap.js</a>
 		</td><td>
-			JavaScript Library for HTML5 canvas based heatmaps.
-
-			Its Leaflet layer implementation supports large datasets because it is tile based and uses a quadtree index to store the data.
+			基于 HTML5 canvas 的热力图的 JavaScript 库。
+			其 Leaflet 层的实现支持大型数据集，因为它是基于瓦片的，并使用四叉树索引来存储数据。
 		</td><td>
 			<a href="https://github.com/pa7">Patrick Wied</a>
 		</td>
@@ -2158,8 +2156,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/dpiccone/leaflet-div-heatmap">Leaflet divHeatmap</a>
 		</td><td>
-			Lightweight and versatile heatmap layer based on CSS3 and divIcons
-
+			基于 CSS3 和 divIcons 的轻量级和多功能热力图图层
 		</td><td>
 			<a href="https://github.com/dpiccone">Daniele Piccone</a>
 		</td>
@@ -2168,8 +2165,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="http://ursudio.com/webgl-heatmap-leaflet/">WebGL Heatmap</a>
 		</td><td>
-			High performance Javascript heatmap plugin using WebGL.
-
+            使用 WebGL 的高性能 Javascript 热力图插件。
 		</td><td>
 			<a href="http://ursudio.com/webgl-heatmap-leaflet/">Benjamin J DeLong</a>
 		</td>
@@ -2178,8 +2174,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/Leaflet/Leaflet.heat">Leaflet.heat</a>
 		</td><td>
-			A tiny, simple and fast Leaflet heatmap plugin. Uses <a href='https://github.com/mourner/simpleheat'>simpleheat</a> under the hood, additionally clustering points into a grid for performance. (<a href='https://leaflet.github.io/Leaflet.heat/demo'>Demo</a>)
-
+			一个微小、简单、快速的 Leaflet 热力图插件。在引擎盖下使用 <a href='https://github.com/mourner/simpleheat'>simpleheat</a>，另外还将点聚成一个网格以提高性能。(<a href='https://leaflet.github.io/Leaflet.heat/demo'>Demo</a>)
 		</td><td>
 			<a href="https://github.com/mourner">Vladimir Agafonkin</a>
 		</td>
@@ -2188,7 +2183,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/mejackreed/leaflet-solr-heatmap">Leaflet-Solr-Heatmap</a>
 		</td><td>
-			A Leaflet plugin for rendering heatmaps and clusters from <a href='https://lucene.apache.org/solr/guide/6_6/spatial-search.html#SpatialSearch-HeatmapFaceting'>Solr's Heatmap Faceting</a>. High performance for millions of points or polygons.
+			一个 Leaflet 插件，用于渲染来自 <a href='https://lucene.apache.org/solr/guide/6_6/spatial-search.html#SpatialSearch-HeatmapFaceting'>Solr 的 Heatmap Faceting</a> 的热力图和群集，对于数以百万计的点或多边形具有很高的性能。
 		</td><td>
 			<a href="https://github.com/mejackreed">Jack Reed</a> /
 			<a href="https://github.com/spacemansteve">Steve McDonald</a>
@@ -2197,16 +2192,16 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 </table>
 
 
-### DataViz
+### 数据可视化
 
-Powerful multi-purpose libraries for data visualization.
+用于数据可视化的强大多用途库。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/giscience/geogrid.js">geogrid.js</a>
 		</td><td>
-			Displays data aggregated by the ISEA3H discrete global grid system.  The data can, e.g., be delivered by using <a href="https://github.com/giscience/measures-rest">Measures REST</a> (a framework to deliver data aggregated by the grid) or <a href="https://github.com/giscience/geogrid">geogrid</a> (a library for handling the grid in case that you want to aggregate data manually).
+			显示由 ISEA3H 离散全球网格系统聚合的数据。例如，通过使用 <a href="https://github.com/giscience/measures-rest">Measures REST</a>（一个框架，提供由网格聚合的数据）或 <a href="https://github.com/giscience/geogrid">geogrid</a>（一个库，用于处理网格，以防你想手动聚合数据）来交付。
 		</td><td>
 			<a href="http://www.mocnik-science.net">F.-B. Mocnik,</a><br><a href="http://www.geog.uni-heidelberg.de/gis/index_en.html">GIScience Research Group,<br>Heidelberg University</a>
 		</td>
@@ -2215,7 +2210,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="http://dynmeth.github.com/RaphaelLayer/">RaphaelLayer</a>
 		</td><td>
-			Allows you to use <a href="http://raphaeljs.com/">Raphael</a> as a layer on a Leaflet map for advanced animations and visualizations.
+			允许您将 <a href="http://raphaeljs.com/">Raphael</a> 用作 Leaflet 地图上的图层，以实现高级动画和可视化。
 		</td><td>
 			<a href="https://github.com/dynmeth">Dynamic Methods</a>
 		</td>
@@ -2224,7 +2219,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="http://humangeo.github.com/leaflet-dvf/">Leaflet Data Visualization Framework</a>
 		</td><td>
-			New markers, layers, and utility classes for easy thematic mapping and data visualization.
+			新的标记、图层和实用程序类，可轻松实现专题制图和数据可视化。
 		</td><td>
 			<a href="https://github.com/sfairgrieve">Scott Fairgrieve</a>
 		</td>
@@ -2233,7 +2228,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/teralytics/Leaflet.D3SvgOverlay">Leaflet.D3SvgOverlay</a>
 		</td><td>
-			SVG overlay class for using with <a href="http://d3js.org">D3</a> library. Supports zoom animation and scaling without need to redraw the layer.
+			用于与<a href="http://d3js.org">D3</a>库一起使用的SVG叠加类。支持缩放动画和缩放，不需要重新绘制图层。
 		</td><td>
 			<a href="https://github.com/xEviL">Kirill Zhuravlev</a>
 		</td>
@@ -2242,7 +2237,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/mapbox/mapbox-gl-leaflet">mapbox-gl-leaflet</a>
 		</td><td>
-			Binding from Mapbox GL JS to the Leaflet API
+            从 Mapbox GL JS 绑定到 Leaflet API
 		</td><td>
 			<a href="https://github.com/tmcw">Tom MacWright</a>
 		</td>
@@ -2251,7 +2246,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/wandergis/leaflet-echarts">leaflet-echarts</a>
 		</td><td>
-			A plugin for Leaflet to load <a href="https://github.com/ecomfe/echarts">echarts</a> map and make big data visualization easier.
+            Leaflet 插件加载 <a href="https://github.com/ecomfe/echarts">echarts</a> 地图，让大数据可视化更简单。
 		</td><td>
 			<a href="https://github.com/wandergis">wandergis</a>
 		</td>
@@ -2260,7 +2255,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/atlefren/storymap">jquery-storymap</a>
 		</td><td>
-			A jQuery plugin to display several map locations as the user scrolls through paragraphs.
+			一个 jQuery 插件，用于在用户滚动段落时显示多个地图位置。
 		</td><td>
 			<a href="https://github.com/atlefren">Atle Frenvik Sveen</a>
 		</td>
@@ -2269,7 +2264,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/rstudio/leaflet">Leaflet for R</a>
 		</td><td>
-			Allows using Leaflet from within <a href="https://en.wikipedia.org/wiki/R_%28programming_language%29">R</a> programs, a programming language popular for statistical analysis and data mining.
+			允许在 <a href="https://en.wikipedia.org/wiki/R_%28programming_language%29">R</a> 程序中使用 Leaflet，这是一种流行于统计分析和数据挖掘的编程语言。
 		</td><td>
 			<a href="https://github.com/rstudio/">RStudio team</a>
 		</td>
@@ -2278,7 +2273,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/react-map/leaflet.migrationLayer">leaflet.migrationLayer</a>
 		</td><td>
-			leaflet.migrationLayer is used to show migration data such as population, flight, vehicle, traffic and so on. Data visualization on map.<a href="https://react-map.github.io/leaflet.migrationLayer">demo</a>
+			leaflet.migrationLayer 用来显示人口、航班、车辆、交通等迁移数据并在地图上进行数据可视化。<a href="https://react-map.github.io/leaflet.migrationLayer">demo</a>
 		</td><td>
 			<a href="https://github.com/react-map">Sylvenas</a>
 		</td>
@@ -2287,7 +2282,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://ibesora.github.io/Leaflet.Quadtree/">Leaflet.Quadtree</a>
 		</td><td>
-			Leaflet.Quadtree is used to retrieve visible data inside given bounds
+			Leaflet.Quadtree 是用于检索给定范围内的可见数据。
 		</td><td>
 			<a href="https://github.com/ibesora">ibesora</a>
 		</td>
@@ -2296,7 +2291,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/jwasilgeo/Leaflet.Canvas-Flowmap-Layer">Leaflet.Canvas-Flowmap-Layer</a>
 		</td><td>
-			A LeafletJS custom map layer for mapping the flow of objects, ideas, people, etc. with Bezier curves rendered on the HTML canvas.
+			一个 LeafletJS 的自定义地图图层，用于在 HTML 画布上用贝塞尔曲线绘制物体、想法、人等的流动。
 		</td><td>
 			<a href="https://github.com/jwasilgeo">Jacob Wasilkowski</a>,
 			<a href="https://github.com/sarahbellum">Sarah Bell</a>
@@ -2306,7 +2301,7 @@ Powerful multi-purpose libraries for data visualization.
     <td>
 			<a href="https://github.com/manubb/Leaflet.PixiOverlay">Leaflet.PixiOverlay</a>
 		</td><td>
-			A Leaflet overlay class for drawing and animating with <a href="http://www.pixijs.com/">Pixi.js</a>. (<a href="https://manubb.github.io/Leaflet.PixiOverlay/demo.html">demo</a>)
+            可以使用 <a href="http://www.pixijs.com/">Pixi.js</a> 绘制和执行动画的 Leaflet 覆盖类。(<a href="https://manubb.github.io/Leaflet.PixiOverlay/demo.html">demo</a>)
 		</td><td>
 			<a href="https://github.com/manubb">Manuel Baclet</a>
 		</td>
@@ -2316,8 +2311,8 @@ Powerful multi-purpose libraries for data visualization.
     		<a href="https://github.com/danwild/leaflet-velocity">leaflet-velocity</a>
     	</td>
     	<td>
-            Visualise velocity layers with leaflet.
-            <a href="https://danwild.github.io/leaflet-velocity">Demo here.</a>
+            使用 Leaflet 可视化 velocity 图层。
+            <a href="https://danwild.github.io/leaflet-velocity">Demo</a>
         </td>
         <td>
             <a href="https://github.com/danwild">Dan Wild</a>
@@ -2328,7 +2323,7 @@ Powerful multi-purpose libraries for data visualization.
     		<a href="https://github.com/locknono/leaflet-partition">leaflet-partition</a>
     	</td>
     	<td>
-            Divide the area into parts in different ways such as voronoi(triangulation) and hexagonal tiling.
+            以不同的方式将区域划分为多个部分，例如 voronoi（三角剖分）和六边形平铺。
             <a href="https://locknono.github.io/leaflet-partition/">Basic demo</a>
         </td>
         <td>
