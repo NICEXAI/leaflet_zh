@@ -4166,20 +4166,20 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-## Miscellaneous
+## 各种各样的
 
 
 
 ### Geoprocessing
 
-The following plugins perform several sorts of geoprocessing (mathematical and topological operations on points, lines and polygons).
+以下插件可进行多种地理信息处理（点、线和多边形上的数学和拓扑操作）。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/kartena/Proj4Leaflet">Proj4Leaflet</a>
 		</td><td>
-			<a href="http://trac.osgeo.org/proj4js/">Proj4js</a> integration plugin, allowing you to use all kinds of weird projections in Leaflet.
+			<a href="http://trac.osgeo.org/proj4js/">Proj4js</a> 集成插件，允许你在 Leaflet 中使用各种奇怪的投影。
 		</td><td>
 			<a href="http://www.kartena.se/">Kartena</a>
 		</td>
@@ -4188,7 +4188,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/springmeyer/arc.js">arc.js</a>
 		</td><td>
-			A JS library for drawing great circle routes that can be used with Leaflet.
+			一个可以与 Leaflet 一起使用的用于绘制大圆圈路线的 JS 库。
 		</td><td>
 			<a href="https://github.com/springmeyer">Dane Springmeyer</a>
 		</td>
@@ -4197,7 +4197,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/tmcw/leaflet-pip">Leaflet-pip</a>
 		</td><td>
-			Simple point in polygon calculation using <a href="https://github.com/substack/point-in-polygon">point-in-polygon</a>.
+			使用 <a href="https://github.com/substack/point-in-polygon">point-in-polygon</a> 进行简单的计算多边形中的点。
 		</td><td>
 			<a href="https://github.com/tmcw">Tom MacWright</a>
 		</td>
@@ -4206,7 +4206,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.GeometryUtil">Leaflet.GeometryUtil</a>
 		</td><td>
-			A collection of utilities for Leaflet geometries (linear referencing, etc.)
+			一组用于 Leaflet 几何形状的实用工具（线性参考等）。
 		</td><td>
 			<a href="https://github.com/bbecquet">Benjamin Becquet</a>, <a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -4216,7 +4216,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 			<a href="https://github.com/w8r/GreinerHormann">Greiner-Hormann</a>
 		</td>
 		<td>
-			Greiner-Hormann algorithm for polygon clipping and binary operations, adapted for use with Leaflet.
+			用于多边形裁剪和二元运算的 Greiner-Hormann 算法，适用于 Leaflet。
 		</td>
 		<td>
 			<a href="https://github.com/w8r">Alexander Milevski</a>
@@ -4226,7 +4226,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/skeate/Leaflet.buffer">Leaflet.buffer</a>
 		</td><td>
-			Enables buffering of shapes drawn with Leaflet.draw.
+			使得用 Leaflet.draw 绘制的图形能够得到缓冲。
 		</td><td>
 			<a href="https://github.com/skeate">Jonathan Skeate</a>
 		</td>
@@ -4235,7 +4235,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.LayerIndex">Leaflet.LayerIndex</a>
 		</td><td>
-			An efficient spatial index for features and layers, using <a href="https://github.com/imbcmdth/RTree">RTree.js</a>.
+			要素（feature）和图层的有效空间索引，使用 <a href="https://github.com/imbcmdth/RTree">RTree.js</a>。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -4244,7 +4244,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/mapzen/leaflet-spatial-prefix-tree">leaflet-spatial-prefix-tree</a>
 		</td><td>
-			Leaflet plugin for visualizing spatial prefix trees, quadtree and geohash. See <a href="http://mapzen.github.io/leaflet-spatial-prefix-tree/">demo</a>
+			用于可视化空间前缀树、四叉树和 geohash 的 Leaflet 插件。 查看 <a href="http://mapzen.github.io/leaflet-spatial-prefix-tree/">demo</a>
 		</td><td>
 			<a href="http://mapzen.com/">Mapzen</a>
 		</td>
@@ -4253,7 +4253,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/jjimenezshaw/Leaflet.UTM">Leaflet.UTM</a>
 		</td><td>
-			A simple way to convert L.LatLng into UTM (WGS84) and vice versa. UTM string format easily configurable. It does not depend on any other plugin or 3rd party. See <a href="https://jjimenezshaw.github.io/Leaflet.UTM/examples/input.html">demo</a>
+			将 L.LatLng 转换为 UTM（WGS84），反之亦然的简单方法，UTM字符串格式易于配置。它不依赖于任何其他或第三方插件。 查看 <a href="https://jjimenezshaw.github.io/Leaflet.UTM/examples/input.html">demo</a>
 		</td><td>
 			<a href="https://github.com/jjimenezshaw/">Javier Jimenez Shaw</a>
 		</td>
@@ -4262,7 +4262,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/briannaAndCo/Leaflet.Antimeridian">Leaflet.Antimeridian</a>
 		</td><td>
-			A plugin to allow polygons and polylines to naturally draw across the Antimeridian (or the Internation Date Line) instead of always wrapping across the Greenwich meridian. (<a href="https://briannaandco.github.io/Leaflet.Antimeridian/">Demo</a>)
+			一个插件，允许多边形和多段线自然地画过 Antimeridian（或国际日期线），而不是总是包裹在格林威治子午线上。 (<a href="https://briannaandco.github.io/Leaflet.Antimeridian/">Demo</a>)
 		</td><td>
 			<a href="https://github.com/briannaAndCo">Brianna Landon</a>
 		</td>
@@ -4273,17 +4273,14 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 
 ### Routing
 
-The following plugins use external services to calculate driving or walking routes.
+以下插件使用外部服务来计算驾驶或步行路线。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="http://www.liedman.net/leaflet-routing-machine/">Leaflet Routing Machine</a>
 		</td><td>
-			Control for route search with via points, displaying itinerary and alternative routes. Uses
-			<a href="http://project-osrm.org/">OSRM</a> by default, but also supports
-			<a href="https://graphhopper.com/">GraphHopper</a>,
-			<a href="https://www.mapbox.com/developers/api/directions/">Mapbox Directions API</a> and more.
+            通过点控制路线搜索，显示行程和替代路线。默认使用 <a href="http://project-osrm.org/">OSRM</a> ，但也支持 <a href="https://graphhopper.com/">GraphHopper</a>、 <a href="https://www.mapbox.com/developers/api/directions/">Mapbox Directions API</a> 等。
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a>
 		</td>
@@ -4292,7 +4289,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/Turistforeningen/leaflet-routing">Leaflet.Routing</a>
 		</td><td>
-			Leaflet controller and interface for routing paths between waypoints using any user provided routing service.
+			使用任何用户提供的路由服务在航点之间路由路径的 Leaflet 控制器和接口。
 		</td><td>
 			<a href="https://github.com/turistforeningen">Norwegian Trekking Association</a>
 		</td>
@@ -4301,7 +4298,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/route360/r360-js">Route360°</a>
 		</td><td>
-			Route360° visualizes the area which is reachable from a set of starting points in a given time and gives detailed routing information (walk, bike, car and <b>public transportation</b>) to targets.
+			Route360°直观地显示了在给定时间内从一组起点可到达的区域，并提供了详细的路线信息（步行、自行车、汽车和<b>公共交通</b>）给目标。
 		</td><td>
 			<a href="http://www.motionintelligence.net/">Motion Intelligence GmbH</a>
 		</td>
@@ -4310,7 +4307,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/StephanGeorg/leaflet-routeboxer">Leaflet RouteBoxer</a>
 		</td><td>
-			This is a Leaflet implementation of the RouteBoxer Class from Google. The Leaflet 		RouteBoxer class generates a set of L.LatLngBounds objects that are guaranteed to cover every point within a specified distance of a path.
+			这是来自 Google 的 RouteBoxer 类的 Leaflet 实现。Leaflet RouteBoxer 类生成一组 L.LatLngBounds 对象，这些对象保证覆盖路径指定距离内的每个点。
 		</td><td>
 			<a href="http://www.nearest.place/">Nearest!</a>
 		</td>
@@ -4319,7 +4316,7 @@ The following plugins use external services to calculate driving or walking rout
     		<td>
     			<a href="https://github.com/BKGiser/Leaflet.Routing.Amap">Leaflet.Routing.Amap</a>
     		</td><td>
-		Control for route search using <a href="http://www.amap.com/">AMap(高德地图)</a> as a backend. Supports the Chinese BD09 and GCJ02 coordinate systems, colourful lines, and turn-by-turn popups.
+		        使用<a href="http://www.amap.com/">AMap(高德地图)</a>作为后台进行路线搜索的控件。支持中国的BD09和GCJ02坐标系，彩色线条，以及弹出的转弯提示。
     		</td><td>
     			<a href="https://github.com/BKGiser">Jack Good</a>
     		</td>
@@ -4329,8 +4326,8 @@ The following plugins use external services to calculate driving or walking rout
     		<a href="https://github.com/skedgo/tripkit-leaflet">Leaflet TripGo routing</a>
     	</td>
     	<td>
-    		The <b>TripGo</b> mobility platform lets you create apps providing seamless and personalised door-to-door trips using any public, private or commercial mode of transport.
-    		TripGo Leaflet's plugin motivation is to provide an easy way to include its functionality in an external platform.
+    		<b>TripGo</b >移动平台让你创建应用程序，使用任何公共、私人或商业交通方式提供无缝和个性化的门到门旅行。
+    		TripGo Leaflet 的插件动机是提供一种简单的方法，将其功能纳入外部平台。
     	</td>
     	<td>
     		<a href="http://skedgo.com/">SkedGo</a>
@@ -4341,7 +4338,7 @@ The following plugins use external services to calculate driving or walking rout
 			<a href="https://github.com/wwwouaiebe/leaflet.TravelNotes">leaflet.TravelNotes</a>
 		</td>
 		<td>
-			Editable markers and routing engine for leaflet. The routing engine have plugins for Mapbox, GraphHopper and OSRM and can be used for car, bike or pedestrian route. <a href="https://wwwouaiebe.github.io/leaflet.TravelNotes/?lng=en">Demo</a>.
+			Leaflet 的可编辑标记和路由引擎。路由引擎有 Mapbox、GraphHopper 和 OSRM 插件，可用于汽车、自行车或步行路线。 <a href="https://wwwouaiebe.github.io/leaflet.TravelNotes/?lng=en">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/wwwouaiebe">Christian Guyette</a>
@@ -4351,7 +4348,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/traffordDataLab/leaflet.reachability">Leaflet.Reachability</a>
 		</td><td>
-			Show areas of reachability based on time or distance for different modes of travel using the <a href="https://openrouteservice.org/documentation/#/reference/isochrones">openrouteservice isochrones API</a>.
+			使用 <a href="https://openrouteservice.org/documentation/#/reference/isochrones">openrouteservice isochrones API</a>，根据时间或距离显示不同旅行模式的可到达区域。
 		</td><td>
 			<a href="https://github.com/traffordDataLab">Trafford Data Lab</a>
 		</td>
@@ -4363,15 +4360,14 @@ The following plugins use external services to calculate driving or walking rout
 
 ### Geocoding
 
-External services that transform an address or the name of a place into latitude and longitude (or vice versa).
+将地址或地点名称转换为纬度和经度（反之亦然）的外部服务。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/smeijer/L.GeoSearch">Leaflet GeoSearch</a>
 		</td><td>
-			Small geocoding plugin that brings address searching/lookup (aka geosearching) to Leaflet.<br />
-			Comes with support for Google, OpenStreetMap Nominatim, Bing, Esri and Nokia. Easily extensible.
+            将地址搜索/查找（又名地理搜索）引入到 Leaflet 的小型地理编码插件。支持 Google、OpenStreetMap Nominatim、Bing、Esri 和诺基亚。易于扩展。
 		</td><td>
 			<a href="https://github.com/smeijer">Stephan Meijer</a>
 		</td>
@@ -4380,7 +4376,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/k4r573n/leaflet-control-osm-geocoder">Leaflet Control OSM Geocoder</a>
 		</td><td>
-			A simple geocoder that uses OpenstreetMap Nominatim to locate places by address.
+			一个简单的地理编码器，它使用 OpenstreetMap Nominatim 按地址定位地点。
 		</td><td>
 			<a href="https://github.com/k4r573n">Karsten Hinz</a>
 		</td>
@@ -4389,7 +4385,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/sa3m/leaflet-control-bing-geocoder">Leaflet Control Bing Geocoder</a>
 		</td><td>
-			A simple geocoder control that uses Bing to locate places.
+			使用 Bing 定位地点的简单地理编码器控件。
 		</td><td>
 			<a href="https://github.com/sa3m">Samuel Piquet</a>
 		</td>
@@ -4398,8 +4394,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/perliedman/leaflet-control-geocoder">Leaflet Control Geocoder</a>
 		</td><td>
-			A clean and extensible control for both geocoding and reverse geocoding. Builtin support for
-			Nominatim, Bing, MapQuest, Mapbox, What3Words, Google and Photon. Easy to extend to other providers.
+			一个干净和可扩展的控件，用于地理编码和反向地理编码。内置支持 Nominatim, Bing, MapQuest, Mapbox, What3Words, Google 和 Photon。易于扩展到其他供应商。
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a>
 		</td>
@@ -4408,7 +4403,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/jakubdostal/leaflet-geoip">Leaflet GeoIP Locator</a>
 		</td><td>
-			A simple plugin that allows finding the approximate location of IP addresses and map centering on said location.
+			一个简单的插件，可以找到 IP 地址的大致位置，并以所述位置为中心进行地图绘制。
 		</td><td>
 			<a href="https://github.com/jakubdostal">Jakub Dostal</a>
 		</td>
@@ -4417,7 +4412,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/Esri/esri-leaflet-geocoder">Esri Leaflet Geocoder</a>
 		</td><td>
-			A geocoding control with suggestions powered by the ArcGIS Online geocoder.
+			一个由 ArcGIS Online 地理编码器提供建议的地理编码控件。
 		</td><td>
 			<a href="https://github.com/patrickarlt/">Patrick Arlt</a>
 		</td>
@@ -4427,7 +4422,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/lokku/leaflet-opencage-search">Leaflet.OpenCage.Search</a>
 		</td>
 		<td>
-			A search plugin plugin that uses <a href="http://geocoder.opencagedata.com/">OpenCage Data's geocoding API</a>.
+			使用 <a href="http://geocoder.opencagedata.com/">OpenCage Data 的地理编码 API</a> 的搜索插件。
 		</td>
 		<td>
 			The <a href="https://github.com/opencagedata">OpenCage</a> team
@@ -4438,7 +4433,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/consbio/Leaflet.Geonames">Leaflet.Geonames</a>
 		</td>
 		<td>
-			A lightweight geocoding control powered by <a href="http://www.geonames.org/">GeoNames</a>.  <a href="https://consbio.github.io/Leaflet.Geonames">Demo</a>
+			由 <a href="http://www.geonames.org/">GeoNames</a> 提供支持的轻量级地理编码控件。  <a href="https://consbio.github.io/Leaflet.Geonames">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/brendan-ward">Brendan Ward</a>
@@ -4449,7 +4444,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/pelias/leaflet-plugin">Pelias Leaflet Plugin</a>
 		</td>
 		<td>
-			A geocoding control using <a href="https://geocode.earth">Geocode Earth</a> or any hosted service powered by the <a href="https://github.com/pelias/api">Pelias Geocoder API</a>.  <a href="https://pelias.github.io/leaflet-plugin/">Demo</a>
+			使用 <a href="https://geocode.earth">Geocode Earth</a> 或任何由 <a href="https://github.com/pelias/api">Pelias Geocoder API</a> 提供的托管服务的地理编码控件。 <a href="https://pelias.github.io/leaflet-plugin/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/louh">Lou Huang</a>
@@ -4460,7 +4455,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/location-iq/leaflet-geocoder">Leaflet LocationIQ Geocoder</a>
 		</td>
 		<td>
-			A plugin that adds the ability to search (geocode) a Leaflet-powered map using <a href="https://locationiq.com/">LocationIQ</a>.
+			一个插件，增加了使用 <a href="https://locationiq.com/">LocationIQ</a> 搜索（地理编码）由 Leaflet 驱动的地图的能力。
 		</td>
 		<td>
 			<a href="https://github.com/location-iq">LocationIQ</a>
@@ -4471,7 +4466,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/mmaciejkowalski/L.Highlight">L.Highlight</a>
 		</td>
 		<td>
-			A plugin that adds the ability to quick highlighting streets and areas using <a href="https://nominatim.org/">Nominatim</a>.
+			一个插件，增加了使用 <a href="https://nominatim.org/">Nominatim</a> 快速突出显示街道和地区的功能。
 		</td>
 		<td>
 			<a href="https://github.com/mmaciejkowalski">Maciej Kowalski</a>
@@ -4483,16 +4478,16 @@ External services that transform an address or the name of a place into latitude
 
 ### Plugin collections
 
-Sets of plugins that span several categories.
+横跨几个类别的插件集。
 
-Plugin developers: please keep future plugins in individual repositories.
+插件开发人员：请将未来的插件保存在单独的存储库中。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/shramov/leaflet-plugins">Plugins by Pavel Shramov</a>
 		</td><td>
-			A set of plugins for: GPX, KML, TOPOJSON layers; Bing tile layer; Yandex layers (implemented with their APIs), and permalink control.
+				一组插件：GPX、KML、TOPOJSON 图层；Bing 图层；Yandex 层（使用其 API 实现）和永久链接控制。
 		</td><td>
 			<a href="https://github.com/shramov">Pavel Shramov</a>, <a href="https://github.com/brunob">Bruno B</a>
 		</td>
@@ -4501,7 +4496,7 @@ Plugin developers: please keep future plugins in individual repositories.
 		<td>
 			<a href="https://github.com/Estimap/Spectrum4Leaflet">Spectrum4Leaflet</a>
 		</td><td>
-			Tools for using Spectrum Spatial Server services with leaflet. This plugin supports: map service, tile service, feature service. It has layers, legend and feature controls.
+			使用带有 Leaflet 的 Spectrum Spatial Server 服务的工具。该插件支持：地图服务、瓦片服务、要素服务。它具有图层、图例和功能控件。
 		</td><td>
 			<a href="https://github.com/SVoyt">SVoyt</a>, <a href="https://github.com/Estimap">ESTI MAP</a>
 		</td>
@@ -4510,8 +4505,8 @@ Plugin developers: please keep future plugins in individual repositories.
 		<td>
 			<a href="http://mapbbcode.org/leaflet.html">MapBBCode-related leaflet plugins</a>
 		</td><td>
-			Seven plugins for various features, independent of the MapBBCode library.
-			From circular and popup icons to buttons, layer switcher, better search and attribution.
+			七个用于各种功能的插件，独立于MapBBCode库。
+			从圆形和弹出式图标到按钮、图层切换器、更好的搜索和属性。
 		</td><td>
 			<a href="https://github.com/zverik">Ilya Zverev</a>
 		</td>
@@ -4520,18 +4515,18 @@ Plugin developers: please keep future plugins in individual repositories.
 
 
 
-## Integration
+## 综合的
 
 ### Frameworks & build systems
 
-Ease your development integrating Leaflet into a development framework or automating some of the javascript/CSS work for complex applications.
+将 Leaflet 集成到一个开发框架中，或为复杂的应用程序自动处理一些 javascript/CSS 工作，以简化你的开发工作。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/ghybs/leaflet-defaulticon-compatibility">leaflet-defaulticon-compatibility</a>
 		</td><td>
-			Retrieve all Leaflet Default Icon options from CSS, in particular all icon images URL's, to improve compatibility with bundlers and frameworks that modify URL's in CSS. In particular for webpack (with style-, css-, file- and url-loader's), Rails Asset Pipeline and Django pipeline. Should solve all use cases linked to <a href="https://github.com/Leaflet/Leaflet/issues/4968">issue Leaflet/Leaflet #4968</a>. <a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html">Demo with webpack</a> (and <a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html?demo=no-plugin">without this plugin</a>).
+			从 CSS 中检索所有 Leaflet 默认图标选项，特别是所有图标图像 URL，以提高与在 CSS 中修改 URL 的捆绑器和框架的兼容性。特别是对于 webpack（带有 style-、css-、file- 和 url-loader）、Rails 资产管道和 Django 管道。应解决与<a href="https://github.com/Leaflet/Leaflet/issues/4968">问题 Leaflet/Leaflet #4968</a>相关的所有用例。<a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html">使用 webpack 的 demo</a>（<a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html?demo=no-plugin">不使用此插件</a>）。
 		</td><td>
 			<a href="https://github.com/ghybs">ghybs</a>
 		</td>
@@ -4540,7 +4535,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/moklick/generator-leaflet">Leaflet Yeoman Generator</a>
 		</td><td>
-			Yeoman generator that scaffolds out a basic Leaflet map application.
+			Yeoman 生成器，用于构建基本的 Leaflet 地图应用程序。
 		</td><td>
 			<a href="https://github.com/moklick">Moritz Klack</a>
 		</td>
@@ -4549,7 +4544,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/PaulLeCam/react-leaflet">react-leaflet</a>
 		</td><td>
-			<a href="https://facebook.github.io/react/">React</a> components for Leaflet maps.
+			用于 Leaflet 地图的 <a href="https://facebook.github.io/react/">React</a> 组件。
 		</td><td>
 			<a href="http://paullecam.github.io/">Paul Le Cam</a>
 		</td>
@@ -4558,7 +4553,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/leaflet-extras/leaflet.css">Leaflet.CSS</a>
 		</td><td>
-			Add the main Leaflet CSS files (or any css) from within JavaScript, be gone conditional comments.
+			从 JavaScript 中添加主要的 Leaflet CSS 文件（或任何 css），去掉条件注释。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf">Calvin Metcalf</a>
 		</td>
@@ -4567,7 +4562,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/Norkart/Leaflet-LayerConfig">Leaflet LayerConfig</a>
 		</td><td>
-			Provide a json file or service response with a configuration of layers and markers to automatically set up a Leaflet client.
+			提供一个 json 文件或服务响应，其中包含图层和标记的配置，以自动设置一个 Leaflet 客户端。
 		</td><td>
 			<a href="https://github.com/alexanno">Alexander Nossum</a>
 		</td>
@@ -4576,7 +4571,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.i18n">Leaflet.i18n</a>
 		</td><td>
-			Internationalization for Leaflet plugins.
+			进行国际化处理的 Leaflet 插件。
 		</td><td>
 			<a href="http://yohanboniface.me">Yohan Boniface</a>
 		</td>
@@ -4585,7 +4580,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/dagjomar/Leaflet.ZoomCSS">Leaflet ZoomLevel CSS Class</a>
 		</td><td>
-			Add zoom level css class to map element for easy style updates based on zoom levels
+			为地图元素添加缩放等级的 css 类，便于根据缩放级别更新样式
 		</td><td>
 			<a href="https://github.com/dagjomar">Dag Jomar Mersland</a>
 		</td>
@@ -4594,7 +4589,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/IjzerenHein/famous-map">famous-map</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='http://famo.us'>famo.us</a> web framework.
+			将 Leaflet 集成到使用 <a href='http://famo.us'>famo.us</a> Web 框架制作的应用程序中。
 		</td><td>
 			<a href="http://www.gloey.nl">Hein Rutjes</a>
 		</td>
@@ -4603,7 +4598,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/Asymmetrik/ngx-leaflet">ngx-leaflet</a>
 		</td><td>
-			Leaflet components and extensions for <a href="https://angular.io/">Angular.io</a>.
+			用于 <a href="https://angular.io/">Angular.io</a> 的 Leaflet 组件和扩展。
 		</td><td>
 			<a href="https://asymmetrik.com/">Asymmetrik, Ltd.</a>
 		</td>
@@ -4612,7 +4607,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/tombatossals/angular-leaflet-directive">Angular Leaflet directive</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='http://angularjs.org/'>AngularJS</a> web framework.
+			在使用 <a href='http://angularjs.org/'>AngularJS</a> 网络框架制作的应用程序中集成 Leaflet。
 		</td><td>
 			<a href="https://github.com/tombatossals">David Rubert</a>
 		</td>
@@ -4621,7 +4616,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/CleverMaps/tiny-leaflet-directive">Tiny Leaflet Directive</a>
 		</td><td>
-			Tiny LeafletJS map directive for your AngularJS apps.
+			为你的 AngularJS 应用程序提供微小的 LeafletJS 地图指令。
 		</td><td>
 			<a href="https://github.com/mattesCZ">Martin Tesař</a>
 		</td>
@@ -4630,7 +4625,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/grantHarris/leaflet-popup-angular">Leaflet Popup Angular</a>
 		</td><td>
-			Use AngularJS in your Leaflet popups. Extends the built-in L.popup.
+			在你的 Leaflet popups 中使用 AngularJS。它扩展了内置的 L.popup.Action。
 		</td><td>
 			<a href="https://github.com/grantHarris">Grant Harris</a>
 		</td>
@@ -4639,7 +4634,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/grantHarris/leaflet-control-angular">Leaflet Control Angular</a>
 		</td><td>
-			Insert and use Angularized HTML code in your Leaflet map as a Leaflet control.
+			在你的 Leaflet 地图中插入和使用 Angular 化的 HTML 代码，作为 Leaflet 控件。
 		</td><td>
 			<a href="https://github.com/grantHarris">Grant Harris</a>
 		</td>
@@ -4648,7 +4643,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/yagajs/leaflet-ng2">YAGA leaflet-ng2</a>
 		</td><td>
-			Granular integration into Angular2/4. <a href="https://leaflet-ng2.yagajs.org/latest/examples"> demo </a>.
+			粒度集成到 Angular2/4 中。 <a href="https://leaflet-ng2.yagajs.org/latest/examples"> demo </a>
 		</td><td>
 			<a href="https://github.com/yagajs">YAGA Development Team</a>
 		</td>
@@ -4657,7 +4652,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/leaflet-extras/leaflet-map">&lt;leaflet-map&gt;</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='https://www.polymer-project.org/'>Polymer &gt;= 1.0</a> web component framework.
+			将 Leaflet 集成到使用 <a href='https://www.polymer-project.org/'>Polymer &gt;= 1.0</a> Web 组件框架制作的应用程序中。
 		</td><td>
 			<a href="https://github.com/nhnb">Hendrik Brummermann</a>,
 			<a href="https://github.com/prtksxna">Prateek Saxena</a>
@@ -4667,7 +4662,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/prtksxna/leaflet-map-component">Leaflet map component</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='https://www.polymer-project.org/0.5/'>Polymer 0.5</a> web framework.
+			将 Leaflet 集成到使用 <a href='https://www.polymer-project.org/0.5/'>Polymer 0.5</a> Web 框架制作的应用程序中。
 		</td><td>
 			<a href="https://github.com/prtksxna">Prateek Saxena</a>
 		</td>
@@ -4676,7 +4671,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://bitbucket.org/terrayazilim/leaflet.jsf">Leaflet.jsf</a>
 		</td><td>
-			Comprehensive Java Server Faces(JSF) Component/Wrapper for Leaflet.
+			用于 Leaflet 的综合 Java Server Faces(JSF) 组件/包装器。
 		</td><td>
 			<a href="http://terrayazilim.com.tr">Terra SI LLC.</a>
 			<a href="https://bitbucket.org/terrayazilim">M.Çağrı Tepebaşılı</a>
@@ -4686,7 +4681,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/themrleon/JSF2Leaf">JSF2Leaf</a>
 		</td><td>
-			A JavaServer Faces wrapper for Leaflet.
+			Leaflet 的 JavaServer Faces 包装器。
 		</td><td>
 			<a href="https://github.com/themrleon">Leonardo Ciocari</a>
 		</td>
@@ -4695,7 +4690,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://miguelcobain.github.io/ember-leaflet/">ember-leaflet</a>
 		</td><td>
-			Easy and declarative mapping for <a href="http://emberjs.com/">Ember.js</a> using Leaflet.
+			使用 Leaflet 为 <a href="http://emberjs.com/">Ember.js</a> 提供简单和声明性的映射。
 		</td><td>
 			<a href="https://github.com/miguelcobain">Miguel Andrade</a>
 		</td>
@@ -4704,7 +4699,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/bevanhunt/meteor-leaflet">meteor-leaflet</a>
 		</td><td>
-			Provides a Meteor package to quickly build real-time cross-platform map apps.
+			提供了一个 Meteor 包来快速建立实时的跨平台地图应用。
 		</td><td>
 			<a href="https://github.com/bevanhunt">Bevan Hunt</a>
 		</td>
@@ -4713,7 +4708,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gregallensworth/L.Control.BootstrapModal">L.Control.BootstrapModal</a>
 		</td><td>
-			Trigger a Bootstrap modal using an on-map control.
+			使用地图上的控件触发一个 Bootstrap 模态框（Modal）。
 		</td><td>
 			<a href="https://github.com/gregallensworth">Greg Allensworth</a>
 		</td>
@@ -4722,7 +4717,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gregallensworth/L.Control.jQueryDialog">L.Control.jQueryDialog</a>
 		</td><td>
-			Trigger a jQuery UI dialog/modal using an on-map control.
+			使用地图上的控件触发一个 jQuery UI dialog/modal。
 		</td><td>
 			<a href="https://github.com/gregallensworth">Greg Allensworth</a>
 		</td>
@@ -4731,7 +4726,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/mstahv/v-leaflet">V-Leaflet</a>
 		</td><td>
-			Use Leaflet as a component for the <a href='https://vaadin.com/home'>Vaadin</a> Java/HTML framework.
+			将 Leaflet 作为 <a href='https://vaadin.com/home'>Vaadin</a> Java/HTML 框架的一个组件。
 		</td><td>
 			<a href="https://github.com/mstahv">Matti Tahvonen</a>
 		</td>
@@ -4740,7 +4735,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gwidgets/gwty-leaflet">gwty-leaflet</a>
 		</td><td>
-			A Java/GWT JsInterop wrapper for Leaflet. It allows using Leaflet in Java the same way as from a javascript script.
+			一个用于 Leaflet 的 Java/GWT JsInterop 包装器。它允许在 Java 中使用 Leaflet，就像在 javascript 脚本中一样。
 		</td><td>
 			<a href="https://github.com/zak905">Zakaria Amine</a>
 		</td>
@@ -4749,7 +4744,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gherardovarando/leaflet-map-builder">Leaflet Map Builder</a>
 		</td><td>
-			It populates a leaflet map from a configuration object, can also creates zoom, layers, attribution and           draw controls. <a href="https://gherardovarando.github.io/leaflet-map-builder/"> demo </a>.
+			它从一个配置对象中填充 Leaflet 地图，还可以创建缩放、图层、属性和绘制控件。 <a href="https://gherardovarando.github.io/leaflet-map-builder/"> demo </a>
 		</td><td>
 			<a href="https://github.com/gherardovarando">Gherardo Varando</a>
 		</td>
@@ -4758,7 +4753,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/KoRiGaN/Vue2Leaflet">Vue2Leaflet</a>
 		</td><td>
-			<a href="https://github.com/KoRiGaN/Vue2Leaflet">Vue2Leaflet</a> is a JavaScript library for the <a href="https://vuejs.org/">Vue.js</a> framework that wraps Leaflet, making it easy to create reactive maps.
+			<a href="https://github.com/KoRiGaN/Vue2Leaflet">Vue2Leaflet</a> 是一个用于 <a href="https://vuejs.org/">Vue.js</a> 框架的JavaScript库，它封装了 Leaflet，使其能够轻松创建交互式地图。
 		</td><td>
 			<a href="https://github.com/KoRiGaN">Mickaël KoRiGaN</a>
 		</td>
@@ -4767,7 +4762,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/axyjo/leaflet-rails">leaflet-rails gem</a>
 		</td><td>
-			This gem provides the leaflet.js map display library for your Rails 5 application. <a href="https://rubygems.org/gems/leaflet-rails">leaflet-rails on RubyGems</a>
+			这个 gem 为您的 Rails 5 应用程序提供了 Leaflet.js 地图显示库。<a href="https://rubygems.org/gems/leaflet-rails"> RubyGems 上的 leaflet-rails</a>。
 		</td><td>
 			<a href="https://github.com/axyjo">Akshay Joshi</a>
 		</td>
@@ -4777,14 +4772,14 @@ Ease your development integrating Leaflet into a development framework or automa
 
 ### 3<sup>rd</sup> party integration
 
-The following plugins integrate Leaflet into third party services or websites.
+以下插件将 Leaflet 集成到第三方服务或网站中。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.EditInOSM">Leaflet.EditInOSM</a>
 		</td><td>
-			Add a control with links to open the current map view on main OSM editors.
+			在主要的 OSM 编辑器上添加一个带链接的控件来打开当前地图视图。
 		</td><td>
 			<a href="http://yohanboniface.me">Yohan Boniface</a>
 		</td>
@@ -4793,7 +4788,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://www.mapsmarker.com/">Maps Marker Pro</a>
 		</td><td>
-			A WordPress plugin that enables users to pin, organize and share their favorite places and tracks through their WordPress powered site.
+			一个 WordPress 插件，使用户能够通过他们的 WordPress 支持的网站固定、组织和分享他们最喜欢的地方和曲目。
 		</td><td>
 			<a href="http://www.harm.co.at/">Robert Harm</a>
 		</td>
@@ -4802,8 +4797,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://wordpress.org/plugins/leaflet-map/">WordPress Leaflet Map</a>
 		</td><td>
-			Interactive and flexible shortcode to create multiple maps in posts and pages,
-			and to add multiple markers on those maps.
+			交互式且灵活的 shortcode，可在帖子和页面中创建多个地图，并在这些地图上添加多个标记。
 		</td><td>
 			<a href="https://bozdoz.com/projects/leaflet-map">Benjamin J DeLong</a>
 		</td>
@@ -4813,7 +4807,7 @@ The following plugins integrate Leaflet into third party services or websites.
 			<a href="https://maptiks.com">Maptiks</a>
 		</td>
 		<td>
-			Analytics platform for web maps. Track map activities, layer load times, marker clicks, and more!
+			网络地图分析平台，跟踪地图活动、图层加载时间、标记点击等！
 		</td>
 		<td>
 			<a href="http://www.sparkgeo.com/">Sparkgeo</a>
@@ -4823,7 +4817,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://drupal.org/project/leaflet">Leaflet for Drupal</a>
 		</td><td>
-			A Drupal (7.x and 8.x) module to integrate Leaflet maps in your Drupal site. Contains a field formatter to show a map for fields containing geospatial data, Views integration to plot data on a map, and a lightweight and easy to use API. Currently used by over 10.000 sites.
+			一个 Drupal（7.x 和 8.x）模块，用于在您的 Drupal 站点中集成 Leaflet 地图。包含一个字段格式化程序来显示包含地理空间数据的字段的地图，视图集成以在地图上绘制数据，以及一个轻量级且易于使用的 API。目前被超过 10.000 个站点使用。
 		</td><td>
 			<a href="http://marzeelabs.org">Marzee Labs</a>, and more maintainers listed at <a href="http://drupal.org/project/leaflet">drupal.org</a>
 		</td>
@@ -4832,7 +4826,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="https://lapizistik.github.io/leaflet-easymap/">Leaflet Easymap</a>
 		</td><td>
-			Include a map in your HTML page without one line of programming. A data-driven Javascript module.
+			在您的 HTML 页面中引入一张地图，而无需进行任何编程。一个数据驱动的 Javascript 模块。
 		</td><td>
 			<a href="https://github.com/Lapizistik">Klaus Stein</a>
 		</td>
@@ -4841,7 +4835,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://wp-mapit.phpwebdev.in">WP MapIt</a>
 		</td><td>
-			Easy to use, WordPress Map plugin based on Open Street Map and Leaflet with custom markers images, descriptions and links.
+			Open Street Map 和 Leaflet，带有自定义标记图像、描述和链接。
 		</td><td>
 			<a href="http://phpwebdev.in/">Chandni Patel</a>
 		</td>
@@ -4850,7 +4844,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="https://wordpress.org/plugins/map-block-leaflet/">Map Block Leaflet</a>
 		</td><td>
-			A Block for the New WordPress Block Editor based on Leaflet, it allow add and custom maps from a visual interface.
+			一个基于 Leaflet 的新 WordPress 区块编辑器的区块，它允许从一个可视化界面添加和定制地图。
 		</td><td>
 			<a href="https://goiblas.com/">Jesús Olazagoitia</a>
 		</td>
@@ -4859,7 +4853,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="https://community.mybb.com/mods.php?action=view&pid=1238">ABP Usermap MyBB</a>
 		</td><td>
-		A plugin for <a href="https://mybb.com/">MyBB</a> creating a map of users based on Open Street Map and Leaflet, with customisable popup and markers
+		    一个用于 <a href="https://mybb.com/">MyBB</a> 的插件，基于 Open Street Map 和 Leaflet 创建用户地图，并可自定义弹出窗口和标记。
 		</td><td>
 			<a href="https://gitlab.com/AnoBug">CrazyCat</a>
 		</td>
@@ -4871,19 +4865,19 @@ The following plugins integrate Leaflet into third party services or websites.
 			<ul>
         <li>
           <strong>Agosm: </strong><br />
-          Joomla Module not only for showing Markers on a OpenStreetMap Map.<br />
+          Joomla 模块不仅用于在 OpenStreetMap 地图上显示标记。
           <a href="https://github.com/astridx/pkg_agosms">Gibhub</a><br />
-          <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/agosm/">Joomla Extension Directory</a><br />
+          <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/agosm/">Joomla扩展目录</a><br />
         </li>
         <li>
             <strong>Aggpxtrack: </strong><br />
-            Joomla Custom Field for dispaying a GPX Track on a Map - you can choose an OpenStreetMap or GoogleMaps. With much options. For example: One option is an elevation profil.<br />
+            Joomla自定义字段用于在地图上发送GPX轨迹 - 你可以选择OpenStreetMap或GoogleMaps。有很多选项。比如说。其中一个选项是高程剖面图。
             <a href="https://github.com/astridx/pkg_aggpxtrack">Gibhub</a><br />
-            <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/aggpxtrack/">Joomla Extension Directory</a><br />
+            <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/aggpxtrack/">Joomla扩展目录</a><br />
         </li>
         <li>
             <strong>Agosmmapwithmarker: </strong><br />
-            Custom field for show a map with a marker in frond end - always the right card for the content. You can enter the address in backend.<br />
+            自定义字段，用于显示一个带有标记的地图，在边缘端--总是正确的内容卡。你可以在后台输入地址。
             <a href="https://github.com/astridx/plg_fields_agosmmapwithmarker">Gibhub</a><br />
             <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/agosmmapwithmarker/">Joomla Extension Directory</a><br />
         </li>
@@ -4896,7 +4890,7 @@ The following plugins integrate Leaflet into third party services or websites.
 	<td>
 		<a href="https://github.com/mwasil/Leaflet.Facebook/">Leaflet.Facebook</a>
 	</td><td>
-		Simple plugin for adding Facebook like button as a control.
+		用于添加 Facebook 点赞按钮作为控件的简单插件。
 	  </td><td>
 		<a href="https://marcinwasilewski.eu/u">Marcin Wasilewski</a>
 	</td>
@@ -4905,7 +4899,7 @@ The following plugins integrate Leaflet into third party services or websites.
 	<td>
 		<a href="https://github.com/alexboia/WP-Trip-Summary/">WP-Trip-Summary</a>
 	</td><td>
-		A WordPress trip summary plugin to help travel bloggers manage and display structured information about their train rides and biking or hiking trips.
+		一个 WordPress 旅行总结插件，可帮助旅游博主管理和显示有关他们乘坐火车、骑自行车或徒步旅行的结构化信息。
 	  </td><td>
 		<a href="https://wordpress.org/plugins/wp-trip-summary/">Alexandru Boia</a>
 	</td>
@@ -4916,8 +4910,8 @@ The following plugins integrate Leaflet into third party services or websites.
 
 ## Develop your own
 
-Leaflet keeps it simple. If you can think of a feature that is not required by all Leaflet users, and you can write the JavaScript code in a reusable way, you've got yourself a Leaflet plugin already.
+Leaflet 保持简单。如果你能想到一个并非所有 Leaflet 用户都需要的功能，并且你能以一种可重复使用的方式编写 JavaScript 代码，你就已经有了一个 Leaflet 插件。
 
-There are no hard requirements on how to create your own plugin, but all developers are encouraged to read the recommendations in the [plugin guide](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md).
+对于如何创建自己的插件没有硬性要求，但我们鼓励所有的开发者阅读[插件指南](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md)中的建议。
 
-Once your plugin is ready, you can submit it to this list: just send a pull request with the addition to [/docs/plugins.md](https://github.com/Leaflet/Leaflet/blob/master/docs/plugins.md) to our GitHub repository.
+一旦您的插件准备就绪，您就可以将其提交到此列表：只需将添加到 [/docs/plugins.md](https://github.com/Leaflet/Leaflet/blob/master/docs/plugins.md) 的 PR 发送到我们的 GitHub 存储库。
