@@ -4101,10 +4101,10 @@ handlers start running).</td>
 	</div>
 </div>
 
-</section><h2 id='tilelayer'>TileLayer</h2><p>Used to load and display tile layers on the map. Note that most tile servers require attribution, which you can set under <a href="#layer"><code>Layer</code></a>. Extends <a href="#gridlayer"><code>GridLayer</code></a>.</p>
+</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示切片图层。 请注意，大多数tile服务器都需要属性，您可以在其下设置 <a href="#layer"><code>Layer</code></a>. 扩展 <a href="#gridlayer"><code>GridLayer</code></a>.</p>
 
 <section>
-<h3 id='tilelayer-example'>Usage example</h3>
+<h3 id='tilelayer-example'>使用案例</h3>
 
 <section >
 
@@ -4119,15 +4119,15 @@ handlers start running).</td>
 
 </section><section >
 
-<h4 id='tilelayer-url-template'>URL template</h4>
+<h4 id='tilelayer-url-template'>URL 模板</h4>
 
 
 
-<p>A string of the following form:</p>
+<p>表现为以下方式:</p>
 <pre><code>'http://{s}.somedomain.com/blabla/{z}/{x}/{y}{r}.png'
 </code></pre>
-<p><code>{s}</code> means one of the available subdomains (used sequentially to help with browser parallel requests per domain limitation; subdomain values are specified in options; <code>a</code>, <code>b</code> or <code>c</code> by default, can be omitted), <code>{z}</code> — zoom level, <code>{x}</code> and <code>{y}</code> — tile coordinates. <code>{r}</code> can be used to add &quot;@2x&quot; to the URL to load retina tiles.</p>
-<p>You can use custom keys in the template, which will be <a href="#util-template">evaluated</a> from TileLayer options, like this:</p>
+<p><code>{s}</code> 表示可用的子域之一（按顺序用于帮助处理每个域限制的浏览器并行请求；子域值在选项中指定；默认情况下可以省略 <code>a</code>, <code>b</code> 或者 <code>c</code>）, <code>{z}</code> — zoom等级, <code>{x}</code> 和 <code>{y}</code> — tile坐标. <code>{r}</code> 可以被用于增加 &quot;@2x&quot; 到URL，且加载retina tiles.</p>
+<p>你可以使用通过TileLayer options<a href="#util-template">匹配</a>的模板在custom keys在模板里, 例子:</p>
 <pre><code>L.tileLayer('http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png', {foo: 'bar'});
 </code></pre>
 
@@ -4137,22 +4137,22 @@ handlers start running).</td>
 
 
 </section><section>
-<h3 id='tilelayer-factory'>Creation</h3>
+<h3 id='tilelayer-factory'>创建</h3>
 
 <section class='collapsable'>
 
-<h4 id='tilelayer-extension-methods'>Extension methods</h4>
+<h4 id='tilelayer-extension-methods'>扩展方法</h4>
 
 
 <table><thead>
 	<tr>
 		<th>Factory</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-l-tilelayer'>
 		<td><code><b>L.tilelayer</b>(<nobr>&lt;String&gt;</nobr> <i>urlTemplate</i>, <nobr>&lt;<a href='#tilelayer-option'>TileLayer options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates a tile layer object given a <code>URL template</code> and optionally an options object.</td>
+		<td>在给定<code>URL template</code>和可选的选项对象的情况下实例化切片图层对象</td>
 	</tr>
 </tbody></table>
 
@@ -4170,66 +4170,64 @@ handlers start running).</td>
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-minzoom'>
 		<td><code><b>minZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>The minimum zoom level down to which this layer will be displayed (inclusive).</td>
+		<td>此图层将显示的最小缩放级别（包括最小）</td>
 	</tr>
 	<tr id='tilelayer-maxzoom'>
 		<td><code><b>maxZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>18</code></td>
-		<td>The maximum zoom level up to which this layer will be displayed (inclusive).</td>
+		<td>此图层将显示的最大缩放级别（包括最大）</td>
 	</tr>
 	<tr id='tilelayer-subdomains'>
 		<td><code><b>subdomains</b></code></td>
 		<td><code>String|String[]</code></td>
 		<td><code>&#x27;abc&#x27;</code></td>
-		<td>Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.</td>
+		<td>Tile 服务的子域，可以以一个字符串（其中每个字母是一个子域名）或字符串数组的形式传递</td>
 	</tr>
 	<tr id='tilelayer-errortileurl'>
 		<td><code><b>errorTileUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the tile image to show in place of the tile that failed to load.</td>
+		<td>用于代替加载失败的图块显示的图块图像的 URL</td>
 	</tr>
 	<tr id='tilelayer-zoomoffset'>
 		<td><code><b>zoomOffset</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>The zoom number used in tile URLs will be offset with this value.</td>
+		<td>平铺 URL 中使用的缩放数字将与此值发生偏移</td>
 	</tr>
 	<tr id='tilelayer-tms'>
 		<td><code><b>tms</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, inverses Y axis numbering for tiles (turn this on for <a href="https://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a> services).</td>
+		<td>如果为 <code>true</code>, 反转 Tiles 的 Y 轴编号（为<a href="https://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a> 服务启用此功能）</td>
 	</tr>
 	<tr id='tilelayer-zoomreverse'>
 		<td><code><b>zoomReverse</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If set to true, the zoom number used in tile URLs will be reversed (<code>maxZoom - zoom</code> instead of <code>zoom</code>)</td>
+		<td>如果设置为 true，则图块 URL 中使用的缩放数字将被反转（<code>maxZoom - zoom</code> 而不是 <code>zoom</code>）</td>
 	</tr>
 	<tr id='tilelayer-detectretina'>
 		<td><code><b>detectRetina</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code> and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution.</td>
+		<td>如果为 <code>true</code> 而且用户在 retina 显示器上，它将要求四个指定大小一半的图块和更大的缩放级别来代替一个以利用高分辨率</td>
 	</tr>
 	<tr id='tilelayer-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the tiles.
-If a String is provided, all tiles will have their crossOrigin attribute set to the String provided. This is needed if you want to access tile pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到图块中。 如果提供了字符串，则所有图块的 crossOrigin 属性都将设置为提供的字符串。 如果您想访问平铺像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a> </td>
 	</tr>
 </tbody></table>
 
@@ -4237,7 +4235,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> Options 继承 <a href='#gridlayer'>GridLayer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4247,22 +4245,22 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-tilesize'>
 		<td><code><b>tileSize</b></code></td>
 		<td><code>Number|Point</code></td>
 		<td><code>256</code></td>
-		<td>Width and height of tiles in the grid. Use a number if width and height are equal, or <code>L.point(width, height)</code> otherwise.</td>
+		<td>网格中图块的宽度和高度。 如果宽度和高度相等，则使用数字，否则使用 <code>L.point(width, height)</code></td>
 	</tr>
 	<tr id='tilelayer-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Opacity of the tiles. Can be used in the <code>createTile()</code> function.</td>
+		<td>tiles的不透明度，可以在<code>createTile()</code>函数中使用</td>
 	</tr>
 	<tr id='tilelayer-updatewhenidle'>
 		<td><code><b>updateWhenIdle</b></code></td>
@@ -4348,7 +4346,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Options 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4382,7 +4380,7 @@ tiles outside the CRS limits.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> Events 继承 <a href='#gridlayer'>GridLayer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4433,7 +4431,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Events 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4464,7 +4462,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Popup events 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4495,7 +4493,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Tooltip events 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4560,7 +4558,7 @@ callback is called when the tile has been loaded.</p>
 
 </section><section class='collapsable'>
 
-<h4 id='tilelayer-extension-methods'>Extension methods</h4>
+<h4 id='tilelayer-extension-methods'>扩展方式</h4>
 
 <div class='section-comments'>Layers extending <a href="#tilelayer"><code>TileLayer</code></a> might reimplement the following method.</div>
 
@@ -4584,7 +4582,7 @@ Classes extending <a href="#tilelayer"><code>TileLayer</code></a> can override t
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> Methods 继承 <a href='#gridlayer'>GridLayer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4653,7 +4651,7 @@ Classes extending <a href="#tilelayer"><code>TileLayer</code></a> can override t
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Methods 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4710,7 +4708,7 @@ Classes extending <a href="#tilelayer"><code>TileLayer</code></a> can override t
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Popup methods 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4781,7 +4779,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> Tooltip methods 继承 <a href='#layer'>Layer</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4852,7 +4850,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> Methods 继承 <a href='#evented'>Evented</a></label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
