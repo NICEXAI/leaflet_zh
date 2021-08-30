@@ -5,6 +5,7 @@
 > 
 > Leaflet 中文站点：https://leafletjs.cn/
 > Leaflet 官方站点：https://leafletjs.com/
+> Robeeask 社区：https://leafletjs.robeeask.com/
 
 ### 翻译进度（v1.7.1）
 - [x] 概况
@@ -30,14 +31,14 @@
   - [x] UI 图层
   - [ ] 栅格图层（已认领，by DanPlayer）
   - [x] 地图杂项
-  - [ ] 矢量图层
-  - [ ] 其它图层
-  - [ ] 基本类型
-  - [ ] 控件
-  - [ ] Util常用方法类
-  - [ ] Dom常用方法类
-  - [ ] 基础类
-  - [ ] 其它
+  - [ ] 矢量图层（已认领，by zhsdcode）
+  - [ ] 其它图层（已认领，by zhsdcode）
+  - [ ] 基本类型（已认领，by zhsdcode）
+  - [ ] 控件（已认领，by zhsdcode）
+  - [ ] Util常用方法类（已认领，by zhsdcode）
+  - [ ] Dom常用方法类（已认领，by zhsdcode）
+  - [ ] 基础类（已认领，by zhsdcode）
+  - [ ] 其它（已认领，by zhsdcode）
 - [x] 下载
 - [x] 插件
   - [x] Tile & Image 图层（已完成，by lazytuanzi）
