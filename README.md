@@ -27,20 +27,20 @@
   - [x] 扩展 Leaflet: Class Theory
   - [x] 扩展 Leaflet: Layers
   - [x] 扩展 Leaflet: Handlers and Controls
-- [ ] 文档
+- [x] 文档
   - [x] 地图
   - [x] 地图方法
   - [x] UI 图层
-  - [ ] 栅格图层（已认领，by DanPlayer）
+  - [x] 栅格图层（已完成，by DanPlayer）
   - [x] 地图杂项
-  - [ ] 矢量图层（已认领，by zhsdcode）
-  - [ ] 其它图层（已认领，by zhsdcode）
-  - [ ] 基本类型（已认领，by zhsdcode）
-  - [ ] 控件（已认领，by zhsdcode）
-  - [ ] Util常用方法类（已认领，by zhsdcode）
-  - [ ] Dom常用方法类（已认领，by zhsdcode）
-  - [ ] 基础类（已认领，by zhsdcode）
-  - [ ] 其它（已认领，by zhsdcode）
+  - [x] 矢量图层（已完成，by zhsdcode）
+  - [x] 其它图层（已完成，by zhsdcode）
+  - [x] 基本类型（已完成，by zhsdcode）
+  - [x] 控件（已完成，by zhsdcode）
+  - [x] Util常用方法类（已完成，by zhsdcode）
+  - [x] Dom常用方法类（已完成，by zhsdcode）
+  - [x] 基础类（已完成，by zhsdcode）
+  - [x] 其它（已完成，by zhsdcode）
 - [x] 下载
 - [x] 插件
   - [x] Tile & Image 图层（已完成，by lazytuanzi）
@@ -123,11 +123,16 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 
 
 
-### 参与贡献人员名单
+### 参与翻译人员名单
 
 > 定期更新，谢谢各位辛勤贡献
 
 * [zhsdcode](https://github.com/zhsdcode)
+* [DanPlayer](https://github.com/DanPlayer)
 * lazytuanzi
+
+### 其它方面的支持与赞助
+
+* 特别感谢 [Robeeask 社区](https://robeeask.com/) 对 Leaflet 中文网的部分资金赞助
 
 **只要文档符合 [翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)，欢迎你来一起完善**

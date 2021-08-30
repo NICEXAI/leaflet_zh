@@ -12,11 +12,16 @@ bodyclass: honor-page
 #### 参与翻译人员名单
 
 * [zhsdcode](https://github.com/zhsdcode)
+* [DanPlayer](https://github.com/DanPlayer)
 * lazytuanzi
 
 #### 官方交流群优秀成员
 
 * 待定
+
+#### 其它方面的支持与赞助
+
+* 特别感谢 [Robeeask 社区](https://robeeask.com/) 对 Leaflet 中文网的部分资金赞助
 
 ## 加入我们
 
