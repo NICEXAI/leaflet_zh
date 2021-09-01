@@ -4,7 +4,10 @@
 > Leaflet一个开源并且对移动端友好的交互式地图JavaScript库。本项目目的在于为国内使用`Leaflet`的小伙伴们提供一份内容完善、准确度相对较高并且更新及时的中文文档，希望能够给大家在学习或开发过程中带来一定的便利。
 > 
 > Leaflet 中文站点：https://leafletjs.cn/
+> 
 > Leaflet 官方站点：https://leafletjs.com/
+> 
+> Robeeask 社区：https://leafletjs.robeeask.com/
 
 ### 翻译进度（v1.7.1）
 - [x] 概况
@@ -24,30 +27,30 @@
   - [x] 扩展 Leaflet: Class Theory
   - [x] 扩展 Leaflet: Layers
   - [x] 扩展 Leaflet: Handlers and Controls
-- [ ] 文档
+- [x] 文档
   - [x] 地图
   - [x] 地图方法
   - [x] UI 图层
-  - [ ] 栅格图层
+  - [x] 栅格图层（已完成，by DanPlayer）
   - [x] 地图杂项
-  - [ ] 矢量图层
-  - [ ] 其它图层
-  - [ ] 基本类型
-  - [ ] 控件
-  - [ ] Util常用方法类
-  - [ ] Dom常用方法类
-  - [ ] 基础类
-  - [ ] 其它
+  - [x] 矢量图层（已完成，by zhsdcode）
+  - [x] 其它图层（已完成，by zhsdcode）
+  - [x] 基本类型（已完成，by zhsdcode）
+  - [x] 控件（已完成，by zhsdcode）
+  - [x] Util常用方法类（已完成，by zhsdcode）
+  - [x] Dom常用方法类（已完成，by zhsdcode）
+  - [x] 基础类（已完成，by zhsdcode）
+  - [x] 其它（已完成，by zhsdcode）
 - [x] 下载
-- [ ] 插件
+- [x] 插件
   - [x] Tile & Image 图层（已完成，by lazytuanzi）
-  - [x] 覆盖数据（已完成，by lazytuanzi）
-  - [ ] 覆盖显示
-  - [ ] 覆盖交互
-  - [ ] 地图交互
-  - [ ] 各种各样的
-  - [ ] 综合的
-  - [ ] 开发属于自己的插件
+  - [x] 叠加数据（已完成，by lazytuanzi）
+  - [x] 叠加显示
+  - [x] 叠加交互
+  - [x] 地图交互
+  - [x] 各种各样的
+  - [x] 综合的
+  - [x] 开发属于自己的插件
 - [x] 博客（已完成，by zhsdcode）
 
 ### 加入翻译
@@ -120,11 +123,16 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 
 
 
-### 参与贡献人员名单
+### 参与翻译人员名单
 
 > 定期更新，谢谢各位辛勤贡献
 
 * [zhsdcode](https://github.com/zhsdcode)
+* [DanPlayer](https://github.com/DanPlayer)
 * lazytuanzi
+
+### 其它方面的支持与赞助
+
+* 特别感谢 [Robeeask 社区](https://robeeask.com/) 对 Leaflet 中文网的部分资金赞助
 
 **只要文档符合 [翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)，欢迎你来一起完善**

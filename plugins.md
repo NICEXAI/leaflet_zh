@@ -19,26 +19,26 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<li> <a href='#non-map-base-layers'>Non-map 基础图层</a></li>
 			<li> <a href='#tileimage-display'>Tile/Image 显示</a></li>
 			<li> <a href='#tile-load'>Tile 加载</a></li>
-			<li> <a href='#vector-tiles'>矢量 Tiles</a></li>
+			<li> <a href='#vector-tiles'>矢量 Tile</a></li>
 		</ul>
-		<h4>覆盖数据</h4>
+		<h4>叠加数据</h4>
 		<ul>
-			<li> <a href='#overlay-data-formats'>覆盖数据格式</a></li>
+			<li> <a href='#overlay-data-formats'>叠加数据格式</a></li>
 			<li> <a href='#dynamiccustom-data-loading'>动态加载数据</a></li>
-			<li> <a href='#synthetic-overlays'>合成覆盖</a></li>
+			<li> <a href='#synthetic-overlays'>合成叠加的数据</a></li>
 			<li> <a href='#data-providers'>数据提供程序</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
-		<h4>覆盖显示</h4>
+		<h4>叠加显示</h4>
 		<ul>
 			<li><a href="#markers--renderers">标记 &amp; 渲染</a></li>
-			<li><a href="#overlay-animations">覆盖动画</a></li>
+			<li><a href="#overlay-animations">叠加动画</a></li>
 			<li><a href="#clusteringdecluttering">Clustering/decluttering</a></li>
 			<li><a href="#heatmaps">热力图</a></li>
 			<li><a href="#dataviz">数据可视化</a></li>
 		</ul>
-		<h4>覆盖交互</h4>
+		<h4>叠加交互</h4>
 		<ul>
 			<li><a href="#edit-geometries">编辑几何图形</a></li>
 			<li><a href="#time--elevation">时间 &amp; 海拔</a></li>
@@ -85,15 +85,15 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 下面的插件支持加载不同的地图并提供 Tile 和 Image 图层的功能。
 
-* [底图提供程序](#basemap-providers)
-* [底图格式](#basemap-formats)
-* [Non-map 基础图层](#non-map-base-layers)
-* [Tile/image 显示](#tileimage-display)
-* [Tile 加载](#tile-load)
-* [矢量 tiles](#vector-tiles)
+* [Basemap providers](#basemap-providers)
+* [Basemap formats](#basemap-formats)
+* [Non-map base layers](#non-map-base-layers)
+* [Tile/image display](#tileimage-display)
+* [Tile load](#tile-load)
+* [Vector tiles](#vector-tiles)
 
 
-### 底图提供程序
+### Basemap providers
 
 几乎不需要配置，开箱即用的底图。
 
@@ -237,7 +237,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 底图格式
+### Basemap formats
 
 以下插件用于加载常见格式（非默认）的底图或者栅格图层。
 
@@ -381,7 +381,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 </table>
 
 
-### Non-map 基础图层
+### Non-map base layers
 
 有时候你不想加载地图，只想加载大的自定义图像，**非常大**的那种。
 
@@ -453,7 +453,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### Tile/image 显示
+### Tile/image display
 
 以下插件更改了地图中显示瓦片（tile）或图像(image)图层的方式。
 
@@ -653,7 +653,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### Tile 加载
+### Tile load
 
 下面插件改变了将瓦片（Tile）图层加载到地图中的方式。
 
@@ -762,7 +762,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 矢量瓦片（Tile）
+### Vector tiles
 
 用来显示[矢量瓦片（Tile）](https://github.com/mapbox/vector-tile-spec) 的插件。
 
@@ -815,16 +815,16 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 </table>
 
 
-## 覆盖数据
+## 叠加数据
 
 以下插件提供了加载叠加数据（GIS 矢量数据）的新方法：点、线和多边形。
 
-* [覆盖数据格式](#overlay-data-formats)
+* [叠加数据格式](#overlay-data-formats)
 * [动态加载数据](#dynamiccustom-data-loading)
-* [合成覆盖](#synthetic-overlays)
+* [合成叠加的数据](#synthetic-overlays)
 * [数据提供程序](#data-providers)
 
-### 覆盖数据格式
+### Overlay data formats
 
 使用各种 GIS 格式加载您自己的数据。
 
@@ -960,7 +960,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 加载动态的/自定义数据
+### Dynamic/custom data loading
 
 加载地图中更新的动态数据，或以非标准方式加载GIS矢量数据。
 
@@ -1033,7 +1033,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 合成覆盖
+### Synthetic overlays
 
 这些插件从头开始创建有用的叠加层，无需加载。
 
@@ -1133,9 +1133,9 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-### 数据提供程序
+### Data providers
 
-从三方服务加载覆盖数据。 另请参阅 [底图提供程序](#basemap-providers) 和 [插件合计](#collections).
+从三方服务加载叠加数据。 另请参阅 [Basemap providers](#basemap-providers) 和 [插件合计](#collections).
 
 <table class="plugins"><tr><th>插件</th><th>说明</th><th>维护者</th></tr>
 	<tr>
@@ -1237,9 +1237,9 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 
 
-## 覆盖显示
+## 叠加显示
 
-以下插件提供了显示覆盖数据信息的新方法。
+以下插件提供了显示叠加数据信息的新方法。
 
 * [标记 & 渲染](#markers--renderers)
 * [叠加动画](#overlay-animations)
@@ -1248,7 +1248,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 * [数据可视化](#dataviz)
 
 
-### 标记 & 渲染
+### Markers & renderers
 
 这些插件提供了将抽象数据转换为屏幕中图像的新的标记（marker）或路径（way），精通 GIS 的 Leaflet 用户也将这些称为符号。
 
@@ -1877,14 +1877,14 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 ### Overlay animations
 
-These plugins animate markers or some geometries. See also [geometries with time or elevation](#geometryinteraction-time).
+这些插件对标记物或一些几何图形进行动画处理。另请参阅[带时间或海拔的几何图形](#geometryinteraction-time)。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/openplans/Leaflet.AnimatedMarker">Leaflet.AnimatedMarker</a>
 		</td><td>
-			Animate a marker along a polyline.
+			沿着多段线为一个标记制作动画。
 		</td><td>
 			<a href="https://github.com/atogle">Aaron Ogle</a>
 		</td>
@@ -1893,7 +1893,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/maximeh/leaflet.bouncemarker">Leaflet.BounceMarker</a>
 		</td><td>
-			Make a marker bounce when you add it to a map.
+            将标记添加到地图时使标记弹跳。
 		</td><td>
 			<a href="https://github.com/maximeh">Maxime Hadjinlian</a>
 		</td>
@@ -1902,7 +1902,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/hosuaby/Leaflet.SmoothMarkerBouncing">Leaflet.SmoothMarkerBouncing</a>
 		</td><td>
-			Smooth animation of marker bouncing for Leaflet.
+			为 Leaflet 的标记添加平滑的弹跳动画。
 		</td><td>
 			<a href="https://github.com/hosuaby">Alexei KLENIN</a>
 		</td>
@@ -1911,7 +1911,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/ewoken/Leaflet.MovingMarker">Leaflet.MovingMarker</a>
 		</td><td>
-			Allow to move markers along a polyline with custom durations.
+			允许以自定义的持续时间沿多段线移动标记。
 		</td><td>
 			<a href="https://github.com/ewoken">Ewoken</a>
 		</td>
@@ -1920,8 +1920,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/naturalatlas/leaflet-transitionedicon">Leaflet.TransitionedIcon</a>
 		</td><td>
-			Transition in/out markers with CSS3 transitions. It supports jitter
-			for staggering markers into view to prevent visual overload. See the <a href="http://naturalatlas.github.io/leaflet-transitionedicon/">demo</a>.
+			使用 CSS3 动画过渡 进入/移除 的标记。它支持抖动，将标记交错进入视图以防止视觉过载。查看 <a href="http://naturalatlas.github.io/leaflet-transitionedicon/">demo</a>
 		</td><td>
 			<a href="https://github.com/brianreavis">Brian Reavis</a>
 		</td>
@@ -1930,7 +1929,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/IvanSanchez/Leaflet.Polyline.SnakeAnim">Leaflet.Polyline.SnakeAnim</a>
 		</td><td>
-			Animates (poly)lines into existence, as if they were being slowly drawn from start to end.
+			将（多角）线动画化，就像它们被慢慢地从头画到尾一样。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -1940,7 +1939,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.Path.DashFlow">Leaflet.Path.DashFlow</a>
 		</td><td>
-			Animates the dashArray of lines and circles, creating a basic flow effect. (<a href="https://ivansanchez.gitlab.io/Leaflet.Path.DashFlow/demo.html">Demo</a>.
+			对直线和圆圈的 dashArray 进行动画处理，创造一个基本的流动效果。(<a href="https://ivansanchez.gitlab.io/Leaflet.Path.DashFlow/demo.html">Demo</a>
 		</td><td>
 			<a href="https://gitlab.com/IvanSanchez">Iván Sánchez Ortega</a>
 		</td>
@@ -1949,7 +1948,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/rubenspgcavalcante/leaflet-ant-path">Leaflet.AntPath</a>
 		</td><td>
-			Leaflet.AntPath put a flux animation (like ants walking) into a Polyline.
+			Leaflet.AntPath将一个通量动画（如蚂蚁行走）放入Polyline。
 			(<a href='http://rubenspgcavalcante.github.io/leaflet-ant-path/'>demo</a>)
 		</td><td>
 			<a href="https://github.com/rubenspgcavalcante">Rubens Pinheiro</a>
@@ -1959,7 +1958,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://gitlab.com/IvanSanchez/Leaflet.Marker.SlideTo">Leaflet.Marker.SlideTo</a>
 		</td><td>
-			Smoothly move (slide) markers to a new location. (<a href='http://ivansanchez.gitlab.io/Leaflet.Marker.SlideTo/demo.html'>demo</a>)
+			平稳地移动（滑动）标记到一个新的位置。 (<a href='http://ivansanchez.gitlab.io/Leaflet.Marker.SlideTo/demo.html'>demo</a>)
 		</td><td>
 			<a href="https://gitlab.com/u/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -1969,7 +1968,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 		<td>
 			<a href="https://github.com/Igor-Vladyka/leaflet.motion">leaflet.motion</a>
 		</td><td>
-			Adds simple motion to your polyline with marker in a head on line (<a href='https://igor-vladyka.github.io/leaflet.motion/'>demo</a>)
+			将简单的运动添加到你的多段线上，并在线头处设置标记。 (<a href='https://igor-vladyka.github.io/leaflet.motion/'>demo</a>)
 		</td><td>
 			<a href="https://github.com/Igor-Vladyka/">Igor Vladyka</a>,
 		</td>
@@ -1979,7 +1978,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/ggolikov/Leaflet.Rain">Leaflet.Rain</a>
 		</td>
 		<td>
-			Customizable WebGL rain animation for Leaflet. Useful for weather maps. (<a href="https://ggolikov.github.io/Leaflet.Rain/">demo</a>)
+			用于 Leaflet 的可定制的 WebGL 下雨动画，对天气图很有用。 (<a href="https://ggolikov.github.io/Leaflet.Rain/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ggolikov">Grigory Golikov</a>
@@ -1990,7 +1989,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/ggolikov/Leaflet.Snow">Leaflet.Snow</a>
 		</td>
 		<td>
-			Customizable WebGL snow animation for Leaflet. Useful for weather maps. (<a href="https://ggolikov.github.io/Leaflet.Snow/">demo</a>)
+			用于 Leaflet 的可定制的 WebGL 雪景动画，适用于天气图。 (<a href="https://ggolikov.github.io/Leaflet.Snow/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ggolikov">Grigory Golikov</a>
@@ -2001,7 +2000,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/onaci/leaflet-point-animator">leaflet-point-animator</a>
 		</td>
 		<td>
-			Animate a large number of GeoJSON points. (<a href="https://onaci.github.io/leaflet-point-animator">demo</a>)
+			为大量的 GeoJSON 点制作动画。 (<a href="https://onaci.github.io/leaflet-point-animator">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/danwild">danwild</a>, <a href="https://github.com/onaci">onaci</a>
@@ -2012,7 +2011,7 @@ These plugins animate markers or some geometries. See also [geometries with time
 			<a href="https://github.com/onaci/leaflet-temporal-geojson">leaflet-temporal-geojson</a>
 		</td>
 		<td>
-			Flexible animation of GeoJSON features. (<a href="https://onaci.github.io/leaflet-temporal-geojson">demo</a>)
+			灵活的 GeoJSON feature 的动画。 (<a href="https://onaci.github.io/leaflet-temporal-geojson">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/danwild">danwild</a>, <a href="https://github.com/onaci">onaci</a>
@@ -2024,14 +2023,14 @@ These plugins animate markers or some geometries. See also [geometries with time
 
 ### Clustering/Decluttering
 
-When you are displaying a lot of data, these plugins will make your map look cleaner.
+当您显示大量数据时，这些插件将使您的地图看起来更干净。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a>
 		</td><td>
-			Beautiful, sophisticated, high performance marker clustering solution with smooth animations and lots of great features. <em>Recommended!</em>
+			美丽、精致、高性能的标记群集解决方案，具有流畅的动画和许多强大的功能。<em>强烈推荐！</em>。
 		</td><td>
 			<a href="https://github.com/danzel">Dave Leaver</a>
 		</td>
@@ -2040,7 +2039,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/MazeMap/Leaflet.LayerGroup.Collision">Leaflet.LayerGroup.Collision</a>
 		</td><td>
-			Provides collision detection for groups of markers. Unlike clustering, this takes into account the shape &amp; size of the markers.
+			为标记群提供碰撞检测。与聚类不同，它考虑到了标记的形状&amp; 大小。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -2050,7 +2049,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet">Overlapping Marker Spiderfier</a>
 		</td><td>
-			Deals with overlapping markers in a Google Earth-inspired way by gracefully springing them apart on click.
+			以谷歌地球启发的方式处理重叠的标记，在点击时优雅地将它们弹开。
 		</td><td>
 			<a href="http://mackerron.com">George MacKerron</a>
 		</td>
@@ -2059,7 +2058,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/SINTEF-9012/PruneCluster">PruneCluster</a>
 		</td><td>
-			Fast and realtime marker clustering library.
+            快速实时的标记聚类库。
 		</td><td>
 			<a href="https://github.com/yellowiscool">Antoine Pultier</a>
 		</td>
@@ -2068,7 +2067,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/oliverroick/Leaflet.Deflate">Leaflet.Deflate</a>
 		</td><td>
-			Deflates lines and polygons to a marker when their screen size becomes too small in lower zoom levels.
+			当线条和多边形在较低的缩放级别中屏幕尺寸变得太小时，将其放缩为一个标记。
 		</td><td>
 			<a href="https://github.com/oliverroick">Oliver Roick</a>
 		</td>
@@ -2077,7 +2076,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/andy-kay/Leaflet.GridCluster">Leaflet.GridCluster</a>
 		</td><td>
-			Create grid-based clusters in realtime.
+			实时创建基于网格的集群。
 		</td><td>
 			<a href="https://github.com/andy-kay">Andreas Kiefer</a>
 		</td>
@@ -2086,7 +2085,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/spatialdev/q-cluster">q-cluster</a>
 		</td><td>
-			Quick point clustering library with D3 categorization.
+			带有D3分类的快速点聚类库。
 		</td><td>
 			<a href="https://github.com/hallahan">Nicholas Hallahan</a>
 		</td>
@@ -2095,7 +2094,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/Eclipse1979/leaflet-conditionalLayer">Leaflet.ConditionalLayer</a>
 		</td><td>
-			A FeatureGroup that does not show any more than a certain amount of markers visible in the viewport. (<a href="http://eclipse1979.github.io/Leaflet.ConditionalLayer/example/leaflet-conditionalLayer2.html">Demo</a>)
+			在视口中不显示超过一定数量可见标记的要素组。(<a href="http://eclipse1979.github.io/Leaflet.ConditionalLayer/example/leaflet-conditionalLayer2.html">Demo</a>)
 		</td><td>
 			<a href="https://github.com/Eclipse1979">EPP</a>
 		</td>
@@ -2104,7 +2103,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/ghybs/Leaflet.FeatureGroup.SubGroup">Leaflet.FeatureGroup.SubGroup</a>
 		</td><td>
-			A simple plugin to create Feature Groups that add their child layers into a parent group. Typical usage is to switch them through L.Control.Layers to dynamically add/remove groups of markers from Leaflet.markercluster. <a href="http://ghybs.github.io/Leaflet.FeatureGroup.SubGroup/examples/subGroup-markercluster-controlLayers-realworld.388.html">Demo</a>.
+			一个简单的插件，用于创建特征组，将其子层添加到父组中。典型的用法是通过 L.Control.Layers 来切换它们，动态地添加/删除 Leaflet.markercluster 中的标记组。 <a href="http://ghybs.github.io/Leaflet.FeatureGroup.SubGroup/examples/subGroup-markercluster-controlLayers-realworld.388.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/ghybs">ghybs</a>
 		</td>
@@ -2113,7 +2112,7 @@ When you are displaying a lot of data, these plugins will make your map look cle
 		<td>
 			<a href="https://github.com/ZijingPeng/leaflet-tooltip-layout">leaflet-tooltip-layout</a>
 		</td><td>
-			A plugin to avoid tooltips overlapping and make it easier to find out the relationship between each tooltip and marker. <a href="https://zijingpeng.github.io/overlapping-avoided-tooltip/">Demo</a>.
+			一个避免工具提示重叠的插件，使其更容易找出每个工具提示和标记之间的关系。 <a href="https://zijingpeng.github.io/overlapping-avoided-tooltip/">Demo</a>
 		</td><td>
 			<a href="https://github.com/ZijingPeng">Zijing Peng</a>
 		</td>
@@ -2122,14 +2121,14 @@ When you are displaying a lot of data, these plugins will make your map look cle
 
 ### Heatmaps
 
-These plugins create heatmaps and heatmap-like visualizations from vector data.
+这些插件使用矢量数据创建可视化的热力图或类似热力图的图像。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/domoritz/leaflet-maskcanvas">MaskCanvas</a>
 		</td><td>
-			Canvas layer that can be used to visualize coverage.
+			画布层，可用于可视化覆盖。
 		</td><td>
 			<a href="https://github.com/domoritz">Dominik Moritz</a>
 		</td>
@@ -2138,7 +2137,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/sunng87/heatcanvas">HeatCanvas</a>
 		</td><td>
-			Simple heatmap api based on HTML5 canvas.
+			基于 HTML5 canvas 的简单的热力图 api。
 		</td><td>
 			<a href="https://github.com/sunng87">Sun Ning</a>
 		</td>
@@ -2147,9 +2146,8 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="http://www.patrick-wied.at/static/heatmapjs/example-heatmap-leaflet.html">heatmap.js</a>
 		</td><td>
-			JavaScript Library for HTML5 canvas based heatmaps.
-
-			Its Leaflet layer implementation supports large datasets because it is tile based and uses a quadtree index to store the data.
+			基于 HTML5 canvas 的热力图的 JavaScript 库。
+			其 Leaflet 层的实现支持大型数据集，因为它是基于瓦片的，并使用四叉树索引来存储数据。
 		</td><td>
 			<a href="https://github.com/pa7">Patrick Wied</a>
 		</td>
@@ -2158,8 +2156,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/dpiccone/leaflet-div-heatmap">Leaflet divHeatmap</a>
 		</td><td>
-			Lightweight and versatile heatmap layer based on CSS3 and divIcons
-
+			基于 CSS3 和 divIcons 的轻量级和多功能热力图图层
 		</td><td>
 			<a href="https://github.com/dpiccone">Daniele Piccone</a>
 		</td>
@@ -2168,8 +2165,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="http://ursudio.com/webgl-heatmap-leaflet/">WebGL Heatmap</a>
 		</td><td>
-			High performance Javascript heatmap plugin using WebGL.
-
+            使用 WebGL 的高性能 Javascript 热力图插件。
 		</td><td>
 			<a href="http://ursudio.com/webgl-heatmap-leaflet/">Benjamin J DeLong</a>
 		</td>
@@ -2178,8 +2174,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/Leaflet/Leaflet.heat">Leaflet.heat</a>
 		</td><td>
-			A tiny, simple and fast Leaflet heatmap plugin. Uses <a href='https://github.com/mourner/simpleheat'>simpleheat</a> under the hood, additionally clustering points into a grid for performance. (<a href='https://leaflet.github.io/Leaflet.heat/demo'>Demo</a>)
-
+			一个微小、简单、快速的 Leaflet 热力图插件。在引擎盖下使用 <a href='https://github.com/mourner/simpleheat'>simpleheat</a>，另外还将点聚成一个网格以提高性能。(<a href='https://leaflet.github.io/Leaflet.heat/demo'>Demo</a>)
 		</td><td>
 			<a href="https://github.com/mourner">Vladimir Agafonkin</a>
 		</td>
@@ -2188,7 +2183,7 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 		<td>
 			<a href="https://github.com/mejackreed/leaflet-solr-heatmap">Leaflet-Solr-Heatmap</a>
 		</td><td>
-			A Leaflet plugin for rendering heatmaps and clusters from <a href='https://lucene.apache.org/solr/guide/6_6/spatial-search.html#SpatialSearch-HeatmapFaceting'>Solr's Heatmap Faceting</a>. High performance for millions of points or polygons.
+			一个 Leaflet 插件，用于渲染来自 <a href='https://lucene.apache.org/solr/guide/6_6/spatial-search.html#SpatialSearch-HeatmapFaceting'>Solr 的 Heatmap Faceting</a> 的热力图和群集，对于数以百万计的点或多边形具有很高的性能。
 		</td><td>
 			<a href="https://github.com/mejackreed">Jack Reed</a> /
 			<a href="https://github.com/spacemansteve">Steve McDonald</a>
@@ -2199,14 +2194,14 @@ These plugins create heatmaps and heatmap-like visualizations from vector data.
 
 ### DataViz
 
-Powerful multi-purpose libraries for data visualization.
+用于数据可视化的强大多用途库。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/giscience/geogrid.js">geogrid.js</a>
 		</td><td>
-			Displays data aggregated by the ISEA3H discrete global grid system.  The data can, e.g., be delivered by using <a href="https://github.com/giscience/measures-rest">Measures REST</a> (a framework to deliver data aggregated by the grid) or <a href="https://github.com/giscience/geogrid">geogrid</a> (a library for handling the grid in case that you want to aggregate data manually).
+			显示由 ISEA3H 离散全球网格系统聚合的数据。例如，通过使用 <a href="https://github.com/giscience/measures-rest">Measures REST</a>（一个框架，提供由网格聚合的数据）或 <a href="https://github.com/giscience/geogrid">geogrid</a>（一个库，用于处理网格，以防你想手动聚合数据）来交付。
 		</td><td>
 			<a href="http://www.mocnik-science.net">F.-B. Mocnik,</a><br><a href="http://www.geog.uni-heidelberg.de/gis/index_en.html">GIScience Research Group,<br>Heidelberg University</a>
 		</td>
@@ -2215,7 +2210,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="http://dynmeth.github.com/RaphaelLayer/">RaphaelLayer</a>
 		</td><td>
-			Allows you to use <a href="http://raphaeljs.com/">Raphael</a> as a layer on a Leaflet map for advanced animations and visualizations.
+			允许您将 <a href="http://raphaeljs.com/">Raphael</a> 用作 Leaflet 地图上的图层，以实现高级动画和可视化。
 		</td><td>
 			<a href="https://github.com/dynmeth">Dynamic Methods</a>
 		</td>
@@ -2224,7 +2219,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="http://humangeo.github.com/leaflet-dvf/">Leaflet Data Visualization Framework</a>
 		</td><td>
-			New markers, layers, and utility classes for easy thematic mapping and data visualization.
+			新的标记、图层和实用程序类，可轻松实现专题制图和数据可视化。
 		</td><td>
 			<a href="https://github.com/sfairgrieve">Scott Fairgrieve</a>
 		</td>
@@ -2233,7 +2228,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/teralytics/Leaflet.D3SvgOverlay">Leaflet.D3SvgOverlay</a>
 		</td><td>
-			SVG overlay class for using with <a href="http://d3js.org">D3</a> library. Supports zoom animation and scaling without need to redraw the layer.
+			用于与<a href="http://d3js.org">D3</a>库一起使用的SVG叠加类。支持缩放动画和缩放，不需要重新绘制图层。
 		</td><td>
 			<a href="https://github.com/xEviL">Kirill Zhuravlev</a>
 		</td>
@@ -2242,7 +2237,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/mapbox/mapbox-gl-leaflet">mapbox-gl-leaflet</a>
 		</td><td>
-			Binding from Mapbox GL JS to the Leaflet API
+            从 Mapbox GL JS 绑定到 Leaflet API
 		</td><td>
 			<a href="https://github.com/tmcw">Tom MacWright</a>
 		</td>
@@ -2251,7 +2246,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/wandergis/leaflet-echarts">leaflet-echarts</a>
 		</td><td>
-			A plugin for Leaflet to load <a href="https://github.com/ecomfe/echarts">echarts</a> map and make big data visualization easier.
+            Leaflet 插件加载 <a href="https://github.com/ecomfe/echarts">echarts</a> 地图，让大数据可视化更简单。
 		</td><td>
 			<a href="https://github.com/wandergis">wandergis</a>
 		</td>
@@ -2260,7 +2255,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/atlefren/storymap">jquery-storymap</a>
 		</td><td>
-			A jQuery plugin to display several map locations as the user scrolls through paragraphs.
+			一个 jQuery 插件，用于在用户滚动段落时显示多个地图位置。
 		</td><td>
 			<a href="https://github.com/atlefren">Atle Frenvik Sveen</a>
 		</td>
@@ -2269,7 +2264,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/rstudio/leaflet">Leaflet for R</a>
 		</td><td>
-			Allows using Leaflet from within <a href="https://en.wikipedia.org/wiki/R_%28programming_language%29">R</a> programs, a programming language popular for statistical analysis and data mining.
+			允许在 <a href="https://en.wikipedia.org/wiki/R_%28programming_language%29">R</a> 程序中使用 Leaflet，这是一种流行于统计分析和数据挖掘的编程语言。
 		</td><td>
 			<a href="https://github.com/rstudio/">RStudio team</a>
 		</td>
@@ -2278,7 +2273,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/react-map/leaflet.migrationLayer">leaflet.migrationLayer</a>
 		</td><td>
-			leaflet.migrationLayer is used to show migration data such as population, flight, vehicle, traffic and so on. Data visualization on map.<a href="https://react-map.github.io/leaflet.migrationLayer">demo</a>
+			leaflet.migrationLayer 用来显示人口、航班、车辆、交通等迁移数据并在地图上进行数据可视化。<a href="https://react-map.github.io/leaflet.migrationLayer">demo</a>
 		</td><td>
 			<a href="https://github.com/react-map">Sylvenas</a>
 		</td>
@@ -2287,7 +2282,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://ibesora.github.io/Leaflet.Quadtree/">Leaflet.Quadtree</a>
 		</td><td>
-			Leaflet.Quadtree is used to retrieve visible data inside given bounds
+			Leaflet.Quadtree 是用于检索给定范围内的可见数据。
 		</td><td>
 			<a href="https://github.com/ibesora">ibesora</a>
 		</td>
@@ -2296,7 +2291,7 @@ Powerful multi-purpose libraries for data visualization.
 		<td>
 			<a href="https://github.com/jwasilgeo/Leaflet.Canvas-Flowmap-Layer">Leaflet.Canvas-Flowmap-Layer</a>
 		</td><td>
-			A LeafletJS custom map layer for mapping the flow of objects, ideas, people, etc. with Bezier curves rendered on the HTML canvas.
+			一个 LeafletJS 的自定义地图图层，用于在 HTML 画布上用贝塞尔曲线绘制物体、想法、人等的流动。
 		</td><td>
 			<a href="https://github.com/jwasilgeo">Jacob Wasilkowski</a>,
 			<a href="https://github.com/sarahbellum">Sarah Bell</a>
@@ -2306,7 +2301,7 @@ Powerful multi-purpose libraries for data visualization.
     <td>
 			<a href="https://github.com/manubb/Leaflet.PixiOverlay">Leaflet.PixiOverlay</a>
 		</td><td>
-			A Leaflet overlay class for drawing and animating with <a href="http://www.pixijs.com/">Pixi.js</a>. (<a href="https://manubb.github.io/Leaflet.PixiOverlay/demo.html">demo</a>)
+            可以使用 <a href="http://www.pixijs.com/">Pixi.js</a> 绘制和执行动画的 Leaflet 覆盖类。(<a href="https://manubb.github.io/Leaflet.PixiOverlay/demo.html">demo</a>)
 		</td><td>
 			<a href="https://github.com/manubb">Manuel Baclet</a>
 		</td>
@@ -2316,8 +2311,8 @@ Powerful multi-purpose libraries for data visualization.
     		<a href="https://github.com/danwild/leaflet-velocity">leaflet-velocity</a>
     	</td>
     	<td>
-            Visualise velocity layers with leaflet.
-            <a href="https://danwild.github.io/leaflet-velocity">Demo here.</a>
+            使用 Leaflet 可视化 velocity 图层。
+            <a href="https://danwild.github.io/leaflet-velocity">Demo</a>
         </td>
         <td>
             <a href="https://github.com/danwild">Dan Wild</a>
@@ -2328,7 +2323,7 @@ Powerful multi-purpose libraries for data visualization.
     		<a href="https://github.com/locknono/leaflet-partition">leaflet-partition</a>
     	</td>
     	<td>
-            Divide the area into parts in different ways such as voronoi(triangulation) and hexagonal tiling.
+            以不同的方式将区域划分为多个部分，例如 voronoi（三角剖分）和六边形平铺。
             <a href="https://locknono.github.io/leaflet-partition/">Basic demo</a>
         </td>
         <td>
@@ -2341,23 +2336,23 @@ Powerful multi-purpose libraries for data visualization.
 
 ## Interaction with geometries/features
 
-The following plugins enable users to interact with overlay data: edit geometries, select areas or features, interact with the time dimension, search features and display information about them.
+以下插件使用户能够与叠加数据互动：编辑几何图形，选择区域或特征，与时间维度互动，搜索特征并显示有关信息。
 
-* [Edit geometries](#edit-geometries)
-* [Time & elevation](#time--elevation)
-* [Search & popups](#search--popups)
-* [Area/overlay selection](#areaoverlay-selection)
+* [编辑几何图形](#edit-geometries)
+* [时间 & 海拔](#time--elevation)
+* [搜索 & 弹出框](#search--popups)
+* [区域/覆盖选择](#areaoverlay-selection)
 
 ### Edit geometries
 
-Allows users to create, draw, edit and/or delete points, lines and polygons.
+允许用户创建、绘制、编辑和/或删除点、线和多边形。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/geoman-io/leaflet-geoman">Leaflet-Geoman</a>
 		</td><td>
-			⭐ Geometry Management for Leaflet 1.0 and higher. Draw, Edit, Cut, Drag and Snap Layers like Markers, Circles, Rectangles, Polylines, Polygons, LayerGroups, geoJSON, MultiPolygons, MultiLineStrings. Supports holes in polygons, snapping, canvas mode and more. (<a href="https://geoman.io/leaflet-geoman">Demo</a>)
+			⭐ Leaflet 1.0 及更高版本的几何管理。绘制、编辑、剪切、拖动和捕捉图层，如标记、圆形、矩形、折线、多边形、图层组、geoJSON、MultiPolygons、MultiLineStrings。支持多边形孔洞、捕捉、画布模式等 (<a href="https://geoman.io/leaflet-geoman">Demo</a>)
 		</td><td>
 			<a href="https://github.com/codeofsumit">Sumit Kumar</a>
 		</td>
@@ -2366,7 +2361,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/Wildhoney/Leaflet.FreeDraw">Leaflet.FreeDraw</a>
 		</td><td>
-			Zoopla inspired freehand polygon creation using Leaflet.js and D3.
+			受 Zoopla 启发，使用 Leaflet.js 和 D3 创建自由的手绘多边形。
 		</td><td>
 			<a href="https://github.com/Wildhoney">Wildhoney</a>
 		</td>
@@ -2375,7 +2370,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/scripter-co/leaflet-plotter">Leaflet.plotter</a>
 		</td><td>
-			leaflet-plotter allows you to create routes using a leaflet powered map. You can click on the mid-points to create a new, draggable point.
+			leaflet-plotter 允许你使用一个由 leaflet 驱动的地图来创建路线。你可以点击中间的点来创建一个新的、可拖动的点。
 		</td><td>
 			<a href="https://github.com/scripter-co">Nathan Mahdavi</a>
 		</td>
@@ -2383,7 +2378,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 	<tr>
 		<td>
 			<a href="https://github.com/tkrajina/leaflet-editable-polyline">Leaflet.Editable.Polyline</a>
-		</td><td>Editable polylines: move existing points, add new points and split polylines.
+		</td><td>可编辑的折线：移动现有的点，添加新的点和分割折线。
 		</td><td>
 			<a href="https://github.com/tkrajina">Tomo Krajina</a>
 		</td>
@@ -2392,7 +2387,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/Leaflet/Leaflet.draw">Leaflet.draw</a>
 		</td><td>
-			Enables drawing features like polylines, polygons, rectangles, circles and markers through a very nice user-friendly interface with icons and hints. <em>Recommended!</em>
+			通过一个带有图标和提示的非常漂亮的用户友好界面，实现了多段线、多边形、矩形、圆和标记等绘图功能。<em>强烈推荐！</em>。
 		</td><td>
 			<a href="https://github.com/jacobtoye">Jacob Toye</a>
 		</td>
@@ -2401,7 +2396,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/kartena/Leaflet.EditableHandlers">Leaflet.EditableHandlers</a>
 		</td><td>
-			A set of plugins that includes circle editing, measuring tool, and label for polygon sides.
+			一组插件，包括圆形编辑、测量工具和多边形边的标签。
 		</td><td>
 			<a href="http://www.kartena.se/">Kartena</a>
 		</td>
@@ -2410,7 +2405,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/dwilhelm89/Leaflet.StyleEditor">Leaflet.StyleEditor</a>
 		</td><td>
-			Enables editing the styles of features (lines, polygons, etc) and markers with a GUI.
+			可以用图形用户界面编辑要素（feature）（线、多边形等）和标记的样式。
 		</td><td>
 			<a href="https://github.com/dwilhelm89">Dennis Wilhelm</a>
 		</td>
@@ -2419,7 +2414,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/jdomingu/Leaflet.SimpleMarkers">Leaflet.SimpleMarkers</a>
 		</td><td>
-			A light-weight Leaflet plugin for adding and deleting markers.
+			用于添加和删除标记的轻量级 Leaflet 插件。
 		</td><td>
 			<a href="https://github.com/jdomingu">Jared Dominguez</a>
 		</td>
@@ -2428,7 +2423,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.Editable">Leaflet.Editable</a>
 		</td><td>
-			Lightweight fully customisable and controllable drawing/editing plugin.
+			轻量级的完全可定制和可控制的绘图/编辑插件。
 		</td><td>
 			<a href="http://yohanboniface.me/">Yohan Boniface</a>
 		</td>
@@ -2438,7 +2433,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 			<a href="https://github.com/w8r/Leaflet.Path.Drag">Leaflet.Path.Drag</a>
 		</td>
 		<td>
-			Drag handler and interaction for polygons and polylines (<a href="https://w8r.github.io/Leaflet.Path.Drag">Demo</a>)
+			多边形和折线的拖动处理和交互程序 (<a href="https://w8r.github.io/Leaflet.Path.Drag">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/w8r/">Alexander Milevski</a>
@@ -2449,7 +2444,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 			<a href="https://github.com/w8r/Leaflet.Path.Transform">Leaflet.Path.Transform</a>
 		</td>
 		<td>
-			Scale & rotate handler and interaction for polygons and polylines (<a href="https://w8r.github.io/Leaflet.Path.Transform">Demo</a>)
+			多边形和折线的缩放和旋转处理和交互程序 (<a href="https://w8r.github.io/Leaflet.Path.Transform">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/w8r/">Alexander Milevski</a>
@@ -2459,7 +2454,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.Snap">Leaflet.Snap</a>
 		</td><td>
-			Enables snapping of draggable markers to polylines and other layers.
+            启用可拖动标记与折线和其他图层的对齐。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -2468,7 +2463,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/willfarrell/Leaflet.Clipper">Leaflet.Clipper</a>
 		</td><td>
-			Allows Union, Difference, Xor, and Intersection operations on two polygons. (<a href="https://willfarrell.github.io/Leaflet.Clipper">Demo</a>)
+			允许对两个多边形进行并联、差分、Xor和交叉操作。 (<a href="https://willfarrell.github.io/Leaflet.Clipper">Demo</a>)
 		</td><td>
 			<a href="https://github.com/willfarrell">will Farrell</a>
 		</td>
@@ -2478,7 +2473,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 			<a href="https://github.com/SINTEF-9012/Leaflet.MapPaint">Leaflet.MapPaint</a>
 		</td>
 		<td>
-			Bitmap painting plugin designed for touch devices.
+			专为触摸设备设计的位图绘画插件。
 		</td><td>
 			<a href="https://github.com/yellowiscool">Antoine Pultier</a>
 		</td>
@@ -2487,7 +2482,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.Storage">Leaflet.Storage</a>
 		</td><td>
-			Create/update/delete Map, Marker, Polygon, Polyline... and expose them for backend storage with an API.
+			创建/更新/删除地图、标记、多边形、折线......并通过API将其暴露以供后端存储。
 		</td><td>
 			<a href="http://yohanboniface.me/">Yohan Boniface</a>
 		</td>
@@ -2496,7 +2491,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/Wildhoney/L.Pather">Leaflet.Pather</a>
 		</td><td>
-			L.Pather is a freehand polyline creator that simplifies the polyline for mutability. Requires D3 support.
+            L.Pather 是一个手绘折线创建器，它简化了折线的可变性。需要 D3 支持。
 		</td><td>
 			<a href="https://github.com/Wildhoney">Wildhoney</a>
 		</td>
@@ -2505,7 +2500,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/manleyjster/Leaflet.Illustrate">Leaflet.Illustrate</a>
 		</td><td>
-			Extension for Leaflet.draw enabling users to <a href="http://manleyjster.github.io/Leaflet.Illustrate/examples/0.0.2/simple/">type annotations directly on maps</a>.
+			Leaflet.draw 的扩展，使用户能够<a href="http://manleyjster.github.io/Leaflet.Illustrate/examples/0.0.2/simple/">直接在地图上输入注释</a>。
 		</td><td>
 			<a href="https://github.com/manleyjster">Justin Manley</a>
 		</td>
@@ -2514,7 +2509,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/kklimczak/Leaflet.Pin">Leaflet.Pin</a>
 		</td><td>
-			Enable attaching of markers to other layers during draw or edit features with Leaflet.Draw.
+			在使用Leaflet.Draw绘制或编辑功能时，能够将标记添加到其他图层上。
 		</td><td>
 			<a href="https://github.com/kklimczak">Konrad Klimczak</a>
 		</td>
@@ -2523,7 +2518,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/tcoupin/leaflet-paintpolygon">L.Control.PaintPolygon</a>
 		</td><td>
-			Draw yours polygons with a circle brush like Paint[brush]. Includes turf.js dependencies.
+            用像 Paint[brush] 这样的圆形画笔绘制你的多边形。需要依赖于 turf.js。
 		</td><td>
 			<a href="https://github.com/tcoupin">Thibault Coupin</a>
 		</td>
@@ -2532,7 +2527,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/sagarpreet-chadha/Leaflet-Craft">Leaflet-Craft</a>
 		</td><td>
-			Extends Leaflet.FreeDraw and gives extended features like Undo-Redo, deleting markers,dynamic area calculation of polygons ,various hooks/events and in-build control bars, etc.
+			扩展 Leaflet.FreeDraw 并提供扩展功能，如撤消重做、删除标记、多边形的动态区域计算、各种钩子/事件和内置控制栏等。
 		</td><td>
 			<a href="https://github.com/sagarpreet-chadha">Sagarpreet Chadha</a>
 		</td>
@@ -2541,7 +2536,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 		<td>
 			<a href="https://github.com/Lemaf/leaflet-polyline-segment-edit">Leaflet.SegmentEdit</a>
 		</td><td>
-			An extension to Leaflet.draw to allow editing large polylines one chunk at the time.
+			Leaflet.draw 的扩展，允许一次编辑一个大的多段线。
 		</td><td>
 			<a href="https://github.com/Lemaf">Lemaf</a>
 		</td>
@@ -2551,7 +2546,7 @@ Allows users to create, draw, edit and/or delete points, lines and polygons.
 
 ### Time & elevation
 
-Most data is two-dimensional (latitude and longitude), but some data has more dimensions (altitude and/or time). The following plugins help users navigate these extra dimensions.
+大多数数据是二维的（经度和纬度），但有些数据有更多维度（高度和/或时间）。以下插件可以帮助用户浏览这些额外的维度。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
@@ -2559,7 +2554,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 			<a href="https://github.com/slutske22/leaflet-topography">Leaflet Topography</a>
 		</td>
 		<td>
-			A set of tools for calculating and visualizing topographic data (elevation, slope, aspect) at lightning speed.  Based on Mapbox RGB Encoded DEM tiles.
+			一套用于以闪电般的速度计算和可视化地形数据（海拔、坡度、长宽）的工具。 基于Mapbox RGB编码的DEM瓦片。
 		</td>
 		<td>
 			<a href="https://github.com/slutske22">Seth Lutske</a>
@@ -2570,7 +2565,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 			<a href="https://github.com/svitkin/leaflet-timeline-slider/">Leaflet.timelineSlider</a>
 		</td>
 		<td>
-			Leaflet plugin that creates a customizable timeline slider with user designed functionality. Original implementation of timeline at https://codepen.io/trevanhetzel/pen/rOVrGK.
+			Leaflet 插件，可创建具有用户设计功能的可自定义时间线滑块。时间线的原始实现位于 https://codepen.io/trevanhetzel/pen/rOVrGK。
 		</td>
 		<td>
 			<a href="https://github.com/svitkin">Sol Vitkin</a>
@@ -2581,7 +2576,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 			<a href="https://github.com/socib/Leaflet.TimeDimension">Leaflet.TimeDimension</a>
 		</td>
 		<td>
-			Add time dimension capabilities on a Leaflet map. <a href="http://apps.socib.es/Leaflet.TimeDimension/examples/index.html">Demos</a>
+			在 leaflet 地图上添加时间维度功能 <a href="http://apps.socib.es/Leaflet.TimeDimension/examples/index.html">Demos</a>
 		</td>
 		<td>
 			<a href="http://www.socib.eu">ICTS SOCIB</a>
@@ -2591,7 +2586,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 		<td>
 			<a href="https://github.com/dwilhelm89/LeafletSlider">Leaflet Time-Slider</a>
 		</td><td>
-			The Leaflet Time-Slider enables you to dynamically add and remove Markers on a map by using a JQuery UI slider
+			Leaflet Time-Slider 使您能够使用 JQuery UI 滑块在地图上动态添加和删除标记
 		</td><td>
 			<a href="https://github.com/dwilhelm89">Dennis Wilhelm</a>
 		</td>
@@ -2600,7 +2595,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 		<td>
 			<a href="https://github.com/hallahan/LeafletPlayback">LeafletPlayback</a>
 		</td><td>
-			Play back time-stamped GPS Tracks synchronized to a clock.
+			播放与时钟同步的带时间戳的 GPS 轨迹。
 		</td><td>
 			<a href="http://theoutpost.io">Nicholas Hallahan</a>
 		</td>
@@ -2609,7 +2604,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 		<td>
 			<a href="https://github.com/skeate/Leaflet.timeline">Leaflet.timeline</a>
 		</td><td>
-			Display arbitrary GeoJSON on a map with a timeline slider and play button.
+			使用时间线滑块和播放按钮在地图上显示任意 GeoJSON。
 		</td><td>
 			<a href="https://github.com/skeate">Jonathan Skeate</a>
 		</td>
@@ -2618,7 +2613,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 		<td>
 			<a href="https://github.com/MrMufflon/Leaflet.Elevation">Leaflet.Elevation</a>
 		</td><td>
-			A Leaflet plugin to view interactive height profiles of GeoJSON lines using <a href="http://d3js.org/">d3</a>.
+			一个 Leaflet 插件，使用 <a href="http://d3js.org/">d3</a> 查看 GeoJSON 线的交互式高度剖面。
 		</td><td>
 			<a href="https://github.com/MrMufflon">Felix Bache</a>
 		</td>
@@ -2627,7 +2622,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 		<td>
 			<a href="https://github.com/GIScience/Leaflet.Heightgraph">Leaflet.Heightgraph</a>
 		</td><td>
-			Inspired by Leaflet.Elevation this Leaflet plugin allows you to view interactive height profiles stored as GeoJSON featuring the handy ability to visualize arbitrary segments (e.g. surface types or steepness categories) with customized colors stored as properties within the GeoJSON itself.
+			受 Leaflet.Elevation 的启发，这个Leaflet插件允许你查看以 GeoJSON 形式存储的交互式高度剖面，其特点是可以将任意分段（如表面类型或陡峭度类别）以自定义颜色存储在 GeoJSON 本身的属性中。
 		</td><td>
 			<a href="https://github.com/boldtrn">Robin Boldt</a>
 		</td>
@@ -2636,7 +2631,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 		<td>
 			<a href="https://github.com/iosphere/Leaflet.hotline">Leaflet.hotline</a>
 		</td><td>
-			A Leaflet plugin for drawing gradients along polylines.
+			用于沿折线绘制渐变的 Leaflet 插件。
 		</td><td>
 			<a href="https://github.com/iosphere">iosphere</a>
 		</td>
@@ -2646,7 +2641,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 			<a href="https://github.com/linghuam/Leaflet.TrackPlayBack">leaflet.TrackPlayBack</a>
 		</td>
 		<td>
-			A leaflet track-playback plugin, can display and dynamically play tracks. <a href="https://linghuam.github.io/Leaflet.TrackPlayBack/">Demo</a>.
+			一个 Leaflet 曲目播放插件，可以显示和动态播放曲目。 <a href="https://linghuam.github.io/Leaflet.TrackPlayBack/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/linghuam">linghuam</a>
@@ -2657,7 +2652,7 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 			<a href="https://github.com/zimmicz/Leaflet-Timeline-Control">Leaflet Timeline Control</a>
 		</td>
 		<td>
-			Unopinionated timeline control that helps you display time series data. <a href="https://codesandbox.io/s/leaflet-timeline-control-ibyby">Demo</a>.
+			无限制的时间线控件，可帮助您显示时间序列数据。 <a href="https://codesandbox.io/s/leaflet-timeline-control-ibyby">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/zimmicz">Michal Zimmermann</a>
@@ -2670,14 +2665,14 @@ Most data is two-dimensional (latitude and longitude), but some data has more di
 
 ### Search & popups
 
-Plugins that search for overlays and enhance how to display information about them.
+搜索叠加层并增强如何显示有关叠加层的信息的插件。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/naomap/leaflet-fusesearch">leaflet-fusesearch</a>
 		</td><td>
-			A control that provides a panel to search features in a GeoJSON layer using the lightweight fuzzy search Fuse.js
+			使用轻量级模糊搜索 Fuse.js 提供的面板在 GeoJSON 层中搜索要素的控件
 		</td><td>
 			<a href="http://www.naomap.fr">Antoine Riche</a>
 		</td>
@@ -2686,7 +2681,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/stefanocudini/leaflet-search">Leaflet Search</a>
 		</td><td>
-			A control for search Markers/Features location by custom property in LayerGroup/GeoJSON. Support AJAX/JSONP, Autocompletion and 3rd party service
+			通过 LayerGroup/GeoJSON 中的自定义属性控制搜索标记/特征位置。支持 AJAX/JSONP、自动完成和 3rd 方服务
 		</td><td>
 			<a href="http://labs.easyblog.it">Stefano Cudini</a>
 		</td>
@@ -2696,7 +2691,7 @@ Plugins that search for overlays and enhance how to display information about th
             		<a href="https://github.com/8to5Developer/leaflet-custom-searchbox">leaflet-custom-searchbox</a>
         	</td>
 		<td>
-            		A google map style search box which includes a side panel slider control.
+                    一个谷歌地图风格的搜索框，其中包括一个侧面板滑块控件。
         	</td>
 		<td>
 		        <a href="https://github.com/8to5Developer/">A.D</a>
@@ -2706,8 +2701,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="http://erictheise.github.com/rrose">Leaflet.Rrose</a>
 		</td><td>
-			A Leaflet Plugin for Edge Cases.  For use when you want popups on <em>mouseover</em>, not <em>click</em>, and
-			you need popup tips to reorient as you get close to the edges of your map.
+			一个针对边缘案例的Leaflet插件。当您希望在鼠标悬停时弹出窗口而不是单击时使用，并且您需要在靠近地图边缘时重新定位弹出提示。
 		</td><td>
 			<a href="http://www.linkedin.com/in/erictheise">Eric Theise</a>
 		</td>
@@ -2716,7 +2710,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/danzel/Leaflet.utfgrid">Leaflet.utfgrid</a>
 		</td><td>
-			Provides a utfgrid interaction handler for leaflet a very small footprint.
+			为 leaflet 提供了一个占用的空间非常小的 utfgrid 交互处理程序。
 		</td><td>
 			<a href="https://github.com/danzel">Dave Leaver</a>
 		</td>
@@ -2725,7 +2719,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.RevealOSM">Leaflet.RevealOSM</a>
 		</td><td>
-			Very simple but extendable Leaflet plugin to display OSM POIs data on map click.
+			非常简单但可扩展的 Leaflet 插件，用于在地图点击时显示 OSM POI 数据。
 		</td><td>
 			<a href="http://yohanboniface.me">Yohan Boniface</a>
 		</td>
@@ -2734,8 +2728,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/perliedman/leaflet-underneath">Leaflet Underneath</a>
 		</td><td>
-			Find interesting features near a location using Mapbox Vector Tiles data, to add
-			interactive functionality to a tile layer with speed and limited bandwidth.
+			使用Mapbox矢量瓦片数据查找某个地点附近的有趣要素（feature），并在速度和带宽有限的情况下为瓦片层添加互动功能。
 		</td><td>
 			<a href="http://github.com/perliedman">Per Liedman</a>
 		</td>
@@ -2744,7 +2737,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/utahemre/Leaflet.GeoJSONAutocomplete">Leaflet.GeoJSONAutocomplete</a>
 		</td><td>
-			Leaflet Autocomplete For Remote Searching with GeoJSON Services.
+			使用 GeoJSON 服务自动进行远程搜索的 Leaflet 插件。
 		</td><td>
 			<a href="https://github.com/utahemre">Yunus Emre Özkaya</a>
 		</td>
@@ -2753,7 +2746,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/maydemirx/leaflet-tag-filter-button">L.tagFilterButton</a>
 		</td><td>
-			LeafLet marker filtering by tags
+			通过标签过滤 LeafLet 标记
 		</td><td>
 			<a href="https://github.com/maydemirx">Mehmet Aydemir</a>
 		</td>
@@ -2762,7 +2755,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/Twista/leaflet-google-places-autocomplete">Leaflet-gplaces-autocomplete</a>
 		</td><td>
-			Add google places search into map
+			在地图中添加谷歌地点搜索
 		</td><td>
 			<a href="https://github.com/Twista">Michal Haták</a>
 		</td>
@@ -2771,7 +2764,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/yafred/leaflet-responsive-popup">leaflet-responsive-popup</a>
 		</td><td>
-			Removes the need to move the map to be able to see the content of the popup.
+			无需移动地图即可看到弹出窗口的内容。
 		</td><td>
 			<a href="https://github.com/yafred">YaFred</a>
 		</td>
@@ -2780,7 +2773,7 @@ Plugins that search for overlays and enhance how to display information about th
 		<td>
 			<a href="https://github.com/slutske22/leaflet-popup-modifier">leaflet-popup-modifier</a>
 		</td><td>
-			Allows user to edit the contents of a popup, or use the popup to remove its source marker.
+			允许用户编辑弹出窗口的内容，或使用弹出窗口删除其源标记。
 		</td><td>
 			<a href="https://github.com/slutske22">Slutske22</a>
 		</td>
@@ -2791,14 +2784,14 @@ Plugins that search for overlays and enhance how to display information about th
 
 ### Area/overlay selection
 
-These plugins help users select either overlays or areas in the map.
+这些插件帮助用户选择地图中的覆盖层或区域。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/heyman/leaflet-areaselect/">Leaflet.AreaSelect</a>
 		</td><td>
-			A fixed positioned, resizable rectangle for selecting an area on the map.
+			一个固定位置的、可调整大小的矩形，用于选择地图上的一个区域。
 		</td><td>
 			<a href="http://heyman.info">Jonatan Heyman</a>
 		</td>
@@ -2807,7 +2800,7 @@ These plugins help users select either overlays or areas in the map.
 		<td>
 			<a href="https://github.com/kajic/leaflet-locationfilter/">leaflet-locationfilter</a>
 		</td><td>
-			A draggable/resizable rectangle for selecting an area on the map.
+			一个可拖动/可调整大小的矩形，用于选择地图上的一个区域。
 		</td><td>
 			<a href="https://github.com/kajic">Robert Kajic</a>
 		</td>
@@ -2817,7 +2810,7 @@ These plugins help users select either overlays or areas in the map.
 			<a href="https://github.com/w8r/L.Control.LineStringSelect">L.Control.LineStringSelect</a>
 		</td>
 		<td>
-			Fast LineString(polyline) partial selection tool: select a stretch between two points in a complex path. <a href="https://w8r.github.io/L.Control.LineStringSelect">Demo</a>
+			Fast LineString(polyline) 部分选择工具：选择复杂路径中两点之间的一段路径 <a href="https://w8r.github.io/L.Control.LineStringSelect">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/w8r">Alexander Milevski</a>
@@ -2826,7 +2819,7 @@ These plugins help users select either overlays or areas in the map.
 	<tr>
 		<td>
 			<a href="https://github.com/openplans/Leaflet.FeatureSelect">Leaflet.FeatureSelect</a>
-		</td><td>Use a configurable centerpoint marker to select any geometry type from a GeoJSON layer.
+		</td><td>使用可配置的中心点标记从 GeoJSON 图层中选择任何几何类型。
 		</td><td>
 			<a href="https://github.com/atogle">Aaron Ogle</a>
 		</td>
@@ -2836,7 +2829,7 @@ These plugins help users select either overlays or areas in the map.
 			<a href="https://github.com/stefanocudini/leaflet-geojson-selector">Leaflet GeoJSON Selector</a>
 		</td>
 		<td>
-			Leaflet Control for selection from GeoJSON feature in an interactive list and map (<a href="http://labs.easyblog.it/maps/leaflet-geojson-selector/">Demo</a>).
+			用于在交互式列表和地图中选择 GeoJSON 要素（feature）的 Leaflet 控件 (<a href="http://labs.easyblog.it/maps/leaflet-geojson-selector/">Demo</a>)
 		</td>
 		<td>
 			<a href="http://labs.easyblog.it/stefano-cudini/">Stefano Cudini</a>
@@ -2847,7 +2840,7 @@ These plugins help users select either overlays or areas in the map.
 			<a href="https://github.com/IvanSanchez/Leaflet.CheapLayerAt">Leaflet.CheapLayerAt</a>
 		</td>
 		<td>
-			Allows querying which layer is under a screen coordinate (<a href="http://ivansanchez.github.io/Leaflet.CheapLayerAt/demo.html">Demo</a>).
+			允许查询屏幕坐标下的图层 (<a href="http://ivansanchez.github.io/Leaflet.CheapLayerAt/demo.html">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
@@ -2858,7 +2851,7 @@ These plugins help users select either overlays or areas in the map.
 		<td>
 			<a href="https://github.com/sandropibia/Leaflet.SelectAreaFeature/">Leaflet.SelectAreaFeature</a>
 		</td><td>
-			Selecting feature layers on a map by drawing an area.
+			通过绘制区域来选择地图上的要素图层。
 		</td><td>
 			<a href="http://pezzo.org">Sandro Pibia</a>
 		</td>
@@ -2868,7 +2861,7 @@ These plugins help users select either overlays or areas in the map.
 			<a href="https://github.com/mkong0216/leaflet-shades/"> Leaflet-Shades </a>
 		</td>
 		<td>
-			A draggable and resizable rectangle for selecting an area on a map and creating a gray overlay in unselected areas (<a href="https://mkong0216.github.io/leaflet-shades/examples">Demo</a>)
+			一个可拖动和可调整大小的矩形，用于在地图上选择一个区域并在未选择的区域中创建一个灰色叠加图层 (<a href="https://mkong0216.github.io/leaflet-shades/examples">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/mkong0216"> Mandy Kong </a>
@@ -2879,7 +2872,7 @@ These plugins help users select either overlays or areas in the map.
 			<a href="https://github.com/zakjan/leaflet-lasso">leaflet-lasso</a>
 		</td>
 		<td>
-			True lasso selection plugin (<a href="http://zakjan.github.io/leaflet-lasso/">Demo</a>)
+			真正的套索选择插件 (<a href="http://zakjan.github.io/leaflet-lasso/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/zakjan">Jan Zak</a>
@@ -2890,7 +2883,7 @@ These plugins help users select either overlays or areas in the map.
 			<a href="https://github.com/olanaso/Leaflet-Select-Polygons">Leaflet-Select-Polygons</a>
 		</td>
 		<td>
-			Leaflet-Select-Polygons allows the selection of several polygons and also adjusts the base map view (<a href="https://olanaso.github.io/Leaflet-Select-Polygons/">demo</a>)
+			Leaflet-Select-Polygons 允许选择多个多边形并调整基本地图视图 (<a href="https://olanaso.github.io/Leaflet-Select-Polygons/">demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/olanaso">Erick S Escalante Olano</a>
@@ -2900,32 +2893,32 @@ These plugins help users select either overlays or areas in the map.
 
 
 
-## Map interaction
+## 地图交互
 
-New ways to interact with the map itself.
+与地图本身交互的新方法。
 
-* [Layer switching controls](#layer-switching-controls)
-* [Interactive pan/zoom](#interactive-panzoom)
-* [Bookmarked pan/zoom](#bookmarked-panzoom)
-* [Fullscreen](#fullscreen-controls)
-* [Minimaps & synced maps](#minimaps--synced-maps)
-* [Measurement](#measurement)
-* [Mouse coordinates](#mouse-coordinates)
-* [Events](#events)
-* [User interface](#user-interface)
-* [Print/export](#printexport)
-* [Geolocation](#geolocation)
+* [控制图层切换](#layer-switching-controls)
+* [交互式平移/缩放](#interactive-panzoom)
+* [带书签的平移/缩放](#bookmarked-panzoom)
+* [全屏](#fullscreen-controls)
+* [小地图 & 同步地图](#minimaps--synced-maps)
+* [测量](#measurement)
+* [鼠标坐标](#mouse-coordinates)
+* [事件](#events)
+* [用户界面](#user-interface)
+* [打印/导出](#printexport)
+* [地理位置](#geolocation)
 
 ### Layer switching controls
 
-The following plugins enhance or extend `L.Control.Layers`.
+以下插件用于增强或扩展 `L.Control.Layers`。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/aebadirad/Leaflet.AutoLayers">Leaflet.AutoLayers</a>
 		</td><td>
-			Automatically pull layers from multiple mapservers and organize/search them with user controlled overlay zIndex management.
+			自动从多个地图服务器中提取图层，并通过用户控制的覆盖图层的 zIndex 管理组织/搜索它们。
 		</td><td>
 			<a href="https://github.com/aebadirad">Alex Ebadirad</a>
 		</td>
@@ -2934,7 +2927,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/vogdb/SelectLayersControl">Leaflet.SelectLayers</a>
 		</td><td>
-			a Leaflet plugin which adds new control to switch between different layers on the map. New control replaces L.Control.Layers radio button panel with select tag.
+			一个Leaflet插件，它增加了新的控件来切换地图上的不同图层。新控件用选择标签取代了 L.Control.Layers 单选按钮面板。
 		</td><td>
 			<a href="https://github.com/vogdb">vogdb</a>
 		</td>
@@ -2943,7 +2936,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/davicustodio/Leaflet.StyledLayerControl">Leaflet.StyledLayerControl</a>
 		</td><td>
-			A Leaflet plugin that implements the management and control of layers by organization into categories or groups.
+			一个 Leaflet 插件，通过组织成 style 或 group 来实现对层的管理和控制。
 		</td><td>
 			<a href="https://github.com/davicustodio">Davi Custodio</a>
 		</td>
@@ -2952,7 +2945,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/ismyrnow/Leaflet.groupedlayercontrol">Leaflet.GroupedLayerControl</a>
 		</td><td>
-			Leaflet layer control with support for grouping overlays together.
+            Leaflet 图层控件，支持将叠加组合在一起。
 		</td><td>
 			<a href="https://github.com/ismyrnow">Ishmael Smyrnow</a>
 		</td>
@@ -2961,7 +2954,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="http://elesdoar.github.io/leaflet-control-orderlayers/">Leaflet Control Order Layers</a>
 		</td><td>
-			Adds the ability to change overlay order in the layers control.
+			增加了在图层控件中改变叠加顺序的能力。
 		</td><td>
 			<a href="https://github.com/elesdoar/">Michael Salgado</a>
 		</td>
@@ -2970,7 +2963,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/robbiet480/leaflet-categorized-layers">Leaflet Categorized Layers</a>
 		</td><td>
-			Leaflet Control Layers extended for groups of categorized layers
+			Leaflet 的控制图层（Control Layers）扩展为分类图层组（groups of categorized layers） 
 		</td><td>
 			<a href="http://robbie.io/">Robbie Trencheny</a>
 		</td>
@@ -2979,7 +2972,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/stefanocudini/leaflet-panel-layers">Leaflet Panel Layers</a>
 		</td><td>
-			Leaflet Control Layers extended for group of layers and icons legend
+			Leaflet 控制图层扩展为图层组（group of layers）和图标图例（icons legend）
 		</td><td>
 			<a href="http://labs.easyblog.it">Stefano Cudini</a>
 		</td>
@@ -2988,7 +2981,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/chriscalip/L.UniformControl">Leaflet.UniformControl</a>
 		</td><td>
-			Leaflet layer control with stylable checkboxes and radio buttons.
+			带有样式复选框和单选按钮的 Leaflet 图层控件。
 		</td><td>
 			<a href="https://github.com/chriscalip">Chris Calip</a>
 		</td>
@@ -2997,7 +2990,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/ScanEx/Leaflet-IconLayers">Leaflet-IconLayers</a>
 		</td><td>
-			Leaflet control that displays base layers as small icons (<a href="http://scanex.github.io/Leaflet-IconLayers/examples">demo</a>).
+			将基础层显示为小图标的 Leaflet 控件 (<a href="http://scanex.github.io/Leaflet-IconLayers/examples">demo</a>)
 		</td><td>
 			<a href="https://github.com/zverev">Alexander Zverev</a>
 		</td>
@@ -3006,7 +2999,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/bambrikii/leaflet-layer-tree-plugin">Leaflet.LayerTreePlugin</a>
 		</td><td>
-			Leaflet control allows to switch layers on and off, display them in a tree-like way (<a href="http://rawgit.com/bambrikii/leaflet-layer-tree-plugin/master/examples/basic-example.htm">demo</a>).
+			Leaflet 控件允许打开和关闭图层，并以树状方式显示它们 (<a href="http://rawgit.com/bambrikii/leaflet-layer-tree-plugin/master/examples/basic-example.htm">demo</a>)
 		</td><td>
 			<a href="https://github.com/bambrikii">Alexander Arakelyan</a>
 		</td>
@@ -3015,8 +3008,8 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/consbio/Leaflet.Basemaps">Leaflet.Basemaps</a>
 		</td><td>
-			A basemap chooser with a preview image from the tile stack.
-			<a href="http://consbio.github.io/Leaflet.Basemaps/">Example</a>
+			带有来自瓦片堆栈的预览图像的底图选择器
+			<a href="http://consbio.github.io/Leaflet.Basemaps/">示例</a>
 		</td><td>
 			<a href="https://github.com/brendan-ward">Brendan Ward</a>
 		</td>
@@ -3025,7 +3018,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/jjimenezshaw/Leaflet.Control.Layers.Tree">Leaflet.Control.Layers.Tree</a>
 		</td><td>
-			L.Control.Layers extension that supports a Tree structure, both for base and overlay layers. Simple and highly configurable. See <a href="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/examples/">demos</a>
+            L.Control.Layers 扩展支持树结构，适用于基础层和覆盖层。简单且高度可配置。查看 <a href="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/examples/">demos</a>
 		</td><td>
 			<a href="https://github.com/jjimenezshaw/">Javier Jimenez Shaw</a>
 		</td>
@@ -3034,7 +3027,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/vogdb/Leaflet.ActiveLayers">Leaflet.ActiveLayers</a>
 		</td><td>
-			Adds new L.Control.ActiveLayers with functionality to get currently active layers on the map.
+			添加新的 L.Control.ActiveLayers，具有在地图上获取当前活动图层的功能。
 		</td><td>
 			<a href="https://github.com/vogdb">vogdb</a>
 		</td>
@@ -3043,7 +3036,7 @@ The following plugins enhance or extend `L.Control.Layers`.
 		<td>
 			<a href="https://github.com/Kanahiro/Leaflet.Control.Appearance">Leaflet.Control.Appearance</a>
 		</td><td>
-			Extend of Control.Layers, can control Appearances of Layers - color, opacity and able to remove a overlay layer. <a href="https://github.com/Kanahiro/Leaflet.Control.Appearance">Example</a>
+			Control.Layers 的扩展，可以控制图层的外观 - 颜色、不透明度并能够删除叠加层 <a href="https://github.com/Kanahiro/Leaflet.Control.Appearance">示例</a>
 		</td><td>
 			<a href="https://www.labo288.site/">Kanahiro Iguchi</a>
 		</td>
@@ -3053,14 +3046,14 @@ The following plugins enhance or extend `L.Control.Layers`.
 
 ### Interactive pan/zoom
 
-Change the way the user can interactively move around the map.
+改变用户在地图上交互移动的方式。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="http://kartena.github.com/Leaflet.Pancontrol/">Leaflet.Pancontrol</a>
 		</td><td>
-			A simple panning control.
+			一个简单的平移控件。
 		</td><td>
 			<a href="http://www.kartena.se/">Kartena</a>
 		</td>
@@ -3069,7 +3062,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/gregallensworth/L.Control.BoxZoom">Leaflet.BoxZoom</a>
 		</td><td>
-			A visible, clickable control to perform a box zoom.
+			一个可见的、可点击的控件，用于执行框缩放。
 		</td><td>
 			<a href="https://github.com/gregallensworth/L.Control.BoxZoom">Greg Allensworth</a>
 		</td>
@@ -3078,7 +3071,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/elrobis/L.Control.ZoomBar">L.Control.ZoomBar</a>
 		</td><td>
-			An extended version of Leaflet's native Zoom control with Home and Zoom-to-Area buttons. <a href="https://elrobis.github.io/L.Control.ZoomBar/">Demo</a>
+			Leaflet 原生 Zoom 控件的扩展版本，带有 Home 和 Zoom-to-Area 按钮。 <a href="https://elrobis.github.io/L.Control.ZoomBar/">Demo</a>
 		</td><td>
 			<a href="http://cartometric.com/blog/">Elijah Robison</a>
 		</td>
@@ -3087,7 +3080,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="http://kartena.github.com/Leaflet.zoomslider/">Leaflet.zoomslider</a>
 		</td><td>
-			A zoom slider control.
+			缩放滑块控件。
 		</td><td>
 			<a href="http://www.kartena.se/">Kartena</a>
 		</td>
@@ -3096,7 +3089,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/flaviocarmo/Leaflet.zoominfo/">Leaflet.zoominfo</a>
 		</td><td>
-			A zoom control which displays the current zoom level.
+			显示当前缩放级别的缩放控件。
 		</td><td>
 			<a href="https://github.com/flaviocarmo">Flávio Carmo</a>
 		</td>
@@ -3105,7 +3098,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/slara/Leaflet.BorderPan">Leaflet.BorderPan</a>
 		</td><td>
-			A Leaflet plugin to pan by clicking on map borders.
+			通过单击地图边框进行平移的 Leaflet 插件。
 		</td><td>
 			<a href="https://github.com/slara">Sebastián Lara</a>
 		</td>
@@ -3114,7 +3107,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/SINTEF-9012/Leaflet.GameController">Leaflet GameController</a>
 		</td><td>
-			Interaction handler providing support for gamepads.
+			为游戏手柄提供支持的交互处理程序。
 		</td><td>
 			<a href="https://github.com/yellowiscool">Antoine Pultier</a>
 		</td>
@@ -3123,7 +3116,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/aratcliffe/Leaflet.twofingerzoom">Leaflet.twofingerZoom</a>
 		</td><td>
-			 Interaction handler for touch devices enabling zooming out with a two finger tap.
+			 用于触摸设备的交互处理程序，可通过两指轻敲来缩小。
 		</td><td>
 			<a href="https://github.com/aratcliffe/">Adam Ratcliffe</a>
 		</td>
@@ -3133,7 +3126,7 @@ Change the way the user can interactively move around the map.
 			<a href="https://github.com/consbio/Leaflet.ZoomBox">Leaflet.ZoomBox</a>
 		</td>
 		<td>
-			A lightweight zoom box control: draw a box around the area you want to zoom to. <a href="https://consbio.github.io/Leaflet.ZoomBox">Demo</a>
+			轻量级缩放框控件：在要缩放到的区域周围绘制一个框。 <a href="https://consbio.github.io/Leaflet.ZoomBox">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/brendan-ward">Brendan Ward</a>
@@ -3143,8 +3136,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/Zverik/Leaflet.LimitZoom">Leaflet LimitZoom</a>
 		</td><td>
-			Plugins to limit available zoom levels to a given list, either by
-			restricting zooming or by interpolating tiles.
+			通过限制缩放或插入图块来将可用缩放级别限制为给定列表的插件。
 		</td><td>
 			<a href="https://github.com/zverik">Ilya Zverev</a>
 		</td>
@@ -3153,7 +3145,7 @@ Change the way the user can interactively move around the map.
 		<td>
 			<a href="https://github.com/GhostGroup/Leaflet.DoubleRightClickZoom">Leaflet.DoubleRightClickZoom</a>
 		</td><td>
-			 Interaction handler enabling zooming out with double right click.
+			启用双击鼠标右键缩小的交互处理程序。
 		</td><td>
 			<a href="https://github.com/mikeotoole/">Mike O'Toole</a>
 		</td>
@@ -3163,7 +3155,7 @@ Change the way the user can interactively move around the map.
 			<a href="https://github.com/unbam/Leaflet.ZoomLabel">Leaflet.ZoomLabel</a>
 		</td>
 		<td>
-			A simple zoom label control.
+			一个简单的缩放标签控件。
 		</td>
 		<td>
 			<a href="https://github.com/unbam">Masashi Takeshita</a>
@@ -3174,7 +3166,7 @@ Change the way the user can interactively move around the map.
 			<a href="https://github.com/will4906/leaflet.zoompanel">Leaflet.ZoomPanel</a>
 		</td>
 		<td>
-			A Zoom Control Panel Of Leaflet. <a href="https://will4906.github.io/leaflet-zoompanel/">Demo</a>
+			Leaflet 的缩放控制面板。 <a href="https://will4906.github.io/leaflet-zoompanel/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/will4906/">Shuhua Huang</a>
@@ -3186,14 +3178,14 @@ Change the way the user can interactively move around the map.
 
 ### Bookmarked pan/zoom
 
-Change the way the user is moved around the map, by jumping to predefined/stored places.
+通过跳转到预定义/存储的位置来改变用户在地图上移动的方式。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/pwldp/leaflet.viewcenter">Leaflet.viewcenter</a>
 		</td><td>
-			A simple control that adds a button to change view and zoom to predefined values in options.
+			一个简单的控件，它添加了一个按钮来改变视图和缩放到选项中的预定义值。
 		</td><td>
 			<a href="https://github.com/pwldp/">Dariusz Pawlak</a>
 		</td>
@@ -3202,7 +3194,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 		<td>
 			<a href="https://github.com/alanshaw/leaflet-zoom-min/">leaflet-zoom-min</a>
 		</td><td>
-			Adds a button to the zoom control that allows you to zoom to the map minimum zoom level in a single click.
+			为缩放控制添加一个按钮，允许你在一次点击中缩放到地图的最小缩放级别。
 		</td><td>
 			<a href="https://github.com/alanshaw/">Alan Shaw</a>
 		</td>
@@ -3211,7 +3203,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 		<td>
 			<a href="https://github.com/davidchouse/Leaflet.NavBar">Leaflet Navigation Toolbar</a>
 		</td><td>
-			Leaflet control for simple back, forward and home navigation.
+			用于简单后退、前进和主页导航的 Leaflet 控件。
 		</td><td>
 			<a href="https://github.com/davidchouse">David C</a>
 		</td>
@@ -3220,7 +3212,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 		<td>
 			<a href="https://github.com/mithron/leaflet.locationlist">Leaflet Locationlist</a>
 		</td><td>
-			A control to jump between predefined locations and zooms.
+			用于在预定义位置和缩放之间跳转的控件。
 		</td><td>
 			<a href="https://github.com/mithron">Ivan Ignatyev</a>
 		</td>
@@ -3230,7 +3222,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 			<a href="https://github.com/nguyenning/Leaflet.defaultextent">Leaflet.defaultextent</a>
 		</td>
 		<td>
-			A control that returns to the original start extent of the map.  Similar to the <a href="https://developers.arcgis.com/javascript/jssamples/widget_home.html">HomeButton</a> widget.
+			一个可以返回到地图的原始起始范围的控件， 类似于 <a href="https://developers.arcgis.com/javascript/jssamples/widget_home.html">HomeButton</a> 小部件。
 		</td>
 		<td>
 			<a href="https://github.com/nguyenning">Alex Nguyen</a>
@@ -3241,7 +3233,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 			<a href="https://github.com/w8r/Leaflet.Bookmarks">Leaflet.Bookmarks</a>
 		</td>
 		<td>
-			Control for adding and navigating between user-created bookmarks on the map.
+			用于在地图上添加和导航用户创建的书签的控件。
 		</td>
 		<td>
 			<a href="https://github.com/w8r/">Alexander Milevski</a>
@@ -3251,7 +3243,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
         <td>
 			<a href="https://github.com/florpor/Leaflet.ShowAll">Leaflet.ShowAll</a>
 		</td><td>
-			A control that can show a predefined extent while saving the current one so it can be jumped back to.
+			一个可以显示预定义范围的控件，同时保存当前的范围，以便可以跳回。
 		</td><td>
 			<a href="https://github.com/florpor">Mor Yariv</a>
 		</td>
@@ -3261,7 +3253,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 			<a href="https://github.com/torfsen/leaflet.zoomhome">Leaflet.zoomhome</a>
 		</td>
 		<td>
-			Zoom control with a home button for resetting the view (<a href="http://torfsen.github.io/leaflet.zoomhome/">Demo</a>)
+			缩放控件，有一个用于重新设置视图的主按钮 (<a href="http://torfsen.github.io/leaflet.zoomhome/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/torfsen">Florian Brucker</a>
@@ -3272,7 +3264,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 			<a href="https://github.com/cscott530/leaflet-history">Leaflet-History</a>
 		</td>
 		<td>
-			Track history of map movements and zoom locations similar to a browser.
+			类似于浏览器，跟踪地图移动和缩放位置的历史记录。
 		</td>
 		<td>
 			<a href="https://github.com/cscott530">Chris Scott</a>
@@ -3282,7 +3274,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.RestoreView">Leaflet.RestoreView</a>
 		</td><td>
-			Stores and restores map view using localStorage.
+			使用 localStorage 存储和恢复地图视图。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -3291,7 +3283,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 		<td>
 			<a href="https://github.com/mlevans/leaflet-hash">leaflet-hash</a>
 		</td><td>
-			Plugin for persisting map state and browsing history through the URL hash.
+			用于通过 URL 哈希持久保存地图状态和浏览历史的插件。
 		</td><td>
 			<a href="https://github.com/mlevans">Michael Lawrence Evans</a>
 		</td>
@@ -3301,7 +3293,7 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 			<a href="https://github.com/rwev/leaflet-view-meta">leaflet-view-meta</a>
 		</td>
 		<td>
-			Plugin control that displays and persists map view meta-data, center and boundary coordinates to URL for precise sharing and view reconstruction. 
+			控制显示和持久化地图视图元数据，中心和边界坐标到URL的插件，以便精确共享和视图重建。
 		</td>
 		<td>
 			<a href="https://github.com/rwev">rwev</a>
@@ -3313,14 +3305,14 @@ Change the way the user is moved around the map, by jumping to predefined/stored
 
 ### Fullscreen controls
 
-Allows display of the map in full-screen mode.
+允许以全屏模式显示地图。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/mapbox/Leaflet.fullscreen">Leaflet.fullscreen</a>
 		</td><td>
-			A fullscreen button control by Mapbox
+			一个由 Mapbox 提供的全屏按钮控件
 		</td><td>
 			<a href="https://github.com/mapbox">Mapbox</a>
 		</td>
@@ -3329,7 +3321,7 @@ Allows display of the map in full-screen mode.
 		<td>
 			<a href="http://brunob.github.com/leaflet.fullscreen">leaflet.fullscreen</a>
 		</td><td>
-			Another fullscreen button control but for modern browsers, using HTML5 Fullscreen API.
+			另一个全屏按钮控件，但适用于现代浏览器，使用 HTML5 全屏 API。
 		</td><td>
 			<a href="https://github.com/brunob/">Bruno B</a>
 		</td>
@@ -3338,7 +3330,7 @@ Allows display of the map in full-screen mode.
 		<td>
 			<a href="http://elidupuis.github.com/leaflet.zoomfs">leaflet.zoomfs</a>
 		</td><td>
-			A fullscreen button control.
+			全屏按钮控件。
 		</td><td>
 			<a href="https://github.com/elidupuis">Eli Dupuis</a>
 		</td>
@@ -3349,14 +3341,14 @@ Allows display of the map in full-screen mode.
 
 ### Minimaps & synced maps
 
-Display two maps at once. One of them might be a different size and zoom level, usable as a minimap to aid with navigation.
+同时显示两张地图。其中一个可能是不同的尺寸和缩放级别，可作为最小地图使用，以帮助用户进行导航。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/turban/Leaflet.Sync">Leaflet.Sync</a>
 		</td><td>
-			Synchronized view of two maps.
+			两张地图的同步视图。
 		</td><td>
 			<a href="https://github.com/turban">Bjørn Sandvik</a>
 		</td>
@@ -3365,7 +3357,7 @@ Display two maps at once. One of them might be a different size and zoom level, 
 		<td>
 			<a href="https://github.com/Norkart/Leaflet-MiniMap">Leaflet.MiniMap</a>
 		</td><td>
-			A small minimap showing the map at a different scale to aid navigation.
+			一个以不同的比例尺显示的迷你地图，以帮助导航。
 		</td><td>
 			<a href="https://github.com/robpvn">Robert Nordan</a>
 		</td>
@@ -3374,7 +3366,7 @@ Display two maps at once. One of them might be a different size and zoom level, 
 		<td>
 			<a href="https://github.com/bbecquet/Leaflet.MagnifyingGlass">Leaflet.MagnifyingGlass</a>
 		</td><td>
-			Allows you to display a small portion of the map at another zoom level, either at a fixed position or linked to the mouse movement, for a magnifying glass effect.
+			允许你在另一个缩放级别上显示地图的一小部分，可以在一个固定的位置，也可以与鼠标移动相联系，以达到放大镜的效果。
 		</td><td>
 			<a href="https://github.com/bbecquet/">Benjamin Becquet</a>
 		</td>
@@ -3383,7 +3375,7 @@ Display two maps at once. One of them might be a different size and zoom level, 
 		<td>
 			<a href="https://github.com/jieter/Leaflet.layerscontrol-minimap">Leaflet.layerscontrol-minimap</a>
 		</td><td>
-			Extends the default Leaflet layers control with synced minimaps.
+			用同步的迷你地图扩展默认的 Leaflet layers control。
 		</td><td>
 			<a href="https://github.com/jieter">Jieter</a>
 		</td>
@@ -3392,7 +3384,7 @@ Display two maps at once. One of them might be a different size and zoom level, 
 		<td>
 			<a href="https://github.com/chriswhong/leaflet-globeminimap/">Leaflet.GlobeMiniMap</a>
 		</td><td>
-			Simple minimap control that places a 3D Globe in the corner of your map, centered on the same location as the main map (<a href='http://chriswhong.github.io/leaflet-globeminimap/example/'>demo</a>).
+			简单的小地图控件，以与主地图相同的位置为中心将 3D 地球仪放置在地图的角落 (<a href='http://chriswhong.github.io/leaflet-globeminimap/example/'>demo</a>)
 		</td><td>
 			<a href="https://github.com/chriswhong">Chris Whong</a>
 		</td>
@@ -3401,7 +3393,7 @@ Display two maps at once. One of them might be a different size and zoom level, 
 		<td>
 			<a href="https://github.com/jieter/leaflet-clonelayer">leaflet-clonelayer</a>
 		</td><td>
-			Clone Leaflet layers to allow reuse across different maps in the same runtime.
+			克隆 Leaflet 图层，以允许在同一运行时间内的不同地图中重复使用。
 		</td><td>
 			<a href="https://github.com/jieter">Jieter</a>
 		</td>
@@ -3415,14 +3407,14 @@ Display two maps at once. One of them might be a different size and zoom level, 
 
 ### Measurement
 
-Allow the user to measure distances or areas.
+允许用户测量距离或面积。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/ppete2/Leaflet.PolylineMeasure">Leaflet.PolylineMeasure</a>
 		</td><td>
-			 Measure great-circle distances of simple lines as well as of complex polylines. (<a href="https://ppete2.github.io/Leaflet.PolylineMeasure/demo1.html">Demo 1</a>), (<a href="https://ppete2.github.io/Leaflet.PolylineMeasure/demo2.html">Demo 2</a>), (<a href="https://ppete2.github.io/Leaflet.PolylineMeasure/demo3.html">Demo 3</a>)
+			测量简单的线和复杂的折线的大圆距离。 (<a href="https://ppete2.github.io/Leaflet.PolylineMeasure/demo1.html">Demo 1</a>), (<a href="https://ppete2.github.io/Leaflet.PolylineMeasure/demo2.html">Demo 2</a>), (<a href="https://ppete2.github.io/Leaflet.PolylineMeasure/demo3.html">Demo 3</a>)
 		</td><td>
 			<a href="https://github.com/ppete2">PPete</a>
 		</td>
@@ -3431,7 +3423,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.MeasureControl">Leaflet.MeasureControl</a>
 		</td><td>
-			A simple tool to measure distances on maps (*relies on Leaflet.Draw*).
+			在地图上测量距离的简单工具（依赖于 Leaflet.Draw）。
 		</td><td>
 			<a href="https://github.com/makinacorpus/">Makina Corpus</a>
 		</td>
@@ -3440,7 +3432,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/zvaraondrej/Leaflet.MeasureAreaControl">Leaflet.MeasureAreaControl</a>
 		</td><td>
-			 Control for measuring element's area.
+			测量元素面积的控件。 
 		</td><td>
 			<a href="https://github.com/zvaraondrej">Ondrej Zvara</a>
 		</td>
@@ -3450,7 +3442,7 @@ Allow the user to measure distances or areas.
 			<a href="https://github.com/ljagis/leaflet-measure">leaflet-measure</a>
 		</td>
 		<td>
-			Coordinate, linear, and area measure control for Leaflet maps
+			Leaflet 地图的坐标、线和面积测量控件
 		</td>
 		<td>
 			<a href="https://github.com/ljagis">LJA GIS</a>
@@ -3461,7 +3453,7 @@ Allow the user to measure distances or areas.
 			<a href="https://github.com/nerik/leaflet-graphicscale">leaflet-graphicscale</a>
 		</td>
 		<td>
-			Animated graphic scale control (<a href='http://nerik.github.io/leaflet-graphicscale/demo/'>demo</a>).
+			控制动画的图形比例 (<a href='http://nerik.github.io/leaflet-graphicscale/demo/'>demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/nerik">Erik Escoffier</a>
@@ -3471,7 +3463,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/MarcChasse/leaflet.ScaleFactor">Leaflet.ScaleFactor</a>
 		</td><td>
-			Display a Scale Factor (e.g. 1:50,000) for Leaflet maps (<a href="https://marcchasse.github.io/leaflet.ScaleFactor/">Demo</a>)
+			显示 Leaflet 地图的比例（例如 1:50,000） (<a href="https://marcchasse.github.io/leaflet.ScaleFactor/">Demo</a>)
 		</td><td>
 			<a href="https://github.com/MarcChasse">Marc Chasse</a>
 		</td>
@@ -3480,7 +3472,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/PowerPan/leaflet.nauticscale">Leaflet.nauticscale</a>
 		</td><td>
-			Display a Nauticscale on Leaflet maps
+			在 Leaflet 地图上显示 Nauticscale
 		</td><td>
 			<a href="https://github.com/PowerPan">Johannes Rudolph</a>
 		</td>
@@ -3489,7 +3481,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/ProminentEdge/leaflet-measure-path">Leaflet Measure Path</a>
 		</td><td>
-			Show measurements on paths; polylines, polygons and circles currently supported (<a href="http://prominentedge.com/leaflet-measure-path/">demo</a>)
+			显示路径上的测量值；目前支持折线、多边形和圆。 (<a href="http://prominentedge.com/leaflet-measure-path/">demo</a>)
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a> / <a href="http://prominentedge.com/">Prominent Edge</a>
 		</td>
@@ -3498,7 +3490,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/NLTGit/Leaflet.LinearMeasurement">Leaflet.LinearMeasurement</a>
 		</td><td>
-			Leaflet Linear Measurement plugin that creates polylines with incremental measures along the path. (<a href="https://nltgit.github.io/Leaflet.LinearMeasurement/">demo</a>)
+			Leaflet 线性测量插件，可创建沿路径增量测量的折线。 (<a href="https://nltgit.github.io/Leaflet.LinearMeasurement/">demo</a>)
 		</td><td>
 			<a href="http://www.newlighttechnologies.com/">New Light Technologies</a>
 		</td>
@@ -3507,7 +3499,7 @@ Allow the user to measure distances or areas.
 		<td>
 			<a href="https://github.com/gokertanrisever/leaflet-ruler">leaflet-ruler</a>
 		</td><td>
-			A simple leaflet plugin to measure true bearing and distance between clicked points. (<a href="https://gokertanrisever.github.io/leaflet-ruler/">Demo</a>)
+			一个简单的 Leaflet 插件，用于测量真实方位和点击的位置之间的距离。 (<a href="https://gokertanrisever.github.io/leaflet-ruler/">Demo</a>)
 		</td><td>
 			<a href="https://github.com/gokertanrisever">Goker Tanrisever</a>
 		</td>
@@ -3517,7 +3509,7 @@ Allow the user to measure distances or areas.
 			<a href="https://github.com/rwev/leaflet-reticle">leaflet-reticle</a>
 		</td>
 		<td>
-			Leaflet control adding a centering reticle consisting of independently calculated latitude and longitude scales.
+			Leaflet 控件，添加了一个由独立计算的纬度和经度刻度组成的居中标线。
 		</td>
 		<td>
 			<a href="https://github.com/rwev">rwev</a>
@@ -3535,14 +3527,14 @@ Allow the user to measure distances or areas.
 
 ### Mouse coordinates
 
-Show the geographical coordinates under the mouse cursor in different ways.
+以不同方式显示鼠标光标下的地理坐标。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/ardhi/Leaflet.MousePosition">Leaflet.MousePosition</a>
 		</td><td>
-			A simple MousePosition control that displays geographic coordinates of the mouse pointer, as it is moved about the map
+			一个简单的 MousePosition 控件，显示鼠标指针在地图上移动时的地理坐标
 		</td><td>
 			<a href="https://github.com/ardhi">Ardhi Lukianto</a>
 		</td>
@@ -3551,7 +3543,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 		<td>
 			<a href="https://github.com/MrMufflon/Leaflet.Coordinates">Leaflet.Coordinates</a>
 		</td><td>
-			A simple Leaflet plugin viewing the mouse LatLng-coordinates. Also views a marker with coordinate popup on userinput.
+			一个简单的Leaflet插件，用于查看鼠标的 LatLng-coordinates，也可以在用户输入时查看一个带有坐标弹出的标记。
 		</td><td>
 			<a href="https://github.com/MrMufflon">Felix Bache</a>
 		</td>
@@ -3560,7 +3552,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 		<td>
 			<a href="https://github.com/zimmicz/Leaflet-Coordinates-Control">Leaflet Coordinates Control</a>
 		</td><td>
-			Captures mouseclick and displays its coordinates with easy way to copy them.
+			捕捉鼠标点击并显示其坐标，并且可以轻松复制它们。
 		</td><td>
 			<a href="https://github.com/zimmicz">Michal Zimmermann</a>
 		</td>
@@ -3569,7 +3561,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 		<td>
 			<a href="https://github.com/tinjaw/Leaflet-Copy-Coordinates-Control">Leaflet Copy Coordinates Control</a>
 		</td><td>
-			Works with Leaflet to capture mouseclicks on a map and display the associated coordinates with an easy way to copy them. (Derived from original work by zimmicz. Forked mainly to provide npm functionality.)
+			与 Leaflet 一起使用来捕获地图上的鼠标点击，并以一种简单的方式复制它们来显示关联的坐标。（源自 zimmicz 的原创作品，分支主要是为了提供 npm 功能。）
 		</td><td>
 			<a href="https://github.com/tinjaw">Chaim Krause</a>
 		</td>
@@ -3579,7 +3571,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 			<a href="https://github.com/mahmoodvcs/Leaflet.NACCoordinates">Leaflet.NACCoordinates</a>
 		</td>
 		<td>
-			Displays NAC coordinate of the mouse pointer on mouse move (<a href="http://mahmoodvcs.github.io/Leaflet.NACCoordinates/">Demo</a>)
+			在鼠标移动时显示鼠标指针的 NAC 坐标 (<a href="http://mahmoodvcs.github.io/Leaflet.NACCoordinates/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/mahmoodvcs">Mahmood Dehghan</a>
@@ -3590,8 +3582,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 			<a href="https://github.com/PowerPan/leaflet.mouseCoordinate">Leaflet.mouseCoordinates</a>
 		</td>
 		<td>
-			Displays the Mouse Coordinate in a Box.
-			Multiple Formats Are Possible
+			在一个方框中可采用多种格式来显示鼠标坐标。
 			<ul>
 				<li>GPS</li>
 				<li>UTM</li>
@@ -3608,7 +3599,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 			<a href="https://github.com/stefanocudini/leaflet-locationpicker">Leaflet Location Picker</a>
 		</td>
 		<td>
-			Simple location picker with mini Leaflet map (<a href="http://labs.easyblog.it/maps/leaflet-locationpicker/">Demo</a>)
+			简单的并且带有迷你 Leaflet 地图的位置选择器 (<a href="http://labs.easyblog.it/maps/leaflet-locationpicker/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/stefanocudini/">Stefano Cudini</a>
@@ -3619,7 +3610,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 			<a href="https://github.com/xguaita/Leaflet.MapCenterCoord">Leaflet.MapCenterCoord</a>
 		</td>
 		<td>
-			A Leaflet control to display the coordinates of the map center, especially useful on touch/mobile devices. (<a href="http://xguaita.github.io/Leaflet.MapCenterCoord/">Doc & demos</a>)
+			用于显示地图中心坐标的 Leaflet 控件，在触摸/移动设备上特别有用。(<a href="http://xguaita.github.io/Leaflet.MapCenterCoord/">Doc & demos</a>)
 		</td>
 		<td>
 			<a href="https://github.com/xguaita">Xisco Guaita</a>
@@ -3630,7 +3621,7 @@ Show the geographical coordinates under the mouse cursor in different ways.
 			<a href="https://github.com/matlads/Leaflet.Mapcodes">Leaflet.Mapcodes</a>
 		</td>
 		<td>
-			Displays the <a href="http://www.mapcode.com">Mapcode</a> of the mouse pointer on mouse move (<a href="http://matlads.github.io/Leaflet.Mapcodes/">Demo</a>)
+			在鼠标移动时显示鼠标指针的 <a href="http://www.mapcode.com">Mapcode</a>  (<a href="http://matlads.github.io/Leaflet.Mapcodes/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/matlads">Martin Atukunda</a>
@@ -3648,15 +3639,14 @@ Show the geographical coordinates under the mouse cursor in different ways.
 
 ### Events
 
-These plugins extend Leaflet event handling.
+这些插件扩展了 Leaflet 的事件处理的能力。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/elmarquis/Leaflet.GestureHandling/">Leaflet.GestureHandling</a>
 		</td><td>
-		Brings the basic functionality of Google Maps Gesture Handling into Leaflet. Prevents users from getting trapped on the map when scrolling a long page.
-			<a href="https://elmarquis.github.io/Leaflet.GestureHandling/examples/"> Demo</a>
+			将 Google 地图手势处理的基本功能带入 Leaflet。防止用户在滚动长页面时被困在地图上。<a href="https://elmarquis.github.io/Leaflet.GestureHandling/examples/"> Demo</a>
 		</td><td>
 			<a href="https://github.com/elmarquis">Andy Marquis</a>
 		</td>
@@ -3665,7 +3655,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/CliffCloud/Leaflet.Sleep">L.Sleep</a>
 		</td><td>
-			Avoid unwanted scroll capturing.
+			避免不必要的滚动捕获（capturing）事件。
 			<a href="https://cliffcloud.github.io/Leaflet.Sleep"> Demo</a>
 		</td><td>
 			<a href="https://github.com/atstp">atstp</a>
@@ -3675,8 +3665,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.OverIntent">Leaflet.OverIntent</a>
 		</td><td>
-			Adds a new event ``mouseintent``, that differs from ``mouseover`` since it reflects user
-			intentions to aim a particular layer.
+			添加一个新事件 “mouseintent”，它与 “mouseover” 不同，因为它反映了用户瞄准特定图层的意图。
 		</td><td>
 			<a href="https://github.com/makinacorpus/">Mathieu Leplatre</a>
 		</td>
@@ -3685,7 +3674,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.AlmostOver">Leaflet.AlmostOver</a>
 		</td><td>
-			Trigger mouse events when cursor is "almost" over a layer.
+			当光标 "几乎 "在一个图层上时触发鼠标事件。
 		</td><td>
 			<a href="https://github.com/makinacorpus/">Mathieu Leplatre</a>
 		</td>
@@ -3694,8 +3683,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/Mappy/Leaflet-active-area">Leaflet-active-area</a>
 		</td><td>
-			This plugin allows you to use a smaller portion of the map as an active area.
-			All positioning methods (setView, fitBounds, setZoom) will be applied on this portion instead of the all map.
+			此插件允许您将地图的较小部分用作活动区域。所有定位方法（setView、fitBounds、setZoom）都将应用于此部分而不是所有地图。
 		</td><td>
 			<a href="https://github.com/Mappy">Mappy</a>
 		</td>
@@ -3704,7 +3692,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/MazeMap/Leaflet.ControlledBounds">Leaflet.ControlledBounds</a>
 		</td><td>
-			Inspired by Leaflet-active-area, automatically detects the largest area of the map not covered by any map controls and applies setView, fitBounds, setZoom, getBounds to that area.
+			受 Leaflet-active-area 的启发，自动检测地图上未被任何地图控件覆盖的最大区域，并将 setView、fitBounds、setZoom、getBounds 应用于该区域。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -3715,7 +3703,7 @@ These plugins extend Leaflet event handling.
 			<a href="https://github.com/Outdooractive/leaflet-singleclick_0.7">singleclick</a>
 		</td>
 		<td>
-			Extend <code>L.Map</code> to fire a <code>singleclick</code> event (<a href="http://outdooractive.github.io/leaflet-singleclick_0.7/">demo</a>). Compatible with Leaflet 0.7.x only.
+			扩展 L.Map 以触发 singleclick 事件（<a href="http://outdooractive.github.io/leaflet-singleclick_0.7/">demo</a>）。仅与 Leaflet 0.7.x 兼容。
 		</td>
 		<td>
 			<a href="http://glat.info">Guillaume Lathoud</a>
@@ -3726,7 +3714,7 @@ These plugins extend Leaflet event handling.
 			<a href="https://github.com/MazeMap/Leaflet.singleclick">singleclick</a>
 		</td>
 		<td>
-			Extend <code>L.Evented</code> to fire a <code>singleclick</code> event (<a href="https://mazemap.github.io/Leaflet.singleclick/">demo</a>). Compatible with Leaflet 1.0.0-beta1 and greater only.
+			扩展 L.Evented 以触发 singleclick 事件（<a href="https://mazemap.github.io/Leaflet.singleclick/">demo</a>）。仅与 Leaflet 1.0.0-beta1 及更高版本兼容。
 		</td><td>
 			<a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 			<a href="https://github.com/MazeMap">MazeMap</a>
@@ -3737,10 +3725,7 @@ These plugins extend Leaflet event handling.
 	            <a href="https://github.com/MazeMap/Leaflet.VisualClick">Leaflet.VisualClick</a>
 	        </td>
 	        <td>
-	            Adds visual feedback when user clicks/taps the map (<a href="https://github.com/MazeMap/Leaflet.VisualClick/">demo</a>).
-	            Useful when further action is delayed by server requests, or implementation of Leaflet.singleclick.
-	            Or just because it looks cool :)
-	            Only tested with Leaflet 1.0.0-beta1.
+	            当用户点击/点击地图时添加视觉反馈（<a href="https://github.com/MazeMap/Leaflet.VisualClick/">demo</a>）。当服务器请求或 Leaflet.singleclick 的实现延迟进一步操作时很有用，或者只是因为它看起来很酷:) 仅在 Leaflet 1.0.0-beta1 测试过。
 	        </td><td>
 	            <a href="https://github.com/dagjomar">Dag Jomar Mersland</a>,
 	            <a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
@@ -3751,7 +3736,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/perliedman/leaflet-touch-helper">Leaflet Touch Helper</a>
 		</td><td>
-			Makes it easy to touch vector overlays with thick fingers on a small display by adding a transparent, larger touch surface
+			通过添加透明、更大的触摸表面，可以轻松地在小显示屏上用粗手指触摸矢量叠加层
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a> / <a href="http://prominentedge.com/">Prominent Edge</a>
 		</td>
@@ -3760,7 +3745,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/geoloep/Leaflet.ClickTolerance">Leaflet.ClickTolerance</a>
 		</td><td>
-			This plugin allows you to increase the click tolerance of canvas powered layers, making it possible to increase the clickable area of vector layers beyond their visible extent. Useful when your features are difficult to click otherwise.
+			该插件允许您增加画布驱动层的点击容差，从而可以增加矢量图层的可点击区域超出其可见范围。当您的功能难以点击时很有用。
 		</td><td>
 			<a href="https://github.com/geoloep">Geoloep</a>
 		</td>
@@ -3769,7 +3754,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/idawave/Leaflet.DraggableEnhancer">L.DraggableEnhancer</a>
 		</td><td>
-			Modify the default L.Draggable handler (responsible for map panning, ...) to make it work properly if one of the map container's parents has predefined handlers like "event.stopPropagation()' attached to a "mousemove" event for example.
+			例如，如果地图容器的父级之一具有附加到 “mousemove” 事件的预定义处理程序（如“event.stopPropagation()”），则修改默认的 L.Draggable 处理程序（负责地图平移，...）以使其正常工作。
 		</td><td>
 			<a href="https://github.com/idawave">Vincent Dechandon</a>
 		</td>
@@ -3778,7 +3763,7 @@ These plugins extend Leaflet event handling.
 		<td>
 			<a href="https://github.com/iboates/leaflet-spotlight">L.Spotlight</a>
 		</td><td>
-			Dynamically highlight features near the mouse cursor with a customizable shape
+			使用可自定义的形状动态突出显示鼠标光标附近的元素（feature）
 		</td><td>
 			<a href="https://github.com/iboates">Isaac Boates</a>
 		</td>
@@ -3789,14 +3774,14 @@ These plugins extend Leaflet event handling.
 
 ### User interface
 
-Buttons, sliders, toolbars, sidebars, and panels.
+按钮、滑块、工具栏、侧边栏和面板。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/yigityuce/Leaflet.Control.Custom">Leaflet.Control.Custom</a>
 		</td><td>
-			Fully customizable Leaflet control panel with HTML element.
+			完全可定制的带有 HTML 元素的 Leaflet 控制面板。
 			<a href="https://yigityuce.github.io/Leaflet.Control.Custom/examples/index.html"> Demo</a>
 		</td><td>
 			<a href="https://github.com/yigityuce">Yiğit Yüce</a>
@@ -3806,7 +3791,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/CliffCloud/Leaflet.EasyButton">L.EasyButton</a>
 		</td><td>
-			In one line, add a Font Awesome control button with attached click events.
+			在一行中，添加一个带有点击事件的 Font Awesome 控件按钮。
 			<a href="https://cliffcloud.github.io/Leaflet.EasyButton"> Demo</a>
 		</td><td>
 			<a href="https://github.com/atstp">atstp</a>
@@ -3816,7 +3801,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/aratcliffe/Leaflet.contextmenu">Leaflet.contextmenu</a>
 		</td><td>
-			A context menu for Leaflet.
+			Leaflet 的 contextmenu 菜单。
 		</td><td>
 			<a href="https://github.com/aratcliffe/">Adam Ratcliffe</a>
 		</td>
@@ -3825,8 +3810,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/ahalota/Leaflet.CountrySelect/">Leaflet.CountrySelect</a>
 		</td><td>
-			Control with menu of all countries, and an event listener that returns
-			the selected country as a GeoJSON feature (<a href="http://ahalota.github.io/Leaflet.CountrySelect/demo.html">demo</a>)
+			控制所有国家/地区的菜单，以及将所选国家/地区作为 GeoJSON 功能返回的事件侦听器 (<a href="http://ahalota.github.io/Leaflet.CountrySelect/demo.html">demo</a>)
 		</td><td>
 			<a href="https://github.com/ahalota/">Anika Halota</a>
 		</td>
@@ -3836,7 +3820,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/easymountain/Leaflet.GeojsonLayerSwitcher">Leaflet.GeojsonLayerSwitcher</a>
 		</td>
 		<td>
-			Allows to navigate between GeoJSON layers, select some, and return selection.
+			允许在GeoJSON层之间导航，选择一些，并返回选择。
 		</td>
 		<td>
 			<a href="https://github.com/easymountain">Easy-Mountain</a>
@@ -3846,8 +3830,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/nickpeihl/leaflet-sidebar-v2/">leaflet-sidebar-v2</a>
 		</td><td>
-			A responsive, tabbed sidebar with HTML & JS API.
-			Compatible with old (0.7) and current leaflet.
+			带有 HTML 和 JS API 的响应式标签式侧边栏。与旧的 (0.7) 和当前的 Leaflet 兼容。
 		</td><td>
 			<a href="https://github.com/noerw/">Norwin Roosen</a>
 		</td>
@@ -3856,7 +3839,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/turbo87/leaflet-sidebar/">leaflet-sidebar</a>
 		</td><td>
-			A responsive sidebar plugin.
+			响应式侧边栏插件。
 		</td><td>
 			<a href="https://github.com/turbo87/">Tobias Bieniek</a>
 		</td>
@@ -3865,7 +3848,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/turbo87/sidebar-v2/">sidebar-v2</a>
 		</td><td>
-			Another responsive sidebar plugin. This time with tabs!
+			另一个响应式侧边栏插件。这次带有标签！
 		</td><td>
 			<a href="https://github.com/turbo87/">Tobias Bieniek</a>
 		</td>
@@ -3875,7 +3858,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/tinuzz/leaflet-messagebox">Leaflet.Messagebox</a>
 		</td>
 		<td>
-			Display a temporary text message on a map (<a href="https://www.grendelman.net/leaflet/">Demo</a>)
+			在地图上显示临时文本消息 (<a href="https://www.grendelman.net/leaflet/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/tinuzz/">Martijn Grendelman</a>
@@ -3885,7 +3868,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.TileLegend">Leaflet.TileLegend</a>
 		</td><td>
-			Create illustrated and interactive legends for your background layers.
+			为您的背景图层创建插图和交互式图例。
 		</td><td>
 			<a href="http://yohanboniface.me">Yohan Boniface</a>
 		</td>
@@ -3895,7 +3878,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/Leaflet/Leaflet.toolbar">Leaflet.toolbar</a>
 		</td>
 		<td>
-			Flexible, extensible toolbars for Leaflet maps. View an example <a href="https://leaflet.github.io/Leaflet.toolbar/examples/popup.html">here</a>.
+			用于 Leaflet 地图的灵活、可扩展的工具条。在<a href="https://leaflet.github.io/Leaflet.toolbar/examples/popup.html">此处</a>查看示例。
 		</td>
 		<td>
 			<a href="https://github.com/manleyjster">Justin Manley</a>
@@ -3906,7 +3889,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/gregallensworth/L.Control.Credits">L.Credits</a>
 		</td>
 		<td>
-			A simple, attractive, interactive control to put your logo and link in the corner of your map.
+			一个简单、有吸引力的交互式控件，可将您的徽标和链接放在地图的角落。
 		</td>
 		<td>
 			<a href="https://github.com/gregallensworth/">Greg Allensworth</a>
@@ -3916,8 +3899,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.Spin">Leaflet.Spin</a>
 		</td><td>
-			Shows a nice spinner on the map using <a href="http://fgnass.github.com/spin.js/">Spin.js</a>,
-			for asynchronous data load, like with <a href="https://github.com/calvinmetcalf/leaflet-ajax">Leaflet Ajax</a>.
+			使用 <a href="http://fgnass.github.com/spin.js/">Spin.js</a> 在地图上显示一个漂亮的微调器，用于异步数据加载，就像使用 <a href="https://github.com/calvinmetcalf/leaflet-ajax">Leaflet Ajax</a> 一样。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -3927,7 +3909,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/oskosk/Leaflet.Weather">Leaflet Weather</a>
 		</td>
 		<td>
-			A Leaflet plugin for adding a weather widget to the map using OpenWeatherMap API (<a href="http://oskosk.github.io/Leaflet.Weather/">Demo</a>).
+			一个 Leaflet 插件，用于使用 OpenWeatherMap API 在地图上添加一个天气小部件。 (<a href="http://oskosk.github.io/Leaflet.Weather/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/oskosk">Osk</a>
@@ -3938,7 +3920,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/dalbrx/Leaflet.ResizableControl">Leaflet ResizableControl</a>
 		</td>
 		<td>
-			A Leaflet plugin to add a resizable and scrollable control to the map (<a href="http://dalbrx.github.io/Leaflet.ResizableControl/">Demo</a>).
+			一个 Leaflet 插件，在地图上添加一个可调整大小和可滚动的控件。 (<a href="http://dalbrx.github.io/Leaflet.ResizableControl/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/dalbrx">David Albrecht</a>
@@ -3949,7 +3931,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/Eclipse1979/leaflet-slider">Leaflet.Slider</a>
 		</td>
 		<td>
-			Adds a <code>&lt;input type="range"&gt;</code> slider that calls a function every time its input is changed (<a href="https://github.com/Eclipse1979/leaflet-slider">Demo</a>)
+			添加一个<code>&lt;input type="range"&gt;</code>滑块，每次改变其输入都会调用一个函数。 (<a href="https://github.com/Eclipse1979/leaflet-slider">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/Eclipse1979">EPP</a>
@@ -3959,7 +3941,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/mapshakers/leaflet-control-window">leaflet-control-window</a>
 		</td><td>
-		Creates modal/modeless, draggable, responsive, customisable window in your map.
+		    在你的地图中创建模态/无模态、可拖动、可响应、可定制的窗口。
 		</td><td>
 			<a href="https://github.com/mapshakers">mapshakers</a>/
 			<a href="https://github.com/filipzava">Filip Zavadil</a>
@@ -3969,7 +3951,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/utahemre/Leaflet.CoordinatedImagePreview">Leaflet.CoordinatedImagePreview</a>
 		</td><td>
-			Displays coordinated images in map bounds.
+			在地图范围内显示协调的图像。
 		</td><td>
 			<a href="https://github.com/utahemre">Yunus Emre Özkaya</a>
 		</td>
@@ -3979,7 +3961,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/unbam/Leaflet.SlideMenu">Leaflet.SlideMenu</a>
 		</td>
 		<td>
-			A simple slide menu for Leaflet.
+			一个用于Leaflet的简单的滑动菜单。
 		</td>
 		<td>
 			<a href="https://github.com/unbam">Masashi Takeshita</a>
@@ -3990,7 +3972,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/NBTSolutions/Leaflet.Dialog">Leaflet.Dialog</a>
 		</td>
 		<td>
-			A simple resizable, movable, customizable dialog box. (<a href="http://nbtsolutions.github.io/Leaflet.Dialog/">Demo</a>)
+			一个简单的可调整大小、可移动、可自定义的对话框。 (<a href="http://nbtsolutions.github.io/Leaflet.Dialog/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/NBTSolutions">NBT Solutions</a>
@@ -4001,7 +3983,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/MAD-GooZe/Leaflet.BootstrapZoom">Leaflet.BootstrapZoom</a>
 		</td>
 		<td>
-			Overrides default zoom control buttons with Twitter Bootstrap styled ones
+			使用 Twitter Bootstrap 样式的按钮覆盖默认的缩放控制按钮
 		</td>
 		<td>
 			<a href="https://github.com/MAD-GooZe">Alexey Gusev</a>
@@ -4012,7 +3994,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/route360/Leaflet.CondensedAttribution">Leaflet.CondensedAttribution</a>
 		</td>
 		<td>
-			An attribution plugin that makes long attributes visible on hover
+			一个能使长属性在悬停时可见的属性插件
 		</td>
 		<td>
 			<a href="http://www.motionintelligence.net/">Motion Intelligence GmbH</a>
@@ -4023,7 +4005,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/consbio/Leaflet.HtmlLegend">Leaflet.HtmlLegend</a>
 		</td>
 		<td>
-			A simple Leaflet plugin for creating legends using HTML elements. <a href="https://consbio.github.io/Leaflet.HtmlLegend/">Demo</a>.
+			一个简单的 Leaflet 插件，用于使用 HTML 元素创建图例。 <a href="https://consbio.github.io/Leaflet.HtmlLegend/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/ka7eh">Kaveh Karimi</a>
@@ -4034,7 +4016,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			<a href="https://github.com/publiclab/leaflet-blurred-location/">leaflet-blurred-location</a>
 		</td>
 		<td>
-			A Leaflet-based interface for selecting a "blurred" or low-resolution location, to preserve privacy. <a href="https://publiclab.github.io/leaflet-blurred-location/examples/">Demo</a>.
+			一个基于 Leaflet 的界面，用于选择一个 "模糊 "或低分辨率的位置，以保护隐私。 <a href="https://publiclab.github.io/leaflet-blurred-location/examples/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/publiclab">Public Lab</a>
@@ -4044,7 +4026,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 		<td>
 			<a href="https://github.com/jjimenezshaw/Leaflet.Control.Resizer">Leaflet.Control.Resizer</a>
 		</td><td>
-			Control to resize your map on the right or bottom side. See <a href="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/examples/basic.html">demo</a>
+			在右侧或底部控制调整你的地图大小。 查看 <a href="https://jjimenezshaw.github.io/Leaflet.Control.Resizer/examples/basic.html">demo</a>
 		</td><td>
 			<a href="https://github.com/jjimenezshaw/">Javier Jimenez Shaw</a>
 		</td>
@@ -4055,7 +4037,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			</a>
 		</td>
 		<td>
-			Cleverly dispays "blurred" locations using color-coded heatmap and color-coded markers while fetching data from remote API <a href="https://publiclab.github.io/leaflet-blurred-location-display/examples/HumanReadableBlurring.html">Demo</a>.
+			在从远程API获取数据时，巧妙地使用彩色编码的热图和彩色编码的标记来分配 "模糊的 "位置 <a href="https://publiclab.github.io/leaflet-blurred-location-display/examples/HumanReadableBlurring.html">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/publiclab">Public Lab</a>
@@ -4067,7 +4049,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 			</a>
 		</td>
 		<td>
-			Display legend symbols and toggle overlays(<a href="https://ptma.github.io/Leaflet.Legend/examples/legend.html">Demo</a>).
+			显示图例符号和切换覆盖物 (<a href="https://ptma.github.io/Leaflet.Legend/examples/legend.html">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/ptma">JJ Jin</a>
@@ -4079,7 +4061,7 @@ Buttons, sliders, toolbars, sidebars, and panels.
 
 ### Print/export
 
-Print or export your map.
+打印或导出你的地图。
 
 <!--
 - Saving a Leaflet Map to a PNG Example using Javascript and PHP https://github.com/tegansnyder/Leaflet-Save-Map-to-PNG
@@ -4091,7 +4073,7 @@ Print or export your map.
 		<td>
 			<a href="https://github.com/aratcliffe/Leaflet.print">Leaflet.print</a>
 		</td><td>
-			Implements the Mapfish print protocol allowing a Leaflet map to be printed using either the Mapfish or GeoServer print module.
+			实现 Mapfish 打印协议，允许使用 Mapfish 或 GeoServer 打印模块打印 Leaflet 地图。
 		</td><td>
 			<a href="https://github.com/aratcliffe">Adam Ratcliffe</a>
 		</td>
@@ -4100,7 +4082,7 @@ Print or export your map.
 		<td>
 			<a href="https://github.com/mapbox/leaflet-image">Leaflet-image</a>
 		</td><td>
-			Export images out of Leaflet maps without a server component, by using Canvas and CORS.
+			通过使用 Canvas 和 CORS，在没有服务器组件的情况下从 Leaflet 地图导出图像。
 		</td><td>
 			<a href="https://github.com/tmcw">Tom MacWright</a>
 		</td>
@@ -4109,7 +4091,7 @@ Print or export your map.
 		<td>
 			<a href="https://github.com/rowanwins/leaflet-easyPrint">Leaflet-easyPrint</a>
 		</td><td>
-			A simple plugin which adds an icon to print your Leaflet map.
+			一个简单的插件，它添加了一个图标来打印你的 Leaflet 地图。
 		</td><td>
 			<a href="https://github.com/rowanwins">Rowan Winsemius</a>
 		</td>
@@ -4118,7 +4100,7 @@ Print or export your map.
 		<td>
 			<a href="https://github.com/Igor-Vladyka/leaflet.browser.print">leaflet.browser.print</a>
 		</td><td>
-			Allows users to print full page map directly from the browser.
+			允许用户直接从浏览器打印整页地图。
 		</td><td>
 			<a href="https://github.com/Igor-Vladyka">Igor Vladyka</a>
 		</td>
@@ -4127,7 +4109,7 @@ Print or export your map.
 		<td>
 			<a href="https://github.com/pasichnykvasyl/Leaflet.BigImage">Leaflet.BigImage</a>
 		</td><td>
-			Allows users to download an image with a scaled-up version of the visible map.
+			允许用户下载带有放大版可见地图的图像。
 		</td><td>
 			<a href="https://github.com/pasichnykvasyl">Vasyl Pasichnyk (Oswald)</a>
 		</td>
@@ -4138,14 +4120,14 @@ Print or export your map.
 
 ### Geolocation
 
-Plugins that extend Leaflet's geolocation capabilities.
+扩展 Leaflet 地理定位功能的插件。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/CliffCloud/Leaflet.LocationShare">L.LocationShare</a>
 		</td><td>
-			Allow users to send and receive a marker with a message.
+			允许用户发送和接收带有消息的标记（marker）。
 			<a href="https://cliffcloud.github.io/Leaflet.LocationShare"> Demo</a>
 		</td><td>
 			<a href="https://github.com/atstp">atstp</a>
@@ -4155,7 +4137,7 @@ Plugins that extend Leaflet's geolocation capabilities.
 		<td>
 			<a href="https://github.com/domoritz/leaflet-locatecontrol">Leaflet.Locate</a>
 		</td><td>
-			A customizable locate control.
+			可定制的定位控件。
 		</td><td>
 			<a href="https://github.com/domoritz">Dominik Moritz</a>
 		</td>
@@ -4164,7 +4146,7 @@ Plugins that extend Leaflet's geolocation capabilities.
 		<td>
 			<a href="https://github.com/stefanocudini/leaflet-compass">Leaflet Control Compass</a>
 		</td><td>
-			A leaflet control plugin to build a simple rotating compass
+			一个用来构建简单的旋转罗盘的 Leaflet 控件
 		</td><td>
 			<a href="http://labs.easyblog.it/">Stefano Cudini</a>
 		</td>
@@ -4173,7 +4155,7 @@ Plugins that extend Leaflet's geolocation capabilities.
 		<td>
 			<a href="https://github.com/M165437/Leaflet.AccuratePosition">Leaflet.AccuratePosition</a>
 		</td><td>
-			Leaflet.AccuratePosition aims to provide a desired device location accuracy.
+			Leaflet.AccuratePosition 主要为了提供一个理想精度的设备位置。
 		</td><td>
 			<a href="https://github.com/M165437">Michael Schmidt-Voigt</a>
 		</td>
@@ -4184,20 +4166,20 @@ Plugins that extend Leaflet's geolocation capabilities.
 
 
 
-## Miscellaneous
+## 各种各样的
 
 
 
 ### Geoprocessing
 
-The following plugins perform several sorts of geoprocessing (mathematical and topological operations on points, lines and polygons).
+以下插件可进行多种地理信息处理（点、线和多边形上的数学和拓扑操作）。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/kartena/Proj4Leaflet">Proj4Leaflet</a>
 		</td><td>
-			<a href="http://trac.osgeo.org/proj4js/">Proj4js</a> integration plugin, allowing you to use all kinds of weird projections in Leaflet.
+			<a href="http://trac.osgeo.org/proj4js/">Proj4js</a> 集成插件，允许你在 Leaflet 中使用各种奇怪的投影。
 		</td><td>
 			<a href="http://www.kartena.se/">Kartena</a>
 		</td>
@@ -4206,7 +4188,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/springmeyer/arc.js">arc.js</a>
 		</td><td>
-			A JS library for drawing great circle routes that can be used with Leaflet.
+			一个可以与 Leaflet 一起使用的用于绘制大圆圈路线的 JS 库。
 		</td><td>
 			<a href="https://github.com/springmeyer">Dane Springmeyer</a>
 		</td>
@@ -4215,7 +4197,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/tmcw/leaflet-pip">Leaflet-pip</a>
 		</td><td>
-			Simple point in polygon calculation using <a href="https://github.com/substack/point-in-polygon">point-in-polygon</a>.
+			使用 <a href="https://github.com/substack/point-in-polygon">point-in-polygon</a> 进行简单的计算多边形中的点。
 		</td><td>
 			<a href="https://github.com/tmcw">Tom MacWright</a>
 		</td>
@@ -4224,7 +4206,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.GeometryUtil">Leaflet.GeometryUtil</a>
 		</td><td>
-			A collection of utilities for Leaflet geometries (linear referencing, etc.)
+			一组用于 Leaflet 几何形状的实用工具（线性参考等）。
 		</td><td>
 			<a href="https://github.com/bbecquet">Benjamin Becquet</a>, <a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -4234,7 +4216,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 			<a href="https://github.com/w8r/GreinerHormann">Greiner-Hormann</a>
 		</td>
 		<td>
-			Greiner-Hormann algorithm for polygon clipping and binary operations, adapted for use with Leaflet.
+			用于多边形裁剪和二元运算的 Greiner-Hormann 算法，适用于 Leaflet。
 		</td>
 		<td>
 			<a href="https://github.com/w8r">Alexander Milevski</a>
@@ -4244,7 +4226,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/skeate/Leaflet.buffer">Leaflet.buffer</a>
 		</td><td>
-			Enables buffering of shapes drawn with Leaflet.draw.
+			使得用 Leaflet.draw 绘制的图形能够得到缓冲。
 		</td><td>
 			<a href="https://github.com/skeate">Jonathan Skeate</a>
 		</td>
@@ -4253,7 +4235,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/makinacorpus/Leaflet.LayerIndex">Leaflet.LayerIndex</a>
 		</td><td>
-			An efficient spatial index for features and layers, using <a href="https://github.com/imbcmdth/RTree">RTree.js</a>.
+			要素（feature）和图层的有效空间索引，使用 <a href="https://github.com/imbcmdth/RTree">RTree.js</a>。
 		</td><td>
 			<a href="https://github.com/leplatrem">Mathieu Leplatre</a>
 		</td>
@@ -4262,7 +4244,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/mapzen/leaflet-spatial-prefix-tree">leaflet-spatial-prefix-tree</a>
 		</td><td>
-			Leaflet plugin for visualizing spatial prefix trees, quadtree and geohash. See <a href="http://mapzen.github.io/leaflet-spatial-prefix-tree/">demo</a>
+			用于可视化空间前缀树、四叉树和 geohash 的 Leaflet 插件。 查看 <a href="http://mapzen.github.io/leaflet-spatial-prefix-tree/">demo</a>
 		</td><td>
 			<a href="http://mapzen.com/">Mapzen</a>
 		</td>
@@ -4271,7 +4253,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/jjimenezshaw/Leaflet.UTM">Leaflet.UTM</a>
 		</td><td>
-			A simple way to convert L.LatLng into UTM (WGS84) and vice versa. UTM string format easily configurable. It does not depend on any other plugin or 3rd party. See <a href="https://jjimenezshaw.github.io/Leaflet.UTM/examples/input.html">demo</a>
+			将 L.LatLng 转换为 UTM（WGS84），反之亦然的简单方法，UTM字符串格式易于配置。它不依赖于任何其他或第三方插件。 查看 <a href="https://jjimenezshaw.github.io/Leaflet.UTM/examples/input.html">demo</a>
 		</td><td>
 			<a href="https://github.com/jjimenezshaw/">Javier Jimenez Shaw</a>
 		</td>
@@ -4280,7 +4262,7 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 		<td>
 			<a href="https://github.com/briannaAndCo/Leaflet.Antimeridian">Leaflet.Antimeridian</a>
 		</td><td>
-			A plugin to allow polygons and polylines to naturally draw across the Antimeridian (or the Internation Date Line) instead of always wrapping across the Greenwich meridian. (<a href="https://briannaandco.github.io/Leaflet.Antimeridian/">Demo</a>)
+			一个插件，允许多边形和多段线自然地画过 Antimeridian（或国际日期线），而不是总是包裹在格林威治子午线上。 (<a href="https://briannaandco.github.io/Leaflet.Antimeridian/">Demo</a>)
 		</td><td>
 			<a href="https://github.com/briannaAndCo">Brianna Landon</a>
 		</td>
@@ -4291,17 +4273,14 @@ The following plugins perform several sorts of geoprocessing (mathematical and t
 
 ### Routing
 
-The following plugins use external services to calculate driving or walking routes.
+以下插件使用外部服务来计算驾驶或步行路线。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="http://www.liedman.net/leaflet-routing-machine/">Leaflet Routing Machine</a>
 		</td><td>
-			Control for route search with via points, displaying itinerary and alternative routes. Uses
-			<a href="http://project-osrm.org/">OSRM</a> by default, but also supports
-			<a href="https://graphhopper.com/">GraphHopper</a>,
-			<a href="https://www.mapbox.com/developers/api/directions/">Mapbox Directions API</a> and more.
+            通过点控制路线搜索，显示行程和替代路线。默认使用 <a href="http://project-osrm.org/">OSRM</a> ，但也支持 <a href="https://graphhopper.com/">GraphHopper</a>、 <a href="https://www.mapbox.com/developers/api/directions/">Mapbox Directions API</a> 等。
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a>
 		</td>
@@ -4310,7 +4289,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/Turistforeningen/leaflet-routing">Leaflet.Routing</a>
 		</td><td>
-			Leaflet controller and interface for routing paths between waypoints using any user provided routing service.
+			使用任何用户提供的路由服务在航点之间路由路径的 Leaflet 控制器和接口。
 		</td><td>
 			<a href="https://github.com/turistforeningen">Norwegian Trekking Association</a>
 		</td>
@@ -4319,7 +4298,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/route360/r360-js">Route360°</a>
 		</td><td>
-			Route360° visualizes the area which is reachable from a set of starting points in a given time and gives detailed routing information (walk, bike, car and <b>public transportation</b>) to targets.
+			Route360°直观地显示了在给定时间内从一组起点可到达的区域，并提供了详细的路线信息（步行、自行车、汽车和<b>公共交通</b>）给目标。
 		</td><td>
 			<a href="http://www.motionintelligence.net/">Motion Intelligence GmbH</a>
 		</td>
@@ -4328,7 +4307,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/StephanGeorg/leaflet-routeboxer">Leaflet RouteBoxer</a>
 		</td><td>
-			This is a Leaflet implementation of the RouteBoxer Class from Google. The Leaflet 		RouteBoxer class generates a set of L.LatLngBounds objects that are guaranteed to cover every point within a specified distance of a path.
+			这是来自 Google 的 RouteBoxer 类的 Leaflet 实现。Leaflet RouteBoxer 类生成一组 L.LatLngBounds 对象，这些对象保证覆盖路径指定距离内的每个点。
 		</td><td>
 			<a href="http://www.nearest.place/">Nearest!</a>
 		</td>
@@ -4337,7 +4316,7 @@ The following plugins use external services to calculate driving or walking rout
     		<td>
     			<a href="https://github.com/BKGiser/Leaflet.Routing.Amap">Leaflet.Routing.Amap</a>
     		</td><td>
-		Control for route search using <a href="http://www.amap.com/">AMap(高德地图)</a> as a backend. Supports the Chinese BD09 and GCJ02 coordinate systems, colourful lines, and turn-by-turn popups.
+		        使用<a href="http://www.amap.com/">AMap(高德地图)</a>作为后台进行路线搜索的控件。支持中国的BD09和GCJ02坐标系，彩色线条，以及弹出的转弯提示。
     		</td><td>
     			<a href="https://github.com/BKGiser">Jack Good</a>
     		</td>
@@ -4347,8 +4326,8 @@ The following plugins use external services to calculate driving or walking rout
     		<a href="https://github.com/skedgo/tripkit-leaflet">Leaflet TripGo routing</a>
     	</td>
     	<td>
-    		The <b>TripGo</b> mobility platform lets you create apps providing seamless and personalised door-to-door trips using any public, private or commercial mode of transport.
-    		TripGo Leaflet's plugin motivation is to provide an easy way to include its functionality in an external platform.
+    		<b>TripGo</b >移动平台让你创建应用程序，使用任何公共、私人或商业交通方式提供无缝和个性化的门到门旅行。
+    		TripGo Leaflet 的插件动机是提供一种简单的方法，将其功能纳入外部平台。
     	</td>
     	<td>
     		<a href="http://skedgo.com/">SkedGo</a>
@@ -4359,7 +4338,7 @@ The following plugins use external services to calculate driving or walking rout
 			<a href="https://github.com/wwwouaiebe/leaflet.TravelNotes">leaflet.TravelNotes</a>
 		</td>
 		<td>
-			Editable markers and routing engine for leaflet. The routing engine have plugins for Mapbox, GraphHopper and OSRM and can be used for car, bike or pedestrian route. <a href="https://wwwouaiebe.github.io/leaflet.TravelNotes/?lng=en">Demo</a>.
+			Leaflet 的可编辑标记和路由引擎。路由引擎有 Mapbox、GraphHopper 和 OSRM 插件，可用于汽车、自行车或步行路线。 <a href="https://wwwouaiebe.github.io/leaflet.TravelNotes/?lng=en">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/wwwouaiebe">Christian Guyette</a>
@@ -4369,7 +4348,7 @@ The following plugins use external services to calculate driving or walking rout
 		<td>
 			<a href="https://github.com/traffordDataLab/leaflet.reachability">Leaflet.Reachability</a>
 		</td><td>
-			Show areas of reachability based on time or distance for different modes of travel using the <a href="https://openrouteservice.org/documentation/#/reference/isochrones">openrouteservice isochrones API</a>.
+			使用 <a href="https://openrouteservice.org/documentation/#/reference/isochrones">openrouteservice isochrones API</a>，根据时间或距离显示不同旅行模式的可到达区域。
 		</td><td>
 			<a href="https://github.com/traffordDataLab">Trafford Data Lab</a>
 		</td>
@@ -4381,15 +4360,14 @@ The following plugins use external services to calculate driving or walking rout
 
 ### Geocoding
 
-External services that transform an address or the name of a place into latitude and longitude (or vice versa).
+将地址或地点名称转换为纬度和经度（反之亦然）的外部服务。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/smeijer/L.GeoSearch">Leaflet GeoSearch</a>
 		</td><td>
-			Small geocoding plugin that brings address searching/lookup (aka geosearching) to Leaflet.<br />
-			Comes with support for Google, OpenStreetMap Nominatim, Bing, Esri and Nokia. Easily extensible.
+            将地址搜索/查找（又名地理搜索）引入到 Leaflet 的小型地理编码插件。支持 Google、OpenStreetMap Nominatim、Bing、Esri 和诺基亚。易于扩展。
 		</td><td>
 			<a href="https://github.com/smeijer">Stephan Meijer</a>
 		</td>
@@ -4398,7 +4376,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/k4r573n/leaflet-control-osm-geocoder">Leaflet Control OSM Geocoder</a>
 		</td><td>
-			A simple geocoder that uses OpenstreetMap Nominatim to locate places by address.
+			一个简单的地理编码器，它使用 OpenstreetMap Nominatim 按地址定位地点。
 		</td><td>
 			<a href="https://github.com/k4r573n">Karsten Hinz</a>
 		</td>
@@ -4407,7 +4385,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/sa3m/leaflet-control-bing-geocoder">Leaflet Control Bing Geocoder</a>
 		</td><td>
-			A simple geocoder control that uses Bing to locate places.
+			使用 Bing 定位地点的简单地理编码器控件。
 		</td><td>
 			<a href="https://github.com/sa3m">Samuel Piquet</a>
 		</td>
@@ -4416,8 +4394,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/perliedman/leaflet-control-geocoder">Leaflet Control Geocoder</a>
 		</td><td>
-			A clean and extensible control for both geocoding and reverse geocoding. Builtin support for
-			Nominatim, Bing, MapQuest, Mapbox, What3Words, Google and Photon. Easy to extend to other providers.
+			一个干净和可扩展的控件，用于地理编码和反向地理编码。内置支持 Nominatim, Bing, MapQuest, Mapbox, What3Words, Google 和 Photon。易于扩展到其他供应商。
 		</td><td>
 			<a href="https://github.com/perliedman">Per Liedman</a>
 		</td>
@@ -4426,7 +4403,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/jakubdostal/leaflet-geoip">Leaflet GeoIP Locator</a>
 		</td><td>
-			A simple plugin that allows finding the approximate location of IP addresses and map centering on said location.
+			一个简单的插件，可以找到 IP 地址的大致位置，并以所述位置为中心进行地图绘制。
 		</td><td>
 			<a href="https://github.com/jakubdostal">Jakub Dostal</a>
 		</td>
@@ -4435,7 +4412,7 @@ External services that transform an address or the name of a place into latitude
 		<td>
 			<a href="https://github.com/Esri/esri-leaflet-geocoder">Esri Leaflet Geocoder</a>
 		</td><td>
-			A geocoding control with suggestions powered by the ArcGIS Online geocoder.
+			一个由 ArcGIS Online 地理编码器提供建议的地理编码控件。
 		</td><td>
 			<a href="https://github.com/patrickarlt/">Patrick Arlt</a>
 		</td>
@@ -4445,7 +4422,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/lokku/leaflet-opencage-search">Leaflet.OpenCage.Search</a>
 		</td>
 		<td>
-			A search plugin plugin that uses <a href="http://geocoder.opencagedata.com/">OpenCage Data's geocoding API</a>.
+			使用 <a href="http://geocoder.opencagedata.com/">OpenCage Data 的地理编码 API</a> 的搜索插件。
 		</td>
 		<td>
 			The <a href="https://github.com/opencagedata">OpenCage</a> team
@@ -4456,7 +4433,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/consbio/Leaflet.Geonames">Leaflet.Geonames</a>
 		</td>
 		<td>
-			A lightweight geocoding control powered by <a href="http://www.geonames.org/">GeoNames</a>.  <a href="https://consbio.github.io/Leaflet.Geonames">Demo</a>
+			由 <a href="http://www.geonames.org/">GeoNames</a> 提供支持的轻量级地理编码控件。  <a href="https://consbio.github.io/Leaflet.Geonames">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/brendan-ward">Brendan Ward</a>
@@ -4467,7 +4444,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/pelias/leaflet-plugin">Pelias Leaflet Plugin</a>
 		</td>
 		<td>
-			A geocoding control using <a href="https://geocode.earth">Geocode Earth</a> or any hosted service powered by the <a href="https://github.com/pelias/api">Pelias Geocoder API</a>.  <a href="https://pelias.github.io/leaflet-plugin/">Demo</a>
+			使用 <a href="https://geocode.earth">Geocode Earth</a> 或任何由 <a href="https://github.com/pelias/api">Pelias Geocoder API</a> 提供的托管服务的地理编码控件。 <a href="https://pelias.github.io/leaflet-plugin/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/louh">Lou Huang</a>
@@ -4478,7 +4455,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/location-iq/leaflet-geocoder">Leaflet LocationIQ Geocoder</a>
 		</td>
 		<td>
-			A plugin that adds the ability to search (geocode) a Leaflet-powered map using <a href="https://locationiq.com/">LocationIQ</a>.
+			一个插件，增加了使用 <a href="https://locationiq.com/">LocationIQ</a> 搜索（地理编码）由 Leaflet 驱动的地图的能力。
 		</td>
 		<td>
 			<a href="https://github.com/location-iq">LocationIQ</a>
@@ -4489,7 +4466,7 @@ External services that transform an address or the name of a place into latitude
 			<a href="https://github.com/mmaciejkowalski/L.Highlight">L.Highlight</a>
 		</td>
 		<td>
-			A plugin that adds the ability to quick highlighting streets and areas using <a href="https://nominatim.org/">Nominatim</a>.
+			一个插件，增加了使用 <a href="https://nominatim.org/">Nominatim</a> 快速突出显示街道和地区的功能。
 		</td>
 		<td>
 			<a href="https://github.com/mmaciejkowalski">Maciej Kowalski</a>
@@ -4501,16 +4478,16 @@ External services that transform an address or the name of a place into latitude
 
 ### Plugin collections
 
-Sets of plugins that span several categories.
+横跨几个类别的插件集。
 
-Plugin developers: please keep future plugins in individual repositories.
+插件开发人员：请将未来的插件保存在单独的存储库中。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/shramov/leaflet-plugins">Plugins by Pavel Shramov</a>
 		</td><td>
-			A set of plugins for: GPX, KML, TOPOJSON layers; Bing tile layer; Yandex layers (implemented with their APIs), and permalink control.
+				一组插件：GPX、KML、TOPOJSON 图层；Bing 图层；Yandex 层（使用其 API 实现）和永久链接控制。
 		</td><td>
 			<a href="https://github.com/shramov">Pavel Shramov</a>, <a href="https://github.com/brunob">Bruno B</a>
 		</td>
@@ -4519,7 +4496,7 @@ Plugin developers: please keep future plugins in individual repositories.
 		<td>
 			<a href="https://github.com/Estimap/Spectrum4Leaflet">Spectrum4Leaflet</a>
 		</td><td>
-			Tools for using Spectrum Spatial Server services with leaflet. This plugin supports: map service, tile service, feature service. It has layers, legend and feature controls.
+			使用带有 Leaflet 的 Spectrum Spatial Server 服务的工具。该插件支持：地图服务、瓦片服务、要素服务。它具有图层、图例和功能控件。
 		</td><td>
 			<a href="https://github.com/SVoyt">SVoyt</a>, <a href="https://github.com/Estimap">ESTI MAP</a>
 		</td>
@@ -4528,8 +4505,8 @@ Plugin developers: please keep future plugins in individual repositories.
 		<td>
 			<a href="http://mapbbcode.org/leaflet.html">MapBBCode-related leaflet plugins</a>
 		</td><td>
-			Seven plugins for various features, independent of the MapBBCode library.
-			From circular and popup icons to buttons, layer switcher, better search and attribution.
+			七个用于各种功能的插件，独立于MapBBCode库。
+			从圆形和弹出式图标到按钮、图层切换器、更好的搜索和属性。
 		</td><td>
 			<a href="https://github.com/zverik">Ilya Zverev</a>
 		</td>
@@ -4538,18 +4515,18 @@ Plugin developers: please keep future plugins in individual repositories.
 
 
 
-## Integration
+## 综合的
 
 ### Frameworks & build systems
 
-Ease your development integrating Leaflet into a development framework or automating some of the javascript/CSS work for complex applications.
+将 Leaflet 集成到一个开发框架中，或为复杂的应用程序自动处理一些 javascript/CSS 工作，以简化你的开发工作。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/ghybs/leaflet-defaulticon-compatibility">leaflet-defaulticon-compatibility</a>
 		</td><td>
-			Retrieve all Leaflet Default Icon options from CSS, in particular all icon images URL's, to improve compatibility with bundlers and frameworks that modify URL's in CSS. In particular for webpack (with style-, css-, file- and url-loader's), Rails Asset Pipeline and Django pipeline. Should solve all use cases linked to <a href="https://github.com/Leaflet/Leaflet/issues/4968">issue Leaflet/Leaflet #4968</a>. <a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html">Demo with webpack</a> (and <a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html?demo=no-plugin">without this plugin</a>).
+			从 CSS 中检索所有 Leaflet 默认图标选项，特别是所有图标图像 URL，以提高与在 CSS 中修改 URL 的捆绑器和框架的兼容性。特别是对于 webpack（带有 style-、css-、file- 和 url-loader）、Rails 资产管道和 Django 管道。应解决与<a href="https://github.com/Leaflet/Leaflet/issues/4968">问题 Leaflet/Leaflet #4968</a>相关的所有用例。<a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html">使用 webpack 的 demo</a>（<a href="https://ghybs.github.io/leaflet-defaulticon-compatibility/webpack-demo.html?demo=no-plugin">不使用此插件</a>）。
 		</td><td>
 			<a href="https://github.com/ghybs">ghybs</a>
 		</td>
@@ -4558,7 +4535,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/moklick/generator-leaflet">Leaflet Yeoman Generator</a>
 		</td><td>
-			Yeoman generator that scaffolds out a basic Leaflet map application.
+			Yeoman 生成器，用于构建基本的 Leaflet 地图应用程序。
 		</td><td>
 			<a href="https://github.com/moklick">Moritz Klack</a>
 		</td>
@@ -4567,7 +4544,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/PaulLeCam/react-leaflet">react-leaflet</a>
 		</td><td>
-			<a href="https://facebook.github.io/react/">React</a> components for Leaflet maps.
+			用于 Leaflet 地图的 <a href="https://facebook.github.io/react/">React</a> 组件。
 		</td><td>
 			<a href="http://paullecam.github.io/">Paul Le Cam</a>
 		</td>
@@ -4576,7 +4553,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/leaflet-extras/leaflet.css">Leaflet.CSS</a>
 		</td><td>
-			Add the main Leaflet CSS files (or any css) from within JavaScript, be gone conditional comments.
+			从 JavaScript 中添加主要的 Leaflet CSS 文件（或任何 css），去掉条件注释。
 		</td><td>
 			<a href="https://github.com/calvinmetcalf">Calvin Metcalf</a>
 		</td>
@@ -4585,7 +4562,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/Norkart/Leaflet-LayerConfig">Leaflet LayerConfig</a>
 		</td><td>
-			Provide a json file or service response with a configuration of layers and markers to automatically set up a Leaflet client.
+			提供一个 json 文件或服务响应，其中包含图层和标记的配置，以自动设置一个 Leaflet 客户端。
 		</td><td>
 			<a href="https://github.com/alexanno">Alexander Nossum</a>
 		</td>
@@ -4594,7 +4571,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.i18n">Leaflet.i18n</a>
 		</td><td>
-			Internationalization for Leaflet plugins.
+			进行国际化处理的 Leaflet 插件。
 		</td><td>
 			<a href="http://yohanboniface.me">Yohan Boniface</a>
 		</td>
@@ -4603,7 +4580,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/dagjomar/Leaflet.ZoomCSS">Leaflet ZoomLevel CSS Class</a>
 		</td><td>
-			Add zoom level css class to map element for easy style updates based on zoom levels
+			为地图元素添加缩放等级的 css 类，便于根据缩放级别更新样式
 		</td><td>
 			<a href="https://github.com/dagjomar">Dag Jomar Mersland</a>
 		</td>
@@ -4612,7 +4589,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/IjzerenHein/famous-map">famous-map</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='http://famo.us'>famo.us</a> web framework.
+			将 Leaflet 集成到使用 <a href='http://famo.us'>famo.us</a> Web 框架制作的应用程序中。
 		</td><td>
 			<a href="http://www.gloey.nl">Hein Rutjes</a>
 		</td>
@@ -4621,7 +4598,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/Asymmetrik/ngx-leaflet">ngx-leaflet</a>
 		</td><td>
-			Leaflet components and extensions for <a href="https://angular.io/">Angular.io</a>.
+			用于 <a href="https://angular.io/">Angular.io</a> 的 Leaflet 组件和扩展。
 		</td><td>
 			<a href="https://asymmetrik.com/">Asymmetrik, Ltd.</a>
 		</td>
@@ -4630,7 +4607,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/tombatossals/angular-leaflet-directive">Angular Leaflet directive</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='http://angularjs.org/'>AngularJS</a> web framework.
+			在使用 <a href='http://angularjs.org/'>AngularJS</a> 网络框架制作的应用程序中集成 Leaflet。
 		</td><td>
 			<a href="https://github.com/tombatossals">David Rubert</a>
 		</td>
@@ -4639,7 +4616,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/CleverMaps/tiny-leaflet-directive">Tiny Leaflet Directive</a>
 		</td><td>
-			Tiny LeafletJS map directive for your AngularJS apps.
+			为你的 AngularJS 应用程序提供微小的 LeafletJS 地图指令。
 		</td><td>
 			<a href="https://github.com/mattesCZ">Martin Tesař</a>
 		</td>
@@ -4648,7 +4625,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/grantHarris/leaflet-popup-angular">Leaflet Popup Angular</a>
 		</td><td>
-			Use AngularJS in your Leaflet popups. Extends the built-in L.popup.
+			在你的 Leaflet popups 中使用 AngularJS。它扩展了内置的 L.popup.Action。
 		</td><td>
 			<a href="https://github.com/grantHarris">Grant Harris</a>
 		</td>
@@ -4657,7 +4634,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/grantHarris/leaflet-control-angular">Leaflet Control Angular</a>
 		</td><td>
-			Insert and use Angularized HTML code in your Leaflet map as a Leaflet control.
+			在你的 Leaflet 地图中插入和使用 Angular 化的 HTML 代码，作为 Leaflet 控件。
 		</td><td>
 			<a href="https://github.com/grantHarris">Grant Harris</a>
 		</td>
@@ -4666,7 +4643,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/yagajs/leaflet-ng2">YAGA leaflet-ng2</a>
 		</td><td>
-			Granular integration into Angular2/4. <a href="https://leaflet-ng2.yagajs.org/latest/examples"> demo </a>.
+			粒度集成到 Angular2/4 中。 <a href="https://leaflet-ng2.yagajs.org/latest/examples"> demo </a>
 		</td><td>
 			<a href="https://github.com/yagajs">YAGA Development Team</a>
 		</td>
@@ -4675,7 +4652,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/leaflet-extras/leaflet-map">&lt;leaflet-map&gt;</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='https://www.polymer-project.org/'>Polymer &gt;= 1.0</a> web component framework.
+			将 Leaflet 集成到使用 <a href='https://www.polymer-project.org/'>Polymer &gt;= 1.0</a> Web 组件框架制作的应用程序中。
 		</td><td>
 			<a href="https://github.com/nhnb">Hendrik Brummermann</a>,
 			<a href="https://github.com/prtksxna">Prateek Saxena</a>
@@ -4685,7 +4662,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/prtksxna/leaflet-map-component">Leaflet map component</a>
 		</td><td>
-			Integrate Leaflet in applications made with the <a href='https://www.polymer-project.org/0.5/'>Polymer 0.5</a> web framework.
+			将 Leaflet 集成到使用 <a href='https://www.polymer-project.org/0.5/'>Polymer 0.5</a> Web 框架制作的应用程序中。
 		</td><td>
 			<a href="https://github.com/prtksxna">Prateek Saxena</a>
 		</td>
@@ -4694,7 +4671,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://bitbucket.org/terrayazilim/leaflet.jsf">Leaflet.jsf</a>
 		</td><td>
-			Comprehensive Java Server Faces(JSF) Component/Wrapper for Leaflet.
+			用于 Leaflet 的综合 Java Server Faces(JSF) 组件/包装器。
 		</td><td>
 			<a href="http://terrayazilim.com.tr">Terra SI LLC.</a>
 			<a href="https://bitbucket.org/terrayazilim">M.Çağrı Tepebaşılı</a>
@@ -4704,7 +4681,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/themrleon/JSF2Leaf">JSF2Leaf</a>
 		</td><td>
-			A JavaServer Faces wrapper for Leaflet.
+			Leaflet 的 JavaServer Faces 包装器。
 		</td><td>
 			<a href="https://github.com/themrleon">Leonardo Ciocari</a>
 		</td>
@@ -4713,7 +4690,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://miguelcobain.github.io/ember-leaflet/">ember-leaflet</a>
 		</td><td>
-			Easy and declarative mapping for <a href="http://emberjs.com/">Ember.js</a> using Leaflet.
+			使用 Leaflet 为 <a href="http://emberjs.com/">Ember.js</a> 提供简单和声明性的映射。
 		</td><td>
 			<a href="https://github.com/miguelcobain">Miguel Andrade</a>
 		</td>
@@ -4722,7 +4699,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/bevanhunt/meteor-leaflet">meteor-leaflet</a>
 		</td><td>
-			Provides a Meteor package to quickly build real-time cross-platform map apps.
+			提供了一个 Meteor 包来快速建立实时的跨平台地图应用。
 		</td><td>
 			<a href="https://github.com/bevanhunt">Bevan Hunt</a>
 		</td>
@@ -4731,7 +4708,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gregallensworth/L.Control.BootstrapModal">L.Control.BootstrapModal</a>
 		</td><td>
-			Trigger a Bootstrap modal using an on-map control.
+			使用地图上的控件触发一个 Bootstrap 模态框（Modal）。
 		</td><td>
 			<a href="https://github.com/gregallensworth">Greg Allensworth</a>
 		</td>
@@ -4740,7 +4717,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gregallensworth/L.Control.jQueryDialog">L.Control.jQueryDialog</a>
 		</td><td>
-			Trigger a jQuery UI dialog/modal using an on-map control.
+			使用地图上的控件触发一个 jQuery UI dialog/modal。
 		</td><td>
 			<a href="https://github.com/gregallensworth">Greg Allensworth</a>
 		</td>
@@ -4749,7 +4726,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/mstahv/v-leaflet">V-Leaflet</a>
 		</td><td>
-			Use Leaflet as a component for the <a href='https://vaadin.com/home'>Vaadin</a> Java/HTML framework.
+			将 Leaflet 作为 <a href='https://vaadin.com/home'>Vaadin</a> Java/HTML 框架的一个组件。
 		</td><td>
 			<a href="https://github.com/mstahv">Matti Tahvonen</a>
 		</td>
@@ -4758,7 +4735,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gwidgets/gwty-leaflet">gwty-leaflet</a>
 		</td><td>
-			A Java/GWT JsInterop wrapper for Leaflet. It allows using Leaflet in Java the same way as from a javascript script.
+			一个用于 Leaflet 的 Java/GWT JsInterop 包装器。它允许在 Java 中使用 Leaflet，就像在 javascript 脚本中一样。
 		</td><td>
 			<a href="https://github.com/zak905">Zakaria Amine</a>
 		</td>
@@ -4767,7 +4744,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/gherardovarando/leaflet-map-builder">Leaflet Map Builder</a>
 		</td><td>
-			It populates a leaflet map from a configuration object, can also creates zoom, layers, attribution and           draw controls. <a href="https://gherardovarando.github.io/leaflet-map-builder/"> demo </a>.
+			它从一个配置对象中填充 Leaflet 地图，还可以创建缩放、图层、属性和绘制控件。 <a href="https://gherardovarando.github.io/leaflet-map-builder/"> demo </a>
 		</td><td>
 			<a href="https://github.com/gherardovarando">Gherardo Varando</a>
 		</td>
@@ -4776,7 +4753,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/KoRiGaN/Vue2Leaflet">Vue2Leaflet</a>
 		</td><td>
-			<a href="https://github.com/KoRiGaN/Vue2Leaflet">Vue2Leaflet</a> is a JavaScript library for the <a href="https://vuejs.org/">Vue.js</a> framework that wraps Leaflet, making it easy to create reactive maps.
+			<a href="https://github.com/KoRiGaN/Vue2Leaflet">Vue2Leaflet</a> 是一个用于 <a href="https://vuejs.org/">Vue.js</a> 框架的JavaScript库，它封装了 Leaflet，使其能够轻松创建交互式地图。
 		</td><td>
 			<a href="https://github.com/KoRiGaN">Mickaël KoRiGaN</a>
 		</td>
@@ -4785,7 +4762,7 @@ Ease your development integrating Leaflet into a development framework or automa
 		<td>
 			<a href="https://github.com/axyjo/leaflet-rails">leaflet-rails gem</a>
 		</td><td>
-			This gem provides the leaflet.js map display library for your Rails 5 application. <a href="https://rubygems.org/gems/leaflet-rails">leaflet-rails on RubyGems</a>
+			这个 gem 为您的 Rails 5 应用程序提供了 Leaflet.js 地图显示库。<a href="https://rubygems.org/gems/leaflet-rails"> RubyGems 上的 leaflet-rails</a>。
 		</td><td>
 			<a href="https://github.com/axyjo">Akshay Joshi</a>
 		</td>
@@ -4795,14 +4772,14 @@ Ease your development integrating Leaflet into a development framework or automa
 
 ### 3<sup>rd</sup> party integration
 
-The following plugins integrate Leaflet into third party services or websites.
+以下插件将 Leaflet 集成到第三方服务或网站中。
 
 <table class="plugins"><tr><th>Plugin</th><th>Description</th><th>Maintainer</th></tr>
 	<tr>
 		<td>
 			<a href="https://github.com/yohanboniface/Leaflet.EditInOSM">Leaflet.EditInOSM</a>
 		</td><td>
-			Add a control with links to open the current map view on main OSM editors.
+			在主要的 OSM 编辑器上添加一个带链接的控件来打开当前地图视图。
 		</td><td>
 			<a href="http://yohanboniface.me">Yohan Boniface</a>
 		</td>
@@ -4811,7 +4788,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://www.mapsmarker.com/">Maps Marker Pro</a>
 		</td><td>
-			A WordPress plugin that enables users to pin, organize and share their favorite places and tracks through their WordPress powered site.
+			一个 WordPress 插件，使用户能够通过他们的 WordPress 支持的网站固定、组织和分享他们最喜欢的地方和曲目。
 		</td><td>
 			<a href="http://www.harm.co.at/">Robert Harm</a>
 		</td>
@@ -4820,8 +4797,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://wordpress.org/plugins/leaflet-map/">WordPress Leaflet Map</a>
 		</td><td>
-			Interactive and flexible shortcode to create multiple maps in posts and pages,
-			and to add multiple markers on those maps.
+			交互式且灵活的 shortcode，可在帖子和页面中创建多个地图，并在这些地图上添加多个标记。
 		</td><td>
 			<a href="https://bozdoz.com/projects/leaflet-map">Benjamin J DeLong</a>
 		</td>
@@ -4831,7 +4807,7 @@ The following plugins integrate Leaflet into third party services or websites.
 			<a href="https://maptiks.com">Maptiks</a>
 		</td>
 		<td>
-			Analytics platform for web maps. Track map activities, layer load times, marker clicks, and more!
+			网络地图分析平台，跟踪地图活动、图层加载时间、标记点击等！
 		</td>
 		<td>
 			<a href="http://www.sparkgeo.com/">Sparkgeo</a>
@@ -4841,7 +4817,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://drupal.org/project/leaflet">Leaflet for Drupal</a>
 		</td><td>
-			A Drupal (7.x and 8.x) module to integrate Leaflet maps in your Drupal site. Contains a field formatter to show a map for fields containing geospatial data, Views integration to plot data on a map, and a lightweight and easy to use API. Currently used by over 10.000 sites.
+			一个 Drupal（7.x 和 8.x）模块，用于在您的 Drupal 站点中集成 Leaflet 地图。包含一个字段格式化程序来显示包含地理空间数据的字段的地图，视图集成以在地图上绘制数据，以及一个轻量级且易于使用的 API。目前被超过 10.000 个站点使用。
 		</td><td>
 			<a href="http://marzeelabs.org">Marzee Labs</a>, and more maintainers listed at <a href="http://drupal.org/project/leaflet">drupal.org</a>
 		</td>
@@ -4850,7 +4826,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="https://lapizistik.github.io/leaflet-easymap/">Leaflet Easymap</a>
 		</td><td>
-			Include a map in your HTML page without one line of programming. A data-driven Javascript module.
+			在您的 HTML 页面中引入一张地图，而无需进行任何编程。一个数据驱动的 Javascript 模块。
 		</td><td>
 			<a href="https://github.com/Lapizistik">Klaus Stein</a>
 		</td>
@@ -4859,7 +4835,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="http://wp-mapit.phpwebdev.in">WP MapIt</a>
 		</td><td>
-			Easy to use, WordPress Map plugin based on Open Street Map and Leaflet with custom markers images, descriptions and links.
+			Open Street Map 和 Leaflet，带有自定义标记图像、描述和链接。
 		</td><td>
 			<a href="http://phpwebdev.in/">Chandni Patel</a>
 		</td>
@@ -4868,7 +4844,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="https://wordpress.org/plugins/map-block-leaflet/">Map Block Leaflet</a>
 		</td><td>
-			A Block for the New WordPress Block Editor based on Leaflet, it allow add and custom maps from a visual interface.
+			一个基于 Leaflet 的新 WordPress 区块编辑器的区块，它允许从一个可视化界面添加和定制地图。
 		</td><td>
 			<a href="https://goiblas.com/">Jesús Olazagoitia</a>
 		</td>
@@ -4877,7 +4853,7 @@ The following plugins integrate Leaflet into third party services or websites.
 		<td>
 			<a href="https://community.mybb.com/mods.php?action=view&pid=1238">ABP Usermap MyBB</a>
 		</td><td>
-		A plugin for <a href="https://mybb.com/">MyBB</a> creating a map of users based on Open Street Map and Leaflet, with customisable popup and markers
+		    一个用于 <a href="https://mybb.com/">MyBB</a> 的插件，基于 Open Street Map 和 Leaflet 创建用户地图，并可自定义弹出窗口和标记。
 		</td><td>
 			<a href="https://gitlab.com/AnoBug">CrazyCat</a>
 		</td>
@@ -4889,19 +4865,19 @@ The following plugins integrate Leaflet into third party services or websites.
 			<ul>
         <li>
           <strong>Agosm: </strong><br />
-          Joomla Module not only for showing Markers on a OpenStreetMap Map.<br />
+          Joomla 模块不仅用于在 OpenStreetMap 地图上显示标记。
           <a href="https://github.com/astridx/pkg_agosms">Gibhub</a><br />
-          <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/agosm/">Joomla Extension Directory</a><br />
+          <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/agosm/">Joomla扩展目录</a><br />
         </li>
         <li>
             <strong>Aggpxtrack: </strong><br />
-            Joomla Custom Field for dispaying a GPX Track on a Map - you can choose an OpenStreetMap or GoogleMaps. With much options. For example: One option is an elevation profil.<br />
+            Joomla自定义字段用于在地图上发送GPX轨迹 - 你可以选择OpenStreetMap或GoogleMaps。有很多选项。比如说。其中一个选项是高程剖面图。
             <a href="https://github.com/astridx/pkg_aggpxtrack">Gibhub</a><br />
-            <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/aggpxtrack/">Joomla Extension Directory</a><br />
+            <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/aggpxtrack/">Joomla扩展目录</a><br />
         </li>
         <li>
             <strong>Agosmmapwithmarker: </strong><br />
-            Custom field for show a map with a marker in frond end - always the right card for the content. You can enter the address in backend.<br />
+            自定义字段，用于显示一个带有标记的地图，在边缘端--总是正确的内容卡。你可以在后台输入地址。
             <a href="https://github.com/astridx/plg_fields_agosmmapwithmarker">Gibhub</a><br />
             <a href="https://extensions.joomla.org/extensions/extension/maps-a-weather/maps-a-locations/agosmmapwithmarker/">Joomla Extension Directory</a><br />
         </li>
@@ -4914,7 +4890,7 @@ The following plugins integrate Leaflet into third party services or websites.
 	<td>
 		<a href="https://github.com/mwasil/Leaflet.Facebook/">Leaflet.Facebook</a>
 	</td><td>
-		Simple plugin for adding Facebook like button as a control.
+		用于添加 Facebook 点赞按钮作为控件的简单插件。
 	  </td><td>
 		<a href="https://marcinwasilewski.eu/u">Marcin Wasilewski</a>
 	</td>
@@ -4923,7 +4899,7 @@ The following plugins integrate Leaflet into third party services or websites.
 	<td>
 		<a href="https://github.com/alexboia/WP-Trip-Summary/">WP-Trip-Summary</a>
 	</td><td>
-		A WordPress trip summary plugin to help travel bloggers manage and display structured information about their train rides and biking or hiking trips.
+		一个 WordPress 旅行总结插件，可帮助旅游博主管理和显示有关他们乘坐火车、骑自行车或徒步旅行的结构化信息。
 	  </td><td>
 		<a href="https://wordpress.org/plugins/wp-trip-summary/">Alexandru Boia</a>
 	</td>
@@ -4934,8 +4910,8 @@ The following plugins integrate Leaflet into third party services or websites.
 
 ## Develop your own
 
-Leaflet keeps it simple. If you can think of a feature that is not required by all Leaflet users, and you can write the JavaScript code in a reusable way, you've got yourself a Leaflet plugin already.
+Leaflet 保持简单。如果你能想到一个并非所有 Leaflet 用户都需要的功能，并且你能以一种可重复使用的方式编写 JavaScript 代码，你就已经有了一个 Leaflet 插件。
 
-There are no hard requirements on how to create your own plugin, but all developers are encouraged to read the recommendations in the [plugin guide](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md).
+对于如何创建自己的插件没有硬性要求，但我们鼓励所有的开发者阅读[插件指南](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md)中的建议。
 
-Once your plugin is ready, you can submit it to this list: just send a pull request with the addition to [/docs/plugins.md](https://github.com/Leaflet/Leaflet/blob/master/docs/plugins.md) to our GitHub repository.
+一旦您的插件准备就绪，您就可以将其提交到此列表：只需将添加到 [/docs/plugins.md](https://github.com/Leaflet/Leaflet/blob/master/docs/plugins.md) 的 PR 发送到我们的 GitHub 存储库。
