@@ -3019,7 +3019,7 @@ handlers start running).</td>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和切片提供商的法律义务。</td>
+		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和瓦片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -3676,7 +3676,7 @@ handlers start running).</td>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和切片提供商的法律义务。</td>
+		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和瓦片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -4101,7 +4101,7 @@ handlers start running).</td>
 	</div>
 </div>
 
-</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示切片图层。 请注意，大多数tile服务器都需要属性，您可以在其下设置 <a href="#layer"><code>Layer</code></a>. 扩展 <a href="#gridlayer"><code>GridLayer</code></a>.</p>
+</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示瓦片图层。 请注意，大多数tile服务器都需要属性，您可以在其下设置 <a href="#layer"><code>Layer</code></a>. 扩展 <a href="#gridlayer"><code>GridLayer</code></a>.</p>
 
 <section>
 <h3 id='tilelayer-example'>使用示例</h3>
@@ -4126,7 +4126,7 @@ handlers start running).</td>
 <p>表现为以下方式:</p>
 <pre><code>'http://{s}.somedomain.com/blabla/{z}/{x}/{y}{r}.png'
 </code></pre>
-<p><code>{s}</code> 是指可用的子域之一（按顺序使用，以帮助解决每个域的浏览器并行请求限制；子域值在选项中指定;默认为 <code>a</code>, <code>b</code> 或 <code>c</code> , 可以省略), <code>{z}</code> — 缩放级别, <code>{x}</code> 和 <code>{y}</code> — 切片坐标。 <code>{r}</code> 可以用来在URL中添加 &quot;@2x&quot; 以加载视网膜切片。</p>
+<p><code>{s}</code> 是指可用的子域之一（按顺序使用，以帮助解决每个域的浏览器并行请求限制；子域值在选项中指定;默认为 <code>a</code>, <code>b</code> 或 <code>c</code> , 可以省略), <code>{z}</code> — 缩放级别, <code>{x}</code> 和 <code>{y}</code> — 瓦片坐标。 <code>{r}</code> 可以用来在URL中添加 &quot;@2x&quot; 以加载视网膜瓦片。</p>
 <p>您可以在模板中使用自定义键，这些键将通过 TileLayer 选项进行 <a href="#util-template">evaluated</a> ，如下所示：</p>
 <pre><code>L.tileLayer('http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png', {foo: 'bar'});
 </code></pre>
@@ -4152,7 +4152,7 @@ handlers start running).</td>
 	</thead><tbody>
 	<tr id='tilelayer-l-tilelayer'>
 		<td><code><b>L.tilelayer</b>(<nobr>&lt;String&gt;</nobr> <i>urlTemplate</i>, <nobr>&lt;<a href='#tilelayer-option'>TileLayer options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>在给定 <code>URL 模板</code> 和可选的选项对象的情况下实例化切片图层对象。</td>
+		<td>在给定 <code>URL 模板</code> 和可选的选项对象的情况下实例化瓦片图层对象。</td>
 	</tr>
 </tbody></table>
 
@@ -4191,13 +4191,13 @@ handlers start running).</td>
 		<td><code><b>subdomains</b></code></td>
 		<td><code>String|String[]</code></td>
 		<td><code>&#x27;abc&#x27;</code></td>
-		<td>切片服务的子域。 可以以一个字符串（其中每个字母是一个子域名）或字符串数组的形式传递。</td>
+		<td>瓦片服务的子域。 可以以一个字符串（其中每个字母是一个子域名）或字符串数组的形式传递。</td>
 	</tr>
 	<tr id='tilelayer-errortileurl'>
 		<td><code><b>errorTileUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>显示切片图像的URL，以代替加载失败的切片。</td>
+		<td>显示瓦片图像的URL，以代替加载失败的瓦片。</td>
 	</tr>
 	<tr id='tilelayer-zoomoffset'>
 		<td><code><b>zoomOffset</b></code></td>
@@ -4209,7 +4209,7 @@ handlers start running).</td>
 		<td><code><b>tms</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>如果为 <code>true</code>，则反转切片的 Y 轴编号 (为  <a href="https://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a> 服务启用此选项)。</td>
+		<td>如果为 <code>true</code>，则反转瓦片的 Y 轴编号 (为  <a href="https://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a> 服务启用此选项)。</td>
 	</tr>
 	<tr id='tilelayer-zoomreverse'>
 		<td><code><b>zoomReverse</b></code></td>
@@ -4221,13 +4221,13 @@ handlers start running).</td>
 		<td><code><b>detectRetina</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>如果 <code>true</code> 并且用户在视网膜显示器上，它将请求四个指定大小一半的切片和更大的缩放级别，以使用高分辨率。</td>
+		<td>如果 <code>true</code> 并且用户在视网膜显示器上，它将请求四个指定大小一半的瓦片和更大的缩放级别，以使用高分辨率。</td>
 	</tr>
 	<tr id='tilelayer-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>是否将 crossOrigin 属性添加到切片中。 如果提供了字符串，则所有切片的 crossOrigin 属性都将设置为提供的字符串。 如果您想访问平铺像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
+		<td>是否将 crossOrigin 属性添加到瓦片中。 如果提供了字符串，则所有瓦片的 crossOrigin 属性都将设置为提供的字符串。 如果您想访问平铺像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 </tbody></table>
 
@@ -4569,7 +4569,7 @@ tiles outside the CRS limits.</td>
 	<tr id='tilelayer-gettileurl'>
 		<td><code><b>getTileUrl</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>)</code></td>
 		<td><code>String</code></td>
-		<td><p>仅在内部调用，返回给定坐标的切片的 URL。 扩展 <a href="#tilelayer"><code>TileLayer</code></a> 的类可以重写此函数以提供自定义的 tile URL 命名方案。</p>
+		<td><p>仅在内部调用，返回给定坐标的瓦片的 URL。 扩展 <a href="#tilelayer"><code>TileLayer</code></a> 的类可以重写此函数以提供自定义的 tile URL 命名方案。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4964,7 +4964,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	</div>
 </div>
 
-</section><h2 id='tilelayer-wms'>TileLayer.WMS WMS图层</h2><p>用于将 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务显示为地图上的切片图层。 扩展 <a href="#tilelayer"><code>TileLayer</code></a>。</p>
+</section><h2 id='tilelayer-wms'>TileLayer.WMS WMS图层</h2><p>用于将 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务显示为地图上的瓦片图层。 扩展 <a href="#tilelayer"><code>TileLayer</code></a>。</p>
 
 <section>
 <h3 id='tilelayer-wms-example'>使用示例</h3>
@@ -5004,7 +5004,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	</thead><tbody>
 	<tr id='tilelayer-wms-l-tilelayer-wms'>
 		<td><code><b>L.tileLayer.wms</b>(<nobr>&lt;String&gt;</nobr> <i>baseUrl</i>, <nobr>&lt;<a href='#tilelayer-wms-option'>TileLayer.WMS options</a>&gt;</nobr> <i>options</i>)</code></td>
-		<td>给定 WMS 服务的基本 URL 和 WMS 参数/选项对象，实例化 WMS 切片图层对象。</td>
+		<td>给定 WMS 服务的基本 URL 和 WMS 参数/选项对象，实例化 WMS 瓦片图层对象。</td>
 	</tr>
 </tbody></table>
 
@@ -8410,7 +8410,7 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和切片提供者的法律义务。</td>
+		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -16630,7 +16630,7 @@ properties. The event can optionally be propagated to event parents.</p>
 </section>
 
 
-</section><h2 id='gridlayer'>GridLayer 网格图层</h2><p>用于处理HTML元素的平铺网格的通用类。它是所有切片图层的基类，取代了 <code>TileLayer.Canvas</code>。GridLayer可以被扩展来创建HTML元素的平铺网格，如 <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code> or <code>&lt;div&gt;</code>。GridLayer 将为你处理这些 DOM 元素的创建和动画。</p>
+</section><h2 id='gridlayer'>GridLayer 网格图层</h2><p>用于处理HTML元素的平铺网格的通用类。它是所有瓦片图层的基类，取代了 <code>TileLayer.Canvas</code>。GridLayer可以被扩展来创建HTML元素的平铺网格，如 <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code> or <code>&lt;div&gt;</code>。GridLayer 将为你处理这些 DOM 元素的创建和动画。</p>
 
 <section>
 <h3 id='gridlayer-example'>使用示例</h3>
@@ -16648,7 +16648,7 @@ properties. The event can optionally be propagated to event parents.</p>
         // 创建一个用于绘图的 &lt;canvas&gt; 元素
         var tile = L.DomUtil.create('canvas', 'leaflet-tile');
 
-        // 根据选项设置切片的宽度和高度
+        // 根据选项设置瓦片的宽度和高度
         var size = this.getTileSize();
         tile.width = size.x;
         tile.height = size.y;
@@ -16656,7 +16656,7 @@ properties. The event can optionally be propagated to event parents.</p>
         // 获得一个 canvas 上下文，并使用 coords.x、coords.y 和 coords.z 在上面画东西
         var ctx = tile.getContext('2d');
 
-        // 返回切片，以便在屏幕上呈现
+        // 返回瓦片，以便在屏幕上呈现
         return tile;
     }
 });
@@ -16670,7 +16670,7 @@ properties. The event can optionally be propagated to event parents.</p>
 
 
 
-<p>切片的创建也可以是异步的，这在使用第三方绘图库时很有用。一旦切片绘制完成，它可以被传递给 <code>done()</code> 回调。</p>
+<p>瓦片的创建也可以是异步的，这在使用第三方绘图库时很有用。一旦瓦片绘制完成，它可以被传递给 <code>done()</code> 回调。</p>
 <pre><code class="language-js">var CanvasLayer = L.GridLayer.extend({
     createTile: function(coords, done){
         var error;
@@ -16678,12 +16678,12 @@ properties. The event can optionally be propagated to event parents.</p>
         // 创建一个用于绘图的 &lt;canvas&gt; 元素
         var tile = L.DomUtil.create('canvas', 'leaflet-tile');
 
-        // 根据选项设置切片的宽度和高度
+        // 根据选项设置瓦片的宽度和高度
         var size = this.getTileSize();
         tile.width = size.x;
         tile.height = size.y;
 
-        // 异步地绘制一些东西，并将切片传递给 done() 回调
+        // 异步地绘制一些东西，并将瓦片传递给 done() 回调
         setTimeout(function() {
             done(error, tile);
         }, 1000);
@@ -16742,13 +16742,13 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>tileSize</b></code></td>
 		<td><code>Number|Point</code></td>
 		<td><code>256</code></td>
-		<td>网格中切片的宽度和高度。如果宽度和高度相等，则使用一个数字，否则使用 <code>L.point(width, height)</code> 。</td>
+		<td>网格中瓦片的宽度和高度。如果宽度和高度相等，则使用一个数字，否则使用 <code>L.point(width, height)</code> 。</td>
 	</tr>
 	<tr id='gridlayer-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>切片的不透明度。可以在 <code>createTile()</code> 函数中使用。</td>
+		<td>瓦片的不透明度。可以在 <code>createTile()</code> 函数中使用。</td>
 	</tr>
 	<tr id='gridlayer-updatewhenidle'>
 		<td><code><b>updateWhenIdle</b></code></td>
@@ -16756,7 +16756,7 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code>(depends)</code></td>
 		<td>在移动浏览器上默认为
 <code>true</code> ，以避免过多的请求并保持流畅的导航。否则为
-<code>false</code> 以便在平移过程中显示新切片，因为在桌面浏览器中很容易在
+<code>false</code> 以便在平移过程中显示新瓦片，因为在桌面浏览器中很容易在
 <a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> 选项之外平移。</td>
 	</tr>
 	<tr id='gridlayer-updatewhenzooming'>
@@ -16769,19 +16769,19 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>updateInterval</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>200</code></td>
-		<td>在平移时，切片的更新不会超过每 <code>更新间隔</code> 毫秒一次。</td>
+		<td>在平移时，瓦片的更新不会超过每 <code>更新间隔</code> 毫秒一次。</td>
 	</tr>
 	<tr id='gridlayer-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>切片图层的显性zIndex。</td>
+		<td>瓦片图层的显性zIndex。</td>
 	</tr>
 	<tr id='gridlayer-bounds'>
 		<td><code><b>bounds</b></code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 		<td><code>undefined</code></td>
-		<td>如果设置，切片将只在设置的 <a href="#latlngbounds"><code>LatLngBounds</code></a>内被加载。</td>
+		<td>如果设置，瓦片将只在设置的 <a href="#latlngbounds"><code>LatLngBounds</code></a>内被加载。</td>
 	</tr>
 	<tr id='gridlayer-minzoom'>
 		<td><code><b>minZoom</b></code></td>
@@ -16799,20 +16799,20 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>maxNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>切片源可用的最大缩放数。如果指定了它，所有高于 <code>maxNativeZoom</code> 的缩放级别的切片将从 <code>maxNativeZoom</code> 级别加载并自动缩放。</td>
+		<td>瓦片源可用的最大缩放数。如果指定了它，所有高于 <code>maxNativeZoom</code> 的缩放级别的瓦片将从 <code>maxNativeZoom</code> 级别加载并自动缩放。</td>
 	</tr>
 	<tr id='gridlayer-minnativezoom'>
 		<td><code><b>minNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>切片源可用的最小缩放数。如果指定了它，所有低于 <code>minNativeZoom</code> 的缩放级别的切片将从 <code>minNativeZoom</code> 级别加载并自动缩放。</td>
+		<td>瓦片源可用的最小缩放数。如果指定了它，所有低于 <code>minNativeZoom</code> 的缩放级别的瓦片将从 <code>minNativeZoom</code> 级别加载并自动缩放。</td>
 	</tr>
 	<tr id='gridlayer-nowrap'>
 		<td><code><b>noWrap</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
 		<td>该层是否包裹在逆子午线周围。
-			如果为 <code>true</code>, GridLayer 在低缩放级别时只显示一次。当 <a href="#map-crs">地图 CRS</a> 不环绕时没有影响。可以与 <a href="#gridlayer-bounds"><code>bounds</code></a> 结合使用，以防止请求CRS限制以外的切片。</td>
+			如果为 <code>true</code>, GridLayer 在低缩放级别时只显示一次。当 <a href="#map-crs">地图 CRS</a> 不环绕时没有影响。可以与 <a href="#gridlayer-bounds"><code>bounds</code></a> 结合使用，以防止请求CRS限制以外的瓦片。</td>
 	</tr>
 	<tr id='gridlayer-pane'>
 		<td><code><b>pane</b></code></td>
@@ -16824,13 +16824,13 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>为切片图层指定的自定义类名。默认是空的。</td>
+		<td>为瓦片图层指定的自定义类名。默认是空的。</td>
 	</tr>
 	<tr id='gridlayer-keepbuffer'>
 		<td><code><b>keepBuffer</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>2</code></td>
-		<td>当平移地图时，在卸下切片之前，要保持这么多行和列的切片。</td>
+		<td>当平移地图时，在卸下瓦片之前，要保持这么多行和列的瓦片。</td>
 	</tr>
 </tbody></table>
 
@@ -16883,32 +16883,32 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-loading'>
 		<td><code><b>loading</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>当网格图层开始加载切片时触发。</td>
+		<td>当网格图层开始加载瓦片时触发。</td>
 	</tr>
 	<tr id='gridlayer-tileunload'>
 		<td><code><b>tileunload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>当切片被移除时启动（例如，当切片离开屏幕时）。</td>
+		<td>当瓦片被移除时启动（例如，当瓦片离开屏幕时）。</td>
 	</tr>
 	<tr id='gridlayer-tileloadstart'>
 		<td><code><b>tileloadstart</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>当一个切片被请求并开始加载时启动。</td>
+		<td>当一个瓦片被请求并开始加载时启动。</td>
 	</tr>
 	<tr id='gridlayer-tileerror'>
 		<td><code><b>tileerror</b></code></td>
 		<td><code><a href='#tileerrorevent'>TileErrorEvent</a></code></td>
-		<td>当加载切片时出现错误时启动。</td>
+		<td>当加载瓦片时出现错误时启动。</td>
 	</tr>
 	<tr id='gridlayer-tileload'>
 		<td><code><b>tileload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>当切片加载时触发。</td>
+		<td>当瓦片加载时触发。</td>
 	</tr>
 	<tr id='gridlayer-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>当网格图层加载所有可见切片时触发。</td>
+		<td>当网格图层加载所有可见瓦片时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -17026,19 +17026,19 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>将切片图层带到所有切片图层的顶部。</p>
+		<td><p>将瓦片图层带到所有瓦片图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>将切片图层带到所有切片图层的底部。</p>
+		<td><p>将瓦片图层带到所有瓦片图层的底部。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>返回包含该图层的切片的 HTML 元素。</p>
+		<td><p>返回包含该图层的瓦片的 HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-setopacity'>
@@ -17056,19 +17056,19 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-isloading'>
 		<td><code><b>isLoading</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>如果网格图层中的任何切片没有完成加载，返回 <code>true</code> 。</p>
+		<td><p>如果网格图层中的任何瓦片没有完成加载，返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>导致该图层清除所有的切片，并再次请求它们。</p>
+		<td><p>导致该图层清除所有的瓦片，并再次请求它们。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-gettilesize'>
 		<td><code><b>getTileSize</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>将 <a href="#gridlayer-tilesize">切片尺寸选项</a> 规范化为一个点。由 <code>createTile()</code> 方法使用。</p>
+		<td><p>将 <a href="#gridlayer-tilesize">瓦片尺寸选项</a> 规范化为一个点。由 <code>createTile()</code> 方法使用。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -17090,7 +17090,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-createtile'>
 		<td><code><b>createTile</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>, <nobr>&lt;Function&gt;</nobr> <i>done?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>只在内部调用，必须由扩展 <a href="#gridlayer"><code>GridLayer</code></a>的类重载。返回对应于给定 <code>坐标</code> 的 <code>HTMLElement</code> corresponding to the given <code>coords</code>。如果指定了 <code>done</code> 回调，必须在切片完成加载和绘制时调用该回调。</p>
+		<td><p>只在内部调用，必须由扩展 <a href="#gridlayer"><code>GridLayer</code></a>的类重载。返回对应于给定 <code>坐标</code> 的 <code>HTMLElement</code> corresponding to the given <code>coords</code>。如果指定了 <code>done</code> 回调，必须在瓦片完成加载和绘制时调用该回调。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -21002,7 +21002,7 @@ layer.remove();
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>要在归因控件中显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。它描述了图层数据，并且通常是对版权所有者和切片提供商的法律义务。</td>
+		<td>要在归因控件中显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。它描述了图层数据，并且通常是对版权所有者和瓦片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -22276,7 +22276,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	</tr>
 	<tr id='projection-l-projection-sphericalmercator'>
 		<td><code><b>L.Projection.SphericalMercator</b></code></td>
-		<td>球面墨卡托投影 — 最常见的在线地图投影，几乎所有免费和商业切片供应商都在使用。 假设地球是一个球体。 <code>EPSG 使用:3857</code> CRS。</td>
+		<td>球面墨卡托投影 — 最常见的在线地图投影，几乎所有免费和商业瓦片供应商都在使用。 假设地球是一个球体。 <code>EPSG 使用:3857</code> CRS。</td>
 	</tr>
 </tbody></table>
 
@@ -22422,11 +22422,11 @@ properties. The event can optionally be propagated to event parents.</p>
 	</thead><tbody>
 	<tr id='crs-l-crs-epsg3395'>
 		<td><code><b>L.CRS.EPSG3395</b></code></td>
-		<td>一些商业切片供应商很少使用。使用椭圆墨卡托投影。</td>
+		<td>一些商业瓦片供应商很少使用。使用椭圆墨卡托投影。</td>
 	</tr>
 	<tr id='crs-l-crs-epsg3857'>
 		<td><code><b>L.CRS.EPSG3857</b></code></td>
-		<td>在线地图最常见的CRS，几乎所有的免费和商业切片供应商都在使用。使用球面墨卡托投影。默认设置在地图的 <code>crs</code> 选项中。</td>
+		<td>在线地图最常见的CRS，几乎所有的免费和商业瓦片供应商都在使用。使用球面墨卡托投影。默认设置在地图的 <code>crs</code> 选项中。</td>
 	</tr>
 	<tr id='crs-l-crs-epsg4326'>
 		<td><code><b>L.CRS.EPSG4326</b></code></td>
@@ -23537,7 +23537,7 @@ event parent.</td>
 </section><span id='tileevent'></span>
 
 <section>
-<h3 id='tileevent-property'>TileEvent 切片事件</h3>
+<h3 id='tileevent-property'>TileEvent 瓦片事件</h3>
 
 <section >
 
@@ -23554,12 +23554,12 @@ event parent.</td>
 	<tr id='tileevent-tile'>
 		<td><code><b>tile</b></code></td>
 		<td><code>HTMLElement</code></td>
-		<td>切片元素（图像）。</td>
+		<td>瓦片元素（图像）。</td>
 	</tr>
 	<tr id='tileevent-coords'>
 		<td><code><b>coords</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>具有切片的 <code>x</code>、 <code>y</code>、 和 <code>z</code> (缩放级别) 坐标的点对象。</td>
+		<td>具有瓦片的 <code>x</code>、 <code>y</code>、 和 <code>z</code> (缩放级别) 坐标的点对象。</td>
 	</tr>
 </tbody></table>
 
@@ -23618,7 +23618,7 @@ event parent.</td>
 </section><span id='tileerrorevent'></span>
 
 <section>
-<h3 id='tileerrorevent-property'>TileErrorEvent 切片错误事件</h3>
+<h3 id='tileerrorevent-property'>TileErrorEvent 瓦片错误事件</h3>
 
 <section >
 
@@ -23635,17 +23635,17 @@ event parent.</td>
 	<tr id='tileerrorevent-tile'>
 		<td><code><b>tile</b></code></td>
 		<td><code>HTMLElement</code></td>
-		<td>切片元素（图像）。</td>
+		<td>瓦片元素（图像）。</td>
 	</tr>
 	<tr id='tileerrorevent-coords'>
 		<td><code><b>coords</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>具有切片的 <code>x</code>、 <code>y</code>、 和 <code>z</code> (缩放级别) 坐标的点对象。</td>
+		<td>具有瓦片的 <code>x</code>、 <code>y</code>、 和 <code>z</code> (缩放级别) 坐标的点对象。</td>
 	</tr>
 	<tr id='tileerrorevent-error'>
 		<td><code><b>error</b></code></td>
 		<td><code>*</code></td>
-		<td>传递给切片的 <code>done()</code> 回调的错误信息。</td>
+		<td>传递给瓦片的 <code>done()</code> 回调的错误信息。</td>
 	</tr>
 </tbody></table>
 
