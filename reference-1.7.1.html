@@ -3676,7 +3676,7 @@ handlers start running).</td>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和瓦片提供商的法律义务。</td>
+		<td>在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和瓦片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -23008,7 +23008,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='event-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>最初触发事件的对象。 对于非传播事件，这将与 <code>target</code>相同。</td>
+		<td>最初触发事件的对象。 对于非传播事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='event-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
@@ -23019,7 +23019,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='event-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>废弃的。</strong> 与 <code>propagatedFrom</code>相同。</td>
+		<td><strong>废弃的。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23054,7 +23054,7 @@ properties. The event can optionally be propagated to event parents.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23064,37 +23064,34 @@ properties. The event can optionally be propagated to event parents.</p>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='keyboardevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='keyboardevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='keyboardevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='keyboardevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='keyboardevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23145,7 +23142,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23155,37 +23152,35 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='mouseevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='mouseevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='mouseevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将
+			与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='mouseevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='mouseevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23256,7 +23251,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23266,37 +23261,35 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='locationevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='locationevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='locationevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将
+			与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='locationevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='locationevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23337,7 +23330,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23347,37 +23340,35 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='errorevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='errorevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='errorevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将
+			与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='errorevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='errorevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23413,7 +23404,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23423,32 +23414,30 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='layerevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='layerevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='layerevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将
+			与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='layerevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 </tbody></table>
 
@@ -23489,7 +23478,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23499,32 +23488,29 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='layerscontrolevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='layerscontrolevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='layerscontrolevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='layerscontrolevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 </tbody></table>
 
@@ -23565,7 +23551,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23575,37 +23561,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tileevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='tileevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='tileevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='tileevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='tileevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23651,7 +23634,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23661,37 +23644,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tileerrorevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='tileerrorevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='tileerrorevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='tileerrorevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='tileerrorevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23732,7 +23712,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23742,37 +23722,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='resizeevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='resizeevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='resizeevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='resizeevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='resizeevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23823,7 +23800,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23833,32 +23810,29 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='geojsonevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='geojsonevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='geojsonevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='geojsonevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 </tbody></table>
 
@@ -23894,7 +23868,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23904,37 +23878,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='popupevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='popupevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='popupevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='popupevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='popupevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -23970,7 +23941,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23980,37 +23951,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltipevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='tooltipevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='tooltipevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='tooltipevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='tooltipevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24046,7 +24014,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24056,37 +24024,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='dragendevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='dragendevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='dragendevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='dragendevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='dragendevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24132,7 +24097,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24142,37 +24107,34 @@ event parent.</td>
 <table><thead>
 	<tr>
 		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='zoomanimevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='zoomanimevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='zoomanimevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='zoomanimevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='zoomanimevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24222,7 +24184,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的参数</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24231,17 +24193,17 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了图层数据，并且通常是对版权所有者和瓦片提供商的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -24256,7 +24218,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24265,20 +24227,20 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='divoverlay-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -24287,7 +24249,7 @@ event parent.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24296,20 +24258,20 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的弹出窗口（popup）打开时触发</td>
 	</tr>
 	<tr id='divoverlay-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的弹出窗口（popup）关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -24318,7 +24280,7 @@ event parent.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24327,20 +24289,20 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的工具提示（tooltip）打开时触发。</td>
 	</tr>
 	<tr id='divoverlay-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的工具提示（tooltip）关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -24355,7 +24317,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24364,45 +24326,45 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='divoverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的<a href="#layergroup"><code>LayerGroup</code></a>中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution控件</code> 使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -24412,7 +24374,7 @@ event parent.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24421,59 +24383,57 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -24483,7 +24443,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24492,59 +24452,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -24554,7 +24512,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24563,107 +24521,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组类型/侦听器</p>
 </td>
 	</tr>
 	<tr id='divoverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='divoverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='divoverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='divoverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='divoverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='divoverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='divoverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='divoverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
