@@ -20111,7 +20111,7 @@ fx.run(el, [300, 500], 0.5);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20120,107 +20120,105 @@ fx.run(el, [300, 500], 0.5);
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='posanimation-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='posanimation-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='posanimation-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='posanimation-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组类型/侦听器</p>
 </td>
 	</tr>
 	<tr id='posanimation-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='posanimation-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='posanimation-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='posanimation-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='posanimation-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='posanimation-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='posanimation-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -20379,7 +20377,7 @@ draggable.enable();
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20388,107 +20386,105 @@ draggable.enable();
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='draggable-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='draggable-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='draggable-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='draggable-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组类型/侦听器</p>
 </td>
 	</tr>
 	<tr id='draggable-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='draggable-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='draggable-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='draggable-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='draggable-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='draggable-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='draggable-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
