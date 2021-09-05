@@ -2368,7 +2368,7 @@ handlers start running).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 继承自<a href='#layer'>Layer 图层</a>的工具提示（Tooltip）事件</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的工具提示（Tooltip）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3657,7 +3657,7 @@ handlers start running).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的参数</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -3825,7 +3825,7 @@ handlers start running).</td>
 	<tr id='tooltip-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>从指定的<a href="#layergroup"><code>LayerGroup</code></a>中删除该图层。</p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getpane'>
@@ -4008,7 +4008,7 @@ handlers start running).</td>
 	<tr id='tooltip-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
@@ -4020,13 +4020,13 @@ handlers start running).</td>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>删除一组类型/侦听器</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
+		<td><p>移除该对象上所有事件的所有监听器，包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tooltip-fire'>
@@ -4101,7 +4101,7 @@ handlers start running).</td>
 	</div>
 </div>
 
-</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示瓦片图层。 请注意，大多数tile服务器都需要属性，您可以在其下设置 <a href="#layer"><code>Layer</code></a>. 扩展 <a href="#gridlayer"><code>GridLayer</code></a>.</p>
+</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示瓦片图层。 请注意，大多数tile服务器都需要属性，你可以在 <a href="#layer"><code>Layer</code></a> 下进行设置。 扩展 <a href="#gridlayer"><code>GridLayer</code></a></p>
 
 <section>
 <h3 id='tilelayer-example'>使用示例</h3>
@@ -4152,7 +4152,7 @@ handlers start running).</td>
 	</thead><tbody>
 	<tr id='tilelayer-l-tilelayer'>
 		<td><code><b>L.tilelayer</b>(<nobr>&lt;String&gt;</nobr> <i>urlTemplate</i>, <nobr>&lt;<a href='#tilelayer-option'>TileLayer options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>在给定 <code>URL 模板</code> 和可选的选项对象的情况下实例化瓦片图层对象。</td>
+		<td>指定 <code>URL 模板</code>和可选的 options 对象，实例化一个瓦片图层对象。</td>
 	</tr>
 </tbody></table>
 
@@ -4197,7 +4197,7 @@ handlers start running).</td>
 		<td><code><b>errorTileUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>显示瓦片图像的URL，以代替加载失败的瓦片。</td>
+		<td>显示瓦片图像的 URL，以代替加载失败的瓦片。</td>
 	</tr>
 	<tr id='tilelayer-zoomoffset'>
 		<td><code><b>zoomOffset</b></code></td>
@@ -4235,7 +4235,7 @@ handlers start running).</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options 继承 <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> bringToFront 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4254,90 +4254,79 @@ handlers start running).</td>
 		<td><code><b>tileSize</b></code></td>
 		<td><code>Number|Point</code></td>
 		<td><code>256</code></td>
-		<td>网格中图块的宽度和高度。 如果宽度和高度相等，则使用数字，否则使用 <code>L.point(width, height)</code></td>
+		<td>网格中瓦片的宽度和高度。如果宽度和高度相等，则使用当前数字，否则使用 <code>L.point(width, height)</code> 。</td>
 	</tr>
 	<tr id='tilelayer-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>tiles的不透明度，可以在<code>createTile()</code>函数中使用</td>
+		<td>瓦片的不透明度。可以在 <code>createTile()</code> 函数中使用。</td>
 	</tr>
 	<tr id='tilelayer-updatewhenidle'>
 		<td><code><b>updateWhenIdle</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>(depends)</code></td>
-		<td>Load new tiles only when panning ends.
-<code>true</code> by default on mobile browsers, in order to avoid too many requests and keep smooth navigation.
-<code>false</code> otherwise in order to display new tiles <em>during</em> panning, since it is easy to pan outside the
-<a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> option in desktop browsers.</td>
+		<td>在移动浏览器上默认为 <code>true</code> ，以避免过多的请求并保持流畅的导航。否则为 <code>false</code> 以便在平移过程中显示新瓦片，因为在桌面浏览器中很容易在 <a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> 选项之外平移。</td>
 	</tr>
 	<tr id='tilelayer-updatewhenzooming'>
 		<td><code><b>updateWhenZooming</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>By default, a smooth zoom animation (during a <a href="#map-touchzoom">touch zoom</a> or a <a href="#map-flyto"><code>flyTo()</code></a>) will update grid layers every integer zoom level. Setting this option to <code>false</code> will update the grid layer only when the smooth animation ends.</td>
+		<td>默认情况下，平滑缩放动画 (在 <a href="#map-touchzoom">触摸缩放</a> 或 <a href="#map-flyto"><code>flyTo()</code></a>期间) 将每隔一个整数的缩放级别更新网格图层。把这个选项设置为 <code>false</code> ，将只在平滑动画结束时更新网格图层。</td>
 	</tr>
 	<tr id='tilelayer-updateinterval'>
 		<td><code><b>updateInterval</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>200</code></td>
-		<td>Tiles will not update more than once every <code>updateInterval</code> milliseconds when panning.</td>
+		<td>在平移时，瓦片将会在 <code>updateInterval</code> 毫秒内最多只更新一次。</td>
 	</tr>
 	<tr id='tilelayer-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit zIndex of the tile layer.</td>
+		<td>瓦片图层的显性 zIndex。</td>
 	</tr>
 	<tr id='tilelayer-bounds'>
 		<td><code><b>bounds</b></code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 		<td><code>undefined</code></td>
-		<td>If set, tiles will only be loaded inside the set <a href="#latlngbounds"><code>LatLngBounds</code></a>.</td>
+		<td>如果设置，瓦片将只在设置的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 内被加载。</td>
 	</tr>
 	<tr id='tilelayer-maxnativezoom'>
 		<td><code><b>maxNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>Maximum zoom number the tile source has available. If it is specified,
-the tiles on all zoom levels higher than <code>maxNativeZoom</code> will be loaded
-from <code>maxNativeZoom</code> level and auto-scaled.</td>
+		<td>瓦片源可用的最大缩放数。如果指定，所有缩放级别高于 <code>maxNativeZoom</code> 的图块将根据 <code>maxNativeZoom</code> 的缩放级别进行加载并自动缩放。</td>
 	</tr>
 	<tr id='tilelayer-minnativezoom'>
 		<td><code><b>minNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>Minimum zoom number the tile source has available. If it is specified,
-the tiles on all zoom levels lower than <code>minNativeZoom</code> will be loaded
-from <code>minNativeZoom</code> level and auto-scaled.</td>
+		<td>瓦片源可用的最小缩放数。如果指定，所有缩放级别小于 <code>minNativeZoom</code> 的图块将根据 <code>minNativeZoom</code> 的缩放级别进行加载并自动缩放。</td>
 	</tr>
 	<tr id='tilelayer-nowrap'>
 		<td><code><b>noWrap</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether the layer is wrapped around the antimeridian. If <code>true</code>, the
-GridLayer will only be displayed once at low zoom levels. Has no
-effect when the <a href="#map-crs">map CRS</a> doesn't wrap around. Can be used
-in combination with <a href="#gridlayer-bounds"><code>bounds</code></a> to prevent requesting
-tiles outside the CRS limits.</td>
+		<td>该图层是否被包裹在逆子午线周围。如果为 <code>true</code>，则 GridLayer 将只在低缩放级别下显示一次。当 <a href="#map-crs">map CRS</a> 不环绕时无效。可与 <a href="#gridlayer-bounds"><code>bounds</code></a> 结合使用以防止请求超出 CRS 限制的图块。</td>
 	</tr>
 	<tr id='tilelayer-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;tilePane&#x27;</code></td>
-		<td><code>Map pane</code> where the grid layer will be added.</td>
+		<td>将添加网格图层的<code>Map pane</code> </td>
 	</tr>
 	<tr id='tilelayer-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the tile layer. Empty by default.</td>
+		<td>为瓦片图层指定的自定义类名。默认是空的。</td>
 	</tr>
 	<tr id='tilelayer-keepbuffer'>
 		<td><code><b>keepBuffer</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>2</code></td>
-		<td>When panning the map, keep this many rows and columns of tiles before unloading them.</td>
+		<td>当平移地图时，在卸下瓦片之前，要保持这么多行和列的瓦片。</td>
 	</tr>
 </tbody></table>
 
@@ -4346,7 +4335,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4355,17 +4344,17 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>Option 参数</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -4380,7 +4369,7 @@ tiles outside the CRS limits.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events 继承 <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#gridlayer'>GridLayer</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4390,39 +4379,39 @@ tiles outside the CRS limits.</td>
 <table><thead>
 	<tr>
 		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-loading'>
 		<td><code><b>loading</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the grid layer starts loading tiles.</td>
+		<td>当网格图层开始加载瓦片时触发。</td>
 	</tr>
 	<tr id='tilelayer-tileunload'>
 		<td><code><b>tileunload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>Fired when a tile is removed (e.g. when a tile goes off the screen).</td>
+		<td>当瓦片被移除时触发（例如，当瓦片离开屏幕时）。</td>
 	</tr>
 	<tr id='tilelayer-tileloadstart'>
 		<td><code><b>tileloadstart</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>Fired when a tile is requested and starts loading.</td>
+		<td>当请求瓦片并开始加载时触发。</td>
 	</tr>
 	<tr id='tilelayer-tileerror'>
 		<td><code><b>tileerror</b></code></td>
 		<td><code><a href='#tileerrorevent'>TileErrorEvent</a></code></td>
-		<td>Fired when there is an error loading a tile.</td>
+		<td>当加载瓦片出现错误时触发。</td>
 	</tr>
 	<tr id='tilelayer-tileload'>
 		<td><code><b>tileload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>Fired when a tile loads.</td>
+		<td>当瓦片加载时触发。</td>
 	</tr>
 	<tr id='tilelayer-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the grid layer loaded all visible tiles.</td>
+		<td>当网格图层加载所有可见瓦片时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -4431,7 +4420,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4440,20 +4429,20 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='tilelayer-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -4462,7 +4451,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer</a> 的弹出（Popup）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4471,20 +4460,20 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的  popup  打开时触发</td>
 	</tr>
 	<tr id='tilelayer-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的 popup 关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -4493,7 +4482,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的工具提示（Tooltip）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4502,20 +4491,20 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的 tooltip 打开时触发。</td>
 	</tr>
 	<tr id='tilelayer-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的 tooltip 关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -4547,8 +4536,7 @@ tiles outside the CRS limits.</td>
 	<tr id='tilelayer-createtile'>
 		<td><code><b>createTile</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>, <nobr>&lt;Function&gt;</nobr> <i>done?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>仅在内部调用，覆盖 GridLayer 的 <a href="#gridlayer-createtile"><code>createTile()</code></a>
-			以返回带有给定<code>坐标</code>的适当图像 URL 的 <code>&lt;img&gt;</code> HTML 元素。 已加载磁贴时调用 <code>done</code> 回调。 </p>
+		<td><p>仅在内部调用，覆盖 GridLayer 的 <a href="#gridlayer-createtile"><code>createTile()</code></a> 以返回带有给定<code>坐标</code>的适当图像 URL 的 <code>&lt;img&gt;</code> HTML 元素。 已加载磁贴时调用 <code>done</code> 回调。 </p>
 </td>
 	</tr>
 </tbody></table>
@@ -4578,7 +4566,7 @@ tiles outside the CRS limits.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods 继承 <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#gridlayer'>GridLayer</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4588,56 +4576,56 @@ tiles outside the CRS limits.</td>
 <table><thead>
 	<tr>
 		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the tile layer to the top of all tile layers.</p>
+		<td><p>将瓦片图层置于所有瓦片图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the tile layer to the bottom of all tile layers.</p>
+		<td><p>将瓦片图层置于所有瓦片图层的底部。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTML element that contains the tiles for this layer.</p>
+		<td><p>返回包含该图层的瓦片的 HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#gridlayer-opacity">opacity</a> of the grid layer.</p>
+		<td><p>改变网格图层的 <a href="#gridlayer-opacity">opacity</a> 。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>zIndex</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#gridlayer-zindex">zIndex</a> of the grid layer.</p>
+		<td><p>改变网格图层的 <a href="#gridlayer-zindex">zIndex</a> 。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-isloading'>
 		<td><code><b>isLoading</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if any tile in the grid layer has not finished loading.</p>
+		<td><p>如果网格图层中的任何瓦片没有完成加载，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Causes the layer to clear all the tiles and request them again.</p>
+		<td><p>清除该图层的所有瓦片，并再次请求它们。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-gettilesize'>
 		<td><code><b>getTileSize</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Normalizes the <a href="#gridlayer-tilesize">tileSize option</a> into a point. Used by the <code>createTile()</code> method.</p>
+		<td><p>将 <a href="#gridlayer-tilesize">tileSize option</a>  规范化为一个点。由 <code>createTile()</code> 方法使用。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4647,7 +4635,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4656,45 +4644,45 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='tilelayer-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4704,7 +4692,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4713,59 +4701,57 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4775,7 +4761,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods 继承 <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4784,59 +4770,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4846,7 +4830,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods 继承 <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4855,107 +4839,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='tilelayer-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器，包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -4964,7 +4946,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	</div>
 </div>
 
-</section><h2 id='tilelayer-wms'>TileLayer.WMS WMS图层</h2><p>用于将 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务显示为地图上的瓦片图层。 扩展 <a href="#tilelayer"><code>TileLayer</code></a>。</p>
+</section><h2 id='tilelayer-wms'>TileLayer.WMS</h2><p>用于将 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务显示为地图上的瓦片图层。 扩展 <a href="#tilelayer"><code>TileLayer</code></a>。</p>
 
 <section>
 <h3 id='tilelayer-wms-example'>使用示例</h3>
@@ -5077,7 +5059,7 @@ properties. The event can optionally be propagated to event parents.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#tilelayer'>TileLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#tilelayer'>TileLayer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5087,66 +5069,64 @@ properties. The event can optionally be propagated to event parents.</p>
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-minzoom'>
 		<td><code><b>minZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>The minimum zoom level down to which this layer will be displayed (inclusive).</td>
+		<td>此图层将显示的最小缩放级别（包括最小）</td>
 	</tr>
 	<tr id='tilelayer-wms-maxzoom'>
 		<td><code><b>maxZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>18</code></td>
-		<td>The maximum zoom level up to which this layer will be displayed (inclusive).</td>
+		<td>此图层将显示的最大缩放级别（包括最大）</td>
 	</tr>
 	<tr id='tilelayer-wms-subdomains'>
 		<td><code><b>subdomains</b></code></td>
 		<td><code>String|String[]</code></td>
 		<td><code>&#x27;abc&#x27;</code></td>
-		<td>Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.</td>
+		<td>瓦片服务的子域。 可以以一个字符串（其中每个字母是一个子域名）或字符串数组的形式传递。</td>
 	</tr>
 	<tr id='tilelayer-wms-errortileurl'>
 		<td><code><b>errorTileUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the tile image to show in place of the tile that failed to load.</td>
+		<td>显示瓦片图像的 URL，以代替加载失败的瓦片。</td>
 	</tr>
 	<tr id='tilelayer-wms-zoomoffset'>
 		<td><code><b>zoomOffset</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>The zoom number used in tile URLs will be offset with this value.</td>
+		<td>平铺 URL 中使用的缩放数字将与此值发生偏移。</td>
 	</tr>
 	<tr id='tilelayer-wms-tms'>
 		<td><code><b>tms</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, inverses Y axis numbering for tiles (turn this on for <a href="https://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a> services).</td>
+		<td>如果为 <code>true</code>，则反转瓦片的 Y 轴编号 (为  <a href="https://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a> 服务启用此选项)。</td>
 	</tr>
 	<tr id='tilelayer-wms-zoomreverse'>
 		<td><code><b>zoomReverse</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If set to true, the zoom number used in tile URLs will be reversed (<code>maxZoom - zoom</code> instead of <code>zoom</code>)</td>
+		<td>如果设置为 true，则图块 URL 中使用的缩放数字将被反转 (<code>maxZoom - zoom</code> 而不是 <code>zoom</code>)</td>
 	</tr>
 	<tr id='tilelayer-wms-detectretina'>
 		<td><code><b>detectRetina</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code> and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution.</td>
+		<td>如果 <code>true</code> 并且用户在视网膜显示器上，它将请求四个指定大小一半的瓦片和更大的缩放级别，以使用高分辨率。</td>
 	</tr>
 	<tr id='tilelayer-wms-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the tiles.
-If a String is provided, all tiles will have their crossOrigin attribute set to the String provided. This is needed if you want to access tile pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到瓦片中。 如果提供了字符串，则所有瓦片的 crossOrigin 属性都将设置为提供的字符串。 如果您想访问平铺像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 </tbody></table>
 
@@ -5155,7 +5135,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#gridlayer'>GridLayer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5165,99 +5145,88 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-tilesize'>
 		<td><code><b>tileSize</b></code></td>
 		<td><code>Number|Point</code></td>
 		<td><code>256</code></td>
-		<td>Width and height of tiles in the grid. Use a number if width and height are equal, or <code>L.point(width, height)</code> otherwise.</td>
+		<td>网格中瓦片的宽度和高度。如果宽度和高度相等，则使用当前数字，否则使用 <code>L.point(width, height)</code> 。</td>
 	</tr>
 	<tr id='tilelayer-wms-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Opacity of the tiles. Can be used in the <code>createTile()</code> function.</td>
+		<td>瓦片的不透明度。可以在 <code>createTile()</code> 函数中使用。</td>
 	</tr>
 	<tr id='tilelayer-wms-updatewhenidle'>
 		<td><code><b>updateWhenIdle</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>(depends)</code></td>
-		<td>Load new tiles only when panning ends.
-<code>true</code> by default on mobile browsers, in order to avoid too many requests and keep smooth navigation.
-<code>false</code> otherwise in order to display new tiles <em>during</em> panning, since it is easy to pan outside the
-<a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> option in desktop browsers.</td>
+		<td>在移动浏览器上默认为 <code>true</code> ，以避免过多的请求并保持流畅的导航。否则为 <code>false</code> 以便在平移过程中显示新瓦片，因为在桌面浏览器中很容易在 <a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> 选项之外平移。</td>
 	</tr>
 	<tr id='tilelayer-wms-updatewhenzooming'>
 		<td><code><b>updateWhenZooming</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>By default, a smooth zoom animation (during a <a href="#map-touchzoom">touch zoom</a> or a <a href="#map-flyto"><code>flyTo()</code></a>) will update grid layers every integer zoom level. Setting this option to <code>false</code> will update the grid layer only when the smooth animation ends.</td>
+		<td>默认情况下，平滑缩放动画 (在 <a href="#map-touchzoom">触摸缩放</a> 或 <a href="#map-flyto"><code>flyTo()</code></a>期间) 将每隔一个整数的缩放级别更新网格图层。把这个选项设置为 <code>false</code> ，将只在平滑动画结束时更新网格图层。</td>
 	</tr>
 	<tr id='tilelayer-wms-updateinterval'>
 		<td><code><b>updateInterval</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>200</code></td>
-		<td>Tiles will not update more than once every <code>updateInterval</code> milliseconds when panning.</td>
+		<td>在平移时，瓦片将会在 <code>updateInterval</code> 毫秒内最多只更新一次。</td>
 	</tr>
 	<tr id='tilelayer-wms-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit zIndex of the tile layer.</td>
+		<td>瓦片图层的显性 zIndex。</td>
 	</tr>
 	<tr id='tilelayer-wms-bounds'>
 		<td><code><b>bounds</b></code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 		<td><code>undefined</code></td>
-		<td>If set, tiles will only be loaded inside the set <a href="#latlngbounds"><code>LatLngBounds</code></a>.</td>
+		<td>如果设置，瓦片将只在设置的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 内被加载。</td>
 	</tr>
 	<tr id='tilelayer-wms-maxnativezoom'>
 		<td><code><b>maxNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>Maximum zoom number the tile source has available. If it is specified,
-the tiles on all zoom levels higher than <code>maxNativeZoom</code> will be loaded
-from <code>maxNativeZoom</code> level and auto-scaled.</td>
+		<td>瓦片源可用的最大缩放数。如果指定，所有缩放级别高于 <code>maxNativeZoom</code> 的图块将根据 <code>maxNativeZoom</code> 的缩放级别进行加载并自动缩放。</td>
 	</tr>
 	<tr id='tilelayer-wms-minnativezoom'>
 		<td><code><b>minNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>Minimum zoom number the tile source has available. If it is specified,
-the tiles on all zoom levels lower than <code>minNativeZoom</code> will be loaded
-from <code>minNativeZoom</code> level and auto-scaled.</td>
+		<td>瓦片源可用的最小缩放数。如果指定，所有缩放级别小于 <code>minNativeZoom</code> 的图块将根据 <code>minNativeZoom</code> 的缩放级别进行加载并自动缩放。</td>
 	</tr>
 	<tr id='tilelayer-wms-nowrap'>
 		<td><code><b>noWrap</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether the layer is wrapped around the antimeridian. If <code>true</code>, the
-GridLayer will only be displayed once at low zoom levels. Has no
-effect when the <a href="#map-crs">map CRS</a> doesn't wrap around. Can be used
-in combination with <a href="#gridlayer-bounds"><code>bounds</code></a> to prevent requesting
-tiles outside the CRS limits.</td>
+		<td>该图层是否被包裹在逆子午线周围。如果为 <code>true</code>，则 GridLayer 将只在低缩放级别下显示一次。当 <a href="#map-crs">map CRS</a> 不环绕时无效。可与 <a href="#gridlayer-bounds"><code>bounds</code></a> 结合使用以防止请求超出 CRS 限制的图块。</td>
 	</tr>
 	<tr id='tilelayer-wms-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;tilePane&#x27;</code></td>
-		<td><code>Map pane</code> where the grid layer will be added.</td>
+		<td>将添加网格图层的<code>Map pane</code> </td>
 	</tr>
 	<tr id='tilelayer-wms-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the tile layer. Empty by default.</td>
+		<td>为瓦片图层指定的自定义类名。默认是空的。</td>
 	</tr>
 	<tr id='tilelayer-wms-keepbuffer'>
 		<td><code><b>keepBuffer</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>2</code></td>
-		<td>When panning the map, keep this many rows and columns of tiles before unloading them.</td>
+		<td>平移地图时，在卸载之前保留这么多行和列的图块。</td>
 	</tr>
 </tbody></table>
 
@@ -5266,7 +5235,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5275,17 +5244,17 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>Option 参数</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -5300,7 +5269,7 @@ tiles outside the CRS limits.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#gridlayer'>GridLayer</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5310,39 +5279,39 @@ tiles outside the CRS limits.</td>
 <table><thead>
 	<tr>
 		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-loading'>
 		<td><code><b>loading</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the grid layer starts loading tiles.</td>
+		<td>当网格图层开始加载瓦片时触发。</td>
 	</tr>
 	<tr id='tilelayer-wms-tileunload'>
 		<td><code><b>tileunload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>Fired when a tile is removed (e.g. when a tile goes off the screen).</td>
+		<td>当瓦片被移除时触发（例如，当瓦片离开屏幕时）。</td>
 	</tr>
 	<tr id='tilelayer-wms-tileloadstart'>
 		<td><code><b>tileloadstart</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>Fired when a tile is requested and starts loading.</td>
+		<td>当请求瓦片并开始加载时触发。</td>
 	</tr>
 	<tr id='tilelayer-wms-tileerror'>
 		<td><code><b>tileerror</b></code></td>
 		<td><code><a href='#tileerrorevent'>TileErrorEvent</a></code></td>
-		<td>Fired when there is an error loading a tile.</td>
+		<td>当加载瓦片出现错误时触发。</td>
 	</tr>
 	<tr id='tilelayer-wms-tileload'>
 		<td><code><b>tileload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>Fired when a tile loads.</td>
+		<td>当瓦片加载时触发。</td>
 	</tr>
 	<tr id='tilelayer-wms-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the grid layer loaded all visible tiles.</td>
+		<td>当网格图层加载所有可见瓦片时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -5351,7 +5320,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5360,20 +5329,20 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='tilelayer-wms-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -5382,7 +5351,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer</a> 的弹出（Popup）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5391,20 +5360,20 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的  popup  打开时触发</td>
 	</tr>
 	<tr id='tilelayer-wms-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的 popup 关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -5413,7 +5382,7 @@ tiles outside the CRS limits.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的工具提示（Tooltip）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5422,20 +5391,20 @@ tiles outside the CRS limits.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的 tooltip 打开时触发。</td>
 	</tr>
 	<tr id='tilelayer-wms-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的 tooltip 关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -5470,7 +5439,7 @@ tiles outside the CRS limits.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#tilelayer'>TileLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#tilelayer'>TileLayer</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5480,24 +5449,20 @@ tiles outside the CRS limits.</td>
 <table><thead>
 	<tr>
 		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-seturl'>
 		<td><code><b>setUrl</b>(<nobr>&lt;String&gt;</nobr> <i>url</i>, <nobr>&lt;Boolean&gt;</nobr> <i>noRedraw?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Updates the layer's URL template and redraws it (unless <code>noRedraw</code> is set to <code>true</code>).
-If the URL does not change, the layer will not be redrawn unless
-the noRedraw parameter is set to false.</p>
+		<td><p>更新图层的 URL 模板并重绘它 (除非  <code>noRedraw</code> 设置为 <code>true</code>)。 如果 URL 不变，则除非将 noRedraw 参数设置为 false，否则不会重绘图层。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-createtile'>
 		<td><code><b>createTile</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>, <nobr>&lt;Function&gt;</nobr> <i>done?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Called only internally, overrides GridLayer's <a href="#gridlayer-createtile"><code>createTile()</code></a>
-to return an <code>&lt;img&gt;</code> HTML element with the appropriate image URL given <code>coords</code>. The <code>done</code>
-callback is called when the tile has been loaded.</p>
+		<td><p>仅在内部调用，覆盖 GridLayer 的 <a href="#gridlayer-createtile"><code>createTile()</code></a> 以返回带有给定<code>坐标</code>的适当图像 URL 的 <code>&lt;img&gt;</code> HTML 元素。 已加载磁贴时调用 <code>done</code> 回调。 </p>
 </td>
 	</tr>
 </tbody></table>
@@ -5507,7 +5472,7 @@ callback is called when the tile has been loaded.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#gridlayer'>GridLayer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#gridlayer'>GridLayer</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5517,56 +5482,56 @@ callback is called when the tile has been loaded.</p>
 <table><thead>
 	<tr>
 		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the tile layer to the top of all tile layers.</p>
+		<td><p>将瓦片图层置于所有瓦片图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the tile layer to the bottom of all tile layers.</p>
+		<td><p>将瓦片图层置于所有瓦片图层的底部。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTML element that contains the tiles for this layer.</p>
+		<td><p>返回包含该图层的瓦片的 HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#gridlayer-opacity">opacity</a> of the grid layer.</p>
+		<td><p>改变网格图层的 <a href="#gridlayer-opacity">opacity</a> 。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>zIndex</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#gridlayer-zindex">zIndex</a> of the grid layer.</p>
+		<td><p>改变网格图层的 <a href="#gridlayer-zindex">zIndex</a> 。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-isloading'>
 		<td><code><b>isLoading</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if any tile in the grid layer has not finished loading.</p>
+		<td><p>如果网格图层中的任何瓦片没有完成加载，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Causes the layer to clear all the tiles and request them again.</p>
+		<td><p>清除该图层的所有瓦片，并再次请求它们。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-gettilesize'>
 		<td><code><b>getTileSize</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Normalizes the <a href="#gridlayer-tilesize">tileSize option</a> into a point. Used by the <code>createTile()</code> method.</p>
+		<td><p>将 <a href="#gridlayer-tilesize">tileSize option</a>  规范化为一个点。由 <code>createTile()</code> 方法使用。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -5576,7 +5541,7 @@ callback is called when the tile has been loaded.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5585,45 +5550,45 @@ callback is called when the tile has been loaded.</p>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -5633,7 +5598,7 @@ callback is called when the tile has been loaded.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5642,59 +5607,57 @@ callback is called when the tile has been loaded.</p>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -5704,7 +5667,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5713,59 +5676,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -5775,7 +5736,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5784,107 +5745,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tilelayer-wms-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器，包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -5993,7 +5952,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>分配给图像的自定义类名。 默认为空。</td>
+		<td>为瓦片图层指定的自定义类名。默认是空的。</td>
 	</tr>
 </tbody></table>
 
@@ -6001,7 +5960,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6010,18 +5969,17 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -6030,7 +5988,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6039,23 +5997,23 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='imageoverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		 type/listener<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -6094,7 +6052,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6103,48 +6061,45 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -6153,7 +6108,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6162,20 +6117,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层被添加到地图后触发</td>
 	</tr>
 	<tr id='imageoverlay-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图上删除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -6184,7 +6139,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6193,20 +6148,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当与该图层绑定的弹出窗口被打开时触发</td>
 	</tr>
 	<tr id='imageoverlay-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当与该图层绑定的弹出窗口关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -6215,7 +6170,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 tooltip（工具提示）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6224,20 +6179,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该图层的工具提示被打开时触发。</td>
 	</tr>
 	<tr id='imageoverlay-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该图层的工具提示关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -6269,13 +6224,13 @@ for a second (also called long press).</td>
 	<tr id='imageoverlay-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>将图层置于所有叠加层的顶部。</p>
+		<td><p>将图层置于所有叠加图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>将图层带到所有叠加层的底部。</p>
+		<td><p>将图层置于所有叠加图层的底部。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-seturl'>
@@ -6314,7 +6269,7 @@ for a second (also called long press).</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6323,45 +6278,45 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -6371,7 +6326,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6380,59 +6335,57 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -6442,7 +6395,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6451,59 +6404,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -6513,7 +6464,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6522,107 +6473,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='imageoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器，包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -6723,7 +6672,7 @@ L.videoOverlay(videoUrl, videoBounds ).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6733,54 +6682,52 @@ L.videoOverlay(videoUrl, videoBounds ).addTo(map);
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the image overlay.</td>
+		<td>图像图层的不透明度。</td>
 	</tr>
 	<tr id='videooverlay-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the image (useful for accessibility).</td>
+		<td>图像 <code>alt</code> 属性的文本（对于可访问性很有用）。</td>
 	</tr>
 	<tr id='videooverlay-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the image overlay will emit <a href="#interactive-layer">mouse events</a> when clicked or hovered.</td>
+		<td>如果为 <code>true</code>，当单击或悬停时，图像图层将发出 <a href="#interactive-layer">鼠标事件</a>。</td>
 	</tr>
 	<tr id='videooverlay-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the image.
-If a String is provided, the image will have its crossOrigin attribute set to the String provided. This is needed if you want to access image pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到图像中。 如果提供了字符串，则图像的 crossOrigin 属性将设置为提供的字符串。 如果要访问图像像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 	<tr id='videooverlay-erroroverlayurl'>
 		<td><code><b>errorOverlayUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the overlay image to show in place of the overlay that failed to load.</td>
+		<td>图像图层的 URL，以代替加载失败的图层。</td>
 	</tr>
 	<tr id='videooverlay-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> of the overlay layer.</td>
+		<td>图层的显式 <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> 。</td>
 	</tr>
 	<tr id='videooverlay-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the image. Empty by default.</td>
+		<td>为瓦片图层指定的自定义类名。默认是空的。</td>
 	</tr>
 </tbody></table>
 
@@ -6789,7 +6736,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6798,18 +6745,17 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -6818,7 +6764,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6827,23 +6773,23 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='videooverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -6877,7 +6823,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6887,14 +6833,14 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 <table><thead>
 	<tr>
 		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-error'>
 		<td><code><b>error</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer fails to load its image</td>
+		<td>当 ImageOverlay 图层加载图像失败时触发</td>
 	</tr>
 </tbody></table>
 
@@ -6903,7 +6849,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6912,48 +6858,45 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='videooverlay-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='videooverlay-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -6962,7 +6905,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6971,20 +6914,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层被添加到地图后触发</td>
 	</tr>
 	<tr id='videooverlay-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图上删除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -6993,7 +6936,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7002,20 +6945,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当与该图层绑定的弹出窗口被打开时触发</td>
 	</tr>
 	<tr id='videooverlay-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当与该图层绑定的弹出窗口关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -7024,7 +6967,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 tooltip（工具提示）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7033,20 +6976,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该图层的工具提示被打开时触发。</td>
 	</tr>
 	<tr id='videooverlay-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该图层的工具提示关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -7081,7 +7024,7 @@ for a second (also called long press).</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7091,50 +7034,50 @@ for a second (also called long press).</td>
 <table><thead>
 	<tr>
 		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the opacity of the overlay.</p>
+		<td><p>设置覆盖物的不透明度。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all overlays.</p>
+		<td><p>将图层置于所有叠加图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all overlays.</p>
+		<td><p>将图层置于所有叠加图层的底部。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-seturl'>
 		<td><code><b>setUrl</b>(<nobr>&lt;String&gt;</nobr> <i>url</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the URL of the image.</p>
+		<td><p>更改图像的 URL。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-setbounds'>
 		<td><code><b>setBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Update the bounds that this ImageOverlay covers</p>
+		<td><p>更新此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='videooverlay-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>value</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#imageoverlay-zindex">zIndex</a> of the image overlay.</p>
+		<td><p>更改图像叠加的 <a href="#imageoverlay-zindex">zIndex</a> 索引。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Get the bounds that this ImageOverlay covers</p>
+		<td><p>获取此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7144,7 +7087,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7153,45 +7096,45 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7201,7 +7144,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7210,59 +7153,57 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7272,7 +7213,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7281,59 +7222,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7343,7 +7282,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7352,107 +7291,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='videooverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='videooverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器，包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='videooverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='videooverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -7516,7 +7453,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7526,54 +7463,52 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the image overlay.</td>
+		<td>图像图层的不透明度。</td>
 	</tr>
 	<tr id='svgoverlay-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the image (useful for accessibility).</td>
+		<td>图像 <code>alt</code> 属性的文本（对于可访问性很有用）。</td>
 	</tr>
 	<tr id='svgoverlay-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the image overlay will emit <a href="#interactive-layer">mouse events</a> when clicked or hovered.</td>
+		<td>如果为 <code>true</code>，当单击或悬停时，图像图层将发出 <a href="#interactive-layer">鼠标事件</a>。</td>
 	</tr>
 	<tr id='svgoverlay-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the image.
-If a String is provided, the image will have its crossOrigin attribute set to the String provided. This is needed if you want to access image pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到图像中。 如果提供了字符串，则图像的 crossOrigin 属性将设置为提供的字符串。 如果要访问图像像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 	<tr id='svgoverlay-erroroverlayurl'>
 		<td><code><b>errorOverlayUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the overlay image to show in place of the overlay that failed to load.</td>
+		<td>图像图层的 URL，以代替加载失败的图层。</td>
 	</tr>
 	<tr id='svgoverlay-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> of the overlay layer.</td>
+		<td>图层的显式 <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> 。</td>
 	</tr>
 	<tr id='svgoverlay-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the image. Empty by default.</td>
+		<td>为瓦片图层指定的自定义类名，默认为空。</td>
 	</tr>
 </tbody></table>
 
@@ -7582,7 +7517,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7591,18 +7526,17 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -7611,7 +7545,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7620,23 +7554,23 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='svgoverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -7645,13 +7579,13 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7661,19 +7595,19 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 <table><thead>
 	<tr>
 		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer has loaded its image</td>
+		<td>当 ImageOverlay 图层加载图像完成时触发</td>
 	</tr>
 	<tr id='svgoverlay-error'>
 		<td><code><b>error</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer fails to load its image</td>
+		<td>当 ImageOverlay 图层加载图像失败时触发</td>
 	</tr>
 </tbody></table>
 
@@ -7682,7 +7616,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7691,48 +7625,45 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -7741,7 +7672,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7750,20 +7681,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层被添加到地图后触发</td>
 	</tr>
 	<tr id='svgoverlay-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图上删除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -7772,7 +7703,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7781,20 +7712,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当与该图层绑定的弹出窗口被打开时触发</td>
 	</tr>
 	<tr id='svgoverlay-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当与该图层绑定的弹出窗口关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -7803,7 +7734,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 tooltip（工具提示）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7812,20 +7743,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该图层的工具提示被打开时触发。</td>
 	</tr>
 	<tr id='svgoverlay-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该图层的工具提示关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -7860,7 +7791,7 @@ for a second (also called long press).</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7870,50 +7801,50 @@ for a second (also called long press).</td>
 <table><thead>
 	<tr>
 		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the opacity of the overlay.</p>
+		<td><p>设置覆盖物的不透明度。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all overlays.</p>
+		<td><p>将图层置于所有叠加图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all overlays.</p>
+		<td><p>将图层置于所有叠加图层的底部。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-seturl'>
 		<td><code><b>setUrl</b>(<nobr>&lt;String&gt;</nobr> <i>url</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the URL of the image.</p>
+		<td><p>更改图像的 URL。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-setbounds'>
 		<td><code><b>setBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Update the bounds that this ImageOverlay covers</p>
+		<td><p>更新此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>value</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#imageoverlay-zindex">zIndex</a> of the image overlay.</p>
+		<td><p>更改图像叠加的 <a href="#imageoverlay-zindex">zIndex</a> 索引。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Get the bounds that this ImageOverlay covers</p>
+		<td><p>获取此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7923,7 +7854,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7932,45 +7863,45 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7980,7 +7911,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7989,59 +7920,57 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -8051,7 +7980,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8060,59 +7989,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -8122,7 +8049,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8131,107 +8058,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='svgoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器，包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide an data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -8383,7 +8308,7 @@ properties. The event can optionally be propagated to event parents.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项。</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8423,7 +8348,7 @@ properties. The event can optionally be propagated to event parents.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 从 <a href='#interactive-layer'>Interactive layer（交互图层）</a>继承的鼠标事件。</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8440,12 +8365,12 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='path-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>当用户点击（或敲击）该图层时触发。</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='path-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>当用户双击（或双击）该图层时触发。</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='path-mousedown'>
 		<td><code><b>mousedown</b></code></td>
@@ -8455,7 +8380,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='path-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>当用户释放在该图层上按下的鼠标按钮时触发。</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='path-mouseover'>
 		<td><code><b>mouseover</b></code></td>
@@ -8479,7 +8404,7 @@ properties. The event can optionally be propagated to event parents.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer（图层）</a>的事件。</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8496,8 +8421,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='path-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>在图层被添加到地图后触发
-		</td>
+		<td>在图层被添加到地图后触发</td>
 	</tr>
 	<tr id='path-remove'>
 		<td><code><b>remove</b></code></td>
@@ -8511,7 +8435,7 @@ properties. The event can optionally be propagated to event parents.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer（图层）</a>的PopupEvent（弹窗事件）。</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8542,7 +8466,7 @@ properties. The event can optionally be propagated to event parents.</p>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer（图层）</a>的 tooltip（工具提示）事件。</label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 tooltip（工具提示）事件。</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8573,7 +8497,7 @@ properties. The event can optionally be propagated to event parents.</p>
 </div>
 
 </section><section>
-<h3 id='path-method'>Methods</h3>
+<h3 id='path-method'>Methods 方法</h3>
 
 <section >
 
@@ -16740,7 +16664,7 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>tileSize</b></code></td>
 		<td><code>Number|Point</code></td>
 		<td><code>256</code></td>
-		<td>网格中瓦片的宽度和高度。如果宽度和高度相等，则使用一个数字，否则使用 <code>L.point(width, height)</code> 。</td>
+		<td>网格中瓦片的宽度和高度。如果宽度和高度相等，则使用当前数字，否则使用 <code>L.point(width, height)</code> 。</td>
 	</tr>
 	<tr id='gridlayer-opacity'>
 		<td><code><b>opacity</b></code></td>
@@ -16752,10 +16676,7 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>updateWhenIdle</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>(depends)</code></td>
-		<td>在移动浏览器上默认为
-<code>true</code> ，以避免过多的请求并保持流畅的导航。否则为
-<code>false</code> 以便在平移过程中显示新瓦片，因为在桌面浏览器中很容易在
-<a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> 选项之外平移。</td>
+		<td>在移动浏览器上默认为 <code>true</code> ，以避免过多的请求并保持流畅的导航。否则为 <code>false</code> 以便在平移过程中显示新瓦片，因为在桌面浏览器中很容易在 <a href="#gridlayer-keepbuffer"><code>keepBuffer</code></a> 选项之外平移。</td>
 	</tr>
 	<tr id='gridlayer-updatewhenzooming'>
 		<td><code><b>updateWhenZooming</b></code></td>
@@ -16767,19 +16688,19 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>updateInterval</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>200</code></td>
-		<td>在平移时，瓦片的更新不会超过每 <code>更新间隔</code> 毫秒一次。</td>
+		<td>在平移时，瓦片将会在 <code>updateInterval</code> 毫秒内最多只更新一次。</td>
 	</tr>
 	<tr id='gridlayer-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>瓦片图层的显性zIndex。</td>
+		<td>瓦片图层的显性 zIndex。</td>
 	</tr>
 	<tr id='gridlayer-bounds'>
 		<td><code><b>bounds</b></code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 		<td><code>undefined</code></td>
-		<td>如果设置，瓦片将只在设置的 <a href="#latlngbounds"><code>LatLngBounds</code></a>内被加载。</td>
+		<td>如果设置，瓦片将只在设置的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 内被加载。</td>
 	</tr>
 	<tr id='gridlayer-minzoom'>
 		<td><code><b>minZoom</b></code></td>
@@ -16797,13 +16718,13 @@ properties. The event can optionally be propagated to event parents.</p>
 		<td><code><b>maxNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>瓦片源可用的最大缩放数。如果指定了它，所有高于 <code>maxNativeZoom</code> 的缩放级别的瓦片将从 <code>maxNativeZoom</code> 级别加载并自动缩放。</td>
+		<td>瓦片源可用的最大缩放数。如果指定，所有缩放级别高于 <code>maxNativeZoom</code> 的图块将根据 <code>maxNativeZoom</code> 的缩放级别进行加载并自动缩放。</td>
 	</tr>
 	<tr id='gridlayer-minnativezoom'>
 		<td><code><b>minNativeZoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>瓦片源可用的最小缩放数。如果指定了它，所有低于 <code>minNativeZoom</code> 的缩放级别的瓦片将从 <code>minNativeZoom</code> 级别加载并自动缩放。</td>
+		<td>瓦片源可用的最小缩放数。如果指定，所有缩放级别小于 <code>minNativeZoom</code> 的图块将根据 <code>minNativeZoom</code> 的缩放级别进行加载并自动缩放。</td>
 	</tr>
 	<tr id='gridlayer-nowrap'>
 		<td><code><b>noWrap</b></code></td>
@@ -16886,17 +16807,17 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-tileunload'>
 		<td><code><b>tileunload</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>当瓦片被移除时启动（例如，当瓦片离开屏幕时）。</td>
+		<td>当瓦片被移除时触发（例如，当瓦片离开屏幕时）。</td>
 	</tr>
 	<tr id='gridlayer-tileloadstart'>
 		<td><code><b>tileloadstart</b></code></td>
 		<td><code><a href='#tileevent'>TileEvent</a></code></td>
-		<td>当一个瓦片被请求并开始加载时启动。</td>
+		<td>当请求瓦片并开始加载时触发。</td>
 	</tr>
 	<tr id='gridlayer-tileerror'>
 		<td><code><b>tileerror</b></code></td>
 		<td><code><a href='#tileerrorevent'>TileErrorEvent</a></code></td>
-		<td>当加载瓦片时出现错误时启动。</td>
+		<td>当加载瓦片出现错误时触发。</td>
 	</tr>
 	<tr id='gridlayer-tileload'>
 		<td><code><b>tileload</b></code></td>
@@ -17024,13 +16945,13 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>将瓦片图层带到所有瓦片图层的顶部。</p>
+		<td><p>将瓦片图层置于所有瓦片图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>将瓦片图层带到所有瓦片图层的底部。</p>
+		<td><p>将瓦片图层置于所有瓦片图层的底部。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-getcontainer'>
@@ -17054,19 +16975,19 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='gridlayer-isloading'>
 		<td><code><b>isLoading</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>如果网格图层中的任何瓦片没有完成加载，返回 <code>true</code> 。</p>
+		<td><p>如果网格图层中的任何瓦片没有完成加载，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>导致该图层清除所有的瓦片，并再次请求它们。</p>
+		<td><p>该图层清除所有的瓦片，并再次请求它们。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-gettilesize'>
 		<td><code><b>getTileSize</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>将 <a href="#gridlayer-tilesize">瓦片尺寸选项</a> 规范化为一个点。由 <code>createTile()</code> 方法使用。</p>
+		<td><p>将 <a href="#gridlayer-tilesize">tileSize option</a>  规范化为一个点。由 <code>createTile()</code> 方法使用。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -24535,7 +24456,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='divoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>添加一组类型/侦听器对，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='divoverlay-off'>
@@ -24547,7 +24468,7 @@ properties. The event can optionally be propagated to event parents.</p>
 	<tr id='divoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>删除一组类型/侦听器</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='divoverlay-off'>
