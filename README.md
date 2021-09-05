@@ -129,7 +129,8 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 
 * [zhsdcode](https://github.com/zhsdcode)
 * [DanPlayer](https://github.com/DanPlayer)
-* lazytuanzi
+* [Gwyneth](https://github.com/GwynethOu)
+* [lazytuanzi](https://github.com/lazytuanzi)
 
 ### 其它方面的支持与赞助
 

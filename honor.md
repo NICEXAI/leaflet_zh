@@ -13,7 +13,8 @@ bodyclass: honor-page
 
 * [zhsdcode](https://github.com/zhsdcode)
 * [DanPlayer](https://github.com/DanPlayer)
-* lazytuanzi
+* [Gwyneth](https://github.com/GwynethOu)
+* [lazytuanzi](https://github.com/lazytuanzi)
 
 #### 官方交流群优秀成员
 
