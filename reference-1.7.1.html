@@ -18113,14 +18113,13 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>iconUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td><strong>(需要)</strong> 图标图像的URL（绝对值或相对于你的脚本路径）。</td>
+		<td><strong>(必填)</strong> 图标图像的URL（绝对路径或目前脚本所在的相对路径）。</td>
 	</tr>
 	<tr id='icon-iconretinaurl'>
 		<td><code><b>iconRetinaUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>图标图像的视网膜尺寸版本的URL（绝对或相对于你的
-			脚本路径）。) 用于视网膜屏幕设备。</td>
+		<td>图标图像的视网膜尺寸版本的URL（绝对路径或目前脚本所在的相对路径）， 用于视网膜屏幕设备。</td>
 	</tr>
 	<tr id='icon-iconsize'>
 		<td><code><b>iconSize</b></code></td>
@@ -18138,13 +18137,13 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>popupAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>弹出窗口 &quot;open&quot;的点的坐标，相对于图标锚点。</td>
+		<td>弹出窗口（popup）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='icon-tooltipanchor'>
 		<td><code><b>tooltipAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>工具提示将  &quot;open&quot;的点的坐标，相对于图标锚点。</td>
+		<td>工具提示（tooltip）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='icon-shadowurl'>
 		<td><code><b>shadowUrl</b></code></td>
@@ -18174,7 +18173,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>一个自定义的类名称，用于分配给图标和阴影图像。默认是空的。</td>
+		<td>用户给图标和阴影图像指定自定义类名，默认为空</td>
 	</tr>
 </tbody></table>
 
@@ -18199,13 +18198,13 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	<tr id='icon-createicon'>
 		<td><code><b>createIcon</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>当需要显示图标时在内部调用，返回一个根据选项设计的 <code>&lt;img&gt;</code> HTML 元素。</p>
+		<td><p>当必须显示图标时在内部调用，返回根据选项设置样式的 <code><img></code> HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='icon-createshadow'>
 		<td><code><b>createShadow</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>如同 <code>createIcon</code>, 但对它下面的阴影来说。</p>
+		<td><p>对于它下面的阴影来说，如同 <code>createIcon</code>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -18328,7 +18327,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#icon'>Icon</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#icon'>Icon</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -18338,55 +18337,52 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 <table><thead>
 	<tr>
 		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divicon-iconurl'>
 		<td><code><b>iconUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td><strong>(required)</strong> The URL to the icon image (absolute or relative to your script path).</td>
+		<td><strong>(必填)</strong> 图标图像的URL（绝对路径或目前脚本所在的相对路径）。</td>
 	</tr>
 	<tr id='divicon-iconretinaurl'>
 		<td><code><b>iconRetinaUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>The URL to a retina sized version of the icon image (absolute or relative to your
-script path). Used for Retina screen devices.</td>
+		<td>图标图像的视网膜尺寸版本的URL（绝对路径或目前脚本所在的相对路径）， 用于视网膜屏幕设备。</td>
 	</tr>
 	<tr id='divicon-iconsize'>
 		<td><code><b>iconSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>Size of the icon image in pixels.</td>
+		<td>图标图像的尺寸，单位是像素。</td>
 	</tr>
 	<tr id='divicon-iconanchor'>
 		<td><code><b>iconAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The coordinates of the &quot;tip&quot; of the icon (relative to its top left corner). The icon
-will be aligned so that this point is at the marker's geographical location. Centered
-by default if size is specified, also can be set in CSS with negative margins.</td>
+		<td>图标 &quot;tip&quot; 的坐标（相对于其左上角）。图标将被对齐，使该点位于标记的地理位置。如果指定了尺寸，默认为居中，也可以在CSS中设置负的边距。</td>
 	</tr>
 	<tr id='divicon-popupanchor'>
 		<td><code><b>popupAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The coordinates of the point from which popups will &quot;open&quot;, relative to the icon anchor.</td>
+		<td>弹出窗口（popup）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='divicon-tooltipanchor'>
 		<td><code><b>tooltipAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The coordinates of the point from which tooltips will &quot;open&quot;, relative to the icon anchor.</td>
+		<td>工具提示（tooltip）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='divicon-shadowurl'>
 		<td><code><b>shadowUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>The URL to the icon shadow image. If not specified, no shadow image will be created.</td>
+		<td>图标阴影图像的URL。如果不指定，将不会创建阴影图像。</td>
 	</tr>
 	<tr id='divicon-shadowretinaurl'>
 		<td><code><b>shadowRetinaUrl</b></code></td>
@@ -18398,20 +18394,19 @@ by default if size is specified, also can be set in CSS with negative margins.</
 		<td><code><b>shadowSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>Size of the shadow image in pixels.</td>
+		<td>阴影图像的大小，单位是像素。</td>
 	</tr>
 	<tr id='divicon-shadowanchor'>
 		<td><code><b>shadowAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The coordinates of the &quot;tip&quot; of the shadow (relative to its top left corner) (the same
-as iconAnchor if not specified).</td>
+		<td>阴影 &quot;tip&quot; 的坐标（相对于其左上角）（如果没有指定，则与iconAnchor相同）。</td>
 	</tr>
 	<tr id='divicon-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to both icon and shadow images. Empty by default.</td>
+		<td>用户给图标和阴影图像指定自定义类名，默认为空</td>
 	</tr>
 </tbody></table>
 
@@ -18426,7 +18421,7 @@ as iconAnchor if not specified).</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#icon'>Icon</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#icon'>Icon</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -18436,21 +18431,20 @@ as iconAnchor if not specified).</td>
 <table><thead>
 	<tr>
 		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='divicon-createicon'>
 		<td><code><b>createIcon</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Called internally when the icon has to be shown, returns a <code>&lt;img&gt;</code> HTML element
-styled according to the options.</p>
+		<td><p>当必须显示图标时在内部调用，返回根据选项设置样式的 <code><img></code> HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='divicon-createshadow'>
 		<td><code><b>createShadow</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>As <code>createIcon</code>, but for the shadow beneath it.</p>
+		<td><p>对于它下面的阴影来说，如同 <code>createIcon</code>。</p>
 </td>
 	</tr>
 </tbody></table>
