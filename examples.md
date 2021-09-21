@@ -6,30 +6,30 @@ bodyclass: examples
 
 ## Leaflet 教程
 
-这里的每个教程都包含详细的代码说明，所以即使对于初学JavaScript的开发人员来说也很容易.
+这里的每个教程都包含详细的代码说明，所以即使对于初学 JavaScript 的开发人员来说也很容易。
 
 
 {% include tutorial_link.html
 page="quick-start/"
 thumbnail="quick-start/thumbnail.png"
 title="Leaflet 快速入门指南"
-description="一个简单的快速入门指南，可帮助您快速入门Leaflet基础知识，包括在页面上设置Leaflet地图（带有Mapbox磁贴），使用标记，折线和弹出窗口以及处理事件。"
+description="一个简单的快速入门指南，可帮助你快速入门 Leaflet 的基础知识，包括在页面上设置 Leaflet 地图（使用 Mapbox 瓦片图层）、使用标记、折线和弹出窗口，以及处理事件。"
 %}
 
 
 {% include tutorial_link.html
 page="mobile/"
 thumbnail="mobile/thumbnail.png"
-title="Leaflet 在手机上使用"
-description="在本教程中，您将学习如何创建针对iPhone，iPad或Android手机等移动设备调整的全屏地图，以及如何轻松检测和使用当前用户位置。"
+title="在移动端使用 Leaflet"
+description="在本教程中，你将学习如何为 iPhone、iPad 或 Android 手机等移动设备创建一个全屏地图，以及如何轻松检测和使用当前的用户位置。"
 %}
 
 
 {% include tutorial_link.html
 page="custom-icons/"
 thumbnail="custom-icons/thumbnail.png"
-title="Markers 自定义图标"
-description="在这个完美的教程中，您将学习如何轻松定义自己的图标，以供您在地图上进行标记使用。"
+title="使用自定义图标的标记（Marker）"
+description="在这个完美的教程中，您将学习如何轻松定义自己的图标，以供你在地图上进行标记。"
 %}
 
 
@@ -37,15 +37,15 @@ description="在这个完美的教程中，您将学习如何轻松定义自己�
 page="geojson/"
 thumbnail="geojson/thumbnail.png"
 title="在 Leaflet 中使用 GeoJSON"
-description="在本教程中，您将学习如何创建和与从[GeoJSON](http://geojson.org/)对象创建的地图矢量进行交互。"
+description="在本教程中，你将学习如何创建并与由 [GeoJSON](http://geojson.org/) 对象创建的矢量地图进行交互。"
 %}
 
 
 {% include tutorial_link.html
 page="choropleth/"
 thumbnail="choropleth/thumbnail.png"
-title="互动式choropleth地图"
-description="以GeoJSON和一些自定义控件创建彩色的美国人口密度交互式[choropleth地图](http://en.wikipedia.org/wiki/Choropleth_map)的案例研究。 新闻网站会喜欢这一点。"
+title="互动式 choropleth 地图"
+description="一个使用 GeoJSON 和一些自定义控件创建美国各州人口密度的彩色交互式 [choropleth map ](http://en.wikipedia.org/wiki/Choropleth_map)的研究案例。 通常新闻网站会喜欢这个。"
 %}
 
 
@@ -53,7 +53,7 @@ description="以GeoJSON和一些自定义控件创建彩色的美国人口密度
 page="layers-control/"
 thumbnail="layers-control/thumbnail.png"
 title="Layer Groups 和 Layers Control"
-description="有关如何管理图层组和使用图层切换控件的教程。"
+description="这是一个有关如何管理图层组和使用图层切换控件的教程。"
 %}
 
 
@@ -68,23 +68,23 @@ description="更深入地了解地图的缩放比例。"
 page="crs-simple/crs-simple.html"
 thumbnail="crs-simple/thumbnail.png"
 title="Non-geographical maps"
-description="L.CRS.简单入门，介绍如何制作没有“纬度”或“经度”概念的地图"
+description="L.CRS.Simple 的入门教程，介绍如何制作一个没有 “latitude” 和 “longitude” 概念的地图。"
 %}
 
 
 {% include tutorial_link.html
 page="wms/wms.html"
 thumbnail="wms/thumbnail.png"
-title="WMS and TMS"
-description="如何与专业GIS软件的WMS和TMS服务集成。"
+title="WMS 和 TMS"
+description="如何与专业 GIS 软件的 WMS 和 TMS 服务整合。"
 %}
 
 
 {% include tutorial_link.html
 page="map-panes/"
 thumbnail="map-panes/thumbnail.png"
-title="Working with map panes"
-description="默认地图窗格如何在图块顶部显示叠加层，以及如何覆盖它。"
+title="使用 map panes"
+description="默认的 map panes 如何在图层顶部显示 overlay，以及如何覆盖它。"
 %}
 
 
@@ -92,19 +92,19 @@ description="默认地图窗格如何在图块顶部显示叠加层，以及如�
 page="video-overlay/"
 thumbnail="video-overlay/thumbnail.gif"
 title="显示视频文件"
-description="Leaflet 可以帮助您在地图上的某处显示视频。"
+description="Leaflet 可以帮助你在地图上的某处显示视频。"
 %}
 
 ***
 
-以下教程介绍了如何为Leaflet创建插件，仅适用于具有JavaScript经验的开发人员：
+以下教程介绍了如何为 Leaflet 创建插件，仅适用于具有 JavaScript 经验的开发人员：
 
 
 {% include tutorial_link.html
 page="extending/extending-1-classes.html"
 thumbnail="extending/thumbnail-1.png"
 title="扩展 Leaflet: Class Theory"
-description="Leaflet的类、类继承和约定的概述。"
+description="Leaflet 的类、类继承和约定的概述。"
 %}
 
 
@@ -120,6 +120,6 @@ description="如何使用特定的入口点来扩展图层或创建新的图层�
 page="extending/extending-3-controls.html"
 thumbnail="extending/thumbnail-3.png"
 title="扩展 Leaflet: Handlers and Controls"
-description="如何扩展或创建non-layers。"
+description="如何扩展或创建 non-layers。"
 %}
 
