@@ -5,7 +5,7 @@ title: Quick Start Guide
 
 ## Leaflet 快速入门指南
 
-这个循序渐进的入门指南将会帮助你快速了解 Leaflet 基础知识，包括设置 Leaflet 地图、使用标记、折线和弹出窗口以及处理事件。
+这个循序渐进的入门指南将会帮助你快速了解 Leaflet 基础知识，包括设置 Leaflet 地图、使用标记、折线和弹出窗口，以及处理事件。
 
 {% include frame.html url="example.html" %}
 
