@@ -11,7 +11,7 @@ title: Quick Start Guide
 
 ### 准备一个新的页面
 
-在为地图编写任何代码之前，您需要在你的页面上执行以下准备步骤：
+在为地图编写代码之前，你需要在你的页面上完成以下准备步骤：
 
  * 在文档的 head 部分引入 Leaflet CSS 文件:
 
@@ -30,7 +30,7 @@ title: Quick Start Guide
 
 		<div id="mapid"></div>
 
- * 确保地图容器定义了固定高度，例如通过在 CSS 中设置它:
+ * 确保地图容器定义了固定高度，例如在 CSS 中设置:
 
 	<pre><code class="css">#mapid { height: 180px; }</code></pre>
 
