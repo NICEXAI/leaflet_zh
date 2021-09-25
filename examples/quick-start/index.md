@@ -63,9 +63,9 @@ title: Quick Start Guide
 
 确保引入 `leaflet.js` 文件并配置好 `div` 后运行所有代码。就是这样，你现在拥有一个运行正常的 Leaflet 地图。
 
-值得注意的是，Leaflet 是与供应商无关的，也就是说，它不会为瓦片（Tile）强制选择一个特定的提供方。你可以试着把`mapbox/streets-v11`替换成`mapbox/satellite-v9`，然后看看会发生什么。另外，Leaflet甚至不包含任何一行特定的提供者的代码，所以如果你需要，你可以自由地使用其他提供者（我们建议使用Mapbox，它看起来很美）。
+值得注意的是，Leaflet 是与供应商无关的，也就是说，它不会为瓦片（Tile）强制选择一个特定的提供方。你可以试着把 `mapbox/streets-v11` 替换成 `mapbox/satellite-v9`，然后看看会发生什么。另外，Leaflet 甚至不包含任何一行特定的提供者的代码，所以如果你需要，你可以自由地使用其他提供者（我们建议使用Mapbox，它看起来很美）。
 
-无论何时使用任何基于OpenStreetMap的东西，根据[版权声明](https://www.openstreetmap.org/copyright)，*署名是必须的。大多数其他瓦片供应商（如[Mapbox](https://docs.mapbox.com/help/how-mapbox-works/attribution/), [Stamen](http://maps.stamen.com/)或[Thunderforest](https://www.thunderforest.com/terms/)）也需要署名。请确保给予应有的信用。
+根据[版权声明](https://www.openstreetmap.org/copyright)，无论任何时候使用任何基于OpenStreetMap 的东西，署名都是必须的。大多数其他瓦片供应商（如[Mapbox](https://docs.mapbox.com/help/how-mapbox-works/attribution/), [Stamen](http://maps.stamen.com/)或[Thunderforest](https://www.thunderforest.com/terms/)）也需要署名，请确保给予他们应有的荣誉。
 
 
 ### 标记、圆和多边形
@@ -99,13 +99,13 @@ title: Quick Start Guide
 
 {% include frame.html url="example-popups.html" %}
 
-当您想将某些信息附加到地图上的特定对象时，通常会使用弹出窗口。Leaflet有一个非常方便的快捷方式：
+当您想将某些信息附加到地图上的特定对象时，通常会使用弹出窗口。Leaflet 有一个非常方便的快捷方式：
 
 	marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 	circle.bindPopup("I am a circle.");
 	polygon.bindPopup("I am a polygon.");
 
-尝试点击我们的对象。该`bindPopup`方法将带有指定 HTML 内容的弹出窗口附加到您的标记，以便在您单击对象时显示弹出窗口，并且该`openPopup`方法（仅适用于标记）立即打开附加的弹出窗口。
+尝试点击我们的对象。该 `bindPopup` 方法将带有指定 HTML 内容的弹出窗口附加到您的标记，以便在您单击对象时显示弹出窗口，并且该 `openPopup` 方法（仅适用于标记）立即打开附加的弹出窗口。
 
 您还可以将弹出窗口用作图层（当您需要的不仅仅是将弹出窗口附加到对象时）：
 
@@ -114,7 +114,7 @@ title: Quick Start Guide
 		.setContent("I am a standalone popup.")
 		.openOn(mymap);
 
-这里我们使用`openOn`而不是`addTo`因为它在打开一个新窗口时，先前打开的弹出窗口会自动关闭。
+这里我们使用 `openOn` 而不是 `addTo` 因为它在打开一个新窗口时，先前打开的弹出窗口会自动关闭。
 
 
 ### 处理事件
@@ -127,9 +127,9 @@ title: Quick Start Guide
 
 	mymap.on('click', onMapClick);
 
-每个对象都有属于自己的一组事件——详情请参阅[文档](/reference.html)。监听器、函数的第一个参数是一个事件对象——它包含关于发生的事件的有用信息。例如，地图点击事件对象（在上面的例子中的`e`）有一个`latlng`属性，它是点击发生的位置。
+每个对象都有属于自己的一组事件——详情请参阅[文档](/reference.html)。监听器、函数的第一个参数是一个事件对象——它包含关于发生的事件的有用信息。例如，地图点击事件对象（在上面的例子中的`e`）有一个 `latlng` 属性，它是点击发生的位置。
 
-让我们通过使用`popup`而不是`alert`来改进我们的示例：
+让我们通过使用 `popup` 而不是 `alert` 来改进我们的示例：
 
 	var popup = L.popup();
 
@@ -144,4 +144,4 @@ title: Quick Start Guide
 
 尝试单击地图，您将在弹出窗口中看到坐标。 <a target="_blank" href="example.html">查看完整示例 &rarr;</a>
 
-现在您已经学习了 Leaflet 的基础知识，可以立即开始构建地图应用程序！ 不要忘记查看详细 <a href="/reference.html">文档</a> 或 <a href="../../examples.html">其它示例</a>.
+现在您已经学习了 Leaflet 的基础知识，可以立即开始构建地图应用程序了！ 不要忘记查看详细 <a href="/reference.html">文档</a> 或 <a href="../../examples.html">其它示例</a>。
