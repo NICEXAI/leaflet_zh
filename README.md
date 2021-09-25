@@ -16,8 +16,8 @@
 - [x] 概况（已校正）
 - [x] 教程
   - [x] 列表页（已校正）
-  - [x] Leaflet 快速入门指南
-  - [x] Leaflet 在手机上使用
+  - [x] Leaflet 快速入门指南（已校正）
+  - [x] Leaflet 在手机上使用（已校正）
   - [x] Markers 自定义图标
   - [x] 在 Leaflet 中使用 GeoJSON
   - [x] 互动式choropleth地图
