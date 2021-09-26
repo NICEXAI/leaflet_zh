@@ -28,8 +28,8 @@ description="在本教程中，你将学习如何为 iPhone、iPad 或 Android �
 {% include tutorial_link.html
 page="custom-icons/"
 thumbnail="custom-icons/thumbnail.png"
-title="使用自定义图标的标记（Marker）"
-description="在这个完美的教程中，您将学习如何轻松定义自己的图标，以供你在地图上进行标记。"
+title="使用带有自定义图标的标记（Marker）"
+description="在本教程中，你将学习如何轻松定义你自己的图标并放在地图上作为标记使用。"
 %}
 
 
