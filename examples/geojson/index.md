@@ -5,17 +5,17 @@ title: Using GeoJSON with Leaflet
 
 <h3>在 Leaflet 中使用 GeoJSON</h3>
 
-<p>GeoJSON正在成为许多GIS技术和服务中非常流行的数据格式--它简单、轻量、直接，而且Leaflet在处理它方面相当出色。在这个例子中，你将学习如何创建并与由<a href="https://tools.ietf.org/html/rfc7946">GeoJSON</a>对象创建的矢量地图进行交互。</p>
+<p>GeoJSON 正在成为许多 GIS 技术和服务中非常流行的数据格式--它简单、轻量、直接，而且 Leaflet 在处理 GeoJSON 方面也相当出色。在本教程中，你将学习如何创建并与由 <a href="https://tools.ietf.org/html/rfc7946">GeoJSON</a> 对象创建的矢量地图进行交互。</p>
 
 {% include frame.html url="example.html" %}
 
 <h3>关于 GeoJSON</h3>
 
-<p>根据<a href="https://tools.ietf.org/html/rfc7946">GeoJSON规范（RFC 7946）</a>：</p>
+<p>根据 <a href="https://tools.ietf.org/html/rfc7946">GeoJSON 规范（RFC 7946）</a>：</p>
 
-<blockquote>GeoJSON是一种用于编码各种地理数据结构的格式[...]。一个GeoJSON对象可以代表一个空间区域（Geometry），一个有空间界限的实体（Feature），或者一个特征列表（FeatureCollection）。GeoJSON支持以下几何体类型。点、线字符串、多边形、多点、多线字符串、多多边形和几何体集合。GeoJSON中的特征包含一个几何对象和额外的属性，而特征集合则包含一个特征列表。</blockquote>
+<blockquote>GeoJSON 是一种用于编码各种地理数据结构的格式[...]。一个 GeoJSON 对象可以代表一个空间区域（Geometry），一个有空间界限的实体（Feature），或者一个特征列表（FeatureCollection）。GeoJSON支持以下几何体类型。点、线字符串、多边形、多点、多线字符串、多多边形和几何体集合。GeoJSON 中的特征包含一个几何对象和额外的属性，而特征集合则包含一个特征列表。</blockquote>
 
-<p>Leaflet支持上述所有的GeoJSON类型，但是<a href="https://tools.ietf.org/html/rfc7946#section-3.2">Features</a>和<a href="https://tools.ietf.org/html/rfc7946#section-3.3">FeatureCollections</a>效果最好，因为它们允许你用一组属性来描述特征。我们甚至可以使用这些属性来为我们的Leaflet向量设置样式。下面是一个简单的GeoJSON feature 的例子：</p>
+<p>Leaflet 支持上述所有的 GeoJSON 类型，但是 <a href="https://tools.ietf.org/html/rfc7946#section-3.2">Features</a> 和 <a href="https://tools.ietf.org/html/rfc7946#section-3.3">FeatureCollections</a> 效果最好，因为它们允许你用一组属性来描述特征。我们甚至可以使用这些属性来为我们的 Leaflet 向量设置样式。下面是一个简单的 GeoJSON feature 的例子：</p>
 
 <pre><code>var geojsonFeature = {
 	"type": "Feature",
@@ -33,7 +33,7 @@ title: Using GeoJSON with Leaflet
 
 <h3>GeoJSON 图层</h3>
 
-<p>GeoJSON 对象是通过<a href="/reference.html#geojson">GeoJSON 图层</a>添加到地图上的。要创建它并将其添加到地图上，我们可以使用以下代码：</p>
+<p>GeoJSON 对象是通过 <a href="/reference.html#geojson">GeoJSON 图层</a>添加到地图上的。要创建它并将其添加到地图上，我们可以使用以下代码：</p>
 
 <pre><code>L.geoJSON(geojsonFeature).addTo(map);</code></pre>
 
@@ -48,7 +48,7 @@ title: Using GeoJSON with Leaflet
 }];
 </code></pre>
 
-<p>另外，我们可以创建一个空的GeoJSON图层，并将其分配给一个变量，这样我们就可以在以后向其添加更多的特征。</p>
+<p>另外，我们可以创建一个空的 GeoJSON 图层，并将其分配给一个变量，这样我们就可以在以后向其添加更多的特征。</p>
 
 <pre><code>var myLayer = L.geoJSON().addTo(map);
 myLayer.addData(geojsonFeature);
@@ -119,9 +119,9 @@ L.geoJSON(states, {
 
 <h4>pointToLayer</h4>
 
-<p>点的处理方式与多线和多边形不同。默认情况下，GeoJSON点会画出简单的标记。我们可以通过在创建GeoJSON图层时在<a href="/reference.html#geojson">GeoJSON选项</a>对象中传递一个<code>pointToLayer</code>函数来改变这一点。这个函数会传递一个<a href="/reference.html#latlng">LatLng</a>，并且应该返回一个ILayer的实例，在这种情况下可能是<a href="/reference.html#marker">Marker</a>或者<a href="/reference.html#circlemarker">CircleMarker</a>。</p>
+<p>点的处理方式与多线和多边形不同。默认情况下，GeoJSON 点会画出简单的标记。我们可以通过在创建 GeoJSON 图层时在 <a href="/reference.html#geojson">GeoJSON 选项</a>对象中传递一个 <code>pointToLayer</code> 函数来改变这一点。这个函数会传递一个 <a href="/reference.html#latlng">LatLng</a>，并且应该返回一个 ILayer 的实例，在这种情况下可能是 <a href="/reference.html#marker">Marker</a> 或者 <a href="/reference.html#circlemarker">CircleMarker</a>。</p>
 
-<p>这里我们使用 <code>pointToLayer</code> 选项来创建一个CircleMarker：</p>
+<p>这里我们使用 <code>pointToLayer</code> 选项来创建一个 CircleMarker：</p>
 
 <pre><code>var geojsonMarkerOptions = {
 	radius: 8,
@@ -142,7 +142,7 @@ L.geoJSON(someGeojsonFeature, {
 
 <h4>onEachFeature</h4>
 
-<p><code>onEachFeature</code> 选项是一个函数，在将其添加到GeoJSON图层之前，会对每个 Feature 进行调用。使用这个选项的一个常见原因是在点击地物的时候给它们附加一个弹出窗口。</p>
+<p><code>onEachFeature</code> 选项是一个函数，在将其添加到 GeoJSON 图层之前，会对每个 Feature 进行调用。使用这个选项的一个常见原因是在点击地物的时候给它们附加一个弹出窗口。</p>
 
 <pre><code>function onEachFeature(feature, layer) {
 	// does this feature have a property named popupContent?
