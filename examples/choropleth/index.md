@@ -5,15 +5,15 @@ title: Interactive Choropleth Map
 
 ## 交互式 Choropleth 地图
 
-这是一个借助[GeoJSON](.../geojson/)和一些[自定义控件](/reference.html#control)创建美国各州人口密度的彩色交互式[choropleth地图](http://en.wikipedia.org/wiki/Choropleth_map)的案例研究（希望能说服其余所有尚未使用 Leaflet 的主要新闻和政府网站开始这样做）。
+这是一个使用 [GeoJSON](.../geojson/) 和一些[自定义控件](/reference.html#control)创建美国各州人口密度的彩色交互式 [choropleth map](http://en.wikipedia.org/wiki/Choropleth_map) 的研究案例（希望能说服所有尚未使用 Leaflet 的主要新闻和政府网站开始这样做）。
 
-该教程的灵感来自于[德克萨斯论坛报美国参议院决选结果地图](http://www.texastribune.org/library/data/us-senate-runoff-results-map/)（也由Leaflet提供），由[Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/)创建。
+该教程的灵感来自于 [Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/) 制作的[《德克萨斯论坛报》美国参议院决选结果地图](http://www.texastribune.org/library/data/us-senate-runoff-results-map/)（同样由 Leaflet 提供）。
 
 {% include frame.html url="example.html" width=816 height=516 %}
 
 ### 数据来源
 
-我们将创建一个美国各州人口密度的可视化图。由于数据量（州的形状和每个州的密度值）不是很大，最方便和简单的方法是使用 [GeoJSON](../geojson/) 来存储，然后显示。
+我们将创建一个美国各州人口密度的可视化图。由于数据量（各州的形状和各州的密度值）不是很大，最方便和简单的方法是使用 [GeoJSON](../geojson/) 来存储，然后显示。
 
 我们的 GeoJSON 数据（[us-states.js](us-states.js)）的每个 feature 将看起来像这样：
 
@@ -85,7 +85,7 @@ title: Interactive Choropleth Map
 
 ### 添加交互
 
-现在让我们在鼠标悬停时以某种方式在视觉上突出显示状态。首先，我们将为 "鼠标悬停 "事件定义一个事件监听器：
+现在，让我们在鼠标悬停时以某种方式在视觉上突出显示状态。首先，我们要为 "mouseover" 事件定义一个事件监听器：
 
 	function highlightFeature(e) {
 		var layer = e.target;
@@ -102,15 +102,15 @@ title: Interactive Choropleth Map
 		}
 	}
 
-在这里，我们通过`e.target`访问被悬停的图层，在图层上设置一个厚厚的灰色边框作为我们的高亮效果，同时把它带到前面，这样边框就不会与附近的状态发生冲突（但对IE、Opera或Edge来说不是这样，因为它们在`mouseover`上做`bringToFront`有问题）。
+在这里，我们通过 `e.target` 访问被悬停的图层，在图层上设置一个厚厚的灰色边框作为我们的高亮效果，同时把它放到图层最前面，这样边框就不会与附近的状态发生冲突（但对 IE、Opera 或 Edge 来说不是这样，因为它们在 `mouseover ` 时使用 ` bringToFront` 有问题）。
 
-接下来我们将定义在 "鼠标移出 "时发生的事情：
+接下来我们将定义鼠标移出时发生的事情：
 
 	function resetHighlight(e) {
 		geojson.resetStyle(e.target);
 	}
 
-方便的`geojson.resetStyle`方法将重置图层样式到默认状态（由我们的`style`函数定义）。为此，请确保我们的 GeoJSON 图层可通过 `geojson` 变量访问，方法是在我们的侦听器之前定义它并稍后将层分配给它：
+`geojson.resetStyle` 方法可以很方便的将图层样式重置为默认状态（由我们的 `style` 函数定义）。为了让这个方法起作用，请确保我们的 GeoJSON 图层可通过 `geojson` 变量访问，方法是在我们的监听器之前定义它，然后再将图层分配给它：
 
 	var geojson;
 	// ... our listeners
@@ -122,7 +122,7 @@ title: Interactive Choropleth Map
 		map.fitBounds(e.target.getBounds());
 	}
 
-现在我们将使用`onEachFeature`选项在我们的状态层上添加监听器（listeners）：
+现在我们将使用 `onEachFeature` 选项在我们的状态层上添加监听器（listeners）：
 
 	function onEachFeature(feature, layer) {
 		layer.on({
@@ -141,7 +141,7 @@ title: Interactive Choropleth Map
 
 ### 自定义信息控件
 
-我们可以使用通用的点击弹出窗口来显示不同状态的信息，但我们将选择一条不同的路线---在[自定义控件](/reference.html#control)内的状态悬停上显示它。
+我们可以使用通用的点击弹出窗口来显示不同状态的信息，但我们将选择一条不同的途径---在一个[自定义控件](/reference.html#control)内的状态悬停时显示。
 
 这是我们控件的代码:
 
@@ -214,7 +214,7 @@ title: Interactive Choropleth Map
 
 	legend.addTo(map);
 
-控件的CSS样式（我们也重复使用前面定义的`info`类）:
+控件的 CSS 样式（我们也重复使用前面定义的 `info` 类）:
 
 {: .css}
 	.legend {
@@ -229,4 +229,4 @@ title: Interactive Choropleth Map
 		opacity: 0.7;
 	}
 
-欣赏本页面顶部或在一个[单独的页面](example.html)上的结果。
+请在页面顶部或者[单独的页面](example.html)上的查看具体效果。
