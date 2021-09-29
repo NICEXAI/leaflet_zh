@@ -145,7 +145,7 @@ title: Interactive Choropleth Map
 
 这是我们控件的代码:
 
-	var info = L.control();
+	var info = L.control(); 
 
 	info.onAdd = function (map) {
 		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
