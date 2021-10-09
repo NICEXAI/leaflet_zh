@@ -1,7 +1,7 @@
 # Leaflet - 中文文档  <img src='https://leafletjs.cn/docs/images/logo.png' height='30'>
 
 
-> Leaflet一个开源并且对移动端友好的交互式地图JavaScript库。本项目目的在于为国内使用`Leaflet`的小伙伴们提供一份内容完善、准确度相对较高并且更新及时的中文文档，希望能够给大家在学习或开发过程中带来一定的便利。
+> Leaflet 是一个开源并且对移动端友好的交互式地图 JavaScript 库。本项目目的在于为国内使用 `Leaflet` 的小伙伴们提供一份内容完善、准确度相对较高并且更新及时的中文文档，希望能够给大家在学习或开发过程中带来一定的便利。
 > 
 > Leaflet 中文站点：https://leafletjs.cn/
 > 
@@ -120,9 +120,9 @@ creating Makefile
 current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
  make "DESTDIR=" clean
 ```
-如果安装`jekyll`过程中遇到上面问题或者安装`msys2`过程中报错，可以参考以下文章进行解决:
-* [在Windows上安装Jekyll](https://www.jianshu.com/p/58e2c5ea3103)
-* [mysys2使用记录](https://www.jianshu.com/p/2a3ff0d4f53a)
+如果安装 `jekyll` 过程中遇到上面问题或者安装 `msys2` 过程中报错，可以参考以下文章进行解决:
+* [在 Windows 上安装 Jekyll](https://www.jianshu.com/p/58e2c5ea3103)
+* [mysys2 使用记录](https://www.jianshu.com/p/2a3ff0d4f53a)
 
 
 
