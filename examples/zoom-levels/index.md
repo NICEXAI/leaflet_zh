@@ -24,9 +24,9 @@ title: Zoom levels
 }
 </style>
 
-## Zoom levels
+## Zoom levels 缩放比例
 
-Leaflet 适用于 [latitude](https://en.wikipedia.org/wiki/Latitude), [longitude](https://en.wikipedia.org/wiki/Longitude) 和 "zoom level"。
+Leaflet 适用于 [latitude](https://en.wikipedia.org/wiki/Latitude), [longitude](https://en.wikipedia.org/wiki/Longitude) 和 `zoom level`。
 
 较低的缩放比例意味着地图可以显示整个大陆，而较高的缩放比例意味着地图可以显示一个城市的细节。
 
@@ -57,9 +57,9 @@ Leaflet 适用于 [latitude](https://en.wikipedia.org/wiki/Latitude), [longitude
 <img src="https://a.basemaps.cartocdn.com/light_all/0/0/0.png" class="bordered-img" alt=""/>
 </div>
 
-我们要明白的是：地球不是一个正方形。相反，地球有一个不规则的形状，可以近似于[类似于球体的东西]（https://en.wikipedia.org/wiki/Geoid）。
+我们要明白的是：地球不是一个正方形。相反，地球有一个不规则的形状，可以近似于[类似于球体的东西](https://en.wikipedia.org/wiki/Geoid)。
 
-所以我们*假设*地球大部分是圆的。为了使它平坦，我们在周围放了一个假想的圆柱体，展开它，然后将其切割成方形：
+所以我们假设地球大部分是圆的。为了使它平坦，我们在周围放了一个假想的圆柱体，展开它，然后将其切割成方形：
 
 <div class='tiles legend' style='text-align: center'>
 <a title="By derived from US Government USGS [Public domain], via Wikimedia Commons" href="https://en.wikipedia.org/wiki/Map_projection#Cylindrical"><img width="512" alt="Usgs map mercator" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Usgs_map_mercator.svg/512px-Usgs_map_mercator.svg.png"/>
@@ -180,19 +180,19 @@ Leaflet 地图有多种方法可以控制显示的缩放级别，但最明显的
 
 ## Fractional zoom（以分数为单位进行缩放，例如：0.1）
 
-在Leaflet 1.0.0中引入的一个功能是 <em>fractional zoom</em> 的概念。
+在 Leaflet 1.0.0 中引入的一个功能是 <em>fractional zoom</em> 的概念。
 在这之前，地图的缩放级别只能是一个整数（`0`，`1`，`2`，等等），
 但现在你可以使用小数，如`1.5`或`1.25`。
 
 默认情况下，分数缩放是禁用的。要启用它，请使用
-[地图的`zoomSnap`选项]（/reference.html#map-zoomsnap）。
-`zoomSnap`选项的默认值是`1`（这意味着地图的缩放级别可以是`0`）。
-这意味着地图的缩放级别可以是`0`，`1`，`2`，以此类推）。)
+[地图的 `zoomSnap` 选项]（/reference.html#map-zoomsnap）。
+`zoomSnap` 选项的默认值是 `1`（这意味着地图的缩放级别可以是 `0`）。
+这意味着地图的缩放级别可以是 `0`， `1`， `2`，以此类推）。)
 
 如果你把 "zoomSnap "的值设置为 "0.5"，那么地图的有效缩放级别为
-将是`0`、`0.5`、`1`、`1.5`、`2`，以此类推。
+将是 `0`、`0.5`、`1`、`1.5`、`2`，以此类推。
 
-如果你设置的值是 "0.1"，地图的有效缩放级别将是 "0"、"0.1"。
+如果你设置的值是 "0.1"，地图的有效缩放级别将是 `0`、`0.1`，
 `0.2`，`0.3`，`0.4`，以此类推。
 
 以下示例使用 `zoomSnap` 值 `0.25`：
@@ -205,7 +205,7 @@ Leaflet 地图有多种方法可以控制显示的缩放级别，但最明显的
 
 如您所见，Leaflet 只会加载缩放级别 `0` 或 `1` 的图块，并根据需要缩放它们。
 
-Leaflet 将 <em>snap</em> 缩放到最接近的有效级别。比如说: 如果你有`zoomSnap: 0.25`，而你试图做`map.setZoom(0.8)`，缩放会 缩回到`0.75`。`map.fitBounds(bounds)` 在结束
+Leaflet 将 <em>snap</em> 缩放到最接近的有效级别。比如说: 如果你有 `zoomSnap: 0.25`，而你试图做 `map.setZoom(0.8)`，缩放会 缩回到 `0.75`。`map.fitBounds(bounds)` 在结束
 触摸屏上的捏合缩放手势时也会发生同样的情况。
 
 `zoomSnap` 可以设置为零。这意味着 Leaflet 将不会捕捉缩放级别。
