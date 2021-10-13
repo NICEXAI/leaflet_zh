@@ -21,8 +21,8 @@
   - [x] Markers 自定义图标（已校正）
   - [x] 在 Leaflet 中使用 GeoJSON（已校正）
   - [x] 互动式choropleth地图（已校正）
-  - [x] Layer Groups 和 Layers Control
-  - [x] Zoom levels 缩放比例
+  - [x] Layer Groups 和 Layers Control（已校正）
+  - [x] Zoom levels 缩放比例（已校正）
   - [x] Non-geographical maps
   - [x] WMS and TMS
   - [x] Working with map panes
