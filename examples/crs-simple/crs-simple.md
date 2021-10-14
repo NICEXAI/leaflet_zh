@@ -81,7 +81,7 @@ Leaflet 地图有一个 CRS（只有一个 CRS ），可以在创建地图时更
 
 ### 这不是你要找的 `LatLng`
 
-你会注意到 Sol 的坐标是`[145,175]`而不是`[175,145]`，地图中心的情况也一样。`CRS.Simple` 中的坐标采用`[y, x]`的形式，而不是`[x, y]`，就像Leaflet使用`[lat, lng]`而不是`[lng, lat]`一样。
+你会注意到 Sol 的坐标是 `[145,175]` 而不是 `[175,145]`，地图中心的情况也一样。`CRS.Simple` 中的坐标采用 `[y, x]` 的形式，而不是 `[x, y]`，就像 Leaflet 使用 `[lat, lng]` 而不是 `[lng, lat]` 一样。
 
 <small>(在技术上，Leaflet 更倾向于使用 [`[northing, easting]`](https://en.wikipedia.org/wiki/Easting_and_northing) 而不是 `[easting, northing]`--坐标对中的第一个坐标指向 "north"，第二个指向 "east")</small>
 
