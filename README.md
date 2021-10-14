@@ -24,7 +24,7 @@
   - [x] Layer Groups 和 Layers Control（已校正）
   - [x] Zoom levels 缩放比例（已校正）
   - [x] Non-geographical maps（已校正）
-  - [x] WMS and TMS
+  - [x] WMS and TMS（已校正）
   - [x] Working with map panes
   - [x] 显示视频文件
   - [x] 扩展 Leaflet: Class Theory
