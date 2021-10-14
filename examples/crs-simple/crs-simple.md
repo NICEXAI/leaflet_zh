@@ -29,9 +29,9 @@ iframe {
 
 ## CRS.Simple
 
-**CRS**代表[坐标参考系统](https://en.wikipedia.org/wiki/Spatial_reference_system)，这是地理学家用来解释坐标向量中的坐标含义的术语。例如，如果使用地球上的经纬度，`[15, 60]`代表印度洋上的一个点，在我们的星图中也可以代表太阳系的Krueger-Z。
+**CRS** 代表[坐标参考系统](https://en.wikipedia.org/wiki/Spatial_reference_system)，这是地理学家用来解释坐标向量中的坐标含义的术语。例如，如果使用地球上的经纬度，`[15, 60]`代表印度洋上的一个点，在我们的星图中也可以代表太阳系的 Krueger-Z。
 
-Leaflet 地图有一个 CRS（只有一个CRS ），可以在创建地图时更改。对于我们的游戏地图，我们将使用 `CRS.Simple` 来代表一个正方形网格：
+Leaflet 地图有一个 CRS（只有一个 CRS ），可以在创建地图时更改。对于我们的游戏地图，我们将使用 `CRS.Simple` 来代表一个正方形网格：
 
 	var map = L.map('map', {
 		crs: L.CRS.Simple
@@ -53,7 +53,7 @@ Leaflet 地图有一个 CRS（只有一个CRS ），可以在创建地图时更�
 
 ## CRS.Simple 地图中的常见问题
 
-在默认的 Leaflet CRS 中CRS.Earth，360 度经度映射到 256 个水平像素（缩放级别 0），大约 170 度纬度映射到 256 个垂直像素（缩放级别 0）。
+在默认的 Leaflet CRS 中 CRS.Earth，360 度经度映射到 256 个水平像素（缩放级别 0），大约 170 度纬度映射到 256 个垂直像素（缩放级别 0）。
 
 在一个 `CRS.Simple` 中，一个水平地图单元被映射到一个水平像素，以及同上垂直。这意味着整个地图大约有 1000x1000 像素大，无法放入我们的 HTML 容器中。幸运的是，我们可以设置 `minZoom` 为低于零的值：
 
@@ -81,11 +81,11 @@ Leaflet 地图有一个 CRS（只有一个CRS ），可以在创建地图时更�
 
 ### 这不是你要找的 `LatLng`
 
-你会注意到Sol的坐标是`[145,175]`而不是`[175,145]`，地图中心的情况也一样。`CRS.Simple`中的坐标采用`[y, x]`的形式，而不是`[x, y]`，就像Leaflet使用`[lat, lng]`而不是`[lng, lat]`一样。
+你会注意到 Sol 的坐标是`[145,175]`而不是`[175,145]`，地图中心的情况也一样。`CRS.Simple` 中的坐标采用`[y, x]`的形式，而不是`[x, y]`，就像Leaflet使用`[lat, lng]`而不是`[lng, lat]`一样。
 
-<small>(在技术上，Leaflet更倾向于使用[`[northing, easting]`](https://en.wikipedia.org/wiki/Easting_and_northing)而不是`[easting, northing]`--坐标对中的第一个坐标指向 "north"，第二个指向 "east")</small>
+<small>(在技术上，Leaflet 更倾向于使用 [`[northing, easting]`](https://en.wikipedia.org/wiki/Easting_and_northing) 而不是 `[easting, northing]`--坐标对中的第一个坐标指向 "north"，第二个指向 "east")</small>
 
-关于`[lng, lat]`或`[lat, lng]`或`[y, x]`或`[x, y]`的辩论[并不新鲜，也没有明确的共识](http://www.macwright.org/lonlat/)。由于缺乏共识，Leaflet 有一个名为 `L.LatLng` 的类，而不是更容易引起混淆的 `L.Coordinate`。
+关于 `[lng, lat]` 或 `[lat, lng]` 或 `[y, x]` 或 `[x, y]` 的辩论[并不新鲜，也没有明确的共识](http://www.macwright.org/lonlat/)。由于缺乏共识，Leaflet 有一个名为 `L.LatLng` 的类，而不是更容易引起混淆的 `L.Coordinate`。
 
 如果使用 `[y, x]` 命名的坐标 `L.LatLng` 对您来说没有多大意义，您可以轻松地为它们创建包装器：
 
