@@ -23,7 +23,7 @@
   - [x] 互动式choropleth地图（已校正）
   - [x] Layer Groups 和 Layers Control（已校正）
   - [x] Zoom levels 缩放比例（已校正）
-  - [x] Non-geographical maps
+  - [x] Non-geographical maps（已校正）
   - [x] WMS and TMS
   - [x] Working with map panes
   - [x] 显示视频文件
