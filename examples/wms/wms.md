@@ -16,12 +16,12 @@ WMS 是  [*web map service*](https://en.wikipedia.org/wiki/Web_Map_Service) 的�
 
 TMS 代表 [*tiled map service*](https://en.wikipedia.org/wiki/Tile_Map_Service)，是一种地图平铺标准，更侧重于网络地图，非常类似于 Leaflet 在 `L.TileLayer`。
 
-WMTS是 [*web map tile service*](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) 的意思，是地图瓦片的标准协议，为可直接用于 `L.TileLayer` 的地图瓦片服务。
+WMTS 是 [*web map tile service*](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) 的意思，是地图瓦片的标准协议，为可直接用于 `L.TileLayer` 的地图瓦片服务。
 
 
 ## Leaflet 中的 WMS
 
-当有人发布一个WMS服务时，很可能他们会链接到一个叫做 "GetCapabilities " 的地址。在本教程中，我们将使用由[*Mundialis*](https://www.mundialis.de)提供的WMS，网址为 http://ows.mundialis.de/services/service。下面的 URL 描述了服务功能：
+当有人发布一个 WMS 服务时，很可能他们会链接到一个叫做 "GetCapabilities" 的地址。在本教程中，我们将使用由 [*Mundialis*](https://www.mundialis.de) 提供的 WMS，网址为 http://ows.mundialis.de/services/service。下面的 URL 描述了服务功能：
 
 	http://ows.mundialis.de/services/service?request=GetCapabilities
 
@@ -69,7 +69,7 @@ WMS 服务器在服务中定义了一系列的图层（layers）,这些是在 `G
 		layers: 'TOPO-WMS,OSM-Overlay-WMS'
 	}).addTo(map);
 
-请注意，这将向 WMS 服务器请求一张图像。这不同于L.TileLayer.WMS为 **topography** 创建一个图层，为 **places** 创建另一个图层，然后将它们都添加到地图中。在第一种情况下，有一个图像请求，由 WMS 服务器决定如何合成（置于彼此之上）图像。在第二种情况下，将有两个图像请求，由运行在 Web 浏览器中的 Leaflet 代码决定如何组合它们。
+请注意，这将向 WMS 服务器请求一张图像。这不同于 L.TileLayer.WMS 为 **topography** 创建一个图层，为 **places** 创建另一个图层，然后将它们都添加到地图中。在第一种情况下，有一个图像请求，由 WMS 服务器决定如何合成（置于彼此之上）图像。在第二种情况下，将有两个图像请求，由运行在 Web 浏览器中的 Leaflet 代码决定如何组合它们。
 
 如果我们将其与 [layers control 图层控件](/examples/layers-control.html)结合起来，那么我们可以构建一个简单的地图来查看差异：
 
@@ -104,9 +104,9 @@ WMS 服务器在服务中定义了一系列的图层（layers）,这些是在 `G
 
 从 GIS 的角度来看，Leaflet 中的 WMS 处理是非常基础的。没有 `GetCapabilities`  支持，没有  legend 支持，也没有 `GetFeatureInfo` 支持。
 
-`L.TileLayer.WMS` 有额外的选项，可以在[Leaflet的API文档]（/reference.html#tilelayer-wms）中找到。任何没有描述的选项都会在 `getImage` URLs中传递给 WMS 服务器。
+`L.TileLayer.WMS` 有额外的选项，可以在 [Leaflet 的 API 文档]（/reference.html#tilelayer-wms）中找到。任何没有描述的选项都会在 `getImage` URLs中传递给 WMS 服务器。
 
-还要注意Leaflet支持很少的[坐标系](https://en.wikipedia.org/wiki/Spatial_reference_system)：`CRS:3857`，`CRS:3395`和`CRS:4326`（见`L.CRS`的文档）。如果您的 WMS 服务不提供这些坐标系中的图像，则您可能需要使用 [Proj4Leaflet](https://github.com/kartena/Proj4Leaflet) 在 Leaflet 中使用不同的坐标系。除此之外，只需在初始化地图时使用正确的 CRS，添加的任何 WMS 图层都将使用它：
+还要注意 Leaflet 支持很少的[坐标系](https://en.wikipedia.org/wiki/Spatial_reference_system)：`CRS:3857`，`CRS:3395` 和 `CRS:4326`（见 `L.CRS` 的文档）。如果您的 WMS 服务不提供这些坐标系中的图像，则您可能需要使用 [Proj4Leaflet](https://github.com/kartena/Proj4Leaflet) 在 Leaflet 中使用不同的坐标系。除此之外，只需在初始化地图时使用正确的 CRS，添加的任何 WMS 图层都将使用它：
 
 	var map = L.map('map', {
 		crs: L.CRS.EPSG4326
@@ -143,10 +143,10 @@ Leaflet 没有明确支持 TMS 服务，但是瓦片（Tile）的命名结构与
 	}).addTo(map);
 
 
-在**Leaflet 1.0**中的一个新功能是能够在 URL 中使用 `{-y}` 而不是 `tms: true` 选项，例如：
+在 **Leaflet 1.0** 中的一个新功能是能够在 URL 中使用 `{-y}` 而不是 `tms: true` 选项，例如：
 
 	var layer = L.tileLayer('http://base_url/tms/1.0.0/tileset/{z}/{x}/{-y}.png');
 
-我们需要 `tms: true`  选项（在 Leaflet 0.7 中）或 `{-y}`（在 Leaflet 1.0 中），因为 `L.TileLayer` 的坐标原点是左上角，所以 Y 坐标**向下**。在TMS中 坐标的原点是左下角，所以Y坐标是**向上**的。
+我们需要 `tms: true`  选项（在 Leaflet 0.7 中）或 `{-y}`（在 Leaflet 1.0 中），因为 `L.TileLayer` 的坐标原点是左上角，所以 Y 坐标**向下**。在TMS中 坐标的原点是左下角，所以 Y 坐标是**向上**的。
 
 除了 `y` 坐标和 `tilesets` 发现的差异之外，TMS 服务完全按照 `L.TileLayer` 预期的方式提供瓦片。
