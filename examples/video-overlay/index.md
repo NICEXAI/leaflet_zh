@@ -5,7 +5,7 @@ title: Leaflet on Mobile
 
 ## 在 WEB 页面上显示视频
 
-在构建网页时，显示视频曾经是一项艰巨的任务，直到 [`<video>` HTML 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)可以使用。
+在构建网页时，显示视频曾经是一项艰巨的任务，直到 [`<video>` HTML 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)的出现。
 
 现在，我们可以使用以下 HTML 代码：
 
@@ -21,7 +21,7 @@ title: Leaflet on Mobile
 <source src="https://www.mapbox.com/bites/00188/patricia_nasa.mp4" type="video/mp4">
 </video>
 
-如果一个视频可以通过这种方式在网页中显示，那么 Leaflet 就可以在地图中显示它。重要的是，视频的准备要符合地图的要求。视频应该有一个 "北上 "的方向，其比例应该符合地图的要求。如果不是这样，它就会显得格格不入。
+如果一个视频可以通过这种方式在网页中显示，那么 Leaflet 就可以在地图中显示它。重要的是，视频需要符合地图的要求。视频应该有一个 "north-up" 的方向，其比例应该符合地图的要求。如果不是这样，它就会显得格格不入。
 
 ### 图像覆盖的边界
 
@@ -58,7 +58,7 @@ title: Leaflet on Mobile
 如果要覆盖一个视频的话, 只需要:
 
 * 使用 `L.videoOverlay` 代替 `L.imageOverlay`
-* 指定一个Video URL 或一组 Video URL，而不是 Image URL
+* 指定一个 Video URL 或一组 Video URL，而不是 Image URL
 
 ```
 	var videoUrls = [
