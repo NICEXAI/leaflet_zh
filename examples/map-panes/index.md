@@ -3,11 +3,11 @@ layout: tutorial_v2
 title: Working with map panes
 ---
 
-## 什么是窗格（pane）?
+## 什么是 pane ?
 
-在 Leaflet 中，地图窗格（pane）隐式地将图层组合在一起，开发人员不知道它。这种分组允许 Web 浏览器以比单独处理图层更有效的方式同时处理多个图层。
+在 Leaflet 中，map panes 隐式地将图层组合在一起，而开发者并不知道这一点。这种分组允许 Web 浏览器以比单独处理图层更有效的方式同时处理多个图层。
 
-地图窗格（pane）使用z-index CSS 属性来让某些图层始终显示在其他图层之上。[默认的顺序](/reference.html#map-pane)是：
+Map panes 使用 z-index CSS 属性来让某些图层始终显示在其他图层之上。[默认的排序](/reference.html#map-pane)是：
 
 * `TileLayer` 和 `GridLayer`
 * `Path`, 如线、折线、圆或 `GeoJSON` 图层
@@ -15,13 +15,13 @@ title: Working with map panes
 * `Marker` 图标
 * `Popup`
 
-这就是为什么在 Leaflet 地图中，弹出窗口总是显示在其他层的 "上面"，标记总是显示在瓦片层的上面，等等。
+这就是为什么在 Leaflet 地图中，popups 总是显示在其他层的 "上面"，markers 总是显示在瓦片图层的上面，等等。
 
-**Leaflet 1.0.0**的一个新功能（0.7.x中没有）是自定义地图窗格（pane），它允许自定义这一顺序。
+**Leaflet 1.0.0** 的一个新功能（0.7.x 中没有）是自定义 map panes，它允许自定义这个顺序。
 
 ## 默认情况并不总是正确的
 
-在某些特定情况下，默认顺序不是地图的正确顺序。我们可以用 [Carto basemaps]（https://carto.com/location-data-services/basemaps/） 底图和标签来证明这一点：
+在某些特定情况下，默认顺序不是地图的正确顺序。我们可以用 [Carto basemaps](https://carto.com/location-data-services/basemaps/) 底图和标签来证明这一点：
 
 
 <style>
@@ -53,11 +53,11 @@ title: Working with map panes
 
 {% include frame.html url="example.html" %}
 
-## 自定义窗格（pane）
+## 自定义 pane
 
 我们可以使用默认的底图瓦片（tile）和一些像 GeoJSON 图层这样的覆盖物, 然后我们必须为标签定义一个自定义窗格（pane），以便它们显示在 GeoJSON 数据之上。
 
-自定义地图窗格（pane）是在每个地图的基础上创建的，所以首先创建一个 `L.Map` 的实例和 pane:
+自定义 map panes 是在每个地图的基础上创建的，所以首先创建一个 `L.Map` 的实例和 pane:
 
 
     var map = L.map('map');
@@ -76,7 +76,7 @@ title: Working with map panes
     map.getPane('labels').style.pointerEvents = 'none';
 
 
-窗格（pane）准备就绪后，我们可以添加图层，注意使用 pane 标签瓦片（tile）上的选项：
+窗格（pane）准备就绪后，我们可以添加图层，注意使用标签瓦片（tile）上的 pane 选项：
 
 
     var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
@@ -99,7 +99,7 @@ title: Working with map panes
     map.fitBounds(geojson.getBounds());
 
 
-现在[示例地图](example.html)就完成了!
+现在，[示例地图](example.html)已经完成了!
 
 
 
