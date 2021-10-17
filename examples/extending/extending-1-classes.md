@@ -5,7 +5,7 @@ title: Extending Leaflet, Class Theory
 
 ## 扩展 Leaflet
 
-Leaflet有数以百计的插件，这些插件扩展了Leaflet的功能：有时是以一种通用的方式，有时是以一种非常具体的使用方式。
+Leaflet 有数以百计的插件，这些插件扩展了 Leaflet 的功能：有时是以一种通用的方式，有时是以一种非常具体的使用方式。
 
 有这么多插件的部分原因是 Leaflet 易于扩展。本教程将介绍最常用的方法。
 
@@ -18,7 +18,7 @@ Leaflet有数以百计的插件，这些插件扩展了Leaflet的功能：有时
 
 ## Leaflet 架构
 
-让我们看看 Leaflet 1.0.0 的简化 UML 类图。有60多个JavaScript类，所以图有点大。幸运的是，我们可以用 `L.ImageOverlay` 做一个可缩放的图片：
+让我们看看 Leaflet 1.0.0 的简化 UML 类图。有 60 多个 JavaScript 类，所以图有点大。幸运的是，我们可以用 `L.ImageOverlay` 做一个可缩放的图片：
 
 {% include frame.html url="class-diagram.html" %}
 
@@ -39,9 +39,9 @@ Leaflet有数以百计的插件，这些插件扩展了Leaflet的功能：有时
 
 ## `L.Class`
 
-JavaScript是一种有点奇怪的语言。它并不是一种真正的面向对象的语言，而是一种[面向原型的语言](https://en.wikipedia.org/wiki/Prototype-based_programming)，这使得JavaScript在历史上难以使用经典OOP意义上的类继承。
+JavaScript 是一种有点奇怪的语言。它并不是一种真正的面向对象的语言，而是一种[面向原型的语言](https://en.wikipedia.org/wiki/Prototype-based_programming)，这使得 JavaScript 在历史上难以使用经典 OOP 意义上的类继承。
 
-Leaflet通过 `L.Class` 来解决这个问题，它简化了类的继承。
+Leaflet 通过 `L.Class` 来解决这个问题，它简化了类的继承。
 
 尽管现代 JavaScript 可以使用 ES6 类，但 Leaflet 并不是围绕它们设计的。
 
@@ -66,8 +66,8 @@ Leaflet通过 `L.Class` 来解决这个问题，它简化了类的继承。
 
 在命名类、方法和属性时，请遵循以下约定：
     
-* 函数、方法、属性和工厂名称应使用[`lowerCamelCase`](https://en.wikipedia.org/wiki/CamelCase)
-* 类名应使用[`UpperCamelCase`](https://en.wikipedia.org/wiki/CamelCase)
+* 函数、方法、属性和工厂名称应使用 [`lowerCamelCase`](https://en.wikipedia.org/wiki/CamelCase)
+* 类名应使用 [`UpperCamelCase`](https://en.wikipedia.org/wiki/CamelCase)
 * 私有属性和方法以下划线（`_`）开头。这并不意味着它们是私有的，只是建议开发者不要直接使用它们
 
 ### `L.Class.include()`    
@@ -141,7 +141,7 @@ Leaflet 以一种特殊的方式处理 `options` 属性：父类的可用选项�
         this._area = this.options.width * this.options.length;
     });
 
-这将在 `initialize()` 被调用后运行（调用 `setOptions()`）。这意味着 `this.options` 存在，并且在init hook运行时有效。
+这将在 `initialize()` 被调用后运行（调用 `setOptions()`）。这意味着 `this.options` 存在，并且在 init hook 运行时有效。
 
 `addInitHook` 有另一种语法，它使用方法名，并可以填入方法参数：
 
@@ -190,7 +190,7 @@ Leaflet 以一种特殊的方式处理 `options` 属性：父类的可用选项�
 在为 Leaflet 插件命名类时，请遵守以下命名规范：
 
 * 永远不要在你的插件中暴露全局变量
-* 如果你有一个新的类，直接把它放在`L`命名空间（`L.MyPlugin`）
+* 如果你有一个新的类，直接把它放在 `L` 命名空间（`L.MyPlugin`）
 * 如果你继承了一个现有的类，让它成为一个子属性（`L.TileLayer.Banana`）
 
 
