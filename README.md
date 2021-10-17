@@ -29,7 +29,7 @@
   - [x] 显示视频文件（已校正）
   - [x] 扩展 Leaflet: Class Theory（已校正）
   - [x] 扩展 Leaflet: Layers（已校正）
-  - [x] 扩展 Leaflet: Handlers and Controls
+  - [x] 扩展 Leaflet: Handlers and Controls （已校正）
 - [x] 文档
   - [x] 地图
   - [x] 地图方法
