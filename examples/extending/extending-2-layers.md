@@ -5,17 +5,17 @@ title: Extending Leaflet, New Layers
 
 <br>
 
-本教程假定你已经阅读了 [Leaflet类的继承原理](./extending-1-classes.html)。
+本教程假定你已经阅读了 [Leaflet 类的继承原理](./extending-1-classes.html)。
 
-在 Leaflet 中，“layer” 是指当地图移动时移动的任何东西。在了解如何从头开始创建它们之前，先解释一下如何进行简单的扩展。
+在 Leaflet 中，“layer” 是指当地图被移动时，任何会移动的东西。在了解如何从头开始创建它们之前，先解释一下如何进行简单的扩展。
 
-## "扩展方法"
+## 扩展方法
 
 一些 Leaflet 类具有所谓的 “扩展方法”：为子类编写代码的入口点。
 
 其中之一是 `L.TileLayer.getTileUrl()`。每当一个新的瓦片需要知道加载哪张图片时，`L.TileLayer` 就会在内部调用这个方法。通过制作 `L.TileLayer` 的子类并重写其 `getTileUrl()` 函数，我们可以创建自定义行为。
 
-让我们用一个自定义 `L.TileLayer` 来说明，它将显示来自[PlaceKitten]()的随机猫咪图像：
+让我们用一个自定义 `L.TileLayer` 来说明，它将显示来自 [PlaceKitten]() 的随机猫咪图像：
 
     L.TileLayer.Kitten = L.TileLayer.extend({
         getTileUrl: function(coords) {
@@ -68,7 +68,7 @@ title: Extending Leaflet, New Layers
 
 ### `L.GridLayer` 和 DOM 元素
 
-另一种扩展方法是 `L.GridLayer.createTile()`。`L.TileLayer` 会把它当成一个图片的网格（如`<img>`元素）来处理，`L.GridLayer` 则允许创建任何种类的[HTML元素]的网格(https://developer.mozilla.org/en-US/docs/Web/HTML/Element)。
+另一种扩展方法是 `L.GridLayer.createTile()`。`L.TileLayer` 会把它当成一个图片的网格（如`<img>`元素）来处理，`L.GridLayer` 则允许创建任何种类的 [HTML 元素的网格](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)。
 
 `L.GridLayer` 允许创建 `<img>` 的网格，但 [`<div>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)、[`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) 或 [`<picture>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)（或任何东西）的网格也是可以的。`createTile()` 只需要返回  [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)  给定瓦片（tile）坐标的实例。了解如何操作 [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) 中的元素在这里很重要：Leaflet 需要实例 `HTMLElement`，因此使用 jQuery 等库创建的元素将有问题。
 
@@ -90,7 +90,7 @@ title: Extending Leaflet, New Layers
 	map.addLayer( L.gridLayer.debugCoords() );
 
 
-如果元素必须做一些异步初始化，那么就使用第二个函数参数 `done`，并在瓦片（tile）准备好时（例如，当图像已被完全加载）或出现错误时回调它。在这里，我们将人为地延迟瓷砖：
+如果元素必须做一些异步初始化，那么就使用第二个函数参数 `done`，并在瓦片（tile）准备好时（例如，当图像已被完全加载）或出现错误时回调它。在这里，我们将人为地延迟瓦片（tile）：
 
 	createTile: function (coords, done) {
 		var tile = document.createElement('div');
@@ -106,7 +106,7 @@ title: Extending Leaflet, New Layers
 
 {% include frame.html url="gridcoords.html" %}
 
-通过这些自定义的 `GridLayer`，一个插件可以完全控制构成网格的HTML元素。一些插件已经通过这种方式使用 `<canvas>` 来做高级渲染。
+通过这些自定义的 `GridLayer`，一个插件可以完全控制构成网格的 HTML 元素。一些插件已经通过这种方式使用 `<canvas>` 来做高级渲染。
 
 一个非常基础的 `<canvas>` `GridLayer` 类似这样：
 
@@ -135,11 +135,11 @@ title: Extending Leaflet, New Layers
 
 ## The pixel origin 像素原点
 
-创建自定义的 "L.Layer "是可能的，但需要对Leaflet如何定位HTML元素有更深的了解。精简版是：
+创建自定义的 "L.Layer "是可能的，但需要对 Leaflet 如何定位 HTML 元素有更深的了解。精简版是：
 
 * 该 L.Map 容器具有"地图窗格（pane）"，这是<div>
 * `L.Layer` 是地图窗格内的HTML元素
-* 地图将所有 `LatLng` 转换为地图CRS中的坐标，再从CRS中转换为绝对的 "像素坐标"（CRS的原点与像素坐标的原点相同）
+* 地图将所有 `LatLng` 转换为地图 CRS 中的坐标，再从 CRS 中转换为绝对的 "像素坐标"（CRS 的原点与像素坐标的原点相同）
 * 当 `L.Map` 准备好时（有一个中心 `LatLng` 和一个缩放级别），左上角的绝对像素坐标成为 "像素原点"
 * 每个 `L.Layer` 都根据像素原点和该层 `LatLng` 的绝对像素坐标从其地图窗格中偏移
 * 在 `L.Map` 上的每个 `zoomend` 或 `viewreset` 事件后，像素原点被重置，每个 `L.Layer` 必须重新计算其位置（如果需要的话）
@@ -149,9 +149,9 @@ title: Extending Leaflet, New Layers
 
 {% include frame.html url="pixelorigin.html" %}
 
-CRS原点（绿色）保持在同一个`LatLng`。像素原点（红色）总是从左上角开始。当地图被平移时，像素原点会移动（地图窗格会相对于地图的容器重新定位），而当缩放时，像素原点会保持在屏幕的同一位置（地图窗格（pane）不会被重新定位，但图层可能会重新绘制）。缩放时对像素原点的绝对像素坐标会被更新，但平移时不会被更新。请注意每次放大地图时，绝对像素坐标（到绿色括号的距离）是如何翻倍的。
+CRS 原点（绿色）保持在同一个 `LatLng`。像素原点（红色）总是从左上角开始。当地图被平移时，像素原点会移动（地图窗格会相对于地图的容器重新定位），而当缩放时，像素原点会保持在屏幕的同一位置（地图窗格（pane）不会被重新定位，但图层可能会重新绘制）。缩放时对像素原点的绝对像素坐标会被更新，但平移时不会被更新。请注意每次放大地图时，绝对像素坐标（到绿色括号的距离）是如何翻倍的。
 
-如果要定位任何东西（例如，一个蓝色的`L.Marker'），它的`LatLng'被转换为地图的`L.CRS'内的绝对像素坐标。然后从它的绝对像素坐标中减去像素原点的绝对像素坐标，得到一个相对于像素原点（浅蓝色）的偏移。由于像素原点是所有地图窗格的左上角，这个偏移量可以应用于标记的图标的HTML元素。标记的`iconAnchor'（深蓝色线）是通过负的CSS边距实现的。
+如果要定位任何东西（例如，一个蓝色的 `L.Marker`），它的 `LatLng` 被转换为地图的 `L.CRS` 内的绝对像素坐标。然后从它的绝对像素坐标中减去像素原点的绝对像素坐标，得到一个相对于像素原点（浅蓝色）的偏移。由于像素原点是所有地图窗格的左上角，这个偏移量可以应用于标记的图标的HTML元素。标记的 `iconAnchor`（深蓝色线）是通过负的 CSS 边距实现的。
 
 在 `L.Map.project()` 和 `L.Map.unproject()` 这些绝对像素坐标的方法进行操作。同样，`L.Map.latLngToLayerPoint()`和`L.Map.layerPointToLatLng()`也是使用相对于像素原点的偏移。
 
@@ -194,11 +194,11 @@ CRS原点（绿色）保持在同一个`LatLng`。像素原点（红色）总是
 		}
 	});
 
-如何准确定位图层的 HTML 元素取决于图层的具体情况，但本介绍应该可以帮助您阅读 Leaflet 的图层代码，并创建新图层。
+如何准确定位一个图层的HTML元素取决于该图层的具体情况，但这个介绍应该有助于你阅读Leaflet的图层代码，并创建新的图层。
 
 ### 使用父级的 `onAdd`
 
-有些用例不需要重新创建整个 "onAdd "代码，而是可以重复使用父类的代码，然后可以在初始化之前或之后（根据需要）添加一些具体内容。
+有些用例不需要重新创建整个 `onAdd` 代码，而是可以重复使用父类的代码，然后可以在初始化之前或之后根据需要添加一些具体内容。
 
 举个例子，我们可以有一个 `L.Polyline` 始终为红色的子类（忽略选项），例如：
 
