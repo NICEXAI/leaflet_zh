@@ -28,7 +28,7 @@
   - [x] Working with map panes（已校正）
   - [x] 显示视频文件（已校正）
   - [x] 扩展 Leaflet: Class Theory（已校正）
-  - [x] 扩展 Leaflet: Layers
+  - [x] 扩展 Leaflet: Layers（已校正）
   - [x] 扩展 Leaflet: Handlers and Controls
 - [x] 文档
   - [x] 地图
