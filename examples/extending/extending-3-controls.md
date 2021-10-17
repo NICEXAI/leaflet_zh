@@ -27,7 +27,7 @@ Map handlers 是 Leaflet 1.0 中的一个新概念，它们的功能是处理来
 		_doSomething: function(event) { … }
 	});
 
-这可以用一个简单的处理程序来说明，当移动设备倾斜时，通过 [`deviceorientation` 事件]（https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation）来平移地图：
+这可以用一个简单的处理程序来说明，当移动设备倾斜时，通过 [`deviceorientation` 事件](https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation)来平移地图：
 
 	L.TiltHandler = L.Handler.extend({
 		addHooks: function() {
