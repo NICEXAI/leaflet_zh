@@ -169,11 +169,11 @@ var map = L.map(&#39;map&#39;, {
 	</thead><tbody>
 	<tr id='map-l-map'>
 		<td><code><b>L.map</b>(<nobr>&lt;String&gt;</nobr> <i>id</i>, <nobr>&lt;Map options&gt;</nobr> <i>options?</i>)</code></td>
-		<td>将地图部署在给定 ID 的 DIV 容器中，并设置地图的选项。</td>
+		<td>在一个指定 id 的 div 元素中初始化地图并设置相关参数</td>
 	</tr>
 	<tr id='map-l-map'>
 		<td><code><b>L.map</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;Map options&gt;</nobr> <i>options?</i>)</code></td>
-		<td>将地图部署在给定的 div 标签实例中，并设置地图的选项。</td>
+		<td>在一个 div 实例中初始化地图并设置相关参数</td>
 	</tr>
 </tbody></table>
 
@@ -200,8 +200,8 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>preferCanvas</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>是否应该在一个 <a href="#canvas"><code>Canvas</code></a> （画布）渲染器上呈现 <a
-			href="#path"><code>Path</code></a>（路径）.默认情况下，所有路径都是在 <a href="#svg"><code>SVG</code></a> 呈现程序中呈现的。</td>
+		<td>是否使用 <a href="#canvas"><code>Canvas</code></a> 来渲染 <a
+			href="#path"><code>Path</code></a>（路径）.默认情况下，所有 Path 都是使用 <a href="#svg"><code>SVG</code></a> 进行渲染。</td>
 	</tr>
 </tbody></table>
 
