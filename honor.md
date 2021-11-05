@@ -18,7 +18,8 @@ bodyclass: honor-page
 
 #### 官方交流群优秀成员
 
-* 待定
+* [寒江孤影](tencent://message/?uin=593446878)
+* [墨](tencent://message/?uin=742492507)
 
 #### 其它方面的支持与赞助
 
