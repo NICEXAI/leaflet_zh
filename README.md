@@ -135,6 +135,11 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 * [Gwyneth](https://github.com/GwynethOu)
 * [lazytuanzi](https://github.com/lazytuanzi)
 
+### 特殊贡献者人员名单
+
+* [寒江孤影](tencent://message/?uin=593446878)
+* [墨](tencent://message/?uin=742492507)
+
 ### 其它方面的支持与赞助
 
 * 特别感谢 [Robeeask 社区](https://robeeask.com/) 对 Leaflet 中文网的部分资金赞助
