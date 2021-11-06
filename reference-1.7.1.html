@@ -346,15 +346,15 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>maxBounds</b></code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
 		<td><code>null</code></td>
-		<td>当这个选项被设置后，地图被限制在给定的地理边界内， 当用户平移将地图拖动到视图以外的范围时会出现弹回的效果， 并且也不允许缩小视图到给定范围以外的区域（这取决于地图的尺寸）. 要动态设置此限制，请使用 <a
+		<td>当这个选项被设置后，地图将被限制在指定的地理边界内， 当用户平移将地图拖动到视图以外的范围时会出现弹回的效果， 并且也不允许缩小视图到指定范围以外的区域（这取决于地图的尺寸）. 要动态设置此限制，请使用 <a
 			href="#map-setmaxbounds"><code>setMaxBounds</code></a> 方法。</td>
 	</tr>
 	<tr id='map-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code>*</code></td>
-		<td>在地图上绘制矢量图层的默认方法，使用 <a href="#svg"><code>L.SVG</code></a> 或 <a href="#canvas"><code>L.Canvas</code></a>
-			默认情况下取决于浏览器支持。</td>
+		<td>在地图上绘制矢量图层的默认方法，默认为 <a href="#svg"><code>L.SVG</code></a> 或 <a href="#canvas"><code>L.Canvas</code></a>，
+			这取决于浏览器是否支持。</td>
 	</tr>
 </tbody></table>
 
