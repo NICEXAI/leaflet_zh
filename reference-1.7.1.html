@@ -228,7 +228,7 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>zoomControl</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>默认情况下，是否将 <a href="#control-zoom">zoom</a> 缩放控制 添加到地图中。</td>
+		<td>默认情况下，是否将 <a href="#control-zoom">zoom</a> 缩放控件添加到地图中。</td>
 	</tr>
 </tbody></table>
 
@@ -249,45 +249,45 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>closePopupOnClick</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>如果你不想让 Popup 弹窗在用户点击地图时关闭，那就把它设为 false。</td>
+		<td>如果你不希望用户点击地图时 popups（弹出窗口）自动关闭，则可以将其设置为 false。</td>
 	</tr>
 	<tr id='map-zoomsnap'>
 		<td><code><b>zoomSnap</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>强制地图的缩放级别始终为此的倍数，特别是在 <a href="#map-fitbounds"><code>fitBounds()</code></a> 缩放或缩小后。默认情况下，缩放级别将捕捉到最接近的整数;
-			较低的值（例如 0.5 or 0.1）允许更大的粒度。数值 0 意味着缩放级别将不会被 fitBounds 放大或缩小。 可以设置小于 1（例如0.5）的值允许更大的展示粒度。</td>
+		<td>强制让地图的缩放级别始终为这个值的倍数，特别是在 <a href="#map-fitbounds"><code>fitBounds()</code></a> 或 pinch-zoom 后。默认情况下，缩放级别将是其最接近的整数；
+			较低的值（例如 0.5 or 0.1）允许更大的颗粒度。数值 0 意味着缩放级别将不会被 fitBounds 或 pinch-zoom。</td>
 	</tr>
 	<tr id='map-zoomdelta'>
 		<td><code><b>zoomDelta</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>控制当使用了 <a href="#map-zoomin"><code>zoomIn()</code></a>、 <a href="#map-zoomout"><code>zoomOut()</code></a>
-			以及按+ -键或者使用 <a href="#control-zoom">zoom 缩放控件</a>之后，地图的缩放级别的改变的级别值。</td>
+		<td>控件在进行 <a href="#map-zoomin"><code>zoomIn()</code></a>、 <a href="#map-zoomout"><code>zoomOut()</code></a>
+			以及按 + - 键或者使用 <a href="#control-zoom">zoom</a> 进行缩放之后，地图缩放级别改变的值。小于 1 的值（例如 0.5）允许更大的颗粒度。</td>
 	</tr>
 	<tr id='map-trackresize'>
 		<td><code><b>trackResize</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>地图是否自动处理浏览器窗口调整大小以更新自身。</td>
+		<td>地图是否会自动根据浏览器窗口的大小来更新自己。</td>
 	</tr>
 	<tr id='map-boxzoom'>
 		<td><code><b>boxZoom</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>按住 Shift 键的同时拖动鼠标，地图是否可以缩放到指定的矩形区域。</td>
+		<td>是否可以在按住 shift 键的同时拖动鼠标将地图缩放到指定的矩形区域。</td>
 	</tr>
 	<tr id='map-doubleclickzoom'>
 		<td><code><b>doubleClickZoom</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>true</code></td>
-		<td>地图是否可以通过双击放大，并通过双击同时按住shift缩小。如果设置为 'center'，不管鼠标在哪里，双击缩放都将缩放到视图的中心。</td>
+		<td>地图是否可以通过双击来放大，以及在按住 shift 的同时双击来缩小。如果设置为 'center'，不管鼠标在哪里，双击缩放都将缩放到视图的中心。</td>
 	</tr>
 	<tr id='map-dragging'>
 		<td><code><b>dragging</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>地图是否可以通过鼠标/触摸拖动。</td>
+		<td>地图是否可以通过 mouse/touch 进行拖动。</td>
 	</tr>
 </tbody></table>
 
@@ -308,19 +308,19 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>crs</b></code></td>
 		<td><code><a href='#crs'>CRS</a></code></td>
 		<td><code>L.CRS.EPSG3857</code></td>
-		<td>该地图的<a href="#crs">坐标系</a>。如果你不确定坐标系这是什么意思，请不要改变它。</td>
+		<td>该地图使用的<a href="#crs">坐标系</a>。如果你不确定坐标系这是什么意思，请不要更改它。</td>
 	</tr>
 	<tr id='map-center'>
 		<td><code><b>center</b></code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
 		<td><code>undefined</code></td>
-		<td>初始化地图的中心点位置</td>
+		<td>地图初始化时的中心点位置</td>
 	</tr>
 	<tr id='map-zoom'>
 		<td><code><b>zoom</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>undefined</code></td>
-		<td>初始化地图的缩放等级</td>
+		<td>地图初始化时的缩放等级</td>
 	</tr>
 	<tr id='map-minzoom'>
 		<td><code><b>minZoom</b></code></td>
