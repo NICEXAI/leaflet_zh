@@ -522,7 +522,7 @@ var map = L.map(&#39;map&#39;, {
 
 <table><thead>
 	<tr>
-		<th>Option参数</th>
+		<th>选项</th>
 		<th>类型</th>
 		<th>默认值</th>
 		<th>说明</th>
@@ -532,25 +532,25 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>tap</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>是否启用移动设备以支持即时点击（在iOS / Android上修复200ms点击延迟）和触控（触发contextmenu事件）。</td>
+		<td>是否启用 mobile hacks 以支持 taps（在 iOS / Android上 修复 200ms 点击延迟）和 touch（触发 contextmenu 事件）。</td>
 	</tr>
 	<tr id='map-taptolerance'>
 		<td><code><b>tapTolerance</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>15</code></td>
-		<td>用户在触摸时，移动手指的像素数超过此值时被认为是有效的tap。</td>
+		<td>用户在触摸时，移动手指的像素数超过此值时被认为是有效的 tap。</td>
 	</tr>
 	<tr id='map-touchzoom'>
 		<td><code><b>touchZoom</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>*</code></td>
-		<td>是否可以通过用两根手指触摸拖动来缩放地图。如果设置为'center'，它将缩放到视图的中心，而不管触摸事件（手指）在哪里。 仅在具有触控功能的网络浏览器中有效，旧版Android除外。</td>
+		<td>地图是否允许通过两根手指的触摸拖动进行缩放。如果通过 'center'，就会放大到视图的中心，而不管 touch 事件（手指）在哪里。除了老式的 Android 系统外，对具有 touch-capable 功能的网络浏览器来说是启用的。</td>
 	</tr>
 	<tr id='map-bounceatzoomlimits'>
 		<td><code><b>bounceAtZoomLimits</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>如果您不希望在地图缩放超过最小/最大缩放范围时反弹，请将其设置为false。</td>
+		<td>如果您不希望在地图缩放超过最小/最大缩放范围时反弹，请将其设置为 false。</td>
 	</tr>
 </tbody></table>
 
