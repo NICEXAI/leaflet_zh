@@ -488,7 +488,7 @@ var map = L.map(&#39;map&#39;, {
 
 <table><thead>
 	<tr>
-		<th>Option参数</th>
+		<th>选项</th>
 		<th>类型</th>
 		<th>默认值</th>
 		<th>说明</th>
@@ -498,13 +498,13 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>scrollWheelZoom</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>true</code></td>
-		<td>是否可以使用鼠标滚轮放大地图。如果设置为'center'，它将缩放到视图的中心，而不管鼠标在哪里。</td>
+		<td>地图是否允许通过使用鼠标滚轮进行缩放。如果通过'center'，不管鼠标在哪里，都将会放大到视图的中心。</td>
 	</tr>
 	<tr id='map-wheeldebouncetime'>
 		<td><code><b>wheelDebounceTime</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>40</code></td>
-		<td>限制鼠标滚轮的速度（以毫秒为单位）。默认情况下，用户无法通过鼠标滚轮比40 ms更多的缩放一次。</td>
+		<td>限制滚轮的触发速度（以毫秒为单位）。默认情况下，用户通过滚轮缩放的次数不能超过每 40 毫秒一次。</td>
 	</tr>
 	<tr id='map-wheelpxperzoomlevel'>
 		<td><code><b>wheelPxPerZoomLevel</b></code></td>
