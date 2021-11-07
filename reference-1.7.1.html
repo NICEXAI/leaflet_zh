@@ -375,31 +375,31 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>zoomAnimation</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>是否启用地图缩放动画。默认情况下，它在支持除 Android 之外的所有支持 CSS3 的浏览器中启用。</td>
+		<td>是否启用地图缩放动画。默认情况下，它在所有支持 CSS3 Transitions 的浏览器中都是启用的，Android 除外。</td>
 	</tr>
 	<tr id='map-zoomanimationthreshold'>
 		<td><code><b>zoomAnimationThreshold</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>4</code></td>
-		<td>如果缩放差异超过此值，则不会生成缩放。</td>
+		<td>如果缩放差异超过此值，则不会为缩放设置动画。</td>
 	</tr>
 	<tr id='map-fadeanimation'>
 		<td><code><b>fadeAnimation</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>是否启用了淡出动画。默认情况下，它在支持除 Android 之外的所有支持 CSS3 的浏览器中启用。</td>
+		<td>是否启用淡出淡出动画。默认情况下，它在所有支持 CSS3 Transitions 的浏览器中都是启用的，Android 除外。</td>
 	</tr>
 	<tr id='map-markerzoomanimation'>
 		<td><code><b>markerZoomAnimation</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>marker 标记是否使用缩放动画进行缩放。默认情况下，它在支持除 Android 之外的所有支持 CSS3 的浏览器中启用。</td>
+		<td>Marker 标记是否使用缩放动画进行缩放。默认情况下，它在所有支持 CSS3 Transitions 的浏览器中都是启用的，Android 除外。</td>
 	</tr>
 	<tr id='map-transform3dlimit'>
 		<td><code><b>transform3DLimit</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>2^23</code></td>
-		<td>定义 CSS 翻译转换的最大尺寸.默认值不应该改变，除非 web 浏览器在做了一个大的 panBy 之后，在错误的位置放置了一个位置。</td>
+		<td>定义了 CSS 转换的最大尺寸。默认值不应该被改变，除非网页浏览器在做了一个大的 panBy 后将层定位在错误的地方。</td>
 	</tr>
 </tbody></table>
 
