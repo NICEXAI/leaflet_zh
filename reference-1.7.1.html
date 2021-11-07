@@ -410,7 +410,7 @@ var map = L.map(&#39;map&#39;, {
 
 <table><thead>
 	<tr>
-		<th>Option参数</th>
+		<th>选项</th>
 		<th>类型</th>
 		<th>默认值</th>
 		<th>说明</th>
@@ -420,7 +420,7 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>inertia</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>*</code></td>
-		<td>如果启用，则平移地图将具有惯性效应，其中地图在拖动的同时建立动量并继续沿相同方向移动一段时间。在触摸设备上感觉特别好。默认情况下启用，除非在旧的Android设备上运行。</td>
+		<td>如果启用，地图的平移会有一种惯性效应，即地图在拖动时形成动力，并在一段时间内继续向同一方向移动。在触摸设备上感觉特别好。除非在旧的 Android 设备上运行，否则默认情况下是启用的。</td>
 	</tr>
 	<tr id='map-inertiadeceleration'>
 		<td><code><b>inertiaDeceleration</b></code></td>
@@ -444,13 +444,13 @@ var map = L.map(&#39;map&#39;, {
 		<td><code><b>worldCopyJump</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>启用此选项后，地图将跟踪当您平移到另一个“复制”的世界地图时，一些如标记和矢量图层等所有叠加元素仍然同步可见。</td>
+		<td>启用该选项后，当你平移到世界的另一个 "copy" 时，地图会跟踪并无缝跳转到原来的副本，这样所有的覆盖物如 markers（标记）和 vector layers（矢量图层）都仍然可见。</td>
 	</tr>
 	<tr id='map-maxboundsviscosity'>
 		<td><code><b>maxBoundsViscosity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.0</code></td>
-		<td>如果maxBounds设置，该选项将控制当拖动地图时边界的固定度。默认值0.0允许用户以正常速度拖动界限，较高的值将减慢地图拖动,如设置值1.0将使边界完全固定，防止用户拖动界限。</td>
+		<td>如果设置了 maxBounds，这个选项将控制拖动地图时边界的稳固程度。默认值为 0.0，允许用户以正常速度在界外拖动，更高的值会减慢地图在界外的拖动速度，而 1.0 使界外完全稳固，防止用户在界外拖动。</td>
 	</tr>
 </tbody></table>
 
