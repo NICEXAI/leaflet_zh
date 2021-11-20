@@ -970,25 +970,25 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-setview'>
 		<td><code><b>setView</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>center</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>, <nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>设置地图地理视图，参数：中心点经纬度、zoom缩放级别、缩放平移选型。</p>
+		<td><p>用指定的动画选项设置地图的视图（地理中心和缩放）。</p>
 </td>
 	</tr>
 	<tr id='map-setzoom'>
 		<td><code><b>setZoom</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom</i>, <nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>设置地图的zoom缩放级别。</p>
+		<td><p>设置地图的缩放级别。</p>
 </td>
 	</tr>
 	<tr id='map-zoomin'>
 		<td><code><b>zoomIn</b>(<nobr>&lt;Number&gt;</nobr> <i>delta?</i>, <nobr>&lt;<a href='#zoom-options'>Zoom options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>放大地图级别 (delta为空时，默认值取自<a href="#map-zoomdelta"><code>zoomDelta</code></a>)。</p>
+		<td><p>放大地图级别 ( delta 为空时，默认值取自 <a href="#map-zoomdelta"><code>zoomDelta</code></a> )。</p>
 </td>
 	</tr>
 	<tr id='map-zoomout'>
 		<td><code><b>zoomOut</b>(<nobr>&lt;Number&gt;</nobr> <i>delta?</i>, <nobr>&lt;<a href='#zoom-options'>Zoom options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>缩小地图级别 (delta为空时，默认值取自<a href="#map-zoomdelta"><code>zoomDelta</code></a>)。</p>
+		<td><p>缩小地图级别 ( delta 为空时，默认值取自 <a href="#map-zoomdelta"><code>zoomDelta</code></a> )。</p>
 </td>
 	</tr>
 	<tr id='map-setzoomaround'>
@@ -1012,38 +1012,38 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-fitworld'>
 		<td><code><b>fitWorld</b>(<nobr>&lt;<a href='#fitbounds-options'>fitBounds options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>设置一个地图视图，主要包含整个世界的最大缩放级别。</p>
+		<td><p>设置一个包含整个世界的地图视图，其缩放级别为最大。</p>
 </td>
 	</tr>
 	<tr id='map-panto'>
 		<td><code><b>panTo</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#pan-options'>Pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>平移地图到给定的中心点。</p>
+		<td><p>将地图平移到一个指定的中心点。</p>
 </td>
 	</tr>
 	<tr id='map-panby'>
 		<td><code><b>panBy</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>offset</i>, <nobr>&lt;<a href='#pan-options'>Pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>通过给定的像素点来平移地图。</p>
+		<td><p>将地图平移一定数量的像素（动画）。</p>
 </td>
 	</tr>
 	<tr id='map-flyto'>
 		<td><code><b>flyTo</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom?</i>, <nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>执行平滑的飞行动画，移动缩放地图范围至指定的地理中心和级别。</p>
+		<td><p>执行一个平滑的平移-缩放动画，移动缩放地图范围至指定的地理中心和级别。</p>
 </td>
 	</tr>
 	<tr id='map-flytobounds'>
 		<td><code><b>flyToBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#fitbounds-options'>fitBounds options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>使用诸如 <a href="#map-flyto"><code>flyTo</code></a> 之类的平滑动画设置地图的视图，但采用诸如 <a
-			href="#map-fitbounds"><code>fitBounds</code></a> 之类的bounds参数。</p>
+		<td><p>设置地图的视图，并且它具有像 <a href="#map-flyto"><code>flyTo</code></a> 一样的平滑动画，但需要一个像 <a
+				href="#map-fitbounds"><code>fitBounds</code></a> 一样的边界参数。</p>
 </td>
 	</tr>
 	<tr id='map-setmaxbounds'>
 		<td><code><b>setMaxBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>限制地图的视图在给定的边界里面(参考 <a href="#map-maxbounds">maxBounds</a> 参数选项)。</p>
+		<td><p>将地图视图限制在给定的范围内（参考 <a href="#map-maxbounds">maxBounds</a> 选项）。</p>
 </td>
 	</tr>
 	<tr id='map-setminzoom'>
@@ -1061,7 +1061,7 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-paninsidebounds'>
 		<td><code><b>panInsideBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#pan-options'>Pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>将地图放置到位于给定范围内的最接近的视图（如果不在），并使用特定的options选项（如果有的话）控制动画。</p>
+		<td><p>将地图平移到离给定边界最近的视图（如果还没有的话），如果有的话，用特定的选项控制动画。</p>
 </td>
 	</tr>
 	<tr id='map-paninside'>
@@ -1075,20 +1075,19 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-invalidatesize'>
 		<td><code><b>invalidateSize</b>(<nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>检查地图容器大小是否已更改，并更新地图，如果是这样 - 在动态更改地图大小后调用它，也可以默认动画化。如果options.pan是false，则不会进行平移。
-			如果options.debounceMoveend是true，它将延迟moveend事件，以便即使该方法被连续调用多次也不会发生。</p>
+		<td><p>检查地图容器的大小是否发生变化，如果发生变化则更新地图--在你动态改变地图大小后调用它，默认情况下也会发生平移动画。如果 options.pan 为 false，将不会发生平移。如果 options.debounceMoveend 为 true，它将延迟 moveend 事件，这样即使该方法被连续调用多次，也不会经常发生。</p>
 </td>
 	</tr>
 	<tr id='map-invalidatesize'>
 		<td><code><b>invalidateSize</b>(<nobr>&lt;Boolean&gt;</nobr> <i>animate</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>检查地图容器大小是否已更改，并更新地图。当地图容器div大小有变化后，请调用。</p>
+		<td><p>检查地图容器的大小是否改变，如果改变则更新地图--在你动态改变地图大小后调用它，默认情况下也会为平移设置动画。</p>
 </td>
 	</tr>
 	<tr id='map-stop'>
 		<td><code><b>stop</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>如果有的话，则停止当前运行panTo或flyTo动画。</p>
+		<td><p>如果有的话，则停止当前运行 panTo 或 flyTo 动画。</p>
 </td>
 	</tr>
 </tbody></table>
