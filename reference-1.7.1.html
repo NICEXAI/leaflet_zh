@@ -1107,17 +1107,15 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-locate'>
 		<td><code><b>locate</b>(<nobr>&lt;<a href='#locate-options'>Locate options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>尝试使用Geolocation API定位用户，触发具有 <a href="#map-locationfound"><code>locationfound</code></a> 成功的位置数据的 <a
-			href="#map-locationerror"><code>locationerror</code></a> 事件或失败的事件，并且可以根据检测精度（或者如果地理位置失败）将地图视图设置为用户的位置。
-		请注意，如果您的页面不使用HTTPS，则此方法将在最新流行浏览器（ <a
-			href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins">Chrome
-			50 and newer</a> 50及更高版本）中失败。有关<a href="#locate-options"><code>Locate options</code></a>详细信息，请参阅。</p>
+		<td><p>尝试使用 Geolocation API 定位用户，成功时触发带有位置数据的 <a href="#map-locationfound"><code>locationfound</code></a> 事件，失败时触发 <a
+				href="#map-locationerror"><code>locationerror</code></a> 事件，并可选择将地图视图设置为与检测精度有关的用户位置（如果地理定位失败则设置为世界视图）。注意，如果你的页面没有使用HTTPS，这个方法在现代浏览器中会失败（<a
+				href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins">Chrome 50 及更高版本</a>）更多细节请参阅 <a href="#locate-options"><code>Locate options</code></a>。</p>
 </td>
 	</tr>
 	<tr id='map-stoplocate'>
 		<td><code><b>stopLocate</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>停止监视先前由map.locate（{watch：true}）初始化的位置，如果通过{setView：true}调用map.locate，则放弃重置地图视图。</p>
+		<td><p>停止监视先前由 map.locate（{watch：true}）初始化的位置，如果调用 map.locate 时设置了 {setView：true}，则放弃重置地图视图。</p>
 </td>
 	</tr>
 </tbody></table>
