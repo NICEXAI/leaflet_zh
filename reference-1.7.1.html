@@ -1191,7 +1191,7 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>返回地图视图的中心点经纬度</p>
+		<td><p>返回地图中心点的经纬度</p>
 </td>
 	</tr>
 	<tr id='map-getzoom'>
@@ -1203,25 +1203,25 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>返回当前地图视图的矩形边界</p>
+		<td><p>返回当前地图的矩形边界</p>
 </td>
 	</tr>
 	<tr id='map-getminzoom'>
 		<td><code><b>getMinZoom</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>返回地图最小缩放级别（如果设置了地图或图层的minZoom参数），默认为0</p>
+		<td><p>返回地图的最小缩放级别（如果在地图或任何图层的 minZoom 选项中设置过），或者默认为 0。</p>
 </td>
 	</tr>
 	<tr id='map-getmaxzoom'>
 		<td><code><b>getMaxZoom</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>返回地图最大缩放级别（如果设置了地图或图层的maxZoom参数）</p>
+		<td><p>返回地图的最大缩放级别（如果在地图或任何图层的 maxZoom 选项中设置过）</p>
 </td>
 	</tr>
 	<tr id='map-getboundszoom'>
 		<td><code><b>getBoundsZoom</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;Boolean&gt;</nobr> <i>inside?</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>padding?</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>返回给定范围完全适合地图视图的最大缩放级别。如果inside（可选）设置为true，则该方法将返回地图视图适合整个给定边界的最小缩放级别。</p>
+		<td><p>返回给定边界与地图视图完全吻合的最大缩放级别。如果 inside（可选）被设置为 true，该方法反而会返回地图视图完全适合给定边界的最小缩放级别。</p>
 </td>
 	</tr>
 	<tr id='map-getsize'>
@@ -1233,19 +1233,19 @@ var map = L.map(&#39;map&#39;, {
 	<tr id='map-getpixelbounds'>
 		<td><code><b>getPixelBounds</b>()</code></td>
 		<td><code><a href='#bounds'>Bounds</a></code></td>
-		<td><p>返回当前地图视图的像素坐标的边界（在自定义层和覆盖实现中有用）。</p>
+		<td><p>返回当前地图视图的投影像素坐标的边界（有时在图层和叠加实现中很有用）。</p>
 </td>
 	</tr>
 	<tr id='map-getpixelorigin'>
 		<td><code><b>getPixelOrigin</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>返回当前地图视图左上角的像素坐标（在自定义层和覆盖实现中有用）。</p>
+		<td><p>返回地图层左上角的投影像素坐标（在自定义图层和叠加实现中很有用）。</p>
 </td>
 	</tr>
 	<tr id='map-getpixelworldbounds'>
 		<td><code><b>getPixelWorldBounds</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom?</i>)</code></td>
 		<td><code><a href='#bounds'>Bounds</a></code></td>
-		<td><p>返回zoom缩放级别的世界边界的像素坐标。如果zoom省略，则使用地图的当前缩放级别。</p>
+		<td><p>返回指定缩放级别的世界地图边界的像素坐标。如果 zoom 参数省略，则使用地图的当前缩放级别。</p>
 </td>
 	</tr>
 </tbody></table>
