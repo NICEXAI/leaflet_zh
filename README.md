@@ -139,6 +139,7 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 
 * [寒江孤影](tencent://message/?uin=593446878)
 * [墨](tencent://message/?uin=742492507)
+* [三月](tencent://message/?uin=2057510003)
 
 ### 其它方面的支持与赞助
 
