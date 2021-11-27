@@ -237,8 +237,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/Azure-Samples/azure-maps-leaflet">Azure Maps Leaflet plugin</a>
 		</td><td>
-			A leafletjs plugin that makes it easy to overlay all the different tile layers available from the <a href="https://azure.com/maps">Azure Maps</a>. Supports using an Azure Maps subscription key or Azure Active Directory for authentication.
-			<a href="https://azuremapscodesamples.azurewebsites.net/?search=leaflet">Demos</a>.
+			一个 leafletjs 插件，可以轻松地叠加来自 <a href="https://azure.com/maps">Azure 地图</a>的所有不同瓦片图层。支持使用 Azure 地图订阅 key 或 Azure Active Directory 进行验证。 <a href="https://azuremapscodesamples.azurewebsites.net/?search=leaflet">Demos</a>。
 		</td><td>
 			<a href="https://github.com/rbrundritt">Ricky Brundritt</a>
 		</td>
@@ -247,7 +246,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/wandersoncs/leaflet-tilelayer-here">Leaflet.TileLayer.HERE</a>
 		</td><td>
-			Displays tiles from HERE maps.
+			显示来自 HERE 地图的瓦片图层。
 		</td><td>
 			<a href="https://github.com/wandersoncs">Wanderson Souza</a>
 		</td>
