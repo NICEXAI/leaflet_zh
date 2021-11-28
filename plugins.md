@@ -390,7 +390,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/geotiff/georaster-layer-for-leaflet">GeoRasterLayer</a>
 		</td><td>
-			Display small and large GeoTIFF files with configurable resolution.  Built for simplicity and performance.  Integrates with <a href="https://geoblaze.io/">GeoBlaze</a>, a JavaScript raster analysis library.  See the <a href="https://geotiff.github.io/georaster-layer-for-leaflet-example/">demo</a>.
+			以可配置的分辨率显示小型和大型 GeoTIFF 文件。 简单并且具有高性能。 这是一个 JavaScript 光栅分析库, 集成了 <a href="https://geoblaze.io/">GeoBlaze</a> 。 请参见 <a href="https://geotiff.github.io/georaster-layer-for-leaflet-example/">Demo</a>。
 		</td><td>
 			<a href="https://github.com/DanielJDufour">Daniel J. Dufour</a>
 		</td>
