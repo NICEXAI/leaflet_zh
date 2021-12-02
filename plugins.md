@@ -680,8 +680,8 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/ptv-logistics/Leaflet.NonTiledLayer">Leaflet.NonTiledLayers</a>
 		</td><td>
-			A Leaflet layer for non-tiled overlays.
-			 (<a href="https://ptv-logistics.github.io/Leaflet.NonTiledLayer/index.html">Demo</a>).
+			一个用于 non-tiled overlays 的 Leaflet 图层。
+			 (<a href="https://ptv-logistics.github.io/Leaflet.NonTiledLayer/index.html">Demo</a>)
 		</td><td>
 			<a href="https://github.com/ptv-logistics">PTV Logistics</a>
 		</td>
