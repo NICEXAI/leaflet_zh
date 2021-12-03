@@ -31,8 +31,8 @@
   - [x] 扩展 Leaflet: Layers（已校正）
   - [x] 扩展 Leaflet: Handlers and Controls （已校正）
 - [x] 文档
-  - [x] 地图（校正中）
-  - [x] 地图方法
+  - [x] 地图（已校正）
+  - [x] 地图方法（校正中）
   - [x] UI 图层
   - [x] 栅格图层（已完成，by DanPlayer）
   - [x] 地图杂项
