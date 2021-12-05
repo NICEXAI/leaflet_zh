@@ -1197,7 +1197,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/facilmap/Leaflet.AutoGraticule">Leaflet.AutoGraticule</a>
 		</td><td>
-			Draws a grid of latitude and longitude lines, automatically adjusting the scale to the current zoom level. <a href="https://unpkg.com/leaflet-auto-graticule/example.html">Demo</a>
+			绘制一个带有经纬线的网格，自动调整比例以适应当前的缩放水平。 <a href="https://unpkg.com/leaflet-auto-graticule/example.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/cdauth">Candid Dauth</a>
 		</td>
