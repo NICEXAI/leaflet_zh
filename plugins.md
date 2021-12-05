@@ -1006,7 +1006,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/stefanocudini/leaflet-layerJSON">Leaflet LayerJSON</a>
 		</td><td>
-		Simple way for transform any JSON data source in a Leaflet Layer, load JSON data in layer and minimize remote requests with caching system <a href="https://opengeo.tech/maps/leaflet-layerjson/">Demo</a>.
+		在 Leaflet 图层中转换任何 JSON 数据源的简单方法，在图层中加载 JSON 数据并通过缓存系统将远程请求降到最低。 <a href="https://opengeo.tech/maps/leaflet-layerjson/">Demo</a>
 		</td><td>
 			<a href="https://opengeo.tech/">Stefano Cudini</a>
 		</td>
