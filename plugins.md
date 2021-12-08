@@ -1310,7 +1310,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/facilmap/Leaflet.FreieTonne">Leaflet.FreieTonne</a>
 		</td><td>
-			An overlay with nautical features from <a href="https://www.freietonne.de/">FreieTonne</a>. (<a href="https://unpkg.com/leaflet-freie-tonne/example.html">Demo</a>)
+			来自 <a href="https://www.freietonne.de/">FreieTonne</a> 的具有航海特征的覆盖物。 (<a href="https://unpkg.com/leaflet-freie-tonne/example.html">Demo</a>)
 		</td><td>
 			<a href="https://github.com/cdauth">Candid Dauth</a>
 		</td>
