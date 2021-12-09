@@ -1967,7 +1967,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/phloose/leaflet-layervisibility">leaflet-layervisibility</a>
 		</td>
 		<td>
-			Extends L.Layer and L.LayerGroup with methods to hide/show layers without removing/re-adding them.
+			扩展 L.Layer 和 L.LayerGroup 的方法来隐藏/显示图层，而不删除/重新添加它们。
 		</td>
 		<td>
 			<a href="https://github.com/phloose/">Philipp Loose</a>
@@ -1977,8 +1977,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/heyman/leaflet-centermarker">Leaflet.CenterMarker</a>
 		</td><td>
-			Marker that is kept fixed to the center of the map when the map is panned by dragging.
-			Can be seen in action on <a href="https://whatismyaddress.net/">What is my adress?</a>
+			当地图被拖动平移时，Marker（标记）会被固定在地图的中心。可以在 <a href="https://whatismyaddress.net/">What is my adress?</a> 上查看具体效果。
 		</td><td>
 			<a href="http://heyman.info">Jonatan Heyman</a>
 		</td>
@@ -1988,7 +1987,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
             <a href="https://github.com/Falke-Design/L.Donut">L.Donut</a>
         </td>
         <td>
-           Extension of L.Circle which allows to define a outer and inner radius. <a href="https://falke-design.github.io/L.Donut/">Demo</a>
+           L.Circle 的扩展，它允许定义一个外部和内部半径。 <a href="https://falke-design.github.io/L.Donut/">Demo</a>
         </td>
         <td>
             <a href="https://github.com/Falke-Design/">Falke-Design</a>
@@ -1999,7 +1998,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/FacilMap/Leaflet.HighlightableLayers">Leaflet.HighlightableLayers</a>
 		</td>
 		<td>
-			Highlight Leaflet lines and polygons by adding a border and raising them above others. Add a transparent border to increase the tolerance for mouse/touch interactions. <a href="https://unpkg.com/leaflet-highlightable-layers/example.html">Demo</a>
+			通过添加边框并将其提升到其他位置来突出显示 Leaflet 的线条和多边形。添加一个透明的边框以增加对 mouse/touch 交互的容忍度。 <a href="https://unpkg.com/leaflet-highlightable-layers/example.html">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/cdauth/">Candid Dauth</a>
