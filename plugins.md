@@ -2468,7 +2468,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/robertleeplummerjr/Leaflet.glify">Leaflet.glify</a>
 		</td>
 		<td>
-			Fast rendering for large (+100MB) GeoJSON datasets with WebGL
+			用 WebGL 快速渲染大型（+100MB）GeoJSON 数据集
 			<a href="https://robertleeplummerjr.github.io/Leaflet.glify">Demo</a>
 		</td>
 		<td>
@@ -2480,7 +2480,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/onaci/Leaflet.glify.layer">Leaflet.glify.layer</a>
 		</td>
 		<td>
-			Add-on for the Leaflet.glify plugin to provide more leaflet-idiomatic bindings. Provides fast webgl rendering for GeoJSON FeatureCollections (currently limited to polygons, lines and points).
+			Leaflet.glify 插件的附加功能，提供更多的 Leaflet-idiomatic bindings。为 GeoJSON FeatureCollections 提供快速的 webgl 渲染（目前仅限于多边形、线和点）。
 			<a href="https://onaci.github.io/Leaflet.glify.layer/">Demo</a>
 		</td>
 		<td>
