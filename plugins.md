@@ -2703,7 +2703,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/FacilMap/Leaflet.DraggableLines">Leaflet.DraggableLines</a>
 		</td>
 		<td>
-			Add/move/remove points on routes, lines and polygons by drag&drop. <a href="https://unpkg.com/leaflet-draggable-lines/example.html">Demo</a>
+			通过拖拽在路线、直线和多边形上添加/移动/删除点。<a href="https://unpkg.com/leaflet-draggable-lines/example.html">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/cdauth/">Candid Dauth</a>
