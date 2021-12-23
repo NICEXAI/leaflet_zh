@@ -45,7 +45,7 @@
   - [x] 基础类（已完成，by zhsdcode）
   - [x] 其它（已完成，by zhsdcode）
 - [x] 下载
-- [x] 插件
+- [x] 插件（对新增的文档进行翻译中）
   - [x] Tile & Image 图层（已完成，by lazytuanzi）
   - [x] 叠加数据（已完成，by lazytuanzi）
   - [x] 叠加显示
