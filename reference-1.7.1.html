@@ -33,26 +33,25 @@ bodyclass: api-page
 		<div class="toc-col">
 			<h4>UI 图层</h4>
 			<ul>
-				<li><a href="#marker">Marker 标记点</a></li>
-				<li><a href="#popup">Popup 弹窗</a></li>
-				<li><a href="#tooltip">Tooltip 鼠标提示</a></li>
+				<li><a href="#marker">Marker 标记</a></li>
+				<li><a href="#popup">Popup 弹出窗口</a></li>
+				<li><a href="#tooltip">Tooltip 工具提示</a></li>
 			</ul>
 			<h4>栅格图层</h4>
 			<ul>
-				<li><a href="#tilelayer">TileLayer 瓦片图层</a></li>
+				<li><a href="#tilelayer">TileLayer</a></li>
 				<li><a href="#tilelayer-wms">TileLayer.WMS</a></li>
 				<li><a href="#imageoverlay">ImageOverlay</a></li>
 				<li><a href="#videooverlay">VideoOverlay</a></li>
 			</ul>
 			<h4>矢量图层</h4>
 			<ul>
-				<li><a href="#path">Path 矢量基类</a></li>
-				<li><a href="#polyline">Polyline 线</a></li>
+				<li><a href="#path">Path 路径</a></li>
+				<li><a href="#polyline">Polyline 折线</a></li>
 				<li><a href="#polygon">Polygon 多边形</a></li>
 				<li><a href="#rectangle">Rectangle 矩形</a></li>
-				<li><a href="#circle">Circle 圆</a></li>
+				<li><a href="#circle">Circle 圆形</a></li>
 				<li><a href="#circlemarker">CircleMarker 圆形标记</a></li>
-				<li><a href="#svgoverlay">SVGOverlay</a></li>
 				<li><a href="#svg">SVG 矢量渲染器</a></li>
 				<li><a href="#canvas">Canvas 矢量渲染器</a></li>
 			</ul>
@@ -61,7 +60,7 @@ bodyclass: api-page
 			<h4>其它图层</h4>
 			<ul>
 				<li><a href="#layergroup">LayerGroup 图层组</a></li>
-				<li><a href="#featuregroup">FeatureGroup</a></li>
+				<li><a href="#featuregroup">FeatureGroup 要素组</a></li>
 				<li><a href="#geojson">GeoJSON 图层</a></li>
 				<li><a href="#gridlayer">GridLayer 网格图层</a></li>
 			</ul>
@@ -69,8 +68,8 @@ bodyclass: api-page
 			<ul>
 				<li><a href="#latlng">LatLng 经纬度</a></li>
 				<li><a href="#latlngbounds">LatLngBounds 经纬度边界</a></li>
-				<li><a href="#point">Point 像素点</a></li>
-				<li><a href="#bounds">Bounds 像素边界</a></li>
+				<li><a href="#point">Point 点</a></li>
+				<li><a href="#bounds">Bounds 边界</a></li>
 				<li><a href="#icon">Icon 图标</a></li>
 				<li><a href="#divicon">DivIcon</a></li>
 			</ul>
@@ -78,7 +77,7 @@ bodyclass: api-page
 			<ul>
 				<li><a href="#control-zoom">Zoom 缩放</a></li>
 				<li><a href="#control-attribution">Attribution 版权</a></li>
-				<li><a href="#control-layers">Layers 图层控制</a></li>
+				<li><a href="#control-layers">Layers 图层</a></li>
 				<li><a href="#control-scale">Scale 比例尺</a></li>
 			</ul>
 		</div>
@@ -94,8 +93,8 @@ bodyclass: api-page
 				<li><a href="#browser">Browser 浏览器</a></li>
 				<li><a href="#util">Util 工具</a></li>
 				<li><a href="#transformation">Transformation 转换</a></li>
-				<li><a href="#lineutil">LineUtil 线</a></li>
-				<li><a href="#polyutil">PolyUtil 面</a></li>
+				<li><a href="#lineutil">LineUtil 折线工具</a></li>
+				<li><a href="#polyutil">PolyUtil 多边形工具</a></li>
 			</ul>
 			<h4>DOM 常用方法类</h4>
 			<ul>
@@ -123,7 +122,7 @@ bodyclass: api-page
 			<h4>其它</h4>
 			<ul>
 				<li><a href="#event-objects">Event objects 事件对象</a></li>
-				<li><a href="#global-switches">global switches 公共开关</a></li>
+				<li><a href="#global-switches">Global switches 公共开关</a></li>
 				<li><a href="#noconflict">noConflict 原始值</a></li>
 				<li><a href="#version">version 版本号</a></li>
 			</ul>
@@ -1955,7 +1954,10 @@ var map = L.map(&#39;map&#39;, {
 	</div>
 </div>
 
-</section><h2 id='marker'>Marker 标记</h2><p>L.Marker 用于在地图上显示可点击/可拖动的图标。扩展了 <a href="#layer"><code>Layer</code></a>。</p>
+</section>
+<h2>Marker 标记</h2>
+<div class="ghost-pointer" id="marker"></div>
+<p>L.Marker 用于在地图上显示可点击/可拖动的图标。扩展了 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
 <h3 id='marker-example'>使用示例</h3>
@@ -2809,7 +2811,10 @@ var map = L.map(&#39;map&#39;, {
 </section>
 
 
-</section><h2 id='popup'>Popup 弹出窗口</h2><p>用于在地图的某些位置打开弹出窗口。使用 <a href="#map-openpopup">Map.openPopup</a> 打开弹出窗口，同时确保一次只打开一个弹出窗口（推荐使用），或者使用 <a href="#map-addlayer">Map.addLayer</a> 打开任意多个。</p>
+</section>
+<h2>Popup 弹出窗口</h2>
+<div class="ghost-pointer" id="popup"></div>
+<p>用于在地图的某些位置打开弹出窗口。使用 <a href="#map-openpopup">Map.openPopup</a> 打开弹出窗口，同时确保一次只打开一个弹出窗口（推荐使用），或者使用 <a href="#map-addlayer">Map.addLayer</a> 打开任意多个。</p>
 
 <section>
 <h3 id='popup-example'>使用示例</h3>
@@ -3510,7 +3515,10 @@ var map = L.map(&#39;map&#39;, {
 	</div>
 </div>
 
-</section><h2 id='tooltip'>Tooltip 工具提示</h2><p>用于在地图图层顶部显示小文本。</p>
+</section>
+<h2>Tooltip 工具提示</h2>
+<div class="ghost-pointer" id="tooltip"></div>
+<p>用于在地图图层顶部显示小文本。</p>
 
 <section>
 <h3 id='tooltip-example'>使用示例</h3>
@@ -4093,7 +4101,10 @@ var map = L.map(&#39;map&#39;, {
 	</div>
 </div>
 
-</section><h2 id='tilelayer'>TileLayer</h2><p>用于在地图上加载和显示瓦片图层。 请注意，大多数tile服务器都需要属性，你可以在 <a href="#layer"><code>Layer</code></a> 下进行设置。 扩展 <a href="#gridlayer"><code>GridLayer</code></a></p>
+</section>
+<h2>TileLayer</h2>
+<div class="ghost-pointer" id="tilelayer"></div>
+<p>用于在地图上加载和显示瓦片图层。 请注意，大多数tile服务器都需要属性，你可以在 <a href="#layer"><code>Layer</code></a> 下进行设置。 扩展 <a href="#gridlayer"><code>GridLayer</code></a></p>
 
 <section>
 <h3 id='tilelayer-example'>使用示例</h3>
@@ -4938,7 +4949,10 @@ var map = L.map(&#39;map&#39;, {
 	</div>
 </div>
 
-</section><h2 id='tilelayer-wms'>TileLayer.WMS</h2><p>用于将 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务显示为地图上的瓦片图层。 扩展 <a href="#tilelayer"><code>TileLayer</code></a>。</p>
+</section>
+<h2>TileLayer.WMS</h2>
+<div class="ghost-pointer" id="tilelayer-wms"></div>
+<p>用于将 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务显示为地图上的瓦片图层。 扩展 <a href="#tilelayer"><code>TileLayer</code></a>。</p>
 
 <section>
 <h3 id='tilelayer-wms-example'>使用示例</h3>
@@ -5844,7 +5858,10 @@ var map = L.map(&#39;map&#39;, {
 	</div>
 </div>
 
-</section><h2 id='imageoverlay'>ImageOverlay 图片图层</h2><p>用于在地图的特定边界上加载和显示单个图像。 扩展 <a href="#layer"><code>Layer</code></a>。</p>
+</section>
+<h2>ImageOverlay</h2>
+<div class="ghost-pointer" id="imageoverlay"></div>
+<p>用于在地图的特定边界上加载和显示单个图像。 扩展 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
 <h3 id='imageoverlay-example'>使用示例</h3>
@@ -6572,7 +6589,10 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='videooverlay'>VideoOverlay 视频图层</h2><p>用于在地图的特定范围内加载和显示视频播放器。 扩展  <a href="#imageoverlay"><code>ImageOverlay</code></a>。</p>
+</section>
+<h2>VideoOverlay</h2>
+<div class="ghost-pointer" id="videooverlay"></div>
+<p>用于在地图的特定范围内加载和显示视频播放器。 扩展  <a href="#imageoverlay"><code>ImageOverlay</code></a>。</p>
 <p>视频叠加使用 <a href="https://developer.mozilla.org/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
 	HTML5 元素。</p>
 
@@ -8157,7 +8177,10 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='path'>Path 路径</h2><p>一个抽象的类，包含了矢量覆盖物 （Polygon（多边形）, Polyline（折线）, Circle（圆形））之间共享的选项和常量。请不要直接使用它。扩展了 <a href="#layer"><code>Layer 图层</code></a>.</p>
+</section>
+<h2>Path 路径</h2>
+<div class="ghost-pointer" id="path"></div>
+<p>一个抽象的类，包含了矢量覆盖物 （Polygon（多边形）, Polyline（折线）, Circle（圆形））之间共享的选项和常量。请不要直接使用它。扩展了 <a href="#layer"><code>Layer 图层</code></a>.</p>
 
 <section>
 <h3 id='path-option'>Options 选项</h3>
@@ -8844,7 +8867,10 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='polyline'>Polyline 折线</h2><p>一个用于在地图上绘制折线覆盖物的类。扩展了 <a href="#path"><code>Path</code></a>。</p>
+</section>
+<h2>Polyline 折线</h2>
+<div class="ghost-pointer" id="polyline"></div>
+<p>一个用于在地图上绘制折线覆盖物的类。扩展了 <a href="#path"><code>Path</code></a>。</p>
 
 <section>
 <h3 id='polyline-example'>使用示例</h3>
@@ -9694,7 +9720,10 @@ var latlngs = [
 	</div>
 </div>
 
-</section><h2 id='polygon'>Polygon 多边形</h2><p>一个用于在地图上绘制多边形覆盖物的类。扩展了
+</section>
+<h2>Polygon 多边形</h2>
+<div class="ghost-pointer" id="polygon"></div>
+<p>一个用于在地图上绘制多边形覆盖物的类。扩展了
 
 	<a href="#polyline"><code>Polyline</code></a>。</p>
 <p>注意，你在创建多边形时传递的点不应该有一个额外的最后一个点等于第一个点——最好是过滤掉这种点。
@@ -10579,7 +10608,10 @@ map.fitBounds(polygon.getBounds());
 	</div>
 </div>
 
-</section><h2 id='rectangle'>Rectangle 矩形</h2><p>一个用于在地图上绘制矩形覆盖物的类。扩展了 <a href="#polygon"><code>Polygon</code></a>。</p>
+</section>
+<h2>Rectangle 矩形</h2>
+<div class="ghost-pointer" id="rectangle"></div>
+<p>一个用于在地图上绘制矩形覆盖物的类。扩展了 <a href="#polygon"><code>Polygon</code></a>。</p>
 
 <section>
 <h3 id='rectangle-example'>使用示例</h3>
@@ -11470,7 +11502,10 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='circle'>Circle 圆形</h2><p>一个用于在地图上绘制圆形覆盖物的类。扩展了 <a href="#circlemarker"><code>CircleMarker</code></a>。</p>
+</section>
+<h2>Circle 圆形</h2>
+<div class="ghost-pointer" id="circle"></div>
+<p>一个用于在地图上绘制圆形覆盖物的类。扩展了 <a href="#circlemarker"><code>CircleMarker</code></a>。</p>
 <p>这是一个近似值，在接近两极时开始与真实的圆相背离（由于投影失真）。
 
 </p>
@@ -12340,8 +12375,10 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='circlemarker'>CircleMarker 圆形标记
-</h2><p>一个固定大小的圆，半径以像素指定。扩展了 <a href="#path"><code>Path</code></a>。</p>
+</section>
+<h2>CircleMarker 圆形标记</h2>
+<div class="ghost-pointer" id="circlemarker"></div>
+<p>一个固定大小的圆，半径以像素指定。扩展了 <a href="#path"><code>Path</code></a>。</p>
 
 <section>
 <h3 id='circlemarker-factory'>Creation</h3>
@@ -13150,7 +13187,10 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='svg'>SVG</h2><p>VML 在2012年被废弃，这意味着 VML 功能的存在只是为了向后兼容旧版本的 Internet Explorer。
+</section>
+<h2>SVG 矢量渲染器</h2>
+<div class="ghost-pointer" id="svg"></div>
+<p>VML 在2012年被废弃，这意味着 VML 功能的存在只是为了向后兼容旧版本的 Internet Explorer。
 
 </p>
 <p>允许矢量图层用 <a href="https://developer.mozilla.org/docs/Web/SVG">SVG</a>显示。继承 <a href="#renderer"><code>Renderer</code></a>。</p>
@@ -13757,7 +13797,10 @@ var circle = L.circle( center, { renderer: myRenderer } );
 </section>
 
 
-</section><h2 id='canvas'>Canvas</h2><p>允许用 <a href="https://developer.mozilla.org/docs/Web/API/Canvas_API"><code>&lt;canvas&gt;</code></a>来显示矢量图层。继承 <a href="#renderer"><code>Renderer</code></a>。</p>
+</section>
+<h2>Canvas 矢量渲染器</h2>
+<div class="ghost-pointer" id="canvas"></div>
+<p>允许用 <a href="https://developer.mozilla.org/docs/Web/API/Canvas_API"><code>&lt;canvas&gt;</code></a>来显示矢量图层。继承 <a href="#renderer"><code>Renderer</code></a>。</p>
 <p>由于 <a href="http://caniuse.com/#search=canvas">技术限制</a>, Canvas 并不适用于所有的网络浏览器，特别是 IE8，而且在某些边缘情况下，重叠的几何图形可能无法正常显示。</p>
 
 <section>
@@ -14326,7 +14369,10 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='layergroup'>LayerGroup 图层组</h2><p>用于将几个图层分组并作为一个整体处理。如果你把它添加到地图上，任何从该组中添加或删除的图层也会在地图上添加/删除。扩展 <a href="#layer"><code>Layer</code></a>。</p>
+</section>
+<h2>LayerGroup 图层组</h2>
+<div class="ghost-pointer" id="layergroup"></div>
+<p>用于将几个图层分组并作为一个整体处理。如果你把它添加到地图上，任何从该组中添加或删除的图层也会在地图上添加/删除。扩展 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
 <h3 id='layergroup-example'>使用示例</h3>
@@ -14923,7 +14969,10 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='featuregroup'>FeatureGroup 要素组</h2><p>扩展的 <a href="#layergroup"><code>图层</code></a> ，使它更容易对其所有成员图层做同样的事情:</p>
+</section>
+<h2>FeatureGroup 要素组</h2>
+<div class="ghost-pointer" id="featuregroup"></div>
+<p>扩展的 <a href="#layergroup"><code>图层</code></a> ，使它更容易对其所有成员图层做同样的事情:</p>
 <ul>
 <li><a href="#layer-bindpopup"><code>bindPopup</code></a> 一次将一个弹出窗口绑定到所有的图层上 (与 <a href="#layer-bindtooltip"><code>bindTooltip</code></a>类似)</li>
 <li>事件被传递到 <a href="#featuregroup"><code>FeatureGroup</code></a>，所以如果该组有一个事件处理程序，它将处理来自任何图层的事件。这包括鼠标事件和自定义事件。</li>
@@ -15595,7 +15644,10 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='geojson'>GeoJSON</h2><p>代表一个GeoJSON对象或一个GeoJSON对象的数组。允许你解析GeoJSON数据并将其显示在地图上。扩展了 <a href="#featuregroup"><code>FeatureGroup</code></a>。</p>
+</section>
+<h2>GeoJSON 图层</h2>
+<div class="ghost-pointer" id="geojson"></div>
+<p>代表一个GeoJSON对象或一个GeoJSON对象的数组。允许你解析GeoJSON数据并将其显示在地图上。扩展了 <a href="#featuregroup"><code>FeatureGroup</code></a>。</p>
 
 <section>
 <h3 id='geojson-example'>使用示例</h3>
@@ -16432,7 +16484,10 @@ var circle = L.circle( center, { renderer: myRenderer } );
 </section>
 
 
-</section><h2 id='gridlayer'>GridLayer 网格图层</h2><p>用于处理HTML元素的平铺网格的通用类。它是所有瓦片图层的基类，取代了 <code>TileLayer.Canvas</code>。GridLayer可以被扩展来创建HTML元素的平铺网格，如 <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code> or <code>&lt;div&gt;</code>。GridLayer 将为你处理这些 DOM 元素的创建和动画。</p>
+</section>
+<h2>GridLayer 网格图层</h2>
+<div class="ghost-pointer" id="gridlayer"></div>
+<p>用于处理HTML元素的平铺网格的通用类。它是所有瓦片图层的基类，取代了 <code>TileLayer.Canvas</code>。GridLayer可以被扩展来创建HTML元素的平铺网格，如 <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code> or <code>&lt;div&gt;</code>。GridLayer 将为你处理这些 DOM 元素的创建和动画。</p>
 
 <section>
 <h3 id='gridlayer-example'>使用示例</h3>
@@ -17209,7 +17264,10 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='latlng'>LatLng 经纬度</h2><p>代表一个具有一定经纬度的地理点。
+</section>
+<h2>LatLng 经纬度</h2>
+<div class="ghost-pointer" id="latlng"></div>
+<p>代表一个具有一定经纬度的地理点。
 
 </p>
 
@@ -17353,7 +17411,10 @@ map.panTo(L.latLng(50, 30));
 </section>
 
 
-</section><h2 id='latlngbounds'>LatLngBounds 经纬度边界</h2><p>在地图上代表一个矩形的地理区域。</p>
+</section>
+<h2>LatLngBounds 经纬度边界</h2>
+<div class="ghost-pointer" id="latlngbounds"></div>
+<p>在地图上代表一个矩形的地理区域。</p>
 
 <section>
 <h3 id='latlngbounds-example'>使用示例</h3>
@@ -17547,7 +17608,10 @@ bounds = L.latLngBounds(corner1, corner2);
 </section>
 
 
-</section><h2 id='point'>Point 点</h2><p>代表一个点，其 <code>x</code> 和 <code>y</code> 坐标为像素。</p>
+</section>
+<h2>Point 点</h2>
+<div class="ghost-pointer" id="point"></div>
+<p>代表一个点，其 <code>x</code> 和 <code>y</code> 坐标为像素。</p>
 
 <section>
 <h3 id='point-example'>使用示例</h3>
@@ -17743,7 +17807,10 @@ map.panBy(L.point(200, 300));
 </section>
 
 
-</section><h2 id='bounds'>Bounds 边界</h2><p>以像素坐标代表一个矩形区域。</p>
+</section>
+<h2>Bounds 边界</h2>
+<div class="ghost-pointer" id="bounds"></div>
+<p>以像素坐标代表一个矩形区域。</p>
 
 <section>
 <h3 id='bounds-example'>使用示例</h3>
@@ -17914,7 +17981,10 @@ bounds = L.bounds(p1, p2);
 </section>
 
 
-</section><h2 id='icon'>Icon 图标</h2><p>代表创建标记时提供的一个图标。
+</section>
+<h2>Icon 图标</h2>
+<div class="ghost-pointer" id="icon"></div>
+<p>代表创建标记时提供的一个图标。
 
 </p>
 
@@ -18124,7 +18194,10 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 </section>
 
 
-</section><h2 id='divicon'>DivIcon</h2><p>代表一个轻量级的标记图标，使用一个简单的 <code>&lt;div&gt;</code>
+</section>
+<h2>DivIcon</h2>
+<div class="ghost-pointer" id="divicon"></div>
+<p>代表一个轻量级的标记图标，使用一个简单的 <code>&lt;div&gt;</code>
 	元素而不是图片。继承自 <a href="#icon"><code>Icon</code></a> ，但忽略了 <code>iconUrl</code> 和shadow选项。</p>
 
 <section>
@@ -18331,7 +18404,10 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-zoom'>Control.Zoom 缩放控件</h2><p>一个基本的缩放控件，有两个按钮（放大和缩小）。除非你把它的 <a href="#map-zoomcontrol"><code>zoomControl</code> 选项</a> 设置为 <code>false</code>。扩展了 <a href="#control"><code>Control</code></a>。</p>
+</section>
+<h2>Zoom 缩放</h2>
+<div class="ghost-pointer" id="control-zoom"></div>
+<p>一个基本的缩放控件，有两个按钮（放大和缩小）。除非你把它的 <a href="#map-zoomcontrol"><code>zoomControl</code> 选项</a> 设置为 <code>false</code>。扩展了 <a href="#control"><code>Control</code></a>。</p>
 
 <section>
 <h3 id='control-zoom-factory'>Creation</h3>
@@ -18488,7 +18564,10 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-attribution'>Control.Attribution 控件属性</h2><p>控件属性允许你在地图上的一个小文本框中显示属性数据。除非你把它的 <a href="#map-attributioncontrol"><code>attributionControl</code> 选项</a> 设置为 <code>false</code>，否则它默认是放在地图上的，而且它可以用 <a href="#layer-getattribution"><code>getAttribution</code> 方法</a> 从图层中自动获取属性文本。扩展了 Control 。</p>
+</section>
+<h2>Attribution 版权</h2>
+<div class="ghost-pointer" id="control-attribution"></div>
+<p>控件属性允许你在地图上的一个小文本框中显示属性数据。除非你把它的 <a href="#map-attributioncontrol"><code>attributionControl</code> 选项</a> 设置为 <code>false</code>，否则它默认是放在地图上的，而且它可以用 <a href="#layer-getattribution"><code>getAttribution</code> 方法</a> 从图层中自动获取属性文本。扩展了 Control 。</p>
 
 <section>
 <h3 id='control-attribution-factory'>Creation</h3>
@@ -18659,7 +18738,10 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-layers'>Control.Layers 图层控件</h2><p>图层控件使用户能够在不同的基础图层之间进行切换，并打开/关闭覆盖物图层 (请看 <a href="http://leafletjs.com/examples/layers-control/">详细示例</a>)。扩展了 <a href="#control"><code>Control</code></a> 。</p>
+</section>
+<h2>Layers 图层</h2>
+<div class="ghost-pointer" id="control-layers"></div>
+<p>图层控件使用户能够在不同的基础图层之间进行切换，并打开/关闭覆盖物图层 (请看 <a href="http://leafletjs.com/examples/layers-control/">详细示例</a>)。扩展了 <a href="#control"><code>Control</code></a> 。</p>
 
 <section>
 <h3 id='control-layers-example'>使用示例</h3>
@@ -18905,7 +18987,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-scale'>Control.Scale 比例尺控件</h2><p>一个简单的比例尺控件，以公制（m/km）和英制（mi/ft）系统显示当前屏幕中心的比例。扩展了 <a href="#control"><code>Control</code></a>。</p>
+</section>
+<h2>Scale 比例尺</h2>
+<div class="ghost-pointer" id="control-scale"></div>
+<p>一个简单的比例尺控件，以公制（m/km）和英制（mi/ft）系统显示当前屏幕中心的比例。扩展了 <a href="#control"><code>Control</code></a>。</p>
 
 <section>
 <h3 id='control-scale-example'>使用示例</h3>
@@ -19081,7 +19166,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='browser'>Browser 浏览器</h2><p>一个具有静态属性的命名空间，用于 Leaflet 内部使用的浏览器/功能检测。
+</section>
+<h2>Browser 浏览器</h2>
+<div class="ghost-pointer" id="browser"></div>
+<p>一个具有静态属性的命名空间，用于 Leaflet 内部使用的浏览器/功能检测。
 
 </p>
 
@@ -19275,7 +19363,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='util'>Util 工具</h2><p>各种工具函数，在 Leaflet 内部使用。</p>
+</section>
+<h2>Util 工具</h2>
+<div class="ghost-pointer" id="util"></div>
+<p>各种工具函数，在 Leaflet 内部使用。</p>
 
 <section>
 <h3 id='util-function'>Functions</h3>
@@ -19421,7 +19512,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='transformation'>Transformation 转换</h2><p>代表一个仿生转换：一组系数 <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>
+</section>
+<h2>Transformation 转换</h2>
+<div class="ghost-pointer" id="transformation"></div>
+<p>代表一个仿生转换：一组系数 <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>
 	，用于将一个形式为 <code>(x, y)</code> 的点转换为 <code>(a*x + b, c*y + d)</code> ，并做反向转换。Leaflet 在其投影代码中使用。</p>
 
 <section>
@@ -19505,7 +19599,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='lineutil'>LineUtil 折线工具</h2><p>用于折线点处理的各种实用函数，Leaflet 内部使用它来使折线闪电般快速。
+</section>
+<h2>LineUtil 折线工具</h2>
+<div class="ghost-pointer" id="lineutil"></div>
+<p>用于折线点处理的各种实用函数，Leaflet 内部使用它来使折线闪电般快速。
 
 </p>
 
@@ -19557,7 +19654,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='polyutil'>PolyUtil 多边形工具</h2><p>用于多边形几何形状的各种实用函数。</p>
+</section>
+<h2>PolyUtil 多边形工具</h2>
+<div class="ghost-pointer" id="polyutil"></div>
+<p>用于多边形几何形状的各种实用函数。</p>
 
 <section>
 <h3 id='polyutil-function'>Functions</h3>
@@ -19584,7 +19684,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='domevent'>DomEvent Dom 事件</h2><p>用于处理 <a href="https://developer.mozilla.org/docs/Web/API/Event">DOM 事件</a>的实用函数，由Leaflet内部使用。</p>
+</section>
+<h2>DomEvent</h2>
+<div class="ghost-pointer" id="domevent"></div>
+<p>用于处理 <a href="https://developer.mozilla.org/docs/Web/API/Event">DOM 事件</a>的实用函数，由Leaflet内部使用。</p>
 
 <section>
 <h3 id='domevent-function'>Functions</h3>
@@ -19679,7 +19782,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='domutil'>DomUtil Dom 工具</h2><p>用于处理 <a href="https://developer.mozilla.org/docs/Web/API/Document_Object_Model">DOM</a>
+</section>
+<h2>DomUtil</h2>
+<div class="ghost-pointer" id="domutil"></div>
+<p>用于处理 <a href="https://developer.mozilla.org/docs/Web/API/Document_Object_Model">DOM</a>
 	树的实用函数，由Leaflet内部使用。</p>
 <p>大多数期望或返回 <code>HTMLElement</code> 的函数也适用于 SVG 元素。唯一的区别是，类是指 HTML 中的 CSS 类，而 SVG 中的 SVG 类。</p>
 
@@ -19866,7 +19972,10 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='posanimation'>PosAnimation 平移动画</h2><p>在内部用于平移动画，利用现代浏览器的 CSS3 过渡和 IE6-9 的计时器回退。</p>
+</section>
+<h2>PosAnimation 平移动画</h2>
+<div class="ghost-pointer" id="posanimation"></div>
+<p>在内部用于平移动画，利用现代浏览器的 CSS3 过渡和 IE6-9 的计时器回退。</p>
 
 <section>
 <h3 id='posanimation-example'>使用示例</h3>
@@ -20095,7 +20204,10 @@ fx.run(el, [300, 500], 0.5);
 	</div>
 </div>
 
-</section><h2 id='draggable'>Draggable 拖动</h2><p>一个用于使DOM元素可拖动的类（包括触摸支持）。内部用于地图和标记的拖动。只对用 <a href="#domutil-setposition"><code>L.DomUtil.setPosition</code></a>定位的元素起作用。</p>
+</section>
+<h2>Draggable 拖动</h2>
+<div class="ghost-pointer" id="draggable"></div>
+<p>一个用于使DOM元素可拖动的类（包括触摸支持）。内部用于地图和标记的拖动。只对用 <a href="#domutil-setposition"><code>L.DomUtil.setPosition</code></a>定位的元素起作用。</p>
 
 <section>
 <h3 id='draggable-example'>使用示例</h3>
@@ -20361,7 +20473,10 @@ draggable.enable();
 	</div>
 </div>
 
-</section><h2 id='class'>Class 类</h2><p> L.Class 为 Leaflet 的 OOP 设施提供了动力，它被用来创建这里记录的几乎所有 Leaflet 类。
+</section>
+<h2>Class 类</h2>
+<div class="ghost-pointer" id="class"></div>
+<p> L.Class 为 Leaflet 的 OOP 设施提供了动力，它被用来创建这里记录的几乎所有 Leaflet 类。
 
 </p>
 <p>除了实现一个简单的经典继承模型之外，它还引入了几个方便代码组织的特殊属性——options, includes 和 statics。</p>
@@ -20590,7 +20705,10 @@ MyClass.FOO; // 'bar'
 </section>
 
 
-</section><h2 id='evented'>Evented 事件</h2><p>一组由事件驱动的类 (如 <a href="#map"><code>Map</code></a> 和 <a href="#marker"><code>Marker</code></a>) 之间共享的方法。一般来说，事件允许你在一个对象发生某些事情时执行一些功能 (例如，用户点击地图，导致地图发生 <code>'click'</code> 事件)。</p>
+</section>
+<h2>Evented 事件</h2>
+<div class="ghost-pointer" id="evented"></div>
+<p>一组由事件驱动的类 (如 <a href="#map"><code>Map</code></a> 和 <a href="#marker"><code>Marker</code></a>) 之间共享的方法。一般来说，事件允许你在一个对象发生某些事情时执行一些功能 (例如，用户点击地图，导致地图发生 <code>'click'</code> 事件)。</p>
 
 <section>
 <h3 id='evented-example'>使用示例</h3>
@@ -20735,7 +20853,10 @@ map.off('click', onClick);
 </section>
 
 
-</section><h2 id='layer'>Layer 图层</h2><p>一组来自 Layer 基类的方法，所有 Leaflet 图层都使用。继承 <a href="#evented"><code>L.Evented</code></a>的所有方法、选项和事件。</p>
+</section>
+<h2>Layer 图层</h2>
+<div class="ghost-pointer" id="layer"></div>
+<p>一组来自 Layer 基类的方法，所有 Leaflet 图层都使用。继承 <a href="#evented"><code>L.Evented</code></a>的所有方法、选项和事件。</p>
 
 <section>
 <h3 id='layer-example'>使用示例</h3>
@@ -21221,7 +21342,10 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='interactive-layer'>Interactive layer 交互图层</h2><p>一些 <a href="#layer"><code>Layer</code></a>可以交互——当用户与这样的图层交互时，可以处理鼠标事件，如 <code>click</code> 和 <code>mouseover</code> 。 使用 <a href="#evented-method">事件处理方法</a> 来处理这些事件。</p>
+</section>
+<h2>Interactive layer 交互图层</h2>
+<div class="ghost-pointer" id="interactive-layer"></div>
+<p>一些 <a href="#layer"><code>Layer</code></a>可以交互——当用户与这样的图层交互时，可以处理鼠标事件，如 <code>click</code> 和 <code>mouseover</code> 。 使用 <a href="#evented-method">事件处理方法</a> 来处理这些事件。</p>
 
 <section>
 <h3 id='interactive-layer-option'>Options 选项</h3>
@@ -21761,7 +21885,10 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='control'>Control 控件</h2><p>L.Control是一个实现地图控件的基类。负责处理定位。
+</section>
+<h2>Control 控件</h2>
+<div class="ghost-pointer" id="control"></div>
+<p>L.Control是一个实现地图控件的基类。负责处理定位。
 	所有其他的控件都是从这个类中延伸出来的。</p>
 
 <section>
@@ -21870,7 +21997,10 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='handler'>Handler 处理程序</h2><p>地图交互处理程序的抽象类</p>
+</section>
+<h2>Handler 处理程序</h2>
+<div class="ghost-pointer" id="handler"></div>
+<p>地图交互处理程序的抽象类</p>
 
 <section>
 <h3 id='handler-method'>Methods 方法</h3>
@@ -21962,7 +22092,10 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='projection'>Projection 地图投影</h2><p>具有将世界的地理坐标投影到平面（和背面）的方法的对象。 请参阅 <a href="http://en.wikipedia.org/wiki/Map_projection">地图投影</a>。</p>
+</section>
+<h2>Projection 地图投影</h2>
+<div class="ghost-pointer" id="projection"></div>
+<p>具有将世界的地理坐标投影到平面（和背面）的方法的对象。 请参阅 <a href="http://en.wikipedia.org/wiki/Map_projection">地图投影</a>。</p>
 
 <section>
 <h3 id='projection-method'>Methods 方法</h3>
@@ -22055,7 +22188,9 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='crs'>CRS 坐标系</h2>
+</section>
+<h2>CRS 坐标系</h2>
+<div class="ghost-pointer" id="crs"></div>
 <section>
 <h3 id='crs-method'>Methods 方法</h3>
 
@@ -22228,7 +22363,10 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='renderer'>Renderer 矢量渲染器</h2><p>矢量渲染器实现 (<a href="#svg"><code>SVG</code></a>、 <a href="#canvas"><code>Canvas</code></a>)的基类。 处理渲染器的 DOM 容器、它的边界和它的缩放动画。</p>
+</section>
+<h2>Renderer 矢量渲染器</h2>
+<div class="ghost-pointer" id="renderer"></div>
+<p>矢量渲染器实现 (<a href="#svg"><code>SVG</code></a>、 <a href="#canvas"><code>Canvas</code></a>)的基类。 处理渲染器的 DOM 容器、它的边界和它的缩放动画。</p>
 <p><a href="#renderer"><code>渲染器</code></a> 作为所有 <a href="#path"><code>路径</code></a>的隐式图层组工作--渲染器本身可以被添加或移除到地图中。所有路径都使用一个渲染器，它可以是隐式的 (地图会决定渲染器的类型并自动使用)
 	，也可以是显式的 (使用路径的 <a href="#path-renderer"><code>渲染器</code></a> 选项)。</p>
 <p>不要直接使用这个类，而是使用 <a href="#svg"><code>SVG</code></a> 和 <a href="#canvas"><code>Canvas</code></a> 。</p>
@@ -22738,7 +22876,10 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='event-objects'>Event objects 事件对象</h2><p>每当从 <a href="#evented"><code>Evented</code></a> 继承的类触发事件时，都会使用事件参数调用侦听器函数，该参数是包含有关事件信息的普通对象。 例如：</p>
+</section>
+<h2>Event objects 事件对象</h2>
+<div class="ghost-pointer" id="event-objects"></div>
+<p>每当从 <a href="#evented"><code>Evented</code></a> 继承的类触发事件时，都会使用事件参数调用侦听器函数，该参数是包含有关事件信息的普通对象。 例如：</p>
 <pre><code class="language-js">map.on('click', function(ev) {
     alert(ev.latlng); // ev 是一个事件对象（本例中是 MouseEvent ）
 });
@@ -24396,7 +24537,10 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='global-switches'>Global Switches 全局开关</h2><p>全局开关是为极少数情况创建的，即使它是特定的浏览器功能，Leaflet 也不会检测到	那里。 您需要在页面上包含 Leaflet 之前，将 switch 作为全局变量设置为 true 像这样:</p>
+</section>
+<h2>Global Switches 公众开关</h2>
+<div class="ghost-pointer" id="global-switches"></div>
+<p>全局开关是为极少数情况创建的，即使它是特定的浏览器功能，Leaflet 也不会检测到	那里。 您需要在页面上包含 Leaflet 之前，将 switch 作为全局变量设置为 true 像这样:</p>
 <pre><code class="language-html">&lt;script&gt;L_NO_TOUCH = true;&lt;/script&gt;
 &lt;script src=&quot;leaflet.js&quot;&gt;&lt;/script&gt;
 </code></pre>
@@ -24419,7 +24563,9 @@ layer.closeTooltip();
 </tbody>
 </table>
 
-<h2 id='noconflict'>noConflict 原始值</h2><p>这个方法将 <code>L</code> 全局变量恢复到Leaflet包含之前的原始值，并返回真正的Leaflet命名空间，所以你可以把它放在其他地方，像这样:</p>
+<h2>noConflict 原始值</h2>
+<div class="ghost-pointer" id="noconflict"></div>
+<p>这个方法将 <code>L</code> 全局变量恢复到Leaflet包含之前的原始值，并返回真正的Leaflet命名空间，所以你可以把它放在其他地方，像这样:</p>
 <pre><code class="language-html">&lt;script src='libs/l.js'&gt;
 &lt;!-- L 指向某个其他库 --&gt;
 
@@ -24432,6 +24578,8 @@ var Leaflet = L.noConflict();
 &lt;/script&gt;
 </code></pre>
 
-<h2 id='version'>version 版本号</h2><p>代表正在使用的 Leaflet 版本的常量。</p>
+<h2>version 版本号</h2>
+<div class="ghost-pointer" id="version"></div>
+<p>代表正在使用的 Leaflet 版本的常量。</p>
 <pre><code class="language-js">L.version; // 包含 &quot;1.0.0&quot; (或当前使用的任何版本)
 </code></pre>
