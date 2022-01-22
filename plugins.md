@@ -2875,7 +2875,8 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/luka1199/">Luka Steinbach</a>
 		</td>
-    	<tr>
+    </tr>
+    <tr>
 		<td>
 			<a href="http://erictheise.github.com/rrose">Leaflet.Rrose</a>
 		</td><td>
