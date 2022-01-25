@@ -1024,7 +1024,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/ATran31/Leaflet-GeoSSE">Leaflet GeoSSE</a>
 		</td><td>
-			Add realtime data to a Leaflet map using server sent events.
+			使用服务器发送的事件向 Leaflet 地图添加实时数据。
 		</td><td>
 			<a href="https://github.com/ATran31/">An Tran</a>
 		</td>
