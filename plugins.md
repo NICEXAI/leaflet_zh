@@ -1030,7 +1030,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td>wo
 			<a href="https://github.com/perliedman/leaflet-realtime">Leaflet Realtime</a>
 		</td><td>
 			将实时数据放在 Leaflet 地图上：实时跟踪 GPS 单元、传感器数据或任何东西。
@@ -1339,7 +1339,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/damianc/leaflet-place-groups-picker">leaflet-place-groups-picker</a>
 		</td><td>
-			Plugin for the Leaflet maps that allows grouping places in groups whose visibility can be toggled.
+			用于 Leaflet 地图的插件，允许将位置分组到可以切换可见性的组中。
 		</td><td>
 			<a href="https://github.com/damianc">damianc</a>
 		</td>
