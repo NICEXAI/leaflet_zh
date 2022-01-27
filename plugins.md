@@ -3073,7 +3073,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/bopen/leaflet-area-selection">@bopen/leaflet-area-selection</a>
 		</td>
 		<td>
-			leaflet-area-selection allows to easily select a polygonal area on the map (see the <a href="https://bopen.github.io/leaflet-area-selection/">demo</a>)
+			leaflet-area-selection—允许在地图上轻松选择一个多边形区域(<a href="https://bopen.github.io/leaflet-area-selection/">demo</a>)
 		</td>
 		<td>
 			<a href="https://www.bopen.eu/">B-Open</a>
