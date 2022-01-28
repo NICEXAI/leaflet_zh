@@ -3367,7 +3367,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/petoc/Leaflet.DoubleTouchDragZoom">Leaflet.DoubleTouchDragZoom</a>
 		</td>
 		<td>
-			Plugin for one finger zoom. <a href="https://petoc.github.io/Leaflet.DoubleTouchDragZoom/example/">Demo</a>
+			用于单指缩放的插件。 <a href="https://petoc.github.io/Leaflet.DoubleTouchDragZoom/example/">Demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/petoc">Peter C</a>
