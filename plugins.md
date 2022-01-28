@@ -3744,8 +3744,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/YUUKIToriyama/Leaflet.MousePosition.ts">Leaflet.MousePosition.ts</a>
 		</td><td>
-			A fully custmizable coordinate viewer written in TypeScript.
-			You can change how this plugin looks by creating a custom component with JSX.
+			一个用 TypeScript 编写的完全可托管的坐标查看器。你可以通过用 JSX 创建一个自定义组件来改变这个插件的外观。
 			(<a href="https://yuukitoriyama.github.io/Leaflet.MousePosition.ts">demo</a>)
 		</td><td>
 			<a href="https://github.com/YUUKIToriyama">Yuuki Toriyama</a>
@@ -3844,7 +3843,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/edihasaj/leaflet-coord-projection">Leaflet.CoordProjection</a>
 		</td>
 		<td>
-			Shows coordinates on mouse move and displays it based on given projection (<a href="https://edihasaj.github.io/leaflet-coord-projection/">Demo</a>)
+			根据指定的投影显示鼠标移动时的坐标(<a href="https://edihasaj.github.io/leaflet-coord-projection/">Demo</a>)
 		</td>
 		<td>
 			<a href="https://github.com/edihasaj">Edi Hasaj</a>
