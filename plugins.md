@@ -4375,7 +4375,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/hersle/leaflet-route-print">leaflet-route-print</a>
 		</td><td>
-			Automatic PDF printing of routes (i.e. polylines) with custom scale, paper size and margin by covering the route with a sequence of identical rectangles.
+			通过用一连串相同的矩形覆盖路线，自动打印具有自定义比例、纸张大小和空白的路线（即多线）的 PDF。
 		</td><td>
 			<a href="https://github.com/hersle">Herman Sletmoen</a>
 		</td>
