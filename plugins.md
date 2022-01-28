@@ -4091,7 +4091,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://gitlab.com/manuel.richter95/leaflet.notifications">Leaflet.Notifications</a>
 		</td>
 		<td>
-			Spawn toast notifications inside your map
+			在地图中生成 toast 通知。
 		</td>
 		<td>
 			<a href="https://gitlab.com/manuel.richter95">Manuel Richter</a>
@@ -4294,7 +4294,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			</a>
 		</td>
 		<td>
-			Customisable menu-style control. See <a href="https://adammertel.github.io/Leaflet.Control.Select/">demo</a>.
+			可定制的菜单式控件。<a href="https://adammertel.github.io/Leaflet.Control.Select/">demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/adammertel">Adam Mertel</a>
@@ -4306,7 +4306,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			</a>
 		</td>
 		<td>
-			Guides users to points outside the current map view with directional arrows and a count of points in each given direction. See <a href="https://williamlow.github.io/leaflet-signpost/demo.html">demo</a>.
+			使用方向箭头和每个给定方向上的点数将用户引导到当前地图视图之外的点。<a href="https://williamlow.github.io/leaflet-signpost/demo.html">demo</a>
 		</td>
 		<td>
 			<a href="https://github.com/williamlow">William Low</a>
