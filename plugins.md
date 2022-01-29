@@ -4430,7 +4430,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/rhlt/leaflet-geolet">Geolet</a>
 		</td><td>
-			A simple but highly customizable geolocation plugin for Leaflet
+			一个简单并且可高度定制的 Leaflet 地理定位插件。
 		</td><td>
 			<a href="https://github.com/rhlt/">Ruben Holthuijsen</a>
 		</td>
