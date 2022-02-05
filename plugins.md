@@ -2870,7 +2870,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/luka1199/Leaflet.AnimatedSearchBox">Leaflet.AnimatedSearchBox</a>
 		</td>
 		<td>
-			A simple Leaflet plugin that provides a collapsible search box.
+			一个简单的 Leaflet 插件，提供一个可折叠的搜索框。
 		</td>
 		<td>
 			<a href="https://github.com/luka1199/">Luka Steinbach</a>
