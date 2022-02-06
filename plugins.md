@@ -4741,7 +4741,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<a href="https://github.com/tomik23/Leaflet.Autocomplete">Leaflet.Autocomplete</a>
 		</td>
 		<td>
-			Leaflet.Autocomplete is to expand the autosugestion plugin with the ability to geocode and show data on the map in the way you think you need. The <a href="https://tomik23.github.io/Leaflet.Autocomplete/">DEMO</a> is based on the use of OpenstreetMap Nominatim to locate places by address. Accessible, with full support for ARIA attributes and keyboard interactions.
+            Leaflet.Autocomplete 是一个扩展了自动查询功能的插件，以你认为需要的方式进行地理编码并把数据显示在地图上。<a href="https://tomik23.github.io/Leaflet.Autocomplete/">DEMO</a> 是基于使用 OpenstreetMap Nominatim 按地址定位地方。简单易用，并且完全支持 ARIA 属性和键盘交互。
 		</td>
 		<td>
 			<a href="https://github.com/tomik23">Grzegorz Tomicki</a>
