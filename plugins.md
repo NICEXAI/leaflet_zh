@@ -4841,7 +4841,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/iamtekson/leaflet-geoserver-request">leaflet-geoserver-request</a>
 		</td><td>
-			Basic geoserver requests in leaflet. Currently supports wms, wfs, legend, wmsImage request on the leaflet.
+			Leaflet 中基本的地理服务器请求，目前支持 wms, wfs, legend, wmsImage 请求。
 		<a href="https://iamtekson.github.io/leaflet-geoserver-request/examples/maps.html">Demo</a>
 		</td><td>
 			<a href="https://github.com/iamtekson">Iamtekson</a>
