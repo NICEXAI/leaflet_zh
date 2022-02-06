@@ -5215,7 +5215,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 	<td>
 		<a href="https://wordpress.org/plugins/open-user-map/">Open User Map – Users can add locations from the frontend</a>
 	</td><td>
-		WordPress plugin to let your visitors add locations directly from the frontend - without registration. They drop a marker on the map and provide some location details. After submit the location proposal will be “pending” and wait for your review approval to get published.
+		WordPress 插件，可以让你的访问者直接从前端添加位置 - 无需注册。他们在地图上可以标记一个位置，并提供一些位置的详细信息，提交后，该位置信息将处于 "待定 "状态，并等待您的审查批准后进行发布。
 	  </td><td>
 		<a href="https://www.open-user-map.com/">100plugins</a>
 	</td>
