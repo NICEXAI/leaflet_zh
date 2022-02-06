@@ -4601,9 +4601,8 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 		<td>
 			<a href="https://github.com/astridx/LeafletControlRouteToAddress">Leaflet RouteToAddress</a>
 		</td><td>
-			Control for route search from a custom address to a fixed address.
-The Plugin integrates a simple geocoder that uses OpenstreetMap <a href="https://nominatim.openstreetmap.org/">Nominatim</a> to locate places by address. Ideal for the description of the directions "Find your way to us" on a website. Uses <a href="http://project-osrm.org/">OSRM</a> by default, but also supports
-<a href="https://www.mapbox.com/developers/api/directions/">Mapbox Directions API</a>. <a href="https://astrid-guenther.de/dies-und-das/38-leaflet-control-plugin-leafletcontrolroutetoaddress/">Demo</a>
+            从自定义地址到固定地址的路由搜索控件。该插件集成了一个简单的地理编码器，使用 OpenstreetMap <a href="https://nominatim.openstreetmap.org/">Nominatim</a> 来通过地址定位地点。非常适合网站上“找到我们的路”的说明。
+默认使用 <a href="http://project-osrm.org/">OSRM</a>，但也支持 <a href="https://www.mapbox.com/developers/api/directions/">Mapbox Directions API</a>。<a href="https://astrid-guenther.de/dies-und-das/38-leaflet-control-plugin-leafletcontrolroutetoaddress/">Demo</a>
 		</td><td>
 			<a href="https://github.com/astridx/">Astrid Günther</a>
 		</td>
