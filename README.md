@@ -141,6 +141,10 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 * [墨](tencent://message/?uin=742492507)
 * [三月](tencent://message/?uin=2057510003)
 
+### 捐赠中文社区
+
+<img width="420" src="./docs/images/payment.png" />
+
 ### 其它方面的支持与赞助
 
 * 特别感谢 [Robeeask 社区](https://robeeask.com/) 对 Leaflet 中文网的部分资金赞助
