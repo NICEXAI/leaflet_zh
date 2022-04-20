@@ -34,10 +34,18 @@ description="在本教程中，你将学习如何轻松定义你自己的图标�
 
 
 {% include tutorial_link.html
+page="accessibility/"
+thumbnail="accessibility/thumbnail.png"
+title="无障碍地图"
+description="一个基础的 Leaflet 无障碍指南，它能够让残障人士也能够使用你的地图。"
+%}
+
+
+{% include tutorial_link.html
 page="geojson/"
 thumbnail="geojson/thumbnail.png"
-title="在 Leaflet 中使用 GeoJSON"
-description="在本教程中，你将学习如何创建并与由 [GeoJSON](http://geojson.org/) 对象创建的矢量地图进行交互。"
+title="Using GeoJSON with Leaflet"
+description="In this tutorial, you'll learn how to create and interact with map vectors created from [GeoJSON](http://geojson.org/) objects."
 %}
 
 
