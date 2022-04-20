@@ -9,52 +9,53 @@
 > 
 > Robeeask 社区：https://leafletjs.robeeask.com/
 
-### 翻译进度（v1.7.1）
+### 翻译进度（v1.8.0）
 
 已完成全部板块的文档翻译和初步校正工作，目前正在进行第二轮的文档校正。
 
-- [x] 概况（已校正）
-- [x] 教程
-  - [x] 列表页（已校正）
-  - [x] Leaflet 快速入门指南（已校正）
-  - [x] Leaflet 在手机上使用（已校正）
-  - [x] Markers 自定义图标（已校正）
-  - [x] 在 Leaflet 中使用 GeoJSON（已校正）
-  - [x] 互动式choropleth地图（已校正）
-  - [x] Layer Groups 和 Layers Control（已校正）
-  - [x] Zoom levels 缩放比例（已校正）
-  - [x] Non-geographical maps（已校正）
-  - [x] WMS and TMS（已校正）
-  - [x] Working with map panes（已校正）
-  - [x] 显示视频文件（已校正）
-  - [x] 扩展 Leaflet: Class Theory（已校正）
-  - [x] 扩展 Leaflet: Layers（已校正）
-  - [x] 扩展 Leaflet: Handlers and Controls （已校正）
-- [x] 文档
-  - [x] 地图（已校正）
-  - [x] 地图方法（校正中）
-  - [x] UI 图层
-  - [x] 栅格图层（已完成，by DanPlayer）
-  - [x] 地图杂项
-  - [x] 矢量图层（已完成，by zhsdcode）
-  - [x] 其它图层（已完成，by zhsdcode）
-  - [x] 基本类型（已完成，by zhsdcode）
-  - [x] 控件（已完成，by zhsdcode）
-  - [x] Util常用方法类（已完成，by zhsdcode）
-  - [x] Dom常用方法类（已完成，by zhsdcode）
-  - [x] 基础类（已完成，by zhsdcode）
-  - [x] 其它（已完成，by zhsdcode）
+- [x] 概况（已完成）
+- [ ] 教程
+  - [x] 列表页（已完成）
+  - [x] Leaflet 快速入门指南（已完成）
+  - [x] 在移动端使用 Leaflet（已完成）
+  - [x] 使用带有自定义图标的标记（Marker）（已完成）
+  - [ ] 无障碍地图（待认领）
+  - [x] 在 Leaflet 中使用 GeoJSON（已完成）
+  - [x] 互动式 choropleth 地图（已完成）
+  - [x] Layer Groups 和 Layers Control（已完成）
+  - [x] Zoom levels 缩放比例（已完成）
+  - [x] Non-geographical maps（已完成）
+  - [x] WMS and TMS（已完成）
+  - [x] Working with map panes（已完成）
+  - [x] 显示视频文件（已完成）
+  - [x] 扩展 Leaflet: Class Theory（已完成）
+  - [x] 扩展 Leaflet: Layers（已完成）
+  - [x] 扩展 Leaflet: Handlers and Controls （已完成）
+- [ ] 文档
+  - [x] 地图（待校正）
+  - [x] 地图方法（待校正）
+  - [x] UI 图层（待校正）
+  - [x] 栅格图层（待校正）
+  - [x] 地图杂项（待校正）
+  - [x] 矢量图层（待校正）
+  - [x] 其它图层（待校正）
+  - [x] 基本类型（待校正）
+  - [x] 控件（待校正）
+  - [x] Util常用方法类（待校正）
+  - [x] Dom常用方法类（待校正）
+  - [x] 基础类（待校正）
+  - [x] 其它（待校正）
 - [x] 下载
 - [x] 插件
-  - [x] Tile & Image 图层（已完成，by lazytuanzi）
-  - [x] 叠加数据（已完成，by lazytuanzi）
-  - [x] 叠加显示
-  - [x] 叠加交互
-  - [x] 地图交互
-  - [x] 各种各样的
-  - [x] 综合的
-  - [x] 开发属于自己的插件
-- [x] 博客（已完成，by zhsdcode）
+  - [x] Tile & Image 图层（待校正）
+  - [x] 叠加数据（待校正）
+  - [x] 叠加显示（待校正）
+  - [x] 叠加交互（待校正）
+  - [x] 地图交互（待校正）
+  - [x] 各种各样的（待校正）
+  - [x] 综合的（待校正）
+  - [x] 开发属于自己的插件（待校正）
+- [x] 博客（已完成）
 
 ### 加入翻译
 
