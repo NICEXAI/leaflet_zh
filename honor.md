@@ -15,6 +15,7 @@ bodyclass: honor-page
 * [DanPlayer](https://github.com/DanPlayer)
 * [Gwyneth](https://github.com/GwynethOu)
 * [lazytuanzi](https://github.com/lazytuanzi)
+* [Fate-ui](https://github.com/Fate-ui)
 
 #### 官方交流群优秀成员
 

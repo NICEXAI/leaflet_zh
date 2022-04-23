@@ -135,6 +135,7 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 * [DanPlayer](https://github.com/DanPlayer)
 * [Gwyneth](https://github.com/GwynethOu)
 * [lazytuanzi](https://github.com/lazytuanzi)
+* [Fate-ui](https://github.com/Fate-ui)
 
 ### 特殊贡献者人员名单
 
