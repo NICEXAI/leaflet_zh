@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Leaflet 0.5 Released
-description: Leaflet 0.5 released &mdash; with IE10 touch support, retina-enabled markers, better panning inertia, new zoom control and about a hundred of other improvements and bugfixes!
+title: Leaflet 0.5 发布
+description: Leaflet 0.5 正式发布 — 支持 IE10 触摸、启用视网膜标记、更好的平移惯性、新的缩放控制以及大约一百个其他改进和错误修复
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---
 
-Rejoice, everyone &mdash; after 4.5 months of development with [26 contributors involved](https://github.com/Leaflet/Leaflet/graphs/contributors?from=2012-08-30&to=2013-01-17&type=c) since the previous major release, I'm happy to announce the release of Leaflet 0.5 stable, hooray!
+欢呼吧，大家 &mdash; 自上一个主要版本以来，经过4.5个月的开发，有 [26 个贡献者参与](https://github.com/Leaflet/Leaflet/graphs/contributors?from=2012-08-30&to=2013-01-17&type=c) ，我很高兴地宣布 Leaflet 0.5 稳定版的发布，万岁!
 
-0.5 highlights include IE10 touch devices and Metro apps support, retina-enabled markers, a much better panning inertia implementation, hand cursors for dragging and a new zoom control design. But the real power of this release comes with about a hundred of subtle improvements and bugfixes, improving usability, performance and overall "feel" of browsing the map even further.
+0.5 的亮点包括支持 IE10 触摸设备和 Metro 应用程序，支持视网膜的标记，一个更好的平移惯性实现，用于拖动的手部光标和一个新的缩放控制设计。但这个版本的真正力量来自于大约100个细微的改进和错误修复，进一步改善了可用性、性能和浏览地图的整体 "感觉"。
 
-As always, you can find CDN links and downloads for the new release on the [download page](../../../download.html).
+一如既往，你可以在 [下载页面](.../.../.../download.html) 上找到新版本的 CDN 链接和下载。
 
-The huge detailed list of changes is documented in the [changelog](https://github.com/Leaflet/Leaflet/blob/main/CHANGELOG.md). Be sure to read the "Breaking Changes" part of it before upgrading to avoid any issues! The [API reference](../../../reference.html) was updated to accommodate all the changes too.
+巨大的详细变化列表记录在 [更新日志](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) 中。在升级之前，请务必阅读其中的 "Breaking Changes" 部分，以避免出现任何问题! [API 参考](.../.../.../reference.html) 也被更新以适应所有的变化。
 
-In other news, [Leaflet repository](https://github.com/Leaflet/Leaflet) has moved to [its own GitHub organization](https://github.com/Leaflet), along with the two of the most important plugins &mdash; [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) and [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw). As some of you have noticed, this is one of the clues to a really nice upcoming announcement about Leaflet future &mdash; stay tuned. :)
+在其他新闻中，[Leaflet 仓库](https://github.com/Leaflet/Leaflet) 已经转移到 [它自己的 GitHub 组织](https://github.com/Leaflet) ，同时还有两个最重要的插件 &mdash; [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) 和 [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw) 。正如你们中的一些人所注意到的，这是关于 Leaflet 未来的一个非常好的公告的线索之一 &mdash; 敬请关注。:)
 
-Thanks to everyone! It's absolutely breathtaking to see what the Leaflet community has achieved over the last months with all the contributions, amazing projects and demos, and I'm honestly proud to be a part of it.
+感谢大家! 看到 Leaflet 社区在过去几个月里所取得的成就，以及所有的贡献、令人惊叹的项目和演示，绝对令人叹为观止，说实话，我为能成为其中的一员感到自豪。
 
-P.S. I also heard in a dream that everyone who tweets about the new Leaflet release will get an incredible luck boost for the next month. Sounds like true to me.
+P.S.我还在梦中听说，每个在推特上发布新 Leaflet 的人都会在接下来的一个月里获得难以置信的运气提升。对我来说听起来是真的。
 
-Cheers,<br />
+Cheers,<br>
 Vladimir, Leaflet creator and maintainer.

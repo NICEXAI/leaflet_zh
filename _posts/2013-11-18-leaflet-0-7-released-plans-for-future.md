@@ -1,56 +1,56 @@
 ---
 layout: post
-title: Leaflet 0.7 Release, MapBox and Plans for Future
-description: Leaflet 0.7 Released &mdash; with IE11 touch support, upscaling tiles and tons of other improvements and bugfixes! Meanwhile, I've joined the MapBox team full-time.
+title: Leaflet 0.7 发布, MapBox and 未来的计划
+description: Leaflet 0.7 正式发布——支持IE11触摸(touch)事件、升级了瓦片以及进行了大量的改进和修复BUG！同时，我全职加入了 MapBox 团队
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---
 
-_Leaflet 0.7 Released &mdash; with IE11 touch support, upscaling tiles and tons of other improvements and bugfixes! Meanwhile, I've joined the MapBox team full-time..._
+Leaflet 0.7 发布 &mdash; 支持 IE11 的触摸功能，提高了瓷砖的比例，并有大量的其他改进和 bug 修复！ 同时，我已经全职加入了 MapBox 团队...
 
-After another 5 months of active development with [lots of contributors involved](https://github.com/Leaflet/Leaflet/graphs/contributors?from=2013-06-27&to=2013-11-18&type=c), I'm happy to announce the **release of Leaflet 0.7** stable.
+经过5个月的积极开发和 [很多贡献者的参与](https://github.com/Leaflet/Leaflet/graphs/contributors?from=2013-06-27&to=2013-11-18&type=c) ，我很高兴宣布发布 Leaflet 0.7 稳定版。
 
-This is a bugfix-heavy release &mdash; as Leaflet becomes more and more stable feature-wise, the focus shifts towards stability, usability and API improvements over new features. I've also been holding back some of the planned deep refactorings (which I'll talk about later in the post) until 0.7 is released, so that the heavy risky stuff is done at the beginning of the release cycle, leaving plenty of room to catch bugs and incompatible changes that can unintentionally break existing apps.
+这是一个重度 bug 修复的版本；随着 Leaflet 在功能上越来越稳定，我们的重点转向稳定性、可用性和 API 改进，而不是新功能。我也一直在推迟一些计划中的深度重构(我将在后面的文章中谈及)，直到 0.7 版本发布，这样一来，在发布周期的开始阶段就完成了重度风险的工作，留下了足够的空间来捕捉错误和不兼容的变化，从而无意中破坏现有的应用程序。
 
-### Joining MapBox
+### 加入 MapBox
 
-In other news, I [joined the MapBox team full-time](https://www.mapbox.com/blog/vladimir-agafonkin-joins-mapbox/). This is extremely exciting for me, as this was my dream job for quite a while &mdash; [MapBox](https://www.mapbox.com) have changed the world of interactive mapping forever with all their amazing work, having some of the greatest geomapping engineers and designers of the world working together, pushing the boundaries of what's possible and inspiring others every day.
+在其他新闻中，我 [全职加入了MapBox团队](https://www.mapbox.com/blog/vladimir-agafonkin-joins-mapbox/) 。这让我非常兴奋，因为这是我梦想已久的工作 &mdash; [MapBox](https://www.mapbox.com) 以其所有令人惊叹的工作永远改变了互动地图的世界，有一些世界上最伟大的地理测绘工程师和设计师一起工作，推动了可能的界限，每天都激励着其他人。
 
-For Leaflet, this can only mean very good things &mdash; much more time on Leaflet development, more enthusiasm, more play, more crazy experiments with maps (like [this one](https://www.mapbox.com/blog/dynamic-hill-shading/)), and lots of learning. I'm now one of the happiest map geeks ever. Stay tuned for tons of awesome!
+对于 Leaflet 来说，这只能意味着非常好的事情 &mdash；更多的时间用于 Leaflet 的开发，更多的热情，更多的游戏，更多的疯狂的地图实验(比如 [这个](https://www.mapbox.com/blog/dynamic-hill-shading/) ，以及很多的学习。我现在是有史以来最快乐的地图专家之一。请继续关注我们的精彩内容。
 
-### 0.7 changes
+### 0.7 变化
 
-You can check out the [detailed changelog](https://github.com/Leaflet/Leaflet/blob/main/CHANGELOG.md#07-dev-master) of what's already done over the recent months for 0.7 (about 90 improvements and bugfixes), but I'd like to mention some highlights:
+你可以查看 [详细的更新日志](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md#07-dev-master) 近几个月来为 0.7 所做的工作(大约 90 个改进和错误修正)，但我想提及一些亮点：
 
-* Added the ability to **upscale tiles** to higher zoom levels (e.g. have zoom 19-20 when the source has 18 max).
-* Added support for **IE11 touch devices**. MS unexpectedly broke their pointer API compatibility between Developer Preview and final IE11 release, and we eventually rewrote quite a bit of code to make everything work smoothly across all IE versions (both desktop & mobile), fixing a bunch of IE10 bugs along the way as well.
-* Officially **dropped IE6 support** (nobody cares anyway) and cleaned up/fixed IE7-8 styles.
-* Dropped the need for **IE conditional comment** when including Leaflet, making the snippet much simpler &mdash; all IE7/8-specific styles got simplified and moved to the main `leaflet.css` file.
-* Fixed an **obscure iOS7 memory leak** that crashed Safari when you tried to create several thousands of layers (e.g. markers for clustering). I still don't understand why it happens, but we managed to fix it with a bit of trickery.
-* Fixed a critical **Chrome for Android** bug that made the tiles disappear after zooming on some devices.
-* Removed some **Earth-related hardcode** in TileLayer implementation to make it easier for plugins like Proj4Leaflet to handle complex projections without horrible hacks. Some other work in this direction to follow in 0.8.
-* Improved **panning performance** on complex pages with significant number of elements &mdash; we found out that simple things like setting a different cursor to `document` (for a "grabbing" hand) caused noticeable performance hit on some browsers (Chrome in particular).
-* **Changed the way maxBounds works**, not enforcing a derived `minZoom` from it but restricting panning across lower zoom levels, along with some tricks to make it play better with panning inertia or offset zooming, etc.
+* 增加了将**瓷砖放大**到更高的缩放级别的能力(例如，当源文件最大为18时，有缩放19-20)。
+* 增加了对**IE11触摸设备**的支持。在开发者预览版和最终的 IE11 版本之间，MS意外地破坏了他们的指针 API 兼容性，我们最终重写了相当多的代码，以使所有的 IE 版本(包括桌面和移动)都能顺利工作，同时也修复了一堆 IE10 的错误。
+* 正式**放弃了对 IE6 的支持**(反正没人在乎)，并清理、修正了 IE7-8 的样式。
+* 当包括 Leaflet 时，放弃了对IE条件注释的需要，使代码段更简单 &mdash; 所有 IE7 / 8 特有的样式被简化并移至主 `leaflet.css` 文件。
+* 修正了一个**不明显的 iOS7 内存泄露**问题，当你试图创建几千个图层(例如用于聚类的标记)时，Safari 会崩溃。我仍然不明白为什么会发生这种情况，但我们设法用一点小技巧来修复它。
+* 修正了一个关键的 **Chrome for Android** 错误，该错误使某些设备上的瓷砖在缩放后消失。
+* 删除了 TileLayer 实现中一些**与地球有关的硬编码**，使 Proj4Leaflet 等插件更容易处理复杂的投影，而不需要可怕的黑客。这个方向的其他工作将在 0.8 中跟进。
+* 在有大量元素的复杂页面上改进了**平移性能** &mdash; 我们发现简单的事情，如将不同的光标设置为 `document` (用于 "抓取"手)，在一些浏览器(尤其是 Chrome )上造成明显的性能打击。
+* **改变了 maxBounds 的工作方式**，不是强制执行它的派生 `minZoom` ，而是限制在较低的缩放级别上进行平移，以及一些技巧，使其在平移惯性或偏移缩放等方面发挥得更好。
 
-### Plans for 0.8
+### 0.8 版本的计划
 
-There are several big undertakings in refactoring Leaflet that I'd want to switch to immediately after releasing 0.7 &mdash; I've been holding them off for too long, and they'll be extremely beneficial for plugin and Leaflet-based API authors. Some of them are already in progress.
+在重构 Leaflet 的过程中，有几项大的工作我想在发布 0.7 之后立即转入 &mdash; 我已经拖得太久了，而且这些工作对插件和基于 Leaflet 的 API 作者非常有利。其中一些已经在进行中了。
 
-* Refactoring the **layers** architecture. Currently there's a lot of duplication of logic across implementation of different layers (map, markers, vector layers, etc.), specifically event handling, zoom animation logic, zIndex and pane handling (what appears on top of what etc.). Making the code consistent, more universal and shared across different layers will make it much easier to customize layers and make your own (e.g. integrate d3, etc.)
-* Splitting the huge TileLayer implementation into **GridLayer and TileLayer**, separating image tiles-related logic and grid-logic that will make other grid-like layer implementations (e.g. UTFGrid interaction or tiled GeoJSON) much simpler.
-* Refactoring **zoom animation logic** to make the long-awaited Easey-style animations (zoom-panning between points) possible.
-* Refactoring **projections** code to make it easier to set up flat maps and weird projections and customize how Leaflet handles them.
-* Refactoring the **vector layers** code to make it possible to use different rendering backends (Canvas, SVG, etc.) for different layers on the same map and switch between them easily. This will also open it up for interesting extensions, like indexing layers with [RBush](https://github.com/mourner/rbush) for fast interaction features.
+* 重构**层**的架构。目前，在不同图层(地图、标记、矢量图层等)的实现中存在大量重复的逻辑，特别是事件处理、缩放动画逻辑、zIndex 和窗格处理(什么出现在什么上面等)。使代码一致，更通用，并在不同的图层之间共享，将使定制图层和制作自己的图层更加容易(例如，整合 d3 等)。
+* 将庞大的 TileLayer 实现拆分为 **GridLayer 和 TileLayer** ，将图像瓦片相关的逻辑和网格逻辑分开，这将使其他类似网格的图层实现(例如 UTFGrid 交互或平铺的 GeoJSON )更加简单。
+* 重构**缩放动画逻辑**，使期待已久的 Easey 风格的动画(点间缩放平移)成为可能。
+* 重构**投影**代码，使其更容易设置平面地图和奇怪的投影，并自定义 Leaflet 处理它们的方式。
+* 重构**矢量图层**代码，使其能够在同一张地图上的不同图层使用不同的渲染后端(Canvas, SVG等)，并在它们之间轻松切换。这也将为有趣的扩展打开大门，比如用 [RBush](https://github.com/mourner/rbush) 对图层进行索引以实现快速交互功能。
 
-While it's an ambitious plan and it may take more than one stable release, finishing all those refactorings will mean that Leaflet is getting ready for a 1.0 release.
+虽然这是一个雄心勃勃的计划，而且可能需要超过一个稳定版本，但完成所有这些重构将意味着 Leaflet 正在为 1.0 版本做好准备。
 
-Another direction I'd like to focus on after releasing 0.7 is **website and documentation improvements**. First, Leaflet is begging for **more step-by-step tutorials** (with more advanced features like custom layers, custom controls, etc.), and I'd love to do a docs/tutorials sprint some time in future. Second, the presentation could be significantly improved &mdash; adding a prominent visual **showcase** or app gallery, making Leaflet users more prominent with some logos and quotes/testimonials, and updating the layout/design for a more stylish, clean look, etc.
+在发布 0.7 之后，我想关注的另一个方向是**网站和文档的改进**。首先，Leaflet 正在乞求**更多的步骤教程**(有更多的高级功能，如自定义图层、自定义控件等)，我很想在未来的某个时候做一个文档/教程的冲刺。第二，演示文稿可以大大改进 &mdash; 增加一个突出的**视觉展示**或应用程序画廊，通过一些标识和引言/推荐，使 Leaflet 用户更加突出，并更新布局、设计，使其看起来更加时尚、简洁，等等。
 
-Hope that gives a good glimpse of the stuff to expect from Leaflet in near future, and don't hesitate to ask any questions in comments &mdash; I'll be happy to answer!
+希望这能让大家对 Leaflet 在不久的将来的发展有一个很好的了解，如果有任何问题，请在评论中提出 &mdash; 我很乐意回答！
 
-Grab the CDN links or downloads for the new release on the [download page](../../../download.html) as always. Be sure to try it out on your apps and report any regressions so that we can patch them up immediately. And lets make some nice Twitter buzz about the release as usual!
+像往常一样，在 [下载页面](.../.../.../download.html) 上获取新版本的 CDN 链接或下载。请务必在你的应用程序上试用它，并报告任何回归情况，以便我们能够立即修补它们。像往常一样，让我们在 Twitter 上对该版本进行一些漂亮的宣传吧!
 
-To all the people wo've been involved in Leaflet contributions, bug reports, mailing list, Twitter buzz, making awesome apps and spreading the word about Leaflet &mdash; thank you! You are the most awesome community ever.
+感谢所有参与 Leaflet 贡献、bug 报告、邮件列表、Twitter 讨论、制作很棒的应用程序和传播 Leaflet 的人 &mdash; 谢谢你们！ 你们是有史以来最棒的社区。
 
 Cheers,<br />
 Vladimir.

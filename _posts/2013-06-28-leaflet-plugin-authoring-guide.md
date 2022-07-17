@@ -1,71 +1,71 @@
 ---
 layout: post
-title: Leaflet Plugin Authoring Guide
-description: A number of best practices and tips for publishing your own perfect Leaflet plugin
+title: Leaflet 插件开发指南
+description: 一些可以帮助您发布一款优秀的 Leaflet 插件的最佳实践和技巧
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---
 
-One of the greatest things about Leaflet is its powerful plugin ecosystem.
-The [Leaflet plugins page](https://leafletjs.com/plugins.html) lists dozens of awesome plugins, and more are being added every week.
+Leaflet 最伟大的地方之一是它强大的插件生态系统。
+[Leaflet 插件页面](https://leafletjs.com/plugins.html) 列出了几十个很棒的插件，而且每周都会有更多的插件加入。
 
-This guide lists a number of best practices for publishing a Leaflet plugin that meets the quality standards of Leaflet itself. Also available [in the repo](https://github.com/Leaflet/Leaflet/blob/main/PLUGIN-GUIDE.md).
+本指南列出了一些发布符合 Leaflet 本身质量标准的 Leaflet 插件的最佳实践。也可[在 repo](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md) 。
 
-### Presentation
+### 演示文稿
 
-#### Repository
+#### 存储库
 
-The best place to put your Leaflet plugin to is a separate [GitHub](http://github.com) repository.
-If you create a collection of plugins for different uses,
-don't put them in one repo &mdash;
-it's usually easier to work with small, self-contained plugins in individual repositories.
+把你的 Leaflet 插件放在一个单独的 [GitHub](http://github.com) 仓库里是最好的。
+如果你创建了一个用于不同用途的插件集合，
+不要把它们放在一个版本库里 &mdash;
+通常情况下，在单个仓库中使用小型、独立的插件会更容易。
 
-#### Demo
+#### 演示
 
-The most essential thing to do when publishing a plugin is to include a demo that showcases what the plugin does &mdash;
-it's usually the first thing people will look for.
+在发布一个插件时，最重要的事情是包括一个演示，展示该插件的功能 &mdash;
+这通常是人们要找的第一件事。
 
-The easiest way to put up a demo is using [GitHub Pages](http://pages.github.com/).
-A good [starting point](https://help.github.com/articles/creating-project-pages-manually) is creating a `gh-pages` branch in your repo and adding an `index.html` page to it  &mdash;
-after pushing, it'll be published as `http://<user>.github.io/<repo>`.
+放置演示的最简单方法是使用 [GitHub Pages](http://pages.github.com/) 。
+一个好的 [起点](https://help.github.com/articles/creating-project-pages-manually) 是在你的 repo 中创建一个 `gh-pages` 分支并在其中添加一个 `index.html` 页面 &mdash;
+推送后，它将被发布为 `http://<user>.github.io/<repo>` 。
 
-#### Readme
+#### 阅读手册
 
-The next thing you need to have is a descriptive `README.md` in the root of the repo (or a link to a website with a similar content).
-At a minimum it should contain the following items:
+接下来你需要有一个描述性的 `README.md` 在 repo 的根部(或一个有类似内容的网站的链接)。
+它至少应包含以下项目：
 
-- name of the plugin
-- a simple, concise description of what it does
-- requirements
-	- Leaflet version
-	- other external dependencies (if any)
-	- browser / device compatibility
-- links to demos
-- instructions for including the plugin
-- simple usage code example
-- API reference (methods, options, events)
+- 插件的名称
+- 简单扼要地描述它的作用
+- 要求
+	- Leaflet 版本
+	- 其他外部依赖(如果有的话)
+	- 浏览器、设备兼容性
+- 演示链接
+- 包括该插件的说明
+- 简单的使用代码示例
+- API 参考(方法、选项、事件)。
 
-#### License
+#### 许可证
 
-Every open source repository should include a license.
-If you don't know what open source license to choose for your code,
-[MIT License](http://opensource.org/licenses/MIT) and [BSD 2-Clause License](http://opensource.org/licenses/BSD-2-Clause) are both good choices.
-You can either put it in the repo as a `LICENSE` file or just link to the license from the Readme.
+每个开放源码库都应该包括一个许可证。
+如果你不知道该为你的代码选择什么样的开源许可证。
+[MIT License](http://opensource.org/licenses/MIT) 和 [BSD 2-Clause License](http://opensource.org/licenses/BSD-2-Clause) 都是不错的选择。
+你可以把它作为 `LICENSE` 文件放在 repo 中，或者直接从 Readme 链接到许可证。
 
-### Code
+### 编码
 
-#### File Structure
+#### 文件结构
 
-Keep the file structure clean and simple,
-don't pile up lots of files in one place  &mdash;
-make it easy for a new person to find their way in your repo.
+保持文件结构的干净和简单，
+不要在一个地方堆积大量的文件 &mdash;
+让新人在你的 repo 中容易找到自己的方向。
 
-A barebones repo for a simple plugin would look like this:
+一个简单的插件的原始版本应该是这样的：
 
 	my-plugin.js
 	README.md
 
-An example of a file structure for a more sophisticated plugin:
+一个更复杂的插件的文件结构的例子：
 
 	/src        JS source files
 	/dist       minified plugin JS, CSS, images
@@ -75,26 +75,26 @@ An example of a file structure for a more sophisticated plugin:
 	LICENSE
 	package.json
 
-#### Code Conventions
+#### 代码公约
 
-Everyone's tastes are different, but it's important to be consistent with whatever conventions you choose for your plugin.
+每个人的口味都不同，但重要的是，无论你为你的插件选择什么惯例，都要保持一致。
 
-For a good starting point, check out [Airbnb JavaScript Guide](https://github.com/airbnb/javascript).
-Leaflet follows pretty much the same conventions
-except for using smart tabs (hard tabs for indentation, spaces for alignment)
-and putting a space after the `function` keyword.
+要想有一个好的起点，请查看 [Airbnb JavaScript 指南](https://github.com/airbnb/javascript) 。
+Leaflet 几乎遵循同样的惯例
+除了使用智能制表符(硬制表符用于缩进，空格用于对齐)之外
+和在 `function` 关键词后面加一个空格。
 
-#### Plugin API
+#### 插件 API
 
-Never expose global variables in your plugin.<br>
-If you have a new class, put it directly in the `L` namespace (`L.MyPlugin`).<br>
-If you inherit one of the existing classes, make it a sub-property (`L.TileLayer.Banana`).<br>
-If you want to add new methods to existing Leaflet classes, you can do it like this: `L.Marker.include({myPlugin: …})`.
+不要在你的插件中暴露全局变量。<br>
+如果你有一个新的类，直接把它放在 `L` 命名空间( `L.MyPlugin` )。<br>
+如果你继承了一个现有的类，让它成为一个子属性( `L.TileLayer.Banana` )。<br>
+如果你想给现有的 Leaflet 类添加新方法，你可以这样做。`L.Marker.include({myPlugin: ...})` 。
 
-Function, method and property names should be in `camelCase`.<br>
-Class names should be in `CapitalizedCamelCase`.
+函数、方法和属性名称应使用 `camelCase` 。<br>
+类名应使用 `大写的 CamelCase` 。
 
-If you have a lot of arguments in your function, consider accepting an options object instead (putting default values where possible so that users don't need specify all of them):
+如果你的函数中有很多参数，可以考虑接受一个选项对象来代替(尽可能放上默认值，这样用户就不需要指定所有的参数)：
 
 	// bad
 	marker.myPlugin('bla', 'foo', null, {}, 5, 0);
@@ -105,7 +105,7 @@ If you have a lot of arguments in your function, consider accepting an options o
 		optionThree: 5
 	});
 
-And most importantly, keep it simple. Leaflet is all about *simplicity*.
+而最重要的是，保持简单。Leaflet 是关于*简单的*。
 
 Cheers,<br>
 Vladimir.

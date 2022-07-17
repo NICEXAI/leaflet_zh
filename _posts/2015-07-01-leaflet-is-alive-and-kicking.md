@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Leaflet is Alive and Kicking, Stay Tuned for 1.0!
-description: We're on the finishing line of releasing Leaflet 1.0 &mdash; the biggest and greatest Leaflet release ever. Meanwhile, I'm happy to present you the new redesigned Leaflet website!
+title: Leaflet 持续活跃，敬请关注 1.0!
+description: 我们即将发布 Leaflet 1.0 — 有史以来最伟大的 Leaflet 版本。同时，我很高兴向您展示重新设计过的一个全新的 Leaflet 网站！…
 author: Vladimir Agafonkin
 authorsite: http://agafonkin.com/en
 ---
 
-I know this blog hasn't been updated for a long time &mdash; 1.5 years actually! But that's just because I'm a lazy blogger, and there has been _a lot_ going on with Leaflet during this time despite the lack of blog posts and major releases.
+我知道这个博客已经很久没有更新了 &mdash; 实际上是 1.5 年了。但这只是因为我是一个懒惰的博主，在这段时间里，尽管缺乏博文和重要的发布，Leaflet 还是发生了很多事情。
 
-We're on the finishing line of releasing Leaflet 1.0 &mdash; the biggest and greatest Leaflet release _ever_. The latest stable version, 0.7.3, is already perfect, so you won't believe how much awesome stuff we've managed to pack into the upcoming release &mdash; 914 commits later! But I'll leave that for a separate `1.0-beta1` blog post after we fix [that one last issue](https://github.com/Leaflet/Leaflet/pull/3307).
+我们即将发布 Leaflet 1.0 &mdash; 这是有史以来最大、最棒的 Leaflet 版本。最新的稳定版本，0.7.3 ，已经很完美了，所以你不会相信我们在即将发布的版本中打包了多少很棒的东西 &mdash; 914 次提交！但我要把这个问题留到我们解决了 [最后一个问题](https://github.com/Leaflet/Leaflet/pull/3307) 后，再单独发表 `1.0-beta1` 博文。
 
-Meanwhile, I'm happy to present you the new redesigned [Leaflet website](https://leafletjs.com/)! Now finally mobile-friendly, simple, clean, minimal and modern, just like the library itself. Also notice the floating menu when scrolling down the [Docs](/reference.html) and [Plugins](/plugins.html) pages, a highly requested feature that'll make navigation much easier. Big thanks to [Rowan Hogan](https://github.com/rowanhogan) for the help with the new design!
+同时，我很高兴向你介绍重新设计的新的 [Leaflet 网站](https://leafletjs.com/) ！现在终于实现了移动友好，简单，干净，简约和现代，就像图书馆本身。同时注意到在 [文档](/reference.html) 和 [插件](/plugins.html) 页面向下滚动时的浮动菜单，这是一个被强烈要求的功能，将使导航更加容易。非常感谢 [Rowan Hogan](https://github.com/rowanhogan) 对新设计的帮助！
 
-P.S. I recently made a quirky 13-minute video for the [Geospatial World Forum](http://www.geospatialworldforum.org/), sharing the fun story behind Leaflet and how it became what it is today. Watch it and share it with your geofriends so that we can make the GIS world fun again!
+P.S. 我最近为 [地理空间世界论坛](http://www.geospatialworldforum.org/) 制作了一个 13 分钟的古怪视频，分享 Leaflet 背后的有趣故事以及它如何成为今天的样子。请观看并与你的地理朋友们分享，这样我们就能让 GIS 世界再次变得有趣起来！
 
 Love,<br />
 Vladimir.
