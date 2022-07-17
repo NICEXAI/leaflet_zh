@@ -11,79 +11,79 @@ table.plugins td > p {
 }
 </style>
 
-## Leaflet Plugins database
+## Leaflet 插件
 
-While Leaflet is meant to be as lightweight as possible, and focuses on a core set of features, an easy way to extend its functionality is to use third-party plugins. Thanks to the awesome community behind Leaflet, there are literally hundreds of nice plugins to choose from.
+Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展其功能的一种简单方法是使用第三方插件。 感谢Leaflet背后的强大社区，提供了数百个不错的插件供大家选择。
 
 ---
 
 <div id="toc" class="clearfix">
 	<div class="toc-col">
-		<h4>Tile &amp; image layers</h4>
+		<h4>Tile &amp; Image 图层</h4>
 		<ul>
-			<li> <a href='#basemap-providers'>Basemap providers</a></li>
-			<li> <a href='#basemap-formats'>Basemap formats</a></li>
-			<li> <a href='#non-map-base-layers'>Non-map base layers</a></li>
-			<li> <a href='#tileimage-display'>Tile/image display</a></li>
-			<li> <a href='#tile-load'>Tile load</a></li>
-			<li> <a href='#vector-tiles'>Vector tiles</a></li>
+			<li> <a href='#basemap-providers'>底图提供程序</a></li>
+			<li> <a href='#basemap-formats'>底图格式</a></li>
+			<li> <a href='#non-map-base-layers'>Non-map 基础图层</a></li>
+			<li> <a href='#tileimage-display'>Tile/Image 显示</a></li>
+			<li> <a href='#tile-load'>Tile 加载</a></li>
+			<li> <a href='#vector-tiles'>矢量 Tile</a></li>
 		</ul>
 		<h4>Overlay data</h4>
 		<ul>
 			<li> <a href='#overlay-data-formats'>Overlay data formats</a></li>
-			<li> <a href='#dynamiccustom-data-loading'>Dynamic data loading</a></li>
+			<li> <a href='#dynamiccustom-data-loading'>动态加载数据</a></li>
 			<li> <a href='#synthetic-overlays'>Synthetic overlays</a></li>
-			<li> <a href='#data-providers'>Data providers</a></li>
+			<li> <a href='#data-providers'>Data providers 数据提供程序</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
 		<h4>Overlay Display</h4>
 		<ul>
-			<li><a href="#markers--renderers">Markers &amp; renderers</a></li>
-			<li><a href="#overlay-animations">Overlay animations</a></li>
+			<li><a href="#markers--renderers">Markers &amp; 渲染</a></li>
+			<li><a href="#overlay-animations">Overlay 动画</a></li>
 			<li><a href="#clusteringdecluttering">Clustering/decluttering</a></li>
-			<li><a href="#heatmaps">Heatmaps</a></li>
-			<li><a href="#dataviz">DataViz</a></li>
+			<li><a href="#heatmaps">Heatmaps 热力图</a></li>
+			<li><a href="#dataviz">DataViz 数据可视化</a></li>
 		</ul>
 		<h4>Overlay interaction</h4>
 		<ul>
-			<li><a href="#edit-geometries">Edit geometries</a></li>
-			<li><a href="#time--elevation">Time &amp; elevation</a></li>
-			<li><a href="#search--popups">Search &amp; popups</a></li>
-			<li><a href="#areaoverlay-selection">Area/overlay selection</a></li>
+			<li><a href="#edit-geometries">编辑几何图形</a></li>
+			<li><a href="#time--elevation">时间 &amp; 海拔</a></li>
+			<li><a href="#search--popups">搜索 &amp; 弹出框</a></li>
+			<li><a href="#areaoverlay-selection">区域/覆盖选择</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
-		<h4>Map interaction</h4>
+		<h4>地图交互</h4>
 		<ul>
-			<li><a href="#layer-switching-controls">Layer switching controls</a></li>
-			<li><a href="#interactive-panzoom">Interactive pan/zoom</a></li>
-			<li><a href="#bookmarked-panzoom">Bookmarked pan/zoom</a></li>
-			<li><a href="#fullscreen-controls">Fullscreen</a></li>
-			<li><a href="#minimaps--synced-maps">Minimaps &amp; synced maps</a></li>
-			<li><a href="#measurement">Measurement</a></li>
-			<li><a href="#mouse-coordinates">Mouse coordinates</a></li>
-			<li><a href="#events">Events</a></li>
-			<li><a href="#user-interface">User interface</a></li>
-			<li><a href="#printexport">Print/export</a></li>
-			<li><a href="#geolocation">Geolocation</a></li>
+			<li><a href="#layer-switching-controls">控制图层切换</a></li>
+			<li><a href="#interactive-panzoom">交互式平移/缩放</a></li>
+			<li><a href="#bookmarked-panzoom">带书签的平移/缩放</a></li>
+			<li><a href="#fullscreen-controls">全屏</a></li>
+			<li><a href="#minimaps--synced-maps">小地图 &amp; 同步地图</a></li>
+			<li><a href="#measurement">测量</a></li>
+			<li><a href="#mouse-coordinates">鼠标坐标</a></li>
+			<li><a href="#events">事件</a></li>
+			<li><a href="#user-interface">用户界面</a></li>
+			<li><a href="#printexport">打印/导出</a></li>
+			<li><a href="#geolocation">地理位置</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
-		<h4>Miscellaneous</h4>
+		<h4>各种各样的</h4>
 		<ul>
-			<li><a href="#geoprocessing">Geoprocessing</a></li>
-			<li><a href="#routing">Routing</a></li>
-			<li><a href="#geocoding">Geocoding</a></li>
-			<li><a href="#plugin-collections">Plugin collections</a></li>
+			<li><a href="#geoprocessing">地理处理</a></li>
+			<li><a href="#routing">路由</a></li>
+			<li><a href="#geocoding">地理编码</a></li>
+			<li><a href="#plugin-collections">插件集合</a></li>
 		</ul>
-		<h4>Integration</h4>
+		<h4>综合的</h4>
 		<ul>
-			<li><a href="#frameworks--build-systems">Frameworks &amp; build systems</a></li>
+			<li><a href="#frameworks--build-systems">框架 &amp; 构建系统</a></li>
 			<li><a href="#3rd-party-integration">3<sup>rd</sup> party</a></li>
 		</ul>
 		<hr>
-		<a href="#develop-your-own">Develop your own</a>
+		<a href="#develop-your-own">开发属于自己的插件</a>
 	</div>
 </div>
 
