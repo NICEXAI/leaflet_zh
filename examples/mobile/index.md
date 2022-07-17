@@ -9,9 +9,9 @@ title: Leaflet on Mobile
 
 {% include frame.html url="example.html" %}
 
-### 准备一个页面
+### Preparing the page
 
-首先，我们来看一下页面的 HTML 和 CSS 代码。为了让我们的地图 `div` 元素拉伸到所有可用空间（全屏），我们可以使用下面的 CSS 代码（注意：在这个例子中，我们使用百分比作为高度。虽然 vh 可以说更好，但是在移动设备上的谷歌浏览器存在问题。） ：
+首先，我们来看一下页面的 HTML 和 CSS 代码。为了让我们的地图 `div` 元素拉伸到所有可用空间（全屏），我们可以使用下面的 CSS 代码（注意：在这个例子中，我们使用百分比作为高度。虽然 vh 可以说更好，但是在移动设备上的谷歌浏览器存在问题）：
 
 {: .css}
 	body {
@@ -33,20 +33,18 @@ title: Leaflet on Mobile
 
 <pre><code class="javascript">var map = L.map('map').fitWorld();
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{<a href="https://docs.mapbox.com/help/glossary/style-id/">id</a>}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-	attribution: 'Map data &amp;copy; <span class="text-cut" data-cut="[&hellip;]">&lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors, Imagery &copy; &lt;a href="https://www.mapbox.com/"&gt;Mapbox&lt;/a&gt;</span>',
-	maxZoom: 18,
-	tileSize: 512,
-	zoomOffset: -1
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);</code></pre>
 
 ### 地理位置
 
-Leaflet 有一个非常方便的快捷方式来放大地图视图到检测到的位置---`locate` 方法加上 `setView` 选项，取代了代码中通常的 `setView` 方法。
+Leaflet 有一个非常方便的快捷方式来放大地图视图到检测到的位置---`locate` 方法加上 `setView` 选项，取代了代码中通常的 `setView` 方法:
 
 	map.locate({setView: true, maxZoom: 16});
 
-这里我们指定 16 作为自动设置地图视图时的最大缩放值。只要用户同意分享其位置，并且被浏览器检测到，地图就会将视图设置为它。现在我们有了一个可以工作的全屏移动地图 但是，如果我们需要在地理定位完成后做一些事情呢？这就是 `locationfound` 和 `locationerror` 事件的作用。例如，让我们在检测到的位置上添加一个标记，在弹出式窗口中显示精确度，在 `locateAndSetView` 调用之前给 `locationfound`事件添加一个事件监听器。
+这里我们指定 16 作为自动设置地图视图时的最大缩放值。只要用户同意分享其位置，并且被浏览器检测到，地图就会将视图设置为它。现在我们有了一个可以工作的全屏移动地图 但是，如果我们需要在地理定位完成后做一些事情呢？这就是 `locationfound` 和 `locationerror` 事件的作用。例如，让我们在检测到的位置上添加一个标记，在弹出式窗口中显示精确度，在 `locateAndSetView` 调用之前给 `locationfound` 事件添加一个事件监听器:
 
 	function onLocationFound(e) {
 		var radius = e.accuracy;
@@ -59,7 +57,7 @@ Leaflet 有一个非常方便的快捷方式来放大地图视图到检测到的
 
 	map.on('locationfound', onLocationFound);
 
-非常好! 但如果能在地理定位失败时显示错误信息，那就更好了。
+非常好! 但如果能在地理定位失败时显示错误信息，那就更好了:
 
 	function onLocationError(e) {
 		alert(e.message);

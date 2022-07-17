@@ -11,7 +11,7 @@ title: Interactive Choropleth Map
 
 {% include frame.html url="example.html" width=816 height=516 %}
 
-### 数据来源
+### Data Source
 
 我们将创建一个美国各州人口密度的可视化图。由于数据量（各州的形状和各州的密度值）不是很大，最方便和简单的方法是使用 [GeoJSON](../geojson/) 来存储，然后显示。
 
@@ -31,16 +31,13 @@ title: Interactive Choropleth Map
 
 ### 基本州地图
 
-让我们使用自定义的 Mapbox 风格在地图上显示我们的州的数据，以获得漂亮的灰度瓦片（Tile），这些图块看起来非常适合作为可视化的背景：
+让我们在地图上显示我们的州的数据:
 
-	var mapboxAccessToken = {your access token here};
 	var map = L.map('map').setView([37.8, -96], 4);
 
-	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + mapboxAccessToken, {
-		id: 'mapbox/light-v9',
-		attribution: ...,
-		tileSize: 512,
-		zoomOffset: -1
+	var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
 	L.geoJson(statesData).addTo(map);
@@ -104,7 +101,7 @@ title: Interactive Choropleth Map
 
 在这里，我们通过 `e.target` 访问被悬停的图层，在图层上设置一个厚厚的灰色边框作为我们的高亮效果，同时把它放到图层最前面，这样边框就不会与附近的状态发生冲突（但对 IE、Opera 或 Edge 来说不是这样，因为它们在 `mouseover ` 时使用 ` bringToFront` 有问题）。
 
-接下来我们将定义鼠标移出时发生的事情：
+接下来我们将定义鼠标 `mouseout` 时发生的事情:
 
 	function resetHighlight(e) {
 		geojson.resetStyle(e.target);
@@ -139,13 +136,15 @@ title: Interactive Choropleth Map
 
 这使得状态在悬停时被很好地突出，并使我们有能力在监听器中添加其他的交互。
 
-### 自定义信息控件
+### Custom Info Control
 
 我们可以使用通用的点击弹出窗口来显示不同状态的信息，但我们将选择一条不同的途径---在一个[自定义控件](/reference.html#control)内的状态悬停时显示。
 
 这是我们控件的代码:
 
-	var info = L.control(); 
+Here's the code for our control:
+
+	var info = L.control();
 
 	info.onAdd = function (map) {
 		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"

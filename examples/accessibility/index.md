@@ -38,15 +38,21 @@ Leaflet 预设了一套有用的默认值。
 [自定义 HTML](reference.html#divicon-html)
 可以以其他方式提供一个视觉或非视觉的标签。
 
-### 测试你的地图
+### Test your maps
 
 发现可访问性问题的最好方法就是只用键盘或屏幕阅读器来测试你的地图。
 你可能已经有一个预装的屏幕阅读器，比如说：
 
-- Windows 上的 [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1)
-- Linux 上的 [Orca](https://help.gnome.org/users/orca/stable/index.html.en)
-- Android 上的 [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en)
-- [macOS](https://support.apple.com/guide/voiceover/welcome/mac) 和 [iOS](https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios) 上的 VoiceOver
+- [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1)
+on Windows
+- [Orca](https://help.gnome.org/users/orca/stable/index.html.en)
+on Linux
+- [TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en)
+on Android
+- VoiceOver on
+[macOS](https://support.apple.com/guide/voiceover/welcome/mac)
+and
+[iOS](https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios)
 
 ### 纯粹的装饰性地图
 

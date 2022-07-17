@@ -30,7 +30,7 @@ bodyclass: honor-page
 * 特别感谢 [JetBrains](https://www.jetbrains.com/?from=ferry) 为本开源项目提供免费的 License 授权
   <p>
   <a href="https://www.jetbrains.com/?from=ferry">
-    <img height="150" src="https://www.fdevops.com/wp-content/uploads/2020/09/1599213857-jetbrains-variant-4.png">
+    <img width='270' height="150" src="https://www.fdevops.com/wp-content/uploads/2020/09/1599213857-jetbrains-variant-4.png">
   </a>
   </p>
 
@@ -38,7 +38,7 @@ bodyclass: honor-page
 
 由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
 
-<img src='https://leafletjs.cn/docs/images/QQ.png' width='300'>
+<img src='./docs/images/QQ.png' width='300'>
 
 开始翻译前，你可以先加入我们的交流群，然后在群里通过以下方式认领，确保没有重复工作。当然，你也可以直接点击右上角的翻译图标进入项目中参与翻译工作。
 

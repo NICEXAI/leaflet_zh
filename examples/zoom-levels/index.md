@@ -24,7 +24,7 @@ title: Zoom levels
 }
 </style>
 
-## Zoom levels 缩放比例
+## Zoom levels
 
 Leaflet 适用于 [latitude](https://en.wikipedia.org/wiki/Latitude), [longitude](https://en.wikipedia.org/wiki/Longitude) 和 `zoom level`。
 
@@ -82,7 +82,7 @@ This is called a "cylindrical map projection".
 <img src="https://a.basemaps.cartocdn.com/light_all/0/0/0.png" class="bordered-img" alt=""/>
 </div>
 
-当我们以**0**缩放级别表示世界时，它的宽度和高度为 256 像素。当我们进入缩放级别**1**时，它的宽度和高度加倍，可以用四个 256 像素 x 256 像素的图像表示：
+当我们以 **0** 缩放级别表示世界时，它的宽度和高度为 256 像素。当我们进入缩放级别 **1** 时，它的宽度和高度加倍，可以用四个 256 像素 x 256 像素的图像表示：
 
 <div class='tiles' style='text-align: center'>
 <div>

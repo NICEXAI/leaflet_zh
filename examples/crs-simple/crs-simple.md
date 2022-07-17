@@ -14,7 +14,7 @@ iframe {
 
 有时，地图并不代表地球表面的事物，因此，没有地理纬度和地理经度的概念。大多数时候，这指的是大的扫描图像，例如游戏地图。
 
-在本教程中，我们从 Star Control II 中选择了一张星图，这款游戏现在可作为[开源项目 The Ur-Quan Masters](https://en.wikipedia.org/wiki/Star_Control_II#The_Ur-Quan_Masters) 使用。这些地图是用读取游戏开源数据文件的工具制作的（网页好像已经下架了，看存档版），长这样：
+在本教程中，我们从 Star Control II 中挑选了一张星图，这款游戏现在可以作为[开源项目 The Ur-Quan Masters](https://en.wikipedia.org/wiki/Star_Control_II#The_Ur-Quan_Masters) 使用。这些地图是用该游戏的[读取开源数据文件的工具](http://www.highprogrammer.com/alan/games/video/uqm/index.html)制作的（网页似乎已经下架，请看[存档版本](https://web.archive.org/web/20171112052528/https://www.highprogrammer.com/alan/games/video/uqm/index.html)），看起来像这样：
 
 <center>
 <img src="uqm_map_400px.png" style="border: 1px solid #ccc; border-radius: 5px" /><br/>
@@ -53,7 +53,7 @@ Leaflet 地图有一个 CRS（只有一个 CRS ），可以在创建地图时更
 
 ## CRS.Simple 地图中的常见问题
 
-在默认的 Leaflet CRS 中 CRS.Earth，360 度经度映射到 256 个水平像素（缩放级别 0），大约 170 度纬度映射到 256 个垂直像素（缩放级别 0）。
+在默认的 Leaflet CRS 中 `CRS.Earth`，360 度经度映射到 256 个水平像素（缩放级别 0），大约 170 度纬度映射到 256 个垂直像素（缩放级别 0）。
 
 在一个 `CRS.Simple` 中，一个水平地图单元被映射到一个水平像素，以及同上垂直。这意味着整个地图大约有 1000x1000 像素大，无法放入我们的 HTML 容器中。幸运的是，我们可以设置 `minZoom` 为低于零的值：
 
@@ -64,7 +64,7 @@ Leaflet 地图有一个 CRS（只有一个 CRS ），可以在创建地图时更
 
 ### Pixels vs. map units
 
-使用时的一个常见错误是在 `CRS.Simple` 中会假设 map unit 等于 pixel。在本例中，地图覆盖 1000x1000 个单位，但图像大小为 2315x2315 像素。不同的情况会要求一个 pixel 等于 一个 map unit，或者 64 个 pixel 等于 一个 map unit，或者其它。考虑网格中的 map unit，然后相应地添加图层（L.ImageOverlays、L.Markers 等）。
+使用时的一个常见错误是在 `CRS.Simple` 中会假设 map unit 等于 pixel。在本例中，地图覆盖 1000x1000 个单位，但图像大小为 2315x2315 像素。不同的情况会要求一个 pixel 等于 一个 map unit，或者 64 个 pixel 等于 一个 map unit，或者其它。考虑网格中的 map unit，然后相应地添加图层（`L.ImageOverlays`、`L.Markers` 等）。
 
 事实上，我们使用的图像覆盖了 1000 多个 map unit - 有相当大的余量。测量 0 和 1000 坐标之间有多少像素，并进行外推，我们可以为该图像获得正确的坐标范围：
 

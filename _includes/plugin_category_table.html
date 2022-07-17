@@ -1,0 +1,22 @@
+{% assign filteredplugins = site.plugins | where: "category", include.category %}
+
+<table class="plugins"><tr><th>插件</th><th>说明</th><th>Demo</th><th>维护者</th></tr>
+{% for plugin in filteredplugins %}
+	<tr>
+		<td><a href="{{ plugin.repo }}">{{ plugin.name }}</a></td>
+		<td>{{ plugin.content }}</td>
+		<td>
+		{% if plugin.demo %}
+			<a href="{{ plugin.demo }}">Demo</a>
+		{% endif %}
+		</td>
+		<td>
+		{% if plugin.category %}
+			<a href="{{ plugin.author-url }}">{{ plugin.author }}</a>
+		{% else %}
+			{{ plugin.author }}
+		{% endif %}
+		</td>
+	</tr>
+{% endfor %}
+</table>

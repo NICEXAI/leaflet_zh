@@ -1,4 +1,4 @@
-exclude: [build, debug, node_modules, spec, src, CNAME, reference-tpl.html, CHANGELOG.md, README.md, LICENSE, DOCS-TODO.md]
+exclude: [build, debug, node_modules, spec, src, CNAME, reference-tpl.html, CHANGELOG.md, README.md, LICENSE]
 
 markdown: kramdown
 
@@ -6,7 +6,6 @@ kramdown:
   entity_output: as_input
 
 latest_leaflet_version: 1.8.0
-latest_leaflet_reference: 1.8.0
 
 # Integrity hashes for both leaflet.js and leaflet-src.js
 # These will be shown in the downloads page
@@ -15,6 +14,10 @@ integrity_hash_css: "sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO
 integrity_hash_source: "sha512-Uj3ED3j6dg1xxMgtj4kF4W60Tc1HGboQ5gweT+hG1z8sBIc0ncFuoh3qV5XZF8ZqlEGlV9mt9E6MZhLN3zFDJg=="
 integrity_hash_uglified: "sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
 
-url: https://leafletjs.cn
+
+collections:
+  plugins:
+    output: false
+
 plugins:
   - jekyll-sitemap    #generate sitemap

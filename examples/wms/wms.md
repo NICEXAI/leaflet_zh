@@ -69,7 +69,7 @@ WMS 服务器在服务中定义了一系列的图层（layers）,这些是在 `G
 		layers: 'TOPO-WMS,OSM-Overlay-WMS'
 	}).addTo(map);
 
-请注意，这将向 WMS 服务器请求一张图像。这不同于 L.TileLayer.WMS 为 **topography** 创建一个图层，为 **places** 创建另一个图层，然后将它们都添加到地图中。在第一种情况下，有一个图像请求，由 WMS 服务器决定如何合成（置于彼此之上）图像。在第二种情况下，将有两个图像请求，由运行在 Web 浏览器中的 Leaflet 代码决定如何组合它们。
+请注意，这将向 WMS 服务器请求一张图像。这不同于 `L.TileLayer.WMS` 为 **topography** 创建一个图层，为 **places** 创建另一个图层，然后将它们都添加到地图中。在第一种情况下，有一个图像请求，由 WMS 服务器决定如何合成（置于彼此之上）图像。在第二种情况下，将有两个图像请求，由运行在 Web 浏览器中的 Leaflet 代码决定如何组合它们。
 
 如果我们将其与 [layers control 图层控件](/examples/layers-control.html)结合起来，那么我们可以构建一个简单的地图来查看差异：
 

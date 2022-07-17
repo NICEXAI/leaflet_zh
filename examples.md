@@ -97,10 +97,10 @@ description="默认的 map panes 如何在图层顶部显示 overlay，以及如
 
 
 {% include tutorial_link.html
-page="video-overlay/"
-thumbnail="video-overlay/thumbnail.gif"
-title="显示视频文件"
-description="Leaflet 可以帮助你在地图上的某处显示视频。"
+page="overlays/"
+thumbnail="overlays/thumbnail.gif"
+title="Overlays: Image, Video, SVG"
+description="Leaflet 可以帮助你在地图上的某处显示图片、视频和 SVG 元素。"
 %}
 
 ***
@@ -130,4 +130,5 @@ thumbnail="extending/thumbnail-3.png"
 title="扩展 Leaflet: Handlers and Controls"
 description="如何扩展或创建 non-layers。"
 %}
+
 

@@ -22,7 +22,7 @@ title: Layer Groups and Layers Control
 
 	var cities = L.layerGroup([littleton, denver, aurora, golden]);
 
-足够简单! 现在你有了一个 "cities" 图层，它将你的城市标记合并成一个图层，你可以一次性地从地图上添加或删除。
+非常简单! 现在你有了一个 "cities" 图层，它将你的城市标记合并成一个图层，你可以一次性地从地图上添加或删除。
 
 ### Layers Control
 
@@ -32,31 +32,35 @@ Leaflet 有一个很好的小控件，允许你的用户控制他们在你的地
 
 现在让我们创建这些基础图层并将默认图层添加到地图中：
 
-<pre><code>var grayscale = L.tileLayer(mapboxUrl, {id: '<a href="https://mapbox.com">MapID</a>', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution}),
-	streets   = L.tileLayer(mapboxUrl, {id: '<a href="https://mapbox.com">MapID</a>', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
+<pre><code>var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
+var streets = L.tileLayer(mapboxUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
 
 var map = L.map('map', {
 	center: [39.73, -104.99],
 	zoom: 10,
-	layers: [grayscale, cities]
+	layers: [osm, cities]
 });</code></pre>
 
 接下来，我们将创建两个对象。一个包含我们的基础层，另一个将包含我们的覆盖层。这些只是带有键/值对的简单对象。键设置控件中图层的文本（例如 `streets`），而相应的值是对图层的引用（例如 streets）。
 
 <pre><code>var baseMaps = {
-	"Grayscale": grayscale,
-	"Streets": streets
+	"OpenStreetMap": osm,
+	"Mapbox Streets": streets
 };
 
 var overlayMaps = {
-    "Cities": cities
+	"Cities": cities
 };</code></pre>
 
 现在，剩下的就是创建一个[图层控件](/reference.html#control-layers)并将其添加到地图中。创建图层控制时传递的第一个参数是基本图层对象。第二个参数是覆盖层对象。两个参数都是可选的：你可以通过省略第二个参数来传递一个基本图层对象，或者通过传递`null'作为第一个参数来传递一个覆盖对象。在每种情况下，省略的图层类型将不会出现供用户选择。
 
-<pre><code>L.control.layers(baseMaps, overlayMaps).addTo(map);</code></pre>
+<pre><code>var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);</code></pre>
 
-注意，我们在地图上添加了 `grayscale` 和 `cities` 层，但没有添加 `streets`。图层控件很聪明，可以检测出我们已经添加了哪些图层，并设置了相应的复选框和辐射框。
+注意，我们在地图上添加了 `osm` 和 `cities` 层，但没有添加 `streets`。图层控件很聪明，可以检测出我们已经添加了哪些图层，并设置了相应的复选框和辐射框。
 
 还要注意的是，当使用多个基础图层时，在实例化时只应将其中一个图层添加到地图中，但在创建图层控件时，所有的图层都应存在于基础图层对象中。
 
@@ -67,6 +71,19 @@ var overlayMaps = {
 	"Streets": streets
 };
 </code></pre>
+
+最后，你可以动态地添加或删除基础层或覆盖层:
+
+<pre><code>var crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.'),
+    rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
+    
+var parks = L.layerGroup([crownHill, rubyHill]);
+var satellite = L.tileLayer(mapboxUrl, {id: '<a href="https://mapbox.com">MapID</a>', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
+
+layerControl.addBaseLayer(satellite, "Satellite");
+layerControl.addOverlay(parks, "Parks");
+</code></pre>
+
 
 现在让我们在[单独的页面上查看最终效果&rarr;](example.html)。
 

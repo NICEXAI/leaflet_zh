@@ -76,7 +76,7 @@ Map panes 使用 z-index CSS 属性来让某些图层始终显示在其他图层
     map.getPane('labels').style.pointerEvents = 'none';
 
 
-窗格（pane）准备就绪后，我们可以添加图层，注意使用标签瓦片（tile）上的 pane 选项：
+窗格（pane）准备就绪后，我们可以添加图层，注意使用标签瓦片（tile）上的 `pane` 选项：
 
 
     var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {

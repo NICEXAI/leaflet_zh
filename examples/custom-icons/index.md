@@ -11,7 +11,7 @@ title: Markers With Custom Icons
 
 ### Preparing the images
 
-要制作一个自定义的图标，我们通常需要两张图片---实际的图标图片和它的阴影图片。在本教程中，我们采用了Leaflet的标志，并从中创建了四张图片---3张不同颜色的叶子图片和一张阴影图片。
+要制作一个自定义的图标，我们通常需要两张图片---实际的图标图片和它的阴影图片。在本教程中，我们采用了 Leaflet 的标志，并从中创建了四张图片---3张不同颜色的叶子图片和一张阴影图片。
 
 <p>
 	<img style="border: 1px solid #ccc" src="leaf-green.png" />
@@ -24,7 +24,7 @@ title: Markers With Custom Icons
 
 ### Creating an icon
 
-Leaflet中的标记图标是由[L.Icon](/reference.html#icon)对象定义的，在创建标记时，它被作为一个选项传递。让我们来创建一个绿叶图标。
+Leaflet 中的标记图标是由 [L.Icon](/reference.html#icon) 对象定义的，在创建标记时，它被作为一个选项传递。让我们来创建一个绿叶图标：
 
 	var greenIcon = L.icon({
 		iconUrl: 'leaf-green.png',
@@ -37,15 +37,15 @@ Leaflet中的标记图标是由[L.Icon](/reference.html#icon)对象定义的，�
 		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 	});
 
-现在，在地图上放一个带有这个图标的标记是很容易的。
+现在，在地图上放一个带有这个图标的标记是很容易的:
 
 	L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
 
 {% include frame.html url="example-one-icon.html" %}
 
-### 定义一个图标类（Class）
+### Defining an icon class
 
-如果我们需要创建几个有很多共同点的图标，怎么办？让我们定义我们自己的图标类，包含共享选项，继承于`L.Icon`! 在Leaflet中，这真的很简单。
+如果我们需要创建几个有很多共同点的图标，怎么办？让我们定义我们自己的图标类，包含共享选项，继承于 `L.Icon`! 在 Leaflet 中，这真的很简单:
 
 	var LeafIcon = L.Icon.extend({
 		options: {
@@ -58,19 +58,19 @@ Leaflet中的标记图标是由[L.Icon](/reference.html#icon)对象定义的，�
 		}
 	});
 
-现在我们可以从这个类中创建所有的带有三个叶子的图标并使用它们。
+现在我们可以从这个类中创建所有的带有三个叶子的图标并使用它们:
 
 	var greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'}),
 		redIcon = new LeafIcon({iconUrl: 'leaf-red.png'}),
 		orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
 
-你可能已经注意到，我们使用`new`关键字来创建LeafIcon实例。那么为什么所有的Leaflet类在创建时都没有使用它呢？答案很简单：真正的Leaflet类是用大写字母命名的(例如`L.Icon`)，它们也需要用`new`来创建，但也有一些小写名字的快捷方式(`L.icon`)，是为了方便而创建的，比如这样。
+你可能已经注意到，我们使用 `new` 关键字来创建 LeafIcon 实例。那么为什么所有的 Leaflet 类在创建时都没有使用它呢？答案很简单：真正的Leaflet类是用大写字母命名的(例如 `L.Icon` )，它们也需要用 `new` 来创建，但也有一些小写名字的快捷方式( `L.icon` )，是为了方便而创建的，比如这样:
 
 	L.icon = function (options) {
 		return new L.Icon(options);
 	};
 
-你也可以对你的 classes 做同样的事情。好了，让我们最后在地图上放一些带有这些图标的标记。
+你也可以对你的 classes 做同样的事情。好了，让我们最后在地图上放一些带有这些图标的标记:
 
 	L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
 	L.marker([51.495, -0.083], {icon: redIcon}).addTo(map).bindPopup("I am a red leaf.");

@@ -12,11 +12,11 @@ Leaflet 有数以百计的插件，这些插件扩展了 Leaflet 的功能：有
 请注意，本教程假设您已经很好地掌握了：
 
 * [JavaScript](https://developer.mozilla.org/en-US/Learn/JavaScript)
-* [DOM 处理](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-* [面向对象编程](https://en.wikipedia.org/wiki/Object-oriented_programming) （理解类、实例、继承、方法和属性等概念）
+* [DOM handling](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+* [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) (understanding concepts like classes, instances, inheritance, methods and properties)
 
 
-## Leaflet 架构
+## Leaflet architecture
 
 让我们看看 Leaflet 1.0.0 的简化 UML 类图。有 60 多个 JavaScript 类，所以图有点大。幸运的是，我们可以用 `L.ImageOverlay` 做一个可缩放的图片：
 
@@ -71,7 +71,7 @@ Leaflet 通过 `L.Class` 来解决这个问题，它简化了类的继承。
 * 私有属性和方法以下划线（`_`）开头。这并不意味着它们是私有的，只是建议开发者不要直接使用它们
 
 ### `L.Class.include()`    
-
+    
 如果已经定义了一个类，则可以重新定义现有的属性/方法，或者可以使用 `.include()` 方法添加新的属性/方法：
 
     MyDemoClass.include({
@@ -94,7 +94,7 @@ Leaflet 通过 `L.Class` 来解决这个问题，它简化了类的继承。
     console.log( mySecondDemoInstance.myDemoProperty );
 
 ### `L.Class.initialize()`
-
+    
 在 OOP 中，类有一个构造方法。在 Leaflet 的 `L.Class` 中，构造方法总是被命名为 `initialize` 。
 
 如果您的类有一些特定的 `options`，最好 `L.setOptions()` 在构造函数中初始化它们。此实用程序函数会将提供的选项与类的默认选项合并。
@@ -119,7 +119,7 @@ Leaflet 通过 `L.Class` 来解决这个问题，它简化了类的继承。
     console.log(instance.name); // Outputs "Red"
     console.log(instance.options.width); // Outputs "10"
     console.log(instance.options.height); // Outputs "1", the default
-
+    
 Leaflet 以一种特殊的方式处理 `options` 属性：父类的可用选项将被子类继承：
 
     var MyCubeClass = MyBoxClass.extend({
@@ -176,7 +176,7 @@ Leaflet 以一种特殊的方式处理 `options` 属性：父类的可用选项�
 以类似的方式调用父类的构造函数，使用 `ParentClass.prototype.initialize.call(this, ...)` 来代替。
     
     
-### Factories 工厂
+### Factories 工厂函数
 
 大多数 Leaflet 类都有一个相应的[工厂函数](https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29)。工厂函数的名称与类相同，但它使用 `lowerCamelCase` 而不是 `UpperCamelCase`：
     
