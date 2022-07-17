@@ -26,16 +26,15 @@ title: Zoom levels
 
 ## Zoom levels
 
-Leaflet works with [latitude](https://en.wikipedia.org/wiki/Latitude), [longitude](https://en.wikipedia.org/wiki/Longitude) and "zoom level".
+Leaflet 适用于 [latitude](https://en.wikipedia.org/wiki/Latitude), [longitude](https://en.wikipedia.org/wiki/Longitude) 和 `zoom level`。
 
-Lower zoom levels means that the map shows entire continents, while higher zoom
-levels means that the map can show details of a city.
+较低的缩放比例意味着地图可以显示整个大陆，而较高的缩放比例意味着地图可以显示一个城市的细节。
 
-To understand how zoom levels work, first we need a basic introduction to <i>geodesy</i>.
+要了解 `zoom levels` 工作原理，首先我们需要对 <i>geodesy</i> 进行基本介绍。
 
-## The shape of the earth
+## 地球的形状
 
-Let's have a look at a simple map locked at zoom zero:
+让我们来看一张缩放比例为零的简单地图：
 
 	var map = L.map('map', {
 		minZoom: 0,
@@ -52,15 +51,15 @@ Let's have a look at a simple map locked at zoom zero:
 
 {% include frame.html url="example-zero.html" %}
 
-Notice that the "whole earth" is just one image, 256 pixels wide and 256 pixels high:
+请注意，**整个地球**只是一张图像，宽 256 像素，高 256 像素：
 
 <div class='tiles' style='text-align: center'>
 <img src="https://a.basemaps.cartocdn.com/light_all/0/0/0.png" class="bordered-img" alt=""/>
 </div>
 
-Just to be clear: the earth is not a square. Rather, the earth has an irregular shape that can be approximated to [something similar to a sphere](https://en.wikipedia.org/wiki/Geoid).
+我们要明白的是：地球不是一个正方形。相反，地球有一个不规则的形状，可以近似于[类似于球体的东西](https://en.wikipedia.org/wiki/Geoid)。
 
-So we *assume* that the earth is mostly round. To make it flat, we put an imaginary cylinder around, unroll it, and cut it so it looks square:
+所以我们假设地球大部分是圆的。为了使它平坦，我们在周围放了一个假想的圆柱体，展开它，然后将其切割成方形：
 
 <div class='tiles legend' style='text-align: center'>
 <a title="By derived from US Government USGS [Public domain], via Wikimedia Commons" href="https://en.wikipedia.org/wiki/Map_projection#Cylindrical"><img width="512" alt="Usgs map mercator" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Usgs_map_mercator.svg/512px-Usgs_map_mercator.svg.png"/>
@@ -69,27 +68,21 @@ This is called a "cylindrical map projection".
 </a>
 </div>
 
-This is not the only way of displaying the surface on the earth on a plane. There
-are [hundreds of ways](https://en.wikipedia.org/wiki/Map_projection), each of them
-with its own advantages and disadvantages. The following 6-minute video is a nice
-introduction to the topic:
+当然这并不是在平面上显示地球表面的唯一方法。 有[数百种方法](https://en.wikipedia.org/wiki/Map_projection)，每一种方法都有自己的优点和缺点。下面这段6分钟的视频很好的介绍了这个主题：
 
 <center><iframe width="696" height="392" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allowfullscreen></iframe></center>
 
-Things like geodesy, map projections and coordinate systems are hard, *very hard*
-(and out of scope for this tutorial). Assuming that the earth is a square is not
-always the right thing to do, but most of the time works fine enough, makes things
-simpler, and allows Leaflet (and other map libraries) to be fast.
+诸如大地测量、地图投影和坐标系之类的事情很难，*非常难* （并且超出了本教程的范围）。假设地球是一个正方形并不总是正确的做法，但大多数情况下都可以正常工作，使事情变得更简单，并且允许 Leaflet（和其他地图库）变得更快。
 
 ## Powers of two
 
-For now, let's just ***assume*** that the world is a square:
+现在，让我们**假设**世界是一个正方形：
 
 <div class='tiles' style='text-align: center'>
 <img src="https://a.basemaps.cartocdn.com/light_all/0/0/0.png" class="bordered-img" alt=""/>
 </div>
 
-When we represent the world at zoom level **zero**, it's 256 pixels wide and high. When we go into zoom level **one**, it doubles its width and height, and can be represented by four 256-pixel-by-256-pixel images:
+当我们以 **0** 缩放级别表示世界时，它的宽度和高度为 256 像素。当我们进入缩放级别 **1** 时，它的宽度和高度加倍，可以用四个 256 像素 x 256 像素的图像表示：
 
 <div class='tiles' style='text-align: center'>
 <div>
@@ -100,7 +93,7 @@ When we represent the world at zoom level **zero**, it's 256 pixels wide and hig
 </div>
 </div>
 
-At each zoom level, each tile is divided in four, and its size (length of the edge, given by the `tileSize` option) doubles, quadrupling the area. (in other words, the width and height of the world is <code>256·2<sup>zoomlevel</sup></code> pixels):
+在每个缩放级别，每个图块被分成四份，其大小（边的长度，由 `tileSize` 选项给出）加倍，使面积翻四倍 (换句话说，世界的宽度和高度都是 <code>256·2<sup>zoomlevel</sup></code> 像素):
 
 <table><tr><td>
 <div class='tiles small' style='text-align: center'>
@@ -133,23 +126,15 @@ At each zoom level, each tile is divided in four, and its size (length of the ed
 </td></tr>
 <tr><td>Zoom 0</td><td>Zoom 1</td><td>Zoom 2</td></tr></table>
 
-This goes on and on. Most tile services offer tiles up to zoom level 18, depending on
-their coverage. This is enough to see a few city blocks per tile.
+这一直持续下去。大多数瓦片（Tile）服务提供最高缩放级别为 18 的磁贴，具体取决于它们的覆盖范围。这足以让每个瓦片(Tile)看到几个城市街区。
 
-## A note about scale
+## 关于缩放比例的说明
 
-One of the disadvantages of using a cylindrical projection is that the scale is not
-constant, and measuring distances or sizes is not reliable, specially at low zoom levels.
+使用圆柱投影的缺点之一是比例不恒定，测量距离或尺寸不可靠，特别是在低缩放级别时。
 
-In [technical terms](https://en.wikipedia.org/wiki/Map_projection#Projections_by_preservation_of_a_metric_property),
-the cylindrical projection that Leaflet uses is <i>conformal</i> (preserves shapes),
-but not <i>equidistant</i> (does not preserve distances), and not <i>equal-area</i>
-(does not preserve areas, as things near the equator appear smaller than they are).
+在[技术术语](https://en.wikipedia.org/wiki/Map_projection#Projections_by_preservation_of_a_metric_property)中，Leaflet 使用的圆柱投影是共形的（保留形状），但不是等距的（不保留距离），也不是等面积的 （不保留面积，因为赤道附近的东西看起来比它们小）。
 
-By adding a `L.Control.Scale` to a map, and panning to the equator and to 60° north,
-we can see how the scale factor <b>doubles</b>. The following example uses
-[javascript timeouts](https://developer.mozilla.org/docs/Web/API/WindowTimers/setTimeout)
-to  do this automatically:
+通过在地图上添加 `L.Control.Scale`，并平移到赤道和北纬60°，我们可以看到比例尺是如何**翻倍**的。以下示例使用 [javascript timeouts](https://developer.mozilla.org/docs/Web/API/WindowTimers/setTimeout) 自动执行此操作：
 
 	L.control.scale().addTo(map);
 
@@ -162,17 +147,15 @@ to  do this automatically:
 
 {% include frame.html url="example-scale.html" %}
 
-`L.Control.Scale` shows the scale which applies to the center point of the map.
-At high zoom levels, the scale changes very little, and is not noticeable.
+`L.Control.Scale` 显示适用于地图中心点的比例。
+在高缩放级别，比例尺的变化很小，并不明显。
 
 
-## Controlling the zoom
+## 控制地图缩放
 
-A leaflet map has several ways to control the zoom level shown, but the most obvious
-one is [`setZoom()`](/reference.html#map-setzoom). For example, `map.setZoom(0);`
-will set the zoom level of `map` to `0`.
+Leaflet 地图有多种方法可以控制显示的缩放级别，但最明显的一种是 [`setZoom()`](/reference.html#map-setzoom)。例如，`map.setZoom(0);` 将缩放级别设置` map` 为 `0`。
 
-This example again uses timeouts to alternate between zoom levels `0` and `1` automatically:
+这个例子再次使用超时在缩放级别`0`和`1`之间自动交替：
 
 	setInterval(function(){
 		map.setZoom(0);
@@ -183,37 +166,36 @@ This example again uses timeouts to alternate between zoom levels `0` and `1` au
 
 {% include frame.html url="example-setzoom.html" %}
 
-Notice how the images shown at zoom levels 0 and one correspond with the images
-shown in the previous section!
+请注意缩放级别 0 和 1 显示的图像与上一节中显示的图像是如何对应的！
 
-Other ways of setting the zoom are:
+其他设置缩放的方法有：
 
-* [`setView(center, zoom)`](/reference.html#map-setview), which also sets the map center
-* [`flyTo(center, zoom)`](/reference.html#map-flyto), like `setView` but with a smooth animation
-* [`zoomIn()` / `zoomIn(delta)`](/reference.html#map-zoomin), zooms in `delta` zoom levels, `1` by default
-* [`zoomOut()` / `zoomOut(delta)`](/reference.html#map-zoomout), zooms out `delta` zoom levels, `1` by default
-* [`setZoomAround(fixedPoint, zoom)`](/reference.html#map-setzoomaround), sets the zoom level while keeping a point fixed (what scrollwheel zooming does)
-* [`fitBounds(bounds)`](/reference.html#map-fitbounds), automatically calculates the zoom to fit a rectangular area on the map
+* [`setView(center, zoom)`](/reference.html#map-setview), 这也设置了地图中心
+* [`flyTo(center, zoom)`](/reference.html#map-flyto), 像`setView`一样，拥有一个平滑的动画
+* [`zoomIn()` / `zoomIn(delta)`](/reference.html#map-zoomin), 以 `delta ` 为单位进行放大，默认为 `1`
+* [`zoomOut()` / `zoomOut(delta)`](/reference.html#map-zoomout), 以 `delta ` 为单位进行缩小，默认为 `1`
+* [`setZoomAround(fixedPoint, zoom)`](/reference.html#map-setzoomaround), 在保持点固定的同时设置缩放级别（滚轮缩放）
+* [`fitBounds(bounds)`](/reference.html#map-fitbounds), 自动计算缩放以适应地图上的矩形区域
 
 
-## Fractional zoom
+## Fractional zoom（以分数为单位进行缩放，例如：0.1）
 
-A feature introduced in Leaflet 1.0.0 was the concept of <em>fractional zoom</em>.
-Before this, the zoom level of the map could be only an integer number (`0`, `1`, `2`, and so on);
-but now you can use fractional numbers like `1.5` or `1.25`.
+在 Leaflet 1.0.0 中引入的一个功能是 <em>fractional zoom</em> 的概念。
+在这之前，地图的缩放级别只能是一个整数（`0`，`1`，`2`，等等），
+但现在你可以使用小数，如`1.5`或`1.25`。
 
-Fractional zoom is disabled by default. To enable it, use the
-[map's `zoomSnap` option](/reference.html#map-zoomsnap).
-The `zoomSnap` option has a default value of `1` (which means that the zoom level
-of the map can be `0`, `1`, `2`, and so on).
+默认情况下，分数缩放是禁用的。要启用它，请使用
+[地图的 `zoomSnap` 选项]（/reference.html#map-zoomsnap）。
+`zoomSnap` 选项的默认值是 `1`（这意味着地图的缩放级别可以是 `0`）。
+这意味着地图的缩放级别可以是 `0`， `1`， `2`，以此类推）。)
 
-If you set the value of `zoomSnap` to `0.5`, the valid zoom levels of the map
-will be `0`, `0.5`, `1`, `1.5`, `2`, and so on.
+如果你把 "zoomSnap "的值设置为 "0.5"，那么地图的有效缩放级别为
+将是 `0`、`0.5`、`1`、`1.5`、`2`，以此类推。
 
-If you set a value of `0.1`, the valid zoom levels of the map will be `0`, `0.1`,
-`0.2`, `0.3`, `0.4`, and so on.
+如果你设置的值是 "0.1"，地图的有效缩放级别将是 `0`、`0.1`，
+`0.2`，`0.3`，`0.4`，以此类推。
 
-The following example uses a `zoomSnap` value of `0.25`:
+以下示例使用 `zoomSnap` 值 `0.25`：
 
 	var map = L.map('map', {
 		zoomSnap: 0.25
@@ -221,40 +203,32 @@ The following example uses a `zoomSnap` value of `0.25`:
 
 {% include frame.html url="example-fractional.html" %}
 
-As you can see, Leaflet will only load the tiles for zoom levels `0` or `1`, and will scale them
-as needed.
+如您所见，Leaflet 只会加载缩放级别 `0` 或 `1` 的图块，并根据需要缩放它们。
 
-Leaflet will <em>snap</em> the zoom level to the closest valid one. For example,
-if you have `zoomSnap: 0.25` and you try to do `map.setZoom(0.8)`, the zoom will
-snap back to `0.75`. The same happens with `map.fitBounds(bounds)`, or when ending
-a pinch-zoom gesture on a touchscreen.
+Leaflet 将 <em>snap</em> 缩放到最接近的有效级别。比如说: 如果你有 `zoomSnap: 0.25`，而你试图做 `map.setZoom(0.8)`，缩放会 缩回到 `0.75`。`map.fitBounds(bounds)` 在结束
+触摸屏上的捏合缩放手势时也会发生同样的情况。
 
-`zoomSnap` can be set to zero. This means that Leaflet will <strong>not</strong>
-snap the zoom level.
+`zoomSnap` 可以设置为零。这意味着 Leaflet 将不会捕捉缩放级别。
 
-There is another important map option related to `zoomSnap`: [the `zoomDelta` option](/reference.html#map-zoomdelta).
-This controls how many zoom levels to zoom in/out when using the zoom buttons
-(from the default [`L.Control.Zoom`](/reference.html#control-zoom))
-or the `+`/`-` keys in your keyboard.
+还有涉及到另一个重要的地图选项 `zoomSnap`：[`zoomDelta` 选项](/reference.html#map-zoomdelta)。这控制了使用缩放按钮（默认为 [`L.Control.Zoom`](/reference.html#control-zoom)）或键盘中的+/-键时要放大/缩小的缩放级别。
 
-For the mousewheel zoom, the [`wheelPxPerZoomLevel`](/reference.html#map-wheelpxperzoomlevel)
-option controls how fast the mousewheel zooms in or out.
+对于鼠标滚轮缩放，该 [`wheelPxPerZoomLevel`](/reference.html#map-wheelpxperzoomlevel) 选项控制鼠标滚轮放大或缩小的速度。
 
-Here is an example with `zoomSnap` set to zero:
+这是一个 `zoomSnap` 设置为零的示例：
 
 	var map = L.map('map', {
 		zoomDelta: 0.25,
 		zoomSnap: 0
 	});
 
-Try the following, and see how the zoom level changes:
+尝试以下操作，看看缩放级别如何变化：
 
-* Pinch-zoom if you have a touchscreen
-* Zoom in/out with your mousewheel
-* Do a box zoom (drag with your mouse while pressing the `shift` key in your keyboard)
-* Use the zoom in/out buttons
+* 如果您有触摸屏，请捏合缩放
+* 用鼠标滚轮放大/缩小
+* 进行框缩放（按住 `shift` 键盘上的键的同时用鼠标拖动）
+* 使用放大/缩小按钮
 
 {% include frame.html url="example-delta.html" %}
 
 
-That concludes this tutorial. Now play with your zoom levels in your maps!
+本教程到此结束。现在，在你的地图中使用缩放比例试试吧！

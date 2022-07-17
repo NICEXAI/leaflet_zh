@@ -3,13 +3,13 @@ layout: tutorial_v2
 title: Extending Leaflet, Class Theory
 ---
 
-## Extending Leaflet
+## 扩展 Leaflet
 
-Leaflet has literally hundreds of plugins. These expand the capabilities of Leaflet: sometimes in a generic way, sometimes in a very use-case-specific way.
+Leaflet 有数以百计的插件，这些插件扩展了 Leaflet 的功能：有时是以一种通用的方式，有时是以一种非常具体的使用方式。
 
-Part of the reason there are so many plugins is that Leaflet is easy to extend. This tutorial will cover the most commonly used ways of doing so.
+有这么多插件的部分原因是 Leaflet 易于扩展。本教程将介绍最常用的方法。
 
-Please note that this tutorial assumes you have a good grasp of:
+请注意，本教程假设您已经很好地掌握了：
 
 * [JavaScript](https://developer.mozilla.org/en-US/Learn/JavaScript)
 * [DOM handling](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
@@ -18,36 +18,36 @@ Please note that this tutorial assumes you have a good grasp of:
 
 ## Leaflet architecture
 
-Let's have a look at a simplified UML Class diagram for Leaflet 1.0.0. There are more than 60 JavaScript classes, so the diagram is a bit big. Luckily we can make a zoomable image with a `L.ImageOverlay`:
+让我们看看 Leaflet 1.0.0 的简化 UML 类图。有 60 多个 JavaScript 类，所以图有点大。幸运的是，我们可以用 `L.ImageOverlay` 做一个可缩放的图片：
 
 {% include frame.html url="class-diagram.html" %}
 
 
-From a technical point of view, Leaflet can be extended in different ways:
+从技术角度来看，Leaflet 可以通过不同的方式进行扩展：
 
-* The most common: creating a new subclass of `L.Layer`, `L.Handler` or `L.Control`, with `L.Class.extend()`
-	* Layers move when the map is moved/zoomed
-	* Handlers are invisible and interpret browser events
-	* Controls are fixed interface elements
-* Including more functionality in an existing class with `L.Class.include()`
-	* Adding new methods and options
-	* Changing some methods
-	* Using `addInitHook` to run extra constructor code.
-* Changing parts of an existing class (replacing how a class method works) with `L.Class.include()`.
+* 最常用的方式是: 使用 `L.Class.extend()` 来创建一个新的 `L.Layer`, `L.Handler` 或者 `L.Control` 的子类
+	* 当地图移动/缩放时图层会移动
+	* 处理程序不可见并解释浏览器事件
+	* 控件是固定的界面元素
+* 用 `L.Class.include()` 在一个现有的类中加入更多的功能
+	* 添加新方法和选项
+	* 改变一些方法
+	* 使用 `addInitHook` 来运行额外的构造器代码
+* 用 `L.Class.include()` 改变一个现有类的部分内容（替换一个类方法的工作方式）。
 
-This tutorial covers some classes and methods available only in Leaflet 1.0.0. Use caution if you are developing a plugin for a previous version.
+本教程涵盖了一些仅在 Leaflet 1.0.0 中可用的类和方法，如果你正在为以前的版本开发一个插件，请谨慎行事。
 
 ## `L.Class`
 
-JavaScript is a bit of a weird language. It's not really an object-oriented language, but rather a [prototype-oriented language](https://en.wikipedia.org/wiki/Prototype-based_programming). This has made JavaScript historically difficult to use class inheritance in the classic OOP meaning of the term.
+JavaScript 是一种有点奇怪的语言。它并不是一种真正的面向对象的语言，而是一种[面向原型的语言](https://en.wikipedia.org/wiki/Prototype-based_programming)，这使得 JavaScript 在历史上难以使用经典 OOP 意义上的类继承。
 
-Leaflet works around this by having `L.Class`, which eases up class inheritance.
+Leaflet 通过 `L.Class` 来解决这个问题，它简化了类的继承。
 
-Even though modern JavaScript can use ES6 classes, Leaflet is not designed around them.
+尽管现代 JavaScript 可以使用 ES6 类，但 Leaflet 并不是围绕它们设计的。
 
 ### `L.Class.extend()`
 
-In order to create a subclass of anything in Leaflet, use the `.extend()` method. This accepts one parameter: a plain object with key-value pairs, each key being the name of a property or method, and each value being the initial value of a property, or the implementation of a method:
+要在 Leaflet 中创建任何内容的子类，请使用该 `.extend()` 方法。它接受一个参数：一个带有键值对的普通对象，每个键是属性或方法的名称，每个值是属性的初始值或方法的实现：
 
     var MyDemoClass = L.Class.extend({
     
@@ -64,15 +64,15 @@ In order to create a subclass of anything in Leaflet, use the `.extend()` method
     // This will output "42" to the development console
     console.log( myDemoInstance.myDemoMethod() );   
 
-When naming classes, methods and properties, adhere to the following conventions:
+在命名类、方法和属性时，请遵循以下约定：
     
-* Function, method, property and factory names should be in [`lowerCamelCase`](https://en.wikipedia.org/wiki/CamelCase).
-* Class names should be in [`UpperCamelCase`](https://en.wikipedia.org/wiki/CamelCase).
-* Private properties and methods start with an underscore (`_`). This doesn't make them private, just recommends developers not to use them directly.
+* 函数、方法、属性和工厂名称应使用 [`lowerCamelCase`](https://en.wikipedia.org/wiki/CamelCase)
+* 类名应使用 [`UpperCamelCase`](https://en.wikipedia.org/wiki/CamelCase)
+* 私有属性和方法以下划线（`_`）开头。这并不意味着它们是私有的，只是建议开发者不要直接使用它们
 
 ### `L.Class.include()`    
     
-If a class is already defined, existing properties/methods can be redefined, or new ones can be added by using `.include()`:
+如果已经定义了一个类，则可以重新定义现有的属性/方法，或者可以使用 `.include()` 方法添加新的属性/方法：
 
     MyDemoClass.include({
     
@@ -95,9 +95,9 @@ If a class is already defined, existing properties/methods can be redefined, or 
 
 ### `L.Class.initialize()`
     
-In OOP, classes have a constructor method. In Leaflet's `L.Class`, the constructor method is always named `initialize`.
+在 OOP 中，类有一个构造方法。在 Leaflet 的 `L.Class` 中，构造方法总是被命名为 `initialize` 。
 
-If your class has some specific `options`, it's a good idea to initialize them with `L.setOptions()` in the constructor. This utility function will merge the provided options with the default options of the class.
+如果您的类有一些特定的 `options`，最好 `L.setOptions()` 在构造函数中初始化它们。此实用程序函数会将提供的选项与类的默认选项合并。
 
 
     var MyBoxClass = L.Class.extend({
@@ -120,7 +120,7 @@ If your class has some specific `options`, it's a good idea to initialize them w
     console.log(instance.options.width); // Outputs "10"
     console.log(instance.options.height); // Outputs "1", the default
     
-Leaflet handles the `options` property in a special way: options available for a parent class will be inherited by a children class:.
+Leaflet 以一种特殊的方式处理 `options` 属性：父类的可用选项将被子类继承：
 
     var MyCubeClass = MyBoxClass.extend({
         options: {
@@ -135,15 +135,15 @@ Leaflet handles the `options` property in a special way: options available for a
     console.log(instance.options.depth); // Outputs "1"
 
 
-It's quite common for child classes to run the parent's constructor, and then their own constructor. In Leaflet this is achieved using `L.Class.addInitHook()`. This method can be used to "hook" initialization functions that run right after the class' `initialize()`, for example:
+子类运行父类的构造函数，然后再运行自己的构造函数是很常见的。在 Leaflet 中，这是用 `L.Class.addInitHook()` 实现的。这个方法可以用来 "hook" 初始化函数，在类 `initialize()` 之后直接运行，例如：
 
     MyBoxClass.addInitHook(function(){
         this._area = this.options.width * this.options.length;
     });
 
-That will run after `initialize()` is called (which calls `setOptions()`). This means that `this.options` exist and is valid when the init hook runs.
+这将在 `initialize()` 被调用后运行（调用 `setOptions()`）。这意味着 `this.options` 存在，并且在 init hook 运行时有效。
 
-`addInitHook` has an alternate syntax, which uses method names and can fill method arguments in:
+`addInitHook` 有另一种语法，它使用方法名，并可以填入方法参数：
 
     MyCubeClass.include({
         _calculateVolume: function(arg1, arg2) {
@@ -154,9 +154,9 @@ That will run after `initialize()` is called (which calls `setOptions()`). This 
     MyCubeClass.addInitHook('_calculateVolume', argValue1, argValue2);
     
 
-### Methods of the parent class
+### 父类的方法
 
-Calling a method of a parent class is achieved by reaching into the prototype of the parent class and using [`Function.call(…)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call). This can be seen, for example, in the code for `L.FeatureGroup`:
+调用父类的方法是通过进入父类的原型并使用 [`Function.call(...)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 来实现的。例如，在 `L.FeatureGroup` 的代码中可以看到这一点：
 
     L.FeatureGroup = L.LayerGroup.extend({
     
@@ -173,24 +173,24 @@ Calling a method of a parent class is achieved by reaching into the prototype of
         …
     });
 
-Calling the parent's constructor is done in a similar way, but using `ParentClass.prototype.initialize.call(this, …)` instead.
+以类似的方式调用父类的构造函数，使用 `ParentClass.prototype.initialize.call(this, ...)` 来代替。
     
     
-### Factories    
+### Factories 工厂函数
 
-Most Leaflet classes have a corresponding [factory function](https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29). A factory function has the same name as the class, but in `lowerCamelCase` instead of `UpperCamelCase`:
+大多数 Leaflet 类都有一个相应的[工厂函数](https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29)。工厂函数的名称与类相同，但它使用 `lowerCamelCase` 而不是 `UpperCamelCase`：
     
     function myBoxClass(name, options) {
         return new MyBoxClass(name, options);
     }
     
     
-### Naming conventions
+### 命名规范
 
-When naming classes for Leaflet plugins, please adhere to the following naming conventions:
+在为 Leaflet 插件命名类时，请遵守以下命名规范：
 
-* Never expose global variables in your plugin.
-* If you have a new class, put it directly in the `L` namespace (`L.MyPlugin`).
-* If you inherit one of the existing classes, make it a sub-property (`L.TileLayer.Banana`).
+* 永远不要在你的插件中暴露全局变量
+* 如果你有一个新的类，直接把它放在 `L` 命名空间（`L.MyPlugin`）
+* 如果你继承了一个现有的类，让它成为一个子属性（`L.TileLayer.Banana`）
 
 

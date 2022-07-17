@@ -12,38 +12,38 @@ iframe {
 
 <br/>
 
-WMS, short for [*web map service*](https://en.wikipedia.org/wiki/Web_Map_Service), is a popular way of publishing maps by professional GIS software (and seldomly used by non-GISers). This format is similar to map tiles, but more generic and not so well optimized for use in web maps. A WMS image is defined by the coordinates of its corners - a calculation that Leaflet does under the hood.
+WMS 是  [*web map service*](https://en.wikipedia.org/wiki/Web_Map_Service) 的缩写，是一种流行的通过专业 GIS 软件发布地图的方式（非 GIS 人员很少使用）。这种格式类似于地图瓦片，它虽然没有针对在 web 地图中的使用进行很好的优化，但更通用。WMS 图像由其角的坐标定义 - 通过 Leaflet 引起进行计算。
 
-TMS stands for [*tiled map service*](https://en.wikipedia.org/wiki/Tile_Map_Service), and is a map tiling standard more focused on web maps, very similar to the map tiles that Leaflet expects in a `L.TileLayer`.
+TMS 代表 [*tiled map service*](https://en.wikipedia.org/wiki/Tile_Map_Service)，是一种地图平铺标准，更侧重于网络地图，非常类似于 Leaflet 在 `L.TileLayer`。
 
-WMTS, for [*web map tile service*](https://en.wikipedia.org/wiki/Web_Map_Tile_Service), is the standard protocol for map tiles and serves map tiles directly usable in a `L.TileLayer`.
+WMTS 是 [*web map tile service*](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) 的意思，是地图瓦片的标准协议，为可直接用于 `L.TileLayer` 的地图瓦片服务。
 
 
-## WMS in Leaflet
+## Leaflet 中的 WMS
 
-When somebody publishes a WMS service, most likely they link to something called a `GetCapabilities` document. For this tutorial, we'll use the WMS offered by [*Mundialis*](https://www.mundialis.de) at http://ows.mundialis.de/services/service? . The service capabilities are described at the following URL:
+当有人发布一个 WMS 服务时，很可能他们会链接到一个叫做 "GetCapabilities" 的地址。在本教程中，我们将使用由 [*Mundialis*](https://www.mundialis.de) 提供的 WMS，网址为 http://ows.mundialis.de/services/service。下面的 URL 描述了服务功能：
 
 	http://ows.mundialis.de/services/service?request=GetCapabilities
 
-Leaflet does not understand WMS `GetCapabilities` documents. Instead, you have to create a `L.TileLayer.WMS` layer, provide the base WMS URL, and specify whatever WMS options you need.
+Leaflet 并不理解 WMS 的 `GetCapabilities` 文档。相反，因此你必须创建一个 `L.TileLayer.WMS` 图层，提供基本的 WMS URL，并指定你需要的任何 WMS 选项。
 
-The base WMS URL is simply the `GetCapabilities` URL, without any parameters, like so:
+基本 WMS URL 只是 `GetCapabilities` ，没有任何参数，如下所示：
 
 	http://ows.mundialis.de/services/service?
 
-And the way to use that in a Leaflet map is simply:
+在 Leaflet 地图中使用它的方法很简单：
 
 	var map = L.map(mapDiv, mapOptions);
 
 	var wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', wmsOptions).addTo(map);
 
-An instance of `L.TileLayer.WMS` needs at least one option: `layers`. Be careful, as the concept of "layer" in Leaflet is different from the concept of "layer" in WMS!
+一个实例 `L.TileLayer.WMS` 至少需要一个选项：`layers`. 请注意，Leaflet 中 `layer` 的概念与 WMS 中 `layer` 的概念不同！
 
-WMS servers define a set of *layers* in the service. These are defined in the `GetCapabilities` XML document, which most times is tedious and difficult to understand. Usually it's a good idea to use software such as [QGIS to see what layers are available in a WMS server](http://www.qgistutorials.com/en/docs/working_with_wms.html) to see the layer names available:
+WMS 服务器在服务中定义了一系列的图层（layers）,这些是在 `GetCapabilitiesXML` 文档中定义的，大多数时候它是乏味且难以理解的，通常使用 [QGIS](http://www.qgistutorials.com/en/docs/working_with_wms.html) 查看 WMS 服务器中可用的图层以及名称是个不错的选择：
 
 ![Discovering WMS layers with QGIS](qgis-wms-layers.png)
 
-We can see that the *Mundialis* WMS has a WMS layer named `TOPO-OSM-WMS` with a basemap. Let's see how it looks:
+我们可以看到 *Mundialis* WMS 有一个以 `TOPO-OSM-WMS`  底图命名的 WMS 图层。让我们看看它的样子：
 
 	var wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
 		layers: 'TOPO-OSM-WMS'
@@ -52,7 +52,7 @@ We can see that the *Mundialis* WMS has a WMS layer named `TOPO-OSM-WMS` with a 
 {% include frame.html url="wms-example1.html" %}
 
 
-Or we can try the `SRTM30-Colored-Hillshade` WMS layer:
+或者我们可以试试 `SRTM30-Colored-Hillshade` 的 WMS 图层：
 
 	var wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
 		layers: 'SRTM30-Colored-Hillshade'
@@ -61,17 +61,17 @@ Or we can try the `SRTM30-Colored-Hillshade` WMS layer:
 {% include frame.html url="wms-example2.html" %}
 
 
-The `layers` option is a comma-separated list of layers. If a WMS service has defined several layers, then a request for a map image can refer to more than one layer.
+该 `layers` 选项是以逗号分隔的图层列表。如果 WMS 服务定义了多个图层，则对地图图像的请求可以引用多个图层。
 
-For the example WMS server we're using, there is a `TOPO-WMS` WMS layer showing the world topography, and a `OSM-Overlay-WMS` WMS layer showing the names of places. The WMS server will compose both layers in one image if we request both, separated with a comma:
+对于我们使用的示例 WMS 服务器，有一个 `TOPO-WMS` 显示世界地形的 `OSM-Overlay-WMS` 图层和一个显示地名的 WMS 图层。如果我们请求两个图层，WMS 服务器会将两个图层组合在一个图像中，用逗号分隔：
 
 	var topographyAndPlaces = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
 		layers: 'TOPO-WMS,OSM-Overlay-WMS'
 	}).addTo(map);
 
-Note this will request *one* image to the WMS server. This is different than creating a `L.TileLayer.WMS` for the topography, another one for the places, and adding them both to the map. In the first case, there is one image request and it's the WMS server who decides how to compose (put on top of each other) the image. In the second case, there would be two image requests and it's the Leaflet code running in the web browser who decides how to compose them.
+请注意，这将向 WMS 服务器请求一张图像。这不同于 `L.TileLayer.WMS` 为 **topography** 创建一个图层，为 **places** 创建另一个图层，然后将它们都添加到地图中。在第一种情况下，有一个图像请求，由 WMS 服务器决定如何合成（置于彼此之上）图像。在第二种情况下，将有两个图像请求，由运行在 Web 浏览器中的 Leaflet 代码决定如何组合它们。
 
-If we combine this with the [layers control](/examples/layers-control.html), then we can build a simple map to see the difference:
+如果我们将其与 [layers control 图层控件](/examples/layers-control.html)结合起来，那么我们可以构建一个简单的地图来查看差异：
 
 	var basemaps = {
 		Topography: L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
@@ -95,18 +95,18 @@ If we combine this with the [layers control](/examples/layers-control.html), the
 
 	basemaps.Topography.addTo(map);
 
-Change to the "Topography, then places" option, so you can see the places "on top" of the topography, but the WMS server is clever enough to display building labels on top of that. It's up to the WMS server how to compose layers when asked for many.
+更改为 **Topography**，然后切换为 **places** 选项，这样您就可以看到地形**顶部**的位置，但 WMS 服务器足够聪明，可以在其上显示建筑标签。当需要多个图层时，由 WMS 服务器决定如何组合图层。
 
 {% include frame.html url="wms-example3.html" %}
 
 
-### Notes to GIS users of WMS services
+### WMS 服务的 GIS 用户注意事项
 
-From a GIS point of view, WMS handling in Leaflet is quite basic. There's no `GetCapabilities` support, no legend support, and no `GetFeatureInfo` support.
+从 GIS 的角度来看，Leaflet 中的 WMS 处理是非常基础的。没有 `GetCapabilities`  支持，没有  legend 支持，也没有 `GetFeatureInfo` 支持。
 
-`L.TileLayer.WMS` has extra options, which can be found in [Leaflet's API documentation](/reference.html#tilelayer-wms). Any option not described there will be passed to the WMS server in the `getImage` URLs.
+`L.TileLayer.WMS` 有额外的选项，可以在 [Leaflet 的 API 文档]（/reference.html#tilelayer-wms）中找到。任何没有描述的选项都会在 `getImage` URLs中传递给 WMS 服务器。
 
-Also note that Leaflet supports very few [coordinate systems](https://en.wikipedia.org/wiki/Spatial_reference_system): `CRS:3857`, `CRS:3395` and `CRS:4326` (See the documentation for `L.CRS`). If your WMS service doesn't serve images in those coordinate systems, you might need to use [Proj4Leaflet](https://github.com/kartena/Proj4Leaflet) to use a different coordinate system in Leaflet. Other than that, just use the right CRS when initializing your map, and any WMS layers added will use it:
+还要注意 Leaflet 支持很少的[坐标系](https://en.wikipedia.org/wiki/Spatial_reference_system)：`CRS:3857`，`CRS:3395` 和 `CRS:4326`（见 `L.CRS` 的文档）。如果您的 WMS 服务不提供这些坐标系中的图像，则您可能需要使用 [Proj4Leaflet](https://github.com/kartena/Proj4Leaflet) 在 Leaflet 中使用不同的坐标系。除此之外，只需在初始化地图时使用正确的 CRS，添加的任何 WMS 图层都将使用它：
 
 	var map = L.map('map', {
 		crs: L.CRS.EPSG4326
@@ -119,34 +119,34 @@ Also note that Leaflet supports very few [coordinate systems](https://en.wikiped
 {% include frame.html url="wms-example-crs.html" %}
 	
 	
-## TMS in Leaflet
+## Leaflet 中的 TMS
 
-Leaflet doesn't have explicit support for TMS services, but the tile naming structure is so similar to the common `L.TileLayer` naming scheme, that displaying a TMS service is almost trivial.
+Leaflet 没有明确支持 TMS 服务，但是瓦片（Tile）的命名结构与常见的 `L.TileLayer` 命名方案非常相似，所以显示TMS服务几乎是很简单的事情。
 
-Let's consider a TMS server with the following endpoint:
+让我们尝试一下具有以下端点的 TMS 服务：
 
 	http://base_url/tms/1.0.0
 
-Checking the [MapCache help about TMS](http://mapserver.org/mapcache/services.html) and the [TMS specification](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification) you can see that the URL for a map tile in TMS looks like:
+查看 [TMS 关于 MapCache 的帮助文档](http://mapserver.org/mapcache/services.html) 以及 [TMS 规范](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification)，您可以看到 TMS 中地图图块的 URL 如下所示：
 
 	http://base_url/tms/1.0.0/ {tileset} / {z} / {x} / {y} .png
 
-To use the TMS services as a `L.TileLayer`, we can check the capabilities document (the same as the base endpoint, in our case [`http://base_url/tms/1.0.0`](http://base_url/tms/1.0.0)) to see what `tileset`s are available, and build our base URLs:
+如果要将 TMS 服务用作 `L.TileLayer`，我们可以检查功能文档（与 base endpoint 相同，在我们的例子中是[`http://base_url/tms/1.0.0`](http://base_url/tms/1.0.0)），以查看有哪些 `tileset` 可用，并建立我们并构建我们的基本 URL：
 
 	http://base_url/tms/1.0.0/{example_layer}@png/{z}/{x}/{y}.png
 
 
-And use the `tms:true` option when instantiating the layers, like so:
+并在实例化图层时使用 `tms:true` 选项，像这样：
 
 	var tms_example = L.tileLayer('http://base_url/tms/1.0.0/example_layer@png/{z}/{x}/{y}.png', {
 		tms: true
 	}).addTo(map);
 
 
-A new feature in **Leaflet 1.0** is the ability to use `{-y}` in the URL instead of a `tms: true` option, e.g.:
+在 **Leaflet 1.0** 中的一个新功能是能够在 URL 中使用 `{-y}` 而不是 `tms: true` 选项，例如：
 
 	var layer = L.tileLayer('http://base_url/tms/1.0.0/tileset/{z}/{x}/{-y}.png');
 
-The `tms: true` option (in Leaflet 0.7) or `{-y}` (in Leaflet 1.0) are needed because the origin of coordinates of vanilla `L.TileLayer`s is the top left corner, so the Y coordinate goes *down*. In TMS, the origin of coordinates is the *bottom* left corner so the Y coordinate goes *up*.
+我们需要 `tms: true`  选项（在 Leaflet 0.7 中）或 `{-y}`（在 Leaflet 1.0 中），因为 `L.TileLayer` 的坐标原点是左上角，所以 Y 坐标**向下**。在TMS中 坐标的原点是左下角，所以 Y 坐标是**向上**的。
 
-Besides the difference in the `y` coordinate and the discovery of tilesets, TMS services serve tiles exactly in the way that `L.TileLayer` expects.
+除了 `y` 坐标和 `tilesets` 发现的差异之外，TMS 服务完全按照 `L.TileLayer` 预期的方式提供瓦片。
