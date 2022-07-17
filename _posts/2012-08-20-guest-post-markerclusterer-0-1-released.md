@@ -1,38 +1,38 @@
 ---
 layout: post
-title: Leaflet.MarkerCluster 0.1 发布
-description: Leaflet.MarkerCluster，一个美观、快速、可定制的插件，用于减少拥挤地图上的视觉混乱
+title: Leaflet.MarkerCluster 0.1 Released
+description: Introducing Leaflet.MarkerCluster, a beautiful, fast, customizable plugin to reduce the visual clutter on crowded maps.
 author: Dave Leaver
 authorsite: https://github.com/danzel/
 ---
 
-_这是一篇来自 Dave Leaver 的客座文章，他是一位活跃的 Leaflet 贡献者（特别是，他实现了 0.4 缩放动画的改进），也是目前最好的标记聚类插件的作者，在这篇文章中介绍了这个插件。_
+_This is a guest post from Dave Leaver, an active Leaflet contributor (particularly, he implemented 0.4 zoom animation improvements) and also the author of the best marker clustering plugin out there, which is presented in this post._
 
-几乎所有拥有一张带有标记的地图的人，最终都会出现这些标记重叠的情况。我在 <a href="http://www.smartrak.co.nz/" title="Smartrak GPS Fleet Tracking">Smartrak</a> 的日常工作中，我们经常有客户在地图上有成千上万的点。当你把它放大时，这些标记都会重叠，使地图看起来很乱很拥挤。还有一种情况是，即使在最大的缩放级别上，标记也会重叠，这就使得无法与它们进行互动。另外，在地图上有大量的标记，通常最终会将性能降低到一个不可接受的水平。
+Almost anyone who has a map with markers on it will eventually end up having those markers overlap. At my day job at <a href="http://www.smartrak.co.nz/" title="Smartrak GPS Fleet Tracking">Smartrak</a> we regularly have customers with thousands of points on the map. When you zoom it out, these markers all overlap and make the map look messy and crowded. There are also cases where the markers overlap even on the maximum zoom level, which makes interacting with them impossible. Also, having a large amount of markers on the map usually ends up lowering performance to an unacceptable level.
 
-为了改善这一点，许多网站使用了标记聚类，这是一种将每个区段上彼此相近的标记分组的技术。这方面的一个好例子是 <a href="http://www.redfin.com/homes-for-sale">Redfin</a> 。我们需要类似的东西，但是在 Leaflet 中。本着开放源代码的精神，我们开发并发布了我们的解决方案，以便每个人都能利用它。因此，我们自豪地介绍 <a href="https://github.com/leaflet/Leaflet.markercluster">Leaflet.MarkerCluster</a> 。
+To improve this, many sites use marker clustering, a technique of grouping markers that are close to each other together on each zom level. One good example of this is <a href="http://www.redfin.com/homes-for-sale">Redfin</a>. We needed something like this, but in Leaflet. In the spirit of open source we developed and released our solution so that everyone can take advantage of it. So we proudly present <a href="https://github.com/leaflet/Leaflet.markercluster">Leaflet.MarkerCluster</a>.
 
 <div id="map" class="map" style="height: 320px"></div>
 
 {:#plugin-features}
-### 特点
+### Features
 
-集群器有各种伟大的内置行为:
+The clusterer has all sorts of great built in behaviour:
 
- * 一切都有出色的动画效果。当你放大和缩小时，你可以合乎逻辑地看到哪些集群变成了哪些标记。
- * 它的速度非常快，所以例如 [聚类 50000 点](https://leaflet.github.com/Leaflet.markercluster/example/marker-clustering-realworld.50000.html) 并不是问题。另外，所有繁重的计算都发生在最初的页面加载上，在这之后，地图就能顺利工作了。
- * 不需要聚类的标记是不需要的，而且在相关的缩放级别上也会看到。
- * 当你把鼠标放在一个群组上时，该群组内的标记的边界就会显示出来。
- * 点击一个群集将把你放大到它的子集的范围内。
- * 在底部的缩放级别，如果仍然有集群，你可以点击它们来 "spiderfy"，这使得与集群中的单个标记的互动成为可能（基于 <a href="https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet">jawj 的 Overlapping MarkerSpidifer</a> ）。
- * 为了提高性能，离视口超过一个屏幕宽度的集群和标记将从地图上删除。
- * 与核心 Leaflet 一样，所有东西都能在移动和桌面浏览器上运行，并一直测试到 IE6 。
- * 支持在被添加到地图后添加和删除标记（见下面的最佳做法！）。
- * 它是高度可定制的，允许你轻松改变集群的外观，禁用某些功能，并在集群互动上添加自定义行为。
+ * Everything is brilliantly animated. As you zoom in and out you can logically see which clusters have become which markers.
+ * It is very fast, so for example [clustering 50,000 points](https://leaflet.github.com/Leaflet.markercluster/example/marker-clustering-realworld.50000.html) isn't a problem. Also, all the heavy calculation happens on initial page load, and after this the map works smoothly.
+ * Markers that don't need clustering aren't and will be visible at the relevant zoom levels.
+ * When you mouse over a cluster the bounds of the marker within that cluster are shown.
+ * Clicking a cluster will zoom you in to the bounds of its children.
+ * At the bottom zoom level if there are still clusters you can click on them to "spiderfy" them, which makes interaction with individual markers within the cluster possible (based on <a href="https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet">jawj's Overlapping MarkerSpidifer</a>).
+ * Cluster and markers that are further than a screen width from the view port are removed from the map to increase performance.
+ * As with core Leaflet, everything works on both mobile and desktop browsers and is tested all the way back to IE6.
+ * Supports adding and removing markers after being added to the map (see Best Practices below!).
+ * It is highly customizable, allowing you to easily change the appearance of clusters, disable certain features and add custom behavior on cluster interaction.
 
-### 使用方法
+### Usage
 
-使用 Marker Clusterer 很简单，只要用 `L.MarkerClusterGroup` 替换你现有的 [LayerGroup](./././examples/layers-control.html) 用法即可：
+Using the Marker Clusterer is easy, just replace your existing [LayerGroup](../../../examples/layers-control.html) usage with an `L.MarkerClusterGroup`:
 
     var markers = new L.MarkerClusterGroup();
 
@@ -41,45 +41,45 @@ _这是一篇来自 Dave Leaver 的客座文章，他是一位活跃的 Leaflet 
 
 	map.addLayer(markers);
 
-你也可以对单个标记和集群使用所有的 [FeatureGroup 事件](.../.../reference.html#featuregroup) （另外还有 `clusterclick` ）。
+You can also use all of the [FeatureGroup events](../../../reference.html#featuregroup) (and additionally `clusterclick`) for both individual markers and clusters.
 
 	markers.on('clusterclick', function (a) { alert('Cluster Clicked'); });
 	markers.on('click', function (a) { alert('Marker Clicked'); });
 
-### 最佳实践
+### Best Practices
 
- * 为了从聚类器中获得最佳性能，你应该在将其添加到地图之前将所有的标记添加到聚类器中（就像我们在例子中做的那样）。
- * 如果你要移动一个在 L.MarkerClusterGroup 中的标记，你必须先移除它，然后移动它，再重新添加它。如果你在 MarkerClusterGroup 中移动它，我们就无法跟踪它，这个标记就会丢失。
- * 尽管聚类器支持在地图上添加和删除标记，但它的性能不如在不在地图上添加标记时好。如果你需要对一个 `MarkerClusterGroup`  中的标记进行大规模的更新，你可能想把它从地图上删除，改变标记，然后再重新添加它。
+ * To get the best performance from the clusterer, you should add all of your markers to it before adding it to the map (like we did in the example).
+ * If you are going to move a marker that is in a L.MarkerClusterGroup you must remove it first, then move it, then re-add it. If you move it while it is in the MarkerClusterGroup we can't track it and that marker will become lost.
+ * Although the clusterer supports having markers added and removed from it while it is on the map it does not perform as well as when they are added while it is not on the map. If you need to do a large update to the markers in a `MarkerClusterGroup` you may want to remove it from the map, change the markers then re-add it.
 
-### 获取它
+### Get It
 
-你可以在 <a href="https://github.com/leaflet/Leaflet.markercluster/downloads">github 下载页面</a> 上下载最新版本。
+You can download the latest release on the <a href="https://github.com/leaflet/Leaflet.markercluster/downloads">github download page</a>.
 
-### 技术要点
+### The Technical Bits
 
-底层聚类算法（ `MarkerClusterGroup._cluster` ）是普通的贪婪聚类。
+The underlying clustering algorithm (`MarkerClusterGroup._cluster`) is plain greedy clustering.
 
 {: .no-highlight}
     foreach marker
-        如果在聚类距离内有一个聚类，就加入它。
-        否则，如果在聚类距离内有一个未聚类的标记，就与它形成一个聚类。
+        if there is a cluster within the clustering distance, join it.
+        else if there is an unclustered marker within the clustering distance, form a cluster with it.
 
-第一个聚类步骤是针对最大（最底层）的缩放级别，然后我们对所有产生的标记和聚类进行聚类，生成下一个向上的缩放级别，以此类推，直到我们达到顶部。
-这些集群被存储在一棵树上（一个集群包含它的子集群），具有良好的地理空间质量。我们使用这棵树来优化识别在任何特定缩放级别下屏幕上有哪些标记和集群。
+The first clustering step we do for the maximum (bottom most) zoom level, we then cluster all of the resulting markers and clusters to generate the next zoom level up and so on until we have reached the top.
+These clusters are stored in a tree (A cluster contains its child clusters) with good geospatial qualities. We use this tree to optimise identifying what markers and clusters are on screen at any particular zoom level.
 
 #### L.DistanceGrid
 
-`L.DistanceGrid` 在聚类时提供了一些不错的优化（由 [Vladimir](http://agafonkin.com/en/) 贡献，Leaflet 维护者）。
+`L.DistanceGrid` provides some nice optimization when clustering (contributed by [Vladimir](http://agafonkin.com/en/), Leaflet maintainer).
 
-为了对标记进行聚类，我们需要将每个标记与其他每个标记进行比较，以尝试形成一个聚类。
-为了使其更快，我们需要减少我们需要比较的标记的集合。`DistanceGrid` 通过将所有标记放在一个大小与我们需要搜索的距离相同的网格上来实现。然后，当我们寻找一个要聚类的标记时，我们只需要看我们所在的网格方块和它的近邻的标记。这可能是一个相当大的性能优势，因为我们只看我们有可能形成集群的标记。( <a href="https://github.com/leaflet/Leaflet.markercluster/pull/29">查看数字的初始 PR</a> )
+To cluster the markers, we need to compare every marker with every other marker to try form a cluster.
+To make this quicker, we need reduce the set of markers we need to compare with. `DistanceGrid` does this by putting all markers on a grid sized the same as the distance we need to search. Then, when looking for a marker to cluster with, we only need to look at markers in the grid square we are in and its immediate neighbours. This can be quite a big performance win as we only look at markers that we are likely to form a cluster with. (<a href="https://github.com/leaflet/Leaflet.markercluster/pull/29">check out the initial PR for numbers</a>)
 
-### 结语
+### Closing Words
 
-我希望你喜欢使用聚类器，并从中获得你想要的一切。如果你在公共网站上使用它，请  <a href="mailto:danzel@localhost.geek.nz">给我发一封邮件</a>  ，这样我可以检查一下，并有可能将其链接到 github 网站上。
+I hope you enjoy using the clusterer and get everything you want out of it. If you do use it in a public site please <a href="mailto:danzel@localhost.geek.nz">throw me an email</a> so I can check it out and potentially link it on the github site.
 
-如果你有任何问题，也请在 <a href="https://github.com/leaflet/Leaflet.markercluster">github 页面</a> 上记录一个错误。
+If you have any issues also please log a bug on <a href="https://github.com/leaflet/Leaflet.markercluster">the github page</a>.
 
 Enjoy!<br />
 Dave Leaver.

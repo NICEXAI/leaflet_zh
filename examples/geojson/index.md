@@ -3,19 +3,19 @@ layout: tutorial_v2
 title: Using GeoJSON with Leaflet
 ---
 
-<h3>在 Leaflet 中使用 GeoJSON</h3>
+<h2>Using GeoJSON with Leaflet</h2>
 
-<p>GeoJSON 正在成为许多 GIS 技术和服务中非常流行的数据格式--它简单、轻量、直接，而且 Leaflet 在处理 GeoJSON 方面也相当出色。在本教程中，你将学习如何创建并与由 <a href="https://tools.ietf.org/html/rfc7946">GeoJSON</a> 对象创建的矢量地图进行交互。</p>
+<p>GeoJSON is a very popular data format among many GIS technologies and services — it's simple, lightweight, straightforward, and Leaflet is quite good at handling it. In this example, you'll learn how to create and interact with map vectors created from <a href="https://tools.ietf.org/html/rfc7946">GeoJSON</a> objects.</p>
 
 {% include frame.html url="example.html" %}
 
-<h3>关于 GeoJSON</h3>
+<h3>About GeoJSON</h3>
 
-<p>根据 <a href="https://tools.ietf.org/html/rfc7946">GeoJSON 规范（RFC 7946）</a>：</p>
+<p>According to <a href="https://tools.ietf.org/html/rfc7946">GeoJSON Specification (RFC 7946)</a>:</p>
 
-<blockquote>GeoJSON 是一种用于编码各种地理数据结构的格式[...]。一个 GeoJSON 对象可以代表一个空间区域（Geometry），一个有空间界限的实体（Feature），或者一个特征列表（FeatureCollection）。GeoJSON支持以下几何体类型。点、线字符串、多边形、多点、多线字符串、多多边形和几何体集合。GeoJSON 中的特征包含一个几何对象和额外的属性，而特征集合则包含一个特征列表。</blockquote>
+<blockquote>GeoJSON is a format for encoding a variety of geographic data structures […]. A GeoJSON object may represent a region of space (a Geometry), a spatially bounded entity (a Feature), or a list of Features (a FeatureCollection). GeoJSON supports the following geometry types: Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon, and GeometryCollection. Features in GeoJSON contain a Geometry object and additional properties, and a FeatureCollection contains a list of Features.</blockquote>
 
-<p>Leaflet 支持上述所有的 GeoJSON 类型，但是 <a href="https://tools.ietf.org/html/rfc7946#section-3.2">Features</a> 和 <a href="https://tools.ietf.org/html/rfc7946#section-3.3">FeatureCollections</a> 效果最好，因为它们允许你用一组属性来描述特征。我们甚至可以使用这些属性来为我们的 Leaflet 向量设置样式。下面是一个简单的 GeoJSON feature 的例子：</p>
+<p>Leaflet supports all of the GeoJSON types above, but <a href="https://tools.ietf.org/html/rfc7946#section-3.2">Features</a> and <a href="https://tools.ietf.org/html/rfc7946#section-3.3">FeatureCollections</a> work best as they allow you to describe features with a set of properties. We can even use these properties to style our Leaflet vectors. Here's an example of a simple GeoJSON feature:</p>
 
 <pre><code>var geojsonFeature = {
 	"type": "Feature",
@@ -31,13 +31,13 @@ title: Using GeoJSON with Leaflet
 };
 </code></pre>
 
-<h3>GeoJSON 图层</h3>
+<h3>The GeoJSON layer</h3>
 
-<p>GeoJSON 对象是通过 <a href="/reference.html#geojson">GeoJSON 图层</a>添加到地图上的。要创建它并将其添加到地图上，我们可以使用以下代码：</p>
+<p>GeoJSON objects are added to the map through a <a href="/reference.html#geojson">GeoJSON layer</a>. To create it and add it to a map, we can use the following code:</p>
 
 <pre><code>L.geoJSON(geojsonFeature).addTo(map);</code></pre>
 
-<p>GeoJSON 对象也可以作为一个有效的 GeoJSON 对象的数组来传递。</p>
+<p>GeoJSON objects may also be passed as an array of valid GeoJSON objects.</p>
 
 <pre><code>var myLines = [{
 	"type": "LineString",
@@ -48,17 +48,17 @@ title: Using GeoJSON with Leaflet
 }];
 </code></pre>
 
-<p>另外，我们可以创建一个空的 GeoJSON 图层，并将其分配给一个变量，这样我们就可以在以后向其添加更多的特征。</p>
+<p>Alternatively, we could create an empty GeoJSON layer and assign it to a variable so that we can add more features to it later.</p>
 
 <pre><code>var myLayer = L.geoJSON().addTo(map);
 myLayer.addData(geojsonFeature);
 </code></pre>
 
-<h3>选项</h3>
+<h3>Options</h3>
 
 <h4>style</h4>
 
-<p><code>style</code>选项可用于以两种不同的方式为特征设置样式。首先，我们可以传入一个简单的对象，以相同的方式对所有路径（折线和多边形）进行样式处理：</p>
+<p>The <code>style</code> option can be used to style features two different ways. First, we can pass a simple object that styles all paths (polylines and polygons) the same way:</p>
 
 <pre><code>var myLines = [{
 	"type": "LineString",
@@ -78,7 +78,7 @@ L.geoJSON(myLines, {
 	style: myStyle
 }).addTo(map);</code></pre>
 
-<p>另外，我们也可以传递一个函数，根据单个特征的属性来确定其样式。在下面的例子中，我们检查了 "party "属性，并相应地设计了我们的多边形：</p>
+<p>Alternatively, we can pass a function that styles individual features based on their properties. In the example below we check the "party" property and style our polygons accordingly:</p>
 
 <pre><code>var states = [{
 	"type": "Feature",
@@ -119,9 +119,9 @@ L.geoJSON(states, {
 
 <h4>pointToLayer</h4>
 
-<p>点的处理方式与多线和多边形不同。默认情况下，GeoJSON 点会画出简单的标记。我们可以通过在创建 GeoJSON 图层时在 <a href="/reference.html#geojson">GeoJSON 选项</a>对象中传递一个 <code>pointToLayer</code> 函数来改变这一点。这个函数会传递一个 <a href="/reference.html#latlng">LatLng</a>，并且应该返回一个 ILayer 的实例，在这种情况下可能是 <a href="/reference.html#marker">Marker</a> 或者 <a href="/reference.html#circlemarker">CircleMarker</a>。</p>
+<p>Points are handled differently than polylines and polygons. By default simple markers are drawn for GeoJSON Points. We can alter this by passing a <code>pointToLayer</code> function in a <a href="/reference.html#geojson">GeoJSON options</a> object when creating the GeoJSON layer. This function is passed a <a href="/reference.html#latlng">LatLng</a> and should return an instance of ILayer, in this case likely a <a href="/reference.html#marker">Marker</a> or <a href="/reference.html#circlemarker">CircleMarker</a>.</p>
 
-<p>这里我们使用 <code>pointToLayer</code> 选项来创建一个 CircleMarker：</p>
+<p>Here we're using the <code>pointToLayer</code> option to create a CircleMarker:</p>
 
 <pre><code>var geojsonMarkerOptions = {
 	radius: 8,
@@ -138,11 +138,11 @@ L.geoJSON(someGeojsonFeature, {
 	}
 }).addTo(map);</code></pre>
 
-<p>我们也可以在这个例子中设置 <code>style</code> 属性&mdash; 如果你在 <code>pointToLayer</code> 函数里面创建了一个像圆一样的矢量层，Leaflet 会很聪明地将样式应用到 GeoJSON Point。</p>
+<p>We could also set the <code>style</code> property in this example &mdash; Leaflet is smart enough to apply styles to GeoJSON points if you create a vector layer like circle inside the <code>pointToLayer</code> function.</p>
 
 <h4>onEachFeature</h4>
 
-<p><code>onEachFeature</code> 选项是一个函数，在将其添加到 GeoJSON 图层之前，会对每个 Feature 进行调用。使用这个选项的一个常见原因是在点击地物的时候给它们附加一个弹出窗口。</p>
+<p>The <code>onEachFeature</code> option is a function that gets called on each feature before adding it to a GeoJSON layer. A common reason to use this option is to attach a popup to features when they are clicked.</p>
 
 <pre><code>function onEachFeature(feature, layer) {
 	// does this feature have a property named popupContent?
@@ -170,9 +170,9 @@ L.geoJSON(geojsonFeature, {
 
 <h4>filter</h4>
 
-<p><code>filter</code> 选项可用于控制 GeoJSON feature 的可见性。为了达到这个目的，我们传递一个函数作为 <code>filter</code> 选项。这个函数为您的 GeoJSON 图层中的每个 feature 被调用，并被传递给 <code>feature</code> 和 code>layer</code>。然后你可以利用特征的属性值，通过返回 <code>true</code> 或 <code>false</code> 来控制可见性。</p>
+<p>The <code>filter</code> option can be used to control the visibility of GeoJSON features. To accomplish this we pass a function as the <code>filter</code> option. This function gets called for each feature in your GeoJSON layer, and gets passed the <code>feature</code> and the <code>layer</code>. You can then utilise the values in the feature's properties to control the visibility by returning <code>true</code> or <code>false</code>.</p>
 
-<p>在下面的例子中，"Busch Field "将不会显示在地图上。</p>
+<p>In the example below "Busch Field" will not be shown on the map.</p>
 
 <pre><code>var someFeatures = [{
 	"type": "Feature",
@@ -202,4 +202,4 @@ L.geoJSON(someFeatures, {
 	}
 }).addTo(map);</code></pre>
 
-<p>查看<a href="example.html">示例页面</a>，详细了解 GeoJSON 图层的功能。</p>
+<p>View the <a href="example.html">example page</a> to see in detail what is possible with the GeoJSON layer.</p>

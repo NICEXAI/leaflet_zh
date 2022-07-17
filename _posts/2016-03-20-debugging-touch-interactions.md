@@ -1,53 +1,53 @@
 ---
 layout: post
-title: 调试触控的交互
-description: 有时候你需要创建一个新的工具来调试 Leaflet
+title: Debugging touch interactions
+description: To debug Leaflet, sometimes you need to create a new tool.
 author: Iván Sánchez
 authorsite: http://ivan.sanchezortega.es
 ---
 
 
-大多数时候，修复 Leaflet 代码中的错误是很容易的。代码很简单，容易阅读(大部分情况下)，结构良好。代码惯例和单元测试使新人很容易尝试对核心代码进行一些修改。在过去的几个月里，我们向 [Your First PR](https://yourfirstpr.github.io/) 的朋友们发送了一些简单的错误报告——我们喜欢看到第一次来的人对 Leaflet 的修复做出贡献!
+Most of the time, fixing bugs in the Leaflet code is a breeze. The code is simple, easy to read (for the most part) and well structured. Code conventions and unit tests make it easy for newcomers to try some modifications to the core code. During the past few months we've sent a few simple bug reports to the folks at [Your First PR](https://yourfirstpr.github.io/) - we love to see first-timers contributing fixes to Leaflet!
 
 
-维护、开发像 Leaflet 这样的 javascript 库的一些困难是要确保所有东西都能在每一个主要的浏览器上运行。一个在 Ubuntu 桌面上的 Firefox 上运行的技术，在 Macbook 上的 Safari 上可能会出现故障；一个在 Windows 10 上的 Edge 上运行的技术，在 Android 上的 Chrome 上可能会完全失效。
+Some of the difficulties of maintaining/developing a javascript library like Leaflet is making sure that everything works on every major browser out there. A technique that works on Firefox on a Ubuntu desktop might result in glitches in Safari on a Macbook; something that works in Edge on Windows 10 might break completely in Chrome on Android.
 
-幸运的是，通过查看代码中的 [对 `L.Browser` 的引用](https://github.com/search?q=Browser+repo%3ALeaflet%2FLeaflet+language%3AJavaScript+extension%3Ajs+path%3A%2Fsrc&ref=searchresults&type=Code&utf8=%E2%9C%93) ，可以轻易看到 Leaflet 中所有的浏览器专用黑客。
+Fortunately, all of the browser-specific hacks in Leaflet can be easily seen by looking at the [references to `L.Browser`](https://github.com/search?q=Browser+repo%3ALeaflet%2FLeaflet+language%3AJavaScript+extension%3Ajs+path%3A%2Fsrc&ref=searchresults&type=Code&utf8=%E2%9C%93) in the code.
 
-这有时会导致一些 [不理想的代码](https://github.com/Leaflet/Leaflet/blob/master/src/dom/DomEvent.DoubleTap.js#L65)：
+This can lead to somewhat [undesirable code](https://github.com/Leaflet/Leaflet/blob/main/src/dom/DomEvent.DoubleTap.js#L65) sometimes:
 
-<pre><code class="javascript">    // 在一些平台上（特别是 win10 上的 chrome + 触摸屏 + 鼠标）,
-    // 浏览器不会触发 touchend / pointerup 事件，但会触发
-    // 原生的双击。见 #4127 。
+<pre><code class="javascript">    // On some platforms (notably, chrome on win10 + touchscreen + mouse),
+    // the browser doesn't fire touchend/pointerup events but does fire
+    // native dblclicks. See #4127.
     if (!L.Browser.edge) {
     	obj.addEventListener('dblclick', handler, false);
     }
 </code></pre>
 
-浏览器开发者不止一次告诉我，浏览器嗅探是错误的，而特征检测是正确的。我的意思是，检测 3D CSS 变换和 HTML5 `<video>` 支持很容易，但没有(理智的)方法来检测浏览器在双击触摸屏时是否自己发射了 `dblclick` 事件。
+I've been told more than a few times by browser developers that browser sniffing is wrong, and that feature detection is right. I mean, detecting 3D CSS transforms and HTML5 `<video>` support is easy, but there is no (sane) way to detect if a browser fires a `dblclick` event by itself when double-tapping a touchscreen.
 
-调试触摸交互特别棘手。有时重现一个触摸交互错误的条件很简单(在同一位置双击触摸屏)，但有时却更具体。在 [#3798](https://github.com/Leaflet/Leaflet/issues/3798) 和 [#3814](https://github.com/Leaflet/Leaflet/issues/3814) 中，条件是"用一个手指拖动，然后放下另一个手指并捏住"，而在 [#3530](https://github.com/Leaflet/Leaflet/issues/3530) 中是 "捏住直到达到 `maxZoom`，然后做双指拖动"。
+Debugging touch interactions is particularly tricky. Sometimes the conditions to reproduce a touch-interaction bug is simple (double-tap the touchscreen in the same spot), but sometimes they are more specific. In [#3798](https://github.com/Leaflet/Leaflet/issues/3798) and [#3814](https://github.com/Leaflet/Leaflet/issues/3814) the conditions are "drag with one finger, then put down another finger and pinch", and in [#3530](https://github.com/Leaflet/Leaflet/issues/3530) it's "pinch in until `maxZoom` is reached, then do a two-finger drag".
 
-这种 bug 的问题在于，它们在受控条件下的重现是**令人沮丧的**，而且是**耗时的**。想象一下，当你有一个代码编辑器和一个浏览器调试器的时候，同时用两只手在看调试器的时候做一个非常特殊的触摸手势。然后你想在调试器中检查一个变量，但你不能移动你的手指，哪怕是一个像素，因为那会运行更多的代码并改变状态。
+The problem with this kind of bugs is that they're **frustrating** and **time-consuming** to reproduce under controlled conditions. Imagine having a code editor and a browser debugger when at the same time using two hands to perform a very specific touch gesture while watching the debugger. Then you want to inspect a variable in the debugger but you cannot move your fingers even a pixel because that will run more code and change the state.
 
-然后，在过去的一个小时里，第五次，摇晃的手机充电器连接器再次摇晃，调试器断开连接，你不得不重新开始。
+And then, for the fifth time in the last hour, the wobbly phone charger connector wobbles again, and the debugger disconnects, and you have to start all over again.
 
 <table class="image">
 <!-- <caption align="bottom"><small></small></caption> -->
 <tr><td style='text-align:center'><img src="https://i.chzbgr.com/full/4896152320/h3FAAE99E/" alt="rage quit"/></td></tr>
 </table>
 
-如果我有一两只多余的手，调试触摸互动就会简单得多，但生物技术离让我多长出一只手还很遥远。
+If I had an extra hand or two, debugging touch interactions would be much simpler, but biotechnology is still far away from allowing me to grow an extra hand.
 
-幸运的是，我们可以利用 [向浏览器调度自定义事件](https://developer.mozilla.org/docs/Web/API/EventTarget/dispatchEvent) 。通常，当我们使用鼠标(或触摸板，或触摸屏，或数字板)时，网络浏览器会产生一个 [`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) (或 [`TouchEvent`](https://developer.mozilla.org/docs/Web/API/TouchEvent) 或 [`PointerEvent`](https://developer.mozilla.org/docs/Web/API/PointerEvent) 。但是，我们的 javascript 程序员可以创建一个合成的(即假的)事件，然后把它扔给浏览器，这样它就可以把它派发给任何正在监听事件的代码。
+Fortunately, we can leverage [dispatching custom events to the browser](https://developer.mozilla.org/docs/Web/API/EventTarget/dispatchEvent). Normally, when we use a mouse (or a touchpad, or a touchscreen, or a digitizer tablet), the web browser will generate a [`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) (or a [`TouchEvent`](https://developer.mozilla.org/docs/Web/API/TouchEvent) or a [`PointerEvent`](https://developer.mozilla.org/docs/Web/API/PointerEvent)). But instead of that, we javascript programmers can create a synthetic (i.e. fake) event, then throw it to the browser so it can dispatch it to whatever code is listening for an event.
 
-不幸的是，创建和分配这些事件是很麻烦的。一个触摸手势至少需要 4 到 8 个事件，以特定的顺序、特定的数据和特定的时间进行。已经有一些人尝试将其自动化(我能找到的最好的是 [hammer.js simulator](https://github.com/hammerjs/simulator) ，但没有好的方法来模拟复杂的自定义触摸手势。
+Unfortunately creating and dispatching such events is cumbersome. A touch gesture involves *at least* 4 to 8 events in a particular order, with particular data, with a particular timing. There have been a few attempts to automate this (the best I could find was the [hammer.js simulator](https://github.com/hammerjs/simulator)), but there is no good way of emulating complex custom touch gestures.
 
-直到现在。
+Until now.
 
-我很自豪地介绍 [**假手**](https://github.com/Leaflet/prosthetic-hand) ，以满足你所有需要多出一只手的 javascript 调试需要。
+I'm proud to introduce [**prosthetic-hand**](https://github.com/Leaflet/prosthetic-hand), for all you javascript debugging needs that require you to have an extra hand.
 
-用假手，我现在可以在 Leaflet 网页上自动进行捏合缩放的手势了：
+With prosthetic-hand, I can now automate a pinch-zoom gesture in a Leaflet webpage:
 
 
 <table class="image">
@@ -56,16 +56,16 @@ authorsite: http://ivan.sanchezortega.es
 </table>
 
 
-装上这个库后，只需要求一个额外的手(有特定的计时模式)即可：
+With this library loaded, just ask for an extra hand (with a specific timing mode):
 <pre><code class="javascript">var h = new Hand({ timing: 'frame' });
 </code></pre>
 
-然后长出一些手指:
+Then grow some fingers:
 <pre><code class="javascript">var f1 = h.growFinger('touch');
 var f2 = h.growFinger('touch');
 </code></pre>
 
-然后移动手指(使用像素坐标和毫秒)：
+Then move the fingers around (using pixel coordinates and milliseconds):
 <pre><code class="javascript">f1.wait(100).moveTo(250, 200, 0)
 	.down().wait(500).moveBy(-200, 0, 1000).wait(500).up().wait(500)
 	.down().wait(500).moveBy( 200, 0, 1000).wait(500).up().wait(500);
@@ -75,27 +75,27 @@ f2.wait(100).moveTo(350, 200, 0)
 	.down().wait(500).moveBy(-200, 0, 1000).wait(500).up().wait(500);
 </code></pre>
 
-你可以在 [现场假手演示](https://leaflet.github.io/prosthetic-hand/demos/) 中查看这一点。
+You can check this in the [live prosthetic-hand demos](https://leaflet.github.io/prosthetic-hand/demos/).
 
-义肢库并不完美，有些类型的事件只在某些浏览器中起作用，但它可以帮助以可重复的方式触发鼠标、触摸、指针事件，并可调整时间，使开发人员能够在调试器中保持双手。计时模式允许对触发的事件进行细化控制，允许为同样的手势运行更少的代码迭代，这反过来意味着更简单、更好地理解正在发生的事情。
-
----
-
-有一句名言(经常 [误认为是亚伯拉罕-林肯](http://quoteinvestigator.com/2014/03/29/sharp-axe/) 说：
-
-<blockquote>A woodsman was once asked, "What would you do if you had just five minutes to chop down a tree?" He answered, "I would spend the first two and a half minutes sharpening my axe."</blockquote>
-
-网络开发也不例外——拥有正确的工具将使你的任务变得更加容易。
-
-这不仅仅是一个时间问题。也许从头开始写一个工具是很耗时的，但最好的收获是，调试**不再令人沮丧**。以前，它是 "在触摸屏上用一只手，仔细看调试器，不要使用断点，因为你的手不够用"。现在是 "改变假手事件的时间，设置断点，**轰**"。
-
-而更棒的是，拥有一个自动化工具意味着 Leaflet 现在有了 [**触摸交互的单元测试**](https://github.com/Leaflet/Leaflet/blob/master/spec/suites/map/handler/Map.TouchZoomSpec.js) 。PhantomJS 无头网页浏览器可以理解义肢产生的  `TouchEvent`s，并可以检查地图在执行该手势时是否有预期的行为。
-
-通过自动化的触摸测试，我们在 Leaflet 中节省的时间和麻烦将是巨大的。我们只能希望更多的项目能从类似的自动化测试中受益。
+The prosthetic-hand library is not perfect, and some types of events only work in some browsers, but it can help trigger mouse/touch/pointer events in a repeatable way, with adjustable timing, allowing developers to keep both hands at the debugger. The timing modes allow granular control of the events fired, allowing to run less iterations of the code for the same gesture, which in turn means a simpler, better understanding of what's going on.
 
 ---
 
-不要只写开源代码。为每个人制作更好的工具。
+A famous quote (often [misattributed to Abraham Lincoln](http://quoteinvestigator.com/2014/03/29/sharp-axe/)) says:
+
+<blockquote>A woodsman was once asked, “What would you do if you had just five minutes to chop down a tree?” He answered, “I would spend the first two and a half minutes sharpening my axe.”</blockquote>
+
+Web development is no different - having the right tools will make your task so much easier.
+
+It's not just a matter of time. Maybe writing a tool from scratch was time-consuming, but the best gain is that debugging **stops being frustrating**. Before, it was "use a hand on the touchscreen, look closely at the debugger, don't use breakpoints because you don't have enough hands". Now it's "change the timing on the prosthetic-hand events, set a breakpoint, *boom*".
+
+And what's even better, having an automated tool means that Leaflet now has [**unit tests for touch interactions**](https://github.com/Leaflet/Leaflet/blob/main/spec/suites/map/handler/Map.TouchZoomSpec.js). The PhantomJS headless web browser can understand the `TouchEvent`s that prosthetic-hand generates, and can check if a map behaves as expected when that gesture is performed.
+
+The amount of time and headaches we'll save in Leaflet by having automated touch tests is going to be huge. We can only hope more projects will benefit from similar automated testing.
+
+---
+
+Don't just write open-source code. Make better tools for everybody.
 
 Yours,
 Iván

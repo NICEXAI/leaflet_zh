@@ -3,15 +3,15 @@ layout: tutorial_v2
 title: Leaflet on Mobile
 ---
 
-## 在移动端使用 Leaflet
+## Leaflet on Mobile
 
-在本教程中，你将学习如何为 iPhone、iPad 或 Android 手机等移动设备创建一个全屏地图，以及如何轻松检测和使用当前的用户位置。
+In this example, you'll learn how to create a fullscreen map tuned for mobile devices like iPhone, iPad or Android phones, and how to easily detect and use the current user location.
 
 {% include frame.html url="example.html" %}
 
-### 准备一个页面
+### Preparing the page
 
-首先，我们来看一下页面的 HTML 和 CSS 代码。为了让我们的地图 `div` 元素拉伸到所有可用空间（全屏），我们可以使用下面的 CSS 代码（注意：在这个例子中，我们使用百分比作为高度。虽然 vh 可以说更好，但是在移动设备上的谷歌浏览器存在问题。） ：
+First we'll take a look at the HTML &amp; CSS code of the page. To make our map `div` element stretch to all available space (fullscreen), we can use the following CSS code (note: In this example we use percentage for height. While vh is arguably better, due to a bug with Google Chrome on mobile.):
 
 {: .css}
 	body {
@@ -23,30 +23,28 @@ title: Leaflet on Mobile
 		width: 100vw;
 	}
 
-此外，我们需要通过在 `head` 部分或我们的 HTML 页面中放置以下内容来告诉移动浏览器禁用页面缩放并将其设置为实际大小：
+Also, we need to tell the mobile browser to disable unwanted scaling of the page and set it to its actual size by placing the following line in the `head` section or our HTML page:
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-### 初始化地图
+### Initializing the map
 
-我们现在将在 JavaScript 代码中初始化地图，就像我们在[快速入门指南](../quick-start/)中所做的那样，显示整个世界地图：
+We'll now initialize the map in the JavaScript code like we did in the [quick start guide](../quick-start/), showing the whole world:
 
 <pre><code class="javascript">var map = L.map('map').fitWorld();
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{<a href="https://docs.mapbox.com/help/glossary/style-id/">id</a>}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-	attribution: 'Map data &amp;copy; <span class="text-cut" data-cut="[&hellip;]">&lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors, Imagery &copy; &lt;a href="https://www.mapbox.com/"&gt;Mapbox&lt;/a&gt;</span>',
-	maxZoom: 18,
-	tileSize: 512,
-	zoomOffset: -1
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);</code></pre>
 
-### 地理位置
+### Geolocation
 
-Leaflet 有一个非常方便的快捷方式来放大地图视图到检测到的位置---`locate` 方法加上 `setView` 选项，取代了代码中通常的 `setView` 方法。
+Leaflet has a very handy shortcut for zooming the map view to the detected location --- `locate` method with the `setView` option, replacing the usual `setView` method in the code:
 
 	map.locate({setView: true, maxZoom: 16});
 
-这里我们指定 16 作为自动设置地图视图时的最大缩放值。只要用户同意分享其位置，并且被浏览器检测到，地图就会将视图设置为它。现在我们有了一个可以工作的全屏移动地图 但是，如果我们需要在地理定位完成后做一些事情呢？这就是 `locationfound` 和 `locationerror` 事件的作用。例如，让我们在检测到的位置上添加一个标记，在弹出式窗口中显示精确度，在 `locateAndSetView` 调用之前给 `locationfound`事件添加一个事件监听器。
+Here we specify 16 as the maximum zoom when setting the map view automatically. As soon as the user agrees to share its location and it's detected by the browser, the map will set the view to it. Now we have a working fullscreen mobile map! But what if we need to do something after the geolocation completed? Here's what the `locationfound` and `locationerror` events are for. Let's for example add a marker in the detected location, showing accuracy in a popup, by adding an event listener to `locationfound` event before the `locateAndSetView` call:
 
 	function onLocationFound(e) {
 		var radius = e.accuracy;
@@ -59,7 +57,7 @@ Leaflet 有一个非常方便的快捷方式来放大地图视图到检测到的
 
 	map.on('locationfound', onLocationFound);
 
-非常好! 但如果能在地理定位失败时显示错误信息，那就更好了。
+Excellent! But it would also be nice to show an error message if the geolocation failed:
 
 	function onLocationError(e) {
 		alert(e.message);
@@ -67,8 +65,8 @@ Leaflet 有一个非常方便的快捷方式来放大地图视图到检测到的
 
 	map.on('locationerror', onLocationError);
 
-如果你把 `setView` 选项设置为 "true"，并且地理定位失败，它将把视图设置为整个世界。
+If you have `setView` option set to true and the geolocation failed, it will set the view to the whole world.
 
-现在，这个例子已经完成了---在你的手机上试试吧。[查看完整的示例&rarr;](example.html)
+Now the example is complete --- try it on your mobile phone: [View the full example &rarr;](example.html)
 
-下一步可以查看详细的[文档](/reference.html)和浏览[其它示例](../../examples.html)。
+Next steps would be to take a look at the detailed [documentation](/reference.html) and browse [other examples](../../examples.html).

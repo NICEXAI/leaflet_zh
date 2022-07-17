@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	{% capture title %}{% if page.title %}{{ page.title }} - {% elsif post.title %}{{ post.title }} - {% endif %}{% endcapture %}
 
-	<title>{{ title }}Leaflet - 一个交互式地图 JavaScript 库</title>
+	<title>{{ title }}Leaflet - a JavaScript library for interactive maps</title>
 
 	<meta charset="utf-8" />
 
 	{% if title == '' %}
-	<meta property="og:title" content="Leaflet — 一个开源并且对移动端友好的交互式地图 JavaScript 库" />
-	<meta property="og:description" content="Leaflet 是一个轻量、开源并且对移动端友好的交互式地图 JavaScript 库。" />
+	<meta property="og:title" content="Leaflet — an open-source JavaScript library for interactive maps" />
+	<meta property="og:description" content="Leaflet is a modern, lightweight open-source JavaScript library for mobile-friendly interactive maps." />
 	<meta property="og:image" content="{{ root }}docs/images/logo.png" />
-
+	<meta property="og:image:alt" content="Leaflet">
 	<meta itemprop="name" content="Leaflet">
-	<meta name="keywords" content="leaflet中文文档, leaflet, leaflet中文, leaflet文档" />
-	<meta itemprop="description" content="Leaflet 是一个轻量、开源并且对移动端友好的交互式地图 JavaScript 库。">
+	<meta itemprop="description" content="Leaflet — a modern, lightweight open-source JavaScript library for mobile-friendly interactive maps.">
 	<meta itemprop="image" content="{{ root }}docs/images/logo.png">
 	{% endif %}
 
@@ -59,93 +58,101 @@
 </head>
 <body{% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
 
-<h1><a href="https://leafletjs.cn/"><img src="{{ root }}docs/images/logo.png" alt="Leaflet" width="300" /></a></h1>
-<h3 class="tagline">一个开源并且对移动端友好的<br> 交互式地图 JavaScript 库</h3>
+<header>
+	<h1><a href="https://leafletjs.com/"><img src="{{ root }}docs/images/logo.png" alt="Leaflet" width="300" /></a></h1>
+	<p class="tagline">an open-source JavaScript library<br> for mobile-friendly interactive maps</p>
+</header>
 
-<ul class="nav">
-	<li>
-		{% if page.title == nil %}
-			<span>概况</span>
-		{% else %}
-			<a href="{{ root }}index.html">概况</a>
-		{% endif %}
-	</li>
-	<li>
-		{% if page.title == 'Tutorials' %}
-			<span>教程</span>
-		{% else %}
-			<a href="{{ root }}examples.html"{% if page.tutorial == true %} class="active"{% endif %}>教程</a>
-		{% endif %}
-	</li>
-	<li>
-		{% if page.title == 'Documentation' %}
-			<span>文档</span>
-		{% else %}
-			<a href="{{ root }}reference-{{ site.latest_leaflet_reference }}.html">文档</a>
-		{% endif %}
-	</li>
-	<li>
-		{% if page.title == 'Download' %}
-			<span>下载</span>
-		{% else %}
-			<a href="{{ root }}download.html">下载</a>
-		{% endif %}
-	</li>
-	<li>
-		{% if page.title == 'Plugins' %}
-			<span>插件</span>
-		{% else %}
-			<a href="{{ root }}plugins.html">插件</a>
-		{% endif %}
-	</li>
-	<li>
-		{% if page.title == 'Blog' %}
-			<span>博客</span>
-		{% else %}
-			<a href="{{ root }}blog.html"{% if page.post == true %} class="active"{% endif %}>博客</a>
-		{% endif %}
-	</li>
-	<li>
-		{% if page.title == 'Honor' %}
-		<span>荣誉</span>
-		{% else %}
-		<a href="{{ root }}honor.html"{% if page.post == true %} class="active"{% endif %}>荣誉</a>
-		{% endif %}
-	</li>
-</ul>
-
-<div class="container">
-
-
-{{ content }}
-
-<div class="footer">
-	<p>&copy; 2010–2022 <a href="http://agafonkin.com/en">Vladimir Agafonkin</a>. Maps &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
-</div>
-
-</div>
-
-<nav class="ext-links">
-  <a class="ext-link twitter" href="https://twitter.com/LeafletJS" title="在Twitter上关注LeafletJS"><img alt="在Twitter上关注LeafletJS" src="{{root}}docs/images/twitter-round.png" width="46" /></a>
-  <a class="ext-link github" href="http://github.com/Leaflet/Leaflet" title="在GitHub上查看源代码"><img alt="在GitHub上查看源代码" src="{{root}}docs/images/github-round.png" width="46" /></a>
-  <a class="ext-link forum" href="https://stackoverflow.com/questions/tagged/leaflet" title="去 Stack Overflow 寻求帮助"><img alt="去 Stack Overflow 寻求帮助" src="{{root}}docs/images/forum-round.png" width="46" /></a>
-  <a class="ext-link forum" href="https://github.com/NICEXAI/leaflet_zh" title="参与翻译工作"><img alt="参与翻译工作" src="{{root}}docs/images/document.png" width="46" /></a>
+<nav>
+	<ul class="nav">
+		<li>
+			{% if page.title == nil %}
+				<span>Overview</span>
+			{% else %}
+				<a href="{{ root }}index.html">Overview</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if page.title == 'Tutorials' %}
+				<span>Tutorials</span>
+			{% else %}
+				<a href="{{ root }}examples.html"{% if page.tutorial == true %} class="active"{% endif %}>Tutorials</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if page.title == 'Documentation' %}
+				<span>Docs</span>
+			{% else %}
+				<a href="{{ root }}reference.html">Docs</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if page.title == 'Download' %}
+				<span>Download</span>
+			{% else %}
+				<a href="{{ root }}download.html">Download</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if page.title == 'Plugins' %}
+				<span>Plugins</span>
+			{% else %}
+				<a href="{{ root }}plugins.html">Plugins</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if page.title == 'Blog' %}
+				<span>Blog</span>
+			{% else %}
+				<a href="{{ root }}blog.html"{% if page.post == true %} class="active"{% endif %}>Blog</a>
+			{% endif %}
+		</li>
+		<li>
+			{% if page.title == 'Honor' %}
+			<span>荣誉</span>
+			{% else %}
+			<a href="{{ root }}honor.html"{% if page.post == true %} class="active"{% endif %}>荣誉</a>
+			{% endif %}
+		</li>
+	</ul>
 </nav>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7J87DSLSTS"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+<main>
+	<div class="container">
+		{{ content }}
+	</div>
+</main>
 
-	gtag('config', 'G-7J87DSLSTS');
+<footer class="container">
+	<div class="footer">
+		<p>&copy; 2010–{{ 'now' | date: "%Y" }} <a href="http://agafonkin.com/en">Vladimir Agafonkin</a>. Maps &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+	</div>
+
+	<nav class="ext-links">
+	  <a class="ext-link twitter" href="https://twitter.com/LeafletJS" title="Follow LeafletJS on Twitter"><img alt="Follow LeafletJS on Twitter" src="{{root}}docs/images/twitter-round.png" width="46" /></a>
+	  <a class="ext-link github" href="http://github.com/Leaflet/Leaflet" title="View Source on GitHub"><img alt="View Source on GitHub" src="{{root}}docs/images/github-round.png" width="46" /></a>
+	  <a class="ext-link forum" href="https://stackoverflow.com/questions/tagged/leaflet" title="Ask for help on Stack Overflow"><img alt="Leaflet questions on Stack Overflow" src="{{root}}docs/images/forum-round.png" width="46" /></a>
+	</nav>
+</footer>
+
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-4147697-4' ]);
+	_gaq.push([ '_trackPageview' ]);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
 </script>
 
-<!-- Google Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7213305808818536"
-		crossorigin="anonymous"></script>
-
+<script src="{{ root }}dialog/dialog.js"></script>
 <script src="{{ root }}docs/js/docs.js"></script>
 {% if page.title == 'Documentation' %}
 <script src="{{ root }}docs/js/reference.js"></script>

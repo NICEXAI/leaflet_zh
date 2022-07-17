@@ -3,15 +3,15 @@ layout: tutorial_v2
 title: Markers With Custom Icons
 ---
 
-## 带有自定义图标的标记
+## Markers With Custom Icons
 
-在本教程中，你将学习如何轻松定义你自己的图标并放在地图上作为标记使用。
+In this tutorial, you'll learn how to easily define your own icons for use by the markers you put on the map.
 
 {% include frame.html url="example.html" %}
 
 ### Preparing the images
 
-要制作一个自定义的图标，我们通常需要两张图片---实际的图标图片和它的阴影图片。在本教程中，我们采用了Leaflet的标志，并从中创建了四张图片---3张不同颜色的叶子图片和一张阴影图片。
+To make a custom icon, we usually need two images --- the actual icon image and the image of its shadow. For this tutorial, we took the Leaflet logo and created four images out of it --- 3 leaf images of different colors and one shadow image for the three:
 
 <p>
 	<img style="border: 1px solid #ccc" src="leaf-green.png" />
@@ -20,11 +20,11 @@ title: Markers With Custom Icons
 	<img style="border: 1px solid #ccc" src="leaf-shadow.png" />
 </p>
 
-请注意，图像中的白色区域实际上是透明的。
+Note that the white area in the images is actually transparent.
 
 ### Creating an icon
 
-Leaflet中的标记图标是由[L.Icon](/reference.html#icon)对象定义的，在创建标记时，它被作为一个选项传递。让我们来创建一个绿叶图标。
+Marker icons in Leaflet are defined by [L.Icon](/reference.html#icon) objects, which are passed as an option when creating markers. Let's create a green leaf icon:
 
 	var greenIcon = L.icon({
 		iconUrl: 'leaf-green.png',
@@ -37,15 +37,15 @@ Leaflet中的标记图标是由[L.Icon](/reference.html#icon)对象定义的，�
 		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 	});
 
-现在，在地图上放一个带有这个图标的标记是很容易的。
+Now putting a marker with this icon on a map is easy:
 
 	L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
 
 {% include frame.html url="example-one-icon.html" %}
 
-### 定义一个图标类（Class）
+### Defining an icon class
 
-如果我们需要创建几个有很多共同点的图标，怎么办？让我们定义我们自己的图标类，包含共享选项，继承于`L.Icon`! 在Leaflet中，这真的很简单。
+What if we need to create several icons that have lots in common? Let's define our own icon class containing the shared options, inheriting from `L.Icon`! It's really easy in Leaflet:
 
 	var LeafIcon = L.Icon.extend({
 		options: {
@@ -58,22 +58,22 @@ Leaflet中的标记图标是由[L.Icon](/reference.html#icon)对象定义的，�
 		}
 	});
 
-现在我们可以从这个类中创建所有的带有三个叶子的图标并使用它们。
+Now we can create all three of our leaf icons from this class and use them:
 
 	var greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'}),
 		redIcon = new LeafIcon({iconUrl: 'leaf-red.png'}),
 		orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
 
-你可能已经注意到，我们使用`new`关键字来创建LeafIcon实例。那么为什么所有的Leaflet类在创建时都没有使用它呢？答案很简单：真正的Leaflet类是用大写字母命名的(例如`L.Icon`)，它们也需要用`new`来创建，但也有一些小写名字的快捷方式(`L.icon`)，是为了方便而创建的，比如这样。
+You may have noticed that we used the `new` keyword for creating LeafIcon instances. So why do all Leaflet classes get created without it? The answer is simple: the real Leaflet classes are named with a capital letter (e.g. `L.Icon`), and they also need to be created with `new`, but there are also shortcuts with lowercase names (`L.icon`), created for convenience like this:
 
 	L.icon = function (options) {
 		return new L.Icon(options);
 	};
 
-你也可以对你的 classes 做同样的事情。好了，让我们最后在地图上放一些带有这些图标的标记。
+You can do the same with your classes too. OK, let's finally put some markers with these icons on the map:
 
 	L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
 	L.marker([51.495, -0.083], {icon: redIcon}).addTo(map).bindPopup("I am a red leaf.");
 	L.marker([51.49, -0.1], {icon: orangeIcon}).addTo(map).bindPopup("I am an orange leaf.");
 
-就这样了。现在看看[完整的例子](example.html)，[`L.Icon` docs](/reference.html#icon)，或者浏览一下[其他例子](.../.../examples.html)。
+That's it. Now take a look at the [full example](example.html), the [`L.Icon` docs](/reference.html#icon), or browse [other examples](../../examples.html).

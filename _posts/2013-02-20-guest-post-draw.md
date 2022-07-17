@@ -1,55 +1,55 @@
 ---
 layout: post
-title: Leaflet.draw 0.2 发布
-description: Leaflet.draw 0.2 正式发布 —— 为您的 Leaflet 地图带来矢量绘图和编辑工具
+title: Leaflet.draw 0.2 Released
+description: Leaflet.draw 0.2 released &mdash; brings vector drawing and editing tools to your Leaflet map.
 author: Jacob Toye
 authorsite: https://github.com/jacobtoye/
 ---
 
-这是 Jacob Toye的客座文章，他是 Leaflet 的活跃贡献者，同时也是目前最复杂的矢量绘图和编辑插件的作者，在这篇文章中介绍了这个插件。
+_This is a guest post from Jacob Toye, an active Leaflet contributor and also the author of the most sophisticated vector drawing and editing plugin out there, which is presented in this post._
 
-[Leaflet.draw](https://github.com/Leaflet/Leaflet.draw/) 诞生于为用户提供在地图上绘制多边形的能力的需要。Leaflet 已经提供了一个非常好的方法来编辑现有的折线和多边形。合乎逻辑的下一步是在这个功能上进行扩展，以允许创建这些图层，并最终创建其他的矢量图层。
+[Leaflet.draw](https://github.com/Leaflet/Leaflet.draw/) was born from the need to provide users with the ability draw polygons on the map. Leaflet already provided a very nice way of editing existing polylines and polygons. The logical next step was to expand on this functionality to allow the creation of these layers, and ultimately the other vector layers.
 
-一经发布，Leaflet 社区的直接反应是非常积极的。很明显，下一步将是把这个工具发展到用户除了创建形状之外还可以编辑和删除形状的状态。这就是 Leaflet.draw 0.2 最终要做的事情。
+Upon release the immediate response from the Leaflet community was very positive. It became clear that the next step would be progressing this tool to a state where users could edit and delete shapes in addition to creating them. This is ultimately what Leaflet.draw 0.2 set out to do.
 
-经过几个月的断断续续的开发，在我的雇主 <a href="http://www.smartrak.co.nz" title="GPS车队管理解决方案" target="_blank">Smartrak</a> 的赞助下，我们隆重推出 Leaflet.draw 0.2 ———— 你在 Leaflet 地图上绘制、编辑和删除矢量和标记的一站式插件。:) 
+After a few months of off and on development, with most of this spare time kindly sponsored by my employer <a href="http://www.smartrak.co.nz" title="GPS Fleet Management solutions" target="_blank">Smartrak</a>, we proudly present Leaflet.draw 0.2 -- your one stop plugin for drawing, editing and deleting vectors and markers on Leaflet maps. :)
 
-来自 Vladimir 的注意：Leaflet 核心的多线、多边形编辑功能已经被移到这个插件中，在那里它更适合。该插件又被移到了 [GitHub 上的 Leaflet 组织](https://github.com/Leaflet) ，现在已被 Leaflet 开发团队正式支持。请注意，0.2 版目前依赖于 Leaflet master（正在开发的版本）来工作。
+_Note from Vladimir: the polyline/polygon editing functionality from Leaflet core has been moved into this plugin where it fits much better. The plugin in turn has moved into [Leaflet organization on GitHub](https://github.com/Leaflet) and is now officially supported by the Leaflet development team. Note that version 0.2 currently depends on Leaflet master (in-progress development version) to work._
 
-您可以从 <a href="https://github.com/Leaflet/Leaflet.draw/" target="_blank" >github repo</a> 下载最新版本。请在 <a href="https://github.com/Leaflet/Leaflet.draw/issues" target="_blank" >问题页面</a> 上报告您遇到的任何错误。
+You can download the latest version from the <a href="https://github.com/Leaflet/Leaflet.draw/" target="_blank">github repo</a>. Please report any bugs you come across on the <a href="https://github.com/Leaflet/Leaflet.draw/issues" target="_blank">issues page</a>.
 
 <div id="map" class="map" style="height: 288px"></div>
 
 {:#plugin-features}
-### 特点
+### Features
 
-Leaflet.draw 的设计不仅便于终端用户使用，而且也便于开发者整合。
+Leaflet.draw is designed to not only be easy for end users to use, but also for developers to integrate.
 
- * 用易于使用的绘图工具在地图上绘制形状。
- * 编辑和删除矢量和标记。
- * 超级可定制:
-   * 自定义每个形状的风格，以适应你的地图主题。
-   * 挑选你想使用的工具。
-   * 只需使用绘图和编辑处理程序，就可以推出你自己的。
- * 基于事件的系统允许你在形状被创建、编辑或删除时执行任何必要的行动。
+ * Draw shapes on your map with easy to use drawing tools.
+ * Edit and delete vectors and markers.
+ * Super customizable:
+   * Customize the styles of each shape to fit in with your maps theme.
+   * Pick and choose the which tools you want to use.
+   * Roll your own by simply using the drawing and editing handlers.
+ * Event based system allows you to perform any necessary actions when shapes are created, edited or deleted.
 
-### 如何使用
+### How to use
 
-Leaflet.draw 非常简单，可以放入你的 Leaflet 应用程序中。下面的例子将在一张地图上添加绘图和编辑工具栏:
+Leaflet.draw is very simple to drop into you Leaflet application. The following example will add both the draw and edit toolbars to a map:
 
-	// 在 "map"栏目中创建一个地图，将视图设置为指定地点并进行缩放。
+	// create a map in the "map" div, set the view to a given place and zoom
 	var map = L.map('map').setView([175.30867, -37.77914], 13);
 
-	// 添加一个OpenStreetMap 的瓦片层
+	// add an OpenStreetMap tile layer
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
-	// 初始化FeatureGroup来存储可编辑的图层
+	// Initialize the FeatureGroup to store editable layers
 	var drawnItems = new L.FeatureGroup();
 	map.addLayer(drawnItems);
 
-	// 初始化绘图控件，并将可编辑层的特征组传递给它
+	// Initialize the draw control and pass it the FeatureGroup of editable layers
 	var drawControl = new L.Control.Draw({
 		edit: {
 			featureGroup: drawnItems
@@ -57,41 +57,41 @@ Leaflet.draw 非常简单，可以放入你的 Leaflet 应用程序中。下面�
 	});
 	map.addControl(drawControl);
 
-#### 处理新创建的图层
+#### Handling newly created layers
 
-一旦你成功地将 Leaflet.draw 插件添加到你的地图中，你就会想对用户可能触发的不同动作做出反应。
+Once you have successfully added the Leaflet.draw plugin your map you will want to respond to the different actions users can trigger.
 
 	map.on('draw:created', function (e) {
 		var type = e.layerType,
 			layer = e.layer;
 
 		if (type === 'marker') {
-			// 做标记的具体行动
+			// Do marker specific actions
 		}
 
-		// 做其他你需要做的事情。(保存到数据库，添加到地图等)
+		// Do whatever else you need to. (save to db, add to map etc)
 		drawnItems.addLayer(layer);
 	});
 
 	map.on('draw:edited', function () {
-		// 更新数据库以保存最新的变化。
+		// Update db to save latest changes.
 	});
 
 	map.on('draw:deleted', function () {
-		// 更新数据库以保存最新的变化。
+		// Update db to save latest changes.
 	});
 
-请参阅 <a href="https://github.com/Leaflet/Leaflet.draw" target="_blank">Leaflet.draw README</a> 以了解关于如何配置该插件的更多细节。
+See the <a href="https://github.com/Leaflet/Leaflet.draw" target="_blank">Leaflet.draw README</a> for more details on how to configure the plugin.
 
-### 谢谢
+### Thanks
 
-首先，我想感谢我的雇主 <a href="http://www.smartrak.co.nz" title="GPS车队管理解决方案" target="_blank">Smartrak</a> 。如果没有他们对开源软件的态度，我就不会有时间来完成这个插件。
+First and foremost I would like to thank my employer <a href="http://www.smartrak.co.nz" title="GPS Fleet Management solutions" target="_blank">Smartrak</a>. Without their attitude to open source software I would not have had the time to complete this plugin.
 
-Leaflet 开发者社区通过灵感、拉动请求和问题报告对这个插件给予了极大的支持。特别感谢。 <a href="https://github.com/mourner" title="@mourner" target="_blank" >@mourner</a> 、 <a href="https://github.com/danzel" title="@danzel" target="_blank" >@danzel</a> 、 <a href="https://github.com/brunob" title="@brunob" target="_blank" >@brunob</a> 、 <a href="https://github. com/tnightingale" title="@tnightingale" target="_blank" >@tnightingale</a> 、 <a href="https://github.com/Starefossen" title="@Starefossen" target="_blank" >@Starefossen</a>  和 <a href="https://github.com/shramov" title="@shramov" target="_blank" >@shramov</a> 。
+The Leaflet developer community have been great in supporting this plugin through inspiration, pull requests and issue reports. Special thanks to: <a href="https://github.com/mourner" title="@mourner" target="_blank">@mourner</a>, <a href="https://github.com/danzel" title="@danzel" target="_blank">@danzel</a>, <a href="https://github.com/brunob" title="@brunob" target="_blank">@brunob</a>, <a href="https://github.com/tnightingale" title="@tnightingale" target="_blank">@tnightingale</a>, <a href="https://github.com/Starefossen" title="@Starefossen" target="_blank">@Starefossen</a>, and <a href="https://github.com/shramov" title="@shramov" target="_blank">@shramov</a>.
 
-### 关闭
+### Closing
 
-我在实施这个插件时很开心。我希望你喜欢使用它。如果您有问题或只是想问候一下，请给我发电子邮件： <a href="mailto:jacob.toye@gmail.com">jacob.toye@gmail.com</a> 。
+I've had a great time implementing this plugin. I hope you enjoy using it. If you have a question or just want to say hi, send me an email at <a href="mailto:jacob.toye@gmail.com">jacob.toye@gmail.com</a>.
 
 Cheers,
 Jacob Toye
@@ -117,7 +117,7 @@ Jacob Toye
 
 	// add an OpenStreetMap tile layer
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
 	// Initialize the FeatureGroup to store editable layers
@@ -133,10 +133,9 @@ Jacob Toye
 	map.addControl(drawControl);
 
 	map.on('draw:created', function (e) {
-		var type = e.layerType,
-			layer = e.layer;
+		var layer = e.layer;
 
-		if (type === 'marker') {
+		if (e.layerType === 'marker') {
 			layer.bindPopup('A popup!');
 		}
 

@@ -3,64 +3,68 @@ layout: tutorial_v2
 title: Layer Groups and Layers Control
 ---
 
-## Layer Groups 和 Layers Control
+## Layer Groups and Layers Control
 
-本教程将告诉你如何将几个图层组合成一个，以及如何使用图层控件让用户在你的地图上轻松切换不同的图层。
+This tutorial will show you how to group several layers into one, and how to use the layers control to allow users to easily switch different layers on your map.
 
 {% include frame.html url="example.html" %}
 
 ### Layer Groups
 
-假设您想将一堆图层合并到一个分组中，以便在代码中将它们作为一个处理：
+Let's suppose you have a bunch of layers you want to combine into a group to handle them as one in your code:
 
 	var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
 		denver    = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
 		aurora    = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
 	    golden    = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
 
-您可以使用 <a href="/reference.html#layergroup">LayerGroup</a> 类执行以下操作，而不是直接将它们添加到地图中：
+Instead of adding them directly to the map, you can do the following, using the <a href="/reference.html#layergroup">LayerGroup</a> class:
 
 	var cities = L.layerGroup([littleton, denver, aurora, golden]);
 
-足够简单! 现在你有了一个 "cities" 图层，它将你的城市标记合并成一个图层，你可以一次性地从地图上添加或删除。
+Easy enough! Now you have a `cities` layer that combines your city markers into one layer you can add or remove from the map at once.
 
 ### Layers Control
 
-Leaflet 有一个很好的小控件，允许你的用户控制他们在你的地图上看到哪些图层。除了向你展示如何使用它之外，我们还将向你展示图层组的另一个方便的用途。
+Leaflet has a nice little control that allows your users to control which layers they see on your map. In addition to showing you how to use it, we'll also show you another handy use for layer groups.
 
-有两种类型的图层。(1)互斥的基础图层（一次只能有一个在地图上可见），例如瓦片图层，和(2)覆盖层，即你放在基础图层上的所有其他东西。在这个例子中，我们希望有两个基础图层（一个灰度图层和一个彩色基础图层）可以切换，还有一个覆盖层可以开关：我们之前创建的城市标记。
+There are two types of layers: (1) base layers that are mutually exclusive (only one can be visible on your map at a time), e.g. tile layers, and (2) overlays, which are all the other stuff you put over the base layers. In this example, we want to have two base layers (a grayscale and a colored base map) to switch between, and an overlay to switch on and off: the city markers we created earlier.
 
-现在让我们创建这些基础图层并将默认图层添加到地图中：
+Now let's create those base layers and add the default ones to the map:
 
-<pre><code>var grayscale = L.tileLayer(mapboxUrl, {id: '<a href="https://mapbox.com">MapID</a>', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution}),
-	streets   = L.tileLayer(mapboxUrl, {id: '<a href="https://mapbox.com">MapID</a>', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
+<pre><code>var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
+var streets = L.tileLayer(mapboxUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
 
 var map = L.map('map', {
 	center: [39.73, -104.99],
 	zoom: 10,
-	layers: [grayscale, cities]
+	layers: [osm, cities]
 });</code></pre>
 
-接下来，我们将创建两个对象。一个包含我们的基础层，另一个将包含我们的覆盖层。这些只是带有键/值对的简单对象。键设置控件中图层的文本（例如 `streets`），而相应的值是对图层的引用（例如 streets）。
+Next, we'll create two objects. One will contain our base layers and one will contain our overlays. These are just simple objects with key/value pairs. The key sets the text for the layer in the control (e.g. "Streets"), while the corresponding value is a reference to the layer (e.g. `streets`).
 
 <pre><code>var baseMaps = {
-	"Grayscale": grayscale,
-	"Streets": streets
+	"OpenStreetMap": osm,
+	"Mapbox Streets": streets
 };
 
 var overlayMaps = {
-    "Cities": cities
+	"Cities": cities
 };</code></pre>
 
-现在，剩下的就是创建一个[图层控件](/reference.html#control-layers)并将其添加到地图中。创建图层控制时传递的第一个参数是基本图层对象。第二个参数是覆盖层对象。两个参数都是可选的：你可以通过省略第二个参数来传递一个基本图层对象，或者通过传递`null'作为第一个参数来传递一个覆盖对象。在每种情况下，省略的图层类型将不会出现供用户选择。
+Now, all that's left to do is to create a [Layers Control](/reference.html#control-layers) and add it to the map. The first argument passed when creating the layers control is the base layers object. The second argument is the overlays object. Both arguments are optional: you can pass just a base layers object by omitting the second argument, or just an overlays objects by passing `null` as the first argument. In each case, the omitted layer type will not appear for the user to select.
 
-<pre><code>L.control.layers(baseMaps, overlayMaps).addTo(map);</code></pre>
+<pre><code>var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);</code></pre>
 
-注意，我们在地图上添加了 `grayscale` 和 `cities` 层，但没有添加 `streets`。图层控件很聪明，可以检测出我们已经添加了哪些图层，并设置了相应的复选框和辐射框。
+Note that we added `osm` and `cities` layers to the map but didn't add `streets`. The layers control is smart enough to detect what layers we've already added and have corresponding checkboxes and radioboxes set.
 
-还要注意的是，当使用多个基础图层时，在实例化时只应将其中一个图层添加到地图中，但在创建图层控件时，所有的图层都应存在于基础图层对象中。
+Also note that when using multiple base layers, only one of them should be added to the map at instantiation, but all of them should be present in the base layers object when creating the layers control.
 
-最后，您可以在为图层定义对象时设置关键帧的样式。例如，此代码将使灰度图的标签变灰：
+You can also style the keys when you define the objects for the layers. For example, this code will make the label for the grayscale map gray:
 
 <pre><code>var baseMaps = {
 	"&lt;span style='color: gray'&gt;Grayscale&lt;/span&gt;": grayscale,
@@ -68,5 +72,18 @@ var overlayMaps = {
 };
 </code></pre>
 
-现在让我们在[单独的页面上查看最终效果&rarr;](example.html)。
+Finally, you can add or remove base layers or overlays dynamically:
+
+<pre><code>var crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.'),
+    rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
+    
+var parks = L.layerGroup([crownHill, rubyHill]);
+var satellite = L.tileLayer(mapboxUrl, {id: '<a href="https://mapbox.com">MapID</a>', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
+
+layerControl.addBaseLayer(satellite, "Satellite");
+layerControl.addOverlay(parks, "Parks");
+</code></pre>
+
+
+Now let's [view the result on a separate page &rarr;](example.html)
 

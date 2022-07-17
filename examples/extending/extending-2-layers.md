@@ -5,17 +5,17 @@ title: Extending Leaflet, New Layers
 
 <br>
 
-本教程假定你已经阅读了 [Leaflet 类的继承原理](./extending-1-classes.html)。
+This tutorial assumes you've read the [theory of Leaflet class inheritance](./extending-1-classes.html).
 
-在 Leaflet 中，“layer” 是指当地图被移动时，任何会移动的东西。在了解如何从头开始创建它们之前，先解释一下如何进行简单的扩展。
+In Leaflet, a "layer" is anything that moves around when the map is moved around. Before seeing how to create them from scratch, it's easier to explain how to do simple extensions.
 
-## 扩展方法
+## "Extension methods"
 
-一些 Leaflet 类具有所谓的 “扩展方法”：为子类编写代码的入口点。
+A few of the Leaflet classes have so-called "extension methods": entry points for writing code for sub-classes.
 
-其中之一是 `L.TileLayer.getTileUrl()`。每当一个新的瓦片需要知道加载哪张图片时，`L.TileLayer` 就会在内部调用这个方法。通过制作 `L.TileLayer` 的子类并重写其 `getTileUrl()` 函数，我们可以创建自定义行为。
+One of them is `L.TileLayer.getTileUrl()`. This method is called internally by `L.TileLayer` whenever a new tile needs to know which image to load. By making a subclass of `L.TileLayer` and rewriting its `getTileUrl()` function, we can create custom behaviour.
 
-让我们用一个自定义 `L.TileLayer` 来说明，它将显示来自 [PlaceKitten]() 的随机猫咪图像：
+Let's illustrate with a custom `L.TileLayer` that will display random kitten images from [PlaceKitten]():
 
     L.TileLayer.Kitten = L.TileLayer.extend({
         getTileUrl: function(coords) {
@@ -35,13 +35,13 @@ title: Extending Leaflet, New Layers
 
 {% include frame.html url="kittenlayer.html" %}
 
-通常，`getTileUrl()` 接收瓦片（tile）坐标（如 `coords.x`、`coords.y`和 `coords.z`），并从中生成一个瓦片（tile）URL。在我们的例子中，我们忽略了这些，只是用一个随机数来获得不同的小猫。
+Normally, `getTileUrl()` receives the tile coordinates (as `coords.x`, `coords.y` and `coords.z`) and generates a tile URL from them. In our example, we ignore those and simply use a random number to get a different kitten every time.
 
-### 拆分插件代码
+### Splitting away the plugin code
 
-在前面的示例中，`L.TileLayer.Kitten` 定义在与使用相同的位置。对于插件，最好将插件代码拆分成自己的文件，使用时引入该文件。
+In the previous example, `L.TileLayer.Kitten` is defined in the same place as it's used. For plugins, it's better to split the plugin code into its own file, and include that file when it's used.
 
-对于 KittenLayer，您应该创建一个文件，例如 `L.KittenLayer.js`：
+For the KittenLayer, you should create a file like `L.KittenLayer.js` with:
 
     L.TileLayer.Kitten = L.TileLayer.extend({
         getTileUrl: function(coords) {
@@ -53,7 +53,7 @@ title: Extending Leaflet, New Layers
         }
     });
 
-然后，在显示地图时引入该文件：
+And then, include that file when showing a map:
 
 	<html>
 	…
@@ -66,13 +66,13 @@ title: Extending Leaflet, New Layers
 	…
 
 
-### `L.GridLayer` 和 DOM 元素
+### `L.GridLayer` and DOM elements
 
-另一种扩展方法是 `L.GridLayer.createTile()`。`L.TileLayer` 会把它当成一个图片的网格（如`<img>`元素）来处理，`L.GridLayer` 则允许创建任何种类的 [HTML 元素的网格](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)。
+Another extension method is `L.GridLayer.createTile()`. Where `L.TileLayer` assumes that there is a grid of images (as `<img>` elements), `L.GridLayer` doesn't assume that - it allows creating grids of any kind of [HTML Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-`L.GridLayer` 允许创建 `<img>` 的网格，但 [`<div>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)、[`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) 或 [`<picture>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)（或任何东西）的网格也是可以的。`createTile()` 只需要返回  [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)  给定瓦片（tile）坐标的实例。了解如何操作 [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) 中的元素在这里很重要：Leaflet 需要实例 `HTMLElement`，因此使用 jQuery 等库创建的元素将有问题。
+`L.GridLayer` allows creating grids of `<img>`s, but grids of [`<div>`s](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div), [`<canvas>`es](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) or [`<picture>`s](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) (or anything) are possible. `createTile()` just has to return an instance of [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) given the tile coordinates. Knowing how to manipulate elements in the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) is important here: Leaflet expects instances of `HTMLElement`, so elements created with libraries like jQuery will be problematic.
 
-自定义的一个示例是在 .xml 文件 `GridLayer` 中显示瓦片（tile）坐标 <div>。这在调试 Leaflet 的内部结构以及了解 tile 坐标如何工作时特别有用：
+An example of a custom `GridLayer` is showing the tile coordinates in a `<div>`. This is particularly useful when debugging the internals of Leaflet, and for understanding how the tile coordinates work:
 
 	L.GridLayer.DebugCoords = L.GridLayer.extend({
 		createTile: function (coords) {
@@ -90,7 +90,7 @@ title: Extending Leaflet, New Layers
 	map.addLayer( L.gridLayer.debugCoords() );
 
 
-如果元素必须做一些异步初始化，那么就使用第二个函数参数 `done`，并在瓦片（tile）准备好时（例如，当图像已被完全加载）或出现错误时回调它。在这里，我们将人为地延迟瓦片（tile）：
+If the element has to do some asynchronous initialization, then use the second function parameter `done` and call it back when the tile is ready (for example, when an image has been fully loaded) or when there is an error. In here, we'll just delay the tiles artificially:
 
 	createTile: function (coords, done) {
 		var tile = document.createElement('div');
@@ -106,9 +106,9 @@ title: Extending Leaflet, New Layers
 
 {% include frame.html url="gridcoords.html" %}
 
-通过这些自定义的 `GridLayer`，一个插件可以完全控制构成网格的 HTML 元素。一些插件已经通过这种方式使用 `<canvas>` 来做高级渲染。
+With these custom `GridLayer`s, a plugin can have full control of the HTML elements that make up the grid. A few plugins already use `<canvas>`es in this way to do advanced rendering.
 
-一个非常基础的 `<canvas>` `GridLayer` 类似这样：
+A very basic `<canvas>` `GridLayer` looks like:
 
 	L.GridLayer.CanvasCircles = L.GridLayer.extend({
 		createTile: function (coords) {
@@ -133,36 +133,36 @@ title: Extending Leaflet, New Layers
 {% include frame.html url="canvascircles.html" %}
 
 
-## The pixel origin 像素原点
+## The pixel origin
 
-创建自定义的 "L.Layer "是可能的，但需要对 Leaflet 如何定位 HTML 元素有更深的了解。精简版是：
+Creating custom `L.Layer`s is possible, but needs a deeper knowledge of how Leaflet positions HTML elements. The abridged version is:
 
-* 该 L.Map 容器具有"地图窗格（pane）"，这是<div>
-* `L.Layer` 是地图窗格内的HTML元素
-* 地图将所有 `LatLng` 转换为地图 CRS 中的坐标，再从 CRS 中转换为绝对的 "像素坐标"（CRS 的原点与像素坐标的原点相同）
-* 当 `L.Map` 准备好时（有一个中心 `LatLng` 和一个缩放级别），左上角的绝对像素坐标成为 "像素原点"
-* 每个 `L.Layer` 都根据像素原点和该层 `LatLng` 的绝对像素坐标从其地图窗格中偏移
-* 在 `L.Map` 上的每个 `zoomend` 或 `viewreset` 事件后，像素原点被重置，每个 `L.Layer` 必须重新计算其位置（如果需要的话）
-* 在平移地图时，像素原点不会被重置；相反，整个窗格会被重新定位
+* The `L.Map` container has "map panes", which are `<div>`s.
+* `L.Layer`s are HTML elements inside a map pane
+* The map transforms all `LatLng`s to coordinates in the map's CRS, and from that into absolute "pixel coordinates" (the origin of the CRS is the same as the origin of the pixel coordinates)
+* When the `L.Map` is ready (has a center `LatLng` and a zoom level), the absolute pixel coordinates of the top-left corner become the "pixel origin"
+* Each `L.Layer` is offset from its map pane according to the pixel origin and the absolute pixel coordinates of the layer's `LatLng`s
+* The pixel origin is reset after each `zoomend` or `viewreset` event on the `L.Map`, and every `L.Layer` has to recalculate its position (if needed)
+* The pixel origin is *not* reset when panning the map around; instead, the whole panes are repositioned.
 
-这可能有点难以理解，因此请参考以下用来解释的地图：
+This might be a bit overwhelming, so consider the following explanatory map:
 
 {% include frame.html url="pixelorigin.html" %}
 
-CRS 原点（绿色）保持在同一个 `LatLng`。像素原点（红色）总是从左上角开始。当地图被平移时，像素原点会移动（地图窗格会相对于地图的容器重新定位），而当缩放时，像素原点会保持在屏幕的同一位置（地图窗格（pane）不会被重新定位，但图层可能会重新绘制）。缩放时对像素原点的绝对像素坐标会被更新，但平移时不会被更新。请注意每次放大地图时，绝对像素坐标（到绿色括号的距离）是如何翻倍的。
+The CRS origin (green) stays in the same `LatLng`. The pixel origin (red) always starts at the top-left corner. The pixel origin moves around when the map is panned (map panes are repositioned relative to the map's container), and stays in the same place in the screen when zooming (map panes are *not* repositioned, but layers might redraw themselves). The absolute pixel coordinate to the pixel origin is updated when zooming, but is not updated when panning. Note how the absolute pixel coordinates (the distance to the green bracket) double every time the map is zoomed in.
 
-如果要定位任何东西（例如，一个蓝色的 `L.Marker`），它的 `LatLng` 被转换为地图的 `L.CRS` 内的绝对像素坐标。然后从它的绝对像素坐标中减去像素原点的绝对像素坐标，得到一个相对于像素原点（浅蓝色）的偏移。由于像素原点是所有地图窗格的左上角，这个偏移量可以应用于标记的图标的HTML元素。标记的 `iconAnchor`（深蓝色线）是通过负的 CSS 边距实现的。
+To position anything (for example, a blue `L.Marker`), its `LatLng` is converted to an absolute pixel coordinate inside the map's `L.CRS`. Then the absolute pixel coordinate of the pixel origin is subtracted from its absolute pixel coordinate, giving an offset relative to the pixel origin (light blue). As the pixel origin is the top-left corner of all map panes, this offset can be applied to the HTML element of the marker's icon. The marker's `iconAnchor` (dark blue line) is achieved via negative CSS margins.
 
-在 `L.Map.project()` 和 `L.Map.unproject()` 这些绝对像素坐标的方法进行操作。同样，`L.Map.latLngToLayerPoint()`和`L.Map.layerPointToLatLng()`也是使用相对于像素原点的偏移。
+The `L.Map.project()` and `L.Map.unproject()` methods operate with these absolute pixel coordinates. Likewise, `L.Map.latLngToLayerPoint()` and `L.Map.layerPointToLatLng()` work with the offset relative to the pixel origin.
 
-不同的层以不同的方式应用这些计算。`L.Marker` 只需重新定位他们的图标；`L.GridLayer` 计算地图的边界（在绝对像素坐标中），然后计算要请求的瓦片坐标列表；矢量图层（折线、多边形、圆形标记等）将每个图层转换 `LatLng` 为像素并使用 SVG 或 `<canvas>`。
+Different layers apply these calculations in different ways. `L.Marker`s simply reposition their icons; `L.GridLayer`s calculate the bounds of the map (in absolute pixel coordinates) and then calculate the list of tile coordinates to request; vector layers (polylines, polygons, circle markers, etc) transform each `LatLng` to pixels and draw the geometries using SVG or `<canvas>`.
 
 
-### `onAdd` 和 `onRemove`
+### `onAdd` and `onRemove`
 
-从本质上讲，所有 `L.Layer` 都是地图窗格中的 HTML 元素，它们的位置和内容由图层代码定义。但是，在实例化图层时无法创建 HTML 元素；相反，这是在将图层添加到地图时完成的 - 图层 document 直到那时才知道地图（甚至不知道）。
+At their core, all `L.Layer`s are HTML elements inside a map pane, their positions and contents defined by the layer's code. However, HTML elements cannot be created when a layer is instantiated; rather, this is done when the layer is added to the map - the layer doesn't know about the map (or even about the `document`) until then.
 
-换句话说：地图调用图层的 `onAdd()` 方法，然后图层创建其HTML元素（通常称为'容器'元素）并将其添加到地图窗格中。反之，当图层从地图上删除时，它的 `onRemove()` 方法会被调用。当添加到地图上时，图层必须更新其内容，并在地图视图更新时重新定位它们。图层骨架如下所示：
+In other words: the map calls the `onAdd()` method of the layer, then the layer creates its HTML element(s) (commonly named 'container' element) and adds them to the map pane. Conversely, when the layer is removed from the map, its `onRemove()` method is called. The layer must update its contents when added to the map, and reposition them when the map view is updated. A layer skeleton looks like:
 
 	L.CustomLayer = L.Layer.extend({
 		onAdd: function(map) {
@@ -194,13 +194,13 @@ CRS 原点（绿色）保持在同一个 `LatLng`。像素原点（红色）总�
 		}
 	});
 
-如何准确定位一个图层的HTML元素取决于该图层的具体情况，但这个介绍应该有助于你阅读Leaflet的图层代码，并创建新的图层。
+How to exactly position the HTML elements for a layer depends on the specifics of the layer, but this introduction should help you to read Leaflet's layer code, and create new layers.
 
-### 使用父级的 `onAdd`
+### Using the parent's `onAdd`
 
-有些用例不需要重新创建整个 `onAdd` 代码，而是可以重复使用父类的代码，然后可以在初始化之前或之后根据需要添加一些具体内容。
+Some use cases don't need the whole `onAdd` code to be recreated, but instead the code for the parent can be reused, then some specifics can be added before _or_ after that initialization (as needed).
 
-举个例子，我们可以有一个 `L.Polyline` 始终为红色的子类（忽略选项），例如：
+To give an example, we can have a subclass of `L.Polyline` that will always be red (ignoring the options), like:
 
 	L.Polyline.Red = L.Polyline.extend({
 		onAdd: function(map) {
