@@ -839,7 +839,7 @@ var map = L.map('map', {
 
 
 </section><section>
-<h3 id='map-method'>Methods</h3>
+<h3 id='map-method'>方法</h3>
 
 <section >
 
@@ -848,67 +848,65 @@ var map = L.map('map', {
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法名</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-getrenderer'>
 		<td><code><b>getRenderer</b>(<nobr>&lt;<a href='#path'>Path</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
-		<td><p>Returns the instance of <a href="#renderer"><code>Renderer</code></a> that should be used to render the given
-<a href="#path"><code>Path</code></a>. It will ensure that the <code>renderer</code> options of the map and paths
-are respected, and that the renderers do exist on the map.</p>
+		<td><p>返回 <a href="#renderer"><code>Renderer</code></a> 的实例，该实例应该用于渲染给定的 <a href="#path"><code>Path</code></a>。它将确保地图和路径的 Renderer 选项得到尊重，并且 Renderer 确实存在于地图上。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-methods-for-layers-and-controls'>Methods for Layers and Controls</h4>
+<h4 id='map-methods-for-layers-and-controls'>图层和控件</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法名</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-addcontrol'>
 		<td><code><b>addControl</b>(<nobr>&lt;<a href='#control'>Control</a>&gt;</nobr> <i>control</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the given control to the map</p>
+        <td><p>添加控件到地图上</p>
 </td>
 	</tr>
 	<tr id='map-removecontrol'>
 		<td><code><b>removeControl</b>(<nobr>&lt;<a href='#control'>Control</a>&gt;</nobr> <i>control</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the given control from the map</p>
+        <td><p>从地图上移除一个指定的控件</p>
 </td>
 	</tr>
 	<tr id='map-addlayer'>
 		<td><code><b>addLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the given layer to the map</p>
+        <td><p>添加图层到地图上</p>
 </td>
 	</tr>
 	<tr id='map-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the given layer from the map.</p>
+        <td><p>从地图上移除一个指定的图层</p>
 </td>
 	</tr>
 	<tr id='map-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given layer is currently added to the map</p>
+        <td><p>地图上是否存在指定的图层，如果给定的图层当前已被加到地图上，则返回 true</p>
 </td>
 	</tr>
 	<tr id='map-eachlayer'>
 		<td><code><b>eachLayer</b>(<nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Iterates over the layers of the map, optionally specifying context of the iterator function.</p>
+        <td><p>遍历地图的图层，选择指定上下文的迭代器函数。</p>
 <pre><code>map.eachLayer(function(layer){
     layer.bindPopup('Hello');
 });
@@ -918,496 +916,446 @@ are respected, and that the renderers do exist on the map.</p>
 	<tr id='map-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#popup'>Popup</a>&gt;</nobr> <i>popup</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the specified popup while closing the previously opened (to make sure only one is opened at one time for usability).</p>
+        <td><p>打开指定的 Popup（弹窗）。（如果之前有打开其他的，会自动关闭，确保只有一个）</p>
 </td>
 	</tr>
 	<tr id='map-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;String|HTMLElement&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Creates a popup with the specified content and options and opens it in the given point on a map.</p>
+        <td><p>创建指定的内容和选项的 Popup（弹窗），并在地图上的指定点打开它。</p>
 </td>
 	</tr>
 	<tr id='map-closepopup'>
 		<td><code><b>closePopup</b>(<nobr>&lt;<a href='#popup'>Popup</a>&gt;</nobr> <i>popup?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup previously opened with <a href="#map-openpopup">openPopup</a> (or the given one).</p>
+        <td><p>关闭之前打开的（或给定某个）<a href="#map-openpopup">Popup</a> （弹窗）。</p>
 </td>
 	</tr>
 	<tr id='map-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#tooltip'>Tooltip</a>&gt;</nobr> <i>tooltip</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the specified tooltip.</p>
+        <td><p>打开指定的 Tooltip（提示框）。</p>
 </td>
 	</tr>
 	<tr id='map-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;String|HTMLElement&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Creates a tooltip with the specified content and options and open it.</p>
+        <td><p>创建并打开具有指定内容和选项的 Tooltip（提示框）。</p>
 </td>
 	</tr>
 	<tr id='map-closetooltip'>
 		<td><code><b>closeTooltip</b>(<nobr>&lt;<a href='#tooltip'>Tooltip</a>&gt;</nobr> <i>tooltip</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip given as parameter.</p>
+        <td><p>关闭之前打开的（或给定某个）Tooltip（提示框）。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-methods-for-modifying-map-state'>Methods for modifying map state</h4>
+<h4 id='map-methods-for-modifying-map-state'>修改地图状态</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法名</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-setview'>
 		<td><code><b>setView</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>center</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>, <nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the view of the map (geographical center and zoom) with the given
-animation options.</p>
+        <td><p>用指定的动画选项设置地图的视图（地理中心和缩放）。</p>
 </td>
 	</tr>
 	<tr id='map-setzoom'>
 		<td><code><b>setZoom</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom</i>, <nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the zoom of the map.</p>
+        <td><p>设置地图的缩放级别。</p>
 </td>
 	</tr>
 	<tr id='map-zoomin'>
 		<td><code><b>zoomIn</b>(<nobr>&lt;Number&gt;</nobr> <i>delta?</i>, <nobr>&lt;<a href='#zoom-options'>Zoom options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Increases the zoom of the map by <code>delta</code> (<a href="#map-zoomdelta"><code>zoomDelta</code></a> by default).</p>
+        <td><p>放大地图级别 ( delta 为空时，默认值取自 <a href="#map-zoomdelta"><code>zoomDelta</code></a> )。</p>
 </td>
 	</tr>
 	<tr id='map-zoomout'>
 		<td><code><b>zoomOut</b>(<nobr>&lt;Number&gt;</nobr> <i>delta?</i>, <nobr>&lt;<a href='#zoom-options'>Zoom options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Decreases the zoom of the map by <code>delta</code> (<a href="#map-zoomdelta"><code>zoomDelta</code></a> by default).</p>
+        <td><p>缩小地图级别 ( delta 为空时，默认值取自 <a href="#map-zoomdelta"><code>zoomDelta</code></a> )。</p>
 </td>
 	</tr>
 	<tr id='map-setzoomaround'>
 		<td><code><b>setZoomAround</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>, <nobr>&lt;<a href='#zoom-options'>Zoom options</a>&gt;</nobr> <i>options</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Zooms the map while keeping a specified geographical point on the map
-stationary (e.g. used internally for scroll zoom and double-click zoom).</p>
+        <td><p>缩放地图，同时保持地图上的指定地理位置不变（例如内部用于滚动缩放和双击缩放）。</p>
 </td>
 	</tr>
 	<tr id='map-setzoomaround'>
 		<td><code><b>setZoomAround</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>offset</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>, <nobr>&lt;<a href='#zoom-options'>Zoom options</a>&gt;</nobr> <i>options</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Zooms the map while keeping a specified pixel on the map (relative to the top-left corner) stationary.</p>
+        <td><p>缩放地图，同时保持地图上相对于左上角的指定像素位置不变。</p>
 </td>
 	</tr>
 	<tr id='map-fitbounds'>
 		<td><code><b>fitBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#fitbounds-options'>fitBounds options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets a map view that contains the given geographical bounds with the
-maximum zoom level possible.</p>
+        <td><p>将地图的视图设置在给定的矩形地理范围内,地图会自动计算最大缩放级别和中心点。</p>
 </td>
 	</tr>
 	<tr id='map-fitworld'>
 		<td><code><b>fitWorld</b>(<nobr>&lt;<a href='#fitbounds-options'>fitBounds options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets a map view that mostly contains the whole world with the maximum
-zoom level possible.</p>
+        <td><p>设置一个包含整个世界的地图视图，其缩放级别为最大。</p>
 </td>
 	</tr>
 	<tr id='map-panto'>
 		<td><code><b>panTo</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#pan-options'>Pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Pans the map to a given center.</p>
+        <td><p>将地图平移到一个指定的中心点。</p>
 </td>
 	</tr>
 	<tr id='map-panby'>
 		<td><code><b>panBy</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>offset</i>, <nobr>&lt;<a href='#pan-options'>Pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Pans the map by a given number of pixels (animated).</p>
+        <td><p>将地图平移一定数量的像素（动画）。</p>
 </td>
 	</tr>
 	<tr id='map-flyto'>
 		<td><code><b>flyTo</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom?</i>, <nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the view of the map (geographical center and zoom) performing a smooth
-pan-zoom animation.</p>
+        <td><p>执行一个平滑的平移-缩放动画，移动缩放地图范围至指定的地理中心和级别。</p>
 </td>
 	</tr>
 	<tr id='map-flytobounds'>
 		<td><code><b>flyToBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#fitbounds-options'>fitBounds options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the view of the map with a smooth animation like <a href="#map-flyto"><code>flyTo</code></a>,
-but takes a bounds parameter like <a href="#map-fitbounds"><code>fitBounds</code></a>.</p>
+        <td><p>设置地图的视图，并且它具有像 <a href="#map-flyto"><code>flyTo</code></a> 一样的平滑动画，但需要一个像 <a
+			href="#map-fitbounds"><code>fitBounds</code></a> 一样的边界参数。</p>
 </td>
 	</tr>
 	<tr id='map-setmaxbounds'>
 		<td><code><b>setMaxBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Restricts the map view to the given bounds (see the <a href="#map-maxbounds">maxBounds</a> option).</p>
+        <td><p>将地图视图限制在给定的范围内（参考 <a href="#map-maxbounds">maxBounds</a> 选项）。</p>
 </td>
 	</tr>
 	<tr id='map-setminzoom'>
 		<td><code><b>setMinZoom</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the lower limit for the available zoom levels (see the <a href="#map-minzoom">minZoom</a> option).</p>
+        <td><p>设置地图最小缩放级别 (参考 <a href="#map-minzoom">minZoom</a> 参数选项)。</p>
 </td>
 	</tr>
 	<tr id='map-setmaxzoom'>
 		<td><code><b>setMaxZoom</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the upper limit for the available zoom levels (see the <a href="#map-maxzoom">maxZoom</a> option).</p>
+        <td><p>设置地图最大缩放级别 (参考 <a href="#map-maxzoom">maxZoom</a> 参数选项)。</p>
 </td>
 	</tr>
 	<tr id='map-paninsidebounds'>
 		<td><code><b>panInsideBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#pan-options'>Pan options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Pans the map to the closest view that would lie inside the given bounds (if it's not already), controlling the animation using the options specific, if any.</p>
+        <td><p>将地图平移到离给定边界最近的视图（如果还没有的话），如果有的话，用特定的选项控制动画。</p>
 </td>
 	</tr>
 	<tr id='map-paninside'>
 		<td><code><b>panInside</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#padding-options'>padding options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Pans the map the minimum amount to make the <code>latlng</code> visible. Use
-padding options to fit the display to more restricted bounds.
-If <code>latlng</code> is already within the (optionally padded) display bounds,
-the map will not be panned.</p>
+        <td><p>平移地图的最小数量以使 <a href="#latlng"><code>latlng</code></a> 可见。
+            使用padding，paddingTopLeft和paddingTopRight选项可以使显示适合更严格的边界，例如<a
+                    href="#map-fitbounds"><code>fitBounds</code></a>。 如果latlng已经位于显示边界内（可选填充），则不会平移地图。 </p>
 </td>
 	</tr>
 	<tr id='map-invalidatesize'>
 		<td><code><b>invalidateSize</b>(<nobr>&lt;<a href='#zoom/pan-options'>Zoom/pan options</a>&gt;</nobr> <i>options</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Checks if the map container size changed and updates the map if so —
-call it after you've changed the map size dynamically, also animating
-pan by default. If <code>options.pan</code> is <code>false</code>, panning will not occur.
-If <code>options.debounceMoveend</code> is <code>true</code>, it will delay <code>moveend</code> event so
-that it doesn't happen often even if the method is called many
-times in a row.</p>
+        <td><p>检查地图容器的大小是否发生变化，如果发生变化则更新地图--在你动态改变地图大小后调用它，默认情况下也会发生平移动画。如果 options.pan 为 false，将不会发生平移。如果 options.debounceMoveend 为 true，它将延迟 moveend 事件，这样即使该方法被连续调用多次，也不会经常发生。</p>
 </td>
 	</tr>
 	<tr id='map-invalidatesize'>
 		<td><code><b>invalidateSize</b>(<nobr>&lt;Boolean&gt;</nobr> <i>animate</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Checks if the map container size changed and updates the map if so —
-call it after you've changed the map size dynamically, also animating
-pan by default.</p>
+        <td><p>检查地图容器的大小是否改变，如果改变则更新地图--在你动态改变地图大小后调用它，默认情况下也会为平移设置动画。</p>
 </td>
 	</tr>
 	<tr id='map-stop'>
 		<td><code><b>stop</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Stops the currently running <code>panTo</code> or <code>flyTo</code> animation, if any.</p>
+        <td><p>如果有的话，则停止当前运行 panTo 或 flyTo 动画。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-geolocation-methods'>Geolocation methods</h4>
+<h4 id='map-geolocation-methods'>地理定位</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法名</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-locate'>
 		<td><code><b>locate</b>(<nobr>&lt;<a href='#locate-options'>Locate options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Tries to locate the user using the Geolocation API, firing a <a href="#map-locationfound"><code>locationfound</code></a>
-event with location data on success or a <a href="#map-locationerror"><code>locationerror</code></a> event on failure,
-and optionally sets the map view to the user's location with respect to
-detection accuracy (or to the world view if geolocation failed).
-Note that, if your page doesn't use HTTPS, this method will fail in
-modern browsers (<a href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins">Chrome 50 and newer</a>)
-See <a href="#locate-options"><code>Locate options</code></a> for more details.</p>
+        <td><p>尝试使用 Geolocation API 定位用户，成功时触发带有位置数据的 <a href="#map-locationfound"><code>locationfound</code></a> 事件，失败时触发 <a
+			href="#map-locationerror"><code>locationerror</code></a> 事件，并可选择将地图视图设置为与检测精度有关的用户位置（如果地理定位失败则设置为世界视图）。注意，如果你的页面没有使用HTTPS，这个方法在现代浏览器中会失败（<a
+			href="https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins">Chrome 50 及更高版本</a>）更多细节请参阅 <a href="#locate-options"><code>Locate options</code></a>。</p>
 </td>
 	</tr>
 	<tr id='map-stoplocate'>
 		<td><code><b>stopLocate</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Stops watching location previously initiated by <code>map.locate({watch: true})</code>
-and aborts resetting the map view if map.locate was called with
-<code>{setView: true}</code>.</p>
+        <td><p>停止监视先前由 map.locate（{watch：true}）初始化的位置，如果调用 map.locate 时设置了 {setView：true}，则放弃重置地图视图。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-other-methods'>Other Methods</h4>
+<h4 id='map-other-methods'>其它</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法名</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-addhandler'>
 		<td><code><b>addHandler</b>(<nobr>&lt;String&gt;</nobr> <i>name</i>, <nobr>&lt;Function&gt;</nobr> <i>HandlerClass</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a new <a href="#handler"><code>Handler</code></a> to the map, given its name and constructor function.</p>
+        <td><p>给定其名称和构造函数，将新的 <a href="#handler"><code>Handler</code></a> 添加到地图。</p>
 </td>
 	</tr>
 	<tr id='map-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Destroys the map and clears all related event listeners.</p>
+        <td><p>销毁地图并清除所有相关的事件侦听器。</p>
 </td>
 	</tr>
 	<tr id='map-createpane'>
 		<td><code><b>createPane</b>(<nobr>&lt;String&gt;</nobr> <i>name</i>, <nobr>&lt;HTMLElement&gt;</nobr> <i>container?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Creates a new <a href="#map-pane">map pane</a> with the given name if it doesn't exist already,
-then returns it. The pane is created as a child of <code>container</code>, or
-as a child of the main map pane if not set.</p>
+        <td><p>如果给定名称不存在，则创建一个新的<a href="#map-pane">map pane</a>，然后将其返回。 该窗格被创建为容器的子级，或者被创建为主地图窗格的子级（如果未设置）。</p>
 </td>
 	</tr>
 	<tr id='map-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String|HTMLElement&gt;</nobr> <i>pane</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns a <a href="#map-pane">map pane</a>, given its name or its HTML element (its identity).</p>
+        <td><p>返回一个地图窗口 <a href="#map-pane">map pane</a>，给它一个名称或者 HTML 的节点。</p>
 </td>
 	</tr>
 	<tr id='map-getpanes'>
 		<td><code><b>getPanes</b>()</code></td>
 		<td><code>Object</code></td>
-		<td><p>Returns a plain object containing the names of all <a href="#map-pane">panes</a> as keys and
-the panes as values.</p>
+        <td><p>返回一个普通对象，其中包含所有窗格的名称为键，并将窗格 <a href="#map-pane">panes</a> 作为值。</p>
 </td>
 	</tr>
 	<tr id='map-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTML element that contains the map.</p>
+        <td><p>返回一个包含地图的 HTML 节点。</p>
 </td>
 	</tr>
 	<tr id='map-whenready'>
 		<td><code><b>whenReady</b>(<nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Runs the given function <code>fn</code> when the map gets initialized with
-a view (center and zoom) and at least one layer, or immediately
-if it's already initialized, optionally passing a function context.</p>
+        <td><p>当地图使用视图（中心和缩放）和至少一层初始化时，或者如果已经初始化，则立即运行给定的函数 fn（如果已初始化）（可选地传递函数上下文）。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-methods-for-getting-map-state'>Methods for Getting Map State</h4>
+<h4 id='map-methods-for-getting-map-state'>获取地图状态</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法名</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the geographical center of the map view</p>
+        <td><p>返回地图中心点的经纬度</p>
 </td>
 	</tr>
 	<tr id='map-getzoom'>
 		<td><code><b>getZoom</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the current zoom level of the map view</p>
+        <td><p>返回地图此时的缩放级别</p>
 </td>
 	</tr>
 	<tr id='map-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the geographical bounds visible in the current map view</p>
+        <td><p>返回当前地图的矩形边界</p>
 </td>
 	</tr>
 	<tr id='map-getminzoom'>
 		<td><code><b>getMinZoom</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the minimum zoom level of the map (if set in the <code>minZoom</code> option of the map or of any layers), or <code>0</code> by default.</p>
+        <td><p>返回地图的最小缩放级别（如果在地图或任何图层的 minZoom 选项中设置过），或者默认为 0。</p>
 </td>
 	</tr>
 	<tr id='map-getmaxzoom'>
 		<td><code><b>getMaxZoom</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the maximum zoom level of the map (if set in the <code>maxZoom</code> option of the map or of any layers).</p>
+        <td><p>返回地图的最大缩放级别（如果在地图或任何图层的 maxZoom 选项中设置过）</p>
 </td>
 	</tr>
 	<tr id='map-getboundszoom'>
 		<td><code><b>getBoundsZoom</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;Boolean&gt;</nobr> <i>inside?</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>padding?</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the maximum zoom level on which the given bounds fit to the map
-view in its entirety. If <code>inside</code> (optional) is set to <code>true</code>, the method
-instead returns the minimum zoom level on which the map view fits into
-the given bounds in its entirety.</p>
+        <td><p>返回给定边界与地图视图完全吻合的最大缩放级别。如果 inside（可选）被设置为 true，该方法反而会返回地图视图完全适合给定边界的最小缩放级别。</p>
 </td>
 	</tr>
 	<tr id='map-getsize'>
 		<td><code><b>getSize</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the current size of the map container (in pixels).</p>
+        <td><p>返回地图容器的当前大小（以像素为单位）。</p>
 </td>
 	</tr>
 	<tr id='map-getpixelbounds'>
 		<td><code><b>getPixelBounds</b>()</code></td>
 		<td><code><a href='#bounds'>Bounds</a></code></td>
-		<td><p>Returns the bounds of the current map view in projected pixel
-coordinates (sometimes useful in layer and overlay implementations).</p>
+        <td><p>返回当前地图视图的投影像素坐标的边界（有时在图层和叠加实现中很有用）。</p>
 </td>
 	</tr>
 	<tr id='map-getpixelorigin'>
 		<td><code><b>getPixelOrigin</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the projected pixel coordinates of the top left point of
-the map layer (useful in custom layer and overlay implementations).</p>
+        <td><p>返回地图层左上角的投影像素坐标（在自定义图层和叠加实现中很有用）。</p>
 </td>
 	</tr>
 	<tr id='map-getpixelworldbounds'>
 		<td><code><b>getPixelWorldBounds</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom?</i>)</code></td>
 		<td><code><a href='#bounds'>Bounds</a></code></td>
-		<td><p>Returns the world's bounds in pixel coordinates for zoom level <code>zoom</code>.
-If <code>zoom</code> is omitted, the map's current zoom level is used.</p>
+        <td><p>返回指定缩放级别的世界地图边界的像素坐标。如果 zoom 参数省略，则使用地图的当前缩放级别。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='map-conversion-methods'>Conversion Methods</h4>
+<h4 id='map-conversion-methods'>转换</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法名</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-getzoomscale'>
 		<td><code><b>getZoomScale</b>(<nobr>&lt;Number&gt;</nobr> <i>toZoom</i>, <nobr>&lt;Number&gt;</nobr> <i>fromZoom</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the scale factor to be applied to a map transition from zoom level
-<code>fromZoom</code> to <code>toZoom</code>. Used internally to help with zoom animations.</p>
+        <td><p>返回要应用于从缩放级别从缩放到缩放的地图过渡的比例因子。 在内部使用以帮助缩放动画。</p>
 </td>
 	</tr>
 	<tr id='map-getscalezoom'>
 		<td><code><b>getScaleZoom</b>(<nobr>&lt;Number&gt;</nobr> <i>scale</i>, <nobr>&lt;Number&gt;</nobr> <i>fromZoom</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the zoom level that the map would end up at, if it is at <code>fromZoom</code>
-level and everything is scaled by a factor of <code>scale</code>. Inverse of
-<a href="#map-getZoomScale"><code>getZoomScale</code></a>.</p>
+        <td><p>返回地图最终到达的缩放级别，如果它处于fromZoom 级别，并且所有内容都按比例缩放scale。 <a
+			href="#map-getZoomScale"><code>getZoomScale</code></a> 的逆向方法。</p>
 </td>
 	</tr>
 	<tr id='map-project'>
 		<td><code><b>project</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Projects a geographical coordinate <a href="#latlng"><code>LatLng</code></a> according to the projection
-of the map's CRS, then scales it according to <code>zoom</code> and the CRS's
-<a href="#transformation"><code>Transformation</code></a>. The result is pixel coordinate relative to
-the CRS origin.</p>
+        <td><p><a href="#latlng"><code>LatLng</code></a> 根据地图CRS的投影来 投影地理坐标，然后zoom根据CRS的 尺寸对其进行分级 <a
+			href="#transformation"><code>Transformation</code></a> 。结果是相对于CRS原点的像素坐标。</p>
 </td>
 	</tr>
 	<tr id='map-unproject'>
 		<td><code><b>unproject</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Inverse of <a href="#map-project"><code>project</code></a>.</p>
+        <td><p>逆向 <a href="#map-project"><code>project</code></a></p>
 </td>
 	</tr>
 	<tr id='map-layerpointtolatlng'>
 		<td><code><b>layerPointToLatLng</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Given a pixel coordinate relative to the <a href="#map-getpixelorigin">origin pixel</a>,
-returns the corresponding geographical coordinate (for the current zoom level).</p>
+        <td><p>给定相对于<a href="#map-getpixelorigin">origin pixel</a>的相应像素坐标，转换为相应的地理坐标（对于当前缩放级别）。</p>
 </td>
 	</tr>
 	<tr id='map-latlngtolayerpoint'>
 		<td><code><b>latLngToLayerPoint</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Given a geographical coordinate, returns the corresponding pixel coordinate
-relative to the <a href="#map-getpixelorigin">origin pixel</a>.</p>
+        <td><p>给定地理坐标，转换为相对于<a href="#map-getpixelorigin">origin pixel</a>的相应像素坐标。（在地图上进行位置叠加时比较有用）</p>
 </td>
 	</tr>
 	<tr id='map-wraplatlng'>
 		<td><code><b>wrapLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns a <a href="#latlng"><code>LatLng</code></a> where <code>lat</code> and <code>lng</code> has been wrapped according to the
-map's CRS's <code>wrapLat</code> and <code>wrapLng</code> properties, if they are outside the
-CRS's bounds.
-By default this means longitude is wrapped around the dateline so its
-value is between -180 and +180 degrees.</p>
+        <td><p>如果它们在CRS的边界之外，则返回一个<a href="#latlng"><code>LatLng</code></a>，lat并lng根据地图的CRS
+            wrapLat和wrapLng属性进行包装。默认情况下，这意味着经度包裹在数据线周围，所以它的值在-180和+180度之间。</p>
 </td>
 	</tr>
 	<tr id='map-wraplatlngbounds'>
 		<td><code><b>wrapLatLngBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns a <a href="#latlngbounds"><code>LatLngBounds</code></a> with the same size as the given one, ensuring that
-its center is within the CRS's bounds.
-By default this means the center longitude is wrapped around the dateline so its
-value is between -180 and +180 degrees, and the majority of the bounds
-overlaps the CRS's bounds.</p>
+        <td><p>返回 <a href="#latlngbounds"><code>LatLngBounds</code></a>
+            与给定的大小相同的大小，确保其中心在CRS的边界内。默认情况下，这意味着中心经度被包裹在数据线周围，因此它的值在-180和+180度之间，并且大多数边界与CRS的界限重叠。</p>
 </td>
 	</tr>
 	<tr id='map-distance'>
 		<td><code><b>distance</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng1</i>, <nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng2</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the distance between two geographical coordinates according to
-the map's CRS. By default this measures distance in meters.</p>
+        <td><p>根据地图的参考系来返回两个地理位置之间的距离，默认为米。</p>
 </td>
 	</tr>
 	<tr id='map-containerpointtolayerpoint'>
 		<td><code><b>containerPointToLayerPoint</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Given a pixel coordinate relative to the map container, returns the corresponding
-pixel coordinate relative to the <a href="#map-getpixelorigin">origin pixel</a>.</p>
+        <td><p>给定相对于地图container容器的像素坐标，返回相对于<a href="#map-getpixelorigin">origin pixel</a>的相应像素坐标。</p>
 </td>
 	</tr>
 	<tr id='map-layerpointtocontainerpoint'>
 		<td><code><b>layerPointToContainerPoint</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Given a pixel coordinate relative to the <a href="#map-getpixelorigin">origin pixel</a>,
-returns the corresponding pixel coordinate relative to the map container.</p>
+        <td><p>给定相对于<a href="#map-getpixelorigin">origin pixel</a>的像素坐标，返回相对于地图container容器的相应像素坐标。</p>
 </td>
 	</tr>
 	<tr id='map-containerpointtolatlng'>
 		<td><code><b>containerPointToLatLng</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Given a pixel coordinate relative to the map container, returns
-the corresponding geographical coordinate (for the current zoom level).</p>
+        <td><p>给定相对于地图container容器的像素坐标，返回对应的地理坐标（对于当前缩放级别）。</p>
 </td>
 	</tr>
 	<tr id='map-latlngtocontainerpoint'>
 		<td><code><b>latLngToContainerPoint</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Given a geographical coordinate, returns the corresponding pixel coordinate
-relative to the map container.</p>
+        <td><p>给定地理坐标，返回相对于地图container容器的相应像素坐标。</p>
 </td>
 	</tr>
 	<tr id='map-mouseeventtocontainerpoint'>
 		<td><code><b>mouseEventToContainerPoint</b>(<nobr>&lt;<a href='#mouseevent'>MouseEvent</a>&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Given a MouseEvent object, returns the pixel coordinate relative to the
-map container where the event took place.</p>
+        <td><p>给定一个MouseEvent对象，返回相对于发生事件的地图容器的像素坐标（与地图左上角相关）。</p>
 </td>
 	</tr>
 	<tr id='map-mouseeventtolayerpoint'>
 		<td><code><b>mouseEventToLayerPoint</b>(<nobr>&lt;<a href='#mouseevent'>MouseEvent</a>&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Given a MouseEvent object, returns the pixel coordinate relative to
-the <a href="#map-getpixelorigin">origin pixel</a> where the event took place.</p>
+        <td><p>给定一个MouseEvent对象，返回相对于事件发生的<a href="#map-getpixelorigin">origin pixel</a>的像素坐标。</p>
 </td>
 	</tr>
 	<tr id='map-mouseeventtolatlng'>
 		<td><code><b>mouseEventToLatLng</b>(<nobr>&lt;<a href='#mouseevent'>MouseEvent</a>&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Given a MouseEvent object, returns geographical coordinate where the
-event took place.</p>
+        <td><p>给定一个MouseEvent对象，返回发生事件的地理坐标。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -1416,7 +1364,7 @@ event took place.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承了来自 <a href='#evented'>Evented</a> 上的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -1425,108 +1373,105 @@ event took place.</p>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法名</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='map-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>将 listener 函数（fn）添加到对象的特定事件类型。 您可以选择指定 listener 的上下文（此关键字将指向的对象）。 您还可以传递几种以空格分隔的类型（例如'click dblclick'）。</p>
 </td>
 	</tr>
 	<tr id='map-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 {click：onClick，mousemove：onMouseMove}</code></p>
 </td>
 	</tr>
 	<tr id='map-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>删除以前添加的侦听器功能。 如果未指定功能，它将从对象中删除该特定事件的所有 listener。 请注意，如果将自定义上下文传递给on，则必须将相同的上下文传递给 off 才能删除 listener。</p>
 </td>
 	</tr>
 	<tr id='map-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener。</p>
 </td>
 	</tr>
 	<tr id='map-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>删除对象上所有事件的所有 listeners。 这包括隐式附加的事件。</p>
 </td>
 	</tr>
 	<tr id='map-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide a data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。 您可以选择提供一个数据对象- listener 函数的第一个参数将包含其属性。 可以选择将事件传播给事件父级。</p>
 </td>
 	</tr>
 	<tr id='map-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.
-The verification can optionally be propagated, it will return <code>true</code> if parents have the listener attached to it.</p>
+		<td><p>如果特定事件类型具有任何 listener，则返回true。</p>
 </td>
 	</tr>
 	<tr id='map-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>行为与<a href="#evented-on"><code>on(…)</code></a>相同，除了 listener 只会被触发一次然后被删除。</p>
 </td>
 	</tr>
 	<tr id='map-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>再父级添加一个事件-将接收传播事件的<a href="#evented"> <code>Evented</code></a>。</p>
 </td>
 	</tr>
 	<tr id='map-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除父级事件，因此它将停止接收传播的事件</p>
 </td>
 	</tr>
 	<tr id='map-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同<a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='map-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同<a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='map-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同<a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='map-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同<a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='map-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同<a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='map-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同<a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
