@@ -7754,9 +7754,9 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='videooverlay'>VideoOverlay</h2><p>Used to load and display a video player over specific bounds of the map. Extends <a href="#imageoverlay"><code>ImageOverlay</code></a>.</p>
-<p>A video overlay uses the <a href="https://developer.mozilla.org/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
-HTML5 element.</p>
+</section><h2 id='videooverlay'>VideoOverlay</h2><p>用于在地图的特定范围内加载和显示视频播放器。 扩展  <a href="#imageoverlay"><code>ImageOverlay</code></a>。</p>
+<p>Video overlay 使用了 <a href="https://developer.mozilla.org/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
+这个 HTML5 元素。</p>
 
 <section>
 <h3 id='videooverlay-example'>使用示例</h3>
@@ -7793,8 +7793,7 @@ L.videoOverlay(videoUrl, videoBounds ).addTo(map);
 	</thead><tbody>
 	<tr id='videooverlay-l-videooverlay'>
 		<td><code><b>L.videoOverlay</b>(<nobr>&lt;String|Array|HTMLVideoElement&gt;</nobr> <i>video</i>, <nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#videooverlay-option'>VideoOverlay options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates an image overlay object given the URL of the video (or array of URLs, or even a video element) and the
-geographical bounds it is tied to.</td>
+		<td>指定视频的 URL（或 URL 数组，甚至视频元素）和它所关联的地理边界，实例化一个 image overlay 对象。</td>
 	</tr>
 </tbody></table>
 
@@ -7821,33 +7820,31 @@ geographical bounds it is tied to.</td>
 		<td><code><b>autoplay</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether the video starts playing automatically when loaded.
-On some browsers autoplay will only work with <code>muted: true</code></td>
+		<td>视频加载时是否自动开始播放。在某些浏览器上，仅适用于当 <code>muted: true</code> 时自动播放</td>
 	</tr>
 	<tr id='videooverlay-loop'>
 		<td><code><b>loop</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether the video will loop back to the beginning when played.</td>
+		<td>视频是否循环播放。</td>
 	</tr>
 	<tr id='videooverlay-keepaspectratio'>
 		<td><code><b>keepAspectRatio</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether the video will save aspect ratio after the projection.
-Relevant for supported browsers. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">browser compatibility</a></td>
+		<td>视频投影后是否保存纵横比。 与支持的浏览器相关。 查看 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">浏览器兼容性</a></td>
 	</tr>
 	<tr id='videooverlay-muted'>
 		<td><code><b>muted</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether the video starts on mute when loaded.</td>
+		<td>加载时视频是否以静音模式启动。</td>
 	</tr>
 	<tr id='videooverlay-playsinline'>
 		<td><code><b>playsInline</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Mobile browsers will play the video right where it is instead of open it up in fullscreen mode.</td>
+		<td>移动浏览器将在原处播放视频，而不是以全屏模式打开。</td>
 	</tr>
 </tbody></table>
 
@@ -7855,7 +7852,7 @@ Relevant for supported browsers. See <a href="https://developer.mozilla.org/en-U
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7998,7 +7995,7 @@ Relevant for supported browsers. See <a href="https://developer.mozilla.org/en-U
 	<tr id='videooverlay-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the video has finished loading the first frame</td>
+		<td>当视频完成加载第一帧时触发</td>
 	</tr>
 </tbody></table>
 
@@ -8006,7 +8003,7 @@ Relevant for supported browsers. See <a href="https://developer.mozilla.org/en-U
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8198,8 +8195,7 @@ Relevant for supported browsers. See <a href="https://developer.mozilla.org/en-U
 	<tr id='videooverlay-getelement'>
 		<td><code><b>getElement</b>()</code></td>
 		<td><code>HTMLVideoElement</code></td>
-		<td><p>Returns the instance of <a href="https://developer.mozilla.org/docs/Web/API/HTMLVideoElement"><code>HTMLVideoElement</code></a>
-used by this overlay.</p>
+		<td><p>返回此 overlay 使用的 <a href="https://developer.mozilla.org/docs/Web/API/HTMLVideoElement"><code>HTMLVideoElement</code></a> 实例。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -8208,7 +8204,7 @@ used by this overlay.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8267,7 +8263,7 @@ used by this overlay.</p>
 	<tr id='videooverlay-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center of the ImageOverlay.</p>
+		<td><p>返回 ImageOverlay 的中心坐标。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -8644,7 +8640,7 @@ A viewBox attribute is required on the SVG element to zoom in and out properly.<
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8776,7 +8772,7 @@ A viewBox attribute is required on the SVG element to zoom in and out properly.<
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8983,7 +8979,7 @@ used by this overlay.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#imageoverlay'>ImageOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#imageoverlay'>ImageOverlay</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -9042,7 +9038,7 @@ used by this overlay.</p>
 	<tr id='svgoverlay-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center of the ImageOverlay.</p>
+		<td><p>返回 ImageOverlay 的中心坐标。</p>
 </td>
 	</tr>
 </tbody></table>
