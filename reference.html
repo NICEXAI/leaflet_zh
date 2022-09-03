@@ -10044,7 +10044,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='polyline'>Polyline</h2><p>A class for drawing polyline overlays on a map. Extends <a href="#path"><code>Path</code></a>.</p>
+</section><h2 id='polyline'>Polyline 折线</h2><p>一个用于在地图上绘制折线覆盖物的类。扩展了 <a href="#path"><code>Path</code></a>。</p>
 
 <section>
 <h3 id='polyline-example'>使用示例</h3>
@@ -10055,7 +10055,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 
 
 
-<pre><code class="language-js">// create a red polyline from an array of LatLng points
+<pre><code class="language-js">// 从LatLng点的数组中创建一条红色的折线
 var latlngs = [
 	[45.51, -122.68],
 	[37.77, -122.43],
@@ -10067,8 +10067,8 @@ var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
 // zoom the map to the polyline
 map.fitBounds(polyline.getBounds());
 </code></pre>
-<p>You can also pass a multi-dimensional array to represent a <code>MultiPolyline</code> shape:</p>
-<pre><code class="language-js">// create a red polyline from an array of arrays of LatLng points
+<p>你也可以传递一个多维数组来表示 <code>MultiPolyline(多段折线）</code> 形状:</p>
+<pre><code class="language-js">// 从一个 LatLng 点的数组中创建一条红色的多段折线
 var latlngs = [
 	[[45.51, -122.68],
 	 [37.77, -122.43],
@@ -10100,10 +10100,7 @@ var latlngs = [
 	</thead><tbody>
 	<tr id='polyline-l-polyline'>
 		<td><code><b>L.polyline</b>(<nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs</i>, <nobr>&lt;<a href='#polyline-option'>Polyline options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates a polyline object given an array of geographical points and
-optionally an options object. You can create a <a href="#polyline"><code>Polyline</code></a> object with
-multiple separate lines (<code>MultiPolyline</code>) by passing an array of arrays
-of geographic points.</td>
+		<td>给出一个地理点数组和可选的选项对象，实例化一个 <a href="#polyline"><code>Polyline</code></a> 对象。你可以通过传递一个地理点的数组来创建一个具有多条独立线的折线对象 (<code>MultiPolyline</code>) 。</td>
 	</tr>
 </tbody></table>
 
@@ -10130,14 +10127,13 @@ of geographic points.</td>
 		<td><code><b>smoothFactor</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>How much to simplify the polyline on each zoom level. More means
-better performance and smoother look, and less means more accurate representation.</td>
+		<td>在每个缩放级别简化多段线的程度。更多意味着更好的性能和更平滑的外观，而更少意味着更精确的表现。</td>
 	</tr>
 	<tr id='polyline-noclip'>
 		<td><code><b>noClip</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Disable polyline clipping.</td>
+		<td>禁用折线剪裁。</td>
 	</tr>
 </tbody></table>
 
@@ -10145,7 +10141,7 @@ better performance and smoother look, and less means more accurate representatio
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -10492,52 +10488,49 @@ better performance and smoother look, and less means more accurate representatio
 	<tr id='polyline-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the polyline (as a GeoJSON <code>LineString</code> or <code>MultiLineString</code> Feature).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>LineString</code> 或 <code>MultiLineString</code> Feature)。</p>
 </td>
 	</tr>
 	<tr id='polyline-getlatlngs'>
 		<td><code><b>getLatLngs</b>()</code></td>
 		<td><code>LatLng[]</code></td>
-		<td><p>Returns an array of the points in the path, or nested arrays of points in case of multi-polyline.</p>
+		<td><p>返回 path（路径）中的点的数组，如果是多段折线，则返回点的嵌套数组。</p>
 </td>
 	</tr>
 	<tr id='polyline-setlatlngs'>
 		<td><code><b>setLatLngs</b>(<nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Replaces all the points in the polyline with the given array of geographical points.</p>
+		<td><p>用给定的地理点数组替换多段折线中的所有点。</p>
 </td>
 	</tr>
 	<tr id='polyline-isempty'>
 		<td><code><b>isEmpty</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the Polyline has no LatLngs.</p>
+		<td><p>如果折线没有经纬度，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='polyline-closestlayerpoint'>
 		<td><code><b>closestLayerPoint</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the point closest to <code>p</code> on the Polyline.</p>
+		<td><p>返回折线上最接近 <code>p</code> 的点。</p>
 </td>
 	</tr>
 	<tr id='polyline-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center (<a href="https://en.wikipedia.org/wiki/Centroid">centroid</a>) of the polyline.</p>
+		<td><p>返回折线的中心坐标 (<a href="http://en.wikipedia.org/wiki/Centroid">centroid</a>) 。</p>
 </td>
 	</tr>
 	<tr id='polyline-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the <a href="#latlngbounds"><code>LatLngBounds</code></a> of the path.</p>
+		<td><p>返回路径的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 。</p>
 </td>
 	</tr>
 	<tr id='polyline-addlatlng'>
 		<td><code><b>addLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a given point to the polyline. By default, adds to the first ring of
-the polyline in case of a multi-polyline, but can be overridden by passing
-a specific ring as a LatLng array (that you can earlier access with <a href="#polyline-getlatlngs"><code>getLatLngs</code></a>).</p>
+		<td><p>将一个给定的点添加到折线上。默认情况下，如果是多段折线，会添加到折线的第一个环上，但是可以通过传递一个特定的环作为LatLng数组来重写（你可以提前用 <a href="#polyline-getlatlngs"><code>getLatLngs</code></a>访问）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -10546,7 +10539,7 @@ a specific ring as a LatLng array (that you can earlier access with <a href="#po
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -10994,14 +10987,13 @@ map.fitBounds(polygon.getBounds());
 		<td><code><b>smoothFactor</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>How much to simplify the polyline on each zoom level. More means
-better performance and smoother look, and less means more accurate representation.</td>
+		<td>在每个缩放级别简化多段线的程度。更多意味着更好的性能和更平滑的外观，而更少意味着更精确的表现。</td>
 	</tr>
 	<tr id='polygon-noclip'>
 		<td><code><b>noClip</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Disable polyline clipping.</td>
+		<td>禁用折线剪裁。</td>
 	</tr>
 </tbody></table>
 
@@ -11010,7 +11002,7 @@ better performance and smoother look, and less means more accurate representatio
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11357,8 +11349,7 @@ better performance and smoother look, and less means more accurate representatio
 	<tr id='polygon-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the polygon (as a GeoJSON <a href="#polygon"><code>Polygon</code></a> or <code>MultiPolygon</code> Feature).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>Polygon</code> 或 <code>MultiPolygon</code> Feature)。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -11384,45 +11375,43 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 	<tr id='polygon-getlatlngs'>
 		<td><code><b>getLatLngs</b>()</code></td>
 		<td><code>LatLng[]</code></td>
-		<td><p>Returns an array of the points in the path, or nested arrays of points in case of multi-polyline.</p>
+		<td><p>返回 path（路径）中的点的数组，如果是多段折线，则返回点的嵌套数组。</p>
 </td>
 	</tr>
 	<tr id='polygon-setlatlngs'>
 		<td><code><b>setLatLngs</b>(<nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Replaces all the points in the polyline with the given array of geographical points.</p>
+		<td><p>用给定的地理点数组替换多段折线中的所有点。</p>
 </td>
 	</tr>
 	<tr id='polygon-isempty'>
 		<td><code><b>isEmpty</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the Polyline has no LatLngs.</p>
+		<td><p>如果折线没有经纬度，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='polygon-closestlayerpoint'>
 		<td><code><b>closestLayerPoint</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the point closest to <code>p</code> on the Polyline.</p>
+		<td><p>返回折线上最接近 <code>p</code> 的点。</p>
 </td>
 	</tr>
 	<tr id='polygon-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center (<a href="https://en.wikipedia.org/wiki/Centroid">centroid</a>) of the polyline.</p>
+		<td><p>返回折线的中心坐标 (<a href="http://en.wikipedia.org/wiki/Centroid">centroid</a>) 。</p>
 </td>
 	</tr>
 	<tr id='polygon-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the <a href="#latlngbounds"><code>LatLngBounds</code></a> of the path.</p>
+		<td><p>返回路径的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 。</p>
 </td>
 	</tr>
 	<tr id='polygon-addlatlng'>
 		<td><code><b>addLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a given point to the polyline. By default, adds to the first ring of
-the polyline in case of a multi-polyline, but can be overridden by passing
-a specific ring as a LatLng array (that you can earlier access with <a href="#polyline-getlatlngs"><code>getLatLngs</code></a>).</p>
+		<td><p>将一个给定的点添加到折线上。默认情况下，如果是多段折线，会添加到折线的第一个环上，但是可以通过传递一个特定的环作为LatLng数组来重写（你可以提前用 <a href="#polyline-getlatlngs"><code>getLatLngs</code></a>访问）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -11432,7 +11421,7 @@ a specific ring as a LatLng array (that you can earlier access with <a href="#po
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11863,14 +11852,13 @@ map.fitBounds(bounds);
 		<td><code><b>smoothFactor</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>How much to simplify the polyline on each zoom level. More means
-better performance and smoother look, and less means more accurate representation.</td>
+		<td>在每个缩放级别简化多段线的程度。更多意味着更好的性能和更平滑的外观，而更少意味着更精确的表现。</td>
 	</tr>
 	<tr id='rectangle-noclip'>
 		<td><code><b>noClip</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Disable polyline clipping.</td>
+		<td>禁用折线剪裁。</td>
 	</tr>
 </tbody></table>
 
@@ -11879,7 +11867,7 @@ better performance and smoother look, and less means more accurate representatio
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12252,8 +12240,7 @@ better performance and smoother look, and less means more accurate representatio
 	<tr id='rectangle-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the polygon (as a GeoJSON <a href="#polygon"><code>Polygon</code></a> or <code>MultiPolygon</code> Feature).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>Polygon</code> 或 <code>MultiPolygon</code> Feature)。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -12280,45 +12267,43 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 	<tr id='rectangle-getlatlngs'>
 		<td><code><b>getLatLngs</b>()</code></td>
 		<td><code>LatLng[]</code></td>
-		<td><p>Returns an array of the points in the path, or nested arrays of points in case of multi-polyline.</p>
+		<td><p>返回 path（路径）中的点的数组，如果是多段折线，则返回点的嵌套数组。</p>
 </td>
 	</tr>
 	<tr id='rectangle-setlatlngs'>
 		<td><code><b>setLatLngs</b>(<nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Replaces all the points in the polyline with the given array of geographical points.</p>
+		<td><p>用给定的地理点数组替换多段折线中的所有点。</p>
 </td>
 	</tr>
 	<tr id='rectangle-isempty'>
 		<td><code><b>isEmpty</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the Polyline has no LatLngs.</p>
+		<td><p>如果折线没有经纬度，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='rectangle-closestlayerpoint'>
 		<td><code><b>closestLayerPoint</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the point closest to <code>p</code> on the Polyline.</p>
+		<td><p>返回折线上最接近 <code>p</code> 的点。</p>
 </td>
 	</tr>
 	<tr id='rectangle-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center (<a href="https://en.wikipedia.org/wiki/Centroid">centroid</a>) of the polyline.</p>
+		<td><p>返回折线的中心坐标 (<a href="http://en.wikipedia.org/wiki/Centroid">centroid</a>) 。</p>
 </td>
 	</tr>
 	<tr id='rectangle-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the <a href="#latlngbounds"><code>LatLngBounds</code></a> of the path.</p>
+		<td><p>返回路径的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 。</p>
 </td>
 	</tr>
 	<tr id='rectangle-addlatlng'>
 		<td><code><b>addLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a given point to the polyline. By default, adds to the first ring of
-the polyline in case of a multi-polyline, but can be overridden by passing
-a specific ring as a LatLng array (that you can earlier access with <a href="#polyline-getlatlngs"><code>getLatLngs</code></a>).</p>
+		<td><p>将一个给定的点添加到折线上。默认情况下，如果是多段折线，会添加到折线的第一个环上，但是可以通过传递一个特定的环作为LatLng数组来重写（你可以提前用 <a href="#polyline-getlatlngs"><code>getLatLngs</code></a>访问）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -12328,7 +12313,7 @@ a specific ring as a LatLng array (that you can earlier access with <a href="#po
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12761,7 +12746,7 @@ Do not use in new applications or plugins.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13146,7 +13131,7 @@ Do not use in new applications or plugins.</td>
 	<tr id='circle-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the <a href="#latlngbounds"><code>LatLngBounds</code></a> of the path.</p>
+		<td><p>返回路径的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -13172,8 +13157,7 @@ Do not use in new applications or plugins.</td>
 	<tr id='circle-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the circle marker (as a GeoJSON <a href="#point"><code>Point</code></a> Feature).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>Point</code> Feature)。</p>
 </td>
 	</tr>
 	<tr id='circle-setlatlng'>
@@ -13195,7 +13179,7 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13604,7 +13588,7 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13970,8 +13954,7 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 	<tr id='circlemarker-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the circle marker (as a GeoJSON <a href="#point"><code>Point</code></a> Feature).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>Point</code> Feature)。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-setlatlng'>
@@ -14004,7 +13987,7 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#path'>Path</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#path'>Path</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15849,8 +15832,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 	<tr id='layergroup-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the layer group (as a GeoJSON <code>FeatureCollection</code>, <code>GeometryCollection</code>, or <code>MultiPoint</code>).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>FeatureCollection</code>, <code>GeometryCollection</code>, 或 <code>MultiPoint</code> Feature)。</p>
 </td>
 	</tr>
 	<tr id='layergroup-addlayer'>
@@ -16615,8 +16597,7 @@ and custom events.</li>
 	<tr id='featuregroup-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the layer group (as a GeoJSON <code>FeatureCollection</code>, <code>GeometryCollection</code>, or <code>MultiPoint</code>).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>FeatureCollection</code>, <code>GeometryCollection</code>, 或 <code>MultiPoint</code> Feature)。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-addlayer'>
@@ -17498,8 +17479,7 @@ If <code>layer</code> is omitted, the style of all features in the current layer
 	<tr id='geojson-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the layer group (as a GeoJSON <code>FeatureCollection</code>, <code>GeometryCollection</code>, or <code>MultiPoint</code>).</p>
+		<td><p>坐标值使用具有指定 <code>precision</code> 的 <a href="#util-formatnum"><code>formatNum</code></a> 函数进行四舍五入。返回折线的 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示 (作为 GeoJSON <code>FeatureCollection</code>, <code>GeometryCollection</code>, 或 <code>MultiPoint</code> Feature)。</p>
 </td>
 	</tr>
 	<tr id='geojson-addlayer'>
