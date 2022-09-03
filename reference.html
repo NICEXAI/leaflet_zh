@@ -2041,7 +2041,7 @@ var map = L.map('map', {
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -3599,7 +3599,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -4452,7 +4452,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -5255,7 +5255,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -6115,7 +6115,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -7051,7 +7051,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -7787,7 +7787,7 @@ L.videoOverlay(videoUrl, videoBounds ).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -8619,7 +8619,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -10094,7 +10094,7 @@ var latlngs = [
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -10948,7 +10948,7 @@ map.fitBounds(polygon.getBounds());
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -11813,7 +11813,7 @@ map.fitBounds(bounds);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -12699,7 +12699,7 @@ map.fitBounds(bounds);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -13545,7 +13545,7 @@ map.fitBounds(bounds);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -14385,7 +14385,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -14940,11 +14940,8 @@ var circle = L.circle( center, { renderer: myRenderer } );
 </section>
 
 
-</section><h2 id='canvas'>Canvas</h2><p>Allows vector layers to be displayed with <a href="https://developer.mozilla.org/docs/Web/API/Canvas_API"><code>&lt;canvas&gt;</code></a>.
-Inherits <a href="#renderer"><code>Renderer</code></a>.</p>
-<p>Due to <a href="https://caniuse.com/canvas">technical limitations</a>, Canvas is not
-available in all web browsers, notably IE8, and overlapping geometries might
-not display properly in some edge cases.</p>
+</section><h2 id='canvas'>Canvas 矢量渲染器</h2><p>允许用 <a href="https://developer.mozilla.org/docs/Web/API/Canvas_API"><code>&lt;canvas&gt;</code></a>来显示矢量图层。继承 <a href="#renderer"><code>Renderer</code></a>。</p>
+<p>由于 <a href="http://caniuse.com/#search=canvas">技术限制</a>, Canvas 并不适用于所有的网络浏览器，特别是 IE8，而且在某些边缘情况下，重叠的几何图形可能无法正常显示。</p>
 
 <section>
 <h3 id='canvas-example'>使用示例</h3>
@@ -14955,12 +14952,12 @@ not display properly in some edge cases.</p>
 
 
 
-<p>Use Canvas by default for all paths in the map:</p>
+<p>对地图中的所有路径默认使用Canvas:</p>
 <pre><code class="language-js">var map = L.map('map', {
 	renderer: L.canvas()
 });
 </code></pre>
-<p>Use a Canvas renderer with extra padding for specific vector geometries:</p>
+<p>对特定的矢量几何图形使用具有额外填充的Canvas渲染器:</p>
 <pre><code class="language-js">var map = L.map('map');
 var myRenderer = L.canvas({ padding: 0.5 });
 var line = L.polyline( coordinates, { renderer: myRenderer } );
@@ -14982,13 +14979,13 @@ var circle = L.circle( center, { renderer: myRenderer } );
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='canvas-l-canvas'>
 		<td><code><b>L.canvas</b>(<nobr>&lt;<a href='#renderer-option'>Renderer options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Creates a Canvas renderer with the given options.</td>
+		<td>用给定的选项创建一个Canvas渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -15015,7 +15012,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 		<td><code><b>tolerance</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>How much to extend the click tolerance around a path/object on the map.</td>
+		<td>地图上的 path/object 的点击区域要增加多少</td>
 	</tr>
 </tbody></table>
 
@@ -15560,7 +15557,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -16257,7 +16254,7 @@ and custom events.</li>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -17020,7 +17017,7 @@ GeoJSON data and display it on the map. Extends <a href="#featuregroup"><code>Fe
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -18003,7 +18000,7 @@ GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -18739,7 +18736,7 @@ can't be added to it with the <code>include</code> function.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -18886,7 +18883,7 @@ can't be added to it with the <code>include</code> function.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -19075,7 +19072,7 @@ can't be added to it with the <code>include</code> function.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -19277,7 +19274,7 @@ can't be added to it with the <code>include</code> function.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -19452,7 +19449,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -19668,7 +19665,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -19865,7 +19862,7 @@ styled according to the options.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -20021,7 +20018,7 @@ styled according to the options.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -20227,7 +20224,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -20455,7 +20452,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
@@ -20992,7 +20989,7 @@ the reverse. Used by Leaflet in its projections code.</p>
 
 <table><thead>
 	<tr>
-		<th>Factory</th>
+		<th>构造函数</th>
 		<th>说明</th>
 	</tr>
 	</thead><tbody>
