@@ -2924,7 +2924,7 @@ visible within the map's bounds</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2943,8 +2943,7 @@ visible within the map's bounds</td>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -2981,7 +2980,7 @@ visible within the map's bounds</td>
 </div>
 
 </section><section>
-<h3 id='divoverlay-event'>Events</h3>
+<h3 id='divoverlay-event'>Events 事件</h3>
 
 <section class='collapsable'>
 
@@ -3809,7 +3808,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -4614,7 +4613,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -5480,7 +5479,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 </div>
 
 </section><section>
-<h3 id='tilelayer-event'>Events</h3>
+<h3 id='tilelayer-event'>Events 事件</h3>
 
 <section class='collapsable'>
 
@@ -6406,7 +6405,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -7021,7 +7020,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 	</div>
 </div>
 
-</section><h2 id='imageoverlay'>ImageOverlay</h2><p>Used to load and display a single image over specific bounds of the map. Extends <a href="#layer"><code>Layer</code></a>.</p>
+</section><h2 id='imageoverlay'>ImageOverlay</h2><p>用于在地图的特定边界上加载和显示单个图像。 继承自 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
 <h3 id='imageoverlay-example'>使用示例</h3>
@@ -7058,8 +7057,7 @@ L.imageOverlay(imageUrl, imageBounds).addTo(map);
 	</thead><tbody>
 	<tr id='imageoverlay-l-imageoverlay'>
 		<td><code><b>L.imageOverlay</b>(<nobr>&lt;String&gt;</nobr> <i>imageUrl</i>, <nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;<a href='#imageoverlay-option'>ImageOverlay options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates an image overlay object given the URL of the image and the
-geographical bounds it is tied to.</td>
+		<td>指定图像的 URL 和它所关联的地理边界，实例化一个 image overlay 对象。</td>
 	</tr>
 </tbody></table>
 
@@ -7086,45 +7084,43 @@ geographical bounds it is tied to.</td>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the image overlay.</td>
+		<td>图像图层的不透明度。</td>
 	</tr>
 	<tr id='imageoverlay-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the image (useful for accessibility).</td>
+		<td>图像 <code>alt</code> 属性的文本内容（对于可访问性很有用）。</td>
 	</tr>
 	<tr id='imageoverlay-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the image overlay will emit <a href="#interactive-layer">mouse events</a> when clicked or hovered.</td>
+		<td>如果为 <code>true</code>，当单击或悬停时，图像图层将发出 <a href="#interactive-layer">鼠标事件</a>。</td>
 	</tr>
 	<tr id='imageoverlay-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the image.
-If a String is provided, the image will have its crossOrigin attribute set to the String provided. This is needed if you want to access image pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到图像中。 如果提供了字符串，则图像的 crossOrigin 属性将设置为提供的字符串。 如果要访问图像像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 	<tr id='imageoverlay-erroroverlayurl'>
 		<td><code><b>errorOverlayUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the overlay image to show in place of the overlay that failed to load.</td>
+		<td>图像图层的 URL，以代替加载失败的图层。</td>
 	</tr>
 	<tr id='imageoverlay-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> of the overlay layer.</td>
+		<td>图层的显式 <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> 。</td>
 	</tr>
 	<tr id='imageoverlay-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the image. Empty by default.</td>
+		<td>为图像指定一个自定义类名。默认是空的。</td>
 	</tr>
 </tbody></table>
 
@@ -7132,7 +7128,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7151,8 +7147,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -7180,7 +7175,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='imageoverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -7195,7 +7190,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 </section><section>
-<h3 id='imageoverlay-event'>Events</h3>
+<h3 id='imageoverlay-event'>Events 事件</h3>
 
 <section >
 
@@ -7212,12 +7207,12 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 	<tr id='imageoverlay-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer has loaded its image</td>
+		<td>当 ImageOverlay 层图像加载完成时触发</td>
 	</tr>
 	<tr id='imageoverlay-error'>
 		<td><code><b>error</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer fails to load its image</td>
+		<td>当 ImageOverlay 层图像加载失败时触发</td>
 	</tr>
 </tbody></table>
 
@@ -7225,7 +7220,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7242,40 +7237,37 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 	<tr id='imageoverlay-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='imageoverlay-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -7394,56 +7386,55 @@ for a second (also called long press).</td>
 	<tr id='imageoverlay-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the opacity of the overlay.</p>
+		<td><p>设置 overlay 的不透明度。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all overlays.</p>
+		<td><p>将图层置于所有 overlay 图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all overlays.</p>
+		<td><p>将图层置于所有 overlay 图层的底部。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-seturl'>
 		<td><code><b>setUrl</b>(<nobr>&lt;String&gt;</nobr> <i>url</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the URL of the image.</p>
+		<td><p>更改图像的 URL。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-setbounds'>
 		<td><code><b>setBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Update the bounds that this ImageOverlay covers</p>
+		<td><p>更新当前 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>value</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#imageoverlay-zindex">zIndex</a> of the image overlay.</p>
+		<td><p>更改 image overlay 的 <a href="#imageoverlay-zindex">zIndex</a> 。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Get the bounds that this ImageOverlay covers</p>
+		<td><p>获取此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-getelement'>
 		<td><code><b>getElement</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the instance of <a href="https://developer.mozilla.org/docs/Web/API/HTMLImageElement"><code>HTMLImageElement</code></a>
-used by this overlay.</p>
+		<td><p>返回这个 overlay 所使用的 <a href="https://developer.mozilla.org/docs/Web/API/HTMLImageElement"><code>HTMLImageElement</code></a> 的实例。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center of the ImageOverlay.</p>
+		<td><p>返回 ImageOverlay 的中心坐标。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7883,45 +7874,43 @@ Relevant for supported browsers. See <a href="https://developer.mozilla.org/en-U
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the image overlay.</td>
+		<td>图像图层的不透明度。</td>
 	</tr>
 	<tr id='videooverlay-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the image (useful for accessibility).</td>
+		<td>图像 <code>alt</code> 属性的文本内容（对于可访问性很有用）。</td>
 	</tr>
 	<tr id='videooverlay-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the image overlay will emit <a href="#interactive-layer">mouse events</a> when clicked or hovered.</td>
+		<td>如果为 <code>true</code>，当单击或悬停时，图像图层将发出 <a href="#interactive-layer">鼠标事件</a>。</td>
 	</tr>
 	<tr id='videooverlay-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the image.
-If a String is provided, the image will have its crossOrigin attribute set to the String provided. This is needed if you want to access image pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到图像中。 如果提供了字符串，则图像的 crossOrigin 属性将设置为提供的字符串。 如果要访问图像像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 	<tr id='videooverlay-erroroverlayurl'>
 		<td><code><b>errorOverlayUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the overlay image to show in place of the overlay that failed to load.</td>
+		<td>图像图层的 URL，以代替加载失败的图层。</td>
 	</tr>
 	<tr id='videooverlay-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> of the overlay layer.</td>
+		<td>图层的显式 <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> 。</td>
 	</tr>
 	<tr id='videooverlay-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the image. Empty by default.</td>
+		<td>为图像指定一个自定义类名。默认是空的。</td>
 	</tr>
 </tbody></table>
 
@@ -7930,7 +7919,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7949,8 +7938,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -7978,7 +7966,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='videooverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -7993,7 +7981,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 </section><section>
-<h3 id='videooverlay-event'>Events</h3>
+<h3 id='videooverlay-event'>Events 事件</h3>
 
 <section >
 
@@ -8035,7 +8023,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 	<tr id='videooverlay-error'>
 		<td><code><b>error</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer fails to load its image</td>
+		<td>当 ImageOverlay 层无法加载其图像时触发</td>
 	</tr>
 </tbody></table>
 
@@ -8044,7 +8032,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8061,40 +8049,37 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 	<tr id='videooverlay-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='videooverlay-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='videooverlay-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='videooverlay-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -8240,43 +8225,43 @@ used by this overlay.</p>
 	<tr id='videooverlay-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the opacity of the overlay.</p>
+		<td><p>设置 overlay 的不透明度。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all overlays.</p>
+		<td><p>将图层置于所有 overlay 图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all overlays.</p>
+		<td><p>将图层置于所有 overlay 图层的底部。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-seturl'>
 		<td><code><b>setUrl</b>(<nobr>&lt;String&gt;</nobr> <i>url</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the URL of the image.</p>
+		<td><p>更改图像的 URL。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-setbounds'>
 		<td><code><b>setBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Update the bounds that this ImageOverlay covers</p>
+		<td><p>更新当前 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='videooverlay-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>value</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#imageoverlay-zindex">zIndex</a> of the image overlay.</p>
+		<td><p>更改 image overlay 的 <a href="#imageoverlay-zindex">zIndex</a> 。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Get the bounds that this ImageOverlay covers</p>
+		<td><p>获取此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='videooverlay-getcenter'>
@@ -8678,45 +8663,43 @@ A viewBox attribute is required on the SVG element to zoom in and out properly.<
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the image overlay.</td>
+		<td>图像图层的不透明度。</td>
 	</tr>
 	<tr id='svgoverlay-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the image (useful for accessibility).</td>
+		<td>图像 <code>alt</code> 属性的文本内容（对于可访问性很有用）。</td>
 	</tr>
 	<tr id='svgoverlay-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the image overlay will emit <a href="#interactive-layer">mouse events</a> when clicked or hovered.</td>
+		<td>如果为 <code>true</code>，当单击或悬停时，图像图层将发出 <a href="#interactive-layer">鼠标事件</a>。</td>
 	</tr>
 	<tr id='svgoverlay-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
 		<td><code>Boolean|String</code></td>
 		<td><code>false</code></td>
-		<td>Whether the crossOrigin attribute will be added to the image.
-If a String is provided, the image will have its crossOrigin attribute set to the String provided. This is needed if you want to access image pixel data.
-Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS Settings</a> for valid String values.</td>
+		<td>是否将 crossOrigin 属性添加到图像中。 如果提供了字符串，则图像的 crossOrigin 属性将设置为提供的字符串。 如果要访问图像像素数据，则需要这样做。 有关有效的字符串值，请参阅 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>。</td>
 	</tr>
 	<tr id='svgoverlay-erroroverlayurl'>
 		<td><code><b>errorOverlayUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>URL to the overlay image to show in place of the overlay that failed to load.</td>
+		<td>图像图层的 URL，以代替加载失败的图层。</td>
 	</tr>
 	<tr id='svgoverlay-zindex'>
 		<td><code><b>zIndex</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1</code></td>
-		<td>The explicit <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> of the overlay layer.</td>
+		<td>图层的显式 <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index">zIndex</a> 。</td>
 	</tr>
 	<tr id='svgoverlay-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to the image. Empty by default.</td>
+		<td>为图像指定一个自定义类名。默认是空的。</td>
 	</tr>
 </tbody></table>
 
@@ -8725,7 +8708,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8744,8 +8727,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -8773,7 +8755,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='svgoverlay-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -8788,7 +8770,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -8811,12 +8793,12 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 	<tr id='svgoverlay-load'>
 		<td><code><b>load</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer has loaded its image</td>
+		<td>当 ImageOverlay 层加载了它的图像时触发</td>
 	</tr>
 	<tr id='svgoverlay-error'>
 		<td><code><b>error</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the ImageOverlay layer fails to load its image</td>
+		<td>当 ImageOverlay 层无法加载其图像时触发</td>
 	</tr>
 </tbody></table>
 
@@ -8825,7 +8807,7 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8842,40 +8824,37 @@ Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_setting
 	<tr id='svgoverlay-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='svgoverlay-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -9021,43 +9000,43 @@ used by this overlay.</p>
 	<tr id='svgoverlay-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the opacity of the overlay.</p>
+		<td><p>设置 overlay 的不透明度。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all overlays.</p>
+		<td><p>将图层置于所有 overlay 图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all overlays.</p>
+		<td><p>将图层置于所有 overlay 图层的底部。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-seturl'>
 		<td><code><b>setUrl</b>(<nobr>&lt;String&gt;</nobr> <i>url</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the URL of the image.</p>
+		<td><p>更改图像的 URL。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-setbounds'>
 		<td><code><b>setBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Update the bounds that this ImageOverlay covers</p>
+		<td><p>更新当前 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>value</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#imageoverlay-zindex">zIndex</a> of the image overlay.</p>
+		<td><p>更改 image overlay 的 <a href="#imageoverlay-zindex">zIndex</a> 。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Get the bounds that this ImageOverlay covers</p>
+		<td><p>获取此 ImageOverlay 覆盖的边界</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-getcenter'>
@@ -9501,7 +9480,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -9548,7 +9527,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='path-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -9563,13 +9542,13 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -9586,40 +9565,37 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='path-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='path-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='path-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='path-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='path-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='path-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='path-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -10291,7 +10267,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -10338,7 +10314,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='polyline-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -10353,13 +10329,13 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -10376,40 +10352,37 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='polyline-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='polyline-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='polyline-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='polyline-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='polyline-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='polyline-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='polyline-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -11160,7 +11133,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11207,7 +11180,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='polygon-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -11222,13 +11195,13 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11245,40 +11218,37 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='polygon-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='polygon-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='polygon-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='polygon-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='polygon-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='polygon-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='polygon-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -12033,7 +12003,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12080,7 +12050,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='rectangle-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -12095,13 +12065,13 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12118,40 +12088,37 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='rectangle-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='rectangle-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='rectangle-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='rectangle-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='rectangle-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='rectangle-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='rectangle-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -12919,7 +12886,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12966,7 +12933,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='circle-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -12981,7 +12948,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -13013,7 +12980,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13030,40 +12997,37 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='circle-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='circle-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='circle-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='circle-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='circle-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='circle-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='circle-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -13766,7 +13730,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13813,7 +13777,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='circlemarker-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -13828,7 +13792,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 </div>
 
 </section><section>
-<h3 id='circlemarker-event'>Events</h3>
+<h3 id='circlemarker-event'>Events 事件</h3>
 
 <section >
 
@@ -13853,7 +13817,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13870,40 +13834,37 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='circlemarker-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='circlemarker-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='circlemarker-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='circlemarker-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='circlemarker-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='circlemarker-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='circlemarker-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -14527,7 +14488,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='svg-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -14542,7 +14503,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -15150,7 +15111,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='canvas-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -15165,7 +15126,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -15661,7 +15622,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15686,8 +15647,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -15715,7 +15675,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='layergroup-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -15730,13 +15690,13 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15753,40 +15713,37 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 	<tr id='layergroup-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='layergroup-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='layergroup-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='layergroup-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='layergroup-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='layergroup-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='layergroup-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -16363,7 +16320,7 @@ and custom events.</li>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -16388,8 +16345,7 @@ and custom events.</li>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -16417,7 +16373,7 @@ and custom events.</li>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='featuregroup-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -16432,7 +16388,7 @@ and custom events.</li>
 </div>
 
 </section><section>
-<h3 id='featuregroup-event'>Events</h3>
+<h3 id='featuregroup-event'>Events 事件</h3>
 
 <section >
 
@@ -16462,7 +16418,7 @@ and custom events.</li>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -16479,40 +16435,37 @@ and custom events.</li>
 	<tr id='featuregroup-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='featuregroup-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='featuregroup-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='featuregroup-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='featuregroup-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='featuregroup-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='featuregroup-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -17209,7 +17162,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -17234,8 +17187,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -17263,7 +17215,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='geojson-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -17278,7 +17230,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 </div>
 
 </section><section>
-<h3 id=''>Events</h3>
+<h3 id=''>Events 事件</h3>
 
 
 
@@ -17315,7 +17267,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -17332,40 +17284,37 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 	<tr id='geojson-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='geojson-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='geojson-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='geojson-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='geojson-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='geojson-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='geojson-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -18252,7 +18201,7 @@ GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt
 </div>
 
 </section><section>
-<h3 id='gridlayer-event'>Events</h3>
+<h3 id='gridlayer-event'>Events 事件</h3>
 
 <section >
 
@@ -21589,7 +21538,7 @@ fx.run(el, [300, 500], 0.5);
 
 
 </section><section>
-<h3 id='posanimation-event'>Events</h3>
+<h3 id='posanimation-event'>Events 事件</h3>
 
 <section >
 
@@ -21850,7 +21799,7 @@ for it to be considered a valid click (as opposed to a mouse drag).</td>
 
 
 </section><section>
-<h3 id='draggable-event'>Events</h3>
+<h3 id='draggable-event'>Events 事件</h3>
 
 <section >
 
@@ -22466,7 +22415,7 @@ layer.remove();
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='layer-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -22480,7 +22429,7 @@ layer.remove();
 
 
 </section><section>
-<h3 id='layer-event'>Events</h3>
+<h3 id='layer-event'>Events 事件</h3>
 
 <section >
 
@@ -22941,8 +22890,7 @@ Use the <a href="#evented-method">event handling methods</a> to handle these eve
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 </tbody></table>
 
@@ -22969,7 +22917,7 @@ Use the <a href="#evented-method">event handling methods</a> to handle these eve
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='interactive-layer-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -22984,7 +22932,7 @@ Use the <a href="#evented-method">event handling methods</a> to handle these eve
 </div>
 
 </section><section>
-<h3 id='interactive-layer-event'>Events</h3>
+<h3 id='interactive-layer-event'>Events 事件</h3>
 
 <section class='collapsable'>
 
@@ -23002,40 +22950,37 @@ Use the <a href="#evented-method">event handling methods</a> to handle these eve
 	<tr id='interactive-layer-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='interactive-layer-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='interactive-layer-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='interactive-layer-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='interactive-layer-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='interactive-layer-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='interactive-layer-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -24009,7 +23954,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;overlayPane&#x27;</code></td>
-		<td>By default the layer will be added to the map's <a href="#map-overlaypane">overlay pane</a>. Overriding this option will cause the layer to be placed on another pane by default.</td>
+		<td>默认情况下，该图层将被添加到地图的 <a href="#map-overlaypane">overlay pane（覆盖窗格）</a>中。 覆盖该选项将导致该图层被默认放置在另一个窗格中。</td>
 	</tr>
 	<tr id='renderer-attribution'>
 		<td><code><b>attribution</b></code></td>
@@ -24024,7 +23969,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 </div>
 
 </section><section>
-<h3 id='renderer-event'>Events</h3>
+<h3 id='renderer-event'>Events 事件</h3>
 
 <section >
 
