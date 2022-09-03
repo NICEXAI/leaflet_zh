@@ -16211,13 +16211,11 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='featuregroup'>FeatureGroup</h2><p>Extended <a href="#layergroup"><code>LayerGroup</code></a> that makes it easier to do the same thing to all its member layers:</p>
+</section><h2 id='featuregroup'>FeatureGroup 要素组</h2><p>扩展了 <a href="#layergroup"><code>LayerGroup</code></a> ，使它更容易对其所有成员图层做同样的事情:</p>
 <ul>
-<li><a href="#layer-bindpopup"><code>bindPopup</code></a> binds a popup to all of the layers at once (likewise with <a href="#layer-bindtooltip"><code>bindTooltip</code></a>)</li>
-<li>Events are propagated to the <a href="#featuregroup"><code>FeatureGroup</code></a>, so if the group has an event
-handler, it will handle events from any of the layers. This includes mouse events
-and custom events.</li>
-<li>Has <code>layeradd</code> and <code>layerremove</code> events</li>
+    <li><a href="#layer-bindpopup"><code>bindPopup</code></a> 一次将一个弹出窗口绑定到所有的图层上 (与 <a href="#layer-bindtooltip"><code>bindTooltip</code></a>类似)</li>
+    <li>事件被传递到 <a href="#featuregroup"><code>FeatureGroup</code></a>，所以如果该组有一个事件处理程序，它将处理来自任何图层的事件。这包括鼠标事件和自定义事件。</li>
+    <li>具有 <code>layeradd</code> 和 <code>layerremove</code> 的事件</li>
 </ul>
 
 <section>
@@ -16256,7 +16254,7 @@ and custom events.</li>
 	</thead><tbody>
 	<tr id='featuregroup-l-featuregroup'>
 		<td><code><b>L.featureGroup</b>(<nobr>&lt;Layer[]&gt;</nobr> <i>layers?</i>, <nobr>&lt;Object&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Create a feature group, optionally given an initial set of layers and an <code>options</code> object.</td>
+		<td>创建一个 feature group，可选择给定一组初始图层和一个 <code>options</code> 对象。</td>
 	</tr>
 </tbody></table>
 
@@ -16355,12 +16353,12 @@ and custom events.</li>
 	<tr id='featuregroup-layeradd'>
 		<td><code><b>layeradd</b></code></td>
 		<td><code><a href='#layerevent'>LayerEvent</a></code></td>
-		<td>Fired when a layer is added to this <a href="#featuregroup"><code>FeatureGroup</code></a></td>
+		<td>当一个图层被添加到该 <a href="#featuregroup"><code>FeatureGroup</code></a> 时触发。</td>
 	</tr>
 	<tr id='featuregroup-layerremove'>
 		<td><code><b>layerremove</b></code></td>
 		<td><code><a href='#layerevent'>LayerEvent</a></code></td>
-		<td>Fired when a layer is removed from this <a href="#featuregroup"><code>FeatureGroup</code></a></td>
+		<td>当一个图层被从该 <a href="#featuregroup"><code>FeatureGroup</code></a>中移除时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -16534,25 +16532,25 @@ and custom events.</li>
 	<tr id='featuregroup-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the given path options to each layer of the group that has a <code>setStyle</code> method.</p>
+		<td><p>为组中有 <code>setStyle</code> 方法的每个层设置给定的路径选项。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer group to the top of all other layers</p>
+		<td><p>将图层组置于所有其他图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer group to the back of all other layers</p>
+		<td><p>将图层组置于所有其他图层的底部。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the LatLngBounds of the Feature Group (created from bounds and coordinates of its children).</p>
+		<td><p>返回要素组的 LatLngBounds（由其子节点的边界和坐标创建）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -16561,7 +16559,7 @@ and custom events.</li>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layergroup'>LayerGroup</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layergroup'>LayerGroup</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -17200,12 +17198,12 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 	<tr id='geojson-layeradd'>
 		<td><code><b>layeradd</b></code></td>
 		<td><code><a href='#layerevent'>LayerEvent</a></code></td>
-		<td>Fired when a layer is added to this <a href="#featuregroup"><code>FeatureGroup</code></a></td>
+		<td>当一个图层被添加到该 <a href="#featuregroup"><code>FeatureGroup</code></a> 时触发。</td>
 	</tr>
 	<tr id='geojson-layerremove'>
 		<td><code><b>layerremove</b></code></td>
 		<td><code><a href='#layerevent'>LayerEvent</a></code></td>
-		<td>Fired when a layer is removed from this <a href="#featuregroup"><code>FeatureGroup</code></a></td>
+		<td>当一个图层被从该 <a href="#featuregroup"><code>FeatureGroup</code></a>中移除时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -17419,19 +17417,19 @@ If <code>layer</code> is omitted, the style of all features in the current layer
 	<tr id='geojson-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer group to the top of all other layers</p>
+		<td><p>将图层组置于所有其他图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='geojson-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer group to the back of all other layers</p>
+		<td><p>将图层组置于所有其他图层的底部。</p>
 </td>
 	</tr>
 	<tr id='geojson-getbounds'>
 		<td><code><b>getBounds</b>()</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns the LatLngBounds of the Feature Group (created from bounds and coordinates of its children).</p>
+		<td><p>返回要素组的 LatLngBounds（由其子节点的边界和坐标创建）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -17441,7 +17439,7 @@ If <code>layer</code> is omitted, the style of all features in the current layer
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layergroup'>LayerGroup</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layergroup'>LayerGroup</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
