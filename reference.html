@@ -11777,7 +11777,7 @@ map.fitBounds(polygon.getBounds());
 	</div>
 </div>
 
-</section><h2 id='rectangle'>Rectangle</h2><p>A class for drawing rectangle overlays on a map. Extends <a href="#polygon"><code>Polygon</code></a>.</p>
+</section><h2 id='rectangle'>Rectangle 矩形</h2><p>一个用于在地图上绘制矩形覆盖物的类。扩展了 <a href="#polygon"><code>Polygon</code></a>。</p>
 
 <section>
 <h3 id='rectangle-example'>使用示例</h3>
@@ -11788,13 +11788,13 @@ map.fitBounds(polygon.getBounds());
 
 
 
-<pre><code class="language-js">// define rectangle geographical bounds
+<pre><code class="language-js">// 定义矩形的地理边界
 var bounds = [[54.559322, -5.767822], [56.1210604, -3.021240]];
 
-// create an orange rectangle
+// 创建一个橙色的矩形
 L.rectangle(bounds, {color: &quot;#ff7800&quot;, weight: 1}).addTo(map);
 
-// zoom the map to the rectangle bounds
+// 将地图放大到矩形的边界上
 map.fitBounds(bounds);
 </code></pre>
 
@@ -12214,7 +12214,7 @@ map.fitBounds(bounds);
 	<tr id='rectangle-setbounds'>
 		<td><code><b>setBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>latLngBounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the rectangle with the passed bounds.</p>
+		<td><p>用传递的边界重绘矩形。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -12223,7 +12223,7 @@ map.fitBounds(bounds);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#polygon'>Polygon</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#polygon'>Polygon</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
