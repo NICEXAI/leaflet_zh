@@ -2012,10 +2012,10 @@ var map = L.map('map', {
 	</div>
 </div>
 
-</section><h2 id='marker'>Marker</h2><p>L.Marker is used to display clickable/draggable icons on the map. Extends <a href="#layer"><code>Layer</code></a>.</p>
+</section><h2 id='marker'>Marker 标记</h2><p>L.Marker 用于在地图上显示可点击/可拖动的图标。扩展了 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
-<h3 id='marker-example'>Usage example</h3>
+<h3 id='marker-example'>使用示例</h3>
 
 <section >
 
@@ -2042,12 +2042,12 @@ var map = L.map('map', {
 <table><thead>
 	<tr>
 		<th>Factory</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-l-marker'>
 		<td><code><b>L.marker</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#marker-option'>Marker options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates a Marker object given a geographical point and optionally an options object.</td>
+		<td>给出一个地理位置和可选的参数，实例化一个Marker对象。</td>
 	</tr>
 </tbody></table>
 
@@ -2055,7 +2055,7 @@ var map = L.map('map', {
 
 
 </section><section>
-<h3 id='marker-option'>Options</h3>
+<h3 id='marker-option'>Options 选项</h3>
 
 <section >
 
@@ -2064,82 +2064,79 @@ var map = L.map('map', {
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-icon'>
 		<td><code><b>icon</b></code></td>
 		<td><code><a href='#icon'>Icon</a></code></td>
 		<td><code>*</code></td>
-		<td>Icon instance to use for rendering the marker.
-See <a href="#icon">Icon documentation</a> for details on how to customize the marker icon.
-If not specified, a common instance of <a href="#icon-default"><code>L.Icon.Default</code></a> is used.</td>
+		<td>用于渲染标记（marker）的图标实例。有关如何自定义标记（marker）图标的详细信息，请参阅<a href="#icon"> Icon 文档</a>。如果未指定，<a href="#icon-default"><code>L.Icon.Default</code></a> 则使用公共实例。</td>
 	</tr>
 	<tr id='marker-keyboard'>
 		<td><code><b>keyboard</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether the marker can be tabbed to with a keyboard and clicked by pressing enter.</td>
+		<td>是否可以用键盘标记并按回车键进行点击。</td>
 	</tr>
 	<tr id='marker-title'>
 		<td><code><b>title</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Text for the browser tooltip that appear on marker hover (no tooltip by default).
-<a href="https://leafletjs.com/examples/accessibility/#markers-must-be-labelled">Useful for accessibility</a>.</td>
+		<td>悬停在标记（marker）上时出现的浏览器 tooltip  提示文本内容（默认情况下没有 tooltip 提示）。
+<a href="https://leafletjs.com/examples/accessibility/#markers-must-be-labelled">对无障碍环境很有帮助</a>。</td>
 	</tr>
 	<tr id='marker-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;Marker&#x27;</code></td>
-		<td>Text for the <code>alt</code> attribute of the icon image.
-<a href="https://leafletjs.com/examples/accessibility/#markers-must-be-labelled">Useful for accessibility</a>.</td>
+		<td>Icon图标的 <code>alt</code> 属性提示文本内容。
+<a href="https://leafletjs.com/examples/accessibility/#markers-must-be-labelled">对无障碍环境很有帮助</a>。</td>
 	</tr>
 	<tr id='marker-zindexoffset'>
 		<td><code><b>zIndexOffset</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0</code></td>
-		<td>By default, marker images zIndex is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like <code>1000</code> (or high negative value, respectively).</td>
+		<td>默认情况下，标记（marker）图像 zIndex 是根据其纬度自动设置的。如果您想将标记置于所有其他标记（marker）之上(或之下)，则使用此选项指定一个高值，如 <code>1000</code>(或高的负值)。</td>
 	</tr>
 	<tr id='marker-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>The opacity of the marker.</td>
+		<td>标记（marker）的不透明度。</td>
 	</tr>
 	<tr id='marker-riseonhover'>
 		<td><code><b>riseOnHover</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the marker will get on top of others when you hover the mouse over it.</td>
+		<td>如果为 <code>true</code>，当你把鼠标悬停在它上面时，该标记（marker）会在其他标记之上。</td>
 	</tr>
 	<tr id='marker-riseoffset'>
 		<td><code><b>riseOffset</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>250</code></td>
-		<td>The z-index offset used for the <code>riseOnHover</code> feature.</td>
+		<td>用于 <code>riseOnHover</code> 功能的 z-index 偏移。</td>
 	</tr>
 	<tr id='marker-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;markerPane&#x27;</code></td>
-		<td><code>Map pane</code> where the markers icon will be added.</td>
+		<td><code>Map pane</code> 将添加标记图标的位置。</td>
 	</tr>
 	<tr id='marker-shadowpane'>
 		<td><code><b>shadowPane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;shadowPane&#x27;</code></td>
-		<td><code>Map pane</code> where the markers shadow will be added.</td>
+		<td><code>Map pane</code> 将添加标记阴影的位置。</td>
 	</tr>
 	<tr id='marker-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>When <code>true</code>, a mouse event on this marker will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code> 时，此标记上的鼠标事件将触发地图上的相同事件(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a>）。</td>
 	</tr>
 	<tr id='marker-autopanonfocus'>
 		<td><code><b>autoPanOnFocus</b></code></td>
@@ -2153,41 +2150,40 @@ visible within the map's bounds</td>
 
 </section><section class='collapsable'>
 
-<h4 id='marker-draggable-marker-options'>Draggable marker options</h4>
+<h4 id='marker-draggable-marker-options'>可拖动的 marker 选项</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+        <th>选项</th>
+        <th>类型</th>
+        <th>默认</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-draggable'>
 		<td><code><b>draggable</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether the marker is draggable with mouse/touch or not.</td>
+        <td>标记（marker）是否可通过鼠标/触摸拖动。</td>
 	</tr>
 	<tr id='marker-autopan'>
 		<td><code><b>autoPan</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether to pan the map when dragging this marker near its edge or not.</td>
+        <td>将此标记（marker）拖动到其边缘附近时是否平移地图。</td>
 	</tr>
 	<tr id='marker-autopanpadding'>
 		<td><code><b>autoPanPadding</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>Point(50, 50)</code></td>
-		<td>Distance (in pixels to the left/right and to the top/bottom) of the
-map edge to start panning the map.</td>
+        <td>开始平移地图时距离边缘的距离（左/右和上/下，以像素为单位）。</td>
 	</tr>
 	<tr id='marker-autopanspeed'>
 		<td><code><b>autoPanSpeed</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>10</code></td>
-		<td>Number of pixels the map should pan by.</td>
+        <td>地图应该平移的像素数。</td>
 	</tr>
 </tbody></table>
 
@@ -2195,7 +2191,7 @@ map edge to start panning the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>交互层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2204,17 +2200,17 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果为 <code>false</code>，该图层将不会触发鼠标事件，并作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -2223,7 +2219,7 @@ map edge to start panning the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2232,17 +2228,17 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>要在属性控件中显示的字符串，例如：&quot;© OpenStreetMap contributors&quot;。它描述了一些图层信息，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -2251,7 +2247,7 @@ map edge to start panning the map.</td>
 </div>
 
 </section><section>
-<h3 id='marker-event'>Events</h3>
+<h3 id='marker-event'>Events 事件</h3>
 
 <section >
 
@@ -2260,54 +2256,54 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-move'>
 		<td><code><b>move</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker is moved via <a href="#marker-setlatlng"><code>setLatLng</code></a> or by <a href="#marker-dragging">dragging</a>. Old and new coordinates are included in event arguments as <code>oldLatLng</code>, <code>latlng</code>.</td>
+		<td>当标记通过 <a href="#marker-setlatlng"><code>setLatLng</code></a> 或通过 <a href="#marker-dragging">dragging</a> 移动时触发该事件，并且旧坐标和新坐标会作为 <code>oldLatLng</code>、<code>latlng</code> 包含在事件参数中。</td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='marker-dragging-events'>Dragging events</h4>
+<h4 id='marker-dragging-events'>Dragging events 拖拽事件</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+        <th>事件</th>
+        <th>Data</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-dragstart'>
 		<td><code><b>dragstart</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the user starts dragging the marker.</td>
+        <td>当用户开始拖动标记时触发。</td>
 	</tr>
 	<tr id='marker-movestart'>
 		<td><code><b>movestart</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker starts moving (because of dragging).</td>
+		<td>当标记物开始移动（因为拖动）时触发。</td>
 	</tr>
 	<tr id='marker-drag'>
 		<td><code><b>drag</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired repeatedly while the user drags the marker.</td>
+        <td>当用户拖动标记时重复触发。</td>
 	</tr>
 	<tr id='marker-dragend'>
 		<td><code><b>dragend</b></code></td>
 		<td><code><a href='#dragendevent'>DragEndEvent</a></code></td>
-		<td>Fired when the user stops dragging the marker.</td>
+        <td>当用户停止拖动标记时触发。</td>
 	</tr>
 	<tr id='marker-moveend'>
 		<td><code><b>moveend</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker stops moving (because of dragging).</td>
+		<td>当标记物停止移动（因为拖动）时启动。</td>
 	</tr>
 </tbody></table>
 
@@ -2315,7 +2311,7 @@ map edge to start panning the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>交互层</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2324,48 +2320,45 @@ map edge to start panning the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click（或 tap）图层时触发。</td>
 	</tr>
 	<tr id='marker-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click（或 double-tap）图层时触发。</td>
 	</tr>
 	<tr id='marker-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='marker-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户释放在图层上按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='marker-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>当鼠标进入图层时触发。</td>
 	</tr>
 	<tr id='marker-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开图层时触发。</td>
 	</tr>
 	<tr id='marker-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果此事件有监听者，则阻止默认的浏览器上下文菜单显示。在移动设备上，当用户长按时，也会在手机上触发。</td>
 	</tr>
 </tbody></table>
 
@@ -2374,7 +2367,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2383,20 +2376,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层添加到地图后触发</td>
 	</tr>
 	<tr id='marker-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图中移除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -2405,7 +2398,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer</a> 的弹出窗口（Popup）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2414,20 +2407,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当绑定到该层的 popup 打开时触发</td>
 	</tr>
 	<tr id='marker-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当绑定到该层的 popup 关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -2436,7 +2429,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的工具提示（Tooltip）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2445,20 +2438,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
+		<th>事件</th>
 		<th>Data</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该层的 tooltip 打开时触发。</td>
 	</tr>
 	<tr id='marker-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该层的 tooltip 关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -2467,76 +2460,75 @@ for a second (also called long press).</td>
 </div>
 
 </section><section>
-<h3 id='marker-method'>Methods</h3>
+<h3 id='marker-method'>Methods 方法</h3>
 
 <section >
 
 
 
-<div class='section-comments'>In addition to <a href="#layer">shared layer methods</a> like <code>addTo()</code> and <code>remove()</code> and <a href="#popup">popup methods</a> like bindPopup() you can also use the following methods:</div>
+<div class='section-comments'>除了<a href="#layer">共享层方法</a>，如 <code>addTo()</code>、<code>remove()</code>、类似 bindPopup() 的 <a href="#popup">popup 方法</a>之外，你还可以使用以下方法：</div>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-getlatlng'>
 		<td><code><b>getLatLng</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the current geographical position of the marker.</p>
+		<td><p>返回标记的当前地理位置。</p>
 </td>
 	</tr>
 	<tr id='marker-setlatlng'>
 		<td><code><b>setLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the marker position to the given point.</p>
+		<td><p>将标记位置更改为指定坐标。</p>
 </td>
 	</tr>
 	<tr id='marker-setzindexoffset'>
 		<td><code><b>setZIndexOffset</b>(<nobr>&lt;Number&gt;</nobr> <i>offset</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the <a href="#marker-zindexoffset">zIndex offset</a> of the marker.</p>
+		<td><p>更改标记的 <a href="#marker-zindexoffset">zIndex 偏移量</a> 。</p>
 </td>
 	</tr>
 	<tr id='marker-geticon'>
 		<td><code><b>getIcon</b>()</code></td>
 		<td><code><a href='#icon'>Icon</a></code></td>
-		<td><p>Returns the current icon used by the marker</p>
+		<td><p>返回标记使用的当前图标</p>
 </td>
 	</tr>
 	<tr id='marker-seticon'>
 		<td><code><b>setIcon</b>(<nobr>&lt;<a href='#icon'>Icon</a>&gt;</nobr> <i>icon</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the marker icon.</p>
+		<td><p>更改标记图标。</p>
 </td>
 	</tr>
 	<tr id='marker-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the opacity of the marker.</p>
+		<td><p>更改标记的透明度。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='marker-other-methods'>Other methods</h4>
+<h4 id='marker-other-methods'>Other methods 其它方法</h4>
 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+        <th>方法</th>
+        <th>返回值</th>
+        <th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-togeojson'>
 		<td><code><b>toGeoJSON</b>(<nobr>&lt;Number|false&gt;</nobr> <i>precision?</i>)</code></td>
 		<td><code>Object</code></td>
-		<td><p>Coordinates values are rounded with <a href="#util-formatnum"><code>formatNum</code></a> function with given <code>precision</code>.
-Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> representation of the marker (as a GeoJSON <a href="#point"><code>Point</code></a> Feature).</p>
+        <td><p><code>precision</code> 是坐标的小数位数，默认值是6位。 返回用 <a href="http://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></a> 表示的标记内容（作为一个GeoJSON <a href="#point"><code>Point</code></a>特征）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2545,7 +2537,7 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2554,45 +2546,45 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（layer group）。</p>
 </td>
 	</tr>
 	<tr id='marker-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='marker-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='marker-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的 <a href="#layergroup"><code>LayerGroup</code></a> 中删除图层。</p>
 </td>
 	</tr>
 	<tr id='marker-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格（pane）的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='marker-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution 控件</code>使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2602,7 +2594,7 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2611,59 +2603,57 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将弹出窗口绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个<code>Function</code>被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td><p>移除之前用<code>bindPopup</code>绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有指定 <code>latlng</code>，则在默认的锚点打开弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果弹出窗口（popup）已打开，则关闭绑定到该层的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该层的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='marker-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='marker-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2673,7 +2663,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2682,59 +2672,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='marker-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='marker-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='marker-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='marker-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示（tooltip）当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示（tooltip）的内容。</p>
 </td>
 	</tr>
 	<tr id='marker-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示（tooltip）。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -2744,7 +2732,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -2753,108 +2741,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='marker-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='marker-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='marker-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='marker-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide a data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='marker-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.
-The verification can optionally be propagated, it will return <code>true</code> if parents have the listener attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='marker-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='marker-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='marker-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='marker-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='marker-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -2864,27 +2849,27 @@ The verification can optionally be propagated, it will return <code>true</code> 
 </div>
 
 </section><section>
-<h3 id='marker-property'>Properties</h3>
+<h3 id='marker-property'>Properties 属性</h3>
 
 <section class='collapsable'>
 
-<h4 id='marker-interaction-handlers'>Interaction handlers</h4>
+<h4 id='marker-interaction-handlers'>Interaction handlers 交互处理程序</h4>
 
-<div class='section-comments'>Interaction handlers are properties of a marker instance that allow you to control interaction behavior in runtime, enabling or disabling certain features such as dragging (see <a href="#handler"><code>Handler</code></a> methods). Example:
+<div class='section-comments'>交互处理程序是一个标记（marker）实例的属性，允许你在运行时控制交互行为，启用或禁用某些功能，如拖动（见 <a href="#handler"><code>Handler</code></a> 方法）。示例：
 <pre><code class="language-js">marker.dragging.disable();
 </code></pre></div>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
-		<th>Type</th>
-		<th>Description</th>
+		<th>属性</th>
+		<th>类型</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='marker-dragging'>
 		<td><code><b>dragging</b></code></td>
 		<td><code><a href='#handler'>Handler</a></code></td>
-		<td>Marker dragging handler (by both mouse and touch). Only valid when the marker is on the map (Otherwise set <a href="#marker-draggable"><code>marker.options.draggable</code></a>).</td>
+		<td>标记（marker）拖动处理程序（通过鼠标和触摸），仅当标记 (marker) 在地图上时有效（否则设置 <a href="#marker-draggable"><code>marker.options.draggable</code></a>）。</td>
 	</tr>
 </tbody></table>
 
