@@ -3945,12 +3945,12 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 	<tr id='popup-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>当与该图层绑定的弹出窗口被打开时触发</td>
+		<td>当与该图层绑定的 Popup 被打开时触发</td>
 	</tr>
 	<tr id='popup-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>当与该图层绑定的弹出窗口关闭时触发</td>
+		<td>当与该图层绑定的 Popup 关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -3976,12 +3976,12 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 	<tr id='popup-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>当绑定到该图层的工具提示被打开时触发。</td>
+		<td>当绑定到该图层的 Tooltip 被打开时触发。</td>
 	</tr>
 	<tr id='popup-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>当绑定到该图层的工具提示关闭时触发。</td>
+		<td>当绑定到该图层的 Tooltip 关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -4419,10 +4419,10 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 	</div>
 </div>
 
-</section><h2 id='tooltip'>Tooltip</h2><p>Used to display small texts on top of map layers.</p>
+</section><h2 id='tooltip'>Tooltip 工具提示</h2><p>用于在地图图层顶部显示小文本。</p>
 
 <section>
-<h3 id='tooltip-example'>Usage example</h3>
+<h3 id='tooltip-example'>使用示例</h3>
 
 <section >
 
@@ -4432,14 +4432,10 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <pre><code class="language-js">marker.bindTooltip(&quot;my tooltip text&quot;).openTooltip();
 </code></pre>
-<p>Note about tooltip offset. Leaflet takes two options in consideration
-for computing tooltip offsetting:</p>
+<p>关于工具提示（tootip）偏移，Leaflet 在计算工具提示偏移时考虑了两个选项：</p>
 <ul>
-<li>the <code>offset</code> Tooltip option: it defaults to [0, 0], and it's specific to one tooltip.
-Add a positive x offset to move the tooltip to the right, and a positive y offset to
-move it to the bottom. Negatives will move to the left and top.</li>
-<li>the <code>tooltipAnchor</code> Icon option: this will only be considered for Marker. You
-should adapt this value if you use a custom icon.</li>
+	<li>工具提示（tooltip）的 <code>offset</code> 选项：它默认为 [0,0]，并且它只针对于一个工具提示。添加正 x 偏移以将工具提示向右移动，并添加正 y 偏移以将其移动到底部，负数将移动到左侧和顶部。</li>
+	<li>Icon 的 <code>tooltipAnchor</code> 选项：只适用于 Marker。你如果你使用一个自定义的图标，应该调整这个值。</li>
 </ul>
 
 
@@ -4458,12 +4454,12 @@ should adapt this value if you use a custom icon.</li>
 <table><thead>
 	<tr>
 		<th>Factory</th>
-		<th>Description</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-l-tooltip'>
 		<td><code><b>L.tooltip</b>(<nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>, <nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>source?</i>)</code></td>
-		<td>Instantiates a Tooltip object given an optional <code>options</code> object that describes its appearance and location and an optional <code>source</code> object that is used to tag the tooltip with a reference to the Layer to which it refers.</td>
+		<td>实例化一个 Tooltip 对象，给定一个可选的 <code>options</code> 对象，描述其外观和位置，以及一个可选的 <code>source</code> 对象，用它所指向的 Layer 的引用来标记 Tooltip。</td>
 	</tr>
 </tbody></table>
 
@@ -4471,7 +4467,7 @@ should adapt this value if you use a custom icon.</li>
 
 
 </section><section>
-<h3 id='tooltip-option'>Options</h3>
+<h3 id='tooltip-option'>Options 选项</h3>
 
 <section >
 
@@ -4480,50 +4476,47 @@ should adapt this value if you use a custom icon.</li>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-pane'>
 		<td><code><b>pane</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;tooltipPane&#x27;</code></td>
-		<td><code>Map pane</code> where the tooltip will be added.</td>
+		<td><code>地图窗格</code>将添加 Tooltip 的位置。</td>
 	</tr>
 	<tr id='tooltip-offset'>
 		<td><code><b>offset</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>Point(0, 0)</code></td>
-		<td>Optional offset of the tooltip position.</td>
+		<td>Tooltip 位置的可选偏移。</td>
 	</tr>
 	<tr id='tooltip-direction'>
 		<td><code><b>direction</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;auto&#x27;</code></td>
-		<td>Direction where to open the tooltip. Possible values are: <code>right</code>, <code>left</code>,
-<code>top</code>, <code>bottom</code>, <code>center</code>, <code>auto</code>.
-<code>auto</code> will dynamically switch between <code>right</code> and <code>left</code> according to the tooltip
-position on the map.</td>
+		<td>打开 Tooltip 的方向。可能的值有：<code>right</code>、<code>left</code>、 <code>top</code>、<code>bottom</code>、<code>center</code>、<code>auto</code>。 <code>auto</code> 将之间进行动态切换 <code>right</code> 和 <code>left</code> 根据地图上的工具提示位置。</td>
 	</tr>
 	<tr id='tooltip-permanent'>
 		<td><code><b>permanent</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether to open the tooltip permanently or only on mouseover.</td>
+		<td>是永久打开 Tooltip 还是只在鼠标移动时打开。</td>
 	</tr>
 	<tr id='tooltip-sticky'>
 		<td><code><b>sticky</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If true, the tooltip will follow the mouse instead of being fixed at the feature center.</td>
+		<td>如果为 true，Tooltip 将跟随鼠标移动，而不是固定在特征中心。</td>
 	</tr>
 	<tr id='tooltip-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.9</code></td>
-		<td>Tooltip container opacity.</td>
+		<td>Tooltip 容器透明度。</td>
 	</tr>
 </tbody></table>
 
@@ -4531,7 +4524,7 @@ position on the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#divoverlay'>DivOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#divoverlay'>DivOverlay</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4540,23 +4533,23 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-interactive'>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If true, the popup/tooltip will listen to the mouse events.</td>
+		<td>如果为 true，popup/tooltip 将监听鼠标事件。</td>
 	</tr>
 	<tr id='tooltip-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom CSS class name to assign to the overlay.</td>
+		<td>为 Overlayer 设置自定义 CSS 类名称。</td>
 	</tr>
 </tbody></table>
 
@@ -4565,7 +4558,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4574,18 +4567,17 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this layer will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，鼠标事件将在地图上触发相同的事件 (除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 </tbody></table>
 
@@ -4594,7 +4586,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4603,17 +4595,17 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Option</th>
-		<th>Type</th>
-		<th>Default</th>
-		<th>Description</th>
+		<th>选项</th>
+		<th>类型</th>
+		<th>默认值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-attribution'>
 		<td><code><b>attribution</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>String to be shown in the attribution control, e.g. &quot;© OpenStreetMap contributors&quot;. It describes the layer data and is often a legal obligation towards copyright holders and tile providers.</td>
+		<td>归属控制中要显示的字符串，例如 &quot;© OpenStreetMap 贡献者&quot;。 它描述了图层数据，通常是对版权所有者和瓦片提供者的法律义务。</td>
 	</tr>
 </tbody></table>
 
@@ -4628,7 +4620,7 @@ position on the map.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> DivOverlay events inherited from <a href='#divoverlay'>DivOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#divoverlay'>DivOverlay</a> 的 DivOverlay 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4637,15 +4629,15 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-contentupdate'>
 		<td><code><b>contentupdate</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the content of the overlay is updated</td>
+		<td>当 overlay 的内容被更新时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -4654,7 +4646,7 @@ position on the map.</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Mouse events inherited from <a href='#interactive-layer'>Interactive layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#interactive-layer'>Interactive layer（交互图层）</a>的鼠标事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4663,48 +4655,45 @@ position on the map.</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-click'>
 		<td><code><b>click</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user clicks (or taps) the layer.</td>
+		<td>当用户 click 或 tap 该图层时触发。</td>
 	</tr>
 	<tr id='tooltip-dblclick'>
 		<td><code><b>dblclick</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user double-clicks (or double-taps) the layer.</td>
+		<td>当用户 double-click 或 double-tap 该图层时触发。</td>
 	</tr>
 	<tr id='tooltip-mousedown'>
 		<td><code><b>mousedown</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user pushes the mouse button on the layer.</td>
+		<td>当用户在该图层上按下鼠标按钮时触发。</td>
 	</tr>
 	<tr id='tooltip-mouseup'>
 		<td><code><b>mouseup</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user releases the mouse button pushed on the layer.</td>
+		<td>当用户在该图层上释放按下的鼠标按钮时触发。</td>
 	</tr>
 	<tr id='tooltip-mouseover'>
 		<td><code><b>mouseover</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse enters the layer.</td>
+		<td>鼠标进入该图层时触发。</td>
 	</tr>
 	<tr id='tooltip-mouseout'>
 		<td><code><b>mouseout</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the mouse leaves the layer.</td>
+		<td>当鼠标离开该图层时触发。</td>
 	</tr>
 	<tr id='tooltip-contextmenu'>
 		<td><code><b>contextmenu</b></code></td>
 		<td><code><a href='#mouseevent'>MouseEvent</a></code></td>
-		<td>Fired when the user right-clicks on the layer, prevents
-default browser context menu from showing if there are listeners on
-this event. Also fired on mobile when the user holds a single touch
-for a second (also called long press).</td>
+		<td>当用户在图层上点击右键时触发，如果该事件有监听者，可以防止显示默认的浏览器上下文菜单。在手机上，当用户保持单次触摸一秒钟（也叫长按）时也会触发。</td>
 	</tr>
 </tbody></table>
 
@@ -4713,7 +4702,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4722,20 +4711,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-add'>
 		<td><code><b>add</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is added to a map</td>
+		<td>在图层被添加到地图后触发</td>
 	</tr>
 	<tr id='tooltip-remove'>
 		<td><code><b>remove</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired after the layer is removed from a map</td>
+		<td>从地图上删除图层后触发</td>
 	</tr>
 </tbody></table>
 
@@ -4744,7 +4733,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4753,20 +4742,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-popupopen'>
 		<td><code><b>popupopen</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is opened</td>
+		<td>当与该图层绑定的 Popup 被打开时触发</td>
 	</tr>
 	<tr id='tooltip-popupclose'>
 		<td><code><b>popupclose</b></code></td>
 		<td><code><a href='#popupevent'>PopupEvent</a></code></td>
-		<td>Fired when a popup bound to this layer is closed</td>
+		<td>当与该图层绑定的 Popup 关闭时触发</td>
 	</tr>
 </tbody></table>
 
@@ -4775,7 +4764,7 @@ for a second (also called long press).</td>
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip events inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 tooltip（工具提示）事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4784,20 +4773,20 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Event</th>
-		<th>Data</th>
-		<th>Description</th>
+		<th>事件</th>
+		<th>数据</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-tooltipopen'>
 		<td><code><b>tooltipopen</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is opened.</td>
+		<td>当绑定到该图层的 Tooltip 被打开时触发。</td>
 	</tr>
 	<tr id='tooltip-tooltipclose'>
 		<td><code><b>tooltipclose</b></code></td>
 		<td><code><a href='#tooltipevent'>TooltipEvent</a></code></td>
-		<td>Fired when a tooltip bound to this layer is closed.</td>
+		<td>当绑定到该图层的 Tooltip 关闭时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -4806,13 +4795,13 @@ for a second (also called long press).</td>
 </div>
 
 </section><section>
-<h3 id=''>Methods</h3>
+<h3 id=''>Methods 方法</h3>
 
 
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#divoverlay'>DivOverlay</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#divoverlay'>DivOverlay</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4821,9 +4810,9 @@ for a second (also called long press).</td>
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-openon'>
@@ -4911,7 +4900,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4920,45 +4909,45 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;Map|LayerGroup&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the layer to the given map or layer group.</p>
+		<td><p>将图层添加到指定的地图或图层组（LayerGroup）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the map it is currently active on.</p>
+		<td><p>从当前处于活动状态的地图中删除图层。</p>
 </td>
 	</tr>
 	<tr id='tooltip-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given map</p>
+		<td><p>从指定的地图中删除图层</p>
 </td>
 	</tr>
 	<tr id='tooltip-removefrom'>
 		<td><code><b>removeFrom</b>(<nobr>&lt;<a href='#layergroup'>LayerGroup</a>&gt;</nobr> <i>group</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer from the given <a href="#layergroup"><code>LayerGroup</code></a></p>
+		<td><p>从指定的<a href="#layergroup"><code>LayerGroup</code></a>中删除该图层。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getpane'>
 		<td><code><b>getPane</b>(<nobr>&lt;String&gt;</nobr> <i>name?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the <code>HTMLElement</code> representing the named pane on the map. If <code>name</code> is omitted, returns the pane for this layer.</p>
+		<td><p>返回代表地图上指定窗格的 <code>HTMLElement</code>。如果 <code>name</code> 被省略，则返回该层的窗格。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Used by the <code>attribution control</code>, returns the <a href="#gridlayer-attribution">attribution option</a>.</p>
+		<td><p>由 <code>attribution控件</code> 使用，返回 <a href="#gridlayer-attribution">attribution 选项</a>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -4968,7 +4957,7 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Popup methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Popup 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -4977,59 +4966,57 @@ The function should return a <code>String</code> or <code>HTMLElement</code> to 
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-bindpopup'>
 		<td><code><b>bindPopup</b>(<nobr>&lt;String|HTMLElement|Function|Popup&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#popup-option'>Popup options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a popup to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将一个弹出式窗口与传入的 <code>content</code> 层绑定，并设置必要的事件监听器。如果 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-unbindpopup'>
 		<td><code><b>unbindPopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the popup previously bound with <code>bindPopup</code>.</p>
+		<td>移除之前用 <code>bindPopup</code> 绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tooltip-openpopup'>
 		<td><code><b>openPopup</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound popup at the specified <code>latlng</code> or at the default popup anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的弹出窗口，如果没有设置 <code>latlng</code>，则在默认的位置打开弹窗（popup）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-closepopup'>
 		<td><code><b>closePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the popup bound to this layer if it is open.</p>
+		<td><p>如果与当前图层绑定的弹窗（popup）时打开的，则关闭当前弹窗。</p>
 </td>
 	</tr>
 	<tr id='tooltip-togglepopup'>
 		<td><code><b>togglePopup</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the popup bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态，打开或关闭与该层绑定的弹出窗口。</p>
 </td>
 	</tr>
 	<tr id='tooltip-ispopupopen'>
 		<td><code><b>isPopupOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the popup bound to this layer is currently open.</p>
+		<td><p>如果与该层绑定的弹出窗口当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-setpopupcontent'>
 		<td><code><b>setPopupContent</b>(<nobr>&lt;String|HTMLElement|Popup&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the popup bound to this layer.</p>
+		<td><p>设置绑定到该图层的弹出窗口的内容。</p>
 </td>
 	</tr>
 	<tr id='tooltip-getpopup'>
 		<td><code><b>getPopup</b>()</code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td><p>Returns the popup bound to this layer.</p>
+		<td><p>返回绑定到该图层的弹出窗口。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -5039,7 +5026,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Tooltip methods inherited from <a href='#layer'>Layer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#layer'>Layer 图层</a>的 Tooltip 方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5048,59 +5035,57 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>描述</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-bindtooltip'>
 		<td><code><b>bindTooltip</b>(<nobr>&lt;String|HTMLElement|Function|Tooltip&gt;</nobr> <i>content</i>, <nobr>&lt;<a href='#tooltip-option'>Tooltip options</a>&gt;</nobr> <i>options?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Binds a tooltip to the layer with the passed <code>content</code> and sets up the
-necessary event listeners. If a <code>Function</code> is passed it will receive
-the layer as the first argument and should return a <code>String</code> or <code>HTMLElement</code>.</p>
+		<td><p>将工具提示（tooltip）绑定到传入的图层 <code>content</code> 并设置必要的事件侦听器。如果一个 <code>Function</code> 被传递，它将接收图层作为第一个参数，并应返回 <code>String</code> 或 <code>HTMLElement</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-unbindtooltip'>
 		<td><code><b>unbindTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the tooltip previously bound with <code>bindTooltip</code>.</p>
+		<td><p>移除之前用 <code>bindTooltip</code> 绑定的工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tooltip-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tooltip-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='tooltip-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -5110,7 +5095,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -5119,108 +5104,105 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 <table><thead>
 	<tr>
-		<th>Method</th>
-		<th>Returns</th>
-		<th>Description</th>
+		<th>方法</th>
+		<th>返回值</th>
+		<th>说明</th>
 	</tr>
 	</thead><tbody>
 	<tr id='tooltip-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='tooltip-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='tooltip-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tooltip-fire'>
 		<td><code><b>fire</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Object&gt;</nobr> <i>data?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Fires an event of the specified type. You can optionally provide a data
-object — the first argument of the listener function will contain its
-properties. The event can optionally be propagated to event parents.</p>
+		<td><p>触发指定类型的事件。您可以选择提供一个数据对象——侦听器函数的第一个参数将包含其属性，事件可以选择性地传播到事件父级。</p>
 </td>
 	</tr>
 	<tr id='tooltip-listens'>
 		<td><code><b>listens</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Boolean&gt;</nobr> <i>propagate?</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if a particular event type has any listeners attached to it.
-The verification can optionally be propagated, it will return <code>true</code> if parents have the listener attached to it.</p>
+		<td><p>如果一个特定的事件类型有任何监听器连接到它，则返回 <code>true</code>。验证可以选择性地被传播，如果父级有监听器连接到它，它将返回<code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tooltip-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='tooltip-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='tooltip-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='tooltip-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tooltip-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -5969,37 +5951,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='tilelayer-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -6009,7 +5991,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6026,31 +6008,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='tilelayer-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='tilelayer-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-fire'>
@@ -6071,55 +6053,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='tilelayer-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -6937,37 +6919,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='tilelayer-wms-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -6977,7 +6959,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -6994,31 +6976,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='tilelayer-wms-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-fire'>
@@ -7039,55 +7021,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='tilelayer-wms-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='tilelayer-wms-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -7686,37 +7668,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='imageoverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -7726,7 +7708,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -7743,31 +7725,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='imageoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-fire'>
@@ -7788,55 +7770,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='imageoverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='imageoverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='imageoverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -8533,37 +8515,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='videooverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -8573,7 +8555,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -8590,31 +8572,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='videooverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='videooverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-fire'>
@@ -8635,55 +8617,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='videooverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='videooverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='videooverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='videooverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='videooverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -9321,37 +9303,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='svgoverlay-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -9361,7 +9343,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -9378,31 +9360,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='svgoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-fire'>
@@ -9423,55 +9405,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='svgoverlay-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='svgoverlay-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svgoverlay-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -10020,37 +10002,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='path-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='path-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='path-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='path-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='path-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='path-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -10060,7 +10042,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -10077,31 +10059,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='path-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='path-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='path-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='path-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='path-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='path-fire'>
@@ -10122,55 +10104,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='path-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='path-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='path-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='path-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='path-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='path-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='path-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='path-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='path-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -10889,37 +10871,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='polyline-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='polyline-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='polyline-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='polyline-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='polyline-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='polyline-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -10929,7 +10911,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -10946,31 +10928,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='polyline-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='polyline-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='polyline-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='polyline-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='polyline-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='polyline-fire'>
@@ -10991,55 +10973,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='polyline-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='polyline-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='polyline-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='polyline-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polyline-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polyline-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='polyline-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polyline-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polyline-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -11786,37 +11768,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='polygon-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='polygon-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='polygon-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='polygon-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='polygon-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='polygon-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -11826,7 +11808,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11843,31 +11825,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='polygon-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='polygon-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='polygon-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='polygon-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='polygon-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='polygon-fire'>
@@ -11888,55 +11870,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='polygon-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='polygon-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='polygon-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='polygon-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polygon-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polygon-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='polygon-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polygon-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='polygon-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -12693,37 +12675,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='rectangle-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='rectangle-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='rectangle-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='rectangle-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='rectangle-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='rectangle-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -12733,7 +12715,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12750,31 +12732,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='rectangle-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='rectangle-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='rectangle-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='rectangle-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='rectangle-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='rectangle-fire'>
@@ -12795,55 +12777,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='rectangle-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='rectangle-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='rectangle-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='rectangle-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='rectangle-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='rectangle-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='rectangle-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='rectangle-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='rectangle-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -13571,37 +13553,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='circle-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='circle-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='circle-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='circle-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='circle-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='circle-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -13611,7 +13593,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13628,31 +13610,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='circle-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='circle-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='circle-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='circle-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='circle-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='circle-fire'>
@@ -13673,55 +13655,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='circle-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='circle-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='circle-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='circle-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circle-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circle-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='circle-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circle-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circle-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -14391,37 +14373,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='circlemarker-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -14431,7 +14413,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -14448,31 +14430,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='circlemarker-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='circlemarker-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-fire'>
@@ -14493,55 +14475,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='circlemarker-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='circlemarker-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='circlemarker-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circlemarker-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circlemarker-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='circlemarker-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circlemarker-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='circlemarker-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -14971,37 +14953,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='svg-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='svg-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='svg-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='svg-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='svg-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='svg-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -15011,7 +14993,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15028,31 +15010,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='svg-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='svg-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='svg-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='svg-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='svg-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='svg-fire'>
@@ -15073,55 +15055,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='svg-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='svg-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='svg-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='svg-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svg-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svg-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='svg-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svg-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='svg-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -15601,37 +15583,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='canvas-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='canvas-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='canvas-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='canvas-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='canvas-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='canvas-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -15641,7 +15623,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15658,31 +15640,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='canvas-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='canvas-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='canvas-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='canvas-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='canvas-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='canvas-fire'>
@@ -15703,55 +15685,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='canvas-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='canvas-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='canvas-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='canvas-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='canvas-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='canvas-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='canvas-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='canvas-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='canvas-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -16304,37 +16286,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='layergroup-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='layergroup-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='layergroup-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='layergroup-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='layergroup-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='layergroup-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -16344,7 +16326,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -16361,31 +16343,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='layergroup-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='layergroup-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='layergroup-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='layergroup-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='layergroup-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='layergroup-fire'>
@@ -16406,55 +16388,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='layergroup-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='layergroup-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='layergroup-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='layergroup-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layergroup-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layergroup-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='layergroup-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layergroup-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layergroup-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -17082,37 +17064,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='featuregroup-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -17122,7 +17104,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -17139,31 +17121,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='featuregroup-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='featuregroup-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-fire'>
@@ -17184,55 +17166,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='featuregroup-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='featuregroup-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='featuregroup-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='featuregroup-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='featuregroup-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='featuregroup-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='featuregroup-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='featuregroup-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -17976,37 +17958,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='geojson-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='geojson-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='geojson-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='geojson-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='geojson-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='geojson-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -18016,7 +17998,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -18033,31 +18015,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='geojson-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='geojson-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='geojson-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='geojson-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='geojson-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='geojson-fire'>
@@ -18078,55 +18060,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='geojson-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='geojson-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='geojson-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='geojson-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='geojson-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='geojson-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='geojson-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='geojson-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='geojson-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -18829,37 +18811,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='gridlayer-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -18869,7 +18851,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -18886,31 +18868,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='gridlayer-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='gridlayer-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-fire'>
@@ -18931,55 +18913,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='gridlayer-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='gridlayer-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='gridlayer-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='gridlayer-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='gridlayer-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='gridlayer-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='gridlayer-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='gridlayer-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='gridlayer-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -21854,7 +21836,7 @@ argument of the <a href="https://cubic-bezier.com/#0,0,.5,1">cubic bezier curve<
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -21871,31 +21853,31 @@ argument of the <a href="https://cubic-bezier.com/#0,0,.5,1">cubic bezier curve<
 	<tr id='posanimation-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='posanimation-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='posanimation-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='posanimation-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='posanimation-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='posanimation-fire'>
@@ -21916,55 +21898,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='posanimation-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='posanimation-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='posanimation-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='posanimation-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='posanimation-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -22126,7 +22108,7 @@ update of the element's position.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -22143,31 +22125,31 @@ update of the element's position.</td>
 	<tr id='draggable-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='draggable-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='draggable-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='draggable-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='draggable-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='draggable-fire'>
@@ -22188,55 +22170,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='draggable-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='draggable-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='draggable-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='draggable-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='draggable-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -22527,31 +22509,31 @@ map.off('click', onClick);
 	<tr id='evented-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='evented-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='evented-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='evented-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='evented-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='evented-fire'>
@@ -22572,55 +22554,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='evented-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='evented-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='evented-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='evented-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='evented-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='evented-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='evented-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='evented-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='evented-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -22964,37 +22946,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='layer-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='layer-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='layer-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='layer-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='layer-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='layer-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23003,7 +22985,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23020,31 +23002,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='layer-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='layer-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='layer-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='layer-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='layer-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='layer-fire'>
@@ -23065,55 +23047,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='layer-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='layer-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='layer-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='layer-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layer-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layer-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='layer-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layer-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='layer-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -23512,37 +23494,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='interactive-layer-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23552,7 +23534,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -23569,31 +23551,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='interactive-layer-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-fire'>
@@ -23614,55 +23596,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='interactive-layer-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='interactive-layer-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='interactive-layer-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='interactive-layer-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='interactive-layer-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='interactive-layer-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='interactive-layer-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
@@ -24526,37 +24508,37 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='renderer-opentooltip'>
 		<td><code><b>openTooltip</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens the bound tooltip at the specified <code>latlng</code> or at the default tooltip anchor if no <code>latlng</code> is passed.</p>
+		<td><p>在指定的 <code>latlng</code> 处打开绑定的工具提示（tooltip），如果没有指定 <code>latlng</code>，则在默认的锚点打开工具提示（tooltip）。</p>
 </td>
 	</tr>
 	<tr id='renderer-closetooltip'>
 		<td><code><b>closeTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Closes the tooltip bound to this layer if it is open.</p>
+		<td><p>如果该图层处于打开状态，则关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='renderer-toggletooltip'>
 		<td><code><b>toggleTooltip</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Opens or closes the tooltip bound to this layer depending on its current state.</p>
+		<td><p>根据当前状态打开或关闭绑定到该图层的工具提示。</p>
 </td>
 	</tr>
 	<tr id='renderer-istooltipopen'>
 		<td><code><b>isTooltipOpen</b>()</code></td>
 		<td><code>boolean</code></td>
-		<td><p>Returns <code>true</code> if the tooltip bound to this layer is currently open.</p>
+		<td><p>如果该层绑定的工具提示当前已打开，则返回 <code>true</code>。</p>
 </td>
 	</tr>
 	<tr id='renderer-settooltipcontent'>
 		<td><code><b>setTooltipContent</b>(<nobr>&lt;String|HTMLElement|Tooltip&gt;</nobr> <i>content</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the content of the tooltip bound to this layer.</p>
+		<td><p>设置绑定到该层的工具提示的内容。</p>
 </td>
 	</tr>
 	<tr id='renderer-gettooltip'>
 		<td><code><b>getTooltip</b>()</code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td><p>Returns the tooltip bound to this layer.</p>
+		<td><p>返回绑定到该层的工具提示。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -24566,7 +24548,7 @@ the layer as the first argument and should return a <code>String</code> or <code
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#evented'>Evented</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#evented'>Evented</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24583,31 +24565,31 @@ the layer as the first argument and should return a <code>String</code> or <code
 	<tr id='renderer-on'>
 		<td><code><b>on</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a listener function (<code>fn</code>) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. <code>'click dblclick'</code>).</p>
+		<td><p>为对象的特定事件类型添加一个监听函数（<code>fn</code>）。你可以选择性地指定监听器的上下文（这个关键字将指向的对象）。你也可以传递几个空格分隔的类型（例如，<code>'click dblclick'</code>）。</p>
 </td>
 	</tr>
 	<tr id='renderer-on'>
 		<td><code><b>on</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></p>
+		<td><p>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</p>
 </td>
 	</tr>
 	<tr id='renderer-off'>
 		<td><code><b>off</b>(<nobr>&lt;String&gt;</nobr> <i>type</i>, <nobr>&lt;Function&gt;</nobr> <i>fn?</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to <code>on</code>, you must pass the same context to <code>off</code> in order to remove the listener.</p>
+		<td><p>移除一个先前添加的监听器函数。如果没有指定函数，它将从对象中删除该特定事件的所有监听器。请注意，如果您向 <code>on</code> 传递了一个自定义的上下文，您必须向 <code>off</code> 传递相同的上下文，以便删除监听器。</p>
 </td>
 	</tr>
 	<tr id='renderer-off'>
 		<td><code><b>off</b>(<nobr>&lt;Object&gt;</nobr> <i>eventMap</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes a set of type/listener pairs.</p>
+		<td><p>删除一组 type/listener</p>
 </td>
 	</tr>
 	<tr id='renderer-off'>
 		<td><code><b>off</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all listeners to all events on the object. This includes implicitly attached events.</p>
+		<td><p>移除该对象上所有事件的所有监听器。这包括隐含的附加事件。</p>
 </td>
 	</tr>
 	<tr id='renderer-fire'>
@@ -24628,55 +24610,55 @@ The verification can optionally be propagated, it will return <code>true</code> 
 	<tr id='renderer-once'>
 		<td><code><b>once</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Behaves as <a href="#evented-on"><code>on(…)</code></a>, except the listener will only get fired once and then removed.</p>
+		<td><p>与<a href="#evented-on"><code>on(...)</code></a>的行为一样，不过监听器只会被触发一次后然后被删除。</p>
 </td>
 	</tr>
 	<tr id='renderer-addeventparent'>
 		<td><code><b>addEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds an event parent - an <a href="#evented"><code>Evented</code></a> that will receive propagated events</p>
+		<td><p>向父级 <a href="#evented"><code>Evented</code></a> 添加事件</p>
 </td>
 	</tr>
 	<tr id='renderer-removeeventparent'>
 		<td><code><b>removeEventParent</b>(<nobr>&lt;<a href='#evented'>Evented</a>&gt;</nobr> <i>obj</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes an event parent, so it will stop receiving propagated events</p>
+		<td><p>删除之前向父级 <a href="#evented"><code>Evented</code></a> 添加的事件</p>
 </td>
 	</tr>
 	<tr id='renderer-addeventlistener'>
 		<td><code><b>addEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-on"><code>on(…)</code></a></p>
+		<td><p>同 <a href="#evented-on"><code>on(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='renderer-removeeventlistener'>
 		<td><code><b>removeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off(…)</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='renderer-clearalleventlisteners'>
 		<td><code><b>clearAllEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-off"><code>off()</code></a></p>
+		<td><p>同 <a href="#evented-off"><code>off()</code></a></p>
 </td>
 	</tr>
 	<tr id='renderer-addonetimeeventlistener'>
 		<td><code><b>addOneTimeEventListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-once"><code>once(…)</code></a></p>
+		<td><p>同 <a href="#evented-once"><code>once(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='renderer-fireevent'>
 		<td><code><b>fireEvent</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Alias to <a href="#evented-fire"><code>fire(…)</code></a></p>
+		<td><p>同 <a href="#evented-fire"><code>fire(…)</code></a></p>
 </td>
 	</tr>
 	<tr id='renderer-haseventlisteners'>
 		<td><code><b>hasEventListeners</b>(<i>…</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Alias to <a href="#evented-listens"><code>listens(…)</code></a></p>
+		<td><p>同 <a href="#evented-listens"><code>listens(…)</code></a></p>
 </td>
 	</tr>
 </tbody></table>
