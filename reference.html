@@ -20363,7 +20363,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-scale'>Control.Scale</h2><p>A simple scale control that shows the scale of the current center of screen in metric (m/km) and imperial (mi/ft) systems. Extends <a href="#control"><code>Control</code></a>.</p>
+</section><h2 id='control-scale'>Scale 比例尺</h2><p>一个简单的比例尺控件，以公制（m/km）和英制（mi/ft）系统显示当前屏幕中心的比例。扩展了 <a href="#control"><code>Control</code></a>。</p>
 
 <section>
 <h3 id='control-scale-example'>使用示例</h3>
@@ -20398,7 +20398,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	</thead><tbody>
 	<tr id='control-scale-l-control-scale'>
 		<td><code><b>L.control.scale</b>(<nobr>&lt;<a href='#control-scale-option'>Control.Scale options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Creates an scale control with the given options.</td>
+		<td>用给定的选项创建一个比例尺控件。</td>
 	</tr>
 </tbody></table>
 
@@ -20425,25 +20425,25 @@ L.control.layers(baseLayers, overlays).addTo(map);
 		<td><code><b>maxWidth</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>100</code></td>
-		<td>Maximum width of the control in pixels. The width is set dynamically to show round values (e.g. 100, 200, 500).</td>
+		<td>控件的最大宽度，单位是像素。宽度是动态设置的，以显示圆形值（如100、200、500）。</td>
 	</tr>
 	<tr id='control-scale-metric'>
 		<td><code><b>metric</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>True</code></td>
-		<td>Whether to show the metric scale line (m/km).</td>
+		<td>是否显示公制比例线（米/公里）。</td>
 	</tr>
 	<tr id='control-scale-imperial'>
 		<td><code><b>imperial</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>True</code></td>
-		<td>Whether to show the imperial scale line (mi/ft).</td>
+		<td>是否显示英制比例线（英里/英尺）。</td>
 	</tr>
 	<tr id='control-scale-updatewhenidle'>
 		<td><code><b>updateWhenIdle</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>If <code>true</code>, the control is updated on <a href="#map-moveend"><code>moveend</code></a>, otherwise it's always up-to-date (updated on <a href="#map-move"><code>move</code></a>).</td>
+		<td>如果为 <code>true</code>, 控件在 <a href="#map-moveend"><code>移动结束</code></a>时被更新，否则它总是最新的( <a href="#map-move"><code>move</code></a> 时更新)。</td>
 	</tr>
 </tbody></table>
 
