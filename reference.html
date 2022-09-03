@@ -18670,7 +18670,7 @@ return true;
 	</div>
 </div>
 
-</section><h2 id='latlng'>LatLng</h2><p>Represents a geographical point with a certain latitude and longitude.</p>
+</section><h2 id='latlng'>LatLng 经纬度</h2><p>代表一个具有一定经纬度的地理点。</p>
 
 <section>
 <h3 id='latlng-example'>使用示例</h3>
@@ -18683,15 +18683,13 @@ return true;
 
 <pre><code>var latlng = L.latLng(50.5, 30.5);
 </code></pre>
-<p>All Leaflet methods that accept LatLng objects also accept them in a simple Array form and simple object form (unless noted otherwise), so these lines are equivalent:</p>
+<p>所有接受 LatLng 对象的 Leaflet 方法也接受它们的简单数组形式和简单对象形式（除非另有说明），所以这些行是等价的:</p>
 <pre><code>map.panTo([50, 30]);
 map.panTo({lon: 30, lat: 50});
 map.panTo({lat: 50, lng: 30});
 map.panTo(L.latLng(50, 30));
 </code></pre>
-<p>Note that <a href="#latlng"><code>LatLng</code></a> does not inherit from Leaflet's <a href="#class"><code>Class</code></a> object,
-which means new classes can't inherit from it, and new methods
-can't be added to it with the <code>include</code> function.</p>
+<p>注意 <a href="#latlng"><code>LatLng</code></a> 并不继承自 Leaflet 的 <a href="#class"><code>Class</code></a> 对象，这意味着新的类不能继承自它，也不能用 <code>include</code> 函数将新的方法添加到它。</p>
 
 
 
@@ -18714,15 +18712,15 @@ can't be added to it with the <code>include</code> function.</p>
 	</thead><tbody>
 	<tr id='latlng-l-latlng'>
 		<td><code><b>L.latLng</b>(<nobr>&lt;Number&gt;</nobr> <i>latitude</i>, <nobr>&lt;Number&gt;</nobr> <i>longitude</i>, <nobr>&lt;Number&gt;</nobr> <i>altitude?</i>)</code></td>
-		<td>Creates an object representing a geographical point with the given latitude and longitude (and optionally altitude).</td>
+		<td>创建一个代表具有给定纬度和经度（以及可选的高度）的地理点的对象。</td>
 	</tr>
 	<tr id='latlng-l-latlng'>
 		<td><code><b>L.latLng</b>(<nobr>&lt;Array&gt;</nobr> <i>coords</i>)</code></td>
-		<td>Expects an array of the form <code>[Number, Number]</code> or <code>[Number, Number, Number]</code> instead.</td>
+		<td>期待一个 <code>[Number, Number]</code> 或 <code>[Number, Number, Number]</code> 形式的数组来代替。</td>
 	</tr>
 	<tr id='latlng-l-latlng'>
 		<td><code><b>L.latLng</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>)</code></td>
-		<td>Expects an plain object of the form <code>{lat: Number, lng: Number}</code> or <code>{lat: Number, lng: Number, alt: Number}</code> instead.</td>
+		<td>期待一个形式为 <code>{lat: Number, lng: Number}</code> 或 <code>{lat: Number, lng: Number, alt: Number}</code> 的普通对象来代替。</td>
 	</tr>
 </tbody></table>
 
@@ -18747,31 +18745,31 @@ can't be added to it with the <code>include</code> function.</p>
 	<tr id='latlng-equals'>
 		<td><code><b>equals</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>otherLatLng</i>, <nobr>&lt;Number&gt;</nobr> <i>maxMargin?</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given <a href="#latlng"><code>LatLng</code></a> point is at the same position (within a small margin of error). The margin of error can be overridden by setting <code>maxMargin</code> to a small number.</p>
+		<td><p>如果给定的 <a href="#latlng"><code>LatLng</code></a> 点在同一位置（在一个小的误差范围内），则返回 <code>true</code> 。 误差范围可以通过设置 <code>maxMargin</code> 为一个小数字来重写。</p>
 </td>
 	</tr>
 	<tr id='latlng-tostring'>
 		<td><code><b>toString</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Returns a string representation of the point (for debugging purposes).</p>
+		<td><p>返回点的字符串表示（用于调试目的）。</p>
 </td>
 	</tr>
 	<tr id='latlng-distanceto'>
 		<td><code><b>distanceTo</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>otherLatLng</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the distance (in meters) to the given <a href="#latlng"><code>LatLng</code></a> calculated using the <a href="https://en.wikipedia.org/wiki/Spherical_law_of_cosines">Spherical Law of Cosines</a>.</p>
+		<td><p>返回使用 <a href="https://en.wikipedia.org/wiki/Spherical_law_of_cosines">球面余弦律</a>计算的与给定 <a href="#latlng"><code>LatLng</code></a> 的距离（以米为单位）。</p>
 </td>
 	</tr>
 	<tr id='latlng-wrap'>
 		<td><code><b>wrap</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns a new <a href="#latlng"><code>LatLng</code></a> object with the longitude wrapped so it's always between -180 and +180 degrees.</p>
+		<td><p>返回一个新的 <a href="#latlng"><code>LatLng</code></a> 对象，该对象的经纬度被包裹，所以它总是在-180度和+180度之间。</p>
 </td>
 	</tr>
 	<tr id='latlng-tobounds'>
 		<td><code><b>toBounds</b>(<nobr>&lt;Number&gt;</nobr> <i>sizeInMeters</i>)</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns a new <a href="#latlngbounds"><code>LatLngBounds</code></a> object in which each boundary is <code>sizeInMeters/2</code> meters apart from the <a href="#latlng"><code>LatLng</code></a>.</p>
+		<td><p>返回一个新的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 对象，其中每个边界与 <a href="#latlng"><code>LatLng</code></a> 的距离为<code>sizeInMeters/2</code> 米。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -18780,7 +18778,7 @@ can't be added to it with the <code>include</code> function.</p>
 
 
 </section><section>
-<h3 id='latlng-property'>Properties</h3>
+<h3 id='latlng-property'>Properties 属性</h3>
 
 <section >
 
@@ -18789,7 +18787,7 @@ can't be added to it with the <code>include</code> function.</p>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -18797,17 +18795,17 @@ can't be added to it with the <code>include</code> function.</p>
 	<tr id='latlng-lat'>
 		<td><code><b>lat</b></code></td>
 		<td><code>Number</code></td>
-		<td>Latitude in degrees</td>
+		<td>纬度（度）</td>
 	</tr>
 	<tr id='latlng-lng'>
 		<td><code><b>lng</b></code></td>
 		<td><code>Number</code></td>
-		<td>Longitude in degrees</td>
+		<td>经度（度）</td>
 	</tr>
 	<tr id='latlng-alt'>
 		<td><code><b>alt</b></code></td>
 		<td><code>Number</code></td>
-		<td>Altitude in meters (optional)</td>
+		<td>海拔高度，以米为单位（可选）</td>
 	</tr>
 </tbody></table>
 
@@ -19180,7 +19178,7 @@ each coordinate of <code>scale</code>.</p>
 
 
 </section><section>
-<h3 id='point-property'>Properties</h3>
+<h3 id='point-property'>Properties 属性</h3>
 
 <section >
 
@@ -19189,7 +19187,7 @@ each coordinate of <code>scale</code>.</p>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -19352,7 +19350,7 @@ overlap if their intersection is an area.</p>
 
 
 </section><section>
-<h3 id='bounds-property'>Properties</h3>
+<h3 id='bounds-property'>Properties 属性</h3>
 
 <section >
 
@@ -19361,7 +19359,7 @@ overlap if their intersection is an area.</p>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -20590,7 +20588,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 
 </section><section>
-<h3 id='browser-property'>Properties</h3>
+<h3 id='browser-property'>Properties 属性</h3>
 
 <section >
 
@@ -20599,7 +20597,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -20896,7 +20894,7 @@ otherwise it's delayed. Returns a request ID that can be used to cancel the requ
 
 
 </section><section>
-<h3 id='util-property'>Properties</h3>
+<h3 id='util-property'>Properties 属性</h3>
 
 <section >
 
@@ -20905,7 +20903,7 @@ otherwise it's delayed. Returns a request ID that can be used to cancel the requ
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -21383,7 +21381,7 @@ and <code>boundingClientRect</code> as the result of <a href="https://developer.
 
 
 </section><section>
-<h3 id='domutil-property'>Properties</h3>
+<h3 id='domutil-property'>Properties 属性</h3>
 
 <section >
 
@@ -21392,7 +21390,7 @@ and <code>boundingClientRect</code> as the result of <a href="https://developer.
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -23564,7 +23562,7 @@ and methods can't be added to them with the <code>include</code> function.</p>
 
 
 </section><section>
-<h3 id='projection-property'>Properties</h3>
+<h3 id='projection-property'>Properties 属性</h3>
 
 <section >
 
@@ -23573,7 +23571,7 @@ and methods can't be added to them with the <code>include</code> function.</p>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -23716,7 +23714,7 @@ Only accepts actual <a href="#latlngbounds"><code>L.LatLngBounds</code></a> inst
 
 
 </section><section>
-<h3 id='crs-property'>Properties</h3>
+<h3 id='crs-property'>Properties 属性</h3>
 
 <section >
 
@@ -23725,7 +23723,7 @@ Only accepts actual <a href="#latlngbounds"><code>L.LatLngBounds</code></a> inst
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24349,7 +24347,7 @@ information about the event. For example:</p>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24399,7 +24397,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24424,7 +24422,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24475,7 +24473,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24515,7 +24513,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24566,7 +24564,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24626,7 +24624,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24677,7 +24675,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24707,7 +24705,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24758,7 +24756,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24783,7 +24781,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24829,7 +24827,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24859,7 +24857,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24905,7 +24903,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24935,7 +24933,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -24986,7 +24984,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25021,7 +25019,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25072,7 +25070,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25102,7 +25100,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25153,7 +25151,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25193,7 +25191,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25239,7 +25237,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25264,7 +25262,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25315,7 +25313,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25340,7 +25338,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25391,7 +25389,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25416,7 +25414,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25467,7 +25465,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
@@ -25502,7 +25500,7 @@ event parent.</td>
 
 <table><thead>
 	<tr>
-		<th>Property</th>
+		<th>属性</th>
 		<th>类型</th>
 		<th>说明</th>
 	</tr>
