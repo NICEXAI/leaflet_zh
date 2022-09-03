@@ -19581,8 +19581,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 </section>
 
 
-</section><h2 id='divicon'>DivIcon</h2><p>Represents a lightweight icon for markers that uses a simple <code>&lt;div&gt;</code>
-element instead of an image. Inherits from <a href="#icon"><code>Icon</code></a> but ignores the <code>iconUrl</code> and shadow options.</p>
+</section><h2 id='divicon'>DivIcon</h2><p>代表一个轻量级的标记图标，使用一个简单的 <code>&lt;div&gt;</code> 元素而不是图片。继承自 <a href="#icon"><code>Icon</code></a> ，但忽略了 <code>iconUrl</code> 和 shadow 选项。</p>
 
 <section>
 <h3 id='divicon-example'>使用示例</h3>
@@ -19594,11 +19593,11 @@ element instead of an image. Inherits from <a href="#icon"><code>Icon</code></a>
 
 
 <pre><code class="language-js">var myIcon = L.divIcon({className: 'my-div-icon'});
-// you can set .my-div-icon styles in CSS
+// 你可以在 .my-div-icon CSS 中设置样式
 
 L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 </code></pre>
-<p>By default, it has a 'leaflet-div-icon' CSS class and is styled as a little white square with a shadow.</p>
+<p>默认情况下，它有一个 'leaflet-div-icon' CSS类，并被设计成一个带有阴影的白色小方块。</p>
 
 
 
@@ -19621,7 +19620,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</thead><tbody>
 	<tr id='divicon-l-divicon'>
 		<td><code><b>L.divIcon</b>(<nobr>&lt;<a href='#divicon-option'>DivIcon options</a>&gt;</nobr> <i>options</i>)</code></td>
-		<td>Creates a <a href="#divicon"><code>DivIcon</code></a> instance with the given options.</td>
+		<td>用给定的选项创建一个 <a href="#divicon"><code>DivIcon</code></a> 实例。</td>
 	</tr>
 </tbody></table>
 
@@ -19648,14 +19647,13 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>html</b></code></td>
 		<td><code>String|HTMLElement</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>Custom HTML code to put inside the div element, empty by default. Alternatively,
-an instance of <code>HTMLElement</code>.</td>
+		<td>自定义 HTML 代码，放在 div 元素内，默认为空。或者，一个 <code>HTMLElement</code> 的实例。</td>
 	</tr>
 	<tr id='divicon-bgpos'>
 		<td><code><b>bgPos</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>Optional relative position of the background, in pixels</td>
+		<td>可选的背景的相对位置，单位是像素</td>
 	</tr>
 </tbody></table>
 
@@ -19663,7 +19661,7 @@ an instance of <code>HTMLElement</code>.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#icon'>Icon</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#icon'>Icon</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -19763,7 +19761,7 @@ an instance of <code>HTMLElement</code>.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#icon'>Icon</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#icon'>Icon</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
