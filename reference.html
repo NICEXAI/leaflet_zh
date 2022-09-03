@@ -18812,7 +18812,7 @@ map.panTo(L.latLng(50, 30));
 </section>
 
 
-</section><h2 id='latlngbounds'>LatLngBounds</h2><p>Represents a rectangular geographical area on a map.</p>
+</section><h2 id='latlngbounds'>LatLngBounds 经纬度边界</h2><p>在地图上代表一个矩形的地理区域。</p>
 
 <section>
 <h3 id='latlngbounds-example'>使用示例</h3>
@@ -18827,16 +18827,14 @@ map.panTo(L.latLng(50, 30));
 corner2 = L.latLng(40.774, -74.125),
 bounds = L.latLngBounds(corner1, corner2);
 </code></pre>
-<p>All Leaflet methods that accept LatLngBounds objects also accept them in a simple Array form (unless noted otherwise), so the bounds example above can be passed like this:</p>
+<p>所有接受 LatLngBounds 对象的 Leaflet 方法也接受它们的简单数组形式（除非另有说明），所以上面的边界例子可以这样传递:</p>
 <pre><code class="language-js">map.fitBounds([
 	[40.712, -74.227],
 	[40.774, -74.125]
 ]);
 </code></pre>
-<p>Caution: if the area crosses the antimeridian (often confused with the International Date Line), you must specify corners <em>outside</em> the [-180, 180] degrees longitude range.</p>
-<p>Note that <a href="#latlngbounds"><code>LatLngBounds</code></a> does not inherit from Leaflet's <a href="#class"><code>Class</code></a> object,
-which means new classes can't inherit from it, and new methods
-can't be added to it with the <code>include</code> function.</p>
+<p>注意：如果该地区跨越了反子午线（经常与国际日期变更线混淆）， 你必须指定[-180, 180]度经度 <em>范围之外</em> 的角。</p>
+<p>注意 <a href="#latlngbounds"><code>LatLngBounds</code></a> 没有继承自Leaflet的 <a href="#class"><code>Class</code></a> 对象，这意味着新的类不能继承自它，新的方法也不能用 <code>include</code> 函数添加到它。</p>
 
 
 
@@ -18859,11 +18857,11 @@ can't be added to it with the <code>include</code> function.</p>
 	</thead><tbody>
 	<tr id='latlngbounds-l-latlngbounds'>
 		<td><code><b>L.latLngBounds</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>corner1</i>, <nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>corner2</i>)</code></td>
-		<td>Creates a <a href="#latlngbounds"><code>LatLngBounds</code></a> object by defining two diagonally opposite corners of the rectangle.</td>
+		<td>通过定义矩形的两个斜对角，创建一个 <a href="#latlngbounds"><code>LatLngBounds</code></a> 对象。</td>
 	</tr>
 	<tr id='latlngbounds-l-latlngbounds'>
 		<td><code><b>L.latLngBounds</b>(<nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs</i>)</code></td>
-		<td>Creates a <a href="#latlngbounds"><code>LatLngBounds</code></a> object defined by the geographical points it contains. Very useful for zooming the map to fit a particular set of locations with <a href="#map-fitbounds"><code>fitBounds</code></a>.</td>
+		<td>创建一个由其包含的地理点定义的 <a href="#latlngbounds"><code>LatLngBounds</code></a> 对象。对于用 <a href="#map-fitbounds"><code>fitBounds</code></a> 缩放地图以适应一组特定的位置非常有用。</td>
 	</tr>
 </tbody></table>
 
@@ -18888,117 +18886,117 @@ can't be added to it with the <code>include</code> function.</p>
 	<tr id='latlngbounds-extend'>
 		<td><code><b>extend</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Extend the bounds to contain the given point</p>
+		<td><p>扩展边界以包含给定的点</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-extend'>
 		<td><code><b>extend</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Extend the bounds to contain the given bounds</p>
+		<td><p>扩展边界以包含给定的边界</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-pad'>
 		<td><code><b>pad</b>(<nobr>&lt;Number&gt;</nobr> <i>bufferRatio</i>)</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns bounds created by extending or retracting the current bounds by a given ratio in each direction.
-For example, a ratio of 0.5 extends the bounds by 50% in each direction.
-Negative values will retract the bounds.</p>
+		<td><p>返回通过在每个方向上以给定的比率扩展或缩减当前边界而创建的边界。
+			例如，比率为 0.5 时，界线在每个方向上都会延伸 50% 。
+			负值将缩减边界。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getcenter'>
 		<td><code><b>getCenter</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the center point of the bounds.</p>
+		<td><p>返回边界的中心点。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getsouthwest'>
 		<td><code><b>getSouthWest</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the south-west point of the bounds.</p>
+		<td><p>返回边界的西南点。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getnortheast'>
 		<td><code><b>getNorthEast</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the north-east point of the bounds.</p>
+		<td><p>返回边界的东北点。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getnorthwest'>
 		<td><code><b>getNorthWest</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the north-west point of the bounds.</p>
+		<td><p>返回边界的西北点。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getsoutheast'>
 		<td><code><b>getSouthEast</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the south-east point of the bounds.</p>
+		<td><p>返回边界的东南点。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getwest'>
 		<td><code><b>getWest</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the west longitude of the bounds</p>
+		<td><p>返回边界的西经度</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getsouth'>
 		<td><code><b>getSouth</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the south latitude of the bounds</p>
+		<td><p>返回边界的南纬度</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-geteast'>
 		<td><code><b>getEast</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the east longitude of the bounds</p>
+		<td><p>返回边界的东经度</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-getnorth'>
 		<td><code><b>getNorth</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the north latitude of the bounds</p>
+		<td><p>返回边界的北纬度</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-contains'>
 		<td><code><b>contains</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle contains the given one.</p>
+		<td><p>如果该矩形包含给定的矩形，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-contains'>
 		<td><code><b>contains</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle contains the given point.</p>
+		<td><p>如果矩形包含给定的点，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-intersects'>
 		<td><code><b>intersects</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle intersects the given bounds. Two bounds intersect if they have at least one point in common.</p>
+		<td><p>如果矩形与给定的边界相交，返回 <code>true</code> 。如果两个边界至少有一个共同点，则它们相交。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-overlaps'>
 		<td><code><b>overlaps</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle overlaps the given bounds. Two bounds overlap if their intersection is an area.</p>
+		<td><p>如果矩形与给定的边界重叠，返回 <code>true</code> 。如果两个边界的交点是一个区域，那么它们就会重叠。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-tobboxstring'>
 		<td><code><b>toBBoxString</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Returns a string with bounding box coordinates in a 'southwest_lng,southwest_lat,northeast_lng,northeast_lat' format. Useful for sending requests to web services that return geo data.</p>
+		<td><p>返回一个包含'southwest_lng、southwest_lat、northeast_lng、northeast_lat'格式的包围盒坐标的字符串。对于向返回地理数据的网络服务发送请求很有用。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-equals'>
 		<td><code><b>equals</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>otherBounds</i>, <nobr>&lt;Number&gt;</nobr> <i>maxMargin?</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle is equivalent (within a small margin of error) to the given bounds. The margin of error can be overridden by setting <code>maxMargin</code> to a small number.</p>
+		<td><p>如果矩形与给定的边界相当（在一个小的误差范围内），则返回 <code>true</code> 。误差范围可以通过设置 <code>maxMargin</code> 为一个小数字来重写。</p>
 </td>
 	</tr>
 	<tr id='latlngbounds-isvalid'>
 		<td><code><b>isValid</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the bounds are properly initialized.</p>
+		<td><p>如果边界被正确初始化，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 </tbody></table>
