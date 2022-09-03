@@ -19793,7 +19793,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-zoom'>Control.Zoom</h2><p>A basic zoom control with two buttons (zoom in and zoom out). It is put on the map by default unless you set its <a href="#map-zoomcontrol"><code>zoomControl</code> option</a> to <code>false</code>. Extends <a href="#control"><code>Control</code></a>.</p>
+</section><h2 id='control-zoom'>Zoom 缩放</h2><p>一个基本的缩放控件，有两个按钮（放大和缩小）。除非你把它的 <a href="#map-zoomcontrol"><code>zoomControl</code> 选项</a> 设置为 <code>false</code>。扩展了 <a href="#control"><code>Control</code></a>。</p>
 
 <section>
 <h3 id='control-zoom-factory'>Creation</h3>
@@ -19811,7 +19811,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</thead><tbody>
 	<tr id='control-zoom-l-control-zoom'>
 		<td><code><b>L.control.zoom</b>(<nobr>&lt;<a href='#control-zoom-option'>Control.Zoom options</a>&gt;</nobr> <i>options</i>)</code></td>
-		<td>Creates a zoom control</td>
+		<td>创建一个缩放控件</td>
 	</tr>
 </tbody></table>
 
@@ -19838,25 +19838,25 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>zoomInText</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;+&lt;/span&gt;&#x27;</code></td>
-		<td>The text set on the 'zoom in' button.</td>
+		<td>设置在 'zoom in' 按钮上的文字。</td>
 	</tr>
 	<tr id='control-zoom-zoomintitle'>
 		<td><code><b>zoomInTitle</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;Zoom in&#x27;</code></td>
-		<td>The title set on the 'zoom in' button.</td>
+		<td>设置在 'zoom in' 按钮上的标题。</td>
 	</tr>
 	<tr id='control-zoom-zoomouttext'>
 		<td><code><b>zoomOutText</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;#x2212;&lt;/span&gt;&#x27;</code></td>
-		<td>The text set on the 'zoom out' button.</td>
+		<td>设置在 'zoom out' 按钮上的文字。</td>
 	</tr>
 	<tr id='control-zoom-zoomouttitle'>
 		<td><code><b>zoomOutTitle</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;Zoom out&#x27;</code></td>
-		<td>The title set on the 'zoom out' button.</td>
+		<td>设置在 'zoom out' 按钮上的标题。</td>
 	</tr>
 </tbody></table>
 
@@ -19864,7 +19864,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -19883,8 +19883,8 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>position</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;topright&#x27;</code></td>
-		<td>The position of the control (one of the map corners). Possible values are <code>'topleft'</code>,
-<code>'topright'</code>, <code>'bottomleft'</code> or <code>'bottomright'</code></td>
+		<td>控件的位置（地图的一个角）。可能的值是 <code>'topleft'</code>、
+			<code>'topright'</code>、 <code>'bottomleft'</code> 或 <code>'bottomright'</code></td>
 	</tr>
 </tbody></table>
 
@@ -19899,7 +19899,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -19916,31 +19916,31 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	<tr id='control-zoom-getposition'>
 		<td><code><b>getPosition</b>()</code></td>
 		<td><code>string</code></td>
-		<td><p>Returns the position of the control.</p>
+		<td><p>返回控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-zoom-setposition'>
 		<td><code><b>setPosition</b>(<nobr>&lt;string&gt;</nobr> <i>position</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of the control.</p>
+		<td><p>设置控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-zoom-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTMLElement that contains the control.</p>
+		<td><p>返回包含该控件的 HTMLElement。</p>
 </td>
 	</tr>
 	<tr id='control-zoom-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the control to the given map.</p>
+		<td><p>将控件添加到给定的地图中。</p>
 </td>
 	</tr>
 	<tr id='control-zoom-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the control from the map it is currently active on.</p>
+		<td><p>将控件从当前活动的地图上删除。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -20002,7 +20002,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20021,8 +20021,8 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>position</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;topright&#x27;</code></td>
-		<td>The position of the control (one of the map corners). Possible values are <code>'topleft'</code>,
-<code>'topright'</code>, <code>'bottomleft'</code> or <code>'bottomright'</code></td>
+		<td>控件的位置（地图的一个角）。可能的值是 <code>'topleft'</code>、
+			<code>'topright'</code>、 <code>'bottomleft'</code> 或 <code>'bottomright'</code></td>
 	</tr>
 </tbody></table>
 
@@ -20069,7 +20069,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20086,31 +20086,31 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	<tr id='control-attribution-getposition'>
 		<td><code><b>getPosition</b>()</code></td>
 		<td><code>string</code></td>
-		<td><p>Returns the position of the control.</p>
+		<td><p>返回控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-attribution-setposition'>
 		<td><code><b>setPosition</b>(<nobr>&lt;string&gt;</nobr> <i>position</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of the control.</p>
+		<td><p>设置控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-attribution-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTMLElement that contains the control.</p>
+		<td><p>返回包含该控件的 HTMLElement。</p>
 </td>
 	</tr>
 	<tr id='control-attribution-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the control to the given map.</p>
+		<td><p>将控件添加到给定的地图中。</p>
 </td>
 	</tr>
 	<tr id='control-attribution-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the control from the map it is currently active on.</p>
+		<td><p>将控件从当前活动的地图上删除。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -20237,7 +20237,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20256,8 +20256,8 @@ By default, it sorts layers alphabetically by their name.</td>
 		<td><code><b>position</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;topright&#x27;</code></td>
-		<td>The position of the control (one of the map corners). Possible values are <code>'topleft'</code>,
-<code>'topright'</code>, <code>'bottomleft'</code> or <code>'bottomright'</code></td>
+		<td>控件的位置（地图的一个角）。可能的值是 <code>'topleft'</code>、
+			<code>'topright'</code>、 <code>'bottomleft'</code> 或 <code>'bottomright'</code></td>
 	</tr>
 </tbody></table>
 
@@ -20316,7 +20316,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20333,31 +20333,31 @@ By default, it sorts layers alphabetically by their name.</td>
 	<tr id='control-layers-getposition'>
 		<td><code><b>getPosition</b>()</code></td>
 		<td><code>string</code></td>
-		<td><p>Returns the position of the control.</p>
+		<td><p>返回控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-layers-setposition'>
 		<td><code><b>setPosition</b>(<nobr>&lt;string&gt;</nobr> <i>position</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of the control.</p>
+		<td><p>设置控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-layers-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTMLElement that contains the control.</p>
+		<td><p>返回包含该控件的 HTMLElement。</p>
 </td>
 	</tr>
 	<tr id='control-layers-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the control to the given map.</p>
+		<td><p>将控件添加到给定的地图中。</p>
 </td>
 	</tr>
 	<tr id='control-layers-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the control from the map it is currently active on.</p>
+		<td><p>将控件从当前活动的地图上删除。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -20454,7 +20454,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20473,8 +20473,8 @@ By default, it sorts layers alphabetically by their name.</td>
 		<td><code><b>position</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;topright&#x27;</code></td>
-		<td>The position of the control (one of the map corners). Possible values are <code>'topleft'</code>,
-<code>'topright'</code>, <code>'bottomleft'</code> or <code>'bottomright'</code></td>
+		<td>控件的位置（地图的一个角）。可能的值是 <code>'topleft'</code>、
+			<code>'topright'</code>、 <code>'bottomleft'</code> 或 <code>'bottomright'</code></td>
 	</tr>
 </tbody></table>
 
@@ -20489,7 +20489,7 @@ By default, it sorts layers alphabetically by their name.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#control'>Control</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#control'>Control</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -20506,31 +20506,31 @@ By default, it sorts layers alphabetically by their name.</td>
 	<tr id='control-scale-getposition'>
 		<td><code><b>getPosition</b>()</code></td>
 		<td><code>string</code></td>
-		<td><p>Returns the position of the control.</p>
+		<td><p>返回控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-scale-setposition'>
 		<td><code><b>setPosition</b>(<nobr>&lt;string&gt;</nobr> <i>position</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of the control.</p>
+		<td><p>设置控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-scale-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTMLElement that contains the control.</p>
+		<td><p>返回包含该控件的 HTMLElement。</p>
 </td>
 	</tr>
 	<tr id='control-scale-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the control to the given map.</p>
+		<td><p>将控件添加到给定的地图中。</p>
 </td>
 	</tr>
 	<tr id='control-scale-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the control from the map it is currently active on.</p>
+		<td><p>将控件从当前活动的地图上删除。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23316,8 +23316,8 @@ All other controls extend from this class.</p>
 		<td><code><b>position</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;topright&#x27;</code></td>
-		<td>The position of the control (one of the map corners). Possible values are <code>'topleft'</code>,
-<code>'topright'</code>, <code>'bottomleft'</code> or <code>'bottomright'</code></td>
+		<td>控件的位置（地图的一个角）。可能的值是 <code>'topleft'</code>、
+			<code>'topright'</code>、 <code>'bottomleft'</code> 或 <code>'bottomright'</code></td>
 	</tr>
 </tbody></table>
 
@@ -23343,31 +23343,31 @@ All other controls extend from this class.</p>
 	<tr id='control-getposition'>
 		<td><code><b>getPosition</b>()</code></td>
 		<td><code>string</code></td>
-		<td><p>Returns the position of the control.</p>
+		<td><p>返回控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-setposition'>
 		<td><code><b>setPosition</b>(<nobr>&lt;string&gt;</nobr> <i>position</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of the control.</p>
+		<td><p>设置控件的位置。</p>
 </td>
 	</tr>
 	<tr id='control-getcontainer'>
 		<td><code><b>getContainer</b>()</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Returns the HTMLElement that contains the control.</p>
+		<td><p>返回包含该控件的 HTMLElement。</p>
 </td>
 	</tr>
 	<tr id='control-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the control to the given map.</p>
+		<td><p>将控件添加到给定的地图中。</p>
 </td>
 	</tr>
 	<tr id='control-remove'>
 		<td><code><b>remove</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the control from the map it is currently active on.</p>
+		<td><p>将控件从当前活动的地图上删除。</p>
 </td>
 	</tr>
 </tbody></table>
