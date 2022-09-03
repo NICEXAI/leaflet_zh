@@ -13533,7 +13533,7 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='circlemarker'>CircleMarker</h2><p>A circle of a fixed size with radius specified in pixels. Extends <a href="#path"><code>Path</code></a>.</p>
+</section><h2 id='circlemarker'>CircleMarker 圆形标记</h2><p>一个固定大小的圆，半径以像素指定。扩展了 <a href="#path"><code>Path</code></a>。</p>
 
 <section>
 <h3 id='circlemarker-factory'>Creation</h3>
@@ -13551,7 +13551,7 @@ map.fitBounds(bounds);
 	</thead><tbody>
 	<tr id='circlemarker-l-circlemarker'>
 		<td><code><b>L.circleMarker</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#circlemarker-option'>CircleMarker options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates a circle marker object given a geographical point, and an optional options object.</td>
+		<td>给出一个地理点和一个可选的选项对象，实例化一个圆形标记对象。</td>
 	</tr>
 </tbody></table>
 
@@ -13578,7 +13578,7 @@ map.fitBounds(bounds);
 		<td><code><b>radius</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>10</code></td>
-		<td>Radius of the circle marker, in pixels</td>
+		<td>圆形标记的半径，单位是像素</td>
 	</tr>
 </tbody></table>
 
@@ -13970,13 +13970,13 @@ map.fitBounds(bounds);
 	<tr id='circlemarker-setradius'>
 		<td><code><b>setRadius</b>(<nobr>&lt;Number&gt;</nobr> <i>radius</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the radius of a circle marker. Units are in pixels.</p>
+		<td><p>设置圆形标记的半径。单位是像素。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-getradius'>
 		<td><code><b>getRadius</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the current radius of the circle</p>
+		<td><p>返回圆的当前半径</p>
 </td>
 	</tr>
 </tbody></table>
@@ -14341,16 +14341,13 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='svg'>SVG</h2><p>VML was deprecated in 2012, which means VML functionality exists only for backwards compatibility
-with old versions of Internet Explorer.</p>
-<p>Allows vector layers to be displayed with <a href="https://developer.mozilla.org/docs/Web/SVG">SVG</a>.
-Inherits <a href="#renderer"><code>Renderer</code></a>.</p>
-<p>Due to <a href="https://caniuse.com/svg">technical limitations</a>, SVG is not
-available in all web browsers, notably Android 2.x and 3.x.</p>
-<p>Although SVG is not available on IE7 and IE8, these browsers support
-<a href="https://en.wikipedia.org/wiki/Vector_Markup_Language">VML</a>
-(a now deprecated technology), and the SVG renderer will fall back to VML in
-this case.</p>
+</section><h2 id='svg'>SVG 矢量渲染器</h2><p>VML 在2012年被废弃，这意味着 VML 功能的存在只是为了向后兼容旧版本的 Internet Explorer。</p>
+<p>允许矢量图层用 <a href="https://developer.mozilla.org/docs/Web/SVG">SVG</a>显示。继承 <a href="#renderer"><code>Renderer</code></a>。</p>
+<p>由于 <a href="http://caniuse.com/#search=svg">技术限制</a>, SVG并不是
+    并非所有的网络浏览器都可以使用，特别是 Android 2.x 和 3.x 。</p>
+<p>虽然IE7和IE8上没有SVG，但这些浏览器都支持
+    <a href="https://en.wikipedia.org/wiki/Vector_Markup_Language">VML</a>
+    （一种现已被废弃的技术），在这种情况下，SVG 渲染器会退回到 VML。</p>
 
 <section>
 <h3 id='svg-example'>使用示例</h3>
@@ -14361,12 +14358,12 @@ this case.</p>
 
 
 
-<p>Use SVG by default for all paths in the map:</p>
+<p>对地图中的所有路径默认使用SVG:</p>
 <pre><code class="language-js">var map = L.map('map', {
 	renderer: L.svg()
 });
 </code></pre>
-<p>Use a SVG renderer with extra padding for specific vector geometries:</p>
+<p>使用一个SVG渲染器，为特定的矢量图形提供额外的填充:</p>
 <pre><code class="language-js">var map = L.map('map');
 var myRenderer = L.svg({ padding: 0.5 });
 var line = L.polyline( coordinates, { renderer: myRenderer } );
@@ -14394,7 +14391,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</thead><tbody>
 	<tr id='svg-l-svg'>
 		<td><code><b>L.svg</b>(<nobr>&lt;<a href='#renderer-option'>Renderer options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Creates a SVG renderer with the given options.</td>
+		<td>用给定的选项创建一个SVG渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -14408,7 +14405,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#renderer'>Renderer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#renderer'>Renderer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -14427,8 +14424,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 		<td><code><b>padding</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.1</code></td>
-		<td>How much to extend the clip area around the map view (relative to its size)
-e.g. 0.1 would be 10% of map view in each direction</td>
+		<td>在地图视图周围填充多少剪切区域(相对于其大小)，例如0.1是在每个方向填充地图视图的10%</td>
 	</tr>
 </tbody></table>
 
@@ -14477,7 +14473,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#renderer'>Renderer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#renderer'>Renderer</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -14494,8 +14490,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 	<tr id='svg-update'>
 		<td><code><b>update</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the renderer updates its bounds, center and zoom, for example when
-its map has moved</td>
+		<td>当渲染器更新边界、中心和缩放时触发，例如地图移动时</td>
 	</tr>
 </tbody></table>
 
@@ -14921,7 +14916,7 @@ its map has moved</td>
 
 
 
-<div class='section-comments'>There are several static functions which can be called without instantiating L.SVG:</div>
+<div class='section-comments'>有几个静态函数可以不通过实例化L.SVG来调用:</div>
 
 <table><thead>
 	<tr>
@@ -14933,15 +14928,12 @@ its map has moved</td>
 	<tr id='svg-create'>
 		<td><code><b>create</b>(<nobr>&lt;String&gt;</nobr> <i>name</i>)</code></td>
 		<td><code>SVGElement</code></td>
-		<td>Returns a instance of <a href="https://developer.mozilla.org/docs/Web/API/SVGElement">SVGElement</a>,
-corresponding to the class name passed. For example, using 'line' will return
-an instance of <a href="https://developer.mozilla.org/docs/Web/API/SVGLineElement">SVGLineElement</a>.</td>
+		<td>返回一个 <a href="https://developer.mozilla.org/docs/Web/API/SVGElement">SVGElement</a>的实例，与传递的类名对应。例如，使用 'line' 将返回一个 <a href="https://developer.mozilla.org/docs/Web/API/SVGLineElement">SVGLineElement</a>的实例。</td>
 	</tr>
 	<tr id='svg-pointstopath'>
 		<td><code><b>pointsToPath</b>(<nobr>&lt;Point[]&gt;</nobr> <i>rings</i>, <nobr>&lt;Boolean&gt;</nobr> <i>closed</i>)</code></td>
 		<td><code>String</code></td>
-		<td>Generates a SVG path string for multiple rings, with each ring turning
-into &quot;M..L..L..&quot; instructions</td>
+		<td>生成一个多环的SVG路径字符串，每个环变成  &quot;M..L..L..&quot; 的指示</td>
 	</tr>
 </tbody></table>
 
@@ -15031,7 +15023,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#renderer'>Renderer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#renderer'>Renderer</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15050,8 +15042,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 		<td><code><b>padding</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.1</code></td>
-		<td>How much to extend the clip area around the map view (relative to its size)
-e.g. 0.1 would be 10% of map view in each direction</td>
+		<td>在地图视图周围填充多少剪切区域(相对于其大小)，例如0.1是在每个方向填充地图视图的10%</td>
 	</tr>
 </tbody></table>
 
@@ -15100,7 +15091,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#renderer'>Renderer</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#renderer'>Renderer</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -15117,8 +15108,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 	<tr id='canvas-update'>
 		<td><code><b>update</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the renderer updates its bounds, center and zoom, for example when
-its map has moved</td>
+		<td>当渲染器更新边界、中心和缩放时触发，例如地图移动时</td>
 	</tr>
 </tbody></table>
 
@@ -23891,8 +23881,7 @@ or explicit (using the <a href="#path-renderer"><code>renderer</code></a> option
 		<td><code><b>padding</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.1</code></td>
-		<td>How much to extend the clip area around the map view (relative to its size)
-e.g. 0.1 would be 10% of map view in each direction</td>
+		<td>在地图视图周围填充多少剪切区域(相对于其大小)，例如0.1是在每个方向填充地图视图的10%</td>
 	</tr>
 </tbody></table>
 
@@ -23951,8 +23940,7 @@ e.g. 0.1 would be 10% of map view in each direction</td>
 	<tr id='renderer-update'>
 		<td><code><b>update</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the renderer updates its bounds, center and zoom, for example when
-its map has moved</td>
+		<td>当渲染器更新边界、中心和缩放时触发，例如地图移动时</td>
 	</tr>
 </tbody></table>
 
