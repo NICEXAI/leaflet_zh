@@ -19368,7 +19368,7 @@ bounds = L.bounds(p1, p2);
 </section>
 
 
-</section><h2 id='icon'>Icon</h2><p>Represents an icon to provide when creating a marker.</p>
+</section><h2 id='icon'>Icon 图标</h2><p>代表创建标记时提供的一个图标。</p>
 
 <section>
 <h3 id='icon-example'>使用示例</h3>
@@ -19391,7 +19391,7 @@ bounds = L.bounds(p1, p2);
 
 L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 </code></pre>
-<p><a href="#icon-default"><code>L.Icon.Default</code></a> extends <a href="#icon"><code>L.Icon</code></a> and is the blue icon Leaflet uses for markers by default.</p>
+<p><a href="#icon-default"><code>L.Icon.Default</code></a> 扩展了 <a href="#icon"><code>L.Icon</code></a> ，是 Leaflet 默认用于标记的蓝色图标。</p>
 
 
 
@@ -19414,7 +19414,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</thead><tbody>
 	<tr id='icon-l-icon'>
 		<td><code><b>L.icon</b>(<nobr>&lt;<a href='#icon-option'>Icon options</a>&gt;</nobr> <i>options</i>)</code></td>
-		<td>Creates an icon instance with the given options.</td>
+		<td>用给定的选项创建一个图标实例。</td>
 	</tr>
 </tbody></table>
 
@@ -19442,46 +19442,43 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 		<td><code><b>iconUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td><strong>(required)</strong> The URL to the icon image (absolute or relative to your script path).</td>
+		<td><strong>(必填)</strong> 图标图像的URL（绝对路径或目前脚本所在的相对路径）。</td>
 	</tr>
 	<tr id='icon-iconretinaurl'>
 		<td><code><b>iconRetinaUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>The URL to a retina sized version of the icon image (absolute or relative to your
-script path). Used for Retina screen devices.</td>
+		<td>图标图像的视网膜尺寸版本的URL（绝对路径或目前脚本所在的相对路径）， 用于视网膜屏幕设备。</td>
 	</tr>
 	<tr id='icon-iconsize'>
 		<td><code><b>iconSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>Size of the icon image in pixels.</td>
+		<td>图标图像的尺寸，单位是像素。</td>
 	</tr>
 	<tr id='icon-iconanchor'>
 		<td><code><b>iconAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The coordinates of the &quot;tip&quot; of the icon (relative to its top left corner). The icon
-will be aligned so that this point is at the marker's geographical location. Centered
-by default if size is specified, also can be set in CSS with negative margins.</td>
+		<td>图标 &quot;tip&quot; 的坐标（相对于其左上角）。图标将被对齐，使该点位于标记的地理位置。如果指定了尺寸，默认为居中，也可以在CSS中设置负的边距。</td>
 	</tr>
 	<tr id='icon-popupanchor'>
 		<td><code><b>popupAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The coordinates of the point from which popups will &quot;open&quot;, relative to the icon anchor.</td>
+		<td>弹出窗口（popup）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='icon-tooltipanchor'>
 		<td><code><b>tooltipAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The coordinates of the point from which tooltips will &quot;open&quot;, relative to the icon anchor.</td>
+		<td>工具提示（tooltip）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='icon-shadowurl'>
 		<td><code><b>shadowUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>The URL to the icon shadow image. If not specified, no shadow image will be created.</td>
+		<td>图标阴影图像的URL。如果不指定，将不会创建阴影图像。</td>
 	</tr>
 	<tr id='icon-shadowretinaurl'>
 		<td><code><b>shadowRetinaUrl</b></code></td>
@@ -19493,20 +19490,19 @@ by default if size is specified, also can be set in CSS with negative margins.</
 		<td><code><b>shadowSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>Size of the shadow image in pixels.</td>
+		<td>阴影图像的大小，单位是像素。</td>
 	</tr>
 	<tr id='icon-shadowanchor'>
 		<td><code><b>shadowAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The coordinates of the &quot;tip&quot; of the shadow (relative to its top left corner) (the same
-as iconAnchor if not specified).</td>
+		<td>阴影 &quot;tip&quot; 的坐标（相对于其左上角）（如果没有指定，则与iconAnchor相同）。</td>
 	</tr>
 	<tr id='icon-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to both icon and shadow images. Empty by default.</td>
+		<td>用户给图标和阴影图像指定自定义类名，默认为空</td>
 	</tr>
 	<tr id='icon-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
@@ -19537,14 +19533,13 @@ as iconAnchor if not specified).</td>
 	<tr id='icon-createicon'>
 		<td><code><b>createIcon</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Called internally when the icon has to be shown, returns a <code>&lt;img&gt;</code> HTML element
-styled according to the options.</p>
+		<td><p>当必须显示图标时在内部调用，返回根据选项设置样式的 <code><img></code> HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='icon-createshadow'>
 		<td><code><b>createShadow</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>As <code>createIcon</code>, but for the shadow beneath it.</p>
+		<td><p>对于它下面的阴影来说，如同 <code>createIcon</code>。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -19561,13 +19556,11 @@ styled according to the options.</p>
 
 
 
-<div class='section-comments'>A trivial subclass of <a href="#icon"><code>Icon</code></a>, represents the icon to use in <a href="#marker"><code>Marker</code></a>s when
-no icon is specified. Points to the blue marker image distributed with Leaflet
-releases.
-<p>In order to customize the default icon, just change the properties of <code>L.Icon.Default.prototype.options</code>
-(which is a set of <a href="#icon-option"><code>Icon options</code></a>).</p>
-<p>If you want to <em>completely</em> replace the default icon, override the
-<code>L.Marker.prototype.options.icon</code> with your own icon instead.</p></div>
+<div class='section-comments'> <a href="#icon"><code>Icon</code></a>的一个微不足道的子类，当没有指定图标时，代表在 <a href="#marker"><code>Marker</code></a>中使用的图标。指向随 Leaflet 发布的蓝色标记图像。
+	<p>为了定制默认图标，只需改变 <code>L.Icon.Default.prototype.options</code>的属性
+		(这是一组 <a href="#icon-option"><code>Icon options</code></a>)。</p>
+	<p>如果你想 <em>全部</em> 取代默认的图标，用你自己的图标覆盖
+		<code>L.Marker.prototype.options.icon</code> 。</p></div>
 
 <table><thead>
 	<tr>
@@ -19581,9 +19574,7 @@ releases.
 		<td><code><b>imagePath</b></code></td>
 		<td><code>String</code></td>
 		<td><code></code></td>
-		<td><a href="#icon-default"><code>Icon.Default</code></a> will try to auto-detect the location of the
-blue icon images. If you are placing these images in a non-standard
-way, set this option to point to the right path.</td>
+		<td><a href="#icon-default"><code>Icon.Default</code></a> 将尝试自动检测蓝色图标图像的位置。如果你以非标准的方式放置这些图像，请设置该选项以指向正确的路径。</td>
 	</tr>
 </tbody></table>
 
@@ -19691,46 +19682,43 @@ an instance of <code>HTMLElement</code>.</td>
 		<td><code><b>iconUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td><strong>(required)</strong> The URL to the icon image (absolute or relative to your script path).</td>
+		<td><strong>(必填)</strong> 图标图像的URL（绝对路径或目前脚本所在的相对路径）。</td>
 	</tr>
 	<tr id='divicon-iconretinaurl'>
 		<td><code><b>iconRetinaUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>The URL to a retina sized version of the icon image (absolute or relative to your
-script path). Used for Retina screen devices.</td>
+		<td>图标图像的视网膜尺寸版本的URL（绝对路径或目前脚本所在的相对路径）， 用于视网膜屏幕设备。</td>
 	</tr>
 	<tr id='divicon-iconsize'>
 		<td><code><b>iconSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>Size of the icon image in pixels.</td>
+		<td>图标图像的尺寸，单位是像素。</td>
 	</tr>
 	<tr id='divicon-iconanchor'>
 		<td><code><b>iconAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The coordinates of the &quot;tip&quot; of the icon (relative to its top left corner). The icon
-will be aligned so that this point is at the marker's geographical location. Centered
-by default if size is specified, also can be set in CSS with negative margins.</td>
+		<td>图标 &quot;tip&quot; 的坐标（相对于其左上角）。图标将被对齐，使该点位于标记的地理位置。如果指定了尺寸，默认为居中，也可以在CSS中设置负的边距。</td>
 	</tr>
 	<tr id='divicon-popupanchor'>
 		<td><code><b>popupAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The coordinates of the point from which popups will &quot;open&quot;, relative to the icon anchor.</td>
+		<td>弹出窗口（popup）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='divicon-tooltipanchor'>
 		<td><code><b>tooltipAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>[0, 0]</code></td>
-		<td>The coordinates of the point from which tooltips will &quot;open&quot;, relative to the icon anchor.</td>
+		<td>工具提示（tooltip）的坐标，相对于图标锚点而言，将从该点打开。</td>
 	</tr>
 	<tr id='divicon-shadowurl'>
 		<td><code><b>shadowUrl</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>The URL to the icon shadow image. If not specified, no shadow image will be created.</td>
+		<td>图标阴影图像的URL。如果不指定，将不会创建阴影图像。</td>
 	</tr>
 	<tr id='divicon-shadowretinaurl'>
 		<td><code><b>shadowRetinaUrl</b></code></td>
@@ -19742,20 +19730,19 @@ by default if size is specified, also can be set in CSS with negative margins.</
 		<td><code><b>shadowSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>Size of the shadow image in pixels.</td>
+		<td>阴影图像的大小，单位是像素。</td>
 	</tr>
 	<tr id='divicon-shadowanchor'>
 		<td><code><b>shadowAnchor</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
 		<td><code>null</code></td>
-		<td>The coordinates of the &quot;tip&quot; of the shadow (relative to its top left corner) (the same
-as iconAnchor if not specified).</td>
+		<td>阴影 &quot;tip&quot; 的坐标（相对于其左上角）（如果没有指定，则与iconAnchor相同）。</td>
 	</tr>
 	<tr id='divicon-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;&#x27;</code></td>
-		<td>A custom class name to assign to both icon and shadow images. Empty by default.</td>
+		<td>用户给图标和阴影图像指定自定义类名，默认为空</td>
 	</tr>
 	<tr id='divicon-crossorigin'>
 		<td><code><b>crossOrigin</b></code></td>
@@ -19793,14 +19780,13 @@ as iconAnchor if not specified).</td>
 	<tr id='divicon-createicon'>
 		<td><code><b>createIcon</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Called internally when the icon has to be shown, returns a <code>&lt;img&gt;</code> HTML element
-styled according to the options.</p>
+		<td><p>当必须显示图标时在内部调用，返回根据选项设置样式的 <code><img></code> HTML 元素。</p>
 </td>
 	</tr>
 	<tr id='divicon-createshadow'>
 		<td><code><b>createShadow</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>oldIcon?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>As <code>createIcon</code>, but for the shadow beneath it.</p>
+		<td><p>对于它下面的阴影来说，如同 <code>createIcon</code>。</p>
 </td>
 	</tr>
 </tbody></table>
