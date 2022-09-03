@@ -16973,8 +16973,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='geojson'>GeoJSON</h2><p>Represents a GeoJSON object or an array of GeoJSON objects. Allows you to parse
-GeoJSON data and display it on the map. Extends <a href="#featuregroup"><code>FeatureGroup</code></a>.</p>
+</section><h2 id='geojson'>GeoJSON 图层</h2><p>代表一个GeoJSON对象或一个GeoJSON对象的数组。允许你解析GeoJSON数据并将其显示在地图上。扩展了 <a href="#featuregroup"><code>FeatureGroup</code></a>。</p>
 
 <section>
 <h3 id='geojson-example'>使用示例</h3>
@@ -17015,9 +17014,9 @@ GeoJSON data and display it on the map. Extends <a href="#featuregroup"><code>Fe
 	</thead><tbody>
 	<tr id='geojson-l-geojson'>
 		<td><code><b>L.geoJSON</b>(<nobr>&lt;Object&gt;</nobr> <i>geojson?</i>, <nobr>&lt;<a href='#geojson-option'>GeoJSON options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Creates a GeoJSON layer. Optionally accepts an object in
-<a href="https://tools.ietf.org/html/rfc7946">GeoJSON format</a> to display on the map
-(you can alternatively add it later with <code>addData</code> method) and an <code>options</code> object.</td>
+		<td>创建一个GeoJSON图层。可选择接受一个在地图上显示的
+			<a href="https://tools.ietf.org/html/rfc7946">GeoJSON 格式</a> 的对象
+			(你也可以在以后用 <code>addData</code> 方法添加它) 和一个 <code>options</code> 对象。</td>
 	</tr>
 </tbody></table>
 
@@ -17045,11 +17044,9 @@ GeoJSON data and display it on the map. Extends <a href="#featuregroup"><code>Fe
 		<td><code><b>pointToLayer</b></code></td>
 		<td><code>Function</code></td>
 		<td><code>*</code></td>
-		<td>A <code>Function</code> defining how GeoJSON points spawn Leaflet layers. It is internally
-called when data is added, passing the GeoJSON point feature and its <a href="#latlng"><code>LatLng</code></a>.
-The default is to spawn a default <a href="#marker"><code>Marker</code></a>:
-<pre><code class="language-js">function(geoJsonPoint, latlng) {
-	return L.marker(latlng);
+		<td>一个定义 GeoJSON 点如何产生 Leaflet 图层的 <code>Function</code> 。当数据被添加时，它被内部调用，传递GeoJSON点的特征和它的 <a href="#latlng"><code>LatLng</code></a>。默认是生成一个默认的 <a href="#marker"><code>Marker</code></a>:
+			<pre><code class="language-js">function(geoJsonPoint, latlng) {
+return L.marker(latlng);
 }
 </code></pre></td>
 	</tr>
@@ -17057,11 +17054,9 @@ The default is to spawn a default <a href="#marker"><code>Marker</code></a>:
 		<td><code><b>style</b></code></td>
 		<td><code>Function</code></td>
 		<td><code>*</code></td>
-		<td>A <code>Function</code> defining the <a href="#path-option"><code>Path options</code></a> for styling GeoJSON lines and polygons,
-called internally when data is added.
-The default value is to not override any defaults:
-<pre><code class="language-js">function (geoJsonFeature) {
-	return {}
+		<td>一个定义GeoJSON线条和多边形造型的 <a href="#path-option"><code>Path options</code></a> <code>函数</code> ，在添加数据时内部调用。默认值是不覆盖任何默认值:
+			<pre><code class="language-js">function (geoJsonFeature) {
+return {}
 }
 </code></pre></td>
 	</tr>
@@ -17069,37 +17064,32 @@ The default value is to not override any defaults:
 		<td><code><b>onEachFeature</b></code></td>
 		<td><code>Function</code></td>
 		<td><code>*</code></td>
-		<td>A <code>Function</code> that will be called once for each created <code>Feature</code>, after it has
-been created and styled. Useful for attaching events and popups to features.
-The default is to do nothing with the newly created layers:
-<pre><code class="language-js">function (feature, layer) {}
+		<td>一个 <code>Function</code> ，在每个创建的 <code>Feature</code> 被创建和样式化后，将被调用一次。对于将事件和弹出窗口附加到要素上很有用。默认情况下，对新创建的图层不做任何处理:
+			<pre><code class="language-js">function (feature, layer) {}
 </code></pre></td>
 	</tr>
 	<tr id='geojson-filter'>
 		<td><code><b>filter</b></code></td>
 		<td><code>Function</code></td>
 		<td><code>*</code></td>
-		<td>A <code>Function</code> that will be used to decide whether to include a feature or not.
-The default is to include all features:
-<pre><code class="language-js">function (geoJsonFeature) {
-	return true;
+		<td>一个 <code>Function</code> ，用于决定是否包括一个要素。默认是包括所有要素:
+			<pre><code class="language-js">function (geoJsonFeature) {
+return true;
 }
 </code></pre>
-<p>Note: dynamically changing the <code>filter</code> option will have effect only on newly
-added data. It will <em>not</em> re-evaluate already included features.</p></td>
+<p>注意：动态改变 <code>filter</code> 选项将只对新添加的数据产生影响。它 <em>不会</em> 重新评估已经包含的要素。</p></td>
 	</tr>
 	<tr id='geojson-coordstolatlng'>
 		<td><code><b>coordsToLatLng</b></code></td>
 		<td><code>Function</code></td>
 		<td><code>*</code></td>
-		<td>A <code>Function</code> that will be used for converting GeoJSON coordinates to <a href="#latlng"><code>LatLng</code></a>s.
-The default is the <code>coordsToLatLng</code> static method.</td>
+		<td>一个用于将GeoJSON坐标转换为LatLngs的 <code>Function</code> 。默认是 <code>coordsToLatLng</code> 静态方法。</td>
 	</tr>
 	<tr id='geojson-markersinheritoptions'>
 		<td><code><b>markersInheritOptions</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>false</code></td>
-		<td>Whether default Markers for &quot;Point&quot; type Features inherit from group options.</td>
+		<td> &quot;Point&quot; 类型要素的默认标记是否继承于组选项。</td>
 	</tr>
 </tbody></table>
 
@@ -17181,7 +17171,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#featuregroup'>FeatureGroup</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#featuregroup'>FeatureGroup</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -17378,20 +17368,19 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 	<tr id='geojson-adddata'>
 		<td><code><b>addData</b>(<i>data</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds a GeoJSON object to the layer.</p>
+		<td><p>将一个 GeoJSON 对象添加到图层中。</p>
 </td>
 	</tr>
 	<tr id='geojson-resetstyle'>
 		<td><code><b>resetStyle</b>(<i>layer?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Resets the given vector layer's style to the original GeoJSON style, useful for resetting style after hover events.
-If <code>layer</code> is omitted, the style of all features in the current layer is reset.</p>
+		<td><p>将给定的矢量图层的样式重置为原始的 GeoJSON 样式，对于在悬停事件后重置样式很有用。如果省略了 <code>layer</code> ，当前图层中的所有要素的样式都会被重置。</p>
 </td>
 	</tr>
 	<tr id='geojson-setstyle'>
 		<td><code><b>setStyle</b>(<i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes styles of GeoJSON vector layers with the given style function.</p>
+		<td><p>用给定的样式函数改变 GeoJSON 矢量图层的样式。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -17400,7 +17389,7 @@ If <code>layer</code> is omitted, the style of all features in the current layer
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#featuregroup'>FeatureGroup</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#featuregroup'>FeatureGroup</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
