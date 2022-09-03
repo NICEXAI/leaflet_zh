@@ -10895,8 +10895,8 @@ var latlngs = [
 	</div>
 </div>
 
-</section><h2 id='polygon'>Polygon</h2><p>A class for drawing polygon overlays on a map. Extends <a href="#polyline"><code>Polyline</code></a>.</p>
-<p>Note that points you pass when creating a polygon shouldn't have an additional last point equal to the first one — it's better to filter out such points.</p>
+</section><h2 id='polygon'>Polygon 多边形</h2><p>一个用于在地图上绘制多边形覆盖物的类。扩展了<a href="#polyline"><code>Polyline</code></a>。</p>
+<p>请注意，您在创建多边形时传递的最后一个点不应该和第一个相同 - 最好过滤掉这些点。</p>
 
 <section>
 <h3 id='polygon-example'>使用示例</h3>
@@ -10907,21 +10907,21 @@ var latlngs = [
 
 
 
-<pre><code class="language-js">// create a red polygon from an array of LatLng points
+<pre><code class="language-js">// 从一个 LatLng 点的数组中创建一个红色的多边形
 var latlngs = [[37, -109.05],[41, -109.03],[41, -102.05],[37, -102.04]];
 
 var polygon = L.polygon(latlngs, {color: 'red'}).addTo(map);
 
-// zoom the map to the polygon
+// 将地图放大到多边形的位置
 map.fitBounds(polygon.getBounds());
 </code></pre>
-<p>You can also pass an array of arrays of latlngs, with the first array representing the outer shape and the other arrays representing holes in the outer shape:</p>
+<p>你也可以传递一个latlngs的数组，第一个数组代表外部形状，其他数组代表外部形状中的孔:</p>
 <pre><code class="language-js">var latlngs = [
   [[37, -109.05],[41, -109.03],[41, -102.05],[37, -102.04]], // outer ring
   [[37.29, -108.58],[40.71, -108.58],[40.71, -102.50],[37.29, -102.50]] // hole
 ];
 </code></pre>
-<p>Additionally, you can pass a multi-dimensional array to represent a MultiPolygon shape.</p>
+<p>此外，你可以传递一个多维数组来表示一个MultiPolygon形状。</p>
 <pre><code class="language-js">var latlngs = [
   [ // first polygon
     [[37, -109.05],[41, -109.03],[41, -102.05],[37, -102.04]], // outer ring
@@ -10968,7 +10968,7 @@ map.fitBounds(polygon.getBounds());
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#polyline'>Polyline</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#polyline'>Polyline</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11358,7 +11358,7 @@ map.fitBounds(polygon.getBounds());
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#polyline'>Polyline</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#polyline'>Polyline</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -11833,7 +11833,7 @@ map.fitBounds(bounds);
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Options inherited from <a href='#polyline'>Polyline</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#polyline'>Polyline</a> 的选项</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12250,7 +12250,7 @@ map.fitBounds(bounds);
 </div>
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#polyline'>Polyline</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#polyline'>Polyline</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
