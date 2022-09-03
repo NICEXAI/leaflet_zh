@@ -17897,33 +17897,32 @@ return true;
 </section>
 
 
-</section><h2 id='gridlayer'>GridLayer</h2><p>Generic class for handling a tiled grid of HTML elements. This is the base class for all tile layers and replaces <code>TileLayer.Canvas</code>.
-GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code> or <code>&lt;div&gt;</code>. GridLayer will handle creating and animating these DOM elements for you.</p>
+</section><h2 id='gridlayer'>GridLayer 网格图层</h2><p>用于处理 HTML 元素的平铺网格的通用类。它是所有瓦片图层的基类，取代了 <code>TileLayer.Canvas</code>。GridLayer 可以被扩展来创建 HTML 元素的平铺网格，如 <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code> or <code>&lt;div&gt;</code>。GridLayer 将为你处理这些 DOM 元素的创建和动画。</p>
 
 <section>
 <h3 id='gridlayer-example'>使用示例</h3>
 
 <section >
 
-<h4 id='gridlayer-synchronous-usage'>Synchronous usage</h4>
+<h4 id='gridlayer-synchronous-usage'>同步使用</h4>
 
 
 
-<p>To create a custom layer, extend GridLayer and implement the <code>createTile()</code> method, which will be passed a <a href="#point"><code>Point</code></a> object with the <code>x</code>, <code>y</code>, and <code>z</code> (zoom level) coordinates to draw your tile.</p>
+<p>要创建一个自定义图层，请扩展GridLayer并实现 <code>createTile()</code> 方法，它将被传递给一个 <a href="#point"><code>Point</code></a> 对象，该对象具有 <code>x</code>, <code>y</code>, 和 <code>z</code> （缩放级别）坐标，以绘制你的图层。</p>
 <pre><code class="language-js">var CanvasLayer = L.GridLayer.extend({
     createTile: function(coords){
-        // create a &lt;canvas&gt; element for drawing
+        // 创建一个用于绘图的 &lt;canvas&gt; 元素
         var tile = L.DomUtil.create('canvas', 'leaflet-tile');
 
-        // setup tile width and height according to the options
+		// 根据选项设置瓦片的宽度和高度
         var size = this.getTileSize();
         tile.width = size.x;
         tile.height = size.y;
 
-        // get a canvas context and draw something on it using coords.x, coords.y and coords.z
+        // 获得一个 canvas 上下文，并使用 coords.x、coords.y 和 coords.z 在上面画东西
         var ctx = tile.getContext('2d');
 
-        // return the tile so it can be rendered on screen
+        // 返回瓦片，以便在屏幕上呈现
         return tile;
     }
 });
@@ -17933,24 +17932,24 @@ GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt
 
 </section><section >
 
-<h4 id='gridlayer-asynchronous-usage'>Asynchronous usage</h4>
+<h4 id='gridlayer-asynchronous-usage'>异步使用</h4>
 
 
 
-<p>Tile creation can also be asynchronous, this is useful when using a third-party drawing library. Once the tile is finished drawing it can be passed to the <code>done()</code> callback.</p>
+<p>瓦片的创建也可以是异步的，这在使用第三方绘图库时很有用。一旦瓦片绘制完成，它可以被传递给 <code>done()</code> 回调。</p>
 <pre><code class="language-js">var CanvasLayer = L.GridLayer.extend({
     createTile: function(coords, done){
         var error;
 
-        // create a &lt;canvas&gt; element for drawing
+        // 创建一个用于绘图的 &lt;canvas&gt; 元素
         var tile = L.DomUtil.create('canvas', 'leaflet-tile');
 
-        // setup tile width and height according to the options
+        // 根据选项设置瓦片的宽度和高度
         var size = this.getTileSize();
         tile.width = size.x;
         tile.height = size.y;
 
-        // draw something asynchronously and pass the tile to the done() callback
+        // 异步地绘制一些东西，并将瓦片传递给 done() 回调
         setTimeout(function() {
             done(error, tile);
         }, 1000);
@@ -17981,7 +17980,7 @@ GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt
 	</thead><tbody>
 	<tr id='gridlayer-l-gridlayer'>
 		<td><code><b>L.gridLayer</b>(<nobr>&lt;<a href='#gridlayer-option'>GridLayer options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Creates a new instance of GridLayer with the supplied options.</td>
+		<td>用提供的选项创建一个新的 GridLayer 实例。</td>
 	</tr>
 </tbody></table>
 
@@ -18337,9 +18336,9 @@ GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt
 
 </section><section class='collapsable'>
 
-<h4 id='gridlayer-extension-methods'>Extension methods</h4>
+<h4 id='gridlayer-extension-methods'>扩展方法</h4>
 
-<div class='section-comments'>Layers extending <a href="#gridlayer"><code>GridLayer</code></a> shall reimplement the following method.</div>
+<div class='section-comments'>扩展 <a href="#gridlayer"><code>GridLayer</code></a> 的图层应重新实现以下方法。</div>
 
 <table><thead>
 	<tr>
@@ -18351,9 +18350,7 @@ GridLayer can be extended to create a tiled grid of HTML elements like <code>&lt
 	<tr id='gridlayer-createtile'>
 		<td><code><b>createTile</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>, <nobr>&lt;Function&gt;</nobr> <i>done?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Called only internally, must be overridden by classes extending <a href="#gridlayer"><code>GridLayer</code></a>.
-Returns the <code>HTMLElement</code> corresponding to the given <code>coords</code>. If the <code>done</code> callback
-is specified, it must be called when the tile has finished loading and drawing.</p>
+        <td><p>只在内部调用，必须由扩展 <a href="#gridlayer"><code>GridLayer</code></a>的类重载。返回对应于给定 <code>坐标</code> 的 <code>HTMLElement</code> corresponding to the given <code>coords</code>。如果指定了 <code>done</code> 回调，必须在瓦片完成加载和绘制时调用该回调。</p>
 </td>
 	</tr>
 </tbody></table>
