@@ -15524,9 +15524,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='layergroup'>LayerGroup</h2><p>Used to group several layers and handle them as one. If you add it to the map,
-any layers added or removed from the group will be added/removed on the map as
-well. Extends <a href="#layer"><code>Layer</code></a>.</p>
+</section><h2 id='layergroup'>LayerGroup 图层组</h2><p>用于将几个图层分组并作为一个整体处理。如果你把它添加到地图上，任何从该组中添加或删除的图层也会在地图上添加/删除。扩展 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
 <h3 id='layergroup-example'>使用示例</h3>
@@ -15563,7 +15561,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 	</thead><tbody>
 	<tr id='layergroup-l-layergroup'>
 		<td><code><b>L.layerGroup</b>(<nobr>&lt;Layer[]&gt;</nobr> <i>layers?</i>, <nobr>&lt;Object&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Create a layer group, optionally given an initial set of layers and an <code>options</code> object.</td>
+		<td>创建一个图层组，可以选择给定一个初始图层组和一个 <code>options</code> 对象。</td>
 	</tr>
 </tbody></table>
 
@@ -15823,51 +15821,49 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 	<tr id='layergroup-addlayer'>
 		<td><code><b>addLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the given layer to the group.</p>
+		<td><p>将给定的图层添加到组中。</p>
 </td>
 	</tr>
 	<tr id='layergroup-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the given layer from the group.</p>
+		<td><p>将给定的图层从组中移除。</p>
 </td>
 	</tr>
 	<tr id='layergroup-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer with the given internal ID from the group.</p>
+		<td><p>将具有给定内部ID的图层从组中移除。</p>
 </td>
 	</tr>
 	<tr id='layergroup-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given layer is currently added to the group.</p>
+		<td><p>如果给定的图层当前被添加到组中，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='layergroup-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given internal ID is currently added to the group.</p>
+		<td><p>如果给定的内部 ID 当前被添加到组中，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='layergroup-clearlayers'>
 		<td><code><b>clearLayers</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all the layers from the group.</p>
+		<td><p>移除组中的所有图层。</p>
 </td>
 	</tr>
 	<tr id='layergroup-invoke'>
 		<td><code><b>invoke</b>(<nobr>&lt;String&gt;</nobr> <i>methodName</i>, <i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Calls <code>methodName</code> on every layer contained in this group, passing any
-additional parameters. Has no effect if the layers contained do not
-implement <code>methodName</code>.</p>
+		<td><p>对该组中包含的每个图层调用 <code>methodName</code> ，并传递任何附加参数。如果包含的图层没有实现 <code>methodName</code>，则没有效果。</p>
 </td>
 	</tr>
 	<tr id='layergroup-eachlayer'>
 		<td><code><b>eachLayer</b>(<nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Iterates over the layers of the group, optionally specifying context of the iterator function.</p>
+		<td><p>遍历该组的各图层，可以选择指定迭代器函数的上下文。</p>
 <pre><code class="language-js">group.eachLayer(function (layer) {
 	layer.bindPopup('Hello');
 });
@@ -15877,25 +15873,25 @@ implement <code>methodName</code>.</p>
 	<tr id='layergroup-getlayer'>
 		<td><code><b>getLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code><a href='#layer'>Layer</a></code></td>
-		<td><p>Returns the layer with the given internal ID.</p>
+		<td><p>返回具有给定内部 ID 的图层。</p>
 </td>
 	</tr>
 	<tr id='layergroup-getlayers'>
 		<td><code><b>getLayers</b>()</code></td>
 		<td><code>Layer[]</code></td>
-		<td><p>Returns an array of all the layers added to the group.</p>
+		<td><p>返回所有添加到组中的图层的数组。</p>
 </td>
 	</tr>
 	<tr id='layergroup-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>zIndex</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Calls <code>setZIndex</code> on every layer contained in this group, passing the z-index.</p>
+		<td><p>对包含在该组中的每个图层调用 <code>setZIndex</code> ，并传递 z-index 。</p>
 </td>
 	</tr>
 	<tr id='layergroup-getlayerid'>
 		<td><code><b>getLayerId</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the internal ID for a layer</p>
+		<td><p>返回一个图层的内部 ID</p>
 </td>
 	</tr>
 </tbody></table>
@@ -16588,51 +16584,49 @@ and custom events.</li>
 	<tr id='featuregroup-addlayer'>
 		<td><code><b>addLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the given layer to the group.</p>
+		<td><p>将给定的图层添加到组中。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the given layer from the group.</p>
+		<td><p>将给定的图层从组中移除。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer with the given internal ID from the group.</p>
+		<td><p>将具有给定内部ID的图层从组中移除。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given layer is currently added to the group.</p>
+		<td><p>如果给定的图层当前被添加到组中，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given internal ID is currently added to the group.</p>
+		<td><p>如果给定的内部 ID 当前被添加到组中，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-clearlayers'>
 		<td><code><b>clearLayers</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all the layers from the group.</p>
+		<td><p>移除组中的所有图层。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-invoke'>
 		<td><code><b>invoke</b>(<nobr>&lt;String&gt;</nobr> <i>methodName</i>, <i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Calls <code>methodName</code> on every layer contained in this group, passing any
-additional parameters. Has no effect if the layers contained do not
-implement <code>methodName</code>.</p>
+		<td><p>对该组中包含的每个图层调用 <code>methodName</code> ，并传递任何附加参数。如果包含的图层没有实现 <code>methodName</code>，则没有效果。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-eachlayer'>
 		<td><code><b>eachLayer</b>(<nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Iterates over the layers of the group, optionally specifying context of the iterator function.</p>
+		<td><p>遍历该组的各图层，可以选择指定迭代器函数的上下文。</p>
 <pre><code class="language-js">group.eachLayer(function (layer) {
 	layer.bindPopup('Hello');
 });
@@ -16642,25 +16636,25 @@ implement <code>methodName</code>.</p>
 	<tr id='featuregroup-getlayer'>
 		<td><code><b>getLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code><a href='#layer'>Layer</a></code></td>
-		<td><p>Returns the layer with the given internal ID.</p>
+		<td><p>返回具有给定内部 ID 的图层。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-getlayers'>
 		<td><code><b>getLayers</b>()</code></td>
 		<td><code>Layer[]</code></td>
-		<td><p>Returns an array of all the layers added to the group.</p>
+		<td><p>返回所有添加到组中的图层的数组。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>zIndex</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Calls <code>setZIndex</code> on every layer contained in this group, passing the z-index.</p>
+		<td><p>对包含在该组中的每个图层调用 <code>setZIndex</code> ，并传递 z-index 。</p>
 </td>
 	</tr>
 	<tr id='featuregroup-getlayerid'>
 		<td><code><b>getLayerId</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the internal ID for a layer</p>
+		<td><p>返回一个图层的内部 ID</p>
 </td>
 	</tr>
 </tbody></table>
@@ -17470,51 +17464,49 @@ If <code>layer</code> is omitted, the style of all features in the current layer
 	<tr id='geojson-addlayer'>
 		<td><code><b>addLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Adds the given layer to the group.</p>
+		<td><p>将给定的图层添加到组中。</p>
 </td>
 	</tr>
 	<tr id='geojson-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the given layer from the group.</p>
+		<td><p>将给定的图层从组中移除。</p>
 </td>
 	</tr>
 	<tr id='geojson-removelayer'>
 		<td><code><b>removeLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes the layer with the given internal ID from the group.</p>
+		<td><p>将具有给定内部ID的图层从组中移除。</p>
 </td>
 	</tr>
 	<tr id='geojson-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given layer is currently added to the group.</p>
+		<td><p>如果给定的图层当前被添加到组中，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='geojson-haslayer'>
 		<td><code><b>hasLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given internal ID is currently added to the group.</p>
+		<td><p>如果给定的内部 ID 当前被添加到组中，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='geojson-clearlayers'>
 		<td><code><b>clearLayers</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Removes all the layers from the group.</p>
+		<td><p>移除组中的所有图层。</p>
 </td>
 	</tr>
 	<tr id='geojson-invoke'>
 		<td><code><b>invoke</b>(<nobr>&lt;String&gt;</nobr> <i>methodName</i>, <i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Calls <code>methodName</code> on every layer contained in this group, passing any
-additional parameters. Has no effect if the layers contained do not
-implement <code>methodName</code>.</p>
+		<td><p>对该组中包含的每个图层调用 <code>methodName</code> ，并传递任何附加参数。如果包含的图层没有实现 <code>methodName</code>，则没有效果。</p>
 </td>
 	</tr>
 	<tr id='geojson-eachlayer'>
 		<td><code><b>eachLayer</b>(<nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Iterates over the layers of the group, optionally specifying context of the iterator function.</p>
+		<td><p>遍历该组的各图层，可以选择指定迭代器函数的上下文。</p>
 <pre><code class="language-js">group.eachLayer(function (layer) {
 	layer.bindPopup('Hello');
 });
@@ -17524,25 +17516,25 @@ implement <code>methodName</code>.</p>
 	<tr id='geojson-getlayer'>
 		<td><code><b>getLayer</b>(<nobr>&lt;Number&gt;</nobr> <i>id</i>)</code></td>
 		<td><code><a href='#layer'>Layer</a></code></td>
-		<td><p>Returns the layer with the given internal ID.</p>
+		<td><p>返回具有给定内部 ID 的图层。</p>
 </td>
 	</tr>
 	<tr id='geojson-getlayers'>
 		<td><code><b>getLayers</b>()</code></td>
 		<td><code>Layer[]</code></td>
-		<td><p>Returns an array of all the layers added to the group.</p>
+		<td><p>返回所有添加到组中的图层的数组。</p>
 </td>
 	</tr>
 	<tr id='geojson-setzindex'>
 		<td><code><b>setZIndex</b>(<nobr>&lt;Number&gt;</nobr> <i>zIndex</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Calls <code>setZIndex</code> on every layer contained in this group, passing the z-index.</p>
+		<td><p>对包含在该组中的每个图层调用 <code>setZIndex</code> ，并传递 z-index 。</p>
 </td>
 	</tr>
 	<tr id='geojson-getlayerid'>
 		<td><code><b>getLayerId</b>(<nobr>&lt;<a href='#layer'>Layer</a>&gt;</nobr> <i>layer</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the internal ID for a layer</p>
+		<td><p>返回一个图层的内部 ID</p>
 </td>
 	</tr>
 </tbody></table>
