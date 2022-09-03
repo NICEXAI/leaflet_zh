@@ -19200,7 +19200,7 @@ map.panBy(L.point(200, 300));
 </section>
 
 
-</section><h2 id='bounds'>Bounds</h2><p>Represents a rectangular area in pixel coordinates.</p>
+</section><h2 id='bounds'>Bounds 边界</h2><p>以像素坐标代表一个矩形区域。</p>
 
 <section>
 <h3 id='bounds-example'>使用示例</h3>
@@ -19215,12 +19215,10 @@ map.panBy(L.point(200, 300));
 p2 = L.point(40, 60),
 bounds = L.bounds(p1, p2);
 </code></pre>
-<p>All Leaflet methods that accept <a href="#bounds"><code>Bounds</code></a> objects also accept them in a simple Array form (unless noted otherwise), so the bounds example above can be passed like this:</p>
+<p>所有接受 <a href="#bounds"><code>Bounds</code></a> 对象的Leaflet方法也接受它们的简单数组形式（除非另有说明），所以上面的 bounds 例子可以这样传递:</p>
 <pre><code class="language-js">otherBounds.intersects([[10, 10], [40, 60]]);
 </code></pre>
-<p>Note that <a href="#bounds"><code>Bounds</code></a> does not inherit from Leaflet's <a href="#class"><code>Class</code></a> object,
-which means new classes can't inherit from it, and new methods
-can't be added to it with the <code>include</code> function.</p>
+<p>注意， <a href="#bounds"><code>Bounds</code></a> 并不继承自 Leaflet 的 <a href="#class"><code>Class</code></a> 对象，这意味着新的类不能继承自它，也不能用 <code>include</code> 函数向它添加新的方法。</p>
 
 
 
@@ -19243,11 +19241,11 @@ can't be added to it with the <code>include</code> function.</p>
 	</thead><tbody>
 	<tr id='bounds-l-bounds'>
 		<td><code><b>L.bounds</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>corner1</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>corner2</i>)</code></td>
-		<td>Creates a Bounds object from two corners coordinate pairs.</td>
+		<td>从两个角的坐标对创建一个 Bounds 对象。</td>
 	</tr>
 	<tr id='bounds-l-bounds'>
 		<td><code><b>L.bounds</b>(<nobr>&lt;Point[]&gt;</nobr> <i>points</i>)</code></td>
-		<td>Creates a Bounds object from the given array of points.</td>
+		<td>从给定的点的数组中创建一个Bounds对象。</td>
 	</tr>
 </tbody></table>
 
@@ -19272,69 +19270,67 @@ can't be added to it with the <code>include</code> function.</p>
 	<tr id='bounds-extend'>
 		<td><code><b>extend</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Extends the bounds to contain the given point.</p>
+		<td><p>扩展边界以包含给定的点。</p>
 </td>
 	</tr>
 	<tr id='bounds-getcenter'>
 		<td><code><b>getCenter</b>(<nobr>&lt;Boolean&gt;</nobr> <i>round?</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the center point of the bounds.</p>
+		<td><p>返回边界的中心点。</p>
 </td>
 	</tr>
 	<tr id='bounds-getbottomleft'>
 		<td><code><b>getBottomLeft</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the bottom-left point of the bounds.</p>
+		<td><p>返回边界的左下角。</p>
 </td>
 	</tr>
 	<tr id='bounds-gettopright'>
 		<td><code><b>getTopRight</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the top-right point of the bounds.</p>
+		<td><p>返回边界的右上角。</p>
 </td>
 	</tr>
 	<tr id='bounds-gettopleft'>
 		<td><code><b>getTopLeft</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the top-left point of the bounds (i.e. <a href="#bounds-min"><code>this.min</code></a>).</p>
+		<td><p>返回边界的左上角 (即 <a href="#bounds-min"><code>this.min</code></a>)。</p>
 </td>
 	</tr>
 	<tr id='bounds-getbottomright'>
 		<td><code><b>getBottomRight</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the bottom-right point of the bounds (i.e. <a href="#bounds-max"><code>this.max</code></a>).</p>
+		<td><p>返回边界的右下角 (即 <a href="#bounds-max"><code>this.max</code></a>)。</p>
 </td>
 	</tr>
 	<tr id='bounds-getsize'>
 		<td><code><b>getSize</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the size of the given bounds</p>
+		<td><p>返回给定边界的大小</p>
 </td>
 	</tr>
 	<tr id='bounds-contains'>
 		<td><code><b>contains</b>(<nobr>&lt;<a href='#bounds'>Bounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle contains the given one.</p>
+		<td><p>如果该矩形包含给定的矩形，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='bounds-contains'>
 		<td><code><b>contains</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle contains the given point.</p>
+		<td><p>如果矩形包含给定的点，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='bounds-intersects'>
 		<td><code><b>intersects</b>(<nobr>&lt;<a href='#bounds'>Bounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle intersects the given bounds. Two bounds
-intersect if they have at least one point in common.</p>
+		<td><p>如果矩形与给定的边界相交，返回 <code>true</code> 。如果两个边界至少有一个共同点，则它们相交。</p>
 </td>
 	</tr>
 	<tr id='bounds-overlaps'>
 		<td><code><b>overlaps</b>(<nobr>&lt;<a href='#bounds'>Bounds</a>&gt;</nobr> <i>otherBounds</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the rectangle overlaps the given bounds. Two bounds
-overlap if their intersection is an area.</p>
+		<td><p>如果矩形与给定的边界重叠，返回 <code>true</code> 。如果两个边界的交点是一个区域，那么它们就会重叠。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -19360,12 +19356,12 @@ overlap if their intersection is an area.</p>
 	<tr id='bounds-min'>
 		<td><code><b>min</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>The top left corner of the rectangle.</td>
+		<td>矩形的左上角。</td>
 	</tr>
 	<tr id='bounds-max'>
 		<td><code><b>max</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>The bottom right corner of the rectangle.</td>
+		<td>矩形的右下角。</td>
 	</tr>
 </tbody></table>
 
