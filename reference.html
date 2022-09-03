@@ -9357,8 +9357,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='path'>Path</h2><p>An abstract class that contains options and constants shared between vector
-overlays (Polygon, Polyline, Circle). Do not use it directly. Extends <a href="#layer"><code>Layer</code></a>.</p>
+</section><h2 id='path'>Path 路径</h2><p>一个抽象的类，包含了矢量覆盖物 （Polygon（多边形）, Polyline（折线）, Circle（圆形））之间共享的选项和常量。请不要直接使用它。扩展了 <a href="#layer"><code>Layer 图层</code></a>.</p>
 
 <section>
 <h3 id='path-option'>Options 选项</h3>
@@ -9380,93 +9379,92 @@ overlays (Polygon, Polyline, Circle). Do not use it directly. Extends <a href="#
 		<td><code><b>stroke</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether to draw stroke along the path. Set it to <code>false</code> to disable borders on polygons or circles.</td>
+		<td>是否沿路径绘制边框。把它设置为<code>false</code> ，可以禁用多边形或圆形的边框。</td>
 	</tr>
 	<tr id='path-color'>
 		<td><code><b>color</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;#3388ff&#x27;</code></td>
-		<td>Stroke color</td>
+		<td>Stroke（描边）颜色</td>
 	</tr>
 	<tr id='path-weight'>
 		<td><code><b>weight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>Stroke width in pixels</td>
+		<td>Stroke（描边）宽度，单位：像素</td>
 	</tr>
 	<tr id='path-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Stroke opacity</td>
+		<td>Stroke（描边）的不透明度</td>
 	</tr>
 	<tr id='path-linecap'>
 		<td><code><b>lineCap</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">shape to be used at the end</a> of the stroke.</td>
+		<td>定义描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">结束时使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='path-linejoin'>
 		<td><code><b>lineJoin</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">shape to be used at the corners</a> of the stroke.</td>
+		<td>定义在描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">转角处使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='path-dasharray'>
 		<td><code><b>dashArray</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the stroke <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">dash pattern</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个定义描边的点画线的 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">图案范式</a>的字符串。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='path-dashoffset'>
 		<td><code><b>dashOffset</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">distance into the dash pattern to start the dash</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个字符串，它定义了进入 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">dash 范式的距离，以 dash 开始</a>。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='path-fill'>
 		<td><code><b>fill</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>depends</code></td>
-		<td>Whether to fill the path with color. Set it to <code>false</code> to disable filling on polygons or circles.</td>
+		<td>是否对路径进行颜色填充。设置为 <code>false</code> 可以禁止对多边形或圆形的填充。</td>
 	</tr>
 	<tr id='path-fillcolor'>
 		<td><code><b>fillColor</b></code></td>
 		<td><code>String</code></td>
 		<td><code>*</code></td>
-		<td>Fill color. Defaults to the value of the <a href="#path-color"><code>color</code></a> option</td>
+		<td>填充颜色。默认为 <a href="#path-color"><code>color</code></a> 选项的值。</td>
 	</tr>
 	<tr id='path-fillopacity'>
 		<td><code><b>fillOpacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.2</code></td>
-		<td>Fill opacity.</td>
+		<td>填充的不透明度。</td>
 	</tr>
 	<tr id='path-fillrule'>
 		<td><code><b>fillRule</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;evenodd&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">how the inside of a shape</a> is determined.</td>
+		<td>一个字符串，定义 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">形状的内部区域</a> 是如何被确定的。</td>
 	</tr>
 	<tr id='path-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this path will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，这个路径上的鼠标事件将在地图上触发相同的事件
+			(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 	<tr id='path-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code></code></td>
-		<td>Use this specific instance of <a href="#renderer"><code>Renderer</code></a> for this path. Takes
-precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
+		<td>在这个路径上使用这个特定的 <a href="#renderer"><code>Renderer（渲染器）</code></a> 实例。 优先于地图的 <a href="#map-renderer">default renderer（默认渲染器）</a>。</td>
 	</tr>
 	<tr id='path-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>Custom class name set on an element. Only for SVG renderer.</td>
+		<td>在一个元素上设置的自定义类名。仅适用于 SVG 渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -9493,7 +9491,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -9708,25 +9706,25 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 	<tr id='path-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.</p>
+		<td><p>重绘该图层。在你改变了路径使用的坐标后，有时会很有用。</p>
 </td>
 	</tr>
 	<tr id='path-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the appearance of a Path based on the options in the <a href="#path-option"><code>Path options</code></a> object.</p>
+		<td><p>根据 <a href="#path-option"><code>Path options</code></a> 对象中的选项，改变Path的外观。</p>
 </td>
 	</tr>
 	<tr id='path-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='path-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的底部。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -10166,93 +10164,92 @@ better performance and smoother look, and less means more accurate representatio
 		<td><code><b>stroke</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether to draw stroke along the path. Set it to <code>false</code> to disable borders on polygons or circles.</td>
+		<td>是否沿路径绘制边框。把它设置为<code>false</code> ，可以禁用多边形或圆形的边框。</td>
 	</tr>
 	<tr id='polyline-color'>
 		<td><code><b>color</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;#3388ff&#x27;</code></td>
-		<td>Stroke color</td>
+		<td>Stroke（描边）颜色</td>
 	</tr>
 	<tr id='polyline-weight'>
 		<td><code><b>weight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>Stroke width in pixels</td>
+		<td>Stroke（描边）宽度，单位：像素</td>
 	</tr>
 	<tr id='polyline-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Stroke opacity</td>
+		<td>Stroke（描边）的不透明度</td>
 	</tr>
 	<tr id='polyline-linecap'>
 		<td><code><b>lineCap</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">shape to be used at the end</a> of the stroke.</td>
+		<td>定义描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">结束时使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='polyline-linejoin'>
 		<td><code><b>lineJoin</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">shape to be used at the corners</a> of the stroke.</td>
+		<td>定义在描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">转角处使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='polyline-dasharray'>
 		<td><code><b>dashArray</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the stroke <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">dash pattern</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个定义描边的点画线的 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">图案范式</a>的字符串。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='polyline-dashoffset'>
 		<td><code><b>dashOffset</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">distance into the dash pattern to start the dash</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个字符串，它定义了进入 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">dash 范式的距离，以 dash 开始</a>。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='polyline-fill'>
 		<td><code><b>fill</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>depends</code></td>
-		<td>Whether to fill the path with color. Set it to <code>false</code> to disable filling on polygons or circles.</td>
+		<td>是否对路径进行颜色填充。设置为 <code>false</code> 可以禁止对多边形或圆形的填充。</td>
 	</tr>
 	<tr id='polyline-fillcolor'>
 		<td><code><b>fillColor</b></code></td>
 		<td><code>String</code></td>
 		<td><code>*</code></td>
-		<td>Fill color. Defaults to the value of the <a href="#path-color"><code>color</code></a> option</td>
+		<td>填充颜色。默认为 <a href="#path-color"><code>color</code></a> 选项的值。</td>
 	</tr>
 	<tr id='polyline-fillopacity'>
 		<td><code><b>fillOpacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.2</code></td>
-		<td>Fill opacity.</td>
+		<td>填充的不透明度。</td>
 	</tr>
 	<tr id='polyline-fillrule'>
 		<td><code><b>fillRule</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;evenodd&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">how the inside of a shape</a> is determined.</td>
+		<td>一个字符串，定义 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">形状的内部区域</a> 是如何被确定的。</td>
 	</tr>
 	<tr id='polyline-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this path will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，这个路径上的鼠标事件将在地图上触发相同的事件
+			(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 	<tr id='polyline-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code></code></td>
-		<td>Use this specific instance of <a href="#renderer"><code>Renderer</code></a> for this path. Takes
-precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
+		<td>在这个路径上使用这个特定的 <a href="#renderer"><code>Renderer（渲染器）</code></a> 实例。 优先于地图的 <a href="#map-renderer">default renderer（默认渲染器）</a>。</td>
 	</tr>
 	<tr id='polyline-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>Custom class name set on an element. Only for SVG renderer.</td>
+		<td>在一个元素上设置的自定义类名。仅适用于 SVG 渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -10280,7 +10277,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -10566,25 +10563,25 @@ a specific ring as a LatLng array (that you can earlier access with <a href="#po
 	<tr id='polyline-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.</p>
+		<td><p>重绘该图层。在你改变了路径使用的坐标后，有时会很有用。</p>
 </td>
 	</tr>
 	<tr id='polyline-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the appearance of a Path based on the options in the <a href="#path-option"><code>Path options</code></a> object.</p>
+		<td><p>根据 <a href="#path-option"><code>Path options</code></a> 对象中的选项，改变Path的外观。</p>
 </td>
 	</tr>
 	<tr id='polyline-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='polyline-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的底部。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -11032,93 +11029,92 @@ better performance and smoother look, and less means more accurate representatio
 		<td><code><b>stroke</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether to draw stroke along the path. Set it to <code>false</code> to disable borders on polygons or circles.</td>
+		<td>是否沿路径绘制边框。把它设置为<code>false</code> ，可以禁用多边形或圆形的边框。</td>
 	</tr>
 	<tr id='polygon-color'>
 		<td><code><b>color</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;#3388ff&#x27;</code></td>
-		<td>Stroke color</td>
+		<td>Stroke（描边）颜色</td>
 	</tr>
 	<tr id='polygon-weight'>
 		<td><code><b>weight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>Stroke width in pixels</td>
+		<td>Stroke（描边）宽度，单位：像素</td>
 	</tr>
 	<tr id='polygon-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Stroke opacity</td>
+		<td>Stroke（描边）的不透明度</td>
 	</tr>
 	<tr id='polygon-linecap'>
 		<td><code><b>lineCap</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">shape to be used at the end</a> of the stroke.</td>
+		<td>定义描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">结束时使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='polygon-linejoin'>
 		<td><code><b>lineJoin</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">shape to be used at the corners</a> of the stroke.</td>
+		<td>定义在描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">转角处使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='polygon-dasharray'>
 		<td><code><b>dashArray</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the stroke <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">dash pattern</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个定义描边的点画线的 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">图案范式</a>的字符串。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='polygon-dashoffset'>
 		<td><code><b>dashOffset</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">distance into the dash pattern to start the dash</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个字符串，它定义了进入 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">dash 范式的距离，以 dash 开始</a>。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='polygon-fill'>
 		<td><code><b>fill</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>depends</code></td>
-		<td>Whether to fill the path with color. Set it to <code>false</code> to disable filling on polygons or circles.</td>
+		<td>是否对路径进行颜色填充。设置为 <code>false</code> 可以禁止对多边形或圆形的填充。</td>
 	</tr>
 	<tr id='polygon-fillcolor'>
 		<td><code><b>fillColor</b></code></td>
 		<td><code>String</code></td>
 		<td><code>*</code></td>
-		<td>Fill color. Defaults to the value of the <a href="#path-color"><code>color</code></a> option</td>
+		<td>填充颜色。默认为 <a href="#path-color"><code>color</code></a> 选项的值。</td>
 	</tr>
 	<tr id='polygon-fillopacity'>
 		<td><code><b>fillOpacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.2</code></td>
-		<td>Fill opacity.</td>
+		<td>填充的不透明度。</td>
 	</tr>
 	<tr id='polygon-fillrule'>
 		<td><code><b>fillRule</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;evenodd&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">how the inside of a shape</a> is determined.</td>
+		<td>一个字符串，定义 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">形状的内部区域</a> 是如何被确定的。</td>
 	</tr>
 	<tr id='polygon-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this path will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，这个路径上的鼠标事件将在地图上触发相同的事件
+			(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 	<tr id='polygon-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code></code></td>
-		<td>Use this specific instance of <a href="#renderer"><code>Renderer</code></a> for this path. Takes
-precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
+		<td>在这个路径上使用这个特定的 <a href="#renderer"><code>Renderer（渲染器）</code></a> 实例。 优先于地图的 <a href="#map-renderer">default renderer（默认渲染器）</a>。</td>
 	</tr>
 	<tr id='polygon-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>Custom class name set on an element. Only for SVG renderer.</td>
+		<td>在一个元素上设置的自定义类名。仅适用于 SVG 渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -11146,7 +11142,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -11453,25 +11449,25 @@ a specific ring as a LatLng array (that you can earlier access with <a href="#po
 	<tr id='polygon-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.</p>
+		<td><p>重绘该图层。在你改变了路径使用的坐标后，有时会很有用。</p>
 </td>
 	</tr>
 	<tr id='polygon-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the appearance of a Path based on the options in the <a href="#path-option"><code>Path options</code></a> object.</p>
+		<td><p>根据 <a href="#path-option"><code>Path options</code></a> 对象中的选项，改变Path的外观。</p>
 </td>
 	</tr>
 	<tr id='polygon-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='polygon-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的底部。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -11902,93 +11898,92 @@ better performance and smoother look, and less means more accurate representatio
 		<td><code><b>stroke</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether to draw stroke along the path. Set it to <code>false</code> to disable borders on polygons or circles.</td>
+		<td>是否沿路径绘制边框。把它设置为<code>false</code> ，可以禁用多边形或圆形的边框。</td>
 	</tr>
 	<tr id='rectangle-color'>
 		<td><code><b>color</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;#3388ff&#x27;</code></td>
-		<td>Stroke color</td>
+		<td>Stroke（描边）颜色</td>
 	</tr>
 	<tr id='rectangle-weight'>
 		<td><code><b>weight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>Stroke width in pixels</td>
+		<td>Stroke（描边）宽度，单位：像素</td>
 	</tr>
 	<tr id='rectangle-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Stroke opacity</td>
+		<td>Stroke（描边）的不透明度</td>
 	</tr>
 	<tr id='rectangle-linecap'>
 		<td><code><b>lineCap</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">shape to be used at the end</a> of the stroke.</td>
+		<td>定义描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">结束时使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='rectangle-linejoin'>
 		<td><code><b>lineJoin</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">shape to be used at the corners</a> of the stroke.</td>
+		<td>定义在描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">转角处使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='rectangle-dasharray'>
 		<td><code><b>dashArray</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the stroke <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">dash pattern</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个定义描边的点画线的 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">图案范式</a>的字符串。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='rectangle-dashoffset'>
 		<td><code><b>dashOffset</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">distance into the dash pattern to start the dash</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个字符串，它定义了进入 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">dash 范式的距离，以 dash 开始</a>。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='rectangle-fill'>
 		<td><code><b>fill</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>depends</code></td>
-		<td>Whether to fill the path with color. Set it to <code>false</code> to disable filling on polygons or circles.</td>
+		<td>是否对路径进行颜色填充。设置为 <code>false</code> 可以禁止对多边形或圆形的填充。</td>
 	</tr>
 	<tr id='rectangle-fillcolor'>
 		<td><code><b>fillColor</b></code></td>
 		<td><code>String</code></td>
 		<td><code>*</code></td>
-		<td>Fill color. Defaults to the value of the <a href="#path-color"><code>color</code></a> option</td>
+		<td>填充颜色。默认为 <a href="#path-color"><code>color</code></a> 选项的值。</td>
 	</tr>
 	<tr id='rectangle-fillopacity'>
 		<td><code><b>fillOpacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.2</code></td>
-		<td>Fill opacity.</td>
+		<td>填充的不透明度。</td>
 	</tr>
 	<tr id='rectangle-fillrule'>
 		<td><code><b>fillRule</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;evenodd&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">how the inside of a shape</a> is determined.</td>
+		<td>一个字符串，定义 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">形状的内部区域</a> 是如何被确定的。</td>
 	</tr>
 	<tr id='rectangle-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this path will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，这个路径上的鼠标事件将在地图上触发相同的事件
+			(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 	<tr id='rectangle-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code></code></td>
-		<td>Use this specific instance of <a href="#renderer"><code>Renderer</code></a> for this path. Takes
-precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
+		<td>在这个路径上使用这个特定的 <a href="#renderer"><code>Renderer（渲染器）</code></a> 实例。 优先于地图的 <a href="#map-renderer">default renderer（默认渲染器）</a>。</td>
 	</tr>
 	<tr id='rectangle-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>Custom class name set on an element. Only for SVG renderer.</td>
+		<td>在一个元素上设置的自定义类名。仅适用于 SVG 渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -12016,7 +12011,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -12350,25 +12345,25 @@ a specific ring as a LatLng array (that you can earlier access with <a href="#po
 	<tr id='rectangle-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.</p>
+		<td><p>重绘该图层。在你改变了路径使用的坐标后，有时会很有用。</p>
 </td>
 	</tr>
 	<tr id='rectangle-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the appearance of a Path based on the options in the <a href="#path-option"><code>Path options</code></a> object.</p>
+		<td><p>根据 <a href="#path-option"><code>Path options</code></a> 对象中的选项，改变Path的外观。</p>
 </td>
 	</tr>
 	<tr id='rectangle-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='rectangle-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的底部。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -12785,93 +12780,92 @@ Do not use in new applications or plugins.</td>
 		<td><code><b>stroke</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether to draw stroke along the path. Set it to <code>false</code> to disable borders on polygons or circles.</td>
+		<td>是否沿路径绘制边框。把它设置为<code>false</code> ，可以禁用多边形或圆形的边框。</td>
 	</tr>
 	<tr id='circle-color'>
 		<td><code><b>color</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;#3388ff&#x27;</code></td>
-		<td>Stroke color</td>
+		<td>Stroke（描边）颜色</td>
 	</tr>
 	<tr id='circle-weight'>
 		<td><code><b>weight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>Stroke width in pixels</td>
+		<td>Stroke（描边）宽度，单位：像素</td>
 	</tr>
 	<tr id='circle-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Stroke opacity</td>
+		<td>Stroke（描边）的不透明度</td>
 	</tr>
 	<tr id='circle-linecap'>
 		<td><code><b>lineCap</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">shape to be used at the end</a> of the stroke.</td>
+		<td>定义描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">结束时使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='circle-linejoin'>
 		<td><code><b>lineJoin</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">shape to be used at the corners</a> of the stroke.</td>
+		<td>定义在描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">转角处使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='circle-dasharray'>
 		<td><code><b>dashArray</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the stroke <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">dash pattern</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个定义描边的点画线的 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">图案范式</a>的字符串。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='circle-dashoffset'>
 		<td><code><b>dashOffset</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">distance into the dash pattern to start the dash</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个字符串，它定义了进入 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">dash 范式的距离，以 dash 开始</a>。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='circle-fill'>
 		<td><code><b>fill</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>depends</code></td>
-		<td>Whether to fill the path with color. Set it to <code>false</code> to disable filling on polygons or circles.</td>
+		<td>是否对路径进行颜色填充。设置为 <code>false</code> 可以禁止对多边形或圆形的填充。</td>
 	</tr>
 	<tr id='circle-fillcolor'>
 		<td><code><b>fillColor</b></code></td>
 		<td><code>String</code></td>
 		<td><code>*</code></td>
-		<td>Fill color. Defaults to the value of the <a href="#path-color"><code>color</code></a> option</td>
+		<td>填充颜色。默认为 <a href="#path-color"><code>color</code></a> 选项的值。</td>
 	</tr>
 	<tr id='circle-fillopacity'>
 		<td><code><b>fillOpacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.2</code></td>
-		<td>Fill opacity.</td>
+		<td>填充的不透明度。</td>
 	</tr>
 	<tr id='circle-fillrule'>
 		<td><code><b>fillRule</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;evenodd&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">how the inside of a shape</a> is determined.</td>
+		<td>一个字符串，定义 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">形状的内部区域</a> 是如何被确定的。</td>
 	</tr>
 	<tr id='circle-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this path will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，这个路径上的鼠标事件将在地图上触发相同的事件
+			(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 	<tr id='circle-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code></code></td>
-		<td>Use this specific instance of <a href="#renderer"><code>Renderer</code></a> for this path. Takes
-precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
+		<td>在这个路径上使用这个特定的 <a href="#renderer"><code>Renderer（渲染器）</code></a> 实例。 优先于地图的 <a href="#map-renderer">default renderer（默认渲染器）</a>。</td>
 	</tr>
 	<tr id='circle-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>Custom class name set on an element. Only for SVG renderer.</td>
+		<td>在一个元素上设置的自定义类名。仅适用于 SVG 渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -12899,7 +12893,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -13218,25 +13212,25 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 	<tr id='circle-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.</p>
+		<td><p>重绘该图层。在你改变了路径使用的坐标后，有时会很有用。</p>
 </td>
 	</tr>
 	<tr id='circle-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the appearance of a Path based on the options in the <a href="#path-option"><code>Path options</code></a> object.</p>
+		<td><p>根据 <a href="#path-option"><code>Path options</code></a> 对象中的选项，改变Path的外观。</p>
 </td>
 	</tr>
 	<tr id='circle-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='circle-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的底部。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -13629,93 +13623,92 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 		<td><code><b>stroke</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>Whether to draw stroke along the path. Set it to <code>false</code> to disable borders on polygons or circles.</td>
+		<td>是否沿路径绘制边框。把它设置为<code>false</code> ，可以禁用多边形或圆形的边框。</td>
 	</tr>
 	<tr id='circlemarker-color'>
 		<td><code><b>color</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;#3388ff&#x27;</code></td>
-		<td>Stroke color</td>
+		<td>Stroke（描边）颜色</td>
 	</tr>
 	<tr id='circlemarker-weight'>
 		<td><code><b>weight</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>Stroke width in pixels</td>
+		<td>Stroke（描边）宽度，单位：像素</td>
 	</tr>
 	<tr id='circlemarker-opacity'>
 		<td><code><b>opacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>1.0</code></td>
-		<td>Stroke opacity</td>
+		<td>Stroke（描边）的不透明度</td>
 	</tr>
 	<tr id='circlemarker-linecap'>
 		<td><code><b>lineCap</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">shape to be used at the end</a> of the stroke.</td>
+		<td>定义描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap">结束时使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='circlemarker-linejoin'>
 		<td><code><b>lineJoin</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;round&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">shape to be used at the corners</a> of the stroke.</td>
+		<td>定义在描边 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">转角处使用的形状</a> 的字符串。</td>
 	</tr>
 	<tr id='circlemarker-dasharray'>
 		<td><code><b>dashArray</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the stroke <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">dash pattern</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个定义描边的点画线的 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray">图案范式</a>的字符串。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='circlemarker-dashoffset'>
 		<td><code><b>dashOffset</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">distance into the dash pattern to start the dash</a>. Doesn't work on <a href="#canvas"><code>Canvas</code></a>-powered layers in <a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">some old browsers</a>.</td>
+		<td>一个字符串，它定义了进入 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset">dash 范式的距离，以 dash 开始</a>。 在<a href="https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility">一些旧的浏览器</a>中，对 <a href="#canvas"><code>Canvas</code></a>-powered 图层不起作用。</td>
 	</tr>
 	<tr id='circlemarker-fill'>
 		<td><code><b>fill</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>depends</code></td>
-		<td>Whether to fill the path with color. Set it to <code>false</code> to disable filling on polygons or circles.</td>
+		<td>是否对路径进行颜色填充。设置为 <code>false</code> 可以禁止对多边形或圆形的填充。</td>
 	</tr>
 	<tr id='circlemarker-fillcolor'>
 		<td><code><b>fillColor</b></code></td>
 		<td><code>String</code></td>
 		<td><code>*</code></td>
-		<td>Fill color. Defaults to the value of the <a href="#path-color"><code>color</code></a> option</td>
+		<td>填充颜色。默认为 <a href="#path-color"><code>color</code></a> 选项的值。</td>
 	</tr>
 	<tr id='circlemarker-fillopacity'>
 		<td><code><b>fillOpacity</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>0.2</code></td>
-		<td>Fill opacity.</td>
+		<td>填充的不透明度。</td>
 	</tr>
 	<tr id='circlemarker-fillrule'>
 		<td><code><b>fillRule</b></code></td>
 		<td><code>String</code></td>
 		<td><code>&#x27;evenodd&#x27;</code></td>
-		<td>A string that defines <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">how the inside of a shape</a> is determined.</td>
+		<td>一个字符串，定义 <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule">形状的内部区域</a> 是如何被确定的。</td>
 	</tr>
 	<tr id='circlemarker-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>When <code>true</code>, a mouse event on this path will trigger the same event on the map
-(unless <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> is used).</td>
+		<td>当为 <code>true</code>时，这个路径上的鼠标事件将在地图上触发相同的事件
+			(除非使用 <a href="#domevent-stoppropagation"><code>L.DomEvent.stopPropagation</code></a> )。</td>
 	</tr>
 	<tr id='circlemarker-renderer'>
 		<td><code><b>renderer</b></code></td>
 		<td><code><a href='#renderer'>Renderer</a></code></td>
 		<td><code></code></td>
-		<td>Use this specific instance of <a href="#renderer"><code>Renderer</code></a> for this path. Takes
-precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
+		<td>在这个路径上使用这个特定的 <a href="#renderer"><code>Renderer（渲染器）</code></a> 实例。 优先于地图的 <a href="#map-renderer">default renderer（默认渲染器）</a>。</td>
 	</tr>
 	<tr id='circlemarker-classname'>
 		<td><code><b>className</b></code></td>
 		<td><code>String</code></td>
 		<td><code>null</code></td>
-		<td>Custom class name set on an element. Only for SVG renderer.</td>
+		<td>在一个元素上设置的自定义类名。仅适用于 SVG 渲染器。</td>
 	</tr>
 </tbody></table>
 
@@ -13743,7 +13736,7 @@ precedence over the map's <a href="#map-renderer">default renderer</a>.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 </tbody></table>
 
@@ -14028,25 +14021,25 @@ Returns a <a href="https://en.wikipedia.org/wiki/GeoJSON"><code>GeoJSON</code></
 	<tr id='circlemarker-redraw'>
 		<td><code><b>redraw</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.</p>
+		<td><p>重绘该图层。在你改变了路径使用的坐标后，有时会很有用。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-setstyle'>
 		<td><code><b>setStyle</b>(<nobr>&lt;<a href='#path-option'>Path options</a>&gt;</nobr> <i>style</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Changes the appearance of a Path based on the options in the <a href="#path-option"><code>Path options</code></a> object.</p>
+		<td><p>根据 <a href="#path-option"><code>Path options</code></a> 对象中的选项，改变Path的外观。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-bringtofront'>
 		<td><code><b>bringToFront</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the top of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的顶部。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-bringtoback'>
 		<td><code><b>bringToBack</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Brings the layer to the bottom of all path layers.</p>
+		<td><p>将该图层置于所有路径图层的底部。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -15635,7 +15628,7 @@ well. Extends <a href="#layer"><code>Layer</code></a>.</p>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 	<tr id='layergroup-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
@@ -16333,7 +16326,7 @@ and custom events.</li>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 	<tr id='featuregroup-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
@@ -17175,7 +17168,7 @@ The default is the <code>coordsToLatLng</code> static method.</td>
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 	<tr id='geojson-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
@@ -22878,7 +22871,7 @@ Use the <a href="#evented-method">event handling methods</a> to handle these eve
 		<td><code><b>interactive</b></code></td>
 		<td><code>Boolean</code></td>
 		<td><code>true</code></td>
-		<td>If <code>false</code>, the layer will not emit mouse events and will act as a part of the underlying map.</td>
+		<td>如果是 <code>false</code>, 该图层将不会发出鼠标事件，而是作为底层地图的一部分。</td>
 	</tr>
 	<tr id='interactive-layer-bubblingmouseevents'>
 		<td><code><b>bubblingMouseEvents</b></code></td>
