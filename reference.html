@@ -12669,8 +12669,8 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='circle'>Circle</h2><p>A class for drawing circle overlays on a map. Extends <a href="#circlemarker"><code>CircleMarker</code></a>.</p>
-<p>It's an approximation and starts to diverge from a real circle closer to poles (due to projection distortion).</p>
+</section><h2 id='circle'>Circle 圆形</h2><p>一个用于在地图上绘制圆形覆盖物的类。扩展了 <a href="#circlemarker"><code>CircleMarker</code></a>。</p>
+<p>这是一个近似值，在接近两极时开始与真实的圆相背离（由于投影失真）。</p>
 
 <section>
 <h3 id='circle-example'>使用示例</h3>
@@ -12705,13 +12705,11 @@ map.fitBounds(bounds);
 	</thead><tbody>
 	<tr id='circle-l-circle'>
 		<td><code><b>L.circle</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;<a href='#circle-option'>Circle options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Instantiates a circle object given a geographical point, and an options object
-which contains the circle radius.</td>
+		<td>给出一个地理点和一个包含圆半径的选项对象，实例化一个 circle 对象。</td>
 	</tr>
 	<tr id='circle-l-circle'>
 		<td><code><b>L.circle</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;Number&gt;</nobr> <i>radius</i>, <nobr>&lt;<a href='#circle-option'>Circle options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Obsolete way of instantiating a circle, for compatibility with 0.7.x code.
-Do not use in new applications or plugins.</td>
+		<td>为了与 0.7.x 代码兼容，实例化 circle 的方法已经过时了。请不要在新的应用程序或插件中使用。</td>
 	</tr>
 </tbody></table>
 
@@ -12738,7 +12736,7 @@ Do not use in new applications or plugins.</td>
 		<td><code><b>radius</b></code></td>
 		<td><code>Number</code></td>
 		<td><code></code></td>
-		<td>Radius of the circle, in meters.</td>
+		<td>圆的半径，以米为单位。</td>
 	</tr>
 </tbody></table>
 
@@ -12927,7 +12925,7 @@ Do not use in new applications or plugins.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Events inherited from <a href='#circlemarker'>CircleMarker</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#circlemarker'>CircleMarker</a> 的事件</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -12944,7 +12942,7 @@ Do not use in new applications or plugins.</td>
 	<tr id='circle-move'>
 		<td><code><b>move</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker is moved via <a href="#circlemarker-setlatlng"><code>setLatLng</code></a>. Old and new coordinates are included in event arguments as <code>oldLatLng</code>, <code>latlng</code>.</td>
+		<td>当标记通过 <a href="#circlemarker-setlatlng"><code>setLatLng</code></a>移动时触发该事件，并且旧坐标和新坐标会作为 <code>oldLatLng</code>、<code>latlng</code> 包含在事件参数中。</td>
 	</tr>
 </tbody></table>
 
@@ -13119,13 +13117,13 @@ Do not use in new applications or plugins.</td>
 	<tr id='circle-setradius'>
 		<td><code><b>setRadius</b>(<nobr>&lt;Number&gt;</nobr> <i>radius</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the radius of a circle. Units are in meters.</p>
+		<td><p>设置一个圆的半径。单位是米。</p>
 </td>
 	</tr>
 	<tr id='circle-getradius'>
 		<td><code><b>getRadius</b>()</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the current radius of a circle. Units are in meters.</p>
+		<td><p>返回一个圆的当前半径。单位是米。</p>
 </td>
 	</tr>
 	<tr id='circle-getbounds'>
@@ -13140,7 +13138,7 @@ Do not use in new applications or plugins.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Methods inherited from <a href='#circlemarker'>CircleMarker</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#circlemarker'>CircleMarker</a> 的方法</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -13163,13 +13161,13 @@ Do not use in new applications or plugins.</td>
 	<tr id='circle-setlatlng'>
 		<td><code><b>setLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latLng</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of a circle marker to a new location.</p>
+		<td><p>将 CircleMarker 的位置设置为新位置。</p>
 </td>
 	</tr>
 	<tr id='circle-getlatlng'>
 		<td><code><b>getLatLng</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the current geographical position of the circle marker</p>
+		<td><p>返回 CircleMarker 的当前地理位置。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -13780,7 +13778,7 @@ Do not use in new applications or plugins.</td>
 	<tr id='circlemarker-move'>
 		<td><code><b>move</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the marker is moved via <a href="#circlemarker-setlatlng"><code>setLatLng</code></a>. Old and new coordinates are included in event arguments as <code>oldLatLng</code>, <code>latlng</code>.</td>
+		<td>当标记通过 <a href="#circlemarker-setlatlng"><code>setLatLng</code></a>移动时触发该事件，并且旧坐标和新坐标会作为 <code>oldLatLng</code>、<code>latlng</code> 包含在事件参数中。</td>
 	</tr>
 </tbody></table>
 
@@ -13960,13 +13958,13 @@ Do not use in new applications or plugins.</td>
 	<tr id='circlemarker-setlatlng'>
 		<td><code><b>setLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latLng</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Sets the position of a circle marker to a new location.</p>
+		<td><p>将 CircleMarker 的位置设置为新位置。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-getlatlng'>
 		<td><code><b>getLatLng</b>()</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns the current geographical position of the circle marker</p>
+		<td><p>返回 CircleMarker 的当前地理位置。</p>
 </td>
 	</tr>
 	<tr id='circlemarker-setradius'>
