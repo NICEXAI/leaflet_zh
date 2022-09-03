@@ -19004,7 +19004,7 @@ bounds = L.latLngBounds(corner1, corner2);
 </section>
 
 
-</section><h2 id='point'>Point</h2><p>Represents a point with <code>x</code> and <code>y</code> coordinates in pixels.</p>
+</section><h2 id='point'>Point 点</h2><p>代表一个点，其 <code>x</code> 和 <code>y</code> 坐标为像素。</p>
 
 <section>
 <h3 id='point-example'>使用示例</h3>
@@ -19017,13 +19017,11 @@ bounds = L.latLngBounds(corner1, corner2);
 
 <pre><code class="language-js">var point = L.point(200, 300);
 </code></pre>
-<p>All Leaflet methods and options that accept <a href="#point"><code>Point</code></a> objects also accept them in a simple Array form (unless noted otherwise), so these lines are equivalent:</p>
+<p>所有接受 <a href="#point"><code>Point</code></a> 对象的Leaflet方法和选项也接受它们的简单数组形式（除非另有说明），所以这些行是等价的:</p>
 <pre><code class="language-js">map.panBy([200, 300]);
 map.panBy(L.point(200, 300));
 </code></pre>
-<p>Note that <a href="#point"><code>Point</code></a> does not inherit from Leaflet's <a href="#class"><code>Class</code></a> object,
-which means new classes can't inherit from it, and new methods
-can't be added to it with the <code>include</code> function.</p>
+<p>注意， <a href="#point"><code>Point</code></a> 不继承 Leaflet 的 <a href="#class"><code>Class</code></a> 对象，这意味着新的类不能继承于它，新的方法也不能用 <code>include</code> 函数添加到它。</p>
 
 
 
@@ -19046,15 +19044,15 @@ can't be added to it with the <code>include</code> function.</p>
 	</thead><tbody>
 	<tr id='point-l-point'>
 		<td><code><b>L.point</b>(<nobr>&lt;Number&gt;</nobr> <i>x</i>, <nobr>&lt;Number&gt;</nobr> <i>y</i>, <nobr>&lt;Boolean&gt;</nobr> <i>round?</i>)</code></td>
-		<td>Creates a Point object with the given <code>x</code> and <code>y</code> coordinates. If optional <code>round</code> is set to true, rounds the <code>x</code> and <code>y</code> values.</td>
+		<td>用给定的 <code>x</code> 和 <code>y</code> 坐标创建一个点对象。如果可选的 <code>round</code> 被设置为true，则对 <code>x</code> 和 <code>y</code> 值进行舍入。</td>
 	</tr>
 	<tr id='point-l-point'>
 		<td><code><b>L.point</b>(<nobr>&lt;Number[]&gt;</nobr> <i>coords</i>)</code></td>
-		<td>Expects an array of the form <code>[x, y]</code> instead.</td>
+		<td>期待一个形式为 <code>[x, y]</code> 的数组来代替。</td>
 	</tr>
 	<tr id='point-l-point'>
 		<td><code><b>L.point</b>(<nobr>&lt;Object&gt;</nobr> <i>coords</i>)</code></td>
-		<td>Expects a plain object of the form <code>{x: Number, y: Number}</code> instead.</td>
+		<td>期待一个形式为 <code>{x: Number, y: Number}</code> 的普通对象来代替。</td>
 	</tr>
 </tbody></table>
 
@@ -19079,95 +19077,92 @@ can't be added to it with the <code>include</code> function.</p>
 	<tr id='point-clone'>
 		<td><code><b>clone</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns a copy of the current point.</p>
+		<td><p>返回当前点的拷贝。</p>
 </td>
 	</tr>
 	<tr id='point-add'>
 		<td><code><b>add</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>otherPoint</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the result of addition of the current and the given points.</p>
+		<td><p>返回当前点和给定点的相加结果。</p>
 </td>
 	</tr>
 	<tr id='point-subtract'>
 		<td><code><b>subtract</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>otherPoint</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the result of subtraction of the given point from the current.</p>
+		<td><p>返回给定点与当前点相减的结果。</p>
 </td>
 	</tr>
 	<tr id='point-divideby'>
 		<td><code><b>divideBy</b>(<nobr>&lt;Number&gt;</nobr> <i>num</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the result of division of the current point by the given number.</p>
+		<td><p>返回当前点除以给定数字的结果。</p>
 </td>
 	</tr>
 	<tr id='point-multiplyby'>
 		<td><code><b>multiplyBy</b>(<nobr>&lt;Number&gt;</nobr> <i>num</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the result of multiplication of the current point by the given number.</p>
+		<td><p>返回当前点与给定数字相乘的结果。</p>
 </td>
 	</tr>
 	<tr id='point-scaleby'>
 		<td><code><b>scaleBy</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>scale</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Multiply each coordinate of the current point by each coordinate of
-<code>scale</code>. In linear algebra terms, multiply the point by the
-<a href="https://en.wikipedia.org/wiki/Scaling_%28geometry%29#Matrix_representation">scaling matrix</a>
-defined by <code>scale</code>.</p>
+		<td><p>将当前点的每个坐标与
+			<code>scale</code>的每个坐标相乘。用线性代数术语来说，就是用点乘以 <code>scale</code> 所定义的 <a href="https://en.wikipedia.org/wiki/Scaling_%28geometry%29#Matrix_representation">缩放矩阵</a> 。</p>
 </td>
 	</tr>
 	<tr id='point-unscaleby'>
 		<td><code><b>unscaleBy</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>scale</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Inverse of <code>scaleBy</code>. Divide each coordinate of the current point by
-each coordinate of <code>scale</code>.</p>
+		<td><p> <code>scaleBy</code>的倒数。将当前点的每个坐标除以 <code>scale</code>的每个坐标。</p>
 </td>
 	</tr>
 	<tr id='point-round'>
 		<td><code><b>round</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns a copy of the current point with rounded coordinates.</p>
+		<td><p>返回具有圆角坐标的当前点的拷贝。</p>
 </td>
 	</tr>
 	<tr id='point-floor'>
 		<td><code><b>floor</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns a copy of the current point with floored coordinates (rounded down).</p>
+		<td><p>返回具有浮动坐标的当前点的拷贝（向下舍入）。</p>
 </td>
 	</tr>
 	<tr id='point-ceil'>
 		<td><code><b>ceil</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns a copy of the current point with ceiled coordinates (rounded up).</p>
+		<td><p>返回当前点的拷贝，坐标为最高值（四舍五入）。</p>
 </td>
 	</tr>
 	<tr id='point-trunc'>
 		<td><code><b>trunc</b>()</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns a copy of the current point with truncated coordinates (rounded towards zero).</p>
+		<td><p>返回具有截断坐标的当前点的拷贝（四舍五入为零）。</p>
 </td>
 	</tr>
 	<tr id='point-distanceto'>
 		<td><code><b>distanceTo</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>otherPoint</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the cartesian distance between the current and the given points.</p>
+		<td><p>返回当前点和给定点之间的笛卡尔距离。</p>
 </td>
 	</tr>
 	<tr id='point-equals'>
 		<td><code><b>equals</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>otherPoint</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the given point has the same coordinates.</p>
+		<td><p>如果给定的点具有相同的坐标，则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='point-contains'>
 		<td><code><b>contains</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>otherPoint</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if both coordinates of the given point are less than the corresponding current point coordinates (in absolute values).</p>
+		<td><p>如果给定点的两个坐标都小于相应的当前点坐标（绝对值），则返回 <code>true</code> 。</p>
 </td>
 	</tr>
 	<tr id='point-tostring'>
 		<td><code><b>toString</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>Returns a string representation of the point for debugging purposes.</p>
+		<td><p>返回点的字符串表示，用于调试目的。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -19193,12 +19188,12 @@ each coordinate of <code>scale</code>.</p>
 	<tr id='point-x'>
 		<td><code><b>x</b></code></td>
 		<td><code>Number</code></td>
-		<td>The <code>x</code> coordinate of the point</td>
+		<td>点的 <code>x</code> 坐标</td>
 	</tr>
 	<tr id='point-y'>
 		<td><code><b>y</b></code></td>
 		<td><code>Number</code></td>
-		<td>The <code>y</code> coordinate of the point</td>
+		<td>点的 <code>y</code> 坐标</td>
 	</tr>
 </tbody></table>
 
