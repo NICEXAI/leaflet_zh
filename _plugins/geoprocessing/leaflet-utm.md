@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple way to convert L.LatLng into UTM (WGS84) and vice versa. UTM string format easily configurable. It does not depend on any other plugin or 3rd party.
+将 L.LatLng 转换为 UTM（WGS84），反之亦然的简单方法。UTM 字符串格式易于配置。它不依赖于任何其他插件或第三方。

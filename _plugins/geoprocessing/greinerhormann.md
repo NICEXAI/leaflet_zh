@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Greiner-Hormann algorithm for polygon clipping and binary operations, adapted for use with Leaflet.
+Greiner-Hormann 算法用于多边形裁剪和二元运算，适用于 Leaflet。

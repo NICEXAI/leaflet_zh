@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A collection of utilities for Leaflet geometries (linear referencing, etc.)
+Leaflet 几何图形的实用程序集合（线性参考等）

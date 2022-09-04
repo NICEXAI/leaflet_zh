@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enables buffering of shapes drawn with Leaflet.draw.
+使得用 Leaflet.draw 绘制的图形能够得到缓冲。

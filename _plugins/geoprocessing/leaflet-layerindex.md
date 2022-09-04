@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An efficient spatial index for features and layers, using <a href="https://github.com/imbcmdth/RTree">RTree.js</a>.
+一个高效的特征和层的空间索引，使用 <a href="https://github.com/imbcmdth/RTree">RTree.js</a>。

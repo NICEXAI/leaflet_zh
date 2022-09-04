@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin to allow polygons and polylines to naturally draw across the Antimeridian (or the International Date Line) instead of always wrapping across the Greenwich meridian.
+一个插件，允许多边形和折线自然地穿过反子午线（或国际日期变更线），而不是总是环绕格林威治子午线。

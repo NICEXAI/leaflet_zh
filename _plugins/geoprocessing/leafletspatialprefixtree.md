@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet plugin for visualizing spatial prefix trees, quadtree and geohash.
+用于可视化空间前缀树、四叉树和 geohash 的 Leaflet 插件。

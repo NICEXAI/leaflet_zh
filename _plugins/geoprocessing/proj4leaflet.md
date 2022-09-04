@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-<a href="https://trac.osgeo.org/proj4js/">Proj4js</a> integration plugin, allowing you to use all kinds of weird projections in Leaflet.
+<a href="https://trac.osgeo.org/proj4js/">Proj4js</a> 集成插件，让你可以在 Leaflet 中使用各种奇怪的投影。

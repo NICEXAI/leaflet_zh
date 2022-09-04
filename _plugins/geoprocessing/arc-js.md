@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A JS library for drawing great circle routes that can be used with Leaflet.
+一个用于绘制可与 Leaflet 一起使用的大圆圈路线的 JS 库。
