@@ -22186,8 +22186,7 @@ map.off('click', onClick);
 </section>
 
 
-</section><h2 id='layer'>Layer</h2><p>A set of methods from the Layer base class that all Leaflet layers use.
-Inherits all methods, options and events from <a href="#evented"><code>L.Evented</code></a>.</p>
+</section><h2 id='layer'>Layer 图层</h2><p>一组来自 Layer 基类的方法，所有 Leaflet 图层都使用。继承 <a href="#evented"><code>L.Evented</code></a>的所有方法、选项和事件。</p>
 
 <section>
 <h3 id='layer-example'>使用示例</h3>
@@ -22326,7 +22325,7 @@ layer.remove();
 
 
 
-<div class='section-comments'>Classes extending <a href="#layer"><code>L.Layer</code></a> will inherit the following methods:</div>
+<div class='section-comments'>扩展 <a href="#layer"><code>L.Layer</code></a> 的类将继承以下方法:</div>
 
 <table><thead>
 	<tr>
@@ -22375,9 +22374,9 @@ layer.remove();
 
 </section><section class='collapsable'>
 
-<h4 id='layer-extension-methods'>Extension methods</h4>
+<h4 id='layer-extension-methods'>Extension methods 扩展方法</h4>
 
-<div class='section-comments'>Every layer should extend from <a href="#layer"><code>L.Layer</code></a> and (re-)implement the following methods.</div>
+<div class='section-comments'>每一个图层都应该从 <a href="#layer"><code>L.Layer</code></a> ，并（重新）实现以下方法。</div>
 
 <table><thead>
 	<tr>
@@ -22389,45 +22388,45 @@ layer.remove();
 	<tr id='layer-onadd'>
 		<td><code><b>onAdd</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Should contain code that creates DOM elements for the layer, adds them to <code>map panes</code> where they should belong and puts listeners on relevant map events. Called on <a href="#map-addlayer"><code>map.addLayer(layer)</code></a>.</p>
+        <td><p>应该包含为图层创建 DOM 元素的代码，将它们添加到应该属于它们的 <code>地图窗格</code> 中，并在相关的地图事件上放置 listeners。在 <a href="#map-addlayer"><code>map.addLayer(layer)</code></a>上调用。</p>
 </td>
 	</tr>
 	<tr id='layer-onremove'>
 		<td><code><b>onRemove</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Should contain all clean up code that removes the layer's elements from the DOM and removes listeners previously added in <a href="#layer-onadd"><code>onAdd</code></a>. Called on <a href="#map-removelayer"><code>map.removeLayer(layer)</code></a>.</p>
+        <td><p>应该包含所有的清理代码，将图层的元素从DOM中移除，并移除之前在 <a href="#layer-onadd"><code>onAdd</code></a>中添加的 listeners。在 <a href="#map-removelayer"><code>map.removeLayer(layer)</code></a>上调用。</p>
 </td>
 	</tr>
 	<tr id='layer-getevents'>
 		<td><code><b>getEvents</b>()</code></td>
 		<td><code>Object</code></td>
-		<td><p>This optional method should return an object like <code>{ viewreset: this._reset }</code> for <a href="#evented-addeventlistener"><code>addEventListener</code></a>. The event handlers in this object will be automatically added and removed from the map with your layer.</p>
+        <td><p>这个可选的方法应该返回一个类似 <code>{ viewreset: this._reset }</code> 的对象，用于 <a href="#evented-addeventlistener"><code>addEventListener</code></a>。这个对象中的事件处理程序将随你的图层自动添加和删除。</p>
 </td>
 	</tr>
 	<tr id='layer-getattribution'>
 		<td><code><b>getAttribution</b>()</code></td>
 		<td><code>String</code></td>
-		<td><p>This optional method should return a string containing HTML to be shown on the <code>Attribution control</code> whenever the layer is visible.</p>
+        <td><p>这个可选的方法应该返回一个包含 HTML 的字符串，只要该图层是可见的，就会显示在 <code>Attribution 控件</code> 上。</p>
 </td>
 	</tr>
 	<tr id='layer-beforeadd'>
 		<td><code><b>beforeAdd</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>this</code></td>
-		<td><p>Optional method. Called on <a href="#map-addlayer"><code>map.addLayer(layer)</code></a>, before the layer is added to the map, before events are initialized, without waiting until the map is in a usable state. Use for early initialization only.</p>
+        <td><p>可选的方法。在 <a href="#map-addlayer"><code>map.addLayer(layer)</code></a>上调用，在图层被添加到地图之前，在事件被初始化之前，无需等待地图处于可用状态。只用于早期初始化。</p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='layer-popup-methods'>Popup methods</h4>
+<h4 id='layer-popup-methods'>Popup 方法</h4>
 
-<div class='section-comments'>All layers share a set of methods convenient for binding popups to it.
+<div class='section-comments'>所有的图层都共享一套方法，方便将 popup 绑定到它。
 <pre><code class="language-js">var layer = L.Polygon(latlngs).bindPopup('Hi There!').addTo(map);
 layer.openPopup();
 layer.closePopup();
 </code></pre>
-<p>Popups will also be automatically opened when the layer is clicked on and closed when the layer is removed from the map or another popup is opened.</p></div>
+<p>单击图层时弹出窗口也会自动打开，当图层从地图中移除或打开另一个弹出窗口时会关闭弹出窗口。</p></div>
 
 <table><thead>
 	<tr>
@@ -22488,9 +22487,9 @@ layer.closePopup();
 
 </section><section class='collapsable'>
 
-<h4 id='layer-tooltip-methods'>Tooltip methods</h4>
+<h4 id='layer-tooltip-methods'>Tooltip 方法</h4>
 
-<div class='section-comments'>All layers share a set of methods convenient for binding tooltips to it.
+<div class='section-comments'>所有的图层都共享一套方法，方便将 tooltip 绑定到它。
 <pre><code class="language-js">var layer = L.Polygon(latlngs).bindTooltip('Hi There!').addTo(map);
 layer.openTooltip();
 layer.closeTooltip();
