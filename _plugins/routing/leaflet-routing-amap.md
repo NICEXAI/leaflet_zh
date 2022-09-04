@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Control for route search using <a href="https://www.amap.com/">AMap(高德地图)</a> as a backend. Supports the Chinese BD09 and GCJ02 coordinate systems, colourful lines, and turn-by-turn popups.
+使用<a href="https://www.amap.com/">AMap(高德地图)</a>作为后台进行路线搜索的控制。支持中国的BD09和GCJ02坐标系，彩色线条，以及弹出的转弯提示。

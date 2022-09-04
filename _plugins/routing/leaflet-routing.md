@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-Leaflet controller and interface for routing paths between waypoints using any user provided routing service.
+Leaflet 控制器和接口，用于使用任何用户提供的路由服务在航点之间选择路径。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-This is a Leaflet implementation of the RouteBoxer Class from Google. The Leaflet RouteBoxer class generates a set of L.LatLngBounds objects that are guaranteed to cover every point within a specified distance of a path.
+这是一个来自 Google 的 RouteBoxer 类的 Leaflet 实现。Leaflet RouteBoxer 类生成一组 L.LatLngBounds 对象，保证覆盖路径指定距离内的每个点。

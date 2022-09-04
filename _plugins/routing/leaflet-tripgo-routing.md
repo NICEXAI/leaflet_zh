@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-The <b>TripGo</b> mobility platform lets you create apps providing seamless and personalised door-to-door trips using any public, private or commercial mode of transport.    		TripGo Leaflet's plugin motivation is to provide an easy way to include its functionality in an external platform.
+<b>TripGo</b>移动平台让你创建应用程序，使用任何公共、私人或商业运输方式提供无缝和个性化的门到门旅行。TripGo传单的插件动机是提供一种简单的方法，将其功能纳入外部平台。

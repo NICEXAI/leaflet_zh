@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Show areas of reachability based on time or distance for different modes of travel using the <a href="https://openrouteservice.org/dev/#/api-docs">openrouteservice isochrones API</a>.
+使用 <a href="https://openrouteservice.org/dev/#/api-docs">openrouteservice isochrones API</a>，根据时间或距离显示不同旅行方式的可到达区域。

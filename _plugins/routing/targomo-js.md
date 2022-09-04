@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Targomo visualizes the area which is reachable from a set of starting points in a given time and gives detailed routing information (walk, bike, car and <b>public transportation</b>) to targets.
+Targomo将一组起点在给定时间内可到达的区域可视化，并提供详细的路线信息（步行、自行车、汽车和<b>公共交通</b>）到目标。
