@@ -21818,8 +21818,8 @@ draggable.enable();
 	</div>
 </div>
 
-</section><h2 id='class'>Class</h2><p>L.Class powers the OOP facilities of Leaflet and is used to create almost all of the Leaflet classes documented here.</p>
-<p>In addition to implementing a simple classical inheritance model, it introduces several special properties for convenient code organization — options, includes and statics.</p>
+</section><h2 id='class'>Class 类</h2><p> L.Class 为 Leaflet 的 OOP 设施提供了动力，它被用来创建这里记录的几乎所有 Leaflet 类。</p>
+<p>除了实现一个简单的经典继承模型之外，它还引入了几个方便代码组织的特殊属性——options, includes 和 statics。</p>
 
 <section>
 <h3 id='class-example'>使用示例</h3>
@@ -21833,7 +21833,7 @@ draggable.enable();
 <pre><code class="language-js">var MyClass = L.Class.extend({
 initialize: function (greeter) {
 	this.greeter = greeter;
-	// class constructor
+	// 类构造函数
 },
 
 greet: function (name) {
@@ -21841,10 +21841,10 @@ greet: function (name) {
 	}
 });
 
-// create instance of MyClass, passing &quot;Hello&quot; to the constructor
+// 创建 MyClass 的实例，将 &quot;Hello&quot; 传给构造函数
 var a = new MyClass(&quot;Hello&quot;);
 
-// call greet method, alerting &quot;Hello, World&quot;
+// 调用 greet 方法，提示 &quot;Hello, World&quot;
 a.greet(&quot;World&quot;);
 </code></pre>
 
@@ -21856,13 +21856,11 @@ a.greet(&quot;World&quot;);
 
 
 
-<p>You may have noticed that Leaflet objects are created without using
-the <code>new</code> keyword. This is achieved by complementing each class with a
-lowercase factory method:</p>
+<p>您可能已经注意到 Leaflet 对象是在不使用  <code>new</code> 关键字的情况下创建的。这是通过用小写工厂方法补充每个类来实现的：</p>
 <pre><code class="language-js">new L.Map('map'); // becomes:
 L.map('map');
 </code></pre>
-<p>The factories are implemented very easily, and you can do this for your own classes:</p>
+<p>工厂的实现非常容易，你可以为你自己的类做这个:</p>
 <pre><code class="language-js">L.map = function (id, options) {
     return new L.Map(id, options);
 };
@@ -21872,21 +21870,21 @@ L.map('map');
 
 </section><section >
 
-<h4 id='class-inheritance'>Inheritance</h4>
+<h4 id='class-inheritance'>Inheritance 继承</h4>
 
 
 
-<p>You use L.Class.extend to define new classes, but you can use the same method on any class to inherit from it:</p>
+<p>你使用 L.Class.extend 来定义新的类，但你可以在任何类上使用同样的方法来继承它:</p>
 <pre><code class="language-js">var MyChildClass = MyClass.extend({
-    // ... new properties and methods
+	// ... 新的属性和方法
 });
 </code></pre>
-<p>This will create a class that inherits all methods and properties of the parent class (through a proper prototype chain), adding or overriding the ones you pass to extend. It will also properly react to instanceof:</p>
+<p>这将创建一个继承父类的所有方法和属性的类（通过适当的原型链），添加或覆盖您传递给扩展的方法和属性。它也会对 instanceof 做出正确的反应:</p>
 <pre><code class="language-js">var a = new MyChildClass();
 a instanceof MyChildClass; // true
 a instanceof MyClass; // true
 </code></pre>
-<p>You can call parent methods (including constructor) from corresponding child ones (as you do with super calls in other languages) by accessing parent class prototype and using JavaScript's call or apply:</p>
+<p>您可以通过访问父类原型并使用 JavaScript 的 call 或 apply 从相应的子方法调用父方法（包括构造函数）（就像其他语言中的超级调用一样）：</p>
 <pre><code>var MyChildClass = MyClass.extend({
     initialize: function () {
         MyClass.prototype.initialize.call(this, &quot;Yo&quot;);
@@ -21905,14 +21903,11 @@ a.greet('Jason'); // alerts &quot;Yo, bro Jason!&quot;
 
 </section><section >
 
-<h4 id='class-options'>Options</h4>
+<h4 id='class-options'>Options 选项</h4>
 
 
 
-<p><code>options</code> is a special property that unlike other objects that you pass
-to <code>extend</code> will be merged with the parent one instead of overriding it
-completely, which makes managing configuration of objects and default
-values convenient:</p>
+<p><code>options</code> 是一个特殊的属性，与其他对象不同，你传递给到 <code>extend</code> 将与父对象合并，而不是完全覆盖它，这使得管理对象的配置和默认值更加方便。</p>
 <pre><code class="language-js">var MyClass = L.Class.extend({
     options: {
         myOption1: 'foo',
@@ -21932,9 +21927,7 @@ a.options.myOption1; // 'baz'
 a.options.myOption2; // 'bar'
 a.options.myOption3; // 5
 </code></pre>
-<p>There's also <a href="#util-setoptions"><code>L.Util.setOptions</code></a>, a method for
-conveniently merging options passed to constructor with the defaults
-defines in the class:</p>
+<p>还有 <a href="#util-setoptions"><code>L.Util.setOptions</code></a>，这个方法可以方便地将传递给构造函数的选项与类中定义的默认值合并:</p>
 <pre><code class="language-js">var MyClass = L.Class.extend({
     options: {
         foo: 'bar',
@@ -21950,21 +21943,17 @@ defines in the class:</p>
 var a = new MyClass({bla: 10});
 a.options; // {foo: 'bar', bla: 10}
 </code></pre>
-<p>Note that the options object allows any keys, not just
-the options defined by the class and its base classes.
-This means you can use the options object to store
-application specific information, as long as you avoid
-keys that are already used by the class in question.</p>
+<p>请注意，options对象允许任何键，而不仅仅是该类及其基类所定义的选项。这意味着你可以使用options对象来存储应用程序的特定信息，只要你避免使用已经被有关类使用的键。</p>
 
 
 
 </section><section >
 
-<h4 id='class-includes'>Includes</h4>
+<h4 id='class-includes'>Includes 包含</h4>
 
 
 
-<p><code>includes</code> is a special class property that merges all specified objects into the class (such objects are called mixins).</p>
+<p><code>includes</code> 是一个特殊的类属性，它将所有指定的对象合并到类中（这样的对象被称为mixins）。</p>
 <pre><code class="language-js"> var MyMixin = {
     foo: function () { ... },
     bar: 5
@@ -21977,10 +21966,10 @@ var MyClass = L.Class.extend({
 var a = new MyClass();
 a.foo();
 </code></pre>
-<p>You can also do such includes in runtime with the <code>include</code> method:</p>
+<p>你也可以在运行时用 <code>include</code> 方法做这种包含:</p>
 <pre><code class="language-js">MyClass.include(MyMixin);
 </code></pre>
-<p><code>statics</code> is just a convenience property that injects specified object properties as the static properties of the class, useful for defining constants:</p>
+<p><code>statics</code> 只是一个方便的属性，它将指定的对象属性注入到类的静态属性中，对于定义常量很有用:</p>
 <pre><code class="language-js">var MyClass = L.Class.extend({
     statics: {
         FOO: 'bar',
@@ -21999,13 +21988,13 @@ MyClass.FOO; // 'bar'
 
 
 
-<p>If you're a plugin developer, you often need to add additional initialization code to existing classes (e.g. editing hooks for <a href="#polyline"><code>L.Polyline</code></a>). Leaflet comes with a way to do it easily using the <code>addInitHook</code> method:</p>
+<p>如果你是一个插件的开发者，你经常需要为现有的类添加额外的初始化代码 (例如，为 <a href="#polyline"><code>L.Polyline</code></a> 编辑钩子)。Leaflet自带了一种方法，可以使用 <code>addInitHook</code> 方法轻松做到这一点:</p>
 <pre><code class="language-js">MyClass.addInitHook(function () {
-    // ... do something in constructor additionally
-    // e.g. add event listeners, set custom properties etc.
+    // ... 在构造函数中额外做一些事情
+    // 例如添加事件侦听器，设置自定义属性等。
 });
 </code></pre>
-<p>You can also use the following shortcut when you just need to make one additional method call:</p>
+<p>当您只需要进行一个额外的方法调用时，您也可以使用以下快捷方式:</p>
 <pre><code class="language-js">MyClass.addInitHook('methodName', arg1, arg2, …);
 </code></pre>
 
@@ -22015,7 +22004,7 @@ MyClass.FOO; // 'bar'
 
 
 </section><section>
-<h3 id='class-function'>Functions</h3>
+<h3 id='class-function'>Functions 函数</h3>
 
 <section >
 
@@ -22032,23 +22021,22 @@ MyClass.FOO; // 'bar'
 	<tr id='class-extend'>
 		<td><code><b>extend</b>(<nobr>&lt;Object&gt;</nobr> <i>props</i>)</code></td>
 		<td><code>Function</code></td>
-		<td><a href="#class-inheritance">Extends the current class</a> given the properties to be included.
-Returns a Javascript function that is a class constructor (to be called with <code>new</code>).</td>
+		<td><a href="#class-inheritance">扩展当前的类</a> ，给定要包括的属性。返回一个Javascript函数，该函数是一个类的构造函数 (可与 <code>new</code> 一起调用)。</td>
 	</tr>
 	<tr id='class-include'>
 		<td><code><b>include</b>(<nobr>&lt;Object&gt;</nobr> <i>properties</i>)</code></td>
 		<td><code>this</code></td>
-		<td><a href="#class-includes">Includes a mixin</a> into the current class.</td>
+		<td>在当前类中<a href="#class-includes">包含一个 mixin</a> 。</td>
 	</tr>
 	<tr id='class-mergeoptions'>
 		<td><code><b>mergeOptions</b>(<nobr>&lt;Object&gt;</nobr> <i>options</i>)</code></td>
 		<td><code>this</code></td>
-		<td><a href="#class-options">Merges <code>options</code></a> into the defaults of the class.</td>
+		<td><a href="#class-options">合并 <code>选项</code></a> 到类的默认值中。</td>
 	</tr>
 	<tr id='class-addinithook'>
 		<td><code><b>addInitHook</b>(<nobr>&lt;Function&gt;</nobr> <i>fn</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Adds a <a href="#class-constructor-hooks">constructor hook</a> to the class.</td>
+		<td>给类添加一个<a href="#class-constructor-hooks">构造函数钩子</a>。</td>
 	</tr>
 </tbody></table>
 
