@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Lasso selection plugin.
+套索选择插件。

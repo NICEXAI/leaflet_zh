@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A fixed positioned, resizable rectangle for selecting an area on the map.
+一个固定位置、可调整大小的矩形，用于选择地图上的一个区域。

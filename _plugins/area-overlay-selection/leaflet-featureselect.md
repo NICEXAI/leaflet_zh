@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use a configurable centerpoint marker to select any geometry type from a GeoJSON layer.
+使用可配置的中心点标记从 GeoJSON 图层中选择任何几何类型。

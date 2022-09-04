@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Selecting feature layers on a map by drawing an area.
+通过绘制区域选择地图上的要素图层。

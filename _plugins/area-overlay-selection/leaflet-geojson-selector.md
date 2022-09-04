@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet Control for selection from GeoJSON feature in an interactive list and map.
+用于从交互式列表和地图中的 GeoJSON 功能中进行选择的 Leaflet 控件。

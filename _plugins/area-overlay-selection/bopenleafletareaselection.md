@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-leaflet-area-selection allows to easily select a polygonal area on the map.
+Leaflet-区域选择允许在地图上轻松选择一个多边形区域。

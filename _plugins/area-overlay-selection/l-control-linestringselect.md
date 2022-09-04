@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Fast LineString(polyline) partial selection tool: select a stretch between two points in a complex path.
+快速 LineString(polyline) 部分选择工具：选择复杂路径中两点之间的拉伸。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A draggable and resizable rectangle for selecting an area on a map and creating a gray overlay in unselected areas.
+一个可拖动且可调整大小的矩形，用于选择地图上的区域并在未选择的区域中创建灰色叠加图层。

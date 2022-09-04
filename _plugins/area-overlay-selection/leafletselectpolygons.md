@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet-Select-Polygons allows the selection of several polygons and also adjusts the base map view.
+Leaflet-Select-Polygons 允许选择多个多边形并调整基本地图视图。

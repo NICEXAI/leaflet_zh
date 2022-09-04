@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows querying which layer is under a screen coordinate.
+允许查询哪个图层在屏幕坐标之下。
