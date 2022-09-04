@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Block for the New WordPress Block Editor based on Leaflet, it allow add and custom maps from a visual interface.
+基于 Leaflet 的新 WordPress 块编辑器的块，它允许从可视界面添加和自定义地图。

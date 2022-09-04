@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A WordPress trip summary plugin to help travel bloggers manage and display structured information about their train rides and biking or hiking trips.
+一个 WordPress 旅行摘要插件，可帮助旅行博主管理和显示有关其乘坐火车、骑自行车或远足旅行的结构化信息。

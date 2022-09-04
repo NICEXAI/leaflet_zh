@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Easy to use, WordPress Map plugin based on Open Street Map and Leaflet with custom markers images, descriptions and links.
+易于使用的 WordPress 地图插件，基于 Open Street Map 和 Leaflet，带有自定义标记图像、描述和链接。

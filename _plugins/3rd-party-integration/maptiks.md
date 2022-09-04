@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Analytics platform for web maps. Track map activities, layer load times, marker clicks, and more!
+Web 地图的分析平台。 跟踪地图活动、图层加载时间、标记点击等等！

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Simple plugin for adding Facebook like button as a control.
+一个简单的插件，用于添加 Facebook like 按钮作为控件。

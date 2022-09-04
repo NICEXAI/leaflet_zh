@@ -9,5 +9,5 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A WordPress plugin / comprehensive geo-content management system that allows users to pin, organize and share their favorite places and tracks as well as elevation charts. 
-Also integrates several leaflet plugins like leaflet-bing-layer, leaflet-edgebuffer, leaflet-fullscreen, leaflet-gesture-handling, leaflet-minimap, leaflet.gridlayer.googlemutant, leaflet.locatecontrol, leaflet.markercluster and leaflet-geoman-free.
+一个 WordPress 插件/综合地理内容管理系统，允许用户固定、组织和分享他们最喜欢的地方和轨迹以及海拔图表。
+还集成了几个leaflet插件，如leaflet-bing-layer、leaflet-edgebuffer、leaflet-fullscreen、leaflet-gesture-handling、leaflet-minimap、leaflet.gridlayer.googlemutant、leaflet.locatecontrol、leaflet.markercluster和leaflet-geoman-free。

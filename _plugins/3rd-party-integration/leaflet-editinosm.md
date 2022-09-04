@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add a control with links to open the current map view on main OSM editors.
+在主要的 OSM 编辑器上添加一个带链接的控件来打开当前地图视图。

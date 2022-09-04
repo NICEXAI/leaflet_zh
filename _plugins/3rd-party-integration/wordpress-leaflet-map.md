@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Interactive and flexible shortcode to create multiple maps in posts and pages,			and to add multiple markers on those maps.
+交互式和灵活的 shortcode ，在文章和页面中创建多个地图，并在这些地图上添加多个标记。

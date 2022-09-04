@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Drupal (7.x and 8.x) module to integrate Leaflet maps in your Drupal site. Contains a field formatter to show a map for fields containing geospatial data, Views integration to plot data on a map, and a lightweight and easy to use API. Currently used by over 10.000 sites.
+一个 Drupal（7.x和8.x）模块，将 Leaflet 地图整合到你的 Drupal 网站中。它包含一个字段格式化器来显示包含地理空间数据的字段的地图，整合 Views 来在地图上绘制数据，以及一个轻量级和易于使用的 API。目前有超过10,000个网站在使用。

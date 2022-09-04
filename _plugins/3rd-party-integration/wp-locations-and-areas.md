@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-WordPress plugin to showcase widely distributed locations on a single map with additional navigation tabs for regions. The map is based on Leaflet JS and offers you several free map styles. Gutenberg Block included.
+WordPress 插件，在一张地图上展示广泛分布的地点，并有额外的区域导航标签。该地图基于 Leaflet JS，为您提供几种免费的地图样式。包括 Gutenberg 块。

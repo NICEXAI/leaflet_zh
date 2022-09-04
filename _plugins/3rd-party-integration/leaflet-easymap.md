@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Include a map in your HTML page without one line of programming. A data-driven Javascript module.
+在你的 HTML 页面中引入地图，无需一行编程。 一个数据驱动的 Javascript 模块。
