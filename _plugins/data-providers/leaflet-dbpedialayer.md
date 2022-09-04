@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A layer with Points of interest from Wikipedia - loaded via ajax from DBpedia's SPARQL endpoint.
+来自 Wikipedia 的兴趣点图层 - 通过 ajax 从 DBpedia 的 SPARQL 端点加载。

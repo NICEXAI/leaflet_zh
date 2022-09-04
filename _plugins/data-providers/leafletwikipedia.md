@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A leaflet plugin to display Wikipedia API entries on a map layer.
+用于在地图图层上显示 Wikipedia API 条目的 Leaflet 插件。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Easily include data from the <a href="http://overpass-api.de">overpass api</a>.
+轻松引入来自 <a href="http://overpass-api.de">overpass api</a> 的数据。

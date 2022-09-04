@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin for RainViewer radar data API.
+RainViewer 雷达数据 API 插件。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Collection of different environmental map layers in an easy to use Leaflet library.
+在易于使用的 Leaflet 库中收集不同的环境地图图层。

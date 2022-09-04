@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Animated satellite weather radar overlays for Leaflet.
+Leaflet 的动画卫星天气雷达 overlay 图层。

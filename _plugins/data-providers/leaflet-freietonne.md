@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An overlay with nautical features from <a href="https://www.freietonne.de/">FreieTonne</a>.
+来自<a href="https://www.freietonne.de/">FreieTonne</a>的具有航海特征的 overlay。

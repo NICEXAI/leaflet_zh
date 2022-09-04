@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays animated weather map on your page using Windy's free API.
+使用 Windy 的免费 API 在你的页面上显示动画天气图。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows to easily create vector layers from a number of geo web services, such as ArcGIS Server, Arc2Earth, GeoIQ, CartoDB and GIS Cloud.
+允许从许多地理 Web 服务轻松创建矢量图层，例如 ArcGIS Server、Arc2Earth、GeoIQ、CartoDB 和 GIS Cloud。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display Geographical-Photos from Geograph Britain and Ireland in an interactive overlay, using their API.
+使用他们的 API 在交互式 overlay 中显示来自 Geograph British 和 Ireland 的地理照片。
