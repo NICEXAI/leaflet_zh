@@ -20536,7 +20536,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='browser'>Browser</h2><p>A namespace with static properties for browser/feature detection used by Leaflet internally.</p>
+</section><h2 id='browser'>Browser 浏览器</h2><p>Leaflet 内部使用的具有用于浏览器/功能检测的静态属性的命名空间。</p>
 
 <section>
 <h3 id='browser-example'>使用示例</h3>
@@ -20575,161 +20575,158 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	<tr id='browser-ie'>
 		<td><code><b>ie</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all Internet Explorer versions (not Edge).</td>
+		<td>当浏览器是 Internet Explorer（不是Edge）时，则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-ielt9'>
 		<td><code><b>ielt9</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for Internet Explorer versions less than 9.</td>
+		<td>当浏览器是版本号小于 9 的 Internet Explorer 时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-edge'>
 		<td><code><b>edge</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for the Edge web browser.</td>
+		<td>当浏览器是 Edge 浏览器时则返回 <code>true</code>。</td>
 	</tr>
 	<tr id='browser-webkit'>
 		<td><code><b>webkit</b></code></td>
 		<td><code>Boolean;</code></td>
-		<td><code>true</code> for webkit-based browsers like Chrome and Safari (including mobile versions).</td>
+		<td>当浏览器是基于 webkit 的浏览器时，如 Chrome 和 Safari（包括移动版本），则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-android'>
 		<td><code><b>android</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><strong>Deprecated.</strong> <code>true</code> for any browser running on an Android platform.</td>
+		<td>当浏览器是运行在安卓平台上的任何浏览器时则都返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-android23'>
 		<td><code><b>android23</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><strong>Deprecated.</strong> <code>true</code> for browsers running on Android 2 or Android 3.</td>
+		<td>当浏览器是运行在安卓2或安卓3上的任何浏览器时则都返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-androidstock'>
 		<td><code><b>androidStock</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><strong>Deprecated.</strong> <code>true</code> for the Android stock browser (i.e. not Chrome)</td>
+		<td>当浏览器是运行在安卓平台的任何非 Chrome 浏览器时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-opera'>
 		<td><code><b>opera</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for the Opera browser</td>
+		<td>当浏览器是 Opera 浏览器时则返回 <code>true</code>。</td>
 	</tr>
 	<tr id='browser-chrome'>
 		<td><code><b>chrome</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for the Chrome browser.</td>
+		<td>当浏览器是 Chrome 浏览器时则返回 <code>true</code>。</td>
 	</tr>
 	<tr id='browser-gecko'>
 		<td><code><b>gecko</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for gecko-based browsers like Firefox.</td>
+		<td>当浏览器是类似于 Firefox 这种基于 gecko 的浏览器时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-safari'>
 		<td><code><b>safari</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for the Safari browser.</td>
+		<td>当浏览器是 Safari 浏览器时则返回 <code>true</code>。</td>
 	</tr>
 	<tr id='browser-opera12'>
 		<td><code><b>opera12</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for the Opera browser supporting CSS transforms (version 12 or later).</td>
+		<td>当浏览器是支持 CSS transforms 的 Opera 浏览器（版本号是12或更高版本）时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-win'>
 		<td><code><b>win</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> when the browser is running in a Windows platform</td>
+		<td>当浏览器是在 Windows 平台上运行时则返回 <code>true</code>。</td>
 	</tr>
 	<tr id='browser-ie3d'>
 		<td><code><b>ie3d</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all Internet Explorer versions supporting CSS transforms.</td>
+		<td>当浏览器是支持 CSS transforms 的所有版本的 Internet Explorer 浏览器时则都返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-webkit3d'>
 		<td><code><b>webkit3d</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for webkit-based browsers supporting CSS transforms.</td>
+		<td>当浏览器是支持 CSS transforms 并且基于 webkit 的浏览器时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-gecko3d'>
 		<td><code><b>gecko3d</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for gecko-based browsers supporting CSS transforms.</td>
+		<td>当浏览器是支持 CSS transforms 并且基于 gecko 的浏览器时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-any3d'>
 		<td><code><b>any3d</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all browsers supporting CSS transforms.</td>
+		<td>当浏览器是支持 CSS transforms 的浏览器时则返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-mobile'>
 		<td><code><b>mobile</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all browsers running in a mobile device.</td>
+		<td>对于在移动设备中运行的所有浏览器来说都为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-mobilewebkit'>
 		<td><code><b>mobileWebkit</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all webkit-based browsers in a mobile device.</td>
+		<td>对移动设备中所有基于 webkit 的浏览器来说都为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-mobilewebkit3d'>
 		<td><code><b>mobileWebkit3d</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all webkit-based browsers in a mobile device supporting CSS transforms.</td>
+		<td>对于支持 CSS transforms 的移动设备中所有基于 webkit 的浏览器来说都为<code>true</code> 。</td>
 	</tr>
 	<tr id='browser-mspointer'>
 		<td><code><b>msPointer</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for browsers implementing the Microsoft touch events model (notably IE10).</td>
+		<td>对于实现微软触摸事件模型的浏览器（特别是IE10）来说都为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-pointer'>
 		<td><code><b>pointer</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all browsers supporting <a href="https://msdn.microsoft.com/en-us/library/dn433244%28v=vs.85%29.aspx">pointer events</a>.</td>
+		<td>对于所有支持 <a href="https://msdn.microsoft.com/en-us/library/dn433244%28v=vs.85%29.aspx">指针事件</a> 的浏览器来说都为<code>true</code> 。</td>
 	</tr>
 	<tr id='browser-touchnative'>
 		<td><code><b>touchNative</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all browsers supporting <a href="https://developer.mozilla.org/docs/Web/API/Touch_events">touch events</a>.
-<strong>This does not necessarily mean</strong> that the browser is running in a computer with
-a touchscreen, it only means that the browser is capable of understanding
-touch events.</td>
+		<td>对于所有支持 <a href="https://developer.mozilla.org/docs/Web/API/Touch_events">触摸事件</a>的浏览器来说都为 <code>true</code> 。这并不一定意味着浏览器是在有触摸屏的电脑中运行的，它只意味着浏览器能够理解触摸事件。</td>
 	</tr>
 	<tr id='browser-touch'>
 		<td><code><b>touch</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for all browsers supporting either <a href="#browser-touch">touch</a> or <a href="#browser-pointer">pointer</a> events.
-Note: pointer events will be preferred (if available), and processed for all <code>touch*</code> listeners.</td>
+		<td>对于所有支持 <a href="#browser-touch">touch</a> 或 <a href="#browser-pointer">pointer</a> 事件的浏览器来说都为 <code>true</code>。
+			注意：pointer 事件将是首选（如果可用），并被所有 <code>touch*</code> 事件所监听和处理。</td>
 	</tr>
 	<tr id='browser-mobileopera'>
 		<td><code><b>mobileOpera</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for the Opera browser in a mobile device.</td>
+		<td>对于移动设备中的 Opera 浏览器来说都为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-mobilegecko'>
 		<td><code><b>mobileGecko</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for gecko-based browsers running in a mobile device.</td>
+		<td>用于在移动设备中运行的基于 gecko 的浏览器来说都为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-retina'>
 		<td><code><b>retina</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for browsers on a high-resolution &quot;retina&quot; screen or on any screen when browser's display zoom is more than 100%.</td>
+		<td>对于高分辨率 &quot;retina&quot; 屏幕上的浏览器或浏览器的显示缩放率超过100%的任何屏幕上的浏览器来说，都是 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-passiveevents'>
 		<td><code><b>passiveEvents</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> for browsers that support passive events.</td>
+		<td>对于支持 passive 事件的浏览器来说都为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-canvas'>
 		<td><code><b>canvas</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> when the browser supports <a href="https://developer.mozilla.org/docs/Web/API/Canvas_API"><code>&lt;canvas&gt;</code></a>.</td>
+		<td>当浏览器支持 <a href="https://developer.mozilla.org/docs/Web/API/Canvas_API"><code>&lt;canvas&gt;</code></a> 时为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-svg'>
 		<td><code><b>svg</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> when the browser supports <a href="https://developer.mozilla.org/docs/Web/SVG">SVG</a>.</td>
+		<td>当浏览器支持 <a href="https://developer.mozilla.org/docs/Web/SVG">SVG</a> 时为 <code>true</code> 。</td>
 	</tr>
 	<tr id='browser-vml'>
 		<td><code><b>vml</b></code></td>
 		<td><code>Boolean</code></td>
-		<td><code>true</code> if the browser supports <a href="https://en.wikipedia.org/wiki/Vector_Markup_Language">VML</a>.</td>
+		<td>当浏览器支持 <a href="https://en.wikipedia.org/wiki/Vector_Markup_Language">VML</a> 时为 <code>true</code> 。</td>
 	</tr>
 </tbody></table>
 
