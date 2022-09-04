@@ -24177,25 +24177,23 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='event-objects'>Event objects</h2><p>Whenever a class inheriting from <a href="#evented"><code>Evented</code></a> fires an event, a listener function
-will be called with an event argument, which is a plain object containing
-information about the event. For example:</p>
+</section><h2 id='event-objects'>Event objects 事件对象</h2><p>每当从 <a href="#evented"><code>Evented</code></a> 继承的类触发事件时，都会使用事件参数调用侦听器函数，该参数是包含有关事件信息的普通对象。 例如：</p>
 <pre><code class="language-js">map.on('click', function(ev) {
     alert(ev.latlng); // ev is an event object (MouseEvent in this case)
 });
 </code></pre>
-<p>The information available depends on the event type:</p>
+<p>可用信息取决于事件类型:</p>
 
 <span id='event'></span>
 
 <section>
-<h3 id='event-property'>Event</h3>
+<h3 id='event-property'>Event 事件</h3>
 
 <section >
 
 
 
-<div class='section-comments'>The base event object. All other event objects contain these properties too.</div>
+<div class='section-comments'>基本事件对象。 所有其他事件对象也包含这些属性。</div>
 
 <table><thead>
 	<tr>
@@ -24207,30 +24205,28 @@ information about the event. For example:</p>
 	<tr id='event-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型 (例如， <code>'click'</code>)。</td>
 	</tr>
 	<tr id='event-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发该事件的对象。对于传播的事件，在传播链中的最后一个对象 触发事件的传播链中的最后一个对象。</td>
 	</tr>
 	<tr id='event-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发事件的对象。 对于非传播事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='event-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，最后一个将事件传播到其
+			事件的父对象。</td>
 	</tr>
 	<tr id='event-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>废弃的。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24240,7 +24236,7 @@ event parent.</td>
 </section><span id='keyboardevent'></span>
 
 <section>
-<h3 id='keyboardevent-property'>KeyboardEvent</h3>
+<h3 id='keyboardevent-property'>KeyboardEvent 键盘事件</h3>
 
 <section >
 
@@ -24257,7 +24253,7 @@ event parent.</td>
 	<tr id='keyboardevent-originalevent'>
 		<td><code><b>originalEvent</b></code></td>
 		<td><code>DOMEvent</code></td>
-		<td>The original <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">DOM <code>KeyboardEvent</code></a> that triggered this Leaflet event.</td>
+		<td>触发此 Leaflet 事件的原始 <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">DOM <code>KeyboardEvent</code></a> 。</td>
 	</tr>
 </tbody></table>
 
@@ -24265,7 +24261,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24282,30 +24278,27 @@ event parent.</td>
 	<tr id='keyboardevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='keyboardevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='keyboardevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='keyboardevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='keyboardevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24316,7 +24309,7 @@ event parent.</td>
 </section><span id='mouseevent'></span>
 
 <section>
-<h3 id='mouseevent-property'>MouseEvent</h3>
+<h3 id='mouseevent-property'>MouseEvent 鼠标事件</h3>
 
 <section >
 
@@ -24333,22 +24326,22 @@ event parent.</td>
 	<tr id='mouseevent-latlng'>
 		<td><code><b>latlng</b></code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td>The geographical point where the mouse event occurred.</td>
+		<td>鼠标事件发生的地理坐标。</td>
 	</tr>
 	<tr id='mouseevent-layerpoint'>
 		<td><code><b>layerPoint</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>Pixel coordinates of the point where the mouse event occurred relative to the map layer.</td>
+		<td>鼠标事件发生点相对于地图图层的像素坐标。</td>
 	</tr>
 	<tr id='mouseevent-containerpoint'>
 		<td><code><b>containerPoint</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>Pixel coordinates of the point where the mouse event occurred relative to the map сontainer.</td>
+		<td>鼠标事件发生的点相对于地图容器的像素坐标。</td>
 	</tr>
 	<tr id='mouseevent-originalevent'>
 		<td><code><b>originalEvent</b></code></td>
 		<td><code>DOMEvent</code></td>
-		<td>The original <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">DOM <code>MouseEvent</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">DOM <code>TouchEvent</code></a> that triggered this Leaflet event.</td>
+		<td>触发此 Leaflet 事件的原始 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">DOM <code>MouseEvent</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">DOM <code>TouchEvent</code></a> 。</td>
 	</tr>
 </tbody></table>
 
@@ -24356,7 +24349,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24373,30 +24366,27 @@ event parent.</td>
 	<tr id='mouseevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='mouseevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='mouseevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='mouseevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='mouseevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24407,7 +24397,7 @@ event parent.</td>
 </section><span id='locationevent'></span>
 
 <section>
-<h3 id='locationevent-property'>LocationEvent</h3>
+<h3 id='locationevent-property'>LocationEvent 位置事件</h3>
 
 <section >
 
@@ -24424,42 +24414,42 @@ event parent.</td>
 	<tr id='locationevent-latlng'>
 		<td><code><b>latlng</b></code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td>Detected geographical location of the user.</td>
+		<td>检测到用户的地理位置。</td>
 	</tr>
 	<tr id='locationevent-bounds'>
 		<td><code><b>bounds</b></code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td>Geographical bounds of the area user is located in (with respect to the accuracy of location).</td>
+		<td>用户所在区域的地理边界（相对于位置的准确性）。</td>
 	</tr>
 	<tr id='locationevent-accuracy'>
 		<td><code><b>accuracy</b></code></td>
 		<td><code>Number</code></td>
-		<td>Accuracy of location in meters.</td>
+		<td>以米为单位的位置精度。</td>
 	</tr>
 	<tr id='locationevent-altitude'>
 		<td><code><b>altitude</b></code></td>
 		<td><code>Number</code></td>
-		<td>Height of the position above the WGS84 ellipsoid in meters.</td>
+		<td>位置高于 WGS84 椭圆体的高度，以米为单位。</td>
 	</tr>
 	<tr id='locationevent-altitudeaccuracy'>
 		<td><code><b>altitudeAccuracy</b></code></td>
 		<td><code>Number</code></td>
-		<td>Accuracy of altitude in meters.</td>
+		<td>以米为单位的高度精度。</td>
 	</tr>
 	<tr id='locationevent-heading'>
 		<td><code><b>heading</b></code></td>
 		<td><code>Number</code></td>
-		<td>The direction of travel in degrees counting clockwise from true North.</td>
+		<td>以度为单位的行进方向，从真北顺时针计数。</td>
 	</tr>
 	<tr id='locationevent-speed'>
 		<td><code><b>speed</b></code></td>
 		<td><code>Number</code></td>
-		<td>Current velocity in meters per second.</td>
+		<td>当前速度（以米/秒为单位）。</td>
 	</tr>
 	<tr id='locationevent-timestamp'>
 		<td><code><b>timestamp</b></code></td>
 		<td><code>Number</code></td>
-		<td>The time when the position was acquired.</td>
+		<td>获得位置的时间。</td>
 	</tr>
 </tbody></table>
 
@@ -24467,7 +24457,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24484,30 +24474,27 @@ event parent.</td>
 	<tr id='locationevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='locationevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='locationevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='locationevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='locationevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24518,7 +24505,7 @@ event parent.</td>
 </section><span id='errorevent'></span>
 
 <section>
-<h3 id='errorevent-property'>ErrorEvent</h3>
+<h3 id='errorevent-property'>ErrorEvent 错误事件</h3>
 
 <section >
 
@@ -24535,12 +24522,12 @@ event parent.</td>
 	<tr id='errorevent-message'>
 		<td><code><b>message</b></code></td>
 		<td><code>String</code></td>
-		<td>Error message.</td>
+		<td>错误信息。</td>
 	</tr>
 	<tr id='errorevent-code'>
 		<td><code><b>code</b></code></td>
 		<td><code>Number</code></td>
-		<td>Error code (if applicable).</td>
+		<td>错误代码（如果适用）。</td>
 	</tr>
 </tbody></table>
 
@@ -24548,7 +24535,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24565,30 +24552,27 @@ event parent.</td>
 	<tr id='errorevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='errorevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='errorevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='errorevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='errorevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24599,7 +24583,7 @@ event parent.</td>
 </section><span id='layerevent'></span>
 
 <section>
-<h3 id='layerevent-property'>LayerEvent</h3>
+<h3 id='layerevent-property'>LayerEvent 图层事件</h3>
 
 <section >
 
@@ -24616,7 +24600,7 @@ event parent.</td>
 	<tr id='layerevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code><a href='#layer'>Layer</a></code></td>
-		<td>The layer that was added or removed.</td>
+		<td>添加或删除的图层。</td>
 	</tr>
 </tbody></table>
 
@@ -24624,7 +24608,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24641,25 +24625,22 @@ event parent.</td>
 	<tr id='layerevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='layerevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='layerevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='layerevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 </tbody></table>
 
@@ -24670,7 +24651,7 @@ event parent.</td>
 </section><span id='layerscontrolevent'></span>
 
 <section>
-<h3 id='layerscontrolevent-property'>LayersControlEvent</h3>
+<h3 id='layerscontrolevent-property'>LayersControlEvent 图层控制事件</h3>
 
 <section >
 
@@ -24687,12 +24668,12 @@ event parent.</td>
 	<tr id='layerscontrolevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code><a href='#layer'>Layer</a></code></td>
-		<td>The layer that was added or removed.</td>
+		<td>添加或删除的图层。</td>
 	</tr>
 	<tr id='layerscontrolevent-name'>
 		<td><code><b>name</b></code></td>
 		<td><code>String</code></td>
-		<td>The name of the layer that was added or removed.</td>
+		<td>添加或删除的图层的名称。</td>
 	</tr>
 </tbody></table>
 
@@ -24700,7 +24681,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24717,25 +24698,22 @@ event parent.</td>
 	<tr id='layerscontrolevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='layerscontrolevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='layerscontrolevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='layerscontrolevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 </tbody></table>
 
@@ -24746,7 +24724,7 @@ event parent.</td>
 </section><span id='tileevent'></span>
 
 <section>
-<h3 id='tileevent-property'>TileEvent</h3>
+<h3 id='tileevent-property'>TileEvent 瓦片事件</h3>
 
 <section >
 
@@ -24763,12 +24741,12 @@ event parent.</td>
 	<tr id='tileevent-tile'>
 		<td><code><b>tile</b></code></td>
 		<td><code>HTMLElement</code></td>
-		<td>The tile element (image).</td>
+		<td>瓦片元素（图像）。</td>
 	</tr>
 	<tr id='tileevent-coords'>
 		<td><code><b>coords</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>Point object with the tile's <code>x</code>, <code>y</code>, and <code>z</code> (zoom level) coordinates.</td>
+		<td>具有瓦片的 <code>x</code>、 <code>y</code>、 和 <code>z</code> (缩放级别) 坐标的点对象。</td>
 	</tr>
 </tbody></table>
 
@@ -24776,7 +24754,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24793,30 +24771,27 @@ event parent.</td>
 	<tr id='tileevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='tileevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='tileevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='tileevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='tileevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24827,7 +24802,7 @@ event parent.</td>
 </section><span id='tileerrorevent'></span>
 
 <section>
-<h3 id='tileerrorevent-property'>TileErrorEvent</h3>
+<h3 id='tileerrorevent-property'>TileErrorEvent 瓦片错误事件</h3>
 
 <section >
 
@@ -24844,17 +24819,17 @@ event parent.</td>
 	<tr id='tileerrorevent-tile'>
 		<td><code><b>tile</b></code></td>
 		<td><code>HTMLElement</code></td>
-		<td>The tile element (image).</td>
+		<td>瓦片元素（图像）。</td>
 	</tr>
 	<tr id='tileerrorevent-coords'>
 		<td><code><b>coords</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>Point object with the tile's <code>x</code>, <code>y</code>, and <code>z</code> (zoom level) coordinates.</td>
+		<td>具有瓦片的 <code>x</code>、 <code>y</code>、 和 <code>z</code> (缩放级别) 坐标的点对象。</td>
 	</tr>
 	<tr id='tileerrorevent-error'>
 		<td><code><b>error</b></code></td>
 		<td><code>*</code></td>
-		<td>Error passed to the tile's <code>done()</code> callback.</td>
+		<td>传递给瓦片的 <code>done()</code> 回调的错误信息。</td>
 	</tr>
 </tbody></table>
 
@@ -24862,7 +24837,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24879,30 +24854,27 @@ event parent.</td>
 	<tr id='tileerrorevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='tileerrorevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='tileerrorevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='tileerrorevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='tileerrorevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24913,7 +24885,7 @@ event parent.</td>
 </section><span id='resizeevent'></span>
 
 <section>
-<h3 id='resizeevent-property'>ResizeEvent</h3>
+<h3 id='resizeevent-property'>ResizeEvent 调整尺寸事件</h3>
 
 <section >
 
@@ -24930,12 +24902,12 @@ event parent.</td>
 	<tr id='resizeevent-oldsize'>
 		<td><code><b>oldSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>The old size before resize event.</td>
+		<td>resize 事件之前的旧尺寸。</td>
 	</tr>
 	<tr id='resizeevent-newsize'>
 		<td><code><b>newSize</b></code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>The new size after the resize event.</td>
+		<td>resize 事件后的新尺寸。</td>
 	</tr>
 </tbody></table>
 
@@ -24943,7 +24915,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -24960,30 +24932,27 @@ event parent.</td>
 	<tr id='resizeevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='resizeevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='resizeevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='resizeevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='resizeevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -24994,7 +24963,7 @@ event parent.</td>
 </section><span id='geojsonevent'></span>
 
 <section>
-<h3 id='geojsonevent-property'>GeoJSONEvent</h3>
+<h3 id='geojsonevent-property'>GeoJSONEvent GeoJSON事件</h3>
 
 <section >
 
@@ -25011,22 +24980,22 @@ event parent.</td>
 	<tr id='geojsonevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code><a href='#layer'>Layer</a></code></td>
-		<td>The layer for the GeoJSON feature that is being added to the map.</td>
+		<td>要添加到地图的 GeoJSON 要素的图层。</td>
 	</tr>
 	<tr id='geojsonevent-properties'>
 		<td><code><b>properties</b></code></td>
 		<td><code>Object</code></td>
-		<td>GeoJSON properties of the feature.</td>
+		<td>要素的 GeoJSON 属性。</td>
 	</tr>
 	<tr id='geojsonevent-geometrytype'>
 		<td><code><b>geometryType</b></code></td>
 		<td><code>String</code></td>
-		<td>GeoJSON geometry type of the feature.</td>
+		<td>要素的 GeoJSON 几何类型。</td>
 	</tr>
 	<tr id='geojsonevent-id'>
 		<td><code><b>id</b></code></td>
 		<td><code>String</code></td>
-		<td>GeoJSON ID of the feature (if present).</td>
+		<td>要素的 GeoJSON ID（如果存在）。</td>
 	</tr>
 </tbody></table>
 
@@ -25034,7 +25003,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -25051,25 +25020,22 @@ event parent.</td>
 	<tr id='geojsonevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='geojsonevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='geojsonevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='geojsonevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 </tbody></table>
 
@@ -25080,7 +25046,7 @@ event parent.</td>
 </section><span id='popupevent'></span>
 
 <section>
-<h3 id='popupevent-property'>PopupEvent</h3>
+<h3 id='popupevent-property'>PopupEvent 弹窗事件</h3>
 
 <section >
 
@@ -25097,7 +25063,7 @@ event parent.</td>
 	<tr id='popupevent-popup'>
 		<td><code><b>popup</b></code></td>
 		<td><code><a href='#popup'>Popup</a></code></td>
-		<td>The popup that was opened or closed.</td>
+		<td>打开或关闭 Popup。</td>
 	</tr>
 </tbody></table>
 
@@ -25105,7 +25071,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -25122,30 +25088,27 @@ event parent.</td>
 	<tr id='popupevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='popupevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='popupevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='popupevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='popupevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -25156,7 +25119,7 @@ event parent.</td>
 </section><span id='tooltipevent'></span>
 
 <section>
-<h3 id='tooltipevent-property'>TooltipEvent</h3>
+<h3 id='tooltipevent-property'>TooltipEvent 工具提示事件</h3>
 
 <section >
 
@@ -25173,7 +25136,7 @@ event parent.</td>
 	<tr id='tooltipevent-tooltip'>
 		<td><code><b>tooltip</b></code></td>
 		<td><code><a href='#tooltip'>Tooltip</a></code></td>
-		<td>The tooltip that was opened or closed.</td>
+		<td>打开或关闭 Tooltip。</td>
 	</tr>
 </tbody></table>
 
@@ -25181,7 +25144,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -25198,30 +25161,27 @@ event parent.</td>
 	<tr id='tooltipevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='tooltipevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='tooltipevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='tooltipevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='tooltipevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -25232,7 +25192,7 @@ event parent.</td>
 </section><span id='dragendevent'></span>
 
 <section>
-<h3 id='dragendevent-property'>DragEndEvent</h3>
+<h3 id='dragendevent-property'>DragEndEvent 拖动结束事件</h3>
 
 <section >
 
@@ -25249,7 +25209,7 @@ event parent.</td>
 	<tr id='dragendevent-distance'>
 		<td><code><b>distance</b></code></td>
 		<td><code>Number</code></td>
-		<td>The distance in pixels the draggable element was moved by.</td>
+		<td>可拖动元素移动的距离（以像素为单位）。</td>
 	</tr>
 </tbody></table>
 
@@ -25257,7 +25217,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -25274,30 +25234,27 @@ event parent.</td>
 	<tr id='dragendevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='dragendevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='dragendevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='dragendevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='dragendevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
@@ -25308,7 +25265,7 @@ event parent.</td>
 </section><span id='zoomanimevent'></span>
 
 <section>
-<h3 id='zoomanimevent-property'>ZoomAnimEvent</h3>
+<h3 id='zoomanimevent-property'>ZoomAnimEvent 缩放动画事件</h3>
 
 <section >
 
@@ -25325,17 +25282,17 @@ event parent.</td>
 	<tr id='zoomanimevent-center'>
 		<td><code><b>center</b></code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td>The current center of the map</td>
+		<td>当前地图的中心</td>
 	</tr>
 	<tr id='zoomanimevent-zoom'>
 		<td><code><b>zoom</b></code></td>
 		<td><code>Number</code></td>
-		<td>The current zoom level of the map</td>
+		<td>地图的当前缩放级别</td>
 	</tr>
 	<tr id='zoomanimevent-noupdate'>
 		<td><code><b>noUpdate</b></code></td>
 		<td><code>Boolean</code></td>
-		<td>Whether layers should update their contents due to this event</td>
+		<td>由于此事件，图层是否应更新其内容</td>
 	</tr>
 </tbody></table>
 
@@ -25343,7 +25300,7 @@ event parent.</td>
 
 
 <div class='accordion'>
-	<label><span class='expander'>▶</span> Properties inherited from <a href='#event'>Event</a></label>
+	<label><span class='expander'>▶</span> 继承自 <a href='#event'>Event</a> 的属性</label>
 	<div class='accordion-overflow'>
 		<div class='accordion-content'><section >
 
@@ -25360,30 +25317,27 @@ event parent.</td>
 	<tr id='zoomanimevent-type'>
 		<td><code><b>type</b></code></td>
 		<td><code>String</code></td>
-		<td>The event type (e.g. <code>'click'</code>).</td>
+		<td>事件类型（例如，<code>'click'</code>）。</td>
 	</tr>
 	<tr id='zoomanimevent-target'>
 		<td><code><b>target</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that fired the event. For propagated events, the last object in
-the propagation chain that fired the event.</td>
+		<td>触发事件的对象。对于传播事件，传播链中触发事件的最后一个对象。</td>
 	</tr>
 	<tr id='zoomanimevent-sourcetarget'>
 		<td><code><b>sourceTarget</b></code></td>
 		<td><code>Object</code></td>
-		<td>The object that originally fired the event. For non-propagated events, this will
-be the same as the <code>target</code>.</td>
+		<td>最初触发该事件的对象。对于非传播的事件，这将与 <code>target</code> 相同。</td>
 	</tr>
 	<tr id='zoomanimevent-propagatedfrom'>
 		<td><code><b>propagatedFrom</b></code></td>
 		<td><code>Object</code></td>
-		<td>For propagated events, the last object that propagated the event to its
-event parent.</td>
+		<td>对于传播的事件，将事件传播到其事件父级的最后一个对象。</td>
 	</tr>
 	<tr id='zoomanimevent-layer'>
 		<td><code><b>layer</b></code></td>
 		<td><code>Object</code></td>
-		<td><strong>Deprecated.</strong> The same as <code>propagatedFrom</code>.</td>
+		<td><strong>已弃用。</strong> 与 <code>propagatedFrom</code> 相同。</td>
 	</tr>
 </tbody></table>
 
