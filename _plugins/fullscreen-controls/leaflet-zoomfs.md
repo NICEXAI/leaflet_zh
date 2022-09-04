@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-A fullscreen button control.
+全屏按钮控件。
