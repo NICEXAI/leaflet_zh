@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-A reset view control for Leaflet. Design for [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) integration.
+Leaflet 的重置视图控件。 [Drupal Leaflet Module](https://www.drupal.org/project/leaflet) 集成设计。

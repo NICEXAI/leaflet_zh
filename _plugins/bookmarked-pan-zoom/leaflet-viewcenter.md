@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple control that adds a button to change view and zoom to predefined values in options.
+一个简单的控件，它添加了一个按钮来改变视图和缩放到选项中的预定义值。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A control that can show a predefined extent while saving the current one so it can be jumped back to.
+一个可以显示预定义范围的控件，同时保存当前的范围，以便可以跳回。

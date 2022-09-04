@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Track history of map movements and zoom locations similar to a browser.
+类似于浏览器跟踪地图移动和缩放位置的历史记录。

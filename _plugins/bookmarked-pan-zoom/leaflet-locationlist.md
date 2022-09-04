@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A control to jump between predefined locations and zooms.
+在预定义位置和缩放之间跳转的控件。

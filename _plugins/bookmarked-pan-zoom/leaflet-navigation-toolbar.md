@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet control for simple back, forward and home navigation.
+用于简单的后退、前进和主页导航的 Leaflet 控制。

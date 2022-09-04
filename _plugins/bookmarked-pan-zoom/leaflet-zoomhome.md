@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Zoom control with a home button for resetting the view.
+带有用于重置视图的主页按钮的缩放控件。

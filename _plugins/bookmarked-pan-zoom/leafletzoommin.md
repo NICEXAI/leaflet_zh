@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds a button to the zoom control that allows you to zoom to the map minimum zoom level in a single click.
+向缩放控件添加一个按钮，允许你单击一下即可缩放到地图的最小缩放级别。

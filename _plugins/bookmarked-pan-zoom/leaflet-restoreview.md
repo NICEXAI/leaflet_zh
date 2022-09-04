@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Stores and restores map view using localStorage.
+使用 localStorage 存储和恢复地图视图。

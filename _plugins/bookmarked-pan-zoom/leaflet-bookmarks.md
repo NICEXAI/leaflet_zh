@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Control for adding and navigating between user-created bookmarks on the map.
+控制在地图上用户创建的书签之间添加和导航。

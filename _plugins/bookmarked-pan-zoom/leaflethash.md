@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin for persisting map state and browsing history through the URL hash.
+通过 URL 哈希保持地图状态和浏览历史的插件。
