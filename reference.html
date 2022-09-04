@@ -23502,7 +23502,7 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='crs'>CRS</h2>
+</section><h2 id='crs'>CRS 坐标系</h2>
 <section>
 <h3 id='crs-method'>Methods 方法</h3>
 
@@ -23521,70 +23521,63 @@ layer.closeTooltip();
 	<tr id='crs-latlngtopoint'>
 		<td><code><b>latLngToPoint</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Projects geographical coordinates into pixel coordinates for a given zoom.</p>
+		<td><p>将地理坐标投影到给定缩放的像素坐标中。</p>
 </td>
 	</tr>
 	<tr id='crs-pointtolatlng'>
 		<td><code><b>pointToLatLng</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>, <nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>The inverse of <code>latLngToPoint</code>. Projects pixel coordinates on a given
-zoom into geographical coordinates.</p>
+		<td><p> <code>latLngToPoint</code>的倒数。 将给定缩放上的像素坐标投影到地理坐标中。</p>
 </td>
 	</tr>
 	<tr id='crs-project'>
 		<td><code><b>project</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Projects geographical coordinates into coordinates in units accepted for
-this CRS (e.g. meters for EPSG:3857, for passing it to WMS services).</p>
+		<td><p>将地理坐标投影为接受单位的坐标
+			此 CRS（例如 EPSG:3857 的仪表，用于将其传递给 WMS 服务）。</p>
 </td>
 	</tr>
 	<tr id='crs-unproject'>
 		<td><code><b>unproject</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Given a projected coordinate returns the corresponding LatLng.
-The inverse of <code>project</code>.</p>
+		<td><p>给定一个投影坐标返回相应的 LatLng。 <code>project</code>的反面。</p>
 </td>
 	</tr>
 	<tr id='crs-scale'>
 		<td><code><b>scale</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the scale used when transforming projected coordinates into
-pixel coordinates for a particular zoom. For example, it returns
-<code>256 * 2^zoom</code> for Mercator-based CRS.</p>
+		<td><p>返回将投影坐标转换为特定缩放的像素坐标时使用的比例。 例如，它为基于墨卡托的 CRS 返回
+			<code>256 * 2^zoom</code>。</p>
 </td>
 	</tr>
 	<tr id='crs-zoom'>
 		<td><code><b>zoom</b>(<nobr>&lt;Number&gt;</nobr> <i>scale</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Inverse of <code>scale()</code>, returns the zoom level corresponding to a scale
-factor of <code>scale</code>.</p>
+		<td><p> <code>scale()</code>的反函数，返回与 <code>scale</code>的比例因子对应的缩放级别。</p>
 </td>
 	</tr>
 	<tr id='crs-getprojectedbounds'>
 		<td><code><b>getProjectedBounds</b>(<nobr>&lt;Number&gt;</nobr> <i>zoom</i>)</code></td>
 		<td><code><a href='#bounds'>Bounds</a></code></td>
-		<td><p>Returns the projection's bounds scaled and transformed for the provided <code>zoom</code>.</p>
+		<td><p>返回投影的边界，并根据提供的 <code>缩放比例</code>进行转换。</p>
 </td>
 	</tr>
 	<tr id='crs-distance'>
 		<td><code><b>distance</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng1</i>, <nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng2</i>)</code></td>
 		<td><code>Number</code></td>
-		<td><p>Returns the distance between two geographical coordinates.</p>
+		<td><p>返回两个地理坐标之间的距离。</p>
 </td>
 	</tr>
 	<tr id='crs-wraplatlng'>
 		<td><code><b>wrapLatLng</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>Returns a <a href="#latlng"><code>LatLng</code></a> where lat and lng has been wrapped according to the
-CRS's <code>wrapLat</code> and <code>wrapLng</code> properties, if they are outside the CRS's bounds.</p>
+		<td><p>返回一个 <a href="#latlng"><code>LatLng</code></a> ，其中 lat 和 lng 已根据 CRS 的 <code>wrapLat</code> 和 <code>wrapLng</code> 属性进行包装，如果它们超出 CRS 的边界。</p>
 </td>
 	</tr>
 	<tr id='crs-wraplatlngbounds'>
 		<td><code><b>wrapLatLngBounds</b>(<nobr>&lt;<a href='#latlngbounds'>LatLngBounds</a>&gt;</nobr> <i>bounds</i>)</code></td>
 		<td><code><a href='#latlngbounds'>LatLngBounds</a></code></td>
-		<td><p>Returns a <a href="#latlngbounds"><code>LatLngBounds</code></a> with the same size as the given one, ensuring
-that its center is within the CRS's bounds.
-Only accepts actual <a href="#latlngbounds"><code>L.LatLngBounds</code></a> instances, not arrays.</p>
+		<td><p>返回一个与给定大小相同的 <a href="#latlngbounds"><code>LatLngBounds</code></a> ，确保其中心在CRS的范围内。只接受实际的 <a href="#latlngbounds"><code>L.LatLngBounds</code></a> 实例，不接受数组。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23610,24 +23603,22 @@ Only accepts actual <a href="#latlngbounds"><code>L.LatLngBounds</code></a> inst
 	<tr id='crs-code'>
 		<td><code><b>code</b></code></td>
 		<td><code>String</code></td>
-		<td>Standard code name of the CRS passed into WMS services (e.g. <code>'EPSG:3857'</code>)</td>
+		<td>传递到 WMS 服务的 CRS 的标准代码名称 (例如 <code>'EPSG:3857'</code>)</td>
 	</tr>
 	<tr id='crs-wraplng'>
 		<td><code><b>wrapLng</b></code></td>
 		<td><code>Number[]</code></td>
-		<td>An array of two numbers defining whether the longitude (horizontal) coordinate
-axis wraps around a given range and how. Defaults to <code>[-180, 180]</code> in most
-geographical CRSs. If <code>undefined</code>, the longitude axis does not wrap around.</td>
+		<td>由两个数字组成的数组，用于定义经度（水平）坐标轴是否环绕给定范围以及如何环绕。 在大多数地理 CRS 中默认为 <code>[-180, 180]</code> 。 如果 <code>undefined</code>，则经度轴不会环绕。 </td>
 	</tr>
 	<tr id='crs-wraplat'>
 		<td><code><b>wrapLat</b></code></td>
 		<td><code>Number[]</code></td>
-		<td>Like <code>wrapLng</code>, but for the latitude (vertical) axis.</td>
+		<td>与 <code>wrapLng</code>类似，但用于纬度（垂直）轴。</td>
 	</tr>
 	<tr id='crs-infinite'>
 		<td><code><b>infinite</b></code></td>
 		<td><code>Boolean</code></td>
-		<td>If true, the coordinate space will be unbounded (infinite in both axes)</td>
+		<td>如果为 true ，坐标空间将是无界的（在两个轴上是无限的）。</td>
 	</tr>
 </tbody></table>
 
@@ -23635,7 +23626,7 @@ geographical CRSs. If <code>undefined</code>, the longitude axis does not wrap a
 
 
 </section><section>
-<h3 id='crs-crs'>Defined CRSs</h3>
+<h3 id='crs-crs'>Defined CRSs 定义 CRSs</h3>
 
 <section >
 
@@ -23650,49 +23641,34 @@ geographical CRSs. If <code>undefined</code>, the longitude axis does not wrap a
 	</thead><tbody>
 	<tr id='crs-l-crs-epsg3395'>
 		<td><code><b>L.CRS.EPSG3395</b></code></td>
-		<td>Rarely used by some commercial tile providers. Uses Elliptical Mercator projection.</td>
+		<td>一些商业瓦片供应商很少使用。使用椭圆墨卡托投影。</td>
 	</tr>
 	<tr id='crs-l-crs-epsg3857'>
 		<td><code><b>L.CRS.EPSG3857</b></code></td>
-		<td>The most common CRS for online maps, used by almost all free and commercial
-tile providers. Uses Spherical Mercator projection. Set in by default in
-Map's <code>crs</code> option.</td>
+		<td>在线地图最常见的 CRS，几乎所有的免费和商业瓦片供应商都在使用。使用球面墨卡托投影。默认设置在地图的 <code>crs</code> 选项中。</td>
 	</tr>
 	<tr id='crs-l-crs-epsg4326'>
 		<td><code><b>L.CRS.EPSG4326</b></code></td>
-		<td>A common CRS among GIS enthusiasts. Uses simple Equirectangular projection.
-<p>Leaflet 1.0.x complies with the <a href="https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-geodetic">TMS coordinate scheme for EPSG:4326</a>,
-which is a breaking change from 0.7.x behaviour.  If you are using a <a href="#tilelayer"><code>TileLayer</code></a>
-with this CRS, ensure that there are two 256x256 pixel tiles covering the
-whole earth at zoom level zero, and that the tile coordinate origin is (-180,+90),
-or (-180,-90) for <a href="#tilelayer"><code>TileLayer</code></a>s with <a href="#tilelayer-tms">the <code>tms</code> option</a> set.</p></td>
+		<td>GIS爱好者中常见的一种CRS。使用简单的等角投影。
+			<p>Leaflet 1.0.x 符合 <a href="https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-geodetic">EPSG:4326 的 TMS 坐标方案</a>，这是对 0.7.x 行为的重大更改。 如果您在此 CRS 中使用 <a href="#tilelayer"><code>TileLayer</code></a>
+				，请确保有两个 256x256 像素的图块以零缩放级别覆盖整个地球，并且图块坐标原点为 (-180,+90) 或 (-180,-90) 对于设置了 <a href="#tilelayer-tms"><code>tms</code> 选项</a>的 <a href="#tilelayer"><code>TileLayer</code></a>。</p></td>
 	</tr>
 	<tr id='crs-l-crs-earth'>
 		<td><code><b>L.CRS.Earth</b></code></td>
-		<td>Serves as the base for CRS that are global such that they cover the earth.
-Can only be used as the base for other CRS and cannot be used directly,
-since it does not have a <code>code</code>, <code>projection</code> or <code>transformation</code>. <code>distance()</code> returns
-meters.</td>
+		<td>作为覆盖地球的全球 CRS 的基础。 只能作为其他CRS的基础，不能直接使用，因为它没有 <code>code</code>、 <code>projection</code> 或 <code>transformation</code>。 <code>distance()</code> 返回米。</td>
 	</tr>
 	<tr id='crs-l-crs-simple'>
 		<td><code><b>L.CRS.Simple</b></code></td>
-		<td>A simple CRS that maps longitude and latitude into <code>x</code> and <code>y</code> directly.
-May be used for maps of flat surfaces (e.g. game maps). Note that the <code>y</code>
-axis should still be inverted (going from bottom to top). <code>distance()</code> returns
-simple euclidean distance.</td>
+		<td>一个简单的 CRS，将经度和纬度直接映射为 <code>x</code> 和 <code>y</code> 。可用于平坦表面的地图（例如游戏地图）。注意， <code>y</code>
+			轴仍然应该是倒置的（从下往上）。 <code>distance()</code> 返回简单的欧氏距离。</td>
 	</tr>
 	<tr id='crs-l-crs-base'>
 		<td><code><b>L.CRS.Base</b></code></td>
-		<td>Object that defines coordinate reference systems for projecting
-geographical points into pixel (screen) coordinates and back (and to
-coordinates in other units for <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> services). See
-<a href="https://en.wikipedia.org/wiki/Spatial_reference_system">spatial reference system</a>.
-<p>Leaflet defines the most usual CRSs by default. If you want to use a
-CRS not defined by default, take a look at the
-<a href="https://github.com/kartena/Proj4Leaflet">Proj4Leaflet</a> plugin.</p>
-<p>Note that the CRS instances do not inherit from Leaflet's <a href="#class"><code>Class</code></a> object,
-and can't be instantiated. Also, new classes can't inherit from them,
-and methods can't be added to them with the <code>include</code> function.</p></td>
+		<td>定义坐标参考系统的对象，用于将地理点投射到像素（屏幕）坐标并返回 (以及投射到其他单位的坐标，用于 <a href="https://en.wikipedia.org/wiki/Web_Map_Service">WMS</a> 服务)。见
+			<a href="http://en.wikipedia.org/wiki/Coordinate_reference_system">空间参考系统</a>。
+			<p>Leaflet 默认定义了最常用的CRS。如果你想使用默认情况下没有定义的CRS，可以看看
+				<a href="https://github.com/kartena/Proj4Leaflet">Proj4Leaflet</a> 插件。</p>
+			<p>请注意，CRS 实例不继承 Leaflet 的 <a href="#class"><code>Class</code></a> 对象，也不能被实例化。而且，新的类不能继承自它们，方法也不能用 <code>include</code> 函数添加到它们中。</p></td>
 	</tr>
 </tbody></table>
 
