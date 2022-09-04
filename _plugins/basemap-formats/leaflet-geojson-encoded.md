@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extends the L.GeoJSON layer using Google polyline encoding algorithm, allowing an optimized data transfer.
+使用 Google 折线编码算法扩展 L.GeoJSON 层，允许优化数据传输。

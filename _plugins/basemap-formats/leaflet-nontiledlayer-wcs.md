@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display raster data from Web Coverage Services.  Rasters can be styled and queried in the client.
+显示来自 Web Coverage Services 的栅格数据。 可以在客户端中设置和查询栅格。

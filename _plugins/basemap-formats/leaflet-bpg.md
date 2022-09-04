@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-TileLayer with <a href="https://bellard.org/bpg/">.bpg</a> image format decoding.
+支持 <a href="https://bellard.org/bpg/">.bpg</a> 图像格式解码的 TileLayer。

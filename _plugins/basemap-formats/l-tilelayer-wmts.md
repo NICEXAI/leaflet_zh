@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple WMTS Tile Layer plugin for Leaflet.
+Leaflet 的一个简单的 WMTS Tile Layer 插件。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enhanced WMS support for Leaflet, including single-tile/untiled layers, shared WMS sources, and layer identify via GetFeatureInfo.
+增强了对 Leaflet 的 WMS 支持，包括 single-tile/untiled 图层、共享 WMS 源以及通过 GetFeatureInfo 进行的图层识别。

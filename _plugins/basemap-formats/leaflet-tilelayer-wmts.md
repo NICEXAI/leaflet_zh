@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add WMTS (IGN) layering for leaflet.
+为 Leaflet 添加 WMTS（IGN）图层。

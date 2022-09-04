@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A TileLayer for GeoJSON tiles.
+GeoJSON 瓦片的 TileLayer。

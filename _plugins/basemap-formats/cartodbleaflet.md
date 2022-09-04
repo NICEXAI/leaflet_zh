@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Official <a href="https://carto.com/">CartoDB</a> plugin for Leaflet.
+Leaflet 的官方 <a href="https://carto.com/">CartoDB</a> 插件。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adding WMTS services (GUGiK Poland).
+添加 WMTS 服务（GUGiK 波兰）。

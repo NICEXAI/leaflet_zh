@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds support for 2GIS tile layer
+添加对 2GIS 切片图层的支持

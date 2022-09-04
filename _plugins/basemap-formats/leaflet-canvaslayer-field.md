@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Loads and styles raster files (geotiff &amp; asciigrid formats).            It includes a <code>ScalarField</code> layer (for DTM, temperature...) and			<code>VectorFieldAnim</code> (an animated layer for wind, currents...). See the <a href="https://ihcantabria.github.io/Leaflet.CanvasLayer.Field/">examples</a>
+加载和格式化栅格文件（geotiff 和 asciigrid 格式）。 它包括一个 <code>ScalarField</code> 图层（用于 DTM、温度...）和 <code>VectorFieldAnim</code>（用于风、电流...的动画层）。 请参阅 <a href="https://ihcantabria.github.io/Leaflet.CanvasLayer.Field/">示例</a>

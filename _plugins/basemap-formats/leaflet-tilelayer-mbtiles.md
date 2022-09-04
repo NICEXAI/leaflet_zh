@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Loads <a href="https://github.com/mapbox/mbtiles-spec"><code>.mbtiles</code></a> tilesets.
+加载 <a href="https://github.com/mapbox/mbtiles-spec"><code>.mbtiles</code></a> 瓦片集。

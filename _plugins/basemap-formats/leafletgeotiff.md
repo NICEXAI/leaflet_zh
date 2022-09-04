@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display raster data from geoTIFF files as images or direction arrows.  Rasters can be styled and queried in the client.  An optional clipping mask can be applied, e.g. to restrict DEMs to land areas.
+将 geoTIFF 文件中的栅格数据显示为图像或方向箭头。 可以在客户端中设置和查询栅格。 可以应用可选的剪贴蒙版，例如 将 DEM 限制在陆地区域。

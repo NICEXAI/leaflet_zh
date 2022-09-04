@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-A client for the (untiled) [OGC API Maps](https://ogcapi.ogc.org/maps/) draft specification.
+一个 (untiled) [OGC API Maps](https://ogcapi.ogc.org/maps/) 规范草案的客户端。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A set of small plugins for Leaflet, including WFS-GeoJSON layer with filtering, a hover control for GeoJSON, and an Esri tile layer.
+Leaflet 的一组小插件，包括带有过滤功能的 WFS-GeoJSON 图层、GeoJSON 的悬停控件和 Esri 瓦片图层。
