@@ -21140,11 +21140,8 @@ L.DomEvent.stopPropagation(ev);
 </section>
 
 
-</section><h2 id='domutil'>DomUtil</h2><p>Utility functions to work with the <a href="https://developer.mozilla.org/docs/Web/API/Document_Object_Model">DOM</a>
-tree, used by Leaflet internally.</p>
-<p>Most functions expecting or returning a <code>HTMLElement</code> also work for
-SVG elements. The only difference is that classes refer to CSS classes
-in HTML and SVG classes in SVG.</p>
+</section><h2 id='domutil'>DomUtil</h2><p>在 Leaflet 内部用于处理 <a href="https://developer.mozilla.org/docs/Web/API/Document_Object_Model">DOM</a> 树的实用函数。</p>
+<p>大多数期望或返回 <code>HTMLElement</code> 的函数也适用于 SVG 元素。唯一的区别是，类是指 HTML 中的 CSS 类，而 SVG 中的 SVG 类。</p>
 
 <section>
 <h3 id='domutil-function'>Functions</h3>
@@ -21164,145 +21161,128 @@ in HTML and SVG classes in SVG.</p>
 	<tr id='domutil-get'>
 		<td><code><b>get</b>(<nobr>&lt;String|HTMLElement&gt;</nobr> <i>id</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td>Returns an element given its DOM id, or returns the element itself
-if it was passed directly.</td>
+		<td>返回一个给定的 DOM ID 的元素，如果是直接传递，则返回元素本身。</td>
 	</tr>
 	<tr id='domutil-getstyle'>
 		<td><code><b>getStyle</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>styleAttrib</i>)</code></td>
 		<td><code>String</code></td>
-		<td>Returns the value for a certain style attribute on an element,
-including computed values or values set through CSS.</td>
+		<td>返回一个元素上的某个样式属性的值。包括计算值或通过 CSS 设置的值。</td>
 	</tr>
 	<tr id='domutil-create'>
 		<td><code><b>create</b>(<nobr>&lt;String&gt;</nobr> <i>tagName</i>, <nobr>&lt;String&gt;</nobr> <i>className?</i>, <nobr>&lt;HTMLElement&gt;</nobr> <i>container?</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td>Creates an HTML element with <code>tagName</code>, sets its class to <code>className</code>, and optionally appends it to <code>container</code> element.</td>
+		<td>用 <code>tagName</code>创建一个HTML元素，将它的类设置为 <code>className</code>，并可选择将其附加到 <code>容器</code> 元素中。</td>
 	</tr>
 	<tr id='domutil-remove'>
 		<td><code><b>remove</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code></code></td>
-		<td>Removes <code>el</code> from its parent element</td>
+		<td>将 <code>el</code> 从其父元素中移除</td>
 	</tr>
 	<tr id='domutil-empty'>
 		<td><code><b>empty</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code></code></td>
-		<td>Removes all of <code>el</code>'s children elements from <code>el</code></td>
+		<td>从 <code>el</code>中删除所有 <code>el</code>的子元素</td>
 	</tr>
 	<tr id='domutil-tofront'>
 		<td><code><b>toFront</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code></code></td>
-		<td>Makes <code>el</code> the last child of its parent, so it renders in front of the other children.</td>
+		<td>使 <code>el</code> 成为其父级的最后一个子级，因此它在其他子级之前渲染。</td>
 	</tr>
 	<tr id='domutil-toback'>
 		<td><code><b>toBack</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code></code></td>
-		<td>Makes <code>el</code> the first child of its parent, so it renders behind the other children.</td>
+		<td>使 <code>el</code> 成为其父级的第一个子级，因此它渲染在其他子级之后。</td>
 	</tr>
 	<tr id='domutil-hasclass'>
 		<td><code><b>hasClass</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>name</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td>Returns <code>true</code> if the element's class attribute contains <code>name</code>.</td>
+		<td>如果该元素的 class 属性包含该 <code>class 类名</code>，返回 <code>true</code> 。</td>
 	</tr>
 	<tr id='domutil-addclass'>
 		<td><code><b>addClass</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>name</i>)</code></td>
 		<td><code></code></td>
-		<td>Adds <code>name</code> to the element's class attribute.</td>
+		<td>将该 <code>class 类名</code>添加到元素的 class 属性中。</td>
 	</tr>
 	<tr id='domutil-removeclass'>
 		<td><code><b>removeClass</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>name</i>)</code></td>
 		<td><code></code></td>
-		<td>Removes <code>name</code> from the element's class attribute.</td>
+		<td>从元素的 class 属性中删除 <code>class 类名</code>。</td>
 	</tr>
 	<tr id='domutil-setclass'>
 		<td><code><b>setClass</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>name</i>)</code></td>
 		<td><code></code></td>
-		<td>Sets the element's class.</td>
+		<td>设置元素的 class 类名。</td>
 	</tr>
 	<tr id='domutil-getclass'>
 		<td><code><b>getClass</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code>String</code></td>
-		<td>Returns the element's class.</td>
+		<td>返回元素的 class 类名。</td>
 	</tr>
 	<tr id='domutil-setopacity'>
 		<td><code><b>setOpacity</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;Number&gt;</nobr> <i>opacity</i>)</code></td>
 		<td><code></code></td>
-		<td>Set the opacity of an element (including old IE support).
-<code>opacity</code> must be a number from <code>0</code> to <code>1</code>.</td>
+		<td>设置一个元素的不透明度（包括旧的IE支持）。
+			<code>opacity</code> 必须是一个从 <code>0</code> 到 <code>1</code>的数字。</td>
 	</tr>
 	<tr id='domutil-testprop'>
 		<td><code><b>testProp</b>(<nobr>&lt;String[]&gt;</nobr> <i>props</i>)</code></td>
 		<td><code>String|false</code></td>
-		<td>Goes through the array of style names and returns the first name
-that is a valid style name for an element. If no such name is found,
-it returns false. Useful for vendor-prefixed styles like <code>transform</code>.</td>
+		<td>遍历样式名称的数组，并返回第一个对一个元素有效的样式名称。如果没有找到这样的名字，它将返回false。对于像 <code>transform</code>这样的供应商固定的样式很有用。</td>
 	</tr>
 	<tr id='domutil-settransform'>
 		<td><code><b>setTransform</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>offset</i>, <nobr>&lt;Number&gt;</nobr> <i>scale?</i>)</code></td>
 		<td><code></code></td>
-		<td>Resets the 3D CSS transform of <code>el</code> so it is translated by <code>offset</code> pixels
-and optionally scaled by <code>scale</code>. Does not have an effect if the
-browser doesn't support 3D CSS transforms.</td>
+		<td>重置 <code>el</code> 的3D CSS Transform，使其按偏移像素进行 <code>平移</code> ，并可选择按比例 <code>缩放</code>。如果浏览器不支持3D CSS Transform，则不会产生影响。</td>
 	</tr>
 	<tr id='domutil-setposition'>
 		<td><code><b>setPosition</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>position</i>)</code></td>
 		<td><code></code></td>
-		<td>Sets the position of <code>el</code> to coordinates specified by <code>position</code>,
-using CSS translate or top/left positioning depending on the browser
-(used by Leaflet internally to position its layers).</td>
+		<td>将 <code>el</code> 的位置设置为由 <code>position</code> 指定的坐标，根据浏览器使用CSS translate 或 top/left 定位（Leaflet 内部用来定位其图层）。</td>
 	</tr>
 	<tr id='domutil-getposition'>
 		<td><code><b>getPosition</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>Returns the coordinates of an element previously positioned with setPosition.</td>
+		<td>返回之前用 setPosition 设置的元素的坐标。</td>
 	</tr>
 	<tr id='domutil-disabletextselection'>
 		<td><code><b>disableTextSelection</b>()</code></td>
 		<td><code></code></td>
-		<td>Prevents the user from generating <code>selectstart</code> DOM events, usually generated
-when the user drags the mouse through a page with text. Used internally
-by Leaflet to override the behaviour of any click-and-drag interaction on
-the map. Affects drag interactions on the whole document.</td>
+		<td>阻止用户生成 <code>selectstart</code> DOM 事件，通常在用户通过带有文本的页面拖动鼠标时生成。由 Leaflet 在内部使用以覆盖地图上任何点击和拖动交互的行为。影响整个文档上的拖动交互。</td>
 	</tr>
 	<tr id='domutil-enabletextselection'>
 		<td><code><b>enableTextSelection</b>()</code></td>
 		<td><code></code></td>
-		<td>Cancels the effects of a previous <a href="#domutil-disabletextselection"><code>L.DomUtil.disableTextSelection</code></a>.</td>
+		<td>取消之前 <a href="#domutil-disabletextselection"><code>L.DomUtil.disableTextSelection</code></a>的效果。</td>
 	</tr>
 	<tr id='domutil-disableimagedrag'>
 		<td><code><b>disableImageDrag</b>()</code></td>
 		<td><code></code></td>
-		<td>As <a href="#domutil-disabletextselection"><code>L.DomUtil.disableTextSelection</code></a>, but
-for <code>dragstart</code> DOM events, usually generated when the user drags an image.</td>
+		<td>如同 <a href="#domutil-disabletextselection"><code>L.DomUtil.disableTextSelection</code></a>，但用于 <code>dragstart</code> DOM事件，通常在用户拖动图片时产生。</td>
 	</tr>
 	<tr id='domutil-enableimagedrag'>
 		<td><code><b>enableImageDrag</b>()</code></td>
 		<td><code></code></td>
-		<td>Cancels the effects of a previous <a href="#domutil-disabletextselection"><code>L.DomUtil.disableImageDrag</code></a>.</td>
+		<td>取消之前 <a href="#domutil-disabletextselection"><code>L.DomUtil.disableImageDrag</code></a> 的效果。</td>
 	</tr>
 	<tr id='domutil-preventoutline'>
 		<td><code><b>preventOutline</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code></code></td>
-		<td>Makes the <a href="https://developer.mozilla.org/docs/Web/CSS/outline">outline</a>
-of the element <code>el</code> invisible. Used internally by Leaflet to prevent
-focusable elements from displaying an outline when the user performs a
-drag interaction on them.</td>
+		<td>使元素 <code>el</code> 的 <a href="https://developer.mozilla.org/docs/Web/CSS/outline">轮廓</a>不可见。由 Leaflet 在内部使用，以防止可聚焦元素在用户对它们执行拖动交互时显示轮廓。</td>
 	</tr>
 	<tr id='domutil-restoreoutline'>
 		<td><code><b>restoreOutline</b>()</code></td>
 		<td><code></code></td>
-		<td>Cancels the effects of a previous <a href=""><code>L.DomUtil.preventOutline</code></a>.</td>
+		<td>取消之前 <a href=""><code>L.DomUtil.preventOutline</code></a> 的效果。</td>
 	</tr>
 	<tr id='domutil-getsizedparentnode'>
 		<td><code><b>getSizedParentNode</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td>Finds the closest parent node which size (width and height) is not null.</td>
+		<td>找到尺寸（宽和高）不为空的最近的父节点。</td>
 	</tr>
 	<tr id='domutil-getscale'>
 		<td><code><b>getScale</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code>Object</code></td>
-		<td>Computes the CSS scale currently applied on the element.
-Returns an object with <code>x</code> and <code>y</code> members as horizontal and vertical scales respectively,
-and <code>boundingClientRect</code> as the result of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect"><code>getBoundingClientRect()</code></a>.</td>
+		<td>计算当前应用在该元素上的CSS比例。返回一个对象，其 <code>x</code> 和 <code>y</code> 成员分别是水平和垂直比例，而 <code>boundingClientRect</code> 是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect"><code>getBoundingClientRect()</code></a> 的结果。</td>
 	</tr>
 </tbody></table>
 
@@ -21327,17 +21307,17 @@ and <code>boundingClientRect</code> as the result of <a href="https://developer.
 	<tr id='domutil-transform'>
 		<td><code><b>TRANSFORM</b></code></td>
 		<td><code>String</code></td>
-		<td>Vendor-prefixed transform style name (e.g. <code>'webkitTransform'</code> for WebKit).</td>
+		<td>供应商前缀的转换样式名称 (例如，Webkit 的 <code>'webkitTransform'</code> )。</td>
 	</tr>
 	<tr id='domutil-transition'>
 		<td><code><b>TRANSITION</b></code></td>
 		<td><code>String</code></td>
-		<td>Vendor-prefixed transition style name.</td>
+		<td>供应商前缀的过渡样式名称。</td>
 	</tr>
 	<tr id='domutil-transition_end'>
 		<td><code><b>TRANSITION_END</b></code></td>
 		<td><code>String</code></td>
-		<td>Vendor-prefixed transitionend event name.</td>
+		<td>供应商前缀的 transitionend 事件名称。</td>
 	</tr>
 </tbody></table>
 
