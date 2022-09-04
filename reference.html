@@ -23675,13 +23675,10 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='renderer'>Renderer</h2><p>Base class for vector renderer implementations (<a href="#svg"><code>SVG</code></a>, <a href="#canvas"><code>Canvas</code></a>). Handles the
-DOM container of the renderer, its bounds, and its zoom animation.</p>
-<p>A <a href="#renderer"><code>Renderer</code></a> works as an implicit layer group for all <a href="#path"><code>Path</code></a>s - the renderer
-itself can be added or removed to the map. All paths use a renderer, which can
-be implicit (the map will decide the type of renderer and use it automatically)
-or explicit (using the <a href="#path-renderer"><code>renderer</code></a> option of the path).</p>
-<p>Do not use this class directly, use <a href="#svg"><code>SVG</code></a> and <a href="#canvas"><code>Canvas</code></a> instead.</p>
+</section><h2 id='renderer'>Renderer 矢量渲染器</h2><p>矢量渲染器实现 (<a href="#svg"><code>SVG</code></a>、 <a href="#canvas"><code>Canvas</code></a>) 的基类。 处理渲染器的 DOM 容器、它的边界和它的缩放动画。</p>
+<p><a href="#renderer"><code>渲染器</code></a> 作为所有 <a href="#path"><code>路径</code></a>的隐式图层组工作--渲染器本身可以被添加或移除到地图中。所有路径都使用一个渲染器，它可以是隐式的 (地图会决定渲染器的类型并自动使用)
+    ，也可以是显式的 (使用路径的 <a href="#path-renderer"><code>渲染器</code></a> 选项)。</p>
+<p>不要直接使用这个类，而是使用 <a href="#svg"><code>SVG</code></a> 和 <a href="#canvas"><code>Canvas</code></a> 。</p>
 
 <section>
 <h3 id='renderer-option'>Options 选项</h3>
