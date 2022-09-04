@@ -21037,7 +21037,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='domevent'>DomEvent</h2><p>Utility functions to work with the <a href="https://developer.mozilla.org/docs/Web/API/Event">DOM events</a>, used by Leaflet internally.</p>
+</section><h2 id='domevent'>DomEvent</h2><p>在 Leaflet 内部用于处理 <a href="https://developer.mozilla.org/docs/Web/API/Event">DOM 事件</a>的实用函数。</p>
 
 <section>
 <h3 id='domevent-function'>Functions</h3>
@@ -21057,27 +21057,23 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	<tr id='domevent-on'>
 		<td><code><b>on</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>types</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Adds a listener function (<code>fn</code>) to a particular DOM event type of the
-element <code>el</code>. You can optionally specify the context of the listener
-(object the <code>this</code> keyword will point to). You can also pass several
-space-separated types (e.g. <code>'click dblclick'</code>).</td>
+		<td>为元素 <code>el</code> 的一个特定的 DOM 事件类型添加一个 listener 函数 (<code>fn</code>) 。你可以选择性地指定 listener 的上下文
+			( <code>this</code> 关键字将指向的对象)。你也可以传递几个空格分隔的类型 (例如 <code>'click dblclick'</code>)。</td>
 	</tr>
 	<tr id='domevent-on'>
 		<td><code><b>on</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;Object&gt;</nobr> <i>eventMap</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Adds a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></td>
+		<td>添加一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code>。</td>
 	</tr>
 	<tr id='domevent-off'>
 		<td><code><b>off</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>types</i>, <nobr>&lt;Function&gt;</nobr> <i>fn</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Removes a previously added listener function.
-Note that if you passed a custom context to on, you must pass the same
-context to <code>off</code> in order to remove the listener.</td>
+		<td>移除先前添加的 listener 函数。注意，如果你给 on 传递了一个自定义的上下文，你必须给 <code>off</code> 传递同样的上下文，以便删除 listener。</td>
 	</tr>
 	<tr id='domevent-off'>
 		<td><code><b>off</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;Object&gt;</nobr> <i>eventMap</i>, <nobr>&lt;Object&gt;</nobr> <i>context?</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Removes a set of type/listener pairs, e.g. <code>{click: onClick, mousemove: onMouseMove}</code></td>
+		<td>删除一组 type/listener，例如 <code>{click: onClick, mousemove: onMouseMove}</code></td>
 	</tr>
 	<tr id='domevent-off'>
 		<td><code><b>off</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;String&gt;</nobr> <i>types</i>)</code></td>
@@ -21092,59 +21088,52 @@ context to <code>off</code> in order to remove the listener.</td>
 	<tr id='domevent-stoppropagation'>
 		<td><code><b>stopPropagation</b>(<nobr>&lt;DOMEvent&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Stop the given event from propagation to parent elements. Used inside the listener functions:
-<pre><code class="language-js">L.DomEvent.on(div, 'click', function (ev) {
-	L.DomEvent.stopPropagation(ev);
+		<td>停止给定的事件向父元素传递。在 listener 函数中使用:
+			<pre><code class="language-js">L.DomEvent.on(div, 'click', function (ev) {
+L.DomEvent.stopPropagation(ev);
 });
 </code></pre></td>
 	</tr>
 	<tr id='domevent-disablescrollpropagation'>
 		<td><code><b>disableScrollPropagation</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Adds <code>stopPropagation</code> to the element's <code>'wheel'</code> events (plus browser variants).</td>
+		<td>将 <code>stopPropagation</code> 添加到元素的 <code>'wheel'</code> 事件 (加上浏览器的变体)。</td>
 	</tr>
 	<tr id='domevent-disableclickpropagation'>
 		<td><code><b>disableClickPropagation</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Adds <code>stopPropagation</code> to the element's <code>'click'</code>, <code>'dblclick'</code>, <code>'contextmenu'</code>,
-<code>'mousedown'</code> and <code>'touchstart'</code> events (plus browser variants).</td>
+		<td>将 <code>stopPropagation</code> 添加到元素的 <code>'click'</code>、 <code>'doubleclick'</code>、
+			<code>'mousedown'</code> 和 <code>'touchstart'</code> 事件 (加上浏览器的变体)。</td>
 	</tr>
 	<tr id='domevent-preventdefault'>
 		<td><code><b>preventDefault</b>(<nobr>&lt;DOMEvent&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Prevents the default action of the DOM Event <code>ev</code> from happening (such as
-following a link in the href of the a element, or doing a POST request
-with page reload when a <code>&lt;form&gt;</code> is submitted).
-Use it inside listener functions.</td>
+		<td>阻止DOM事件 <code>ev</code> 的默认事件发生（如跟随a元素的href中的链接，或在提交 <code>&lt;form&gt;</code> 时做 POST 请求并重新加载页面）。在 listener 函数中使用它。</td>
 	</tr>
 	<tr id='domevent-stop'>
 		<td><code><b>stop</b>(<nobr>&lt;DOMEvent&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Does <code>stopPropagation</code> and <code>preventDefault</code> at the same time.</td>
+		<td>同时做 <code>stopPropagation</code> 和 <code>preventDefault</code> 。</td>
 	</tr>
 	<tr id='domevent-getmouseposition'>
 		<td><code><b>getMousePosition</b>(<nobr>&lt;DOMEvent&gt;</nobr> <i>ev</i>, <nobr>&lt;HTMLElement&gt;</nobr> <i>container?</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td>Gets normalized mouse position from a DOM event relative to the
-<code>container</code> (border excluded) or to the whole page if not specified.</td>
+		<td>从DOM事件中获取相对于<code>容器</code> (不包括边框) 的规范化鼠标位置，如果没有指定，则获取相对于整个页面的规范化鼠标位置。</td>
 	</tr>
 	<tr id='domevent-getwheeldelta'>
 		<td><code><b>getWheelDelta</b>(<nobr>&lt;DOMEvent&gt;</nobr> <i>ev</i>)</code></td>
 		<td><code>Number</code></td>
-		<td>Gets normalized wheel delta from a wheel DOM event, in vertical
-pixels scrolled (negative if scrolling down).
-Events from pointing devices without precise scrolling are mapped to
-a best guess of 60 pixels.</td>
+		<td>从一个滚轮 DOM 事件中获取正常化的滚轮 delta，以滚动的垂直像素为单位（如果向下滚动则为负数）。来自没有精确滚动的指点设备的事件被映射为 60 像素的最佳猜测。</td>
 	</tr>
 	<tr id='domevent-addlistener'>
 		<td><code><b>addListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Alias to <a href="#domevent-on"><code>L.DomEvent.on</code></a></td>
+		<td>同 <a href="#domevent-on"><code>L.DomEvent.on</code></a></td>
 	</tr>
 	<tr id='domevent-removelistener'>
 		<td><code><b>removeListener</b>(<i>…</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Alias to <a href="#domevent-off"><code>L.DomEvent.off</code></a></td>
+		<td>同 <a href="#domevent-off"><code>L.DomEvent.off</code></a></td>
 	</tr>
 </tbody></table>
 
