@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple control that adds a loading indicator as tiles and other data are loaded.
+一个简单的控件，在加载图块和其他数据时添加加载指示器。

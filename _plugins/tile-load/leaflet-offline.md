@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allow tiles to be stored in an database for offline access.
+允许将瓦片存储在数据库中，以便离线访问。

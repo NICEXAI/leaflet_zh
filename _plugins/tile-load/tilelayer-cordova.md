@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-For use with Cordova/Phonegap, adds tile caching onto local device storage, switching between offline and online mode.
+与 Cordova/Phonegap 一起使用，将瓦片缓存添加到本地设备存储，以便在离线和在线模式之间进行切换。

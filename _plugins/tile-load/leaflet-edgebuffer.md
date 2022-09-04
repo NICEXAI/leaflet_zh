@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Buffer tiles beyond the edge of the viewport, for Leaflet 1.0.
+对于 Leaflet 1.0，缓冲区超出视口边缘的瓦片。

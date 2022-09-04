@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows to compose a TileLayer from several tile sources. Each source is active only on a defined set of zoomlevels.
+允许从几个瓦片源组成一个瓦片层。每个源只在定义的缩放级别上活动。

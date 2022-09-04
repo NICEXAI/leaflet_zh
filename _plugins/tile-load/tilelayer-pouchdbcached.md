@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows all Leaflet TileLayers to cache into PouchDB for offline use.
+允许所有的 Leaflet TileLayers 缓存到 PouchDB 中供离线使用。

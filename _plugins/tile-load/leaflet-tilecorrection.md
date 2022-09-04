@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allow tiles to be loaded in an different crs from map's and start at a custom zoom.
+允许在地图的不同区域加载瓦片，并以自定义的缩放比例开始。

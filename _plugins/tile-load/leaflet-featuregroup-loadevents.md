@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-`FeatureGroup` that supports the `"loading"` and `"load"` events (for v0.7.*).
+支持 `"loading"` 和 `"load"` 事件的 `FeatureGroup`（适用于 v0.7.*）。

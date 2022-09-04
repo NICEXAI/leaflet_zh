@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Fades out grid layers and tilelayers when they are removed, making basemap changes smoother (for 1.0.0).
+删除网格图层和瓦片图层时淡出它们，使底图更改更平滑（对于 1.0.0）。
