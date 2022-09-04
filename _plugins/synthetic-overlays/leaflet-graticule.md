@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draws a grid of latitude and longitude lines.
+绘制经纬线网格。

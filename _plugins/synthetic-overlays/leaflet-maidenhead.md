@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An implementation of the <a href="https://en.wikipedia.org/wiki/Maidenhead_Locator_System">Maidenhead Locator System grid</a>.
+一个 <a href="https://en.wikipedia.org/wiki/Maidenhead_Locator_System">Maidenhead Locator System 网格</a>的实现。

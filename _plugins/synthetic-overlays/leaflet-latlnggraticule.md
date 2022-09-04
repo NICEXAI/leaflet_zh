@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Create a Canvas as ImageOverlay to draw the Lat/Lon Graticule, and show the grid tick label at the edges of the map.
+创建一个 Canvas 作为 ImageOverlay 来绘制 Lat/On Graticule，并在地图的边缘显示网格刻度标签。

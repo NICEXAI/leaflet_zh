@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Overlay timezones on a Leaflet Earth map.
+在 Leaflet Earth 地图上叠加时区。

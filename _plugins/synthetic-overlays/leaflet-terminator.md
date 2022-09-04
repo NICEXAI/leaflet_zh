@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Overlay day and night regions on a map.
+在地图上覆盖白天和黑夜区域。

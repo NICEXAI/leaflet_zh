@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draws a grid of latitude and longitude lines, automatically adjusting the scale to the current zoom level.
+绘制一个经纬线的网格，自动调整比例以适应当前的缩放水平。

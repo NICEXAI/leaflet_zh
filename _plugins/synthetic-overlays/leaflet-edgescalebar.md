@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Creates scale bars along top and right edge of a map in the Web Mercator projection.
+在 Web 墨卡托投影中沿着地图的顶部和右侧边缘创建刻度条。

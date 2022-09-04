@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Overlays UK Ordinance Survey (OS) 1km grid squares and labels.
+覆盖英国条例调查（OS）的1公里网格方块和标签。

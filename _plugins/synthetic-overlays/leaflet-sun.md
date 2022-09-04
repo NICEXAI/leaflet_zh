@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Get sunset or sunrise at map click.
+点击地图获取日落或日出。

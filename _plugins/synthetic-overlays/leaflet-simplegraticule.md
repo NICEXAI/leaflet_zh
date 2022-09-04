@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draws a grid lines for L.CRS.Simple coordinate system.
+为 L.CRS.Simple 坐标系绘制网格线。
