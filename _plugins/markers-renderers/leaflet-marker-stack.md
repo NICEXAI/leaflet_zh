@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A pure Leaflet implementation of CartoDB's "<a href="https://carto.com/blog/stacking-chips-a-map-hack/">stacked chips</a>" symbolizer.
+CartoDB 的“<a href="https://carto.com/blog/stacking-chips-a-map-hack/">stacked chips</a>”符号器的纯 Leaflet 实现。

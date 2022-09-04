@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin L.CustomLayer - fully custom Layer.
+Leaflet 插件 L.CustomLayer - 完全自定义图层。

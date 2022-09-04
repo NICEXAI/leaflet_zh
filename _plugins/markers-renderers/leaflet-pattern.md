@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add support for pattern fills on Paths.
+添加对路径上的图案填充的支持。

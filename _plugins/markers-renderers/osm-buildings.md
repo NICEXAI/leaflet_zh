@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Amazing JS library for visualizing 3D OSM building geometry on top of Leaflet.
+惊艳的 JS 库，用于在 Leaflet 之上实现 3D OSM 建筑几何的可视化。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin for photo geotagging, with two modes: camera and crosshair.
+照片地理标记插件，有两种模式：相机和十字准线。

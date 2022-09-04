@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draw lines with different width (like rivers) on a map. Useful when you want to show how rivers 'flow' on the map.
+在地图上绘制不同宽度的线条（如河流）。 当您想在地图上显示河流如何“流动”时很有用。

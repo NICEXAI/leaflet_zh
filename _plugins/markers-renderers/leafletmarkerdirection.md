@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-display the path and the direction of the marker.
+显示标记的路径和方向。

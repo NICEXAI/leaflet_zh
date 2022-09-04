@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple and customizable SVG icon with no external dependencies. Also included is a convenience Marker class and two example subclasses.
+一个简单和可定制的 SVG 图标，没有外部依赖性。还包括一个方便的 Marker 类和两个实例子类。

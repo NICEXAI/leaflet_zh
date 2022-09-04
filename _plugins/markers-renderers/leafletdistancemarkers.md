@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows displaying markers along a route (L.Polyline) at equivalent distances (eg. one per mile).
+允许沿着路线（L.Polyline）以相等的距离（例如，每英里一个）显示标记。

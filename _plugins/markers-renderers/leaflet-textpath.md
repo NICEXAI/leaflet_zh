@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows you to draw text along Polylines.
+允许你沿折线绘制文本。

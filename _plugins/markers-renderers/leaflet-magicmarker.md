@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adding magical animation effect to a marker while loading.
+加载时为标记添加神奇的动画效果。

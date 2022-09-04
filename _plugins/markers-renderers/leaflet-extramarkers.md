@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Shameless copy of Awesome-Markers with more shapes, colors and semantic-ui support
+无耻地抄袭 Awesome-Markers，提供更多形状、颜色和语义界面支持

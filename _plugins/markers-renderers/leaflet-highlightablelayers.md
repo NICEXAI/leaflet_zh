@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Highlight Leaflet lines and polygons by adding a border and raising them above others. Add a transparent border to increase the tolerance for mouse/touch interactions.
+通过添加边框并将它们提升到其他上方来突出显示 Leaflet 线条和多边形。 添加透明边框以增加鼠标/触摸交互的容差。

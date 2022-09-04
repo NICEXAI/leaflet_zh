@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds to <code>L.Polyline</code> the ability to be shifted with a relative pixel offset, without modifying its actual <code>LatLng</code>s. The offset value can be either negative or positive, for left- or right-side offset, and remains constant across zoom levels.
+为 <code>L.Polyline</code> 添加了以相对像素偏移量进行移动的功能，而无需修改其实际的 <code>LatLng</code>s。 对于左侧或右侧偏移，偏移值可以是负值或正值，并且在缩放级别上保持不变。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add markers that moves with a parallax-effect relative to the map when panning.
+添加标记，在平移时相对于地图有视差效果的移动。

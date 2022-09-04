@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extends L.geoJson to add a choropleth visualization (color scale based on value).
+扩展 L.geoJson，增加一个 choropleth 可视化（基于值的色标）。

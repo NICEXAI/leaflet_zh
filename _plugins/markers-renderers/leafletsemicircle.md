@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds functionality to <code>L.Circle</code> to draw semicircles.
+为<code>L.Circle</code>添加了绘制半圆的功能。

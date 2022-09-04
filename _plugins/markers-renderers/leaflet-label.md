@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds text labels to map markers and vector layers.
+将文本标签添加到地图标记和矢量图层。

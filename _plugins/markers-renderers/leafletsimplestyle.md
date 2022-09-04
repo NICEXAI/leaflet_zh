@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extends L.geoJSON to support the <a href="https://github.com/mapbox/simplestyle-spec">simple style</a> spec.
+扩展 L.geoJSON 以支持 <a href="https://github.com/mapbox/simplestyle-spec">simple style</a> 规范。

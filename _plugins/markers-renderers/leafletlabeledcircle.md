@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Special type of SVG marker with a label inside and draggable around the anchor point.
+特殊类型的 SVG 标记，里面有一个标签，可围绕锚点拖动。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin to show labels following the paths of polylines. An extension of yakitoritabetai Leaflet.LabelTextCollision.
+一个 Leaflet 插件，用于显示沿着折线路径的标签。 yakitoritabetai Leaflet.LabelTextCollision 的扩展。

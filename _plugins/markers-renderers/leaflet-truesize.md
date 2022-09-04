@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin for creating projection aware draggable polygons and polylines.
+一个用于创建投影感知的可拖动多边形和多段线的插件。

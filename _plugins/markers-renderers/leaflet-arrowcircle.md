@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Marker extension to display circles with directional arrows.
+用于显示带有方向箭头的圆圈的标记（Marker）扩展。

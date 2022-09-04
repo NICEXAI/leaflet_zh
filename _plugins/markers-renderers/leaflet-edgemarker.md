@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin to indicate the existence of Features outside of the current view.
+用于指示当前视图之外的功能存在的插件。

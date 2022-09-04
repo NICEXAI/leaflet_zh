@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds support for additional SVG marker types such as triangles, diamonds and squares.
+添加对其他 SVG 标记类型的支持，例如三角形、菱形和正方形。

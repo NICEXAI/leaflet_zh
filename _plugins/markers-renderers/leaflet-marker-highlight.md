@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adding highlight performance for L.marker.
+为 L.marker 添加高亮特性。

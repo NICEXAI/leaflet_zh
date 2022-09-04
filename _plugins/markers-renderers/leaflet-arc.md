@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-This plugin adds L.Polyline.Arc function which wraps arc.js functionality for creation of Great Cirlce arcs.
+该插件添加了 L.Polyline.Arc 函数，该函数包装了 arc.js 功能以创建大圆弧。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet.RoughCanvas renders hand-drawn, sketch style vector map (polyline, polygon, geojson).
+Leaflet.RoughCanvas 呈现手绘草图样式矢量图（折线、多边形、geojson）。

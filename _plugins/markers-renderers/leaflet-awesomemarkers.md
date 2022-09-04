@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Colorful, iconic &amp; retina-proof markers based on the Font Awesome icons/Twitter Bootstrap icons
+多彩的、标志性的&amp; 基于Font Awesome图标/Twitter Bootstrap图标的防视网膜标记。

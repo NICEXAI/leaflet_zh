@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Color each polyline segment.
+给每个多线段着色。

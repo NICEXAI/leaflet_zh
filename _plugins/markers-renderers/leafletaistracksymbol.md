@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-AIS Extension for leaflet-tracksymbol It displays AIS Contacts on the Map.
+Leaflet-tracksymbol 的 AIS 扩展 它在地图上显示 AIS 联系人。

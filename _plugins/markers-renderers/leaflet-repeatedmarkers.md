@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays markers when wrapping around the globe, once every 360 degrees of longitude.
+环绕地球时显示标记，每 360 度经度一次。

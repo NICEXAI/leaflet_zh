@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin for plotting a marker representing a user - or multiple users - on a map,			with support for drawing an accuracy circle. Can be seen in action on			<a href="https://longitude.me/">Longitude.me</a>.
+用于在地图上绘制代表用户（或多个用户）的标记的插件，支持绘制精确圆。 可以在 <a href="https://longitude.me/">Longitude.me</a> 上看到。

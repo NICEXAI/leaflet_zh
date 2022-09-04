@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin to show geotagged photos on a Leaflet map.
+在 Leaflet 地图上显示带有地理标记照片的插件。

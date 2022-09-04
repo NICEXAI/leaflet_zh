@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extension of L.Circle which allows to define a outer and inner radius.
+L.Circle 的扩展，允许定义外半径和内半径。

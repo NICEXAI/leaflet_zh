@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays labels on paths (polylines, polygons, circles) avoiding label collision.
+在路径（折线、多边形、圆）上显示标签，避免标签冲突。

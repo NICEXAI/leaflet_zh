@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display thousands of markers with custom WebGL shaders, optionally animated.
+使用自定义 WebGL 着色器显示数千个标记，可选择动画。

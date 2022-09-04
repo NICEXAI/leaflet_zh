@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Renders a polyline with width fixed in meters, not in pixels. Adjusts width depending on zoom level.
+渲染一条宽度固定为米的多段线，而不是像素。根据缩放级别来调整宽度。

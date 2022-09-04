@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Vector SVG markers for Leaflet, with an option for Font Awesome/Twitter Bootstrap icons.
+Leaflet 的矢量 SVG 标记，带有 Font Awesome/Twitter Bootstrap 图标的选项。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extends L.Layer and L.LayerGroup with methods to hide/show layers without removing/re-adding them.
+扩展了 L.Layer 和 L.LayerGroup 的方法，可以隐藏/显示图层，而不需要删除/重新添加它们。

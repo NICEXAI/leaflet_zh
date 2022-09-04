@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-Allows to manage orientation of markers dynamically.
+允许动态管理标记的方向。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Popup a speech bubble with the arrow that follow points, layer, markers, etc.
+用箭头弹出一个对话框，跟随 points, layer, markers 等。

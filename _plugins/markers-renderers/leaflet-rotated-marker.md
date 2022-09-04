@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enables rotation of marker icons in Leaflet.
+启用 Leaflet 中标记图标的旋转。

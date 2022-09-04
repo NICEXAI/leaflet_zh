@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Show symbols at the extremities of polylines, using SVG markers.
+使用 SVG 标记在折线的末端显示符号。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Lightweight plugin that adds colorful iconic markers without image and gives full control of style to end user (i.e. Unlimited colors and CSS styling).
+轻量级插件，添加了没有图像的彩色标志性标记，并为最终用户提供了对样式的完全控制（即无限颜色和 CSS 样式）。

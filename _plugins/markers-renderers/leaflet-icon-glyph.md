@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use icon font glyphs in your markers (from Font Awesome, Material Design Icons, Glyphicons,			Metro UI icons, Elusive, and other icon fonts).
+在标记中使用图标字体字形（来自 Font Awesome、Material Design Icons、Glyphicons、Metro UI 图标、Elusive 和其他图标字体）。

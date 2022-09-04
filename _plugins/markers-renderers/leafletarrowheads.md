@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows user to quickly draw arrowheads on polylines for vector visualization.
+允许用户在多段线上快速绘制箭头，实现矢量可视化。

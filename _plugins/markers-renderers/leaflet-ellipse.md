@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet.ellipse place ellipses on map by specifying center point, semi-major axis,			semi-minor axis, and tilt degrees from west.
+Leaflet.ellipse 通过指定中心点、半长轴、半短轴和向西倾斜的角度在地图上放置椭圆。

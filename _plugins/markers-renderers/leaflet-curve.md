@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin for drawing Bézier curves and other complex shapes.
+用于绘制贝塞尔曲线和其他复杂形状的 Leaflet 插件。

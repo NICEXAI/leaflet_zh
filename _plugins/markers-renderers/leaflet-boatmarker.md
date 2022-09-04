@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A boat marker using HTML Canvas for displaying yachts and sailboats with heading and optional wind information.
+使用 HTML Canvas 的船标记，用于显示带有航向和可选风信息的游艇和帆船。

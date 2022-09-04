@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Built on [Leaflet.Curve](https://github.com/elfalem/Leaflet.curve), leaflet-spline draws quadratic [bezier spline](https://en.wikipedia.org/wiki/Composite_B%C3%A9zier_curve) based on a series of geographic coordinates.
+建立在 [Leaflet.Curve](https://github.com/elfalem/Leaflet.curve) 之上，leaflet-spline 绘制二次 [bezier spline](https://en.wikipedia.org/wiki/Composite_B%C3%A9zier_curve ) 基于一系列地理坐标。

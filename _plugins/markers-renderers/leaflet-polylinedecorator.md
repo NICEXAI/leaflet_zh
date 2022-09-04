@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows you to draw patterns (like dashes, arrows or evenly spaced Markers) along Polylines or coordinate paths.
+允许你沿着折线或坐标路径绘制图案（如破折号、箭头或均匀间隔的标记）。

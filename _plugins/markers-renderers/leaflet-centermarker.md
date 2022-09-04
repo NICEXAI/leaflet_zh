@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Marker that is kept fixed to the center of the map when the map is panned by dragging.			Can be seen in action on <a href="https://whatismyaddress.net/">What is my adress?</a>
+通过拖动平移地图时保持固定在地图中心的标记。 可以在 <a href="https://whatismyaddress.net/">我的地址是什么？</a> 上看到实际效果

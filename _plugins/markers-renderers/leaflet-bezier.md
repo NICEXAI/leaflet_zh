@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draws a Bézier line between two points with an animated flight object.
+在两点之间画一条贝塞尔线，有一个动画的飞行对象。

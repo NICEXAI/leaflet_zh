@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays markers on canvas instead of DOM.
+在 Canvas 而不是 DOM 上显示标记。

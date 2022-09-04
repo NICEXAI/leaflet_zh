@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin for creating customizable swoopy arrow annotations.
+用于创建可自定义的 swoopy 箭头注释的插件。

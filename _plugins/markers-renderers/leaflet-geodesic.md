@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draw geodesic lines and circles. A geodesic line is the shortest path between two given points on the earth surface. It uses Vincenty's formulae for highest precision and distance calculation. Written in Typescript and available via CDN.
+绘制测地线和圆。 测地线是地球表面上两个给定点之间的最短路径。 它使用 Vincenty 的公式进行最高精度和距离计算。 用 Typescript 编写，可通过 CDN 获得。

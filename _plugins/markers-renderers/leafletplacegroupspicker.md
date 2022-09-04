@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin for the Leaflet maps that allows grouping places in groups whose visibility can be toggled.
+用于Leaflet地图的插件，允许将位置分组，其可见度可以切换。

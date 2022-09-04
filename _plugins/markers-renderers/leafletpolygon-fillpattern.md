@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extend the Polygon Object to fill SVG Path element with an image pattern.
+扩展 Polygon  对象，用图像图案填充SVG路径元素。

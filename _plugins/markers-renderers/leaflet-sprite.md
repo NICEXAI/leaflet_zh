@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use sprite based icons in your markers.
+在标记中使用基于精灵的图标。
