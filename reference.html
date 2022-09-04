@@ -21553,9 +21553,7 @@ fx.run(el, [300, 500], 0.5);
 	</div>
 </div>
 
-</section><h2 id='draggable'>Draggable</h2><p>A class for making DOM elements draggable (including touch support).
-Used internally for map and marker dragging. Only works for elements
-that were positioned with <a href="#domutil-setposition"><code>L.DomUtil.setPosition</code></a>.</p>
+</section><h2 id='draggable'>Draggable 拖拽</h2><p>一个用于使 DOM 元素可拖动的类（包括触摸支持）。内部用于地图和标记的拖动。只对用 <a href="#domutil-setposition"><code>L.DomUtil.setPosition</code></a> 定位的元素起作用。</p>
 
 <section>
 <h3 id='draggable-example'>使用示例</h3>
@@ -21591,7 +21589,7 @@ draggable.enable();
 	</thead><tbody>
 	<tr id='draggable-l-draggable'>
 		<td><code><b>L.Draggable</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;HTMLElement&gt;</nobr> <i>dragHandle?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>preventOutline?</i>, <nobr>&lt;<a href='#draggable-option'>Draggable options</a>&gt;</nobr> <i>options?</i>)</code></td>
-		<td>Creates a <a href="#draggable"><code>Draggable</code></a> object for moving <code>el</code> when you start dragging the <code>dragHandle</code> element (equals <code>el</code> itself by default).</td>
+		<td>当你开始拖动 <code>dragHandle</code> 元素 (默认等于 <code>el</code> 本身)，创建一个 <a href="#draggable"><code>Draggable</code></a> 对象用于移动 <code>el</code> 。</td>
 	</tr>
 </tbody></table>
 
@@ -21619,8 +21617,7 @@ draggable.enable();
 		<td><code><b>clickTolerance</b></code></td>
 		<td><code>Number</code></td>
 		<td><code>3</code></td>
-		<td>The max number of pixels a user can shift the mouse pointer during a click
-for it to be considered a valid click (as opposed to a mouse drag).</td>
+		<td>用户在单击期间被认为是有效的点击（而不是鼠标拖动）的鼠标指针可以移动的最大像素数。</td>
 	</tr>
 </tbody></table>
 
@@ -21645,28 +21642,27 @@ for it to be considered a valid click (as opposed to a mouse drag).</td>
 	<tr id='draggable-down'>
 		<td><code><b>down</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when a drag is about to start.</td>
+		<td>当一个拖动即将开始时触发。</td>
 	</tr>
 	<tr id='draggable-dragstart'>
 		<td><code><b>dragstart</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when a drag starts</td>
+		<td>当拖动开始时被触发</td>
 	</tr>
 	<tr id='draggable-predrag'>
 		<td><code><b>predrag</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired continuously during dragging <em>before</em> each corresponding
-update of the element's position.</td>
+		<td>在拖动过程中，在元素位置的每次相应更新 <em>之前</em> 连续触发。</td>
 	</tr>
 	<tr id='draggable-drag'>
 		<td><code><b>drag</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired continuously during dragging.</td>
+		<td>在拖动过程中连续触发。</td>
 	</tr>
 	<tr id='draggable-dragend'>
 		<td><code><b>dragend</b></code></td>
 		<td><code><a href='#dragendevent'>DragEndEvent</a></code></td>
-		<td>Fired when the drag ends.</td>
+		<td>当拖动结束时被触发。</td>
 	</tr>
 </tbody></table>
 
@@ -21691,13 +21687,13 @@ update of the element's position.</td>
 	<tr id='draggable-enable'>
 		<td><code><b>enable</b>()</code></td>
 		<td><code></code></td>
-		<td><p>Enables the dragging ability</p>
+		<td><p>启用拖拽功能</p>
 </td>
 	</tr>
 	<tr id='draggable-disable'>
 		<td><code><b>disable</b>()</code></td>
 		<td><code></code></td>
-		<td><p>Disables the dragging ability</p>
+		<td><p>禁用拖拽功能</p>
 </td>
 	</tr>
 </tbody></table>
