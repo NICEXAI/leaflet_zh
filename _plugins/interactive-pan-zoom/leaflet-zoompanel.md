@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Zoom Control Panel Of Leaflet.
+Leaflet 的缩放控制面板。

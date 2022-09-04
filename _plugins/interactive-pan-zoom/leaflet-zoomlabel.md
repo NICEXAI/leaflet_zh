@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple zoom label control.
+一个简单的缩放标签控件。

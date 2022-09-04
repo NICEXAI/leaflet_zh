@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A zoom control which displays the current zoom level.
+一个显示当前缩放级别的缩放控件。

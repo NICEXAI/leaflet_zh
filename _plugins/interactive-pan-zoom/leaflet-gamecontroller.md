@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Interaction handler providing support for gamepads.
+为游戏手柄提供支持的交互处理程序。

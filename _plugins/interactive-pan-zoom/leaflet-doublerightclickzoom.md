@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Interaction handler enabling zooming out with double right click.
+通过双击右键实现缩放的交互处理程序。

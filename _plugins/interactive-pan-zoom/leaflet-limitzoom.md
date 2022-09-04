@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugins to limit available zoom levels to a given list, either by restricting zooming or by interpolating tiles.
+插件将可用的缩放级别限制在一个给定的列表中，可以通过限制缩放或通过插值瓦片。

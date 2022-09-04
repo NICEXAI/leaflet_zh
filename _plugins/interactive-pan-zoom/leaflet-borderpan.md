@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin to pan by clicking on map borders.
+通过单击地图边界进行平移的 Leaflet 插件。

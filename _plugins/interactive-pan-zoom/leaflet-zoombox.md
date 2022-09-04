@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A lightweight zoom box control: draw a box around the area you want to zoom to.
+一个轻量级的缩放框控件：在你想缩放的区域周围画一个框。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Plugin for one finger zoom.
+用于单指缩放的插件。

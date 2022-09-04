@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A zoom slider control.
+一个缩放滑块控件。

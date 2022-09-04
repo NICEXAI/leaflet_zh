@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A visible, clickable control to perform a box zoom.
+一个可见的、可点击的控件，用于执行盒式缩放。

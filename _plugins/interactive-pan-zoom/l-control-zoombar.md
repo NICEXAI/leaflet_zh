@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An extended version of Leaflet's native Zoom control with Home and Zoom-to-Area buttons.
+Leaflet 原生缩放控件的扩展版本，带有 Home 和 Zoom-to-Area 按钮。

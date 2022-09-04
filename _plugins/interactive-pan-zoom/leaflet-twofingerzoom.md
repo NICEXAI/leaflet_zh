@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Interaction handler for touch devices enabling zooming out with a two finger tap.
+触摸设备的交互处理程序，可通过两根手指的点击来实现缩放。
