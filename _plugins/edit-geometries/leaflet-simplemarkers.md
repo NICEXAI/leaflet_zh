@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A light-weight Leaflet plugin for adding and deleting markers.
+用于添加和删除标记的轻量级 Leaflet 插件。

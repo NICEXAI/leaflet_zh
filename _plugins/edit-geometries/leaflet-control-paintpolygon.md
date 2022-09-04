@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draw yours polygons with a circle brush like Paint[brush]. Includes turf.js dependencies.
+使用像 Paint[brush] 这样的圆形画笔绘制你的多边形。 包括 turf.js 依赖项。

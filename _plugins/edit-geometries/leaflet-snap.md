@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enables snapping of draggable markers to polylines and other layers.
+允许将可拖动标记捕捉到折线和其他图层。

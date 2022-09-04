@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enables drawing features like polylines, polygons, rectangles, circles and markers through a very nice user-friendly interface with icons and hints.
+通过一个非常漂亮的带有图标和提示的用户友好界面，实现了多段线、多边形、矩形、圆和标记等绘图功能。

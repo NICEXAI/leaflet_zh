@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Editable polylines: move existing points, add new points and split polylines.
+可编辑多段线：移动现有点、添加新点和分割多段线。

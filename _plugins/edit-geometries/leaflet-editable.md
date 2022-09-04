@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Lightweight fully customisable and controllable drawing/editing plugin.
+轻量级的完全可定制和可控的绘图/编辑插件。

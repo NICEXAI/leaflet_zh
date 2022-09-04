@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enable attaching of markers to other layers during draw or edit features with Leaflet.Draw.
+在使用 Leaflet.Draw 绘制或编辑功能期间启用将标记附加到其他图层。

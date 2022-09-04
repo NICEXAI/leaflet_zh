@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Zoopla inspired freehand polygon creation using Leaflet.js and D3.
+受 Leaflet.js 和 D3 创建 Zoopla 启发灵感而开发的自由手绘多边形的插件。

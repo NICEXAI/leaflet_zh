@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An extension to Leaflet.draw to allow editing large polylines one chunk at the time.
+Leaflet.draw 的扩展，允许一次编辑大的多段线。

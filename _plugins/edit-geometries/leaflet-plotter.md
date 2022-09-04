@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-leaflet-plotter allows you to create routes using a leaflet powered map. You can click on the mid-points to create a new, draggable point.
+Leaflet 绘图仪允许你使用 Leaflet 驱动的地图创建路线。 你可以单击中点来创建一个新的可拖动点。

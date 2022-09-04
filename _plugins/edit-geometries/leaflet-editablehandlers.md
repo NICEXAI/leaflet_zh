@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A set of plugins that includes circle editing, measuring tool, and label for polygon sides.
+一组插件，包括圆形编辑、测量工具和多边形边的标签。

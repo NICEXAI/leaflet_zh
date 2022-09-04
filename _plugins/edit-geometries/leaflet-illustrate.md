@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-Extension for Leaflet.draw enabling users to type annotations directly on maps.
+Leaflet.draw 的扩展，使用户可以直接在地图上输入注释。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Scale &amp; rotate handler and interaction for polygons and polylines.
+多边形和折线的缩放、 旋转和交互操作

@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Geometry Management for Leaflet 1.0 and higher. Draw, Edit, Drag, Cut, Rotate, Split, Scale, Measure, Snap and Pin Layers like Markers, CircleMarkers, Polylines, Polygons, Circles, Rectangles, ImageOverlays, LayerGroups, GeoJSON, MultiLineStrings and MultiPolygons. Supports holes in polygons, canvas mode and more.
+Leaflet 1.0 及更高版本的几何管理。 绘制、编辑、拖动、剪切、旋转、拆分、缩放、测量、捕捉和固定图层，如标记、CircleMarkers、折线、多边形、圆形、矩形、ImageOverlays、LayerGroups、GeoJSON、MultiLineStrings 和 MultiPolygons。 支持 polygons、canvas 模式等。

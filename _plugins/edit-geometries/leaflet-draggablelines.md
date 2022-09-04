@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add/move/remove points on routes, lines and polygons by drag&amp;drop.
+通过拖放添加/移动/删除路线、线和多边形上的点。

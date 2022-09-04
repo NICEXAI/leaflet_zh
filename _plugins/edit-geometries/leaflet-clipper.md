@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows Union, Difference, Xor, and Intersection operations on two polygons.
+允许对两个多边形进行并集、差集、异或和交集操作。

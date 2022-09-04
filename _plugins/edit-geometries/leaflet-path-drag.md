@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Drag handler and interaction for polygons and polylines.
+多边形和折线的拖曳处理程序和交互。

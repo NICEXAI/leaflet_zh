@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Create/update/delete Map, Marker, Polygon, Polyline... and expose them for backend storage with an API.
+创建/更新/删除地图、标记、多边形、折线......并使用 API 将它们公开用于后端存储。

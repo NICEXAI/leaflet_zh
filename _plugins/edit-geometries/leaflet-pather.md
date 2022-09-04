@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-L.Pather is a freehand polyline creator that simplifies the polyline for mutability. Requires D3 support.
+L.Pather 是一个手绘多段线创建器，它简化了多段线的可变性。 需要 D3 支持。
