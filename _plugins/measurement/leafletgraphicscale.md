@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Animated graphic scale control.
+动画图形比例控件。

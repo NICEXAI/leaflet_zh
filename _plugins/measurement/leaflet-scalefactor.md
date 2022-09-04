@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display a Scale Factor (e.g. 1:50,000) for Leaflet maps.
+显示 Leaflet 地图的比例因子（例如 1:50,000）。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet control adding a centering reticle consisting of independently calculated latitude and longitude scales.
+Leaflet 控件添加了一个由独立计算的纬度和经度刻度组成的居中标线。

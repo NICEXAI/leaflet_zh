@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Control for measuring element's area.
+控制测量元件的面积。

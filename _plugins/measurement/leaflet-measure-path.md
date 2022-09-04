@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Show measurements on paths; polylines, polygons and circles currently supported.
+显示路径上的测量值； 当前支持折线、多边形和圆。

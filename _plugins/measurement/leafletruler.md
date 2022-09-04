@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple leaflet plugin to measure true bearing and distance between clicked points.
+一个简单的 Leaflet 插件，用于测量点击点之间的真实方位和距离。

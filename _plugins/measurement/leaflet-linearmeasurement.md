@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet Linear Measurement plugin that creates polylines with incremental measures along the path.
+Leaflet 线性测量插件，可沿路径创建具有增量测量的折线。

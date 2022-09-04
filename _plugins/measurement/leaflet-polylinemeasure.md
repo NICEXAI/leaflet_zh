@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Measure great-circle distances of simple lines as well as of complex polylines.
+测量简单的线和复杂的折线的大圆距离。

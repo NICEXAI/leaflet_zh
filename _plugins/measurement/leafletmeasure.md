@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Coordinate, linear, and area measure control for Leaflet maps
+Leaflet 地图的坐标、线性和面积测量控件
