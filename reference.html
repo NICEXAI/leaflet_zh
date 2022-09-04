@@ -22043,7 +22043,7 @@ MyClass.FOO; // 'bar'
 </section>
 
 
-</section><h2 id='evented'>Evented</h2><p>A set of methods shared between event-powered classes (like <a href="#map"><code>Map</code></a> and <a href="#marker"><code>Marker</code></a>). Generally, events allow you to execute some function when something happens with an object (e.g. the user clicks on the map, causing the map to fire <code>'click'</code> event).</p>
+</section><h2 id='evented'>Evented 事件</h2><p>一组由事件驱动的类 (如 <a href="#map"><code>Map</code></a> 和 <a href="#marker"><code>Marker</code></a>) 之间共享的方法。一般来说，事件允许你在一个对象发生某些事情时执行一些功能 (例如，用户点击地图，导致地图发生 <code>'click'</code> 事件)。</p>
 
 <section>
 <h3 id='evented-example'>使用示例</h3>
@@ -22058,7 +22058,7 @@ MyClass.FOO; // 'bar'
 	alert(e.latlng);
 } );
 </code></pre>
-<p>Leaflet deals with event listeners by reference, so if you want to add a listener and then remove it, define it as a function:</p>
+<p>Leaflet 通过引用来处理事件监听器，所以如果你想添加一个监听器，然后删除它，就把它定义为一个函数:</p>
 <pre><code class="language-js">function onClick(e) { ... }
 
 map.on('click', onClick);
