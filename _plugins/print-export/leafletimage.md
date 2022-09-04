@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Export images out of Leaflet maps without a server component, by using Canvas and CORS.
+使用 Canvas 和 CORS 从 Leaflet 地图中导出图像，无需服务器组件。

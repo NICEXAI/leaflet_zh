@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Implements the Mapfish print protocol allowing a Leaflet map to be printed using either the Mapfish or GeoServer print module.
+实现 Mapfish 打印协议，允许使用 Mapfish 或 GeoServer 打印模块打印 Leaflet 地图。

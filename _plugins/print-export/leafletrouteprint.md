@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Automatic PDF printing of routes (i.e. polylines) with custom scale, paper size and margin by covering the route with a sequence of identical rectangles.
+通过用一连串相同的矩形覆盖路线，自动打印具有自定义比例、纸张大小和空白的路线（即多线）的PDF。

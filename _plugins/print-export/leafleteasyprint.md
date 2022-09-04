@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple plugin which adds an icon to print your Leaflet map.
+一个简单的插件，它添加了一个图标来打印你的 Leaflet 地图。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows users to print full page map directly from the browser.
+允许用户直接从浏览器打印整页地图。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows users to download an image with a scaled-up version of the visible map.
+允许用户下载带有放大版可见地图的图像。
