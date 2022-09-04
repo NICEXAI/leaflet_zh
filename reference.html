@@ -21324,7 +21324,7 @@ L.DomEvent.stopPropagation(ev);
 </section>
 
 
-</section><h2 id='posanimation'>PosAnimation</h2><p>Used internally for panning animations, utilizing CSS3 Transitions for modern browsers and a timer fallback for IE6-9.</p>
+</section><h2 id='posanimation'>PosAnimation 平移动画</h2><p>在内部用于平移动画，利用现代浏览器的 CSS3 Transitions 和 IE6-9 的 timer fallback。</p>
 
 <section>
 <h3 id='posanimation-example'>使用示例</h3>
@@ -21360,7 +21360,7 @@ fx.run(el, [300, 500], 0.5);
 	</thead><tbody>
 	<tr id='posanimation-l-posanimation'>
 		<td><code><b>L.PosAnimation</b>()</code></td>
-		<td>Creates a <a href="#posanimation"><code>PosAnimation</code></a> object.</td>
+		<td>创建一个 <a href="#posanimation"><code>PosAnimation</code></a> 对象。</td>
 	</tr>
 </tbody></table>
 
@@ -21386,17 +21386,17 @@ fx.run(el, [300, 500], 0.5);
 	<tr id='posanimation-start'>
 		<td><code><b>start</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the animation starts</td>
+		<td>当动画开始时触发</td>
 	</tr>
 	<tr id='posanimation-step'>
 		<td><code><b>step</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired continuously during the animation.</td>
+		<td>在动画期间连续触发。</td>
 	</tr>
 	<tr id='posanimation-end'>
 		<td><code><b>end</b></code></td>
 		<td><code><a href='#event'>Event</a></code></td>
-		<td>Fired when the animation ends.</td>
+		<td>动画结束时触发。</td>
 	</tr>
 </tbody></table>
 
@@ -21421,16 +21421,14 @@ fx.run(el, [300, 500], 0.5);
 	<tr id='posanimation-run'>
 		<td><code><b>run</b>(<nobr>&lt;HTMLElement&gt;</nobr> <i>el</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>newPos</i>, <nobr>&lt;Number&gt;</nobr> <i>duration?</i>, <nobr>&lt;Number&gt;</nobr> <i>easeLinearity?</i>)</code></td>
 		<td><code></code></td>
-		<td><p>Run an animation of a given element to a new position, optionally setting
-duration in seconds (<code>0.25</code> by default) and easing linearity factor (3rd
-argument of the <a href="https://cubic-bezier.com/#0,0,.5,1">cubic bezier curve</a>,
-<code>0.5</code> by default).</p>
+		<td><p>运行一个给定元素的动画到一个新的位置，可以选择设置持续时间（秒） (默认为 <code>0.25</code> ) 和缓和线性系数 (<a href="http://cubic-bezier.com/#0,0,.5,1">三次贝塞尔曲线</a>的第三个参数，默认为
+			<code>0.5</code> )。</p>
 </td>
 	</tr>
 	<tr id='posanimation-stop'>
 		<td><code><b>stop</b>()</code></td>
 		<td><code></code></td>
-		<td><p>Stops the animation (if currently running).</p>
+		<td><p>停止动画（如果当前正在运行）。</p>
 </td>
 	</tr>
 </tbody></table>
