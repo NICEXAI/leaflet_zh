@@ -23409,8 +23409,7 @@ layer.closeTooltip();
 </section>
 
 
-</section><h2 id='projection'>Projection</h2><p>An object with methods for projecting geographical coordinates of the world onto
-a flat surface (and back). See <a href="https://en.wikipedia.org/wiki/Map_projection">Map projection</a>.</p>
+</section><h2 id='projection'>Projection 地图投影</h2><p>具有将世界的地理坐标投影到平面（和背面）的方法的对象。 请参阅 <a href="http://en.wikipedia.org/wiki/Map_projection">地图投影</a>。</p>
 
 <section>
 <h3 id='projection-method'>Methods 方法</h3>
@@ -23430,18 +23429,14 @@ a flat surface (and back). See <a href="https://en.wikipedia.org/wiki/Map_projec
 	<tr id='projection-project'>
 		<td><code><b>project</b>(<nobr>&lt;<a href='#latlng'>LatLng</a>&gt;</nobr> <i>latlng</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Projects geographical coordinates into a 2D point.
-Only accepts actual <a href="#latlng"><code>L.LatLng</code></a> instances, not arrays.</p>
+		<td><p>将地理坐标投影到 2D 点中。 只接受实际的 <a href="#latlng"><code>L.LatLng</code></a> 实例，而不是数组。</p>
 </td>
 	</tr>
 	<tr id='projection-unproject'>
 		<td><code><b>unproject</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>)</code></td>
 		<td><code><a href='#latlng'>LatLng</a></code></td>
-		<td><p>The inverse of <code>project</code>. Projects a 2D point into a geographical location.
-Only accepts actual <a href="#point"><code>L.Point</code></a> instances, not arrays.</p>
-<p>Note that the projection instances do not inherit from Leaflet's <a href="#class"><code>Class</code></a> object,
-and can't be instantiated. Also, new classes can't inherit from them,
-and methods can't be added to them with the <code>include</code> function.</p>
+		<td><p> <code>project</code>的反面。 将 2D 点投影到地理位置。 只接受实际的 <a href="#point"><code>L.Point</code></a> 实例，不接受数组。</p>
+			<p>请注意，投影实例不继承于 Leaflet 的 <a href="#class"><code>Class</code></a> 对象，也不能被实例化。而且，新的类不能继承自它们，方法也不能用 <code>include</code> 函数添加到它们中。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23467,7 +23462,7 @@ and methods can't be added to them with the <code>include</code> function.</p>
 	<tr id='projection-bounds'>
 		<td><code><b>bounds</b></code></td>
 		<td><code><a href='#bounds'>Bounds</a></code></td>
-		<td>The bounds (specified in CRS units) where the projection is valid</td>
+		<td>投影有效的边界（以 CRS 单位指定）</td>
 	</tr>
 </tbody></table>
 
@@ -23475,13 +23470,13 @@ and methods can't be added to them with the <code>include</code> function.</p>
 
 
 </section><section>
-<h3 id='projection-projection'>Defined projections</h3>
+<h3 id='projection-projection'>Defined projections 自定义投影</h3>
 
 <section >
 
 
 
-<div class='section-comments'>Leaflet comes with a set of already defined Projections out of the box:</div>
+<div class='section-comments'>Leaflet 随附一组已定义的开箱即用的投影:</div>
 
 <table><thead>
 	<tr>
@@ -23491,20 +23486,16 @@ and methods can't be added to them with the <code>include</code> function.</p>
 	</thead><tbody>
 	<tr id='projection-l-projection-lonlat'>
 		<td><code><b>L.Projection.LonLat</b></code></td>
-		<td>Equirectangular, or Plate Carree projection — the most simple projection,
-mostly used by GIS enthusiasts. Directly maps <code>x</code> as longitude, and <code>y</code> as
-latitude. Also suitable for flat worlds, e.g. game maps. Used by the
-<code>EPSG:4326</code> and <code>Simple</code> CRS.</td>
+		<td>Equirectangular 或 Plate Carree 投影 — 最简单的投影，主要由 GIS 爱好者使用。 直接将 <code>x</code> 映射为经度，将 <code>y</code> 映射为纬度。 也适用于平坦的世界，例如 游戏地图。 由
+			<code>EPSG:4326</code> 和 <code>Simple</code> CRS 使用。</td>
 	</tr>
 	<tr id='projection-l-projection-mercator'>
 		<td><code><b>L.Projection.Mercator</b></code></td>
-		<td>Elliptical Mercator projection — more complex than Spherical Mercator. Assumes that Earth is an ellipsoid. Used by the EPSG:3395 CRS.</td>
+		<td>椭圆墨卡托投影——比球面墨卡托更复杂。 假设地球是一个椭球体。 EPSG 使用：3395 CRS。</td>
 	</tr>
 	<tr id='projection-l-projection-sphericalmercator'>
 		<td><code><b>L.Projection.SphericalMercator</b></code></td>
-		<td>Spherical Mercator projection — the most common projection for online maps,
-used by almost all free and commercial tile providers. Assumes that Earth is
-a sphere. Used by the <code>EPSG:3857</code> CRS.</td>
+		<td>球面墨卡托投影 — 最常见的在线地图投影，几乎所有免费和商业瓦片供应商都在使用。 假设地球是一个球体。 <code>EPSG 使用:3857</code> CRS。</td>
 	</tr>
 </tbody></table>
 
