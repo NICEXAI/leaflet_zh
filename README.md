@@ -49,7 +49,7 @@ Leaflet 中文网新一轮大规模的文档同步、翻译和校正工作正在
   - [x] 其它（已完成）
 - [x] 下载
 - [ ] 插件
-  - [ ] Tile & Image 图层
+  - [x] Tile & Image 图层（已完成）
   - [ ] Overlay data
   - [ ] Overlay Display
   - [ ] Overlay interaction
