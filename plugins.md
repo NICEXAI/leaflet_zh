@@ -39,7 +39,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 	<div class="toc-col">
 		<h4>Overlay Display</h4>
 		<ul>
-			<li><a href="#markers--renderers">Markers &amp; 渲染</a></li>
+			<li><a href="#markers--renderers">Markers &amp; renderers</a></li>
 			<li><a href="#overlay-animations">Overlay 动画</a></li>
 			<li><a href="#clusteringdecluttering">Clustering/decluttering</a></li>
 			<li><a href="#heatmaps">Heatmaps 热力图</a></li>
@@ -50,7 +50,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<li><a href="#edit-geometries">编辑几何图形</a></li>
 			<li><a href="#time--elevation">时间 &amp; 海拔</a></li>
 			<li><a href="#search--popups">搜索 &amp; 弹出框</a></li>
-			<li><a href="#areaoverlay-selection">区域/覆盖选择</a></li>
+			<li><a href="#areaoverlay-selection">区域/overlay 选区</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
@@ -93,12 +93,12 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 下面的插件支持加载不同的地图并提供 Tile 和 Image 图层的功能。
 
-* [Basemap providers](#basemap-providers)
-* [Basemap formats](#basemap-formats)
-* [Non-map base layers](#non-map-base-layers)
-* [Tile/image display](#tileimage-display)
-* [Tile load](#tile-load)
-* [Vector tiles](#vector-tiles)
+* [底图提供程序](#basemap-providers)
+* [底图格式](#basemap-formats)
+* [Non-map 基础图层](#non-map-base-layers)
+* [Tile/Image 显示](#tileimage-display)
+* [Tile 加载](#tile-load)
+* [矢量 Tile](#vector-tiles)
 
 
 ### Basemap providers
@@ -144,9 +144,9 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 以下插件提供了加载叠加数据（GIS 矢量数据）的新方法：点、线和多边形。
 
 * [Overlay data formats](#overlay-data-formats)
-* [Dynamic data loading](#dynamiccustom-data-loading)
+* [动态加载数据](#dynamiccustom-data-loading)
 * [Synthetic overlays](#synthetic-overlays)
-* [Data providers](#data-providers)
+* [Data providers 数据提供程序](#data-providers)
 
 ### Overlay data formats
 
@@ -178,10 +178,10 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 以下插件提供了显示 overlay 数据信息的新方法。
 
 * [Markers & renderers](#markers--renderers)
-* [Overlay animations](#overlay-animations)
+* [Overlay 动画](#overlay-animations)
 * [Clustering/decluttering](#clusteringdecluttering)
-* [Heatmaps](#heatmaps)
-* [DataViz](#dataviz)
+* [Heatmaps 热力图](#heatmaps)
+* [DataViz 数据可视化](#dataviz)
 
 
 ### Markers & renderers
@@ -219,10 +219,10 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 以下插件使用户能够与叠加数据互动：编辑几何图形，选择区域或特征，与时间维度互动，搜索特征并显示有关信息。
 
-* [Edit geometries](#edit-geometries)
-* [Time & elevation](#time--elevation)
-* [Search & popups](#search--popups)
-* [Area/overlay selection](#areaoverlay-selection)
+* [编辑几何图形](#edit-geometries)
+* [时间 & 海拔](#time--elevation)
+* [搜索 & 弹出框](#search--popups)
+* [区域/overlay 选区](#areaoverlay-selection)
 
 ### Edit geometries
 
@@ -253,17 +253,17 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 与地图本身交互的新方法。
 
-* [Layer switching controls](#layer-switching-controls)
-* [Interactive pan/zoom](#interactive-panzoom)
-* [Bookmarked pan/zoom](#bookmarked-panzoom)
-* [Fullscreen](#fullscreen-controls)
-* [Minimaps & synced maps](#minimaps--synced-maps)
-* [Measurement](#measurement)
-* [Mouse coordinates](#mouse-coordinates)
-* [Events](#events)
-* [User interface](#user-interface)
-* [Print/export](#printexport)
-* [Geolocation](#geolocation)
+* [控制图层切换](#layer-switching-controls)
+* [交互式平移/缩放](#interactive-panzoom)
+* [带书签的平移/缩放](#bookmarked-panzoom)
+* [全屏](#fullscreen-controls)
+* [小地图 & 同步地图](#minimaps--synced-maps)
+* [测量](#measurement)
+* [鼠标坐标](#mouse-coordinates)
+* [事件](#events)
+* [用户界面](#user-interface)
+* [打印/导出](#printexport)
+* [地理位置](#geolocation)
 
 ### Layer switching controls
 
