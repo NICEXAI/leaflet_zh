@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-<a href="https://www.ogc.org/standards/wfs">WFS</a> client layer with transaction support
+<a href="https://www.ogc.org/standards/wfs">WFS</a> 具有事务支持的客户端图层

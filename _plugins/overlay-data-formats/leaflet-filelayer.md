@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Loads files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API (i.e. locally without server).
+使用 HTML5 FileReader API（即本地没有服务器）将文件（GeoJSON、GPX、KML）加载到地图中。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Load <a href="http://www.geopackage.org/">GeoPackage</a> Tile and Feature Layers.
+加载 <a href="http://www.geopackage.org/">GeoPackage</a> 瓦片和 Feature 图层。

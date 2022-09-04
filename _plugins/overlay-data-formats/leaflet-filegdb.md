@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Put an ESRI File GeoDatabase onto your map as a layer.
+将 ESRI 文件地理数据库作为图层放到您的地图上。

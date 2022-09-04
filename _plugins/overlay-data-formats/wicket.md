@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A modest library for translating between Well-Known Text (WKT) and Leaflet geometry objects (e.g. between L.marker() instances and "POINT()" strings).
+一个适度的库，用于翻译 WKT 和 Leaflet 几何对象（例如，L.marker() 实例和 "POINT() "字符串之间）。

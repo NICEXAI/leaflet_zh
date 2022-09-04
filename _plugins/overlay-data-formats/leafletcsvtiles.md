@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Load points from tiled csv files, using the amazing <a href="https://www.papaparse.com/">PapaParse</a> library.
+使用神奇的 <a href="https://www.papaparse.com/">PapaParse</a> 库从平铺的 csv 文件中加载点（Point）。

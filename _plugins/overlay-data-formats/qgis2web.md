@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A <a href="https://qgis.org/">QGIS</a> plugin to make webmaps without coding.
+一个无需编码即可制作网络地图的 <a href="https://qgis.org/">QGIS</a> 插件。

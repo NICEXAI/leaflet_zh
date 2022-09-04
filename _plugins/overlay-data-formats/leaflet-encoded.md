@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use encoded polylines in Leaflet.
+在 Leaflet 中使用编码的多段线。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Put a shapefile onto your map as a layer.
+将 shapefile 作为图层放在地图上。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Loads &amp; converts CSV, KML, GPX, TopoJSON, WKT formats for Leaflet.
+为 Leaflet 加载和转换 CSV, KML, GPX, TopoJSON, WKT 格式。

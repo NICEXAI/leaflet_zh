@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Loads &amp; displays KML
+加载 &amp; 显示 KML

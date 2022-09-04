@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A new, more GIS-like scalebar with alternating black/white bars.
+一个新的、更像 GIS 的比例尺，带有交替的黑/白条。

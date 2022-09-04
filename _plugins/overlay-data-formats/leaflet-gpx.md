@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-GPX layer, targeted at sporting activities by providing access to information such as distance, moving time, pace, elevation, heart rate, etc.
+GPX 层，通过提供对距离、移动时间、配速、海拔、心率等信息的访问，针对体育活动。
