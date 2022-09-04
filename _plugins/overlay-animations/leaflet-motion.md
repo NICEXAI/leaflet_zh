@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds simple motion to your polyline with marker in a head on line.
+将简单的运动添加到你的多段线上，并在线头处设置标记。

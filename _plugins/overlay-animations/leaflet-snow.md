@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Customizable WebGL snow animation for Leaflet. Useful for weather maps.
+用于 Leaflet 的可定制的 WebGL 雪景动画。对天气图很有用。

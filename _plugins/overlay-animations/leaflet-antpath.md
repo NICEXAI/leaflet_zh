@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet.AntPath put a flux animation (like ants walking) into a Polyline.
+Leaflet.AntPath 将通量动画（如蚂蚁行走）放入折线中。

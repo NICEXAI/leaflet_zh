@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Animate a large number of GeoJSON points.
+为大量的 GeoJSON 点制作动画。

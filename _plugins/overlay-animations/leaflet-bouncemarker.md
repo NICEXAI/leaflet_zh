@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Make a marker bounce when you add it to a map.
+当你把一个标记添加到地图上时，使其弹跳。

@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Radar sector scan animation
+雷达扇区扫描动画

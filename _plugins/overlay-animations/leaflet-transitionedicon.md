@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Transition in/out markers with CSS3 transitions. It supports jitter for staggering markers into view to prevent visual overload.
+用 CSS3 Transition 进入/退出标记。它支持抖动，使标记交错进入视图，以防止视觉过载。

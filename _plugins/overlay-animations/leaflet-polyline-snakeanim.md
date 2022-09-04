@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Animates (poly)lines into existence, as if they were being slowly drawn from start to end.
+将（多角）线动画化，就像它们被慢慢地从头画到尾一样。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Smooth animation of marker bouncing for Leaflet.
+为 Leaflet 制作的标记弹跳的平滑动画。

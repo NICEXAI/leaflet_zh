@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Animate a marker along a polyline.
+沿多段线为标记设置动画。

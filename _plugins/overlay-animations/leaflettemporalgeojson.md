@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Flexible animation of GeoJSON features.
+灵活的 GeoJSON Features 动画。

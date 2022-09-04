@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Animates the dashArray of lines and circles, creating a basic flow effect.
+对直线和圆圈的dashArray进行动画处理，创造一个基本的流动效果。

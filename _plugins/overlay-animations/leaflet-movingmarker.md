@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allow to move markers along a polyline with custom durations.
+允许以自定义的持续时间沿多段线移动标记。

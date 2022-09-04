@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Smoothly move (slide) markers to a new location.
+平稳地移动（滑动）标记到一个新的位置。
