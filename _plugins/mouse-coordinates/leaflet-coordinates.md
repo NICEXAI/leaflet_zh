@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple Leaflet plugin viewing the mouse LatLng-coordinates. Also views a marker with coordinate popup on userinput.
+查看鼠标 LatLng 坐标的简单 Leaflet 插件。 还可以在用户输入上查看带有坐标弹出窗口的标记。

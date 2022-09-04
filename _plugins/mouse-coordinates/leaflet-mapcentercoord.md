@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet control to display the coordinates of the map center, especially useful on touch/mobile devices.
+用于显示地图中心坐标的 Leaflet 控件，在触摸/移动设备上特别有用。

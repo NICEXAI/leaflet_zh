@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays the <a href="https://www.mapcode.com">Mapcode</a> of the mouse pointer on mouse move.
+在鼠标移动时显示鼠标指针的 <a href="https://www.mapcode.com">Mapcode</a>。

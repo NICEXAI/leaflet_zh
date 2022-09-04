@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Captures mouseclick and displays its coordinates with easy way to copy them.
+捕捉鼠标点击并显示其坐标，并可以进行轻松复制。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Simple location picker with mini Leaflet map.
+带有迷你 Leaflet 地图的简单位置选择器。

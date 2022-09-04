@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays NAC coordinate of the mouse pointer on mouse move.
+显示鼠标移动时鼠标指针的 NAC 坐标。

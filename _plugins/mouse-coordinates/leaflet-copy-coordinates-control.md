@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Works with Leaflet to capture mouseclicks on a map and display the associated coordinates with an easy way to copy them. (Derived from original work by zimmicz. Forked mainly to provide npm functionality.)
+与 Leaflet 一起使用以捕获地图上的鼠标点击，并以一种简单的复制方式显示相关坐标。 （源自 zimmicz 的原创作品。fork 主要是为了提供 npm 功能。）
