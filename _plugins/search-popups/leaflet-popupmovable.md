@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-This plug-in makes L.Popup movable by user drag and automatically draws leads.
+这个插件使 L.Popup 可以通过用户拖动来移动，并自动绘制引线。

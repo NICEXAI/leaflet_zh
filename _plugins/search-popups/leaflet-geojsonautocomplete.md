@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet Autocomplete For Remote Searching with GeoJSON Services.
+由 Leaflet 自动完成的，使用 GeoJSON 服务进行远程搜索。

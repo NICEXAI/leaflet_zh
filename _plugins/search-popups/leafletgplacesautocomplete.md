@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add google places search into map
+在地图中添加谷歌地方搜索

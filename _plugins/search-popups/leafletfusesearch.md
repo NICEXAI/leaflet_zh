@@ -9,4 +9,4 @@ compatible-v0: http://dev.cartocite.fr/CultureNantes/
 compatible-v1: true
 ---
 
-A control that provides a panel to search features in a GeoJSON layer using the lightweight fuzzy search Fuse.js
+一个提供面板的控件，可以使用轻量级的模糊搜索 Fuse.js 在 GeoJSON 层中搜索特征。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet Plugin for Edge Cases. For use when you want popups on <em>mouseover</em>, not <em>click</em>, and you need popup tips to reorient as you get close to the edges of your map.
+边缘案例的 Leaflet 插件。 当您希望在 <em>mouseover</em> 而不是 <em>click</em> 上弹出弹出窗口时使用，并且您需要在接近地图边缘时重新定位弹出提示。

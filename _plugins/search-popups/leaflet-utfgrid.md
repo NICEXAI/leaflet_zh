@@ -9,5 +9,5 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Provides a utfgrid interaction handler for leaflet a very small footprint.
-support for Leaflet &gt;= 1.0.  Includes basic mouseover support plus ability to highlight feature from UTFGrid on hover.
+为 Leaflet 提供了一个 utfgrid 交互处理程序，占用空间非常小。
+支持 Leaflet >= 1.0。 包括基本的鼠标悬停支持以及悬停时突出显示 UTFGrid 功能的能力。

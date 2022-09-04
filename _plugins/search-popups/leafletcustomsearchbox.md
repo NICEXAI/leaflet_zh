@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A google map style search box which includes a side panel slider control.
+一个谷歌地图风格的搜索框，其中包括一个侧面板滑块控件。

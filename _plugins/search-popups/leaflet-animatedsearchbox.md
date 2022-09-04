@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple Leaflet plugin that provides a collapsible search box.
+一个简单的 Leaflet 插件，提供一个可折叠的搜索框。

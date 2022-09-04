@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Very simple but extendable Leaflet plugin to display OSM POIs data on map click.
+非常简单但可扩展的 Leaflet 插件，在地图上显示 OSM POI 数据。

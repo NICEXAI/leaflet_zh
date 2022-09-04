@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Removes the need to move the map to be able to see the content of the popup.
+无需移动地图即可查看弹出窗口的内容。
