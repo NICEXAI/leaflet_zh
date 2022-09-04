@@ -52,7 +52,7 @@ Leaflet 中文网新一轮大规模的文档同步、翻译和校正工作正在
   - [x] Tile & Image 图层（已完成）
   - [x] Overlay data（已完成）
   - [x] Overlay Display（已完成）
-  - [ ] Overlay interaction
+  - [x] Overlay interaction（已完成）
   - [ ] 地图交互
   - [ ] 各种各样的
   - [ ] 综合的
