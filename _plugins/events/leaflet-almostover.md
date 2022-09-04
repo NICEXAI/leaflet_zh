@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Trigger mouse events when cursor is "almost" over a layer.
+当光标“几乎”在图层上时触发鼠标事件。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Inspired by Leaflet-active-area, automatically detects the largest area of the map not covered by any map controls and applies setView, fitBounds, setZoom, getBounds to that area.
+受 Leaflet-active-area 启发，自动检测地图中未被任何地图控件覆盖的最大区域，并将 setView、fitBounds、setZoom、getBounds 应用于该区域。

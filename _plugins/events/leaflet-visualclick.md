@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Adds visual feedback when user clicks/taps the map. Useful when further action is delayed by server requests, or implementation of Leaflet.singleclick. Only tested with Leaflet 1.0.0-beta1.
+当用户单击/点击地图时添加视觉反馈。 当服务器请求或 Leaflet.singleclick 的实现延迟进一步操作时很有用。 仅使用 Leaflet 1.0.0-beta1 进行测试。

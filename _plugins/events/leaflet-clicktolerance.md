@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-This plugin allows you to increase the click tolerance of canvas powered layers, making it possible to increase the clickable area of vector layers beyond their visible extent. Useful when your features are difficult to click otherwise.
+此插件允许你增加 Canvas 驱动图层的点击容差，从而可以将矢量图层的可点击区域增加到其可见范围之外。 当您的功能难以点击时很有用。

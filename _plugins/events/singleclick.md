@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Extend <code>L.Evented</code> to fire a <code>singleclick</code> event. Compatible with Leaflet 1.0.0-beta1 and greater only.
+扩展 <code>L.Evented</code> 以触发 <code>singleclick</code> 事件。 仅与 Leaflet 1.0.0-beta1 及更高版本兼容。

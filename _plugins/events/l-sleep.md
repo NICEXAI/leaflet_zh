@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Avoid unwanted scroll capturing.
+避免不必要的滚动捕获。

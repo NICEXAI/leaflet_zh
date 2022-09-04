@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Makes it easy to touch vector overlays with thick fingers on a small display by adding a transparent, larger touch surface
+通过添加透明、更大的触摸表面，可以在小型显示器上用粗手指轻松触摸矢量 overlay 图层

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds a new event ``mouseintent``, that differs from ``mouseover`` since it reflects user			intentions to aim a particular layer.
+添加一个新事件 “mouseintent”，它与 “mouseover” 不同，因为它反映了用户瞄准特定图层的意图。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Brings the basic functionality of Google Maps Gesture Handling into Leaflet. Prevents users from getting trapped on the map when scrolling a long page.
+将谷歌地图手势处理的基本功能带入 Leaflet。 防止用户在滚动长页面时被困在地图上。

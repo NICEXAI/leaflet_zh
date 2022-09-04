@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-This plugin allows you to use a smaller portion of the map as an active area. All positioning methods (setView, fitBounds, setZoom) will be applied on this portion instead of the all map.
+此插件允许你使用地图的较小部分作为活动区域。 所有定位方法（setView、fitBounds、setZoom）都将应用于此部分而不是所有地图。

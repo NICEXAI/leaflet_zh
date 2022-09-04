@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Dynamically highlight features near the mouse cursor with a customizable shape
+使用可自定义的形状动态突出显示鼠标光标附近的特征
