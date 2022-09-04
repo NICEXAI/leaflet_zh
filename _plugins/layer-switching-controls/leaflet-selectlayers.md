@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-a Leaflet plugin which adds new control to switch between different layers on the map. New control replaces L.Control.Layers radio button panel with select tag.
+一个 Leaflet 插件，它添加了新的控件以在地图上的不同图层之间切换。 新控件将 L.Control.Layers 单选按钮面板替换为选择标记。

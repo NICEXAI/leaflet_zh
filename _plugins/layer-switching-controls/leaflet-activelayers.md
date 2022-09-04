@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds new L.Control.ActiveLayers with functionality to get currently active layers on the map.
+添加新的 L.Control.ActiveLayers 以获取地图上当前活动的图层。

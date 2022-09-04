@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A basemap chooser with a preview image from the tile stack.			<a href="http://consbio.github.io/Leaflet.Basemaps/">Example</a>
+带有来自瓦片堆栈的预览图像的底图选择器。 <a href="http://consbio.github.io/Leaflet.Basemaps/">示例</a>

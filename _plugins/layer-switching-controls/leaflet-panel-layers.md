@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet Control Layers extended for group of layers and icons legend
+为图层组和图标图例扩展的 Leaflet 图层控件

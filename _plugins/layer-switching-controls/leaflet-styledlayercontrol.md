@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin that implements the management and control of layers by organization into categories or groups.
+一个 Leaflet 插件，通过组织到类别或组来实现对图层的管理和控制。

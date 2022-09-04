@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet layer control with stylable checkboxes and radio buttons.
+带有样式复选框和单选按钮的 Leaflet 图层控件。

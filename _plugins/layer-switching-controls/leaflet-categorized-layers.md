@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet Control Layers extended for groups of categorized layers
+为分类层组扩展的 Leaflet 图层控件

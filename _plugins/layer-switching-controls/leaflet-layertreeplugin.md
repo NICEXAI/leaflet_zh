@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet control allows to switch layers on and off, display them in a tree-like way.
+Leaflet 控件允许打开和关闭图层，并以树状方式显示它们。

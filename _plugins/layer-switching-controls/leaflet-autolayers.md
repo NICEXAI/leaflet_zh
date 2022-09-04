@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Automatically pull layers from multiple mapservers and organize/search them with user controlled overlay zIndex management.
+自动从多个地图服务器中提取图层，并使用用户控制的覆盖 zIndex 管理来组织/搜索它们。

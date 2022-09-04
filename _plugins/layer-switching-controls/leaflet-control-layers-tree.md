@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-L.Control.Layers extension that supports a Tree structure, both for base and overlay layers. Simple and highly configurable.
+L.Control.Layers 扩展，支持树结构，用于基础层和覆盖层。 简单且高度可配置。

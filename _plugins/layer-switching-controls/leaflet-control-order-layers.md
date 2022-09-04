@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds the ability to change overlay order in the layers control.
+添加在图层控件中更改叠加顺序的功能。

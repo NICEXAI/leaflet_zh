@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet layer control with support for grouping overlays together.
+Leaflet 图层控制，支持将 overlays 图层组合在一起。

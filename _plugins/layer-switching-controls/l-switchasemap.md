@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-An easy leaflet plugin to switch basemap.
+一个用来切换底图的简单的 Leaflet 插件。

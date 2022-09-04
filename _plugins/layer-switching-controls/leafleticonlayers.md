@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet control that displays base layers as small icons.
+将基础图层显示为小图标的 Leaflet 控件。
