@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extends the default Leaflet layers control with synced minimaps.
+使用同步的小地图扩展默认的 Leaflet 图层控件。

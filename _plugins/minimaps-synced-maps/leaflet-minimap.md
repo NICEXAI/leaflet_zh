@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A small minimap showing the map at a different scale to aid navigation.
+一个小的迷你地图以不同的比例尺显示地图，以帮助导航。

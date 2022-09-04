@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Synchronized view of two maps.
+两个地图的同步视图。

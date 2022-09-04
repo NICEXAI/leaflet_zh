@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-A small minimap showing the map-view on a world-mini-map to aid navigation.
+一个小地图，在世界小地图上显示地图视图以帮助导航。

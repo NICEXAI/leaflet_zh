@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Simple minimap control that places a 3D Globe in the corner of your map, centered on the same location as the main map.
+简单的小地图控件，将 3D 地球仪放置在地图的角落，与主地图位于同一位置。

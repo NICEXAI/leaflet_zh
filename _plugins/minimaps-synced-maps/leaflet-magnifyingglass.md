@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows you to display a small portion of the map at another zoom level, either at a fixed position or linked to the mouse movement, for a magnifying glass effect.
+允许你以另一个缩放级别显示地图的一小部分，无论是在固定位置还是与鼠标移动相关联，以获得放大镜效果。
