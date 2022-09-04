@@ -20878,9 +20878,8 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='transformation'>Transformation</h2><p>Represents an affine transformation: a set of coefficients <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>
-for transforming a point of a form <code>(x, y)</code> into <code>(a*x + b, c*y + d)</code> and doing
-the reverse. Used by Leaflet in its projections code.</p>
+</section><h2 id='transformation'>Transformation 转换</h2><p>代表一个仿生转换：一组系数 <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>
+    ，用于将一个形式为 <code>(x, y)</code> 的点转换为 <code>(a*x + b, c*y + d)</code> ，并做反向转换。Leaflet 在其投影代码中使用。</p>
 
 <section>
 <h3 id='transformation-example'>使用示例</h3>
@@ -20918,12 +20917,12 @@ the reverse. Used by Leaflet in its projections code.</p>
 	</thead><tbody>
 	<tr id='transformation-l-transformation'>
 		<td><code><b>L.transformation</b>(<nobr>&lt;Number&gt;</nobr> <i>a</i>, <nobr>&lt;Number&gt;</nobr> <i>b</i>, <nobr>&lt;Number&gt;</nobr> <i>c</i>, <nobr>&lt;Number&gt;</nobr> <i>d</i>)</code></td>
-		<td>Instantiates a Transformation object with the given coefficients.</td>
+		<td>实例化一个具有给定系数的 Transformation 对象。</td>
 	</tr>
 	<tr id='transformation-l-transformation'>
 		<td><code><b>L.transformation</b>(<nobr>&lt;Array&gt;</nobr> <i>coefficients</i>)</code></td>
-		<td>Expects an coefficients array of the form
-<code>[a: Number, b: Number, c: Number, d: Number]</code>.</td>
+		<td>期待一个形式为
+			<code>[a: Number, b: Number, c: Number, d: Number]</code>的系数阵列。</td>
 	</tr>
 </tbody></table>
 
@@ -20948,15 +20947,13 @@ the reverse. Used by Leaflet in its projections code.</p>
 	<tr id='transformation-transform'>
 		<td><code><b>transform</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>, <nobr>&lt;Number&gt;</nobr> <i>scale?</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns a transformed point, optionally multiplied by the given scale.
-Only accepts actual <a href="#point"><code>L.Point</code></a> instances, not arrays.</p>
+		<td><p>返回一个转换后的点，可以选择乘以给定的比例。只接受实际的 <a href="#point"><code>L.Point</code></a> 实例，不接受数组。</p>
 </td>
 	</tr>
 	<tr id='transformation-untransform'>
 		<td><code><b>untransform</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>point</i>, <nobr>&lt;Number&gt;</nobr> <i>scale?</i>)</code></td>
 		<td><code><a href='#point'>Point</a></code></td>
-		<td><p>Returns the reverse transformation of the given point, optionally divided
-by the given scale. Only accepts actual <a href="#point"><code>L.Point</code></a> instances, not arrays.</p>
+		<td><p>返回给定点的反向转换，可以选择除以给定的比例。只接受实际的 <a href="#point"><code>L.Point</code></a> 实例，不接受数组。</p>
 </td>
 	</tr>
 </tbody></table>
