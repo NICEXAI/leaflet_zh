@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A set of plugins for: GPX, KML, TOPOJSON layers; Bing tile layer; Yandex layers (implemented with their APIs), and permalink control.
+一组插件用于：GPX、KML、TOPOJSON 图层； 必应瓦片图层； Yandex 图层（通过其 API 实现）和永久链接控件。

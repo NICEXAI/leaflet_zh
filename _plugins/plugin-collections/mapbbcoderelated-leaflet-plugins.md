@@ -9,4 +9,5 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Seven plugins for various features, independent of the MapBBCode library.			From circular and popup icons to buttons, layer switcher, better search and attribution.
+七个用于各种功能的插件，独立于MapBBCode库。从圆形和弹出式图标到按钮、图层切换器、更好的搜索和属性。
+

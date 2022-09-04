@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Tools for using Spectrum Spatial Server services with leaflet. This plugin supports: map service, tile service, feature service. It has layers, legend and feature controls.
+使用 Spectrum Spatial Server 服务与 leaflet 的工具。这个插件支持：地图服务、瓦片服务、特征服务。它有图层、图例和特征控制。
