@@ -119,7 +119,7 @@ bodyclass: api-page
         <h4>其它</h4>
         <ul>
             <li><a href="#event-objects">Event objects 事件对象</a></li>
-            <li><a href="#global-switches">Global switches 公共开关</a></li>
+            <li><a href="#global-switches">Global switches 全局开关</a></li>
             <li><a href="#noconflict">noConflict 原始值</a></li>
             <li><a href="#version">version 版本号</a></li>
         </ul>
@@ -25345,10 +25345,7 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='global-switches'>Global Switches</h2><p>Global switches are created for rare cases and generally make
-Leaflet to not detect a particular browser feature even if it's
-there. You need to set the switch as a global variable to true
-before including Leaflet on the page, like this:</p>
+</section><h2 id='global-switches'>Global Switches 全局开关</h2><p>全局开关是为极少数情况创建的，即使它是特定的浏览器功能，Leaflet 也不会检测到	那里。 您需要在页面上包含 Leaflet 之前，将 switch 作为全局变量设置为 true 像这样:</p>
 <pre><code class="language-html">&lt;script&gt;L_NO_TOUCH = true;&lt;/script&gt;
 &lt;script src=&quot;leaflet.js&quot;&gt;&lt;/script&gt;
 </code></pre>
@@ -25362,32 +25359,30 @@ before including Leaflet on the page, like this:</p>
 <tbody>
 <tr>
 <td><code>L_NO_TOUCH</code></td>
-<td>Forces Leaflet to not use touch events even if it detects them.</td>
+<td>强制 Leaflet 不使用触摸事件，即使它检测到它们。</td>
 </tr>
 <tr>
 <td><code>L_DISABLE_3D</code></td>
-<td>Forces Leaflet to not use hardware-accelerated CSS 3D transforms for positioning (which may cause glitches in some rare environments) even if they're supported.</td>
+<td>强制 Leaflet 不使用硬件加速的 CSS 3D 转换进行定位（这可能会在某些罕见的环境中导致故障），即使它们受支持。</td>
 </tr>
 </tbody>
 </table>
 
-<h2 id='noconflict'>noConflict</h2><p>This method restores the <code>L</code> global variable to the original value
-it had before Leaflet inclusion, and returns the real Leaflet
-namespace so you can put it elsewhere, like this:</p>
+<h2 id='noconflict'>noConflict 原始值</h2><p>这个方法将 <code>L</code> 全局变量恢复到Leaflet包含之前的原始值，并返回真正的Leaflet命名空间，所以你可以把它放在其他地方，像这样:</p>
 <pre><code class="language-html">&lt;script src='libs/l.js'&gt;
-&lt;!-- L points to some other library --&gt;
+&lt;!-- L 指向某个其他库 --&gt;
 
 &lt;script src='leaflet.js'&gt;
-&lt;!-- you include Leaflet, it replaces the L variable to Leaflet namespace --&gt;
+&lt;!-- 您包含 Leaflet，它将 L 变量替换为 Leaflet 命名空间 --&gt;
 
 &lt;script&gt;
 var Leaflet = L.noConflict();
-// now L points to that other library again, and you can use Leaflet.Map etc.
+// 现在 L 再次指向另一个库，您可以使用 Leaflet.Map 等。
 &lt;/script&gt;
 </code></pre>
 
-<h2 id='version'>version</h2><p>A constant that represents the Leaflet version in use.</p>
-<pre><code class="language-js">L.version; // contains &quot;1.0.0&quot; (or whatever version is currently in use)
+<h2 id='version'>version 版本号</h2><p>代表正在使用的 Leaflet 版本信息。</p>
+<pre><code class="language-js">L.version; // contains &quot;1.0.0&quot; (或当前使用的任何版本)
 </code></pre>
 
 
