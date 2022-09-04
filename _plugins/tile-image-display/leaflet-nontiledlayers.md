@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet layer for non-tiled overlays.
+一个用于 non-tiled overlay 的 Leaflet 图层。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-WebGL TileLayer: Colorize floating-point pixels, mouse event handlers for pixel values, hillshading, contours, transitions, filter and do calculations on multiple layers.
+WebGL TileLayer：为浮点像素着色、像素值的鼠标事件处理程序、山体阴影、轮廓、过渡、过滤和在多个图层上进行计算。

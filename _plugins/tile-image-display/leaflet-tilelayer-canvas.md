@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Render tiles as canvas elements.
+将瓦片渲染为 Canvas 元素。

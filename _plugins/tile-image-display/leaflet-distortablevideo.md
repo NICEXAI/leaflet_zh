@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Enable users to scale, rotate, and distort videos on Leaflet maps.
+使用户能够在 Leaflet 地图上缩放、旋转和扭曲视频。

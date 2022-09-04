@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet TileLayer which can modify colors by RGBA code.
+可以通过 RGBA 代码修改颜色的 Leaflet TileLayer。

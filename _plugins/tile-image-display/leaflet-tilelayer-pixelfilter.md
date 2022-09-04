@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A TileLayer which can filter and replace pixels by RGB code.
+可以通过 RGB 代码过滤和替换像素的 TileLayer。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Make multiple tile layers transparent.
+使多个瓦片图层透明。

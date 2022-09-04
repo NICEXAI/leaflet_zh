@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet TileLayer with getColor(latLng).
+带有 getColor(latLng) 的 Leaflet TileLayer。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Simple Leaflet controls to adjust the opacity of a map layer.
+用于调整地图图层不透明度的简单 Leaflet 控件。

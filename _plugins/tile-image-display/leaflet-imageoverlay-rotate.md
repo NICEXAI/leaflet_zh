@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays rotated, scaled and skewed (but not rubbersheeted) ImageOverlays, given three control points. 
+给定三个控制点，显示旋转、缩放和倾斜（但不是 rubbersheeted）的 ImageOverlay。

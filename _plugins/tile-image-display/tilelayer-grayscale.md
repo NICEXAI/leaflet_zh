@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A regular TileLayer with grayscale makeover.
+具有灰度改造的常规 TileLayer。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays reprojected ImageOverlays, given four control points and a proj4js projection function.
+指定四个控制点和一个 proj4js 投影函数，显示重新投影的 ImageOverlay。

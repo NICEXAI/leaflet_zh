@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Applies custom WebGL shaders to each tile in a tilelayer.
+将自定义 WebGL 着色器应用于瓦片图层中的每个瓦片。

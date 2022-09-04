@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet control to add a split screen to compare two map overlays.
+用于添加分屏以比较两个地图 overlay 图层的 Leaflet 控件。

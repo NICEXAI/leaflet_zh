@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple and lightweight Leaflet plugin to apply CSS filters on map tiles.
+一个简单轻量级的 Leaflet 插件，用于在地图图块上应用 CSS 过滤器。

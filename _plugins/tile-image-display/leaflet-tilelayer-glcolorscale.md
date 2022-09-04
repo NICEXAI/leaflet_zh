@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-TileLayer that uses WebGL to colorize floating-point pixels according to a specified color scale.
+TileLayer 使用 WebGL 根据指定的色标对浮点像素进行着色。

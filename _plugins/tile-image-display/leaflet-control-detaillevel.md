@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display tiles at higher-than-retina (hdpi) resolutions, by real-time modification of the zoomOffset. Useful for mapping sources which drastically change map style between different zoom levels. Increasing the zoomOffset by too much does slow down the browser, as the number of displayed tiles grows exponentially with the zoomOffset.
+通过实时修改 zoomOffset，以高于视网膜 (hdpi) 的分辨率显示瓦片。 对于在不同缩放级别之间大幅改变地图样式的映射源很有用。 将 zoomOffset 增加太多确实会减慢浏览器的速度，因为显示的瓦片数量会随着 zoomOffset 呈指数增长。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows you to draw tile layers with arbitrary polygonal boundary. HTML5 Canvas is used for rendering.
+允许你绘制具有任意多边形边界的瓦片图层。 HTML5 Canvas 用于渲染。

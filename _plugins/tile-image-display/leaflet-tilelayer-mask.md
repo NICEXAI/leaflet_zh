@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A TileLayer with mask effect.
+具有遮罩效果的 TileLayer。
