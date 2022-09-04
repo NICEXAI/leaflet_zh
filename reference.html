@@ -21010,7 +21010,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='polyutil'>PolyUtil</h2><p>Various utility functions for polygon geometries.</p>
+</section><h2 id='polyutil'>PolyUtil 多边形工具函数</h2><p>用于多边形几何形状的各种实用函数。</p>
 
 <section>
 <h3 id='polyutil-function'>Functions</h3>
@@ -21030,10 +21030,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	<tr id='polyutil-clippolygon'>
 		<td><code><b>clipPolygon</b>(<nobr>&lt;Point[]&gt;</nobr> <i>points</i>, <nobr>&lt;<a href='#bounds'>Bounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;Boolean&gt;</nobr> <i>round?</i>)</code></td>
 		<td><code>Point[]</code></td>
-		<td>Clips the polygon geometry defined by the given <code>points</code> by the given bounds (using the <a href="https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm">Sutherland-Hodgman algorithm</a>).
-Used by Leaflet to only show polygon points that are on the screen or near, increasing
-performance. Note that polygon points needs different algorithm for clipping
-than polyline, so there's a separate method for it.</td>
+		<td>通过给定的边界(使用 <a href="https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm">Sutherland-Hodgman 算法</a>)对给定的<code>点</code>所定义的多边形几何图形进行剪辑。Leaflet 用它来显示在屏幕上或附近的多边形点，以提高性能。注意，多边形点需要不同的剪裁算法，所以有一个单独的方法来处理。</td>
 	</tr>
 </tbody></table>
 
