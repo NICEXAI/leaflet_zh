@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Internationalization for Leaflet plugins.
+Leaflet 的国际化插件。

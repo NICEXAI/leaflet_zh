@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Integrate Leaflet in applications made with the <a href="https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview">Polymer &gt;= 1.0</a> web component framework.
+将 Leaflet 集成到使用 <a href="https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview">Polymer &gt;= 1.0</a> Web 组件框架制作的应用程序中。

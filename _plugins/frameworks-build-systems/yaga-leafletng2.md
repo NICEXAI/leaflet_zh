@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Granular integration into Angular2/4.
+细致地整合到 Angular2/4。

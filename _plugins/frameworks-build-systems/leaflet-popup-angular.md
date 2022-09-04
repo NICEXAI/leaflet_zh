@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use AngularJS in your Leaflet popups. Extends the built-in L.popup.
+在你的 Leaflet popups 中使用 AngularJS。它扩展了内置的 L.popup.Action。

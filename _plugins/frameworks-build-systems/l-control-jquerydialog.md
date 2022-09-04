@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Trigger a jQuery UI dialog/modal using an on-map control.
+使用地图控件触发 jQuery UI 对话框/模态框。

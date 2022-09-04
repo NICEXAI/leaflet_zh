@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Provides a Meteor package to quickly build real-time cross-platform map apps.
+提供 Meteor 包，快速构建实时跨平台地图应用。

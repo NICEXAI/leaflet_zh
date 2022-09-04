@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A JavaServer Faces wrapper for Leaflet.
+Leaflet 的 JavaServer Faces 包装器。

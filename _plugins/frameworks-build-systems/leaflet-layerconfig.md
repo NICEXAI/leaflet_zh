@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Provide a json file or service response with a configuration of layers and markers to automatically set up a Leaflet client.
+提供一个 json 文件或服务响应，其中包含图层和标记的配置，用来自动设置一个 Leaflet 客户端。

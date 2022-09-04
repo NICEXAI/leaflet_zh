@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-This gem provides the leaflet.js map display library for your Rails 5 application. <a href="https://rubygems.org/gems/leaflet-rails">leaflet-rails on RubyGems</a>
+这个 gem 为你的 Rails 5 应用程序提供了 leaflet.js 地图显示库。 <a href="https://rubygems.org/gems/leaflet-rails">RubyGems 上的 leaflet-rails</a>

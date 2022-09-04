@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Java/GWT JsInterop wrapper for Leaflet. It allows using Leaflet in Java the same way as from a javascript script.
+Leaflet 的 Java/GWT JsInterop 包装器。 它允许在 Java 中使用 Leaflet，就像使用 javascript 脚本一样。

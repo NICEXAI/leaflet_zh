@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Comprehensive Java Server Faces(JSF) Component/Wrapper for Leaflet.
+Leaflet 的综合 Java Server Faces (JSF) 组件/包装器。

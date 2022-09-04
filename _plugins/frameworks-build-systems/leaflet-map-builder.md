@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-It populates a leaflet map from a configuration object, can also creates zoom, layers, attribution draw controls.
+它从一个配置对象中填充 Leaflet 地图，还可以创建缩放、图层、归属的绘制控件。

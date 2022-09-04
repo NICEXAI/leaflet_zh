@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Easy and declarative mapping for <a href="https://emberjs.com/">Ember.js</a> using Leaflet.
+使用 Leaflet 对 <a href="https://emberjs.com/">Ember.js</a> 进行简单的声明式映射。

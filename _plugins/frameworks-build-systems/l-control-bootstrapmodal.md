@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Trigger a Bootstrap modal using an on-map control.
+使用地图控件触发引导模式。

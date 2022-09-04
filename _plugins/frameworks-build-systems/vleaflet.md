@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use Leaflet as a component for the <a href="https://vaadin.com/">Vaadin</a> Java/HTML framework.
+使用 Leaflet 作为 <a href="https://vaadin.com/">Vaadin</a> Java/HTML 框架的组件。

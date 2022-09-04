@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add the main Leaflet CSS files (or any css) from within JavaScript, be gone conditional comments.
+在 JavaScript 中添加主要的 Leaflet CSS 文件（或任何 css），没有条件注释。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-<a href="https://reactjs.org/">React</a> components for Leaflet maps.
+用于 Leaflet 地图的 <a href="https://reactjs.org/">React</a> 组件。

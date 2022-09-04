@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Insert and use Angularized HTML code in your Leaflet map as a Leaflet control.
+在 Leaflet 地图中插入和使用 Angularized HTML 代码作为 Leaflet 控件。

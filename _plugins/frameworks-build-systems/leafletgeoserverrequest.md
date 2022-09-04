@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Basic geoserver requests in leaflet. Currently supports wms, wfs, legend, wmsImage request on the leaflet.
+Leaflet 中的基本地理服务器请求。目前支持 Leaflet 上的 wms, wfs, legend, wmsImage 请求。

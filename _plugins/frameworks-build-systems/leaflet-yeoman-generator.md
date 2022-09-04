@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Yeoman generator that scaffolds out a basic Leaflet map application.
+Yeoman 生成器，用于构建基本的 Leaflet 地图应用程序。

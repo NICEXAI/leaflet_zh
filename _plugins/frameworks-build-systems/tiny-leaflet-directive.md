@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Tiny LeafletJS map directive for your AngularJS apps.
+用于 AngularJS 应用程序的 Tiny LeafletJS 映射指令。

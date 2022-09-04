@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add zoom level css class to map element for easy style updates based on zoom levels
+将缩放级别 css 类添加到地图元素，以便根据缩放级别轻松更新样式
