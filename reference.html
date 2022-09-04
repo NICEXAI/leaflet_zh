@@ -20961,7 +20961,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 </section>
 
 
-</section><h2 id='lineutil'>LineUtil</h2><p>Various utility functions for polyline points processing, used by Leaflet internally to make polylines lightning-fast.</p>
+</section><h2 id='lineutil'>LineUtil 折线工具</h2><p>用于折线点处理的各种实用工具函数，Leaflet 内部使用它来快速制作折线。</p>
 
 <section>
 <h3 id='lineutil-function'>Functions</h3>
@@ -20981,36 +20981,29 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	<tr id='lineutil-simplify'>
 		<td><code><b>simplify</b>(<nobr>&lt;Point[]&gt;</nobr> <i>points</i>, <nobr>&lt;Number&gt;</nobr> <i>tolerance</i>)</code></td>
 		<td><code>Point[]</code></td>
-		<td>Dramatically reduces the number of points in a polyline while retaining
-its shape and returns a new array of simplified points, using the
-<a href="https://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm">Ramer-Douglas-Peucker algorithm</a>.
-Used for a huge performance boost when processing/displaying Leaflet polylines for
-each zoom level and also reducing visual noise. tolerance affects the amount of
-simplification (lesser value means higher quality but slower and with more points).
-Also released as a separated micro-library <a href="https://mourner.github.io/simplify-js/">Simplify.js</a>.</td>
+		<td>使用 <a href="http://en.wikipedia.org/wiki/Douglas-Peucker_algorithm">Douglas-Peucker 算法</a>，大幅减少折线的点数，同时保留其形状，并返回一个新的简化点阵列。在处理/显示每个缩放级别的 Leaflet 折线时，用于巨大的性能提升，同时也减少了视觉噪音。宽容度影响简化的数量（较小的值意味着更高的质量，但速度较慢，点较多）。也作为一个独立的微库 <a href="http://mourner.github.com/simplify-js/">Simplify.js</a>发布。</td>
 	</tr>
 	<tr id='lineutil-pointtosegmentdistance'>
 		<td><code><b>pointToSegmentDistance</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p1</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p2</i>)</code></td>
 		<td><code>Number</code></td>
-		<td>Returns the distance between point <code>p</code> and segment <code>p1</code> to <code>p2</code>.</td>
+		<td>返回点 <code>p</code> 和线段 <code>p1</code> 到 <code>p2</code>之间的距离。</td>
 	</tr>
 	<tr id='lineutil-closestpointonsegment'>
 		<td><code><b>closestPointOnSegment</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p1</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>p2</i>)</code></td>
 		<td><code>Number</code></td>
-		<td>Returns the closest point from a point <code>p</code> on a segment <code>p1</code> to <code>p2</code>.</td>
+		<td>返回线段 <code>p1</code>上的一个点 <code>p</code> 到 <code>p2</code>的最近点。</td>
 	</tr>
 	<tr id='lineutil-clipsegment'>
 		<td><code><b>clipSegment</b>(<nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>a</i>, <nobr>&lt;<a href='#point'>Point</a>&gt;</nobr> <i>b</i>, <nobr>&lt;<a href='#bounds'>Bounds</a>&gt;</nobr> <i>bounds</i>, <nobr>&lt;Boolean&gt;</nobr> <i>useLastCode?</i>, <nobr>&lt;Boolean&gt;</nobr> <i>round?</i>)</code></td>
 		<td><code>Point[]|Boolean</code></td>
-		<td>Clips the segment a to b by rectangular bounds with the
-<a href="https://en.wikipedia.org/wiki/Cohen%E2%80%93Sutherland_algorithm">Cohen-Sutherland algorithm</a>
-(modifying the segment points directly!). Used by Leaflet to only show polyline
-points that are on the screen or near, increasing performance.</td>
+		<td>用
+			<a href="https://en.wikipedia.org/wiki/Cohen%E2%80%93Sutherland_algorithm">Cohen-Sutherland 算法</a>
+			（直接修改线段点！）将线段 a 到 b 按矩形边界剪辑。被 Leaflet 用来只显示屏幕上或附近的折线点，提高性能。</td>
 	</tr>
 	<tr id='lineutil-isflat'>
 		<td><code><b>isFlat</b>(<nobr>&lt;LatLng[]&gt;</nobr> <i>latlngs</i>)</code></td>
 		<td><code>Boolean</code></td>
-		<td>Returns true if <code>latlngs</code> is a flat array, false is nested.</td>
+		<td>如果 <code>latlngs</code> 是一个平面数组，返回 true；如果是一个嵌套数组，则返回 false。</td>
 	</tr>
 </tbody></table>
 
