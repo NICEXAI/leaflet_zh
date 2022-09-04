@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displaying the vector tiles of GeoJSON data on the fly on leaflet
+在 Leaflet 上动态显示 GeoJSON 数据的矢量瓦片

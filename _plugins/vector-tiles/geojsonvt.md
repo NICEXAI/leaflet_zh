@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Efficient library for slicing GeoJSON data into vector tiles on the fly.
+用于将 GeoJSON 数据快速切成矢量图的高效库。

@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-A Leaflet Plugin that renders Mapbox Vector Tiles on canvas. Compatible with Leaflet 0.7.x only.
+一个用于在画布上渲染 Mapbox 矢量瓦片的 Leaflet 插件。仅与 Leaflet 0.7.x 兼容。

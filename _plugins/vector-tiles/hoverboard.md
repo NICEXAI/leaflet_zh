@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-Render vector tiles on canvas with leaflet (geojson, topojson, and protobuf). Compatible with Leaflet 0.7.x only.
+用 Leaflet(geojson, topojson, and protobuf) 在画布上渲染矢量图。仅与 Leaflet 0.7.x 兼容。

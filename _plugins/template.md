@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Describe here your **plugin**, you can use *markdown* to format your text. Keep it short and check out the [plugin guide](https://github.com/Leaflet/Leaflet/blob/main/PLUGIN-GUIDE.md).
+在这里描述你的 **plugin**，你可以使用 *markdown* 来格式化你的文本。 保持简短并查看 [插件指南](https://github.com/Leaflet/Leaflet/blob/main/PLUGIN-GUIDE.md)。

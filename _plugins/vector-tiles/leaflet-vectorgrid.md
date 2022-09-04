@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Display gridded vector data (GeoJSON or TopoJSON sliced with geojson-vt, or protobuf vector tiles) in Leaflet 1.0.0.
+在 Leaflet 1.0.0 中显示网格矢量数据（使用 geojson-vt 或 protobuf 矢量切片切片的 GeoJSON 或 TopoJSON）。

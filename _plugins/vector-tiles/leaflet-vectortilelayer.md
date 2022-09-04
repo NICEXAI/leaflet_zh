@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-A Leaflet layer for displaying vector tiles. Very similar to <a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet.VectorGrid</a> except for styling: a single style can be specified for all layers while VectorGrid requires knowing layer names in advance. For Leaflet 1.0.0.
+用于显示矢量瓦片的 Leaflet 图层。 非常类似于 <a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet.VectorGrid</a> 除了样式：可以为所有图层指定单一样式，而 VectorGrid 则需要提前知道图层名称。 用于 Leaflet 1.0.0。
