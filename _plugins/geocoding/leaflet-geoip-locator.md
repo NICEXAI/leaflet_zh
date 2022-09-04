@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple plugin that allows finding the approximate location of IP addresses and map centering on said location.
+一个简单的插件，可以找到IP地址的大致位置和以所述位置为中心的地图。

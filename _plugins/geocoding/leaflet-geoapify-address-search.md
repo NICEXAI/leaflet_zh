@@ -8,4 +8,5 @@ demo: https://geoapify.github.io/leaflet-address-search-plugin/
 compatible-v0:
 compatible-v1: true
 ---
-Adds an Address Autocomplete field to the map, powered by <a href="https://www.geoapify.com/">Geoapify</a>.
+
+向地图添加地址自动完成字段，由 <a href="https://www.geoapify.com/">Geoapify</a> 提供支持。

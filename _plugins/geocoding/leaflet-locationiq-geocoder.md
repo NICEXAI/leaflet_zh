@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin that adds the ability to search (geocode) a Leaflet-powered map using <a href="https://locationiq.com/">LocationIQ</a>.
+一个插件，增加了使用 <a href="https://locationiq.com/">LocationIQ</a> 搜索（地理编码）由 Leaflet 驱动的地图的能力。

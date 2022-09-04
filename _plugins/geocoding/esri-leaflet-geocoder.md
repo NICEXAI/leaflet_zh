@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A geocoding control with suggestions powered by the ArcGIS Online geocoder.
+一个由 ArcGIS Online 地理编码器提供建议的地理编码控件。

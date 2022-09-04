@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A clean and extensible control for both geocoding and reverse geocoding. Builtin support for			Nominatim, Bing, MapQuest, Mapbox, What3Words, Google and Photon. Easy to extend to other providers.
+一个简洁和可扩展的控件，用于地理编码和反向地理编码。内置支持 Nominatim, Bing, MapQuest, Mapbox, What3Words, Google 和 Photon。易于扩展到其他供应商。

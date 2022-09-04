@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin plugin that uses <a href="https://opencagedata.com">OpenCage's geocoding API</a> for forward or reverse geocoding.
+一个插件，使用 <a href="https://opencagedata.com">OpenCage 的地理编码 API</a> 进行正向或反向地理编码。

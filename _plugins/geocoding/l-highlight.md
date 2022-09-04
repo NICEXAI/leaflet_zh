@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin that adds the ability to quick highlighting streets and areas using <a href="https://nominatim.org/">Nominatim</a>.
+一个插件，增加了使用 <a href="https://nominatim.org/">Nominatim</a> 快速突出显示街道和地区的功能。

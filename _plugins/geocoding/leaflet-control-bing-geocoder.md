@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple geocoder control that uses Bing to locate places. You may be also interested in its fork <a href="https://github.com/perliedman/leaflet-control-geocoder">Leaflet Control Geocoder</a>.
+一个使用 Bing 定位地点的简单地理编码器控件。 您可能还对其 fork <a href="https://github.com/perliedman/leaflet-control-geocoder">Leaflet Control Geocoder</a> 感兴趣。

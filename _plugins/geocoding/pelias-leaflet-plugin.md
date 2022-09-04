@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A geocoding control using <a href="https://geocode.earth">Geocode Earth</a> or any hosted service powered by the <a href="https://github.com/pelias/api">Pelias Geocoder API</a>.
+使用 <a href="https://geocode.earth">Geocode Earth</a> 或由 <a href="https://github.com/pelias/api">Pelias 提供支持的任何托管服务的地理编码控件 地理编码器 API</a>。

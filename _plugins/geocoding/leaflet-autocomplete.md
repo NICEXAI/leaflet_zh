@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet.Autocomplete is to expand the autosugestion plugin with the ability to geocode and show data on the map in the way you think you need. The <a href="https://tomik23.github.io/Leaflet.Autocomplete/">DEMO</a> is based on the use of OpenstreetMap Nominatim to locate places by address. Accessible, with full support for ARIA attributes and keyboard interactions.
+Leaflet.Autocomplete 是扩展 autosugestion 插件，能够以您认为需要的方式在地图上进行地理编码和显示数据。 <a href="https://tomik23.github.io/Leaflet.Autocomplete/">DEMO</a> 基于使用 OpenstreetMap Nominatim 按地址定位地点。 可访问，完全支持 ARIA 属性和键盘交互。

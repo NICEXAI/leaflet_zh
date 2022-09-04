@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A lightweight geocoding control powered by <a href="http://www.geonames.org/">GeoNames</a>.
+由 <a href="http://www.geonames.org/">GeoNames</a> 提供支持的轻量级地理编码控件。

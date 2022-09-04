@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin that uses <a href="https://opencagedata.com/geosearch">OpenCage's geosearch</a> for location autosuggest.
+使用 <a href="https://opencagedata.com/geosearch">OpenCage 的地理搜索</a> 进行位置自动建议的插件。
