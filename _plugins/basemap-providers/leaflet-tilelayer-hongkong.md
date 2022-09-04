@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays Hong Kong map tiles from <a href="https://geodata.gov.hk">Hong Kong GeoData Store</a> provider.
+显示来自 <a href="https://geodata.gov.hk">Hong Kong GeoData Store</a> 提供商的香港地图瓦片。

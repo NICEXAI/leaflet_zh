@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-<a href="https://earthdata.nasa.gov/gibs">NASA EOSDIS GIBS</a> imagery integration. The plugin provides <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">96 daily updated layers</a> with satellite imagery and science parameters.
+<a href="https://earthdata.nasa.gov/gibs">NASA EOSDIS GIBS</a> 图像集成。该插件提供 <a href="https://wiki.earthdata.nasa.gov/display/GIBS/GIBS+Available+Imagery+Products">96 个每日更新图层</a> 以及卫星图像和科学参数。

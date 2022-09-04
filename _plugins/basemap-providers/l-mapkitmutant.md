@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays Apple's MapkitJS basemaps.
+显示 Apple 的 MapkitJS 底图。

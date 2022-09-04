@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Contains configurations for various (South) Korean tile providers — Daum, Naver, VWorld, etc.
+包含各种（韩国）瓦片供应商的配置——Daum、Naver、VWorld 等。

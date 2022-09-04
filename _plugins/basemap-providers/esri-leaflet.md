@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A set of tools for using ArcGIS services with Leaflet. Support for map services, feature layers, ArcGIS Online tiles and more.
+一组用于将 ArcGIS 服务与 Leaflet 一起使用的工具。支持地图服务、要素图层、ArcGIS Online 切片等。

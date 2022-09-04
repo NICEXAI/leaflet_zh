@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-JavaScript library for displaying tiles from <a href="https://webmap.arcticconnect.ca/">ArcticWebMap</a>, a free tile provider with OSM data in multiple Arctic polar projections. Includes lower-level API for deeper integration with other Leaflet plugins.
+用于显示来自 <a href="https://webmap.arcticconnect.ca/">ArcticWebMap</a> 的瓦片的 JavaScript 库，这是一个免费的瓦片提供商，在多个北极极地投影中提供 OSM 数据。包括较低级别的 API，用于与其他 Leaflet 插件进行更深入的集成。

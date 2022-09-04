@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Add <a href="https://docs.microsoft.com/en-us/bingmaps/rest-services/imagery?redirectedfrom=MSDN">Bing Maps tiles</a> to your Leaflet Map. Requires Leaflet v1.0.0.beta.2 or later.
+将 <a href="https://docs.microsoft.com/en-us/bingmaps/rest-services/imagery?redirectedfrom=MSDN">Bing 地图瓦片</a> 添加到你的 Leaflet 地图中。需要 Leaflet v1.0.0.beta.2 或更高版本。

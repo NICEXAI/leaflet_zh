@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Contains configurations for various Chinese tile providers — TianDiTu, MapABC, GaoDe, etc.
+包含各种中国瓦片供应商的配置——天地图、MapABC、高德等。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays national maps of Switzerland using map tiles from Swisstopo.
+使用来自 Swisstopo 的地图瓦片显示瑞士的国家地图。

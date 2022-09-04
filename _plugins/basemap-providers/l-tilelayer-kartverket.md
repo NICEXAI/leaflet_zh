@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Provides easy setup of the tile layers from <a href="https://kartverket.no/standardisering/">Kartverket</a> (The Norwegian Mapping Authority)
+提供来自 <a href="https://kartverket.no/standardisering/">Kartverket</a>（挪威测绘局）的瓦片图层的简单设置

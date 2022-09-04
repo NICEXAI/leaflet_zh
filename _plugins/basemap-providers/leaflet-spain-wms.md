@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Provides easy setup for several Web Map Services (WMS) layers for Spain (PNOA, IGN base, Catastro, etc), from Spanish mapping agencies.
+为西班牙制图机构提供的多个西班牙 Web 地图服务 (WMS) 图层（PNOA、IGN 基础、Catastro 等）提供简单的设置。

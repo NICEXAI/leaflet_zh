@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Contains configurations for various free tile providers — OSM, OpenCycleMap, Stamen, Esri, etc.
+包含各种免费瓦片提供者的配置——OSM、OpenCycleMap、Stamen、Esri 等。

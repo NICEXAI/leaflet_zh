@@ -33,7 +33,7 @@ Leaflet 中文网新一轮大规模的文档同步、翻译和校正工作正在
   - [x] 扩展 Leaflet: Class Theory（已完成）
   - [x] 扩展 Leaflet: Layers（已完成）
   - [x] 扩展 Leaflet: Handlers and Controls （已完成）
-- [ ] 文档
+- [x] 文档
   - [x] 地图（已完成）
   - [x] 地图方法（已完成）
   - [x] 地图杂项（已完成）

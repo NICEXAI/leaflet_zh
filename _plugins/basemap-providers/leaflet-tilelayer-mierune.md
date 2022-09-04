@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: true
 ---
 
-Displays tiles from Mierune map.
+显示来自 Mierune 地图的瓦片。

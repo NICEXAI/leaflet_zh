@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays map tiles from HERE maps.
+显示来自 HERE 地图的地图瓦片。
