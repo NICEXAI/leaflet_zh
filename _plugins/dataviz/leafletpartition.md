@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Divide the area into parts in different ways such as voronoi(triangulation) and hexagonal tiling.
+以不同的方式将区域划分为不同的部分，例如 voronoi（三角剖分）和六边形平铺。

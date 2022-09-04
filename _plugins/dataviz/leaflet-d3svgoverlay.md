@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-SVG overlay class for using with <a href="https://d3js.org/">D3</a> library. Supports zoom animation and scaling without need to redraw the layer.
+用于 <a href="https://d3js.org/">D3</a> 库的 SVG overlay 类。 支持缩放动画和缩放，无需重绘图层。

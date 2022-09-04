@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin for Leaflet to load <a href="https://github.com/apache/echarts">echarts</a> map and make big data visualization easier.
+Leaflet 的插件，用于加载 <a href="https://github.com/apache/echarts">echarts</a> 地图并使大数据可视化更容易。

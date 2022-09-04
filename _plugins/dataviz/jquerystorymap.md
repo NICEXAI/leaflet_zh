@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A jQuery plugin to display several map locations as the user scrolls through paragraphs.
+一个 jQuery 插件，用于在用户滚动段落时显示多个地图位置。

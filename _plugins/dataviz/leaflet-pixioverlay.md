@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet overlay class for drawing and animating with <a href="https://pixijs.com/">Pixi.js</a>.
+使用 <a href="https://pixijs.com/">Pixi.js</a> 绘制和动画的 Leaflet overlay 类。

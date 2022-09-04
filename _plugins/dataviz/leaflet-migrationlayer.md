@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-leaflet.migrationLayer is used to show migration data such as population, flight, vehicle, traffic and so on. Data visualization on map.
+Leaflet.migrationLayer 用于展示人口、航班、车辆、交通等迁移数据。 地图上的数据可视化。

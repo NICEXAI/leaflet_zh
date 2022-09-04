@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Visualise velocity layers with leaflet.
+用 Leaflet 观察 velocity 图层。

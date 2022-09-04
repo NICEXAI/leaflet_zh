@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Fast rendering for large (+100MB) GeoJSON datasets with WebGL.
+使用 WebGL 快速渲染大型 (+100MB) GeoJSON 数据集。

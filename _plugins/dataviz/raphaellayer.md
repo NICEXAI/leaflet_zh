@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows you to use <a href="http://raphaeljs.com/">Raphael</a> as a layer on a Leaflet map for advanced animations and visualizations.
+允许你使用 <a href="http://raphaeljs.com/">Raphael</a> 作为 Leaflet 地图上的图层，以实现高级动画和可视化。

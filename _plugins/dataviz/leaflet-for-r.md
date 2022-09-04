@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows using Leaflet from within <a href="https://en.wikipedia.org/wiki/R_%28programming_language%29">R</a> programs, a programming language popular for statistical analysis and data mining.
+允许在 <a href="https://en.wikipedia.org/wiki/R_%28programming_language%29">R</a> 程序中使用 Leaflet，这是一种流行的用于统计分析和数据挖掘的编程语言。

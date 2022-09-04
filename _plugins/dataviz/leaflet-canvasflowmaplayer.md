@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A LeafletJS custom map layer for mapping the flow of objects, ideas, people, etc. with Bezier curves rendered on the HTML canvas.
+LeafletJS 自定义地图层，用于映射对象、想法、人员等的流动，并在 HTML Canvas 上呈现贝塞尔曲线。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add-on for the Leaflet.glify plugin to provide more leaflet-idiomatic bindings. Provides fast webgl rendering for GeoJSON FeatureCollections (currently limited to polygons, lines and points).
+Leaflet.glify 插件的附加组件，以提供更多的 Leaflet 惯用绑定。 为 GeoJSON FeatureCollections 提供快速的 webgl 渲染（目前仅限于多边形、线和点）。

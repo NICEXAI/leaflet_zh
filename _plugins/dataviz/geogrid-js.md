@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays data aggregated by the ISEA3H discrete global grid system.  The data can, e.g., be delivered by using <a href="https://github.com/giscience/measures-rest">Measures REST</a> (a framework to deliver data aggregated by the grid) or <a href="https://github.com/giscience/geogrid">geogrid</a> (a library for handling the grid in case that you want to aggregate data manually).
+显示由 ISEA3H 离散全球网格系统聚合的数据。 例如，数据可以通过使用 <a href="https://github.com/giscience/measures-rest">Measures REST</a>（一种用于交付由网格聚合的数据的框架）或 <a href="https://github.com/giscience/geogrid">geogrid</a>（一个用于处理网格的库，以防您想手动聚合数据）。

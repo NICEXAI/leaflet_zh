@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet.Quadtree is used to retrieve visible data inside given bounds
+Leaflet.Quadtree 用于检索给定范围内的可见数据
