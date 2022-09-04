@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-Leaflet.AccuratePosition aims to provide a desired device location accuracy.
+Leaflet.AccuratePosition 旨在提供所需的设备位置精度。

@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: false
 ---
 
-Allow users to send and receive a marker with a message.
+允许用户发送和接收带有消息的标记。

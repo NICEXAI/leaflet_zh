@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple but highly customizable geolocation plugin for Leaflet
+Leaflet 的一个简单但高度可定制的地理定位插件

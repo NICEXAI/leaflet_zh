@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A customizable locate control.
+可自定义的定位控件。

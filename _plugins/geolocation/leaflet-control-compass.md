@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A leaflet control plugin to build a simple rotating compass
+用于构建简单旋转指南针的 Leaflet 控制插件
