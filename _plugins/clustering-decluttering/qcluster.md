@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Quick point clustering library with D3 categorization.
+具有 D3 分类的快速点聚类库。

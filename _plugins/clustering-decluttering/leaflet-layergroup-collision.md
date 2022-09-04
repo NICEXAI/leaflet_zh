@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Provides collision detection for groups of markers. Unlike clustering, this takes into account the shape &amp; size of the markers.
+为标记群提供碰撞检测。与聚类不同，它考虑到了标记的形状&amp; 大小。

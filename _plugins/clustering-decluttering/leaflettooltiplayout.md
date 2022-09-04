@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin to avoid tooltips overlapping and make it easier to find out the relationship between each tooltip and marker.
+避免 tooltips 重叠并更容易找出每个 tooltips 和 marker 之间的关系的插件。

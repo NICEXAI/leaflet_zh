@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Deals with overlapping markers in a Google Earth-inspired way by gracefully springing them apart on click.
+以 Google 地球启发的方式处理重叠标记，点击时优雅地将它们分开。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Beautiful, sophisticated, high performance marker clustering solution with smooth animations and lots of great features. <em>Recommended!</em>
+美丽、复杂、高性能的标记聚类解决方案，具有流畅的动画和许多强大的功能。 <em>推荐！</em>

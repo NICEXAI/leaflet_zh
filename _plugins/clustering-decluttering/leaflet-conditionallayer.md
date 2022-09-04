@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A FeatureGroup that does not show any more than a certain amount of markers visible in the viewport.
+一个在视口中不显示任何超过一定数量的可见标记的 FeatureGroup。

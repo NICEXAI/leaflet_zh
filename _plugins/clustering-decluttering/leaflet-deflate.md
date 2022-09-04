@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Deflates lines and polygons to a marker when their screen size becomes too small in lower zoom levels.
+当线条和多边形在较低的缩放级别中屏幕尺寸变得太小时，将其放缩为一个标记。

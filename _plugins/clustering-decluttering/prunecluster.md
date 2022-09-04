@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Fast and realtime marker clustering library.
+快速和实时的标记聚类库。

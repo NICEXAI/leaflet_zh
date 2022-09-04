@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Create grid-based clusters in realtime.
+实时创建基于网格的集群。
