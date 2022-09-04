@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A leaflet plugin to create cascade buttons.
+用于创建级联按钮的 Leaflet 插件。

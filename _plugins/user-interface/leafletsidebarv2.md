@@ -9,4 +9,4 @@ compatible-v0: true
 compatible-v1: true
 ---
 
-A responsive, tabbed sidebar with HTML &amp; JS API. Compatible with old (0.7) and current leaflet.
+一个具有 HTML &amp; JS API 的响应式、标签式侧边栏。兼容旧版(0.7)和现在的 Leaflet。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Flexible, extensible toolbars for Leaflet maps.
+Leaflet 地图的灵活、可扩展的工具栏。

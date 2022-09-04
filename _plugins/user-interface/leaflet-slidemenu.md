@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple slide menu for Leaflet.
+一个用于Leaflet的简单的 Slide Menu。

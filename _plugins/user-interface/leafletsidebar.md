@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A responsive sidebar plugin.
+一个响应式的侧边栏插件。

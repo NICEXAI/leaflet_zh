@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple, attractive, interactive control to put your logo and link in the corner of your map.
+一个简单、有吸引力的交互式控件，可将您的徽标和链接放在地图的角落。

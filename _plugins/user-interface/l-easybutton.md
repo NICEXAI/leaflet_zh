@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-In one line, add a Font Awesome control button with attached click events.
+在一行中，添加一个带有附加点击事件的 Font Awesome 控件按钮。

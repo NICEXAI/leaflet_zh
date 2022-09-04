@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Fully customizable Leaflet control panel with HTML element.
+完全可定制的带有 HTML 元素的 Leaflet 控制面板。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin for adding a weather widget to the map using OpenWeatherMap API.
+使用 OpenWeatherMap API 向地图添加天气小部件的 Leaflet 插件。

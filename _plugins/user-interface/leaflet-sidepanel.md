@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Sidepanel with tabs. Keep it short and check out the [plugin guide](https://github.com/maxwell-ilai/Leaflet.SidePanel/blob/main/README.md).
+带有标签的 Tab。 保持简短并查看 [插件指南](https://github.com/maxwell-ilai/Leaflet.SidePanel/blob/main/README.md)。

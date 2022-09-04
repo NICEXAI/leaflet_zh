@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An attribution plugin that makes long attributes visible on hover
+一个能使长属性在悬停时可见的属性插件

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Another responsive sidebar plugin. This time with tabs!
+另一个响应式侧边栏插件。这次有标签！

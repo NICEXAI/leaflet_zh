@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display a temporary text message on a map.
+在地图上显示一个临时文本信息。

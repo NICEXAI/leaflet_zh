@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Control to resize your map on the right or bottom side.
+控制调整你的地图在右边或底部的大小。

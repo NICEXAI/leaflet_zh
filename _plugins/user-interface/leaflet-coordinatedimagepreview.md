@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Displays coordinated images in map bounds.
+在地图范围内显示协调的图像。

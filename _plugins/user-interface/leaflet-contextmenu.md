@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A context menu for Leaflet.
+一个用于 Leaflet 的 Contextmenu 菜单。

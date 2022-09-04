@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Guides users to points outside the current map view with directional arrows and a count of points in each given direction.
+用方向性箭头和每个给定方向的点数引导用户到当前地图视图之外的点。

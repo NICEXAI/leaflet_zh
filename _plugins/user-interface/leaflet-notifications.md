@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Spawn toast notifications inside your map
+在你的地图中生成 toast 通知

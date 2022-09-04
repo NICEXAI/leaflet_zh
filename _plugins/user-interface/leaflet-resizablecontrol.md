@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin to add a resizable and scrollable control to the map.
+一个 Leaflet 插件，用于向地图添加可调整大小和可滚动的控件。

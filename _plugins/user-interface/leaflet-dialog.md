@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple resizable, movable, customizable dialog box.
+一个简单的可调整大小、可移动、可定制的对话框。

@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Leaflet plugin to implements layers control with multiple functionality such as opacity, color, bringToFront, bringToBack, zoomToLayer, delete and legend.
+Leaflet 插件用于实现具有多种功能的图层控制，例如不透明度、颜色、bringToFront、bringToBack、zoomToLayer、删除和图例。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Cleverly dispays "blurred" locations using color-coded heatmap and color-coded markers while fetching data from remote API.
+在从远程 API 获取数据时，使用颜色编码的热力图和颜色编码的标记巧妙地显示“模糊”的位置。

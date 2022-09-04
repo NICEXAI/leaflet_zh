@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Create illustrated and interactive legends for your background layers.
+为你的背景图层创建插图和交互式图例。

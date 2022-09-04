@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Adds a <code>&lt;input type="range"&gt;</code> slider that calls a function every time its input is changed.
+添加一个 <code>&lt;input type="range"&gt;</code> 滑块，每次更改其输入时调用一个函数。

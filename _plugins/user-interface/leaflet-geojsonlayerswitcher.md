@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Allows to navigate between GeoJSON layers, select some, and return selection.
+允许在 GeoJSON 层之间导航，选择一些，然后返回选择。

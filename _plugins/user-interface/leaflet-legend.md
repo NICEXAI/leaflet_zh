@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display legend symbols and toggle overlays.
+显示图例符号和切换 overlays。

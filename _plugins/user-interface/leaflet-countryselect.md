@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Control with menu of all countries, and an event listener that returns the selected country as a GeoJSON feature.
+带有所有国家菜单的控件，以及一个事件监听器，可以将所选国家作为 GeoJSON 特征返回。

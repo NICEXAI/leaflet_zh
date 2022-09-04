@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Customisable menu-style control.
+可定制的菜单式控件。

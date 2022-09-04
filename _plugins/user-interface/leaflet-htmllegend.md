@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A simple Leaflet plugin for creating legends using HTML elements.
+一个简单的 Leaflet 插件，用于使用 HTML 元素创建图例。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Creates modal/modeless, draggable, responsive, customisable window in your map.
+在你的地图中创建模态/无模态、可拖动、可响应、可定制的窗口。

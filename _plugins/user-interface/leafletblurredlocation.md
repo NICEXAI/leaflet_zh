@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet-based interface for selecting a "blurred" or low-resolution location, to preserve privacy.
+基于 Leaflet 的界面，用于选择“模糊”或低分辨率位置，以保护隐私。
