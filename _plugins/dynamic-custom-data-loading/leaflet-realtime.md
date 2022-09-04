@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Put realtime data on a Leaflet map: live tracking GPS units, sensor data or just about anything.
+将实时数据放在 Leaflet 地图上：实时跟踪 GPS 单元、传感器数据或任何东西。

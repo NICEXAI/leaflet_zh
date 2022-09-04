@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add GeoJSON data via ajax or jsonp.
+通过 ajax 或 jsonp 添加 GeoJSON 数据。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add an auto updating GeoJSON data Layer via ajax post requests.
+通过 ajax 请求添加一个自动更新的 GeoJSON 数据层。

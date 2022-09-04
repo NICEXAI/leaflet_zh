@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add realtime data to a Leaflet map using server sent events.
+使用服务器发送的事件将实时数据添加到 Leaflet 地图。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Use PouchDB to sync CouchDB data to local storage (indexedDB), to just add couchDB data or as just a less confusing implementation of indexedDB.
+使用 PouchDB 将 CouchDB 数据同步到本地存储（indexedDB），只需添加 couchDB 数据或作为 indexedDB 的一个不那么混乱的实现。

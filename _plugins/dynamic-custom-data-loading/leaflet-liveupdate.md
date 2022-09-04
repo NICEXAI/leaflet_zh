@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Periodically ('live') update something on a map.
+定期（“实时”）更新地图上的内容。

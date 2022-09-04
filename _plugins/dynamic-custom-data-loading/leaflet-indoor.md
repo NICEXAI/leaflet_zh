@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Create indoor maps.
+创建室内地图。

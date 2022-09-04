@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Track my way on a map and download it.
+在地图上跟踪我的轨迹并下载它。
