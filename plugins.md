@@ -91,7 +91,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 
 ## Tile & image layers
 
-The following plugins allow loading different maps and provide functionality to tile and image layers.
+下面的插件支持加载不同的地图并提供 Tile 和 Image 图层的功能。
 
 * [Basemap providers](#basemap-providers)
 * [Basemap formats](#basemap-formats)
@@ -103,45 +103,45 @@ The following plugins allow loading different maps and provide functionality to 
 
 ### Basemap providers
 
-Ready-to-go basemaps, with little or no configuration at all.
+几乎不需要配置，开箱即用的底图。
 
 {% include plugin_category_table.html category="basemap-providers" %}
 
 
 ### Basemap formats
 
-Plugins for loading basemaps or GIS raster layers in common (albeit non-default) formats.
+以下插件用于加载常见格式（非默认）的底图或者栅格图层。
 
 {% include plugin_category_table.html category="basemap-formats" %}
 
 ### Non-map base layers
 
-Sometimes you don't want to load a map, just big custom images. **Really** big ones.
+有时候你不想加载地图，只想加载大的自定义图像，**非常大**的那种。
 
 {% include plugin_category_table.html category="non-map-base-layers" %}
 
 ### Tile/image display
 
-The following plugins change the way that tile or image layers are displayed in the map.
+以下插件更改了地图中显示瓦片（tile）或图像(image)图层的方式。
 
 {% include plugin_category_table.html category="tile-image-display" %}
 
 ### Tile Load
 
-The following plugins change the way that tile layers are loaded into the map.
+下面插件改变了将瓦片（Tile）图层加载到地图中的方式。
 
 {% include plugin_category_table.html category="tile-load" %}
 
 ### Vector tiles
 
-Plugins to display [vector tiles](https://github.com/mapbox/vector-tile-spec).
+用来显示[矢量瓦片（Tile）](https://github.com/mapbox/vector-tile-spec) 的插件。
 
 {% include plugin_category_table.html category="vector-tiles" %}
 
 
 ## Overlay data
 
-The following plugins provide new ways of loading overlay data (GIS vector data): points, lines and polygons.
+以下插件提供了加载叠加数据（GIS 矢量数据）的新方法：点、线和多边形。
 
 * [Overlay data formats](#overlay-data-formats)
 * [Dynamic data loading](#dynamiccustom-data-loading)
@@ -150,32 +150,32 @@ The following plugins provide new ways of loading overlay data (GIS vector data)
 
 ### Overlay data formats
 
-Load your own data from various GIS formats.
+使用各种 GIS 格式加载你自己的数据。
 
 {% include plugin_category_table.html category="overlay-data-formats" %}
 
 ### Dynamic/custom data loading
 
-Load dynamic data which is updated in the map, or load GIS vector data in non-standard ways.
+加载地图中更新的动态数据，或以非标准方式加载GIS矢量数据。
 
 {% include plugin_category_table.html category="dynamic-custom-data-loading" %}
 
 ### Synthetic overlays
 
-These plugins create useful overlays from scratch, no loading required.
+这些插件从头开始创建有用的叠加层，无需加载。
 
 {% include plugin_category_table.html category="synthetic-overlays" %}
 
 ### Data providers
 
-Load overlay data from third-party-services. See also [basemap providers](#basemap-providers) and [plugin collections](#collections).
+从三方服务加载 overlay 数据。 另请参阅 [Basemap providers](#basemap-providers) 和 [plugin collections](#collections).
 
 {% include plugin_category_table.html category="data-providers" %}
 
 
 ## Overlay display
 
-The following plugins provide new ways of displaying overlay data information.
+以下插件提供了显示 overlay 数据信息的新方法。
 
 * [Markers & renderers](#markers--renderers)
 * [Overlay animations](#overlay-animations)
@@ -186,38 +186,38 @@ The following plugins provide new ways of displaying overlay data information.
 
 ### Markers & renderers
 
-These plugins provide new markers or news ways of converting abstract data into images in your screen. Leaflet users versed in GIS also know these as symbolizers.
+这些插件提供了将抽象数据转换为屏幕中图像的新的标记（marker）或路径（way），精通 GIS 的 Leaflet 用户也将这些称为符号。
 
 {% include plugin_category_table.html category="markers-renderers" %}
 
 ### Overlay animations
 
-These plugins animate markers or some geometries. See also [geometries with time or elevation](#geometryinteraction-time).
+这些插件对标记物或一些几何图形进行动画处理。另请参阅[带时间或海拔的几何图形](#geometryinteraction-time)。
 
 {% include plugin_category_table.html category="overlay-animations" %}
 
 ### Clustering/Decluttering
 
-When you are displaying a lot of data, these plugins will make your map look cleaner.
+当您显示大量数据时，这些插件将使您的地图看起来更干净。
 
 {% include plugin_category_table.html category="clustering-decluttering" %}
 
 ### Heatmaps
 
-These plugins create heatmaps and heatmap-like visualizations from vector data.
+这些插件使用矢量数据创建可视化的热力图或类似热力图的图像。
 
 {% include plugin_category_table.html category="heatmaps" %}
 
 ### DataViz
 
-Powerful multi-purpose libraries for data visualization.
+用于数据可视化的强大多用途库。
 
 {% include plugin_category_table.html category="dataviz" %}
 
 
 ## Interaction with geometries/features
 
-The following plugins enable users to interact with overlay data: edit geometries, select areas or features, interact with the time dimension, search features and display information about them.
+以下插件使用户能够与叠加数据互动：编辑几何图形，选择区域或特征，与时间维度互动，搜索特征并显示有关信息。
 
 * [Edit geometries](#edit-geometries)
 * [Time & elevation](#time--elevation)
@@ -226,32 +226,32 @@ The following plugins enable users to interact with overlay data: edit geometrie
 
 ### Edit geometries
 
-Allows users to create, draw, edit and/or delete points, lines and polygons.
+允许用户创建、绘制、编辑和/或删除点、线和多边形。
 
 {% include plugin_category_table.html category="edit-geometries" %}
 
 ### Time & elevation
 
-Most data is two-dimensional (latitude and longitude), but some data has more dimensions (altitude and/or time). The following plugins help users navigate these extra dimensions.
+大多数数据是二维的（经度和纬度），但有些数据有更多维度（高度和/或时间）。以下插件可以帮助用户浏览这些额外的维度。
 
 {% include plugin_category_table.html category="time-elevation" %}
 
 ### Search & popups
 
-Plugins that search for overlays and enhance how to display information about them.
+搜索覆盖图层并增强如何显示有关覆盖图层的信息的插件。
 
 {% include plugin_category_table.html category="search-popups" %}
 
 ### Area/overlay selection
 
-These plugins help users select either overlays or areas in the map.
+这些插件帮助用户选择地图中的覆盖层或区域。
 
 {% include plugin_category_table.html category="area-overlay-selection" %}
 
 
 ## Map interaction
 
-New ways to interact with the map itself.
+与地图本身交互的新方法。
 
 * [Layer switching controls](#layer-switching-controls)
 * [Interactive pan/zoom](#interactive-panzoom)
@@ -267,62 +267,62 @@ New ways to interact with the map itself.
 
 ### Layer switching controls
 
-The following plugins enhance or extend `L.Control.Layers`.
+以下插件用于增强或扩展 `L.Control.Layers`。
 
 {% include plugin_category_table.html category="layer-switching-controls" %}
 
 
 ### Interactive pan/zoom
 
-Change the way the user can interactively move around the map.
+改变用户在地图上交互移动的方式。
 
 {% include plugin_category_table.html category="interactive-pan-zoom" %}
 
 ### Bookmarked pan/zoom
 
-Change the way the user is moved around the map, by jumping to predefined/stored places.
+通过跳转到预定义/存储的位置来改变用户在地图上移动的方式。
 
 {% include plugin_category_table.html category="bookmarked-pan-zoom" %}
 
 ### Fullscreen controls
 
-Allows display of the map in full-screen mode.
+允许以全屏模式显示地图。
 
 {% include plugin_category_table.html category="fullscreen-controls" %}
 
 ### Minimaps & synced maps
 
-Display two maps at once. One of them might be a different size and zoom level, usable as a minimap to aid with navigation.
+同时显示两张地图。其中一个可能是不同的尺寸和缩放级别，可作为最小地图使用，以帮助用户进行导航。
 
 {% include plugin_category_table.html category="minimaps-synced-maps" %}
 
 ### Measurement
 
-Allow the user to measure distances or areas.
+允许用户测量距离或面积。
 
 {% include plugin_category_table.html category="measurement" %}
 
 ### Mouse coordinates
 
-Show the geographical coordinates under the mouse cursor in different ways.
+以不同方式显示鼠标光标下的地理坐标。
 
 {% include plugin_category_table.html category="mouse-coordinates" %}
 
 ### Events
 
-These plugins extend Leaflet event handling.
+这些插件扩展了 Leaflet 的事件处理的能力。
 
 {% include plugin_category_table.html category="events" %}
 
 ### User interface
 
-Buttons, sliders, toolbars, sidebars, and panels.
+按钮、滑块、工具栏、侧边栏和面板。
 
 {% include plugin_category_table.html category="user-interface" %}
 
 ### Print/export
 
-Print or export your map.
+打印或导出你的地图。
 
 <!--
 - Saving a Leaflet Map to a PNG Example using Javascript and PHP https://github.com/tegansnyder/Leaflet-Save-Map-to-PNG
@@ -333,7 +333,7 @@ Print or export your map.
 
 ### Geolocation
 
-Plugins that extend Leaflet's geolocation capabilities.
+扩展 Leaflet 地理定位功能的插件。
 
 {% include plugin_category_table.html category="geolocation" %}
 
@@ -342,27 +342,27 @@ Plugins that extend Leaflet's geolocation capabilities.
 
 ### Geoprocessing
 
-The following plugins perform several sorts of geoprocessing (mathematical and topological operations on points, lines and polygons).
+以下插件可进行多种地理信息处理（点、线和多边形上的数学和拓扑操作）。
 
 {% include plugin_category_table.html category="geoprocessing" %}
 
 ### Routing
 
-The following plugins use external services to calculate driving or walking routes.
+以下插件使用外部服务来计算驾驶或步行路线。
 
 {% include plugin_category_table.html category="routing" %}
 
 ### Geocoding
 
-External services that transform an address or the name of a place into latitude and longitude (or vice versa).
+将地址或地点名称转换为纬度和经度（反之亦然）的外部服务。
 
 {% include plugin_category_table.html category="geocoding" %}
 
 ### Plugin collections
 
-Sets of plugins that span several categories.
+横跨几个类别的插件集。
 
-Plugin developers: please keep future plugins in individual repositories.
+插件开发人员：请将未来的插件保存在单独的存储库中。
 
 {% include plugin_category_table.html category="plugin-collections" %}
 
@@ -371,13 +371,13 @@ Plugin developers: please keep future plugins in individual repositories.
 
 ### Frameworks & build systems
 
-Ease your development integrating Leaflet into a development framework or automating some of the javascript/CSS work for complex applications.
+将 Leaflet 集成到一个开发框架中，或为复杂的应用程序自动处理一些 javascript/CSS 工作，以简化你的开发工作。
 
 {% include plugin_category_table.html category="frameworks-build-systems" %}
 
 ### 3<sup>rd</sup> party integration
 
-The following plugins integrate Leaflet into third party services or websites.
+以下插件将 Leaflet 集成到第三方服务或网站中。
 
 {% include plugin_category_table.html category="3rd-party-integration" %}
 
@@ -385,8 +385,8 @@ The following plugins integrate Leaflet into third party services or websites.
 
 ## Develop your own
 
-Leaflet keeps it simple. If you can think of a feature that is not required by all Leaflet users, and you can write the JavaScript code in a reusable way, you've got yourself a Leaflet plugin already.
+Leaflet 保持简单。如果你能想到一个并非所有 Leaflet 用户都需要的功能，并且你能以一种可重复使用的方式编写 JavaScript 代码，你就已经有了一个 Leaflet 插件。
 
-There are no hard requirements on how to create your own plugin, but all developers are encouraged to read the recommendations in the [plugin guide](https://github.com/Leaflet/Leaflet/blob/main/PLUGIN-GUIDE.md).
+对于如何创建自己的插件没有硬性要求，但我们鼓励所有的开发者阅读[插件指南](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md)中的建议。
 
-Once your plugin is ready, you can submit it: just send a pull request with a new plugin file in [/docs/_plugins/](https://github.com/Leaflet/Leaflet/tree/main/docs/_plugins)to our GitHub repository.
+一旦您的插件准备就绪，您就可以将其提交到此列表：只需将添加到 [/docs/plugins.md](https://github.com/Leaflet/Leaflet/blob/master/docs/plugins.md) 的 PR 发送到我们的 GitHub 存储库。
