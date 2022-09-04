@@ -33,7 +33,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 			<li> <a href='#overlay-data-formats'>Overlay data formats</a></li>
 			<li> <a href='#dynamiccustom-data-loading'>动态加载数据</a></li>
 			<li> <a href='#synthetic-overlays'>Synthetic overlays</a></li>
-			<li> <a href='#data-providers'>Data providers 数据提供程序</a></li>
+			<li> <a href='#data-providers'>数据提供程序</a></li>
 		</ul>
 	</div>
 	<div class="toc-col">
@@ -146,7 +146,7 @@ Leaflet的目的是尽可能轻巧，并着重于一组核心功能，而扩展�
 * [Overlay data formats](#overlay-data-formats)
 * [动态加载数据](#dynamiccustom-data-loading)
 * [Synthetic overlays](#synthetic-overlays)
-* [Data providers 数据提供程序](#data-providers)
+* [数据提供程序](#data-providers)
 
 ### Overlay data formats
 

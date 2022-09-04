@@ -50,7 +50,7 @@ Leaflet 中文网新一轮大规模的文档同步、翻译和校正工作正在
 - [x] 下载
 - [ ] 插件
   - [x] Tile & Image 图层（已完成）
-  - [ ] Overlay data
+  - [x] Overlay data（已完成）
   - [ ] Overlay Display
   - [ ] Overlay interaction
   - [ ] 地图交互
