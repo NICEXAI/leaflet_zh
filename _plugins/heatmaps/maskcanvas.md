@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Canvas layer that can be used to visualize coverage.
+用于可视化覆盖的 Canvas 图层。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin for rendering heatmaps and clusters from <a href="https://solr.apache.org/guide/6_6/spatial-search.html">Solr's Heatmap Faceting</a>. High performance for millions of points or polygons.
+一个 Leaflet 插件，用于从 <a href="https://solr.apache.org/guide/6_6/spatial-search.html">Solr 的 Heatmap Faceting</a> 渲染热图和集群。 数百万个点或多边形的高性能。

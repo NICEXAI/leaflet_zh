@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A tiny, simple and fast Leaflet heatmap plugin. Uses <a href="https://github.com/mourner/simpleheat">simpleheat</a> under the hood, additionally clustering points into a grid for performance.
+一个小巧、简单、快速的 Leaflet 热图插件。 在底层使用 <a href="https://github.com/mourner/simpleheat">simpleheat</a>，另外将点聚集到网格中以提高性能。

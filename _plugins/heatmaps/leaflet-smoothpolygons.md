@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Uses [paperJS](http://paperjs.org/) under the hood to draw paths on canvas.
+在后台使用 [paperJS](http://paperjs.org/) 在 Canvas 上绘制路径。

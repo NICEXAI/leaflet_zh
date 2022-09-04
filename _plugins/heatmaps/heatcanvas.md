@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Simple heatmap api based on HTML5 canvas.
+基于 HTML5 Canvas 的简单热力图 API。

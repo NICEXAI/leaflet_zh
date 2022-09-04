@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-High performance Javascript heatmap plugin using WebGL.
+使用 WebGL 的高性能 Javascript 热力图插件。
