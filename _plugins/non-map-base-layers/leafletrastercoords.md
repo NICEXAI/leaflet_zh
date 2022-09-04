@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Renders large tiled images generated with <a href="https://github.com/commenthol/gdal2tiles-leaflet">gdal2tiles-leaflet</a>. Image raster coordinates can be used to set markers, etc.
+渲染使用 <a href="https://github.com/commenthol/gdal2tiles-leaflet">gdal2tiles-leaflet</a> 生成的大型平铺图像。 图像光栅坐标可用于设置标记等。

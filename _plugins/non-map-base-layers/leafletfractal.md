@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Renders some fractals (Mandelbrot set, Julia set and some others) using 2D canvas
+使用 2D 画布渲染一些分形（Mandelbrot 集、Julia 集和其他一些）

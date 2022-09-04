@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A TileLayer for DeepZoom images.
+一个用于 DeepZoom 图像的 TileLayer。

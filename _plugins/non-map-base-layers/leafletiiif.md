@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A <a href="https://iiif.io/">IIIF</a> (International Image Interoperability Framework) viewer for Leaflet.
+Leaflet 的 <a href="https://iiif.io/">IIIF</a>（国际图像互操作性框架）查看器。

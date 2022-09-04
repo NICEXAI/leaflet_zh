@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A TileLayer for Gigapan images.
+一个用于 Gigapan 图像的 TileLayer。

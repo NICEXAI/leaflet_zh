@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add support for <a href="https://iipimage.sourceforge.io/">IIPImage</a> layers in Leaflet.
+在 Leaflet 中添加对 <a href="https://iipimage.sourceforge.io/">IIPImage</a> 图层的支持。
