@@ -23208,8 +23208,8 @@ layer.closeTooltip();
 	</div>
 </div>
 
-</section><h2 id='control'>Control</h2><p>L.Control is a base class for implementing map controls. Handles positioning.
-All other controls extend from this class.</p>
+</section><h2 id='control'>Control 控件</h2><p>L.Control是一个实现地图控件的基类。负责处理定位。
+所有其他的控件都是从这个类中延伸出来的。</p>
 
 <section>
 <h3 id='control-option'>Options 选项</h3>
@@ -23246,7 +23246,7 @@ All other controls extend from this class.</p>
 
 
 
-<div class='section-comments'>Classes extending L.Control will inherit the following methods:</div>
+<div class='section-comments'>扩展 L.Control 的类将继承以下方法:</div>
 
 <table><thead>
 	<tr>
@@ -23289,9 +23289,9 @@ All other controls extend from this class.</p>
 
 </section><section class='collapsable'>
 
-<h4 id='control-extension-methods'>Extension methods</h4>
+<h4 id='control-extension-methods'>Extension methods 扩展方法</h4>
 
-<div class='section-comments'>Every control should extend from <a href="#control"><code>L.Control</code></a> and (re-)implement the following methods.</div>
+<div class='section-comments'>每个控件都应该从 <a href="#control"><code>L.Control</code></a> 扩展并（重新）实现以下方法。</div>
 
 <table><thead>
 	<tr>
@@ -23303,13 +23303,13 @@ All other controls extend from this class.</p>
 	<tr id='control-onadd'>
 		<td><code><b>onAdd</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code>HTMLElement</code></td>
-		<td><p>Should return the container DOM element for the control and add listeners on relevant map events. Called on <a href="#control-addTo"><code>control.addTo(map)</code></a>.</p>
+        <td><p>应该返回控件的容器 DOM 元素，并在相关的地图事件上添加监听器。在 <a href="#control-addTo"><code>control.addTo(map)</code></a> 上调用。</p>
 </td>
 	</tr>
 	<tr id='control-onremove'>
 		<td><code><b>onRemove</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>)</code></td>
 		<td><code></code></td>
-		<td><p>Optional method. Should contain all clean up code that removes the listeners previously added in <a href="#control-onadd"><code>onAdd</code></a>. Called on <a href="#control-remove"><code>control.remove()</code></a>.</p>
+        <td><p>可选的方法。应该包含所有清理代码，删除之前在 <a href="#control-onadd"><code>onAdd</code></a> 中添加的监听器。在 <a href="#control-remove"><code>control.remove()</code></a> 中被调用。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23317,7 +23317,7 @@ All other controls extend from this class.</p>
 </section>
 
 
-</section><h2 id='handler'>Handler</h2><p>Abstract class for map interaction handlers</p>
+</section><h2 id='handler'>Handler 处理程序</h2><p>地图交互处理程序的抽象类</p>
 
 <section>
 <h3 id='handler-method'>Methods 方法</h3>
@@ -23337,28 +23337,28 @@ All other controls extend from this class.</p>
 	<tr id='handler-enable'>
 		<td><code><b>enable</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Enables the handler</p>
+		<td><p>启用处理程序</p>
 </td>
 	</tr>
 	<tr id='handler-disable'>
 		<td><code><b>disable</b>()</code></td>
 		<td><code>this</code></td>
-		<td><p>Disables the handler</p>
+		<td><p>禁用处理程序</p>
 </td>
 	</tr>
 	<tr id='handler-enabled'>
 		<td><code><b>enabled</b>()</code></td>
 		<td><code>Boolean</code></td>
-		<td><p>Returns <code>true</code> if the handler is enabled</p>
+		<td><p>如果处理程序被启用，返回 <code>true</code> </p>
 </td>
 	</tr>
 </tbody></table>
 
 </section><section class='collapsable'>
 
-<h4 id='handler-extension-methods'>Extension methods</h4>
+<h4 id='handler-extension-methods'>Extension methods 扩展方法</h4>
 
-<div class='section-comments'>Classes inheriting from <a href="#handler"><code>Handler</code></a> must implement the two following methods:</div>
+<div class='section-comments'>继承自 <a href="#handler"><code>Handler</code></a> 的类必须实现以下两个方法:</div>
 
 <table><thead>
 	<tr>
@@ -23370,13 +23370,13 @@ All other controls extend from this class.</p>
 	<tr id='handler-addhooks'>
 		<td><code><b>addHooks</b>()</code></td>
 		<td><code></code></td>
-		<td><p>Called when the handler is enabled, should add event hooks.</p>
+        <td><p>当处理程序被启用时被调用，应该添加事件钩子。</p>
 </td>
 	</tr>
 	<tr id='handler-removehooks'>
 		<td><code><b>removeHooks</b>()</code></td>
 		<td><code></code></td>
-		<td><p>Called when the handler is disabled, should remove the event hooks added previously.</p>
+        <td><p>当处理程序被禁用时被调用，应该删除之前添加的事件钩子。</p>
 </td>
 	</tr>
 </tbody></table>
@@ -23385,11 +23385,11 @@ All other controls extend from this class.</p>
 
 
 </section><section>
-<h3 id='handler-function'>Functions</h3>
+<h3 id='handler-function'>Functions 函数</h3>
 
 <section class='collapsable'>
 
-<h4 id='handler-there-is-static-function-which-can-be-called-without-instantiating-l-handler:'>There is static function which can be called without instantiating L.Handler:</h4>
+<h4 id='handler-there-is-static-function-which-can-be-called-without-instantiating-l-handler:'>有一个静态函数可以在不实例化 L.Handler 的情况下被调用:</h4>
 
 
 <table><thead>
@@ -23402,7 +23402,7 @@ All other controls extend from this class.</p>
 	<tr id='handler-addto'>
 		<td><code><b>addTo</b>(<nobr>&lt;<a href='#map'>Map</a>&gt;</nobr> <i>map</i>, <nobr>&lt;String&gt;</nobr> <i>name</i>)</code></td>
 		<td><code>this</code></td>
-		<td>Adds a new Handler to the given map with the given name.</td>
+		<td>在给定的地图上添加一个新的处理程序，并给定名称。</td>
 	</tr>
 </tbody></table>
 
