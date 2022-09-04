@@ -9,4 +9,5 @@ compatible-v0:
 compatible-v1: true
 ---
 
-<a href="https://github.com/vue-leaflet/Vue2Leaflet">Vue2Leaflet</a> 是 <a href="https://vuejs.org/">Vue.js< 的 JavaScript 库 /a> 包装 Leaflet 的框架，使创建反应式地图变得容易。
+<a href="https://github.com/vue-leaflet/Vue2Leaflet">Vue2Leaflet</a> 是一个用于 <a href="https://vuejs.org/">Vue.js</a> 框架的 JavaScript 库，它封装了Leaflet，使其能够轻松创建反应式地图。
+
