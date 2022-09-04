@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A set of tools for calculating and visualizing topographic data (elevation, slope, aspect) at lightning speed.  Based on Mapbox RGB Encoded DEM tiles.
+一套用于以闪电般的速度计算和可视化地形数据（海拔、坡度、长宽）的工具。 基于 Mapbox RGB 编码的 DEM 瓦片。

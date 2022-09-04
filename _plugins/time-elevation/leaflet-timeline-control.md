@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Unopinionated timeline control that helps you display time series data.
+无人知晓的时间线控件，帮助你显示时间序列数据。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A leaflet track-playback plugin, can display and dynamically play tracks.
+一个 Leaflet 曲目播放插件，可以显示和动态播放曲目。

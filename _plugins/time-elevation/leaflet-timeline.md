@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Display arbitrary GeoJSON on a map with a timeline slider and play button.
+在地图上显示任意的 GeoJSON，带有时间轴滑块和播放按钮。

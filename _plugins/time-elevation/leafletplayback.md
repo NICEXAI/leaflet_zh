@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Play back time-stamped GPS Tracks synchronized to a clock.
+播放与时钟同步的带时间戳的 GPS 轨迹。

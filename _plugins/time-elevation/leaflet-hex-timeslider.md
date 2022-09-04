@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Minimalistic time slider using leaflet + d3.js and nouislider for displaying time series data using a geoJSON file.
+使用 leaflet + d3.js 和 nouislider 的极简时间滑块，使用 geoJSON 文件显示时间序列数据。

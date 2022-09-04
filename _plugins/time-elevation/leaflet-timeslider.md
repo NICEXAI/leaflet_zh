@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-The Leaflet Time-Slider enables you to dynamically add and remove Markers on a map by using a JQuery UI slider
+通过使用 JQuery UI 滑块，Leaflet Time-Slider 使你能在地图上动态地添加和删除标记。

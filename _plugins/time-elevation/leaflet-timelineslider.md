@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet plugin that creates a customizable timeline slider with user designed functionality.
+Leaflet插件，创建一个可定制的时间轴滑块，具有用户设计的功能。

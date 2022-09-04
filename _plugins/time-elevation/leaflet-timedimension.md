@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Add time dimension capabilities on a Leaflet map.
+在 Leaflet 地图上添加时间维度功能。

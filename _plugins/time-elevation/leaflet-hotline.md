@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A Leaflet plugin for drawing gradients along polylines.
+用于沿折线绘制渐变的 Leaflet 插件。
