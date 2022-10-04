@@ -6,14 +6,12 @@
 > Leaflet 中文站点：https://leafletjs.cn/
 > 
 > Leaflet 官方站点：https://leafletjs.com/
-> 
-> Robeeask 社区：https://leafletjs.robeeask.com/
 
-📢 公告：Leaflet 1.9.1 版本官方文档正在同步翻译和校正中，敬请期待！如果大家在使用过程中发现了文档中的错误或者不足之处，欢迎大家提出 issue 或者 PR，我们会在尽快对其进行处理。
+📢 公告：Leaflet 1.9.1 版本官方文档已同步到中文站点，并完成了翻译和校正！如果大家在使用过程中发现了文档中的错误或者不足之处，欢迎大家提出 issue 或者 PR，我们会在尽快对其进行处理。
 
 ### 翻译进度（v1.9.1）
 
-- [ ] 概况
+- [x] 概况
 - [ ] 教程
   - [x] 列表页（已完成）
   - [x] Leaflet 快速入门指南（已完成）
@@ -31,7 +29,7 @@
   - [x] 扩展 Leaflet: Class Theory（已完成）
   - [x] 扩展 Leaflet: Layers（已完成）
   - [x] 扩展 Leaflet: Handlers and Controls （已完成）
-- [ ] 文档
+- [x] 文档
   - [x] 地图（已完成）
   - [x] 地图方法（已完成）
   - [x] 地图杂项（已完成）
@@ -45,7 +43,7 @@
   - [x] Dom常用方法类（已完成）
   - [x] 基础类（已完成）
   - [x] 其它（已完成）
-- [ ] 下载
+- [x] 下载
 - [x] 插件
   - [x] Tile & Image 图层（已完成）
   - [x] Overlay data（已完成）
@@ -55,13 +53,13 @@
   - [x] 各种各样的（已完成）
   - [x] 综合的（已完成）
   - [x] 开发属于自己的插件（已完成）
-- [ ] 博客
+- [x] 博客
 
 ### 加入翻译
 
 由于本人精力有限，希望更多的小伙伴可以加入我们，一起参与翻译，共同来帮助更多人。如果你完全没接触过翻译工作也不用担心，我们将会为你准备完善的[翻译规范](https://github.com/NICEXAI/leaflet_zh/blob/master/leaflet_guide.md)和操作说明。
 
-<img src='https://leafletjs.cn/docs/images/QQ.png' width='300'>
+<img src='/docs/images/QQ.png' width='300'>
 
 开始翻译前，你可以先加入我们的交流群，然后在群里通过以下方式认领，确保没有重复工作。
 
