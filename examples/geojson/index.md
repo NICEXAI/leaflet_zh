@@ -3,7 +3,7 @@ layout: tutorial_v2
 title: Using GeoJSON with Leaflet
 ---
 
-<h3>在 Leaflet 中使用 GeoJSON</h3>
+<h2>在 Leaflet 中使用 GeoJSON</h2>
 
 <p>GeoJSON 正在成为许多 GIS 技术和服务中非常流行的数据格式--它简单、轻量、直接，而且 Leaflet 在处理 GeoJSON 方面也相当出色。在本教程中，你将学习如何创建并与由 <a href="https://tools.ietf.org/html/rfc7946">GeoJSON</a> 对象创建的矢量地图进行交互。</p>
 

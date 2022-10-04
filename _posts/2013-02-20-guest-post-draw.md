@@ -41,7 +41,7 @@ Leaflet.draw 非常简单，可以放入你的 Leaflet 应用程序中。下面�
 	var map = L.map('map').setView([175.30867, -37.77914], 13);
 
 	// 添加一个OpenStreetMap 的瓦片层
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
@@ -116,7 +116,7 @@ Jacob Toye
 	var map = L.map('map').setView([-37.77914, 175.30867], 16);
 
 	// add an OpenStreetMap tile layer
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 

@@ -52,7 +52,7 @@ title: Quick Start Guide
 
 接下来我们将添加一个瓦片（Tile）图层到地图中, 在当前示例中它是一个 OpenStreetMap 瓦片图层。创建一个瓦片（Tile）图层通常会涉及为瓦片（Tile）图像、归属文本和图层的最大缩放级别设置 [URL 模板](/reference.html#tilelayer-url-template)。OpenStreetMap 的瓦片对于你的 Leaflet 地图的编程是没有问题的，但是如果你要在生产中使用瓦片，请阅读 OpenStreetMap 的[瓦片使用政策](https://operations.osmfoundation.org/policies/tiles/)。
 
-<pre><code class="javascript">L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+<pre><code class="javascript">L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);</code></pre>

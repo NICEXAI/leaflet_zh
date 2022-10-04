@@ -32,7 +32,7 @@ Leaflet 有一个很好的小控件，允许你的用户控制他们在你的地
 
 现在让我们创建这些基础图层并将默认图层添加到地图中：
 
-<pre><code>var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+<pre><code>var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
