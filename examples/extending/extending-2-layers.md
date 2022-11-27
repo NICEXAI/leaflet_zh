@@ -15,7 +15,7 @@ title: Extending Leaflet, New Layers
 
 其中之一是 `L.TileLayer.getTileUrl()`。每当一个新的瓦片需要知道加载哪张图片时，`L.TileLayer` 就会在内部调用这个方法。通过制作 `L.TileLayer` 的子类并重写其 `getTileUrl()` 函数，我们可以创建自定义行为。
 
-让我们用一个自定义 `L.TileLayer` 来说明，它将显示来自 [PlaceKitten]() 的随机猫咪图像：
+让我们用一个自定义 `L.TileLayer` 来说明，它将显示来自 [PlaceKitten](https://placekitten.com) 的随机猫咪图像：
 
     L.TileLayer.Kitten = L.TileLayer.extend({
         getTileUrl: function(coords) {

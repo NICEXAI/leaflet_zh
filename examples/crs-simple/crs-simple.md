@@ -92,7 +92,7 @@ Leaflet 地图有一个 CRS（只有一个 CRS ），可以在创建地图时更
 	var yx = L.latLng;
 
 	var xy = function(x, y) {
-		if (L.Util.isArray(x)) {    // When doing xy([x, y]);
+		if (Array.isArray(x)) {    // When doing xy([x, y]);
 			return yx(x[1], x[0]);
 		}
 		return yx(y, x);  // When doing xy(x, y);

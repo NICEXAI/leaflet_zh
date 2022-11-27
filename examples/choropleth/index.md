@@ -94,12 +94,10 @@ title: Interactive Choropleth Map
 			fillOpacity: 0.7
 		});
 
-		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-			layer.bringToFront();
-		}
+		layer.bringToFront();
 	}
 
-在这里，我们通过 `e.target` 访问被悬停的图层，在图层上设置一个厚厚的灰色边框作为我们的高亮效果，同时把它放到图层最前面，这样边框就不会与附近的状态发生冲突（但对 IE、Opera 或 Edge 来说不是这样，因为它们在 `mouseover ` 时使用 ` bringToFront` 有问题）。
+在这里，我们通过 `e.target` 访问被悬停的图层，在图层上设置一个厚厚的灰色边框作为我们的高亮效果，同时把它放到图层最前面，这样边框就不会与附近的状态发生冲突。
 
 接下来我们将定义鼠标 `mouseout` 时发生的事情:
 

@@ -12,8 +12,8 @@ bodyclass: download-page
 		<th>说明</th>
 	</tr>
 	<tr>
-		<td><a href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v1.9.2/leaflet.zip">Leaflet 1.9.2</a></td>
-		<td>稳定版，于 2022 年 10 月 4 日发布。</td>
+		<td><a href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v1.9.3/leaflet.zip">Leaflet 1.9.3</a></td>
+		<td>稳定版，于 2022 年 11 月 18 日发布。</td>
 	</tr>
 	<tr>
 		<td><a href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/v1.8.0/leaflet.zip">Leaflet 1.8.0</a></td>
