@@ -2012,7 +2012,7 @@ var map = L.map('map', {
 	</div>
 </div>
 
-</section><h2 id='marker'>Marker 标记</h2><p>L.Marker 用于在地图上显示可点击/可拖动的图标。扩展了 <a href="#layer"><code>Layer</code></a>。</p>
+</section><h2 id='marker'>Marker 标记</h2><p>L.Marker 用于在地图上显示可点击/可拖动的图标。扩展自 <a href="#layer"><code>Layer</code></a>。</p>
 
 <section>
 <h3 id='marker-example'>使用示例</h3>
@@ -9357,7 +9357,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='path'>Path 路径</h2><p>一个抽象的类，包含了矢量覆盖物 （Polygon（多边形）, Polyline（折线）, Circle（圆形））之间共享的选项和常量。请不要直接使用它。扩展了 <a href="#layer"><code>Layer 图层</code></a>.</p>
+</section><h2 id='path'>Path 路径</h2><p>一个抽象的类，包含了矢量覆盖物 （Polygon（多边形）, Polyline（折线）, Circle（圆形））之间共享的选项和常量。请不要直接使用它。扩展自 <a href="#layer"><code>Layer 图层</code></a>.</p>
 
 <section>
 <h3 id='path-option'>Options 选项</h3>
@@ -10044,7 +10044,7 @@ L.svgOverlay(svgElement, svgElementBounds).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='polyline'>Polyline 折线</h2><p>一个用于在地图上绘制折线覆盖物的类。扩展了 <a href="#path"><code>Path</code></a>。</p>
+</section><h2 id='polyline'>Polyline 折线</h2><p>一个用于在地图上绘制折线覆盖物的类。扩展自 <a href="#path"><code>Path</code></a>。</p>
 
 <section>
 <h3 id='polyline-example'>使用示例</h3>
@@ -10895,7 +10895,7 @@ var latlngs = [
 	</div>
 </div>
 
-</section><h2 id='polygon'>Polygon 多边形</h2><p>一个用于在地图上绘制多边形覆盖物的类。扩展了<a href="#polyline"><code>Polyline</code></a>。</p>
+</section><h2 id='polygon'>Polygon 多边形</h2><p>一个用于在地图上绘制多边形覆盖物的类。扩展自<a href="#polyline"><code>Polyline</code></a>。</p>
 <p>请注意，您在创建多边形时传递的最后一个点不应该和第一个相同 - 最好过滤掉这些点。</p>
 
 <section>
@@ -11777,7 +11777,7 @@ map.fitBounds(polygon.getBounds());
 	</div>
 </div>
 
-</section><h2 id='rectangle'>Rectangle 矩形</h2><p>一个用于在地图上绘制矩形覆盖物的类。扩展了 <a href="#polygon"><code>Polygon</code></a>。</p>
+</section><h2 id='rectangle'>Rectangle 矩形</h2><p>一个用于在地图上绘制矩形覆盖物的类。扩展自 <a href="#polygon"><code>Polygon</code></a>。</p>
 
 <section>
 <h3 id='rectangle-example'>使用示例</h3>
@@ -12669,7 +12669,7 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='circle'>Circle 圆形</h2><p>一个用于在地图上绘制圆形覆盖物的类。扩展了 <a href="#circlemarker"><code>CircleMarker</code></a>。</p>
+</section><h2 id='circle'>Circle 圆形</h2><p>一个用于在地图上绘制圆形覆盖物的类。扩展自 <a href="#circlemarker"><code>CircleMarker</code></a>。</p>
 <p>这是一个近似值，在接近两极时开始与真实的圆相背离（由于投影失真）。</p>
 
 <section>
@@ -13533,7 +13533,7 @@ map.fitBounds(bounds);
 	</div>
 </div>
 
-</section><h2 id='circlemarker'>CircleMarker 圆形标记</h2><p>一个固定大小的圆，半径以像素指定。扩展了 <a href="#path"><code>Path</code></a>。</p>
+</section><h2 id='circlemarker'>CircleMarker 圆形标记</h2><p>一个固定大小的圆，半径以像素指定。扩展自 <a href="#path"><code>Path</code></a>。</p>
 
 <section>
 <h3 id='circlemarker-factory'>Creation</h3>
@@ -16211,7 +16211,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='featuregroup'>FeatureGroup 要素组</h2><p>扩展了 <a href="#layergroup"><code>LayerGroup</code></a> ，使它更容易对其所有成员图层做同样的事情:</p>
+</section><h2 id='featuregroup'>FeatureGroup 要素组</h2><p>扩展自 <a href="#layergroup"><code>LayerGroup</code></a> ，使它更容易对其所有成员图层做同样的事情:</p>
 <ul>
     <li><a href="#layer-bindpopup"><code>bindPopup</code></a> 一次将一个弹出窗口绑定到所有的图层上 (与 <a href="#layer-bindtooltip"><code>bindTooltip</code></a>类似)</li>
     <li>事件被传递到 <a href="#featuregroup"><code>FeatureGroup</code></a>，所以如果该组有一个事件处理程序，它将处理来自任何图层的事件。这包括鼠标事件和自定义事件。</li>
@@ -16973,7 +16973,7 @@ var circle = L.circle( center, { renderer: myRenderer } );
 	</div>
 </div>
 
-</section><h2 id='geojson'>GeoJSON 图层</h2><p>代表一个 GeoJSON 对象或一个 GeoJSON 对象的数组。允许你解析 GeoJSON 数据并将其显示在地图上。扩展了 <a href="#featuregroup"><code>FeatureGroup</code></a>。</p>
+</section><h2 id='geojson'>GeoJSON 图层</h2><p>代表一个 GeoJSON 对象或一个 GeoJSON 对象的数组。允许你解析 GeoJSON 数据并将其显示在地图上。扩展自 <a href="#featuregroup"><code>FeatureGroup</code></a>。</p>
 
 <section>
 <h3 id='geojson-example'>使用示例</h3>
@@ -19391,7 +19391,7 @@ bounds = L.bounds(p1, p2);
 
 L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 </code></pre>
-<p><a href="#icon-default"><code>L.Icon.Default</code></a> 扩展了 <a href="#icon"><code>L.Icon</code></a> ，是 Leaflet 默认用于标记的蓝色图标。</p>
+<p><a href="#icon-default"><code>L.Icon.Default</code></a> 扩展自 <a href="#icon"><code>L.Icon</code></a> ，是 Leaflet 默认用于标记的蓝色图标。</p>
 
 
 
@@ -19793,7 +19793,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-zoom'>Zoom 缩放</h2><p>一个基本的缩放控件，有两个按钮（放大和缩小）。除非你把它的 <a href="#map-zoomcontrol"><code>zoomControl</code> 选项</a> 设置为 <code>false</code>。扩展了 <a href="#control"><code>Control</code></a>。</p>
+</section><h2 id='control-zoom'>Zoom 缩放</h2><p>一个基本的缩放控件，有两个按钮（放大和缩小）。除非你把它的 <a href="#map-zoomcontrol"><code>zoomControl</code> 选项</a> 设置为 <code>false</code>。扩展自 <a href="#control"><code>Control</code></a>。</p>
 
 <section>
 <h3 id='control-zoom-factory'>Creation</h3>
@@ -19949,7 +19949,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-attribution'>Attribution 版权</h2><p>控件属性允许你在地图上的一个小文本框中显示属性数据。除非你把它的 <a href="#map-attributioncontrol"><code>attributionControl</code> 选项</a> 设置为 <code>false</code>，否则它默认是放在地图上的，而且它可以用 <a href="#layer-getattribution"><code>getAttribution</code> 方法</a> 从图层中自动获取属性文本。扩展了 Control 。</p>
+</section><h2 id='control-attribution'>Attribution 版权</h2><p>控件属性允许你在地图上的一个小文本框中显示属性数据。除非你把它的 <a href="#map-attributioncontrol"><code>attributionControl</code> 选项</a> 设置为 <code>false</code>，否则它默认是放在地图上的，而且它可以用 <a href="#layer-getattribution"><code>getAttribution</code> 方法</a> 从图层中自动获取属性文本。扩展自 Control 。</p>
 
 <section>
 <h3 id='control-attribution-factory'>Creation</h3>
@@ -20119,7 +20119,7 @@ L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-layers'>Layers 图层</h2><p>图层控件使用户能够在不同的基础图层之间进行切换，并打开/关闭覆盖物图层 (请看 <a href="http://leafletjs.com/examples/layers-control/">详细示例</a>)。扩展了 <a href="#control"><code>Control</code></a> 。</p>
+</section><h2 id='control-layers'>Layers 图层</h2><p>图层控件使用户能够在不同的基础图层之间进行切换，并打开/关闭覆盖物图层 (请看 <a href="http://leafletjs.com/examples/layers-control/">详细示例</a>)。扩展自 <a href="#control"><code>Control</code></a> 。</p>
 
 <section>
 <h3 id='control-layers-example'>使用示例</h3>
@@ -20363,7 +20363,7 @@ L.control.layers(baseLayers, overlays).addTo(map);
 	</div>
 </div>
 
-</section><h2 id='control-scale'>Scale 比例尺</h2><p>一个简单的比例尺控件，以公制（m/km）和英制（mi/ft）系统显示当前屏幕中心的比例。扩展了 <a href="#control"><code>Control</code></a>。</p>
+</section><h2 id='control-scale'>Scale 比例尺</h2><p>一个简单的比例尺控件，以公制（m/km）和英制（mi/ft）系统显示当前屏幕中心的比例。扩展自 <a href="#control"><code>Control</code></a>。</p>
 
 <section>
 <h3 id='control-scale-example'>使用示例</h3>
