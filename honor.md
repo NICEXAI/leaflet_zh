@@ -17,6 +17,7 @@ bodyclass: honor-page
 * [lazytuanzi](https://github.com/lazytuanzi)
 * [Fate-ui](https://github.com/Fate-ui)
 * [吴苍浩](https://github.com/wch360119203)
+* [epiciskandar](https://github.com/epiciskandar)
 
 #### 官方交流群优秀成员
 
