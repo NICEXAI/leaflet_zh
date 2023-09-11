@@ -7,9 +7,9 @@
 > 
 > Leaflet 官方站点：https://leafletjs.com/
 
-📢 公告：Leaflet 1.9.3 版本官方文档已同步到中文站点，并完成了翻译和校正！如果大家在使用过程中发现了文档中的错误或者不足之处，欢迎大家提出 issue 或者 PR，我们会在尽快对其进行处理。
+📢 公告：Leaflet 1.9.4 版本官方文档已同步到中文站点，并完成了翻译和校正！如果大家在使用过程中发现了文档中的错误或者不足之处，欢迎大家提出 issue 或者 PR，我们会在尽快对其进行处理。
 
-### 翻译进度（v1.9.3）
+### 翻译进度（v1.9.4）
 
 - [x] 概况
 - [ ] 教程
@@ -80,7 +80,7 @@
 
 建议使用 Sublime Text、Vscode 等支持 Markdown 类编辑器编辑，同时开启横向双列模式。
 
-3、安装 [jekyll](https://jekyllcn.com/), 翻译时启动 watch 来实时看结果（`jekyll`[官方安装文档](http://jekyllcn.com/docs/installation/)）
+3、安装 [jekyll](https://jekyllcn.com/), 翻译时启动 watch 来实时看结果（`jekyll`[官方安装文档](http://jekyllcn.com/docs/installation/), 强烈推荐在 ubuntu 环境下[安装 jekyll](https://jekyllrb.com/docs/installation/ubuntu/)）
 
 ```
 jekyll serve
