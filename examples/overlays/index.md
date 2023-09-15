@@ -3,29 +3,30 @@ layout: tutorial_v2
 title: Overlays
 ---
 
-## Overlays
+## Overlays（覆盖物图层）
 
-There are 3 overlays in the Leaflet API: 
-- [`ImageOverlay`](/reference.html#imageoverlay): Raster Layer, Extends [`Layer`](/reference.html#layer)
-- [`VideoOverlay`](/reference.html#videooverlay): Raster Layer, Extends [`ImageOverlay`](/reference.html#imageoverlay)
-- [`SVGOverlay`](/reference.html#svgoverlay): Vector Layer, Extends [`ImageOverlay`](/reference.html#imageoverlay)
+有三种overlays在Leaflet API中: 
 
-In this tutorial, you’ll learn how to use these overlays.
+- [`ImageOverlay`](/reference.html#imageoverlay): 栅格图层，扩展自 [`Layer`](/reference.html#layer)
+- [`VideoOverlay`](/reference.html#videooverlay): 栅格图层，扩展自 [`ImageOverlay`](/reference.html#imageoverlay)
+- [`SVGOverlay`](/reference.html#svgoverlay): 矢量图层，扩展自 [`ImageOverlay`](/reference.html#imageoverlay)
+
+在本教程中，您将学习如何使用这三种 overlays。
 
 ### `ImageOverlay`
 
-`L.ImageOverlay` is used to load and display a single image over specific bounds of the map. 
+`L.ImageOverlay` 用于在地图的特定边界上加载和显示单个图像。 
 
-To add an image overlay [`L.ImageOverlay`](/reference.html#imageoverlay) use this:
+使用 [`L.ImageOverlay`](/reference.html#imageoverlay) 添加一个图像覆盖物：
 
 ```
 var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, options);
 ```
 
-#### Creating a map
+#### 创建一个地图
 
-First of all, create a Leaflet map and add a background `L.TileLayer` in the usual way:
 
+首先，创建一个Leaflet地图并且通过`L.TileLayer`添加常用底图：
 ```
 var map = L.map('map').setView([37.8, -96], 4);
 
@@ -35,7 +36,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 ```
 
-Let's create an image overlay with multiple options:
+让我们创建一个具有多个选项的图像覆盖物：
 
 ```
 var imageUrl = 'https://maps.lib.utexas.edu/maps/historical/newark_nj_1922.jpg';
@@ -51,30 +52,30 @@ var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
 }).addTo(map);
 ```
 
-If you want to see the area which is covered by the ImageOverlay, you can add a [`L.Rectangle`](/reference.html#rectangle) with the same `L.LatLngBounds` to the map:
+如果您想查看 ImageOverlay 覆盖物的区域，可以将具有相同 `L.LatLngBounds` 的 [`L.Rectangle`](reference.html#rectangle)添加到地图中：
 
 ```
 L.rectangle(latLngBounds).addTo(map);
 map.fitBounds(latLngBounds);
 ```
 
-- `opacity` defines the opacity of the image overlay, it equals to `1.0` by default. Decrease this value to make an image overlay transparent and to expose the underlying map layer. 
+- `opacity` 定义图像覆盖物的不透明度， 默认是 `1.0`。减小该值可以使图像覆盖图透明，从而暴露出下面的图层。  
 	
-- `errorOverlayUrl` is a URL to the overlay image to show in place of the overlay that failed to load.
+- `errorOverlayUrl` 要显示的覆盖图像的URL，以代替加载失败的覆盖物。
 
-- `alt` sets the HTML [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt) attribute to provide an alternative text description of the image. Alternative text is essential information for screen reader users. It can also benefit people during poor network connectivity, in the case the image fails to load. Moreover, it can improve the SEO of a website.
+- `alt` 设置HTML属性 [`alt`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt) 提供替代图像的描述。 替代文本同样也是屏幕阅读器用户的必要信息。它可以在网络连接不良的情况下为人们带来好处。此外，它还可以提高网站的SEO。
 
-- `interactive` is `false` by default. If `true`, the image overlay will emit mouse events when clicked or hovered.
+- `interactive` 默认是 `false`。如果改为 `true`, 覆盖物图层将会响应鼠标点击或悬浮事件。
 
-You can find other options of `L.ImageOverlay` in the [documentation](/reference.html#imageoverlay).
+您可以找到 `L.ImageOverlay` 的其他参数在 [documentation](/reference.html#imageoverlay).
 
 {% include frame.html url="example-image.html" %}
 
 ### `VideoOverlay`
 
-Video used to be a hard task when building a webpage, until the [`<video>` HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) was made available.
+在 [`<video>` HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) 出现之前，视频在网页构建中是一项艰难的任务。
 
-Nowadays, we can use the following HTML code:
+现在，我们可以使用以下HTML代码：
 
 ```
 <video width="500" controls>
@@ -83,18 +84,18 @@ Nowadays, we can use the following HTML code:
 </video>
 ```
 
-To display this video:
+来显示此视频：
 
 <video width="500" controls>
 <source src="https://www.mapbox.com/bites/00188/patricia_nasa.webm" type="video/webm">
 <source src="https://www.mapbox.com/bites/00188/patricia_nasa.mp4" type="video/mp4">
 </video>
 
-If a video can be shown in a webpage in this way, then Leaflet can display it inside a map. It is important that the videos are prepared in such a way that they will fit the map: The video should have a "north-up" orientation, and its proportions should fit the map. If not, it will look out of place.
+如果视频可以这样展示在网页上，那么 Leaflet 也可以把它这样用在地图上。但重要的是，视频的准备方式应适合地图：视频应具有“北上”方向，其比例适合地图。如果没有，它将看起来不合适。
 
-#### Creating a map
+#### 创建一个地图
 
-First of all, create a Leaflet map and add a background `L.TileLayer` in the usual way:
+首先，创建一个Leaflet地图并且通过`L.TileLayer`添加常用底图：
 
 ```
 var map = L.map('map').setView([37.8, -96], 4);
@@ -105,16 +106,16 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 ```
 
-#### Adding the video overlay
+#### 添加视频覆盖物
 
-Adding a video overlay works very similar to adding an image overlay. 
+添加视频覆盖的工作与添加图像覆盖物非常相似
 
-For a video overlay, just:
+对于视频覆盖物只需要：
 
-- Use `L.VideoOverlay` instead of `L.ImageOverlay`
-- `L.VideoOverlay` is used to load and display a video player over specific bounds of the map. Extends [`L.ImageOverlay`](/reference.html#imageoverlay). 
-A video overlay uses the [`<video>`](https://developer.mozilla.org/docs/Web/HTML/Element/video) HTML element.
-- Instead of the image URL, specify one video URL *or* an array of video URLs
+- 使用 `L.VideoOverlay` 而不是 `L.ImageOverlay`
+- `L.VideoOverlay` 用于在地图的特定边界上加载和显示视频播放器。 拓展 [`L.ImageOverlay`](/reference.html#imageoverlay). 
+视频覆盖物使用 [`<video>`](https://developer.mozilla.org/docs/Web/HTML/Element/video) 标签。
+- 指定一个视频URL **或** 一组视频URL，而不是图像URL
 
 ```
 var videoUrls = [
@@ -134,32 +135,33 @@ var videoOverlay = L.videoOverlay(videoUrls, latLngBounds, {
 }).addTo(map);
 ```
 
-And just like that, you'll get the video on your map:
+就这样，你会在地图上看到视频：
 
 {% include frame.html url="example-nocontrols.html" %}
 
-- `autoplay` option defines whether the video starts playing automatically when loaded. It is `true` by default. It is important to know that on some browsers `autoplay` functionality will only work with `muted` option explicitly set to `true`.
+- `autoplay` 选项定义加载时视频是否自动开始播放。默认是 `true` 。 重要的是要知道，在某些浏览器上 `autoplay` 功能仅适用于 `muted` 选项显式设置为 `true`.
 
-- `muted` option defines whether the video starts on mute when loaded. It is `false` by default.
+- `muted` 选项定义加载时视频是否以静音方式启动。默认是 `false`。
 
-- `playsInline` option when it is set to `true` allows video to play inline without automatically entering fullscreen mode when playback begins in the mobile browser. It is `true` by default.
+- `playsInline` 选项设置为 `true` 允许视频以内联方式播放，而不会在移动浏览器中开始播放时自动进入全屏模式。 默认是 `true` .
 
-You can find other options of `L.videoOverlay` in the [documentation](/reference.html#videooverlay).
+您可以找到的其他选项 `L.videoOverlay` 在 [documentation](/reference.html#videooverlay).
 
-Video overlays behave like any other Leaflet layer - you can add and remove them, let the user select from several videos using a [layers control](../layers-control/), etc.
+视频覆盖物图层和其他Leaflet图层类似 - 可以添加或移除，可以让用户通过 [layers control](../layers-control/)来来从几个视频中选择，等等。
 
 
-#### A bit of control over the video
 
-If you read the API documentation, you'll notice that the `L.VideoOverlay` class does not have a `play()` or `pause()` method.
+#### 对视频的控制
 
-For this, the `getElement()` method of the video overlay is useful. It returns the [`HTMLVideoElement`](https://developer.mozilla.org/docs/Web/API/HTMLImageElement) (which inherits from [`HTMLMediaElement`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement)) for the overlay - and that has methods like `play()` and `pause()`, e.g.
+如果你阅读过文档，你就会发现 `L.VideoOverlay` 类并没有 `play()` 或者 `pause()` 方法。
+
+对此， 视频覆盖物的 `getElement()` 方法是有用的。 它返回 [`HTMLVideoElement`](https://developer.mozilla.org/docs/Web/API/HTMLImageElement) (继承自 [`HTMLMediaElement`](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement)) 对于覆盖物 - 就像 `play()` 和 `pause()` 一样，等等。
 
 ```
 videoOverlay.getElement().pause();
 ```
 
-This allows us to build custom interfaces. For example, we can build a small subclass of `L.Control` to play/pause this video overlay once it's loaded:
+这使我们能够构建自定义接口。例如，我们可以构建一个 `L.Control` 的小子类，以便在加载后播放/暂停此视频覆盖物：
 
 ```
 videoOverlay.on('load', function () {
@@ -195,19 +197,20 @@ videoOverlay.on('load', function () {
 
 ### `SVGOverlay`
 
-`L.SVGOverlay` is used to load, display and provide DOM access to an SVG file over specific bounds of the map. 
+`L.SVGOverlay`用于在地图的特定边界上加载、显示和提供对SVG文件的DOM访问。
+ 
 
-To add an SVG overlay [`L.SVGOverlay`](/reference.html#svgoverlay) use this:
+添加SVG覆盖 [`L.SVGOverlay`](/reference.html#svgoverlay) 使用这个:
 
 ```
 var svgOverlay = L.svgOverlay(SVGElement, svgElementBounds, options);
 ```
 
-It instantiates an image overlay object given an SVG element and the geographical bounds it is tied to. A viewBox attribute is required on the SVG element to zoom in and out properly.
+它实例化一个给定SVG元素及其绑定的地理边界的图像覆盖对象。SVG元素上需要viewBox属性才能正确放大和缩小。
 
-#### Creating an SVG element
+#### 创建SVG元素
 
-Let's create an SVG element:
+让我们创建一个SVG元素：
 
 ```
 var svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -216,21 +219,21 @@ svgElement.setAttribute('viewBox', '0 0 200 200');
 svgElement.innerHTML = '<rect width="200" height="200"/><rect x="75" y="23" width="50" height="50" style="fill:red"/><rect x="75" y="123" width="50" height="50" style="fill:#0013ff"/>';
 ```
 
-Alternatively, you can create the SVG element in HTML code:
+或者，您可以在HTML代码中创建SVG元素：
 
 ```
 <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200"/><rect x="75" y="23" width="50" height="50" style="fill:red"/><rect x="75" y="123" width="50" height="50" style="fill:#0013ff"/></svg>
 ```
 
-And choose this SVG element by using a querySelector:
+并使用 querySelector 选择此SVG元素：
 
 ```
 var svgElement = document.querySelector('#svg');
 ```
 
-#### Adding the SVG overlay
+#### 添加SVG覆盖物
 
-Create the SVGOverlay with desired options similarly to ImageOverlay and VideoOverlay:
+使用与ImageOverlay和VideoOverlay类似的所需选项创建SVGOverlay：
 
 ```
 var latLngBounds = L.latLngBounds([[32, -130], [13, -100]]);
@@ -242,7 +245,7 @@ var svgOverlay = L.svgOverlay(svgElement, latLngBounds, {
 }).addTo(map);
 ```
 
-Although SVGOverlay does not have its own unique options, it inherits a variety of options from ImageOverlay, Interactive layer and Layer.
-Check out the documentation to find out more [`L.SVGOverlay`](/reference.html#svgoverlay) options.
+虽然SVGOverlay没有自己独特的选项，但它继承了ImageOverlay、Interactive layer和layer的各种选项。
+查看文档 [`L.SVGOverlay`] (/reference.html#svgoverlay)以了解更多信息 
 
 {% include frame.html url="example-svg.html" %}
