@@ -18,6 +18,7 @@ bodyclass: honor-page
 * [Fate-ui](https://github.com/Fate-ui)
 * [吴苍浩](https://github.com/wch360119203)
 * [epiciskandar](https://github.com/epiciskandar)
+* [xioeyi](https://github.com/xioeyi)
 
 #### 官方交流群优秀成员
 

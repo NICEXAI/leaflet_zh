@@ -12,7 +12,7 @@
 ### 翻译进度（v1.9.4）
 
 - [x] 概况
-- [ ] 教程
+- [x] 教程
   - [x] 列表页（已完成）
   - [x] Leaflet 快速入门指南（已完成）
   - [x] 在移动端使用 Leaflet（已完成）
@@ -25,7 +25,7 @@
   - [x] Non-geographical maps（已完成）
   - [x] WMS and TMS（已完成）
   - [x] Working with map panes（已完成）
-  - [ ] Overlays: Image, Video, SVG
+  - [x] Overlays: Image, Video, SVG
   - [x] 扩展 Leaflet: Class Theory（已完成）
   - [x] 扩展 Leaflet: Layers（已完成）
   - [x] 扩展 Leaflet: Handlers and Controls （已完成）
@@ -136,6 +136,7 @@ current directory: C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/http_parser.rb-0.6.0/e
 * [Fate-ui](https://github.com/Fate-ui)
 * [吴苍浩](https://github.com/wch360119203)
 * [epiciskandar](https://github.com/epiciskandar)
+* [xioeyi](https://github.com/xioeyi)
 
 ### 特殊贡献者人员名单
 
