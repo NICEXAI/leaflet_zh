@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-一个用于 <a href="https://mybb.com/">MyBB</a> 的插件，基于 Open Street Map 和 Leaflet 创建用户地图，并可自定义弹出窗口和标记。
+一个用于 <a href="https://mybb.com/">MyBB</a> 的插件，基于 Open Street Map 和 Leaflet 创建用户地图，并可自定义 Popup 和 Markers。
