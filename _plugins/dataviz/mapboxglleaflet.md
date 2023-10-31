@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-从 Mapbox GL JS 绑定到 Leaflet API
+从 Mapbox GL JS 绑定到 Leaflet API。
