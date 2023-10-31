@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Terra Draw's TerraDrawLeafletAdapter allows users to create, select and edit a variety of geometry types (points, lines polygons etc) on a Leaflet map.
+Terra Draw 的 TerraDrawLeafletAdapter 允许用户在 Leaflet 地图上创建、选择和编辑各种几何图形类型（点、线、多边形等）。
