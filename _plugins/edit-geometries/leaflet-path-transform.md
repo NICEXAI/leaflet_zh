@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-多边形和折线的缩放、 旋转和交互操作
+多边形和折线的缩放、 旋转和交互操作。
