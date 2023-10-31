@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Embed a [Gleo](https://ivansanchez.gitlab.io/gleo/) renderer as a Leaflet layer. Gleo is a general-purpose object-oriented WebGL cartographic rendering library.
+嵌入 [Gleo](https://ivansanchez.gitlab.io/gleo/) 渲染器作为 Leaflet 图层。Gleo 是一个面向对象的通用 WebGL 制图渲染库。
