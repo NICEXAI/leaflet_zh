@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Extends Leaflet.draw to add a new set of tools which allow the user to select a L.geoJSON line to trace or snap a marker to. 
+扩展 Leaflet.draw，添加一组新工具，允许用户选择一条 L.geoJSON 线来跟踪或捕捉标记。
