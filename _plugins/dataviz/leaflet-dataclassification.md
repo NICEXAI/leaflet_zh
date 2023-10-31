@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Single-step data classification, symbology and legend creation for GeoJSON data powered thematic maps.
+为 GeoJSON 数据驱动的专题地图创建单步数据分类（Single-step data classification）、符号（symbology）和图例。
