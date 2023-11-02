@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-An accessibility and localization/translation plugin for Leaflet.
+Leaflet 的可访问性和本地化/翻译插件。
