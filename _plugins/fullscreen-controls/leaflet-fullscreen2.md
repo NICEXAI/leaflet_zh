@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A fullscreen button control using the Fullscreen API.
+使用 Fullscreen API 的全屏按钮控件。
