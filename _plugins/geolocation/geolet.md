@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet 的一个简单但高度可定制的地理定位插件
+Leaflet 的一个简单但高度可定制的地理定位插件。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-用于构建简单旋转指南针的 Leaflet 控制插件
+用于构建简单旋转指南针的 Leaflet 控制插件。
