@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A geocoding and reverse geocoding plugin for Leaflet utilizing the [MapTiler Geocoding API](https://docs.maptiler.com/cloud/api/geocoding/), which includes identification of states, cities, streets, down to the addresses and POIs level. It supports search results in various languages, per-country limiting, fuzzy matching, autocomplete, etc.
+基于 [MapTiler Geocoding API](https://docs.maptiler.com/cloud/api/geocoding/) 的 Leaflet 的地理编码和反向地理编码插件，其中包括州、城市、街道的识别，直至地址和 POI等级。它支持多种语言的搜索结果、每个国家的限制、模糊匹配、自动完成等。
