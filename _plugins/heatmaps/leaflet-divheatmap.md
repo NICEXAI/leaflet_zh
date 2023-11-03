@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-基于 CSS3 和 divIcons 的轻量级和多功能热力图
+基于 CSS3 和 divIcons 的轻量级和多功能热力图。
