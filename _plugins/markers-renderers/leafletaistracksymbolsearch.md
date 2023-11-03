@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-为你的 Leaflet 地图和你的 [leaflet-ais-trackymbol](https://github.com/PowerPan/leaflet-ais-tracksymbol) 添加一个搜索框
+为你的 Leaflet 地图和你的 [leaflet-ais-trackymbol](https://github.com/PowerPan/leaflet-ais-tracksymbol) 添加一个搜索框。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-为<code>L.Circle</code>添加了绘制半圆的功能。
+为 <code>L.Circle</code> 添加了绘制半圆的功能。
