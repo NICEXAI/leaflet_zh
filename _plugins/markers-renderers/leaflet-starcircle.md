@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Drawing triangle, square, star(n-corner) in leaflet.
+在 Leaflet 上绘制三角形、正方形、星形（n角）。
