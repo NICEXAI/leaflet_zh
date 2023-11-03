@@ -9,9 +9,9 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A plugin for showing tracks (triangular symbol) and AIS contacts on the map.
+用于在地图上显示航迹（三角形符号）和 AIS 联系人的插件。
 
-This is an updated version of:
+这是以下插件的更新版本：
 
 * [leaflet-tracksymbol](https://www.npmjs.com/package/leaflet-tracksymbol)
 * [leaflet-ais-tracksymbol](https://github.com/PowerPan/leaflet-ais-tracksymbol)
