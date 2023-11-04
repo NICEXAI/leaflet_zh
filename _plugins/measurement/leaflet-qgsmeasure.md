@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Leaflet control to measure segment distances on the map like Qgis Ruler.
+Leaflet 控件可以像 Qgis Ruler 一样测量地图上的线段距离。
