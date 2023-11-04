@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-在 Leaflet 地图上显示航海比例
+在 Leaflet 地图上显示航海比例。

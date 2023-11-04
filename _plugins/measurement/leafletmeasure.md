@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Leaflet 地图的坐标、线性和面积测量控件
+Leaflet 地图的坐标、线性和面积测量控件。
