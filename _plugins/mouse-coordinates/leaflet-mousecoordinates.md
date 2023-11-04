@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-在框中显示鼠标坐标。 支持多种格式：GPS、UTM、UTMREF / MGRS、QTH
+在框中显示鼠标坐标。 支持多种格式：GPS、UTM、UTMREF / MGRS、QTH。
