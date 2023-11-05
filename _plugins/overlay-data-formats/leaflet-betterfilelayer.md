@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-The definitive plugin to load your spatialized files into leaflet.
+将空间化文件载入 leaflet 的权威插件。
