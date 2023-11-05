@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Used to create moving marker animation and also trail polyline animation.
+用于创建移动标记（Marker）动画以及轨迹折线（Polyline）动画。
