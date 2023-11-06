@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-A leaflet plugin for a configurable search bar component with autocomplete on all existing pins on the map.
+用于可配置搜索栏组件的 Leaflet 插件，可自动完成地图上所有现有图钉（Pin）的搜索。

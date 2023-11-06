@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-按标签过滤 LeafLet 标记
+按标签过滤 LeafLet 标记。
