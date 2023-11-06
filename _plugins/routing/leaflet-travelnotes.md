@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-独立的应用程序，具有可编辑的标记和用于传单的路由引擎。路由引擎有Mapbox、GraphHopper和OSRM的插件，可用于汽车、自行车或行人路线。
+独立的应用程序，具有可编辑的标记和用于传单的路由引擎。路由引擎有 Mapbox、GraphHopper 和 OSRM 的插件，可用于汽车、自行车或行人路线。
