@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Draws a projection aware grid of latitude and longitude lines, with labels on the lines and options to set the extent of and interval between the lines.
+绘制投影感知的经纬线网格，在经纬线上标注标签，并提供设置经纬线范围和间隔的选项。
