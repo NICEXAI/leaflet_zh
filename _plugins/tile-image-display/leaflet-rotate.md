@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-向 Leaflet 地图窗格添加旋转功能
+向 Leaflet 地图窗格添加旋转功能。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-leaflet-calendar allows you to add a calendar picker and trigger a custom function when a date is selected.
+leaflet-calendar 允许你添加日历选择器，并在选择日期时触发自定义函数。

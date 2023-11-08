@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-使用 Twitter Bootstrap 样式的按钮覆盖默认缩放控制按钮
+使用 Twitter Bootstrap 样式的按钮覆盖默认缩放控制按钮。

@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-在 Leaflet 上动态显示 GeoJSON 数据的矢量瓦片
+在 Leaflet 上动态显示 GeoJSON 数据的矢量瓦片。
