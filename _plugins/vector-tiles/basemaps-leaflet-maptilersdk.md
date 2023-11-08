@@ -9,4 +9,4 @@ compatible-v0:
 compatible-v1: true
 ---
 
-Vector Tiles plugin for Leaflet. Use the power of the [MapTiler SDK](https://docs.maptiler.com/sdk-js/) to access their catalog of professionally created multi-lingual vector tile basemaps. You can also use it for vector tile data overlays.
+用于 Leaflet 的矢量瓦片插件。利用 [MapTiler SDK](https://docs.maptiler.com/sdk-js/) 的强大功能，访问其专业创建的多语言矢量瓦片底图目录。你还可以将其用于矢量瓦片数据叠加。
