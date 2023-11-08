@@ -9,4 +9,4 @@ compatible-v0: false
 compatible-v1: true
 ---
 
-Loads a [maplibre-gl-js](https://maplibre.org/projects/maplibre-gl-js/) map as a Leaflet layer
+将 [maplibre-gl-js](https://maplibre.org/projects/maplibre-gl-js/) 地图加载为 Leaflet 图层。
