@@ -8,11 +8,11 @@ authorsite: http://agafonkin.com/en
 
 继 [Leaflet 0.4 发布](leaflet-0-4-released.html) 之后，在过去的一周里有几个小的 bug 修复版本，Leaflet 0.4.3 今天发布。它们包含了对一些被发现的 bug 的修复，同时也为新的 GeoJSON API 带来了一些改进，使其更加灵活——————见下面的更新日志。
 
-我还写了 [一个新的教程](./././examples/choropleth.html) ，灵感来自 [Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/) 的[Texas Tribune US Senate Runoff Results map](http://www.texastribune.org/library/data/us-senate-runoff-results-map/)（也是由Leaflet驱动的）。它将逐步向你展示如何在 GeoJSON 和自定义控件的帮助下创建一个漂亮的美国各州人口密度互动 [choropleth 地图](http://en.wikipedia.org/wiki/Choropleth_map) ，并希望能说服更多的主要新闻和政府网站转向使用 Leaflet 。:)
+我还写了 [一个新的教程](./././examples/choropleth.html) ，灵感来自 [Ryan Murphy](http://www.texastribune.org/about/staff/ryan-murphy/) 的[Texas Tribune US Senate Runoff Results map](http://www.texastribune.org/library/data/us-senate-runoff-results-map/)（也是由 Leaflet 驱动的）。它将逐步向你展示如何在 GeoJSON 和自定义控件的帮助下创建一个漂亮的美国各州人口密度互动 [choropleth 地图](http://en.wikipedia.org/wiki/Choropleth_map) ，并希望能说服更多的主要新闻和政府网站转向使用 Leaflet 。
 
 在 [下载页面](../../../download.html) 获取新的 Leaflet 0.4.3 。享受吧!
 
-**更新**。在 0.4.3 中发现了 IE9 的退步，所以我不得不发布 0.4.4 ，并进行了修复。对不起!
+**更新**。在 0.4.3 中发现了 IE9 的兼容问题，所以我不得不发布 0.4.4 ，并进行了修复。对此表示非常抱歉。
 
 ### 0.4.3 (2012年8月7日)
 
@@ -33,7 +33,7 @@ authorsite: http://agafonkin.com/en
 
 ### 0.4.2 (2012年8月1日)
 
- * 修正了层控制单选按钮在IE7中不能正常工作的问题（由 [@danzel](https://github.com/danzel) ）。 [#862](https://github.com/Leaflet/Leaflet/pull/862)
+ * 修正了层控制单选按钮在 IE7 中不能正常工作的问题（由 [@danzel](https://github.com/danzel) ）。 [#862](https://github.com/Leaflet/Leaflet/pull/862)
  * 修正了一个错误，即 `FeatureGroup` `removeLayer` 会解除对已删除图层的弹出窗口的绑定，即使这些弹出窗口不是由该组放置的(影响到 [Leaflet.markercluster](https://github.com/danzel/Leaflet.markercluster) 插件)(由 [@danzel](https://github.com/danzel) )。 [#861](https://github.com/Leaflet/Leaflet/pull/861)
 
 ### 0.4.1 (2012年7月31日)
