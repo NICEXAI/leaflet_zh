@@ -18,7 +18,7 @@ authorsite: http://agafonkin.com/en
 
 感谢大家! 看到 Leaflet 社区在过去几个月里所取得的成就，以及所有的贡献、令人惊叹的项目和演示，绝对令人叹为观止，说实话，我为能成为其中的一员感到自豪。
 
-P.S.我还在梦中听说，每个在推特上发布新 Leaflet 的人都会在接下来的一个月里获得难以置信的运气提升。对我来说听起来是真的。
+P.S. 我还在梦中听说，每个在推特上发布新 Leaflet 的人都会在接下来的一个月里获得难以置信的运气提升。对我来说听起来是真的。
 
 Cheers,<br>
 Vladimir, Leaflet creator and maintainer.

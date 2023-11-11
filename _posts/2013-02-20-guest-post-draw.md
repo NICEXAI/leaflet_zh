@@ -6,7 +6,7 @@ author: Jacob Toye
 authorsite: https://github.com/jacobtoye/
 ---
 
-这是 Jacob Toye的客座文章，他是 Leaflet 的活跃贡献者，同时也是目前最复杂的矢量绘图和编辑插件的作者，在这篇文章中介绍了这个插件。
+这是 Jacob Toye 的客座文章，他是 Leaflet 的活跃贡献者，同时也是目前最复杂的矢量绘图和编辑插件的作者，在这篇文章中介绍了这个插件。
 
 [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw/) 诞生于为用户提供在地图上绘制多边形的能力的需要。Leaflet 已经提供了一个非常好的方法来编辑现有的折线和多边形。合乎逻辑的下一步是在这个功能上进行扩展，以允许创建这些图层，并最终创建其他的矢量图层。
 
